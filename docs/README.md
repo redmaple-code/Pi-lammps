@@ -6,6 +6,7 @@
 
 | 文档 | 内容 |
 |---|---|
+| [领域库初始化使用指南](guides/domain-library-initialization.md) | 首次建库、案例与规范注入、访谈、候选审阅、检索、调研、导出、CLI 与常见情况 |
 | [官方1IEP典型案例复现与输入输出对照](../work/cases/vina-official-1iep-20261118/README.md) | 官方原始输入和参考输出固定、真实Vina运行、逐姿态匹配、8/16/32预算研究与验收记录 |
 | [1IEP结果复核与通俗解读](../work/cases/1iep-imatinib-redocking-20261117/validation-review/README.md) | 原始晶体坐标、第三方姿态合理性、种子一致性及结论范围 |
 | [领域库初始化功能块](implementation/领域库初始化功能块.md) | Pi 独立模块、/domain-init、用户访谈、资料注入、知识/标签审阅与持久恢复 |

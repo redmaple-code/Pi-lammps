@@ -26,13 +26,36 @@ npm ci --ignore-scripts
 Pop-Location
 ```
 
-本机已配置 personal-twin 时，在 simulation 目录启动交互界面。
+先由本机凭据管理器将模型密钥注入 `AISPOT_DS_API_KEY` 环境变量，再进入 simulation 目录启动交互界面。
+
+```powershell
+cd simulation
+node apps/cli/main.js agent --config runtime.example.json
+```
+
+本机已配置 personal-twin 时，可以在 simulation 目录使用以下注入启动命令。其他机器使用自己的凭据管理器和部署路径。
 
 ```powershell
 python D:/personal-twin/twin.py inject aispot-ds --env AISPOT_DS_API_KEY -- node apps/cli/main.js agent --config runtime.example.json
 ```
 
 模型连接配置位于 `simulation/runtime.example.json`，凭据通过 `AISPOT_DS_API_KEY` 环境变量注入。当前客户端窗口为 40,960 tokens，自动压缩启用。进入 Pi 后使用 `/domain-init new` 初始化领域库。
+
+## 使用领域库初始化
+
+首次使用请阅读 [领域库初始化使用指南](docs/guides/domain-library-initialization.md)。指南覆盖环境准备、行业案例与规范注入、经验访谈、知识和标签候选、逐项与批次审阅、检索、调研、导出和跨会话续用。
+
+在 Pi 中可以按以下顺序操作，材料登记后让 Pi 读取来源并整理候选，再进入审阅。
+
+```text
+/domain-init new
+/domain-init answer
+/domain-init source
+/domain-init review
+/domain-init export
+```
+
+指南使用仓库已有的官方 1IEP 重对接案例走完整流程，并说明有限元动力学领域如何接入自己的案例、规范和验证经验。
 
 ## 内容入口
 
@@ -43,7 +66,8 @@ python D:/personal-twin/twin.py inject aispot-ds --env AISPOT_DS_API_KEY -- node
 | [lammps-workflow-export](lammps-workflow-export/README.md) | 已发布的 LAMMPS 工作流源码子模块 |
 | work/mdagent-github-publish-20261118 | MDagent 源码与分发材料子模块 |
 | [docs](docs/README.md) | 架构、开发规范、领域包制作规范与实施记录 |
-| [领域库初始化](simulation/agent-modules/domain-initialization/README.md) | 用户访谈、资料注入、候选整理、审阅与持久检索 |
+| [领域库初始化使用指南](docs/guides/domain-library-initialization.md) | 从建库到审阅、检索、调研、导出及常见情况的操作步骤 |
+| [领域库初始化开发说明](simulation/agent-modules/domain-initialization/README.md) | 模型工具、操作契约、仓储接口与独立装配 |
 | [领域工作流](docs/domain-workflows/README.md) | 小分子对接、有限元动力学及通用领域包设计 |
 | [上下文与技能检查](docs/implementation/上下文与技能注入专项检查.md) | 40K 配置、压缩预算、技能读取权限及专项回归 |
 | mdagent-modules、mdagent-standalone | 迁移模块、独立运行材料与相关资源 |

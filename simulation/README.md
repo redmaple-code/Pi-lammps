@@ -87,6 +87,8 @@ python D:/personal-twin/twin.py inject aispot-ds --env AISPOT_DS_API_KEY -- node
 
 ## 领域库初始化
 
+首次使用见 [完整操作指南](../docs/guides/domain-library-initialization.md)，包含可直接跟随的案例流程、审阅用途、检索、调研、导出、CLI、状态目录与常见情况。
+
 Pi 会话内使用 `/domain-init new` 创建领域库，按提示说明任务并注入行业案例、规范或亲历经验。`/domain-init` 打开操作菜单，`/domain-init review` 审阅候选，`/domain-init review-all` 可批次选择采用用途。`/domain-init research` 将当前缺口交给 Pi 继续调查。
 
 三个新增工具为 domain_library、domain_library_interview、domain_library_review。知识与标签先作为候选保存，用户通过宿主界面决定采用范围。默认数据位于应用本地 stateDirectory 下的 domain-libraries，以可替换的仓储接口持久化。

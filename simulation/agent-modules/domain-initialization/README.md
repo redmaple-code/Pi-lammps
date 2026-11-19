@@ -2,6 +2,8 @@
 
 模块 ID 为 `domain-initialization`，通过 ModuleHost 协议注册，可独立装载/卸载。默认运行时提供用户访谈、行业案例/规范注入、知识与标签候选、用户审阅、检索、研究上下文和快照导出。
 
+首次使用请先阅读 [领域库初始化使用指南](../../../docs/guides/domain-library-initialization.md)，按仓库中的 1IEP 案例完成建库、资料注入、候选整理、审阅、检索和导出。本文保留工具、存储、CLI 和独立装配说明。
+
 ## Pi 使用
 
 启动项目现有 Pi-agent 后输入以下命令。
