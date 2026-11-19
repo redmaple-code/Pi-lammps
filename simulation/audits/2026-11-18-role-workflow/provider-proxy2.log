@@ -1,0 +1,2 @@
+{"error":"fetch failed","code":"ECONNRESET"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

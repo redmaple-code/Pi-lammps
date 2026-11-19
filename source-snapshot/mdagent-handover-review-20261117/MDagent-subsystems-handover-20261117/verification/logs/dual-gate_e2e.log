@@ -1,0 +1,24 @@
+== 场景一:坏方案 审阅→整改→复验 ==
+ 首次校核: status=GATED_FAIL hard=['REVIEW']
+ 整改复验: status=GATED_PASS
+
+== 场景二:高熵合金摩擦(C2e 设计论证守卫)==
+ 无证据: experiment_design.setup 已声明但既无外部证据(design_eviden...
+ 证据入账: status=DESIGNED
+ 摩擦校核: status=GATED_PASS verdict=e2e fake verdict
+ intent_view 含实验设计论证与经验引用 ✔
+
+== 场景三:缺字段方案 结构hard+补全建议(完整审阅与补全)==
+ status=GATED_FAIL hard=['S-FIELD']
+ 补全建议: key_params.timestep_fs → ReaxFF 一般 0.1-0.25fs
+ 补全复验: status=GATED_PASS 补全建议清零=True
+
+== 场景四:审阅层不可用 fail-closed ==
+ REVIEW_ERROR: status=GATED_FAIL error=None(不静默放行)
+
+== 场景五:论文型实验-仿真一致性(schema v3.0 四段+八层审阅)==
+ task_grade=paper_grade(代码判定)
+ 论文型审阅: status=GATED_PASS grade=paper_grade
+ intent_view 渲染四段(材料模型/实验参照/抽象映射/对照协议) ✔
+
+E2E 五场景全部通过 ✔

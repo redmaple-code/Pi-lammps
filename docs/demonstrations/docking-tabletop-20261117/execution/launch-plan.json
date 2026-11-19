@@ -1,0 +1,41 @@
+{
+  "mode": "tabletop",
+  "dataOrigin": "synthetic-tabletop",
+  "plannedLogicalProductionRuns": 120,
+  "illustrativeProductionAttempts": 121,
+  "qualificationControlRuns": 5,
+  "maxRunsIncludingRetryAllowance": 130,
+  "commandTemplate": [
+    "vina",
+    "--receptor",
+    "<prepared-receptor.pdbqt>",
+    "--ligand",
+    "<state.pdbqt>",
+    "--config",
+    "<box.cfg>",
+    "--scoring",
+    "vina",
+    "--exhaustiveness",
+    "32",
+    "--num_modes",
+    "20",
+    "--seed",
+    "<seed>",
+    "--out",
+    "<run-directory>/poses.pdbqt"
+  ],
+  "invoked": false,
+  "commandVersionCheck": "待目标版本--help核对",
+  "actualDependencies": [
+    "Vina精确版本",
+    "Meeko/RDKit准备工具",
+    "实际PDBQT/SDF与原子映射"
+  ],
+  "recoveryExample": {
+    "logicalRunId": "DEMO-C06-S1-seed155921",
+    "firstAttempt": "failedKnown",
+    "repair": "修复演练中的输出目录配置，科学参数保持原协议。",
+    "nextAttempt": "新runId与operationId，保留逻辑任务关联",
+    "unknownSubmissionRule": "若提交状态未知则先对账，不能直接按此已知失败示例重试。"
+  }
+}

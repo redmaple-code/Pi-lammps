@@ -1,0 +1,261 @@
+{
+  "specificationVersion": "1.0.0",
+  "validatedAt": "2026-11-17T14:03:33.671202+00:00",
+  "scope": "Documentation and exchange-fixture validation for user-guided domain-pack authoring.",
+  "environment": {
+    "python": "3.11.4"
+  },
+  "schemaMetaValidation": "passed",
+  "validFixtures": [
+    {
+      "file": "templates/authoring-session.json",
+      "result": "passed",
+      "recordCount": 0
+    },
+    {
+      "file": "examples/workshop-demo.json",
+      "result": "passed",
+      "recordCount": 14
+    },
+    {
+      "file": "examples/scoped-adoption-demo.json",
+      "case": "scopedUserAdoptionKeepsEpistemicStatus",
+      "result": "passed",
+      "data": "demonstration with candidate revision, scoped decision and adopted revision"
+    }
+  ],
+  "negativeCases": [
+    {
+      "case": "databaseTypePrespecified",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "autoConfirmWithoutDecision",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "activeUseWithoutDecision",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "acceptedTagWithoutDecision",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "acceptedAnnotationWithoutDecision",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "confirmedScopeWithoutDecision",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "frozenSourceWithoutDigest",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "unknownCoreField",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "unsupportedKnowledgeKind",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "malformedTimestamp",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingScope",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingReference",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "wrongReferenceType",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "quoteAnchorMismatch",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "duplicateEntityRevision",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "clauseWrongSource",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingQuestionTemplate",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "demonstrationAsRealUserSession",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "adoptedContentChanged",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "aiDecisionWithoutUserScope",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "decisionUseMismatch",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "decisionScopeMismatch",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "rejectedDecisionUsedToAdopt",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "decisionSubjectMismatch",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "effectWithoutEvidence",
+      "layer": "semantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "executableRuleCondition",
+      "layer": "schema",
+      "observed": "rejectedAsExpected"
+    }
+  ],
+  "questionTemplates": 19,
+  "acceptanceScenarios": 24,
+  "checkedLocalLinks": 30,
+  "storageTypeSelection": "deferred",
+  "sourceReferenceHashes": "matchedAtValidationTime",
+  "artifactManifest": [
+    {
+      "path": "01-scope-and-collaboration.md",
+      "sha256": "ec916493b4f208be0a59788e5cbd3205b0cb50ae54bd2c683d902c79c76c58cf"
+    },
+    {
+      "path": "02-guided-workshop.md",
+      "sha256": "3d57c4044d11fe1b9551b11ed6a920547b47bbabd0b309fa3dcfb6a3b82eefe2"
+    },
+    {
+      "path": "03-materials-and-experience.md",
+      "sha256": "5f304a8659b8d82f26c3578e26ac9ecd114dbb5b0c816507c0c811622671d1f8"
+    },
+    {
+      "path": "04-annotation-and-taxonomy.md",
+      "sha256": "754e9e1d48bd66e64eae78842963c4c1d356b81ea9fa06effaa3a35091dd8e22"
+    },
+    {
+      "path": "05-domain-research.md",
+      "sha256": "cdd736f9d6a9930583c7712f8ea20256dd8fe20e04ea21f12aab4fbad962579b"
+    },
+    {
+      "path": "06-repository-contracts.md",
+      "sha256": "5e2c044434b3a4fa0966fcb7c1dc2ba0d9234d12db578344c7b6461c106245ce"
+    },
+    {
+      "path": "07-pack-assembly.md",
+      "sha256": "505da8740a9f5c7fae97e8bf04584770897f57a7c470482c77926a7a8e1aa7f7"
+    },
+    {
+      "path": "08-development-and-acceptance.md",
+      "sha256": "ec73ae8dc0fba425d6ff061095e6015fef985bf0128d947ea84828a84a0f3cd8"
+    },
+    {
+      "path": "09-walkthroughs.md",
+      "sha256": "2e0d5e7eb67e386628cb58d09aac49c2cfbf8010358974d3fd566ca52939b10e"
+    },
+    {
+      "path": "10-provenance-and-handoff.md",
+      "sha256": "4062cca1cb24472fcb29e6dc0f9f8d0d5c19e50b77adb3f61345ad0625072c07"
+    },
+    {
+      "path": "examples/scoped-adoption-demo.json",
+      "sha256": "00d58a75681f5337622f623a092cd214b376a900a66f2685fa551935975566e0"
+    },
+    {
+      "path": "examples/workshop-demo.json",
+      "sha256": "74356c2f5e765de312dbc94515579ff70711167261e3cea42dfed873dbf0b5d8"
+    },
+    {
+      "path": "question-catalog.json",
+      "sha256": "3346a91f955377272bda1eca0d697418957f6a77fad7a3b909b73e53a5e8a9d0"
+    },
+    {
+      "path": "README.md",
+      "sha256": "cde37746b01a1616941348d3d5056425ce30bd612ac2f6ed0da4d59901792968"
+    },
+    {
+      "path": "schemas/authoring-bundle.schema.json",
+      "sha256": "97d978fad6b41cb7ed9cdbb0795e1fa68eecb219a13ed95d3e6697b0d5abfe95"
+    },
+    {
+      "path": "sources/reference-map.json",
+      "sha256": "895bd263b64e12e23ba7674ce63b30ed738b8716e3940c0f48351c1da85d2806"
+    },
+    {
+      "path": "templates/authoring-session.json",
+      "sha256": "e50f64af7b9f7859e1273d93b6ced6276ef732c24a2df8a69b1e31d09724099c"
+    },
+    {
+      "path": "templates/case-reconstruction.md",
+      "sha256": "e8ef572c4a8547074fbf6984811fee1f1ac6329b3a6a2f8b6cff5198863640d1"
+    },
+    {
+      "path": "templates/experience-interview.md",
+      "sha256": "4d21f2e5c87103cdb4971de17174eb15440647d9964c726f980d31b3d1d8e954"
+    },
+    {
+      "path": "templates/material-intake.md",
+      "sha256": "e121ee34c9da753e340125aa72cbc96fd10db3bb18f278792890bc6e34d45df3"
+    },
+    {
+      "path": "templates/review-checklist.md",
+      "sha256": "f17ce0e8de4e29b1bfc67d0c03fb7b869ae659ac9e8f4ab540f817a0b1984303"
+    },
+    {
+      "path": "templates/standard-clause.md",
+      "sha256": "91792d8c25e297df6b6e4adee8ed9609eb9eaf1b7ea1ec3d848f54775a11774a"
+    }
+  ],
+  "limitations": [
+    "No real industry sources or user adoption decisions were added to a working knowledge repository.",
+    "Guidance usability, storage adapter behavior, real commits and product integration remain planned.",
+    "The digest fixture uses a small JSON subset; full RFC8785 number/Unicode conformance needs implementation tests.",
+    "Semantic checks are temporary fixture checks and do not implement all service capabilities or scientific review."
+  ],
+  "verdict": "passedForDocumentationAndFixtureScope"
+}

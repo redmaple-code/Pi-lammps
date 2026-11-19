@@ -1,0 +1,12 @@
+
+....C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_state.py:108: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_0u6g_a8l\\memory\\tasks\\TASK-UT-008\\decisions/20261117T144348-x-ae62bd.json' mode='r' encoding='utf-8'>
+  before = open(fp1, encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_state.py:111: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_0u6g_a8l\\memory\\tasks\\TASK-UT-008\\decisions/20261117T144348-x-ae62bd.json' mode='r' encoding='utf-8'>
+  self.assertEqual(open(fp1, encoding="utf-8").read(), before)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+............
+----------------------------------------------------------------------
+Ran 16 tests in 10.615s
+
+OK

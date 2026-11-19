@@ -1,0 +1,159 @@
+
+> @redmaple/simulation@0.1.0 test
+> node --test --test-concurrency=1 tests/*.test.js
+
+TAP version 13
+# (node:57576) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonical identities, strict YAML and three-valued conditions preserve unknown
+ok 1 - canonical identities, strict YAML and three-valued conditions preserve unknown
+  ---
+  duration_ms: 42.4705
+  type: 'test'
+  ...
+# Subtest: pack resolution locks bytes and distinguishes draft validation from production
+ok 2 - pack resolution locks bytes and distinguishes draft validation from production
+  ---
+  duration_ms: 1520.3709
+  type: 'test'
+  ...
+# Subtest: binary publication and immutable closure detect changed content
+not ok 3 - binary publication and immutable closure detect changed content
+  ---
+  duration_ms: 73.9361
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\core.test.js:35:1'
+  failureType: 'testCodeFailure'
+  error: 'EPERM: operation not permitted, fsync'
+  code: 'EPERM'
+  stack: |-
+    async fsync (node:internal/fs/promises:842:10)
+    async fsCall (node:internal/fs/promises:468:12)
+    async ArtifactStore.publish (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:40:13)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/core.test.js:39:15)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: CAS, command deduplication and operation reconciliation never blindly replay
+ok 4 - CAS, command deduplication and operation reconciliation never blindly replay
+  ---
+  duration_ms: 59.6593
+  type: 'test'
+  ...
+# Subtest: independent review, evidence origin and three successive revisions remain enforced
+not ok 5 - independent review, evidence origin and three successive revisions remain enforced
+  ---
+  duration_ms: 77.6777
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\core.test.js:62:1'
+  failureType: 'testCodeFailure'
+  error: 'EPERM: operation not permitted, fsync'
+  code: 'EPERM'
+  stack: |-
+    async fsync (node:internal/fs/promises:842:10)
+    async fsCall (node:internal/fs/promises:468:12)
+    async ArtifactStore.publish (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:40:13)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/core.test.js:65:15)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# (node:61120) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+not ok 6 - persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+  ---
+  duration_ms: 75.767
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\execution.test.js:25:1'
+  failureType: 'testCodeFailure'
+  error: 'EPERM: operation not permitted, fsync'
+  code: 'EPERM'
+  stack: |-
+    async fsync (node:internal/fs/promises:842:10)
+    async fsCall (node:internal/fs/promises:468:12)
+    async ArtifactStore.publish (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:40:13)
+    async ArtifactStore.text (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:58:18)
+    async ready (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:11:18)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:26:13)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: cancellation and timeout wait for actual process termination
+not ok 7 - cancellation and timeout wait for actual process termination
+  ---
+  duration_ms: 86.3506
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\execution.test.js:36:1'
+  failureType: 'testCodeFailure'
+  error: 'EPERM: operation not permitted, fsync'
+  code: 'EPERM'
+  stack: |-
+    async fsync (node:internal/fs/promises:842:10)
+    async fsCall (node:internal/fs/promises:468:12)
+    async ArtifactStore.publish (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:40:13)
+    async ArtifactStore.text (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:58:18)
+    async ready (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:11:18)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:37:13)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: missing result and altered inputs are refused
+not ok 8 - missing result and altered inputs are refused
+  ---
+  duration_ms: 53.19
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\execution.test.js:47:1'
+  failureType: 'testCodeFailure'
+  error: 'EPERM: operation not permitted, fsync'
+  code: 'EPERM'
+  stack: |-
+    async fsync (node:internal/fs/promises:842:10)
+    async fsCall (node:internal/fs/promises:468:12)
+    async ArtifactStore.publish (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:40:13)
+    async ArtifactStore.text (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/artifacts/index.js:58:18)
+    async ready (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:11:18)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/execution.test.js:48:13)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# (node:61372) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: knowledge preserves adjudication, scopes, origins and source invalidation
+not ok 9 - knowledge preserves adjudication, scopes, origins and source invalidation
+  ---
+  duration_ms: 162.9345
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\knowledge-improvement.test.js:12:1'
+  failureType: 'testCodeFailure'
+  error: 'Knowledge source changed'
+  code: 'ARTIFACT_CHANGED'
+  name: 'SimulationError'
+  stack: |-
+    requireCondition (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/contracts/index.js:19:25)
+    KnowledgeService.apply (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/knowledge/index.js:73:5)
+    process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/knowledge-improvement.test.js:25:17)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+ok 10 - failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+  ---
+  duration_ms: 60.2761
+  type: 'test'
+  ...
+# Subtest: inventory/import is idempotent and preserves unknown historical provenance
+ok 11 - inventory/import is idempotent and preserves unknown historical provenance
+  ---
+  duration_ms: 98.5839
+  type: 'test'
+  ...
+1..11
+# tests 11
+# suites 0
+# pass 5
+# fail 6
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4267.8211

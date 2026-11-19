@@ -1,0 +1,44 @@
+TAP version 13
+# (node:63376) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+ok 1 - persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+  ---
+  duration_ms: 2050.9873
+  type: 'test'
+  ...
+# Subtest: cancellation and timeout wait for actual process termination
+ok 2 - cancellation and timeout wait for actual process termination
+  ---
+  duration_ms: 5562.8572
+  type: 'test'
+  ...
+# Subtest: missing result and altered inputs are refused
+ok 3 - missing result and altered inputs are refused
+  ---
+  duration_ms: 1874.6362
+  type: 'test'
+  ...
+# Subtest: execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+ok 4 - execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+  ---
+  duration_ms: 178.5261
+  type: 'test'
+  ...
+# (node:42464) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: worker survives submitting process exit and a reopened executor reconciles the same operation
+ok 5 - worker survives submitting process exit and a reopened executor reconciles the same operation
+  ---
+  duration_ms: 4592.6614
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 15852.0683

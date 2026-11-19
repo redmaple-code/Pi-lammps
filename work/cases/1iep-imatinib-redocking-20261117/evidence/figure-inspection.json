@@ -1,0 +1,21 @@
+{
+  "status": "generatedAndInspected",
+  "dataOrigin": "realVinaRuns",
+  "inspectionMethod": "Opened both images through view_image",
+  "observations": [
+    "三个种子分数和RMSD坐标轴/单位清晰",
+    "2 A预定阈值与实际种子结果一致",
+    "参考和真实对接配体在相同受体坐标系中叠加",
+    "原子与键的显示及图例可辨识"
+  ],
+  "figures": [
+    {
+      "path": "figures/real-redocking-analysis.png",
+      "digest": "sha256:ed637e6b9fb7de12f545ac3c3db03e306e2654961ced2749fbd3c7bf6b2613e4"
+    },
+    {
+      "path": "figures/reference-pose-overlay.png",
+      "digest": "sha256:2685169535499c74b263358ee50bbebc274c876b515a41cb5ad6956d2a17374e"
+    }
+  ]
+}

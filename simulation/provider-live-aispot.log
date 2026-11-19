@@ -1,0 +1,9 @@
+(node:61832) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "code": "TOOL_FAILED",
+  "message": "Provider check did not complete successfully",
+  "retryable": false,
+  "sideEffectState": "none"
+}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

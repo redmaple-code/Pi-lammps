@@ -1,0 +1,60 @@
+{
+  "mode": "tabletop",
+  "dataOrigin": "synthetic-tabletop",
+  "objective": "用酶活标签评估对接排序的回顾性富集，形成待解释的假阳性/假阴性。",
+  "target": "DEMO-ABL assay background",
+  "proposedConditions": {
+    "pH": 7.4,
+    "ATP_uM": 10,
+    "substrate_uM": 1,
+    "enzyme_nM": 5,
+    "DMSO_percent": 0.5,
+    "incubation_min": 30,
+    "readout": "RFU，示意假设为信号正向对应酶活。"
+  },
+  "dose_nM": [
+    1,
+    3,
+    10,
+    30,
+    100,
+    300,
+    1000,
+    3000
+  ],
+  "replicates": 3,
+  "platePlan": {
+    "format": "384-well",
+    "plates": 2,
+    "compoundsPerPlate": 10,
+    "compoundWellsPerPlate": 240,
+    "controlsPerPlate": 16,
+    "usedWellsPerPlate": 256
+  },
+  "controls": {
+    "highActivity": "溶剂对照，8孔/板",
+    "lowActivity": "DEMO-POS，8孔/板"
+  },
+  "normalization": "inhibition=1-(signal-meanLow)/(meanHigh-meanLow)",
+  "plateAcceptance": {
+    "minimumZPrime": 0.5,
+    "criterionSource": "演练假定阈值"
+  },
+  "doseModel": "Hill斜率固定1，上下界由板对照固定。浓度范围覆盖50%时计算IC50；否则按范围删失。",
+  "labels": {
+    "active": "IC50<=500 nM",
+    "inactive": "IC50>=1000 nM或下界>3000 nM",
+    "uncertain": "500<IC50<1000 nM，单列并从二分类指标中说明处理。"
+  },
+  "dataAccess": {
+    "protocolAuthors": "任务、结构、独立开发控制集说明",
+    "rankingAnalyst": "排序冻结后再关联此20个母体的标签",
+    "enforcementInThisExercise": "职责示意；由同一作者构造全套记录。"
+  },
+  "followupAssays": [
+    "正交活性读出",
+    "化合物读出干扰",
+    "溶解度/聚集",
+    "重复剂量响应"
+  ]
+}

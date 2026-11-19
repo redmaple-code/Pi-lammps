@@ -1,0 +1,7 @@
+{
+  "stage": "wf-04",
+  "reviewRefs": [
+    "review-e1fb7748-1f5f-4726-922d-183878312722"
+  ],
+  "correction": "Analysis evidence now states exact signed reaction definitions, separate full/mean/peak windows, mobile temperature scope and full raw log/input references. Re-evaluate old review claims against actual commands and units; do not infer contact geometry from magnitude alone."
+}

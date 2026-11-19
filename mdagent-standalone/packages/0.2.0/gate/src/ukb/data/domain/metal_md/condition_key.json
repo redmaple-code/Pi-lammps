@@ -1,0 +1,10 @@
+[
+  {"key_id": "units_style", "label": "LAMMPS 单位制", "value_type": "enum", "enum": ["metal", "real", "lj", "si", "electron"]},
+  {"key_id": "temperature_k", "label": "温度", "value_type": "number", "unit": "K"},
+  {"key_id": "pressure_bar", "label": "压强", "value_type": "number", "unit": "bar"},
+  {"key_id": "timestep_ps", "label": "时间步长", "value_type": "number", "unit": "ps"},
+  {"key_id": "strain_rate_per_ps", "label": "应变率", "value_type": "number", "unit": "1/ps"},
+  {"key_id": "natoms", "label": "原子数", "value_type": "integer"},
+  {"key_id": "crystal_structure", "label": "晶体结构", "value_type": "enum", "enum": ["fcc", "bcc", "hcp", "amorphous", "liquid", "polycrystal"]},
+  {"key_id": "potential_family", "label": "势函数族", "value_type": "enum", "enum": ["eam", "eam_alloy", "eam_fs", "meam", "adp", "tersoff", "lj", "mlip", "reaxff"]}
+]

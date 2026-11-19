@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "small-molecule-docking.pose-analysis",
+  "producer": "tabletop-author:analyst",
+  "sourceRefs": [
+    "source-lock.json",
+    "source-pack/manifest.json",
+    "plan/task.json"
+  ],
+  "semantics": {
+    "units": "RFU、nM、angstrom、kcal/mol或无量纲1，按字段说明",
+    "coordinates": "对接坐标未提供，结构观察为构造",
+    "identityMapping": "DEMO-parent/state/seed/run/pose身份可追踪",
+    "sampleBasis": "20母体、24假定状态、5种子"
+  },
+  "content": {
+    "mode": "tabletop",
+    "dataOrigin": "synthetic-tabletop",
+    "stageId": "poses",
+    "capability": "docking.poses.analyze",
+    "inputSlots": [
+      "task",
+      "protocol",
+      "docking-batch"
+    ],
+    "outputSlots": [
+      "pose-analysis"
+    ],
+    "declaredChecks": [
+      "checks#pose-integrity",
+      "checks#rmsd-reference"
+    ],
+    "actualScientificStatus": "notEvaluated",
+    "artifactRef": "execution/synthetic-pose-observations.csv",
+    "role": "analyst",
+    "demoObservation": "121条构造姿态观察中剔除1条严重冲突",
+    "geometryCheck": "assumedForExercise"
+  }
+}

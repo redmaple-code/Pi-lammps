@@ -1,0 +1,386 @@
+{
+  "packageVersion": "0.1.0",
+  "validatedAt": "2026-11-17T06:15:39.548048+00:00",
+  "scope": "Authored domain workflow documents, declarations, task schemas, references and selected formula checks.",
+  "method": "jsonschema Draft202012Validator plus temporary local reference/graph/task auditor.",
+  "environment": {
+    "python": "3.11.4"
+  },
+  "packs": [
+    {
+      "id": "small-molecule-docking",
+      "manifestSchema": "passed",
+      "resourceHashes": "passed",
+      "resourceReferencesAndFragments": "passed",
+      "graphAndSlotAudit": "passed",
+      "workflows": 2,
+      "internalWorkflows": 0,
+      "stageInstancesInDeclarations": 18,
+      "resourceCount": 17,
+      "taskForms": [
+        {
+          "file": "small-molecule-docking/examples/task.json",
+          "taskType": "focused-docking",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        },
+        {
+          "file": "small-molecule-docking/examples/virtual-screening.task.json",
+          "taskType": "virtual-screening",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        }
+      ],
+      "scientificValidationCases": 8,
+      "toolBindings": "unverified",
+      "scientificRuns": "notRun"
+    },
+    {
+      "id": "fem-dynamics",
+      "manifestSchema": "passed",
+      "resourceHashes": "passed",
+      "resourceReferencesAndFragments": "passed",
+      "graphAndSlotAudit": "passed",
+      "workflows": 4,
+      "internalWorkflows": 1,
+      "stageInstancesInDeclarations": 40,
+      "resourceCount": 19,
+      "taskForms": [
+        {
+          "file": "fem-dynamics/examples/explicit-impact.task.json",
+          "taskType": "explicit-impact",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        },
+        {
+          "file": "fem-dynamics/examples/harmonic-response.task.json",
+          "taskType": "harmonic-response",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        },
+        {
+          "file": "fem-dynamics/examples/modal.task.json",
+          "taskType": "modal",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        },
+        {
+          "file": "fem-dynamics/examples/task.json",
+          "taskType": "implicit-transient",
+          "schema": "passed",
+          "selectedSemanticChecks": "passed"
+        }
+      ],
+      "scientificValidationCases": 10,
+      "toolBindings": "unverified",
+      "scientificRuns": "notRun"
+    }
+  ],
+  "negativeCases": [
+    {
+      "case": "boxWrongUnit",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "negativeBoxSize",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "duplicateSeeds",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingReferenceForRecovery",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "screeningClaimWithoutLabels",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "unplannedScoreMixing",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "acquiredInputWithoutHash",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "pHOrder",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "topNExceedsSavedModes",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingDensity",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "wrongDensityUnit",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "noTimeForTransient",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingImpactControls",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "wrongRayleighBetaUnit",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "unverifiedNonlinearMaterial",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "forceHistoryAbsent",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "stepOrder",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "outputAliasing",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "frequencyRangeReversed",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "historyTimeOrder",
+      "check": "taskSemantic",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "graphCycle",
+      "check": "packageAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missingCheckFragment",
+      "check": "packageAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "unboundArtifact",
+      "check": "packageAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "hashMismatch",
+      "check": "packageAudit",
+      "observed": "rejectedAsExpected"
+    }
+  ],
+  "rayleighFormulaChecks": [
+    {
+      "frequencyHz": 20,
+      "computedRatio": 0.019999999999999997,
+      "expectedRatio": 0.02
+    },
+    {
+      "frequencyHz": 80,
+      "computedRatio": 0.02,
+      "expectedRatio": 0.02
+    }
+  ],
+  "checkedLocalLinks": 12,
+  "artifactManifest": [
+    {
+      "file": "fem-dynamics/artifacts.json",
+      "sha256": "dc6bca0819257b4db57c2107cb7158cafa0b5d64e24e1cc96ddd1cd78f25dd6e"
+    },
+    {
+      "file": "fem-dynamics/checks.json",
+      "sha256": "7e6946b67be6192a5413508017d09a8094210a611105e2a8b4e3b93db463cf4b"
+    },
+    {
+      "file": "fem-dynamics/examples/explicit-impact.task.json",
+      "sha256": "6d5e165fe777d1fb1adbf42f16d22cc77cf1145131f0c362ca8cbe5a40735046"
+    },
+    {
+      "file": "fem-dynamics/examples/harmonic-response.task.json",
+      "sha256": "ae205b95f00e3f665e927abae19bb45228f44e4aff2e13214315b04ea1d81a64"
+    },
+    {
+      "file": "fem-dynamics/examples/modal.task.json",
+      "sha256": "c30a24a4ed6abc86803e94263bdd548c1e115d8ab810ea480304513d6c719082"
+    },
+    {
+      "file": "fem-dynamics/examples/task.json",
+      "sha256": "4b35d4824d51ec2ad91d60cefe447a75651f972d8387f0a42e206a17cf3542c5"
+    },
+    {
+      "file": "fem-dynamics/failures.json",
+      "sha256": "bf6a8ddfc7a011e8220938000c51cc306d50867cc7a4c55796da8093685befd6"
+    },
+    {
+      "file": "fem-dynamics/knowledge.json",
+      "sha256": "7688825ba4ee4eed561ebac60e79ccd7f909e8dc4b49910d7944d8fd13298c9e"
+    },
+    {
+      "file": "fem-dynamics/manifest.json",
+      "sha256": "2a041844bfd7455fdbd141d061180c3dfae6dd2bc4ceda4718169b4ecc364fcc"
+    },
+    {
+      "file": "fem-dynamics/metrics.json",
+      "sha256": "7e2193449b2c888a7a06aeda5e1dc82de3498b1b14cc79df394c9a530dbda9b6"
+    },
+    {
+      "file": "fem-dynamics/models.json",
+      "sha256": "e54005ba51ed22613f0e27a9f5bf861dbc7c5654c6b1402f56a46935bc229341"
+    },
+    {
+      "file": "fem-dynamics/problem.schema.json",
+      "sha256": "0aa4a1e34ee7d407a34bbe60a219fcad4b6d9d4088a89f34fe5796dafa2cce2a"
+    },
+    {
+      "file": "fem-dynamics/protocols.json",
+      "sha256": "08f2eba482e3552e9cdaff46fa272c4aef834c892a5767b4faff95e77ddfc7fb"
+    },
+    {
+      "file": "fem-dynamics/README.md",
+      "sha256": "023a60cb4d599b419996f644648052dbe2830ea70c3351855af28e676e3580fc"
+    },
+    {
+      "file": "fem-dynamics/record.schema.json",
+      "sha256": "fb6fe4574efbb8e2b367910f921d3228d921d310eabaa643cd5bd5fe1a91ffe4"
+    },
+    {
+      "file": "fem-dynamics/roles.json",
+      "sha256": "a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa"
+    },
+    {
+      "file": "fem-dynamics/templates.json",
+      "sha256": "eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1"
+    },
+    {
+      "file": "fem-dynamics/tooling.md",
+      "sha256": "6563601168a633cd1def80b560cb9b1b5a237e2c2b326efac75fdfb14d019182"
+    },
+    {
+      "file": "fem-dynamics/validation.json",
+      "sha256": "11ef93042a47c6234d7b8fb73983d41dde2514d422abcaf44bf7343e43e0aa43"
+    },
+    {
+      "file": "fem-dynamics/vocabulary.json",
+      "sha256": "ed5344658f84bef6cb432978c0348298713e9bbfe918e3e108da8986386412e3"
+    },
+    {
+      "file": "README.md",
+      "sha256": "a9420474ffe053f52fca893ccaff21b69ad105624189504ef9f065369747c5ae"
+    },
+    {
+      "file": "small-molecule-docking/artifacts.json",
+      "sha256": "99177a9102bc61cbf88e2a92efd7d004b07a3c7f7ad5d4b32f2400bfe5965df3"
+    },
+    {
+      "file": "small-molecule-docking/checks.json",
+      "sha256": "3ce264da762680d7adb78af5578da2e4641d0abab196cfefc84c35b5d9f75beb"
+    },
+    {
+      "file": "small-molecule-docking/examples/task.json",
+      "sha256": "7ba56c62163600015b100f4a7ac2274508da5ab83f5242de254f93bb5cd49afc"
+    },
+    {
+      "file": "small-molecule-docking/examples/virtual-screening.task.json",
+      "sha256": "0cd842b7650570f2d04a0beaa40d71a255a0a5f501ec0ffee466fc5db65ad67c"
+    },
+    {
+      "file": "small-molecule-docking/failures.json",
+      "sha256": "a964608219c6af66414a4d81c71297f90408ff3da615170338c838e6f3aac64a"
+    },
+    {
+      "file": "small-molecule-docking/knowledge.json",
+      "sha256": "2761183713cb27fb005b18234bccf5ccadc6a4388f7f33dc4c5440aa5b786edb"
+    },
+    {
+      "file": "small-molecule-docking/manifest.json",
+      "sha256": "cb4a9ef021a750b1434ccbc1835bab93fb22cad0cc8d044413e92b6b82f4f2d3"
+    },
+    {
+      "file": "small-molecule-docking/metrics.json",
+      "sha256": "0495d5b52c2dfbf56c2e0fb78d68d5185a5567017735f509a22447d5388f1998"
+    },
+    {
+      "file": "small-molecule-docking/models.json",
+      "sha256": "6e068ebcb0538bdda8c826b1ec689bdadc0264a19d04798d8cc6156c27b25f07"
+    },
+    {
+      "file": "small-molecule-docking/problem.schema.json",
+      "sha256": "d8a5c01f9278557f9fbb2d96a3b660dc5bfc07701e18a3adf06a374687f9cff7"
+    },
+    {
+      "file": "small-molecule-docking/protocols.json",
+      "sha256": "d4329291b11a8e2103019d509e70c563195c692bc100223c9a90cf355116975b"
+    },
+    {
+      "file": "small-molecule-docking/README.md",
+      "sha256": "176f7b09dfa31b97f6bc770083cd84d2fa7652271936f8458b892a3664e2161a"
+    },
+    {
+      "file": "small-molecule-docking/record.schema.json",
+      "sha256": "6db15b3be97c41ccd8400053c1ca4935d244f15f5ff8a5e38449c6045180312b"
+    },
+    {
+      "file": "small-molecule-docking/roles.json",
+      "sha256": "a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa"
+    },
+    {
+      "file": "small-molecule-docking/templates.json",
+      "sha256": "eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1"
+    },
+    {
+      "file": "small-molecule-docking/tooling.md",
+      "sha256": "1cda67ce15e9230548818229b4eff6cc5144a846c96e934635c3a8eb05f55b35"
+    },
+    {
+      "file": "small-molecule-docking/validation.json",
+      "sha256": "986d3fcb07868eb507992c00931fe773927566b830c05bbd98efc2b2fcbecfea"
+    },
+    {
+      "file": "small-molecule-docking/vocabulary.json",
+      "sha256": "a06d1f9f3e7d9ed0a8c78fa6f34266f0108faa14800d2e75c2777cf01e530d0e"
+    }
+  ],
+  "productWorkingTreeClean": false,
+  "observedProductChanges": [
+    "M src/session-controls.js",
+    " M test/agent.test.js"
+  ],
+  "productSourceEditsByThisTask": false,
+  "productTestsRun": false,
+  "limitations": [
+    "All tool adapters remain specified and unverified.",
+    "Scientific benchmark scenarios are planned and no docking or FEM solver was run.",
+    "Detailed CalculiX references include 2.18 mirrors; the target deployment version requires manual verification.",
+    "Artifact schemas define envelopes and slot semantics; native solver parsers remain to be implemented."
+  ],
+  "verdict": "passedForDocumentAndDeclarationScope"
+}

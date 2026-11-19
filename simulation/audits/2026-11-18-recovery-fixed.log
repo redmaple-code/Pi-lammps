@@ -1,0 +1,95 @@
+TAP version 13
+# (node:59160) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AI002 completed cache is rejected after invalidation even with the same science revision
+ok 1 - AI002 completed cache is rejected after invalidation even with the same science revision
+  ---
+  duration_ms: 236.862
+  type: 'test'
+  ...
+# Subtest: AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+ok 2 - AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+  ---
+  duration_ms: 150.8234
+  type: 'test'
+  ...
+# Subtest: AI002 image inspection is a durable stop and resume does not regenerate images
+ok 3 - AI002 image inspection is a durable stop and resume does not regenerate images
+  ---
+  duration_ms: 204.4658
+  type: 'test'
+  ...
+# Subtest: AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+ok 4 - AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+  ---
+  duration_ms: 191.0302
+  type: 'test'
+  ...
+# Subtest: AI003 confirmed failure can resume and passed predecessors are not repeated
+ok 5 - AI003 confirmed failure can resume and passed predecessors are not repeated
+  ---
+  duration_ms: 274.4619
+  type: 'test'
+  ...
+# Subtest: AI006 source category and actual reading cannot satisfy an unrelated claim
+ok 6 - AI006 source category and actual reading cannot satisfy an unrelated claim
+  ---
+  duration_ms: 94.4171
+  type: 'test'
+  ...
+# Subtest: AI006 required host checks survive model review and duplicate checks are rejected
+ok 7 - AI006 required host checks survive model review and duplicate checks are rejected
+  ---
+  duration_ms: 259.9555
+  type: 'test'
+  ...
+# Subtest: AI007 exploratory protocol produces explicit missing scientific comparisons
+ok 8 - AI007 exploratory protocol produces explicit missing scientific comparisons
+  ---
+  duration_ms: 2.936
+  type: 'test'
+  ...
+# Subtest: AI007 finite references enforce tolerances, matching conditions and immutable protocol
+ok 9 - AI007 finite references enforce tolerances, matching conditions and immutable protocol
+  ---
+  duration_ms: 14.8004
+  type: 'test'
+  ...
+# Subtest: AI004 delivery cannot close with missing, failed or stale verification evidence
+ok 10 - AI004 delivery cannot close with missing, failed or stale verification evidence
+  ---
+  duration_ms: 1.8118
+  type: 'test'
+  ...
+# Subtest: AI003 publication contract rejects JSON null and incorrect artifact types before writing
+ok 11 - AI003 publication contract rejects JSON null and incorrect artifact types before writing
+  ---
+  duration_ms: 36.4088
+  type: 'test'
+  ...
+# Subtest: AI003 analyst reads outputs through their owning solver operation and rejects foreign or binary artifacts
+not ok 12 - AI003 analyst reads outputs through their owning solver operation and rejects foreign or binary artifacts
+  ---
+  duration_ms: 145.9592
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\grinding-recovery.test.js:171:1'
+  failureType: 'testCodeFailure'
+  error: 'Artifact is outside the current text-artifact scope'
+  code: 'PERMISSION_DENIED'
+  name: 'SimulationError'
+  stack: |-
+    requireCondition (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/contracts/index.js:19:25)
+    Object.execute (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/runtime-redmaple/index.js:167:9)
+    TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/grinding-recovery.test.js:181:25)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 11
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6194.5029

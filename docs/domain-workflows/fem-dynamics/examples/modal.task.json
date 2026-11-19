@@ -1,0 +1,128 @@
+{
+  "schemaVersion": "1.0.0",
+  "taskId": "demo-cantilever-modes",
+  "taskType": "modal",
+  "parameterStatus": "proposed",
+  "unitSystem": "SI",
+  "geometry": {
+    "kind": "parametricCantilever",
+    "length": {
+      "value": 0.2,
+      "unit": "m"
+    },
+    "width": {
+      "value": 0.01,
+      "unit": "m"
+    },
+    "height": {
+      "value": 0.002,
+      "unit": "m"
+    },
+    "idealization": "solid",
+    "coordinateDefinition": "轴x，宽y，厚z，夹持面x=0。"
+  },
+  "materials": [
+    {
+      "id": "elastic-steel-demo",
+      "model": "isotropicElastic",
+      "youngsModulus": {
+        "value": 210000000000.0,
+        "unit": "Pa"
+      },
+      "poissonRatio": 0.3,
+      "density": {
+        "value": 7800,
+        "unit": "kg/m^3"
+      },
+      "source": "演示用参数，实际材料需来源。"
+    }
+  ],
+  "mesh": {
+    "elementFamily": "由适配器核验的二次实体单元",
+    "targetSize": {
+      "value": 0.001,
+      "unit": "m"
+    },
+    "sectionAndOrientation": "全域材料映射，检查厚度分辨和弯曲精度。",
+    "refinementRatios": [
+      1.5,
+      2
+    ]
+  },
+  "boundaries": {
+    "supports": [
+      "x=0面三平移自由度约束"
+    ],
+    "expectedRigidBodyModes": 0,
+    "preloadDecision": "演示无预载。",
+    "contactDecision": "单体梁无接触。"
+  },
+  "initialState": {
+    "displacement": "0 m",
+    "velocity": "0 m/s",
+    "equilibriumBasis": "零载、无初始应力。"
+  },
+  "damping": {
+    "model": "none",
+    "source": "解析对照演示。"
+  },
+  "excitation": {
+    "kind": "none",
+    "selection": "全域质量与刚度",
+    "direction": "global-z",
+    "timeBasis": "frequency",
+    "source": "自由振动特征问题。"
+  },
+  "evaluation": {
+    "regions": [
+      "自由端面位移平均",
+      "距夹持奇异处明确定义的评价区"
+    ],
+    "directions": [
+      "global-z"
+    ],
+    "requestedQuantities": [
+      "frequencies",
+      "modeShapes",
+      "modalMass"
+    ],
+    "verificationTargets": {
+      "frequencyRelativeError": 0.02,
+      "timeHistoryRelativeError": 0.05,
+      "meshChange": 0.02,
+      "energyBalance": 0.02
+    },
+    "referenceBasis": "候选目标，仅用于首轮验证设计；固定SDOF/梁解析或加密参考的适用条件和比较范数。"
+  },
+  "resources": {
+    "maxRuns": 12,
+    "wallTimePerRun": {
+      "value": 1800,
+      "unit": "s"
+    },
+    "memoryLimit": {
+      "value": 8,
+      "unit": "GiB"
+    }
+  },
+  "deliverables": [
+    "modes",
+    "fields",
+    "verification",
+    "report"
+  ],
+  "frequency": {
+    "min": {
+      "value": 0,
+      "unit": "Hz"
+    },
+    "max": {
+      "value": 2000,
+      "unit": "Hz"
+    },
+    "points": 100,
+    "modesRequested": 12,
+    "phaseConvention": "实振型，按约定归一化。",
+    "amplitudeConvention": "peak"
+  }
+}

@@ -1,0 +1,2321 @@
+{
+  "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+  "sourceFiles": [
+    {
+      "path": ".gitignore",
+      "digest": "sha256:1da936e1c27c9a225c34af835958782f4a7d850aa1b8c5e2047af55324c92c3f",
+      "byteLength": 45
+    },
+    {
+      "path": "apps/cli/main.js",
+      "digest": "sha256:6c5bda274d84285297e90d3249db24f6e6574011f136cf05d8976093862d4255",
+      "byteLength": 7009
+    },
+    {
+      "path": "atomsk-validation.json",
+      "digest": "sha256:f908c53719992fae6a82afd6fee685292a548041a52a4081dadf9056ab45bf60",
+      "byteLength": 1666
+    },
+    {
+      "path": "CLI-HELP.txt",
+      "digest": "sha256:aa9f24183e0b9117ca5a0ac9ea8629ca7b1d3ab54b2d4c202d06db7816cf1dab",
+      "byteLength": 931
+    },
+    {
+      "path": "domains/examples/discrete-event.json",
+      "digest": "sha256:5d1bb5ea01cf4eaa4e280d1adf35857fbf447b6d4c6143410424b093e584a4b5",
+      "byteLength": 7418
+    },
+    {
+      "path": "domains/examples/molecular-dynamics.json",
+      "digest": "sha256:d47d62c25b0a94428eb580757635346cbaa57c69fb129b7d601cc54aed8bad50",
+      "byteLength": 6528
+    },
+    {
+      "path": "domains/examples/structural-mechanics.json",
+      "digest": "sha256:deebb4240027db47a3a33817f7925fcfa6eb5bd6434bee9eaf0af05a68129f98",
+      "byteLength": 7190
+    },
+    {
+      "path": "domains/lammps/artifacts.json",
+      "digest": "sha256:041d5b9ffb5d2622ebc45b09d659e8c0b22419f75c085eb5ad561d98711278fa",
+      "byteLength": 1783
+    },
+    {
+      "path": "domains/lammps/assets/FeNiCrCoCu-heafixed.setfl",
+      "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+      "byteLength": 1834403
+    },
+    {
+      "path": "domains/lammps/checks.js",
+      "digest": "sha256:e88b038bb0d3632fc64b79682e0285a4e8cce10e3fb2f36fcde91b0cfba4d971",
+      "byteLength": 7671
+    },
+    {
+      "path": "domains/lammps/checks.json",
+      "digest": "sha256:7b5d8a2e6ef98d78a27870b21a4a1d7f11afca7cb709b57cb11cb568e4ccd448",
+      "byteLength": 1348
+    },
+    {
+      "path": "domains/lammps/failures.json",
+      "digest": "sha256:907e54c88da2d5e7461eca511ac44611df45b34a89cca4542741f06d180880ea",
+      "byteLength": 149
+    },
+    {
+      "path": "domains/lammps/grinding.parameters.json",
+      "digest": "sha256:94f5e2146cfa370cdd8561bc2cd1e394e4d328b8cf1c9a5ec300dd3968f58472",
+      "byteLength": 419
+    },
+    {
+      "path": "domains/lammps/knowledge.json",
+      "digest": "sha256:950b29f5925d3c044dbb331c7e058f7a5dc7ea509c0b7cdc76be62ae37f1e152",
+      "byteLength": 291
+    },
+    {
+      "path": "domains/lammps/legacy-assets/docs/implementation/agent-self-evolution-baseline.md",
+      "digest": "sha256:19510ef4b50ddc582f7c82e2cc7b1e1c61376cffc92400ab4e692ed912da1471",
+      "byteLength": 10196
+    },
+    {
+      "path": "domains/lammps/legacy-assets/IMPORT.json",
+      "digest": "sha256:7cfb37ab4d664fe7c13e49c9793889550ed459b33573b53546e4314b10251b12",
+      "byteLength": 145553
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/CASE_METADATA.md",
+      "digest": "sha256:e9db1fd733c1df2545479b13964d9de4a8dd6603eda2d19c2aa3b9cb59e40344",
+      "byteLength": 2190
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/case-family-index.md",
+      "digest": "sha256:ab4832eee44d75eb82e1370c7f166601b32e4f506d3ea73c68272c27b499768e",
+      "byteLength": 4246
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/INDEX.md",
+      "digest": "sha256:77ab3450214a7e05c7b82fc1508946ebe8080bee8d6b5067c794489d91138816",
+      "byteLength": 15292
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-1-19805bf0.md",
+      "digest": "sha256:b3bd17cc8a56f8de4c6722e736d4d461770f893c5787565253f47d91fb8010af",
+      "byteLength": 1036
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-1-43451274.md",
+      "digest": "sha256:914510743be1ebabd45b5dd0f79f9d7a78d952f3b403135f5ffa106f254b2091",
+      "byteLength": 1176
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-1-595f1c99.md",
+      "digest": "sha256:4a601b9df3c62ab7bc6e2b0d8d742cd52cdf8a18eb820c8f198405c2ad366b2e",
+      "byteLength": 1364
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-1-co2-014f1321.md",
+      "digest": "sha256:ff88bd19a36b72ab33a7619c6406d8ca8db0189eafb1952e15481f56992c9ab1",
+      "byteLength": 1126
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-1co2-6878919d.md",
+      "digest": "sha256:979f54603d1e5e48ef3bae60b440ea9bb8ca7d1c4300d883526f65afe7665ff8",
+      "byteLength": 1531
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-0afdd806.md",
+      "digest": "sha256:aec5ca1a0829b80f0f94e76b763cd5899c2b08e09cfa075d934864e1531801e2",
+      "byteLength": 1012
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-2c34c701.md",
+      "digest": "sha256:bc7dd6cf0618d4ba390b013a231a77bdafea8e5de9a6d249d338a55b76d69181",
+      "byteLength": 1044
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-307df31e.md",
+      "digest": "sha256:62ddffd87a8d0e6e3dab584b301922abc15a13f4295f108b4b830806203f4609",
+      "byteLength": 984
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-41cedc4a.md",
+      "digest": "sha256:a53d923a4be22072bc504f534fab2e39124283f98885d33bf3dabee005e849aa",
+      "byteLength": 1124
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-5869691a.md",
+      "digest": "sha256:034284e13962962bdf46303cbddbc786bd408cdc820bac9bc412d10e77f16456",
+      "byteLength": 1062
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-67e55f89.md",
+      "digest": "sha256:1103ba14449102668e0ed6229713711a2a7ad40c76c83a34401b5dfa13ba7df5",
+      "byteLength": 966
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-6db18c15.md",
+      "digest": "sha256:3c5f27a5c50b994eb23037adfc4feef8fac61d499b3370b8051317527968a067",
+      "byteLength": 1042
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-6fa1ed7e.md",
+      "digest": "sha256:7e2edc980e5d293f429fc08becf3e3db976136f831dea63cf7ccddc824473c5a",
+      "byteLength": 1508
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-8b84e6c4.md",
+      "digest": "sha256:fa2a593bd6482fa02589b53b8bfe57ed555e15f7884f7a868822345e55a2cf76",
+      "byteLength": 998
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-8bd755d8.md",
+      "digest": "sha256:f22ad9b578bb010e41e6716dfe68960a8be97e9d3316d7c8b9c252df04cdbf64",
+      "byteLength": 1256
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-98b483fe.md",
+      "digest": "sha256:f979e5f5f7c21e24206d5d929f9e89dc827d661c64dbdbdaad852ac4ce3087a2",
+      "byteLength": 1088
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-a6f7746a.md",
+      "digest": "sha256:7df013b8b9f040abce248cb3a9b4c93375e2f2940b18e0ccc0bc44753af9736f",
+      "byteLength": 1036
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-b93e6b46.md",
+      "digest": "sha256:18d795d0bd67246109321029079a76a906c9fbad262c33f65da7469897f43445",
+      "byteLength": 1012
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-bc39e10f.md",
+      "digest": "sha256:ba4655927b2466a648cd04d67b469eaa30795b03582be5975cb9ee7e283958b4",
+      "byteLength": 1367
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-bfa24fa6.md",
+      "digest": "sha256:b1001ac7bcc17e41f4dd8a9ebe633d3d927954763963089e2f21c94105931045",
+      "byteLength": 1004
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-d0608dcc.md",
+      "digest": "sha256:c305378c183ac452640d19b689a22ed79281503ea9f9895556e2da3e8f25754b",
+      "byteLength": 1138
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-e2a88ddb.md",
+      "digest": "sha256:a24f3a8bb1438e12c486c0deb94b9da190370f8dba68e7fdd9c46d99510fdebc",
+      "byteLength": 1006
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-e87aab4c.md",
+      "digest": "sha256:2afbf7de8f59c97f0ffb884c240e49cc3cafe9761a08322baab6b468497757bb",
+      "byteLength": 1124
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-entry-fa7c3bc3.md",
+      "digest": "sha256:f03fdb6e7ce2ad6cddf6a6ffd1f4dfa5ed3ce9c78c3fb3e065eea3deb6f1bc44",
+      "byteLength": 1486
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-naoh-bf47bb7b.md",
+      "digest": "sha256:9a76571a676638582f683743f3908a051bc528f020cf3d587ba1023aab7b41b8",
+      "byteLength": 1346
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-pdf6-c274de8c.md",
+      "digest": "sha256:91691ecd4e2979c22d1ffaa94930da4cbe74631ad6a199ff3eafbd1cdc8af471",
+      "byteLength": 1050
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/notes/2026-04-14-pdms-01b766ff.md",
+      "digest": "sha256:c00c9afb76d9fcbba581c35162c577edf8369953ed60e7e199648651b128106b",
+      "byteLength": 1232
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/debug_cell.in",
+      "digest": "sha256:a2e95a567987f23600ff582b558aa9ecff74d17e327e10ebdd69f5655e70e321",
+      "byteLength": 692
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/debug_cell2.in",
+      "digest": "sha256:08472ce2400d68c05ae9765abb59a1aead81fc790f700192428c4935a82ba172",
+      "byteLength": 703
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/download_potential.ps1",
+      "digest": "sha256:198805e4207a749f2b92ef31f315e715c5abe8eea9966ee0ce645c46d5225bf9",
+      "byteLength": 396
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/fault_structures/fault_meta.txt",
+      "digest": "sha256:6265d2c290368c3762f8a87633a5b5f5d63dec816ce889275b0f2d2e2d6b8dfb",
+      "byteLength": 171
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/gen_tial_fault_structures.py",
+      "digest": "sha256:23ccaeb691fd06dcb6b53f96c60e02ba6d4848c1c0fbfd4915e3fb808327863f",
+      "byteLength": 7011
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/github_search.txt",
+      "digest": "sha256:50f2ee553286608e3021fa73b38c4a651d191dcbf7ef999fb7e0ea06dd39e3ce",
+      "byteLength": 80
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/nist_hea.html",
+      "digest": "sha256:5fcc2f39371920e6b28c6b94b7c88563f12742031d8e314acf1c59f635f03ae8",
+      "byteLength": 1256917
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/nist_index.html",
+      "digest": "sha256:0ef5a8e38b90307bb4cb20703ee134d3e4aed624e0ac54a8d0f4a71f27735d3b",
+      "byteLength": 1122
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/nist_nial.html",
+      "digest": "sha256:06277a8c8492b0e9a3e127b3f6619f7a1069c712876a5965c175d1d56188c9fc",
+      "byteLength": 20882
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/nist_search.html",
+      "digest": "sha256:9cb822ec2530ea704c4a6ff934c45372a96c539f8e7dc6af47a78c3ce2afbafd",
+      "byteLength": 1122
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/nist_ti.html",
+      "digest": "sha256:e1d972100ee4d4a2072bcf0f2c76ae400f7f2116f57e1426340514a2e2471295",
+      "byteLength": 1158360
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_al_energy.in",
+      "digest": "sha256:96b89377286fc5b91c10955eae19a018a615e8c24f1e2ffbc13ee9986ce7ca0b",
+      "byteLength": 433
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_eam_energy_ref.in",
+      "digest": "sha256:9188f54ea7e41be26e9439d6440a7b2d45a7bd30720e51cbaaccb542e70d7820",
+      "byteLength": 1727
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_test.in",
+      "digest": "sha256:08d730ba8b704b60f0e4885866addfdef5a73dd40d18fbd8305d057b1f001841",
+      "byteLength": 5484
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_ti_energy.in",
+      "digest": "sha256:682eccf730ee29fd3f11d4367e6b4cd72218d89893469eb6de0bef0c7a999c41",
+      "byteLength": 561
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_elastic.in",
+      "digest": "sha256:b5c83ea31447483f97c4565adcf3a8dbe3a14529c774e475f40559dbd0be077f",
+      "byteLength": 3078
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_energy.in",
+      "digest": "sha256:42cb235f478cbeecf473ea2768bfaaa2a72a461d7872dec782c3527e9bbf766b",
+      "byteLength": 3643
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_fault_eval.in",
+      "digest": "sha256:0a848ff269e50368924c313839f4233fb47fe611f91600d9526461a942a9f987",
+      "byteLength": 857
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_fault_oriented.in",
+      "digest": "sha256:78be4069f71c9e0bb25ada7ab9b971c9dc4d6ff7808591a6a6b95cfab7bcabe4",
+      "byteLength": 1509
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_fault.in",
+      "digest": "sha256:ff4b26a0c8634ca6693eae1c8539f24733821c44aae9715818cd6235dc674a53",
+      "byteLength": 6667
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_tial_lattice.in",
+      "digest": "sha256:c7b03ab22913d922b018ed5dcad1e515720130650f920b73259aa5507814f5fd",
+      "byteLength": 1999
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants_v2.in",
+      "digest": "sha256:05c452d6d744be1b58da048a9b4c07fff14738d952d891521f00d7d4f4a7293c",
+      "byteLength": 1572
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants.in",
+      "digest": "sha256:26cc005617c291967d9ee6850022d35a7ab8763e5ed2443b626fcb8d4b91ed75",
+      "byteLength": 1295
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A1_Al_fcc.in",
+      "digest": "sha256:338eaf005ad7bde3ddf66341b94e0c3a93024d479c3e994313b4cc2bf58b84c8",
+      "byteLength": 343
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A2_Ti_hcp.in",
+      "digest": "sha256:b6c38f404b2b8136b42195f4fa41d2b3f760d9dd6baaf08d17c8a28f77db4d29",
+      "byteLength": 343
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam_files.py",
+      "digest": "sha256:9ec2c10f4b5c7763da941656441911d63b31dffc205d30b7e0036ba04388aca8",
+      "byteLength": 7636
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam.py",
+      "digest": "sha256:c7b7412ef87d3500c01d9dc87d5173a24c18fc9269da3ff5cbd54ef29f598497",
+      "byteLength": 1685
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam2.py",
+      "digest": "sha256:128fe74fe9f12837652c784f3ebc9744bc8e8b16f116d585371c0c3d3c1a462f",
+      "byteLength": 3308
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam3.py",
+      "digest": "sha256:5845c61f0ba8813fcb9abe992b71afda59f1eadcf68dd40a96da33a1ccfc276d",
+      "byteLength": 4866
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_elastic_constants.in",
+      "digest": "sha256:13b3e5a452dfdd99016055463095db0fee96e45a4e1da2dd60ce4703ec060fb1",
+      "byteLength": 3131
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_lattice.in",
+      "digest": "sha256:1fd91a54dc3ab45d4b0a797aba8306941846d55c66bd1e208fca4b06ecef8ec6",
+      "byteLength": 733
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_cohesive_energy.in",
+      "digest": "sha256:62a21477b873da621ab1169951772b7f84a5cc2f3b721922eb0a3be936f252b9",
+      "byteLength": 995
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_pure_energies.in",
+      "digest": "sha256:c7b58d06de28aa24ffa6b5caf3f141d1cb12d82f044aad1fe5b6d61307c641a0",
+      "byteLength": 1564
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C2_pure_energies.in",
+      "digest": "sha256:c204258a4210bdce16d0a57317c3aaff8a32a8edd05a73674f73965a32a158bc",
+      "byteLength": 888
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_eam_energy.py",
+      "digest": "sha256:b48b6bad2c7e9eee8f9379d9c20519bd5833685d204be2a838809f1fcc7958dc",
+      "byteLength": 6769
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_pair_potential.py",
+      "digest": "sha256:f3c0e3d8611c278a6f57fdb88b225b749253f5b73084dc38d0dc4a69730c587b",
+      "byteLength": 2794
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/D_planar_faults.in",
+      "digest": "sha256:9b715491d522a3ee6d41be6a70404cc41a441f6a36ec51978b119e3c99d897f3",
+      "byteLength": 2543
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/E_formation_energy.in",
+      "digest": "sha256:b611ed93e69c872486ee2586d012039a3f510ddf245ae6f14315f77d5e95142d",
+      "byteLength": 2556
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/generate_structures.py",
+      "digest": "sha256:e1603f5ca2f07e2d90f2a55b8834ca81cc4f1dbbb83b37c058522a3fce92b582",
+      "byteLength": 4064
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_alloy.py",
+      "digest": "sha256:c7ad534cd66fd538abc0dde1170949cc9a4fd07b78dc8172036e093f952f4dae",
+      "byteLength": 6501
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v3.py",
+      "digest": "sha256:5f189338e94a8f80f7382b207ac18ea52b06aae7ec7d2563961ec4ae8fdcc071",
+      "byteLength": 10553
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v4.py",
+      "digest": "sha256:40d3856de05b1b4ec0f1eb1dfed74cd88d2a43de5931e247f050d233a4024833",
+      "byteLength": 7940
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_calcs.py",
+      "digest": "sha256:d47cc5f60bfba88c3286e91f8290f7aef3772aa9bcb07a6c7700a7f47438d759",
+      "byteLength": 5675
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_scans.py",
+      "digest": "sha256:84c2432fe820c0e9a6124837be56685ab07a54ac2bd4ebb816ec66f6f16dc222",
+      "byteLength": 4895
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_tests.py",
+      "digest": "sha256:b19c72ecf0cf9653c8539d3df9a85e3659ae74d00dd4a6508fbd59da6132c8db",
+      "byteLength": 5564
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_comprehensive_tests.py",
+      "digest": "sha256:312c39530a8cc5c63c878bc8f8c3844e99f245caa7cc335b3a855558d85e7312",
+      "byteLength": 5085
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_ca.in",
+      "digest": "sha256:4ba6da7e6761fefd4be382c35dd37197da00cfc0791c93290e6a38412b703ef3",
+      "byteLength": 1323
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_tial.in",
+      "digest": "sha256:a3553c7887585937e95660d0422d135d819cfacee2342117a4897cf4a0c14ed5",
+      "byteLength": 996
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t1_Al_fcc.in",
+      "digest": "sha256:83d6322e927af3a3d6fab12d9aeeec7146a6271524445d635cd0134d444b7b61",
+      "byteLength": 340
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t2_Ti_hcp.in",
+      "digest": "sha256:c19845b51ef13e22a2a8c7c08e223fc1736bcfd3cdd0bafd7f982f36753e58cc",
+      "byteLength": 340
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t3_TiAl_lat.in",
+      "digest": "sha256:9c25d28ea661f74627ef9738adfd0ce217d634a9501c647eea13744525aaa84f",
+      "byteLength": 660
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_al_fcc.in",
+      "digest": "sha256:935fb482b7d330540d8d468e2a3a9899224db49b0e96ee78e6eebefc9637e909",
+      "byteLength": 881
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_fixed.in",
+      "digest": "sha256:2536351b7d5f9443e41af9b8dc4c3b291ab213b1aeeae117151a6f8d31de7ea9",
+      "byteLength": 467
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice.in",
+      "digest": "sha256:43ae9b86a468de4c7b2ca2b9c1b6ae26210505ff55fb3e593c52eca5cdd6b1e4",
+      "byteLength": 356
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice2.in",
+      "digest": "sha256:f9e3c067b7afa76393eb7b5136c7ea511a5ef7f3bdb237fff4297761a923de9c",
+      "byteLength": 269
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice3.in",
+      "digest": "sha256:5ed041a1151c7c2819a248f17751661b5bf310920c351a15c569186737b944f8",
+      "byteLength": 289
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice4.in",
+      "digest": "sha256:280a13bfb0f0ebc889f96b1ebbad140a6988f533cc92db3d29d38e69a9ed4afd",
+      "byteLength": 356
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.in",
+      "digest": "sha256:2f8c08ff2dff57923d48243c70d374409547ba5b299667bb7293d7dc3af5d670",
+      "byteLength": 1504
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.py",
+      "digest": "sha256:a00085d8fa393ea8647f5cd370abb7833eb44d22f1ed124b0fa2d5a4e2596b65",
+      "byteLength": 7172
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair.in",
+      "digest": "sha256:90804f443f19aec34c8b0f2f1073295df9d7d9a12bc21565e3f9338d36792450",
+      "byteLength": 702
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_check.in",
+      "digest": "sha256:c960de46cbc210a26ea21a110d36cea188f719006a0110fa794f1c3b8717090d",
+      "byteLength": 1125
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_density.in",
+      "digest": "sha256:f18417aee50e7a99f10aa539e8a2a3b4a6684653cc7dc15e4078b918cc7d171b",
+      "byteLength": 828
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp.in",
+      "digest": "sha256:2386118928ce2746f3b8a93e0e3fdb4086d08436ddf893d76b6cedd828608e20",
+      "byteLength": 943
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_check.in",
+      "digest": "sha256:8c84a856f8e2481645b6e15142ba585d390a3059d1a1413346975a5edb3d0afe",
+      "byteLength": 779
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_debug.in",
+      "digest": "sha256:cbcb1a0eb5a9257e6f1aa4bc2a9b2f53e490b1234af7b115975984e313839c07",
+      "byteLength": 1253
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_energy_decomp.in",
+      "digest": "sha256:9e34d8a04c22ce4f395f64e6c548b7ed3802e62f0f55e0b2f944b0a99379954d",
+      "byteLength": 1865
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_explicit.in",
+      "digest": "sha256:8b504bf1a75f98967a27aa33a8c5a51c1402789191ab1005d9fdc9e6a5182835",
+      "byteLength": 1190
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderingB.in",
+      "digest": "sha256:85dc8b5f33fbb546daba3f3d008ac0c26a863c793655780a148058fa6d0bcc87",
+      "byteLength": 884
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderings.in",
+      "digest": "sha256:6436715ad43304eed8f18eabbb72c3f89e3bce9df1c05fa3680263fa59d3fc88",
+      "byteLength": 2124
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_raw.in",
+      "digest": "sha256:8bd9333a21f924f3f9b25dc2948f618ebf36d33806958d0d890056a101edf761",
+      "byteLength": 1827
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_relaxed.in",
+      "digest": "sha256:af1edd6651a1cce4c139f3305aaac0720010d510ec7c67f93cf2522e235aa806",
+      "byteLength": 2223
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_simple.in",
+      "digest": "sha256:aab640a03195bbc830b2cd0f3ed8695def0edb0d3ed1dc2ae2e79ff5779b4f01",
+      "byteLength": 1064
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_v2.in",
+      "digest": "sha256:0128bc8ee736becbcc91368e04fcc2b20fce3db16865c0d4718c6320825d6a17",
+      "byteLength": 1686
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_v3.in",
+      "digest": "sha256:eb55d0a20fa5f9246a74f55e73486c3b0de4b6e46191f238adbe03fad2300f3d",
+      "byteLength": 967
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test1_al_fcc.in",
+      "digest": "sha256:a3000e6203079285b152f422af17c2e82bd5f8e16081ff70d40168db167912dc",
+      "byteLength": 422
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test2_ti_hcp.in",
+      "digest": "sha256:2af32255e34ad1f81c818ec1fa752239e41825b7bb8682b7def4b5717e152220",
+      "byteLength": 468
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test3_tial.in",
+      "digest": "sha256:79c5a5fc519292d74c55679a8089ae6aa3d8a9293ca16ecc2d0d4bb6462185bb",
+      "byteLength": 791
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test4_ti_relax.in",
+      "digest": "sha256:2c92eec2939a0bb6020cd33b2707a31cbcc2e58b332645c75fdf52d6503785d8",
+      "byteLength": 536
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/verify_l10.in",
+      "digest": "sha256:ee21a6324b9a6e1556930fa65e92a6277d874ce7e8e5805a038c88107f9e7d1b",
+      "byteLength": 1149
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper2_ni_ni3al_tensile.in",
+      "digest": "sha256:26085311b9b7cc17c08334e3be93c0ade0795a4efd321c6e714f45221584240b",
+      "byteLength": 1900
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper2_ni_tensile.in",
+      "digest": "sha256:c9aa85cf0c348b81b12ca26071f0a555cfea4befdb3e8445d5a9a698c9a90d1d",
+      "byteLength": 1508
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/paper3_hea_melt_quench.in",
+      "digest": "sha256:62f7bbb37a35d3c33934ca3c37a7ea96dcbbccb27bccaf89592ec951d300fe77",
+      "byteLength": 1904
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/results/paper1_results.md",
+      "digest": "sha256:0e14c11861c26bc9aec75de6e29f22c058e8732575044e71405e772e4ef47dcb",
+      "byteLength": 2058
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/results/reproduction-report.md",
+      "digest": "sha256:eacddd54397bc81e4cc960c0c2497930c8292d0c1e42fb9228df4e51e3b8a6a5",
+      "byteLength": 6187
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/test_loops.in",
+      "digest": "sha256:47b470522b4d6e6fcdc630e2000abda1189fcf085d3bf7596d731edd59123329",
+      "byteLength": 351
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/test_nist.txt",
+      "digest": "sha256:3dede9c8734fe535044e577140682518a24453663fd530098d066b19fd1545dd",
+      "byteLength": 30754
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/paper-reproduction/test_tial_oriented.in",
+      "digest": "sha256:10fc0ad77427f01fa3344c5a8a71872859bec72826479083d725d21cc2fbe1f9",
+      "byteLength": 764
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/cases/README.md",
+      "digest": "sha256:cd89be33a6429468f01a45c95d4e7595bb9c58dfb6aa3bf6c9db3e02225abc3e",
+      "byteLength": 300
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/confirmed-lessons.md",
+      "digest": "sha256:823b2ced748c12df0e7e2d36e616947740da5511fe684d4828a47b16503b1138",
+      "byteLength": 20481
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/core-checks.md",
+      "digest": "sha256:55561301ca4e777da0e762c3a82c615f249c476d8f40c199a75967100ad7845e",
+      "byteLength": 5185
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/historical-lessons.md",
+      "digest": "sha256:404bb3f6958344e80b5db4ef3b74dd33e0455ca0f79f4ab22989c8d20dae59f1",
+      "byteLength": 2312
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/INDEX.md",
+      "digest": "sha256:31e0d3c1fccf973d7384968f7b550d7a0c8770e00d446b477628466d53dc46f1",
+      "byteLength": 4081
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/learning-workflow.md",
+      "digest": "sha256:255d05465e8ae8290b34d35295b1791bf9b7201ab7a8efb1fce7e5baef9cad91",
+      "byteLength": 3225
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/metal-research-insights.md",
+      "digest": "sha256:54782300c77c2361d799df63135defb387b18d1b42fc8609332b52db9cf420f1",
+      "byteLength": 48357
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/pending-lessons.md",
+      "digest": "sha256:e97f417603a4cd8c51123318fb788934a07e243cceeda0600efe693ad86aabdc",
+      "byteLength": 10118
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/README.md",
+      "digest": "sha256:26ff368b2a64cf2e6b869c756db2a169f984c2349fd359353842efa88a594e63",
+      "byteLength": 364
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/session-lessons.md",
+      "digest": "sha256:823673e5cc17567dac2a8b08d4f1a83862b92a09f98adfa639a99c4d94615fb0",
+      "byteLength": 3841
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/verification-rules.md",
+      "digest": "sha256:0afe97895e754696fedee0cf6ad8870ca7e03ff5d8389380f1b390d1cd398002",
+      "byteLength": 2688
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/memory/wf01-mg-al-model-setup.md",
+      "digest": "sha256:e4f7353f1715a771cda6e5ad68c1e182c969e02f18021e4320b0d0660b9c1110",
+      "byteLength": 15984
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/a-atom-model.md",
+      "digest": "sha256:7339e7bd4751931a7e44bc3667de33c6d1f2719b43604d1af43961a3b0ecc5dc",
+      "byteLength": 2510
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/al-mishin1999-eam-tensile-benchmarks.md",
+      "digest": "sha256:9efe355e67c26dbe5519081de78938ccdeb3fcb09ac962fdef84ea0f91ecec1f",
+      "byteLength": 1490
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/coal-model-c183h130o20n2.md",
+      "digest": "sha256:9b2c91617dc8586d512c80a159dbbf1746be48b87dd1cd5797bd907ff6b698a8",
+      "byteLength": 2147
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/hea-optimization-strategies.md",
+      "digest": "sha256:c205150ba28dab3f84beccad8fc154169328fdcd85081b536298820b90dc2e5b",
+      "byteLength": 2750
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/lightweight-hea-systems.md",
+      "digest": "sha256:1eb278fbf8b1d0f5b1e927259494f7d4b355def7e1519339c6f3fc99263e50c2",
+      "byteLength": 2646
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/mgal-oxidation-potential.md",
+      "digest": "sha256:f39886e2f90140cc569481f048cc62b772c4a88688b08c2f4cdd51831e7769be",
+      "byteLength": 3637
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/multi-material-potential-survey.md",
+      "digest": "sha256:eead4544881608ca1ff52fa905efbea83b508623e8deadb0641067add24c6b12",
+      "byteLength": 3440
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/notes/NiAl_reactive_multilayer_MD_benchmarks.md",
+      "digest": "sha256:9e530e8677226a15a4fa929851d1bcadf4220242f6d37067401a2b6ca5763f8f",
+      "byteLength": 11582
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/topics/a-atom-model.md",
+      "digest": "sha256:72ee1a71b17a7fe64ec0f051f4d1f28076aa7e3eae2a560beb6b12147852e0a3",
+      "byteLength": 528
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/papers/topics/al-eam-tensile.md",
+      "digest": "sha256:729eeb4363ff3d02ccda859c42ad01dc2d95e4412df8245b6f65bcb885755f7a",
+      "byteLength": 907
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-2026-04-03-90b07f34.md",
+      "digest": "sha256:3ce8200329172bc83ff15e7a380a5dac6fe35db90acbe72f934846e980ba2b2f",
+      "byteLength": 1255
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-wave2-2026-04-03-38417ebe.md",
+      "digest": "sha256:bebdeca12ad2dfdfd5333799079a666a62fb9ed2c2e40c38ea07b57a83b9887f",
+      "byteLength": 1369
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave10-2026-04-05-76dc2d3b.md",
+      "digest": "sha256:c018546ee83539c5aa2f8efac46144ca8f1e6c363e0ae44f6c47610b4aed369b",
+      "byteLength": 1532
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave11-2026-04-05-f1058865.md",
+      "digest": "sha256:a7a9db87dd0054ba92a5c3781999fbf2fb5aca5d9adffecefe6df62306932dab",
+      "byteLength": 1474
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave3-2026-04-03-beea57ec.md",
+      "digest": "sha256:2a3d9f9bb748239f58f12a6e1d95309315d72ecfd272d62f95dddb7bbc0b08d0",
+      "byteLength": 1297
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave4-2026-04-04-27c6b033.md",
+      "digest": "sha256:2a18ac67ab35897c073d2f6ef3fd725212b5b5bdeaecf2c5c0329ef0ed90d6ec",
+      "byteLength": 1378
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave5-2026-04-04-808383fa.md",
+      "digest": "sha256:70c23f389006c617bb91f56f8cd7a7dc02994ddc20c21d732fa887f77aa9eab3",
+      "byteLength": 1381
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave6-2026-04-04-ca3bfc45.md",
+      "digest": "sha256:4c1d0e592d8bb842e85094fc5ad16f730cd20d63099d6487ca6805ffea265498",
+      "byteLength": 1429
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave7-2026-04-04-3ef9a957.md",
+      "digest": "sha256:6b36d2bd1213b474239fc71472dc9b5d427ef6a14aca2bd0463e6166308a6c6d",
+      "byteLength": 1495
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave8-2026-04-04-61765eba.md",
+      "digest": "sha256:7621fd285b1eb116a2ec7895b876cc78fc9d96e5796a25aa4af2c5afd8c25815",
+      "byteLength": 1544
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave9-2026-04-04-e3759efc.md",
+      "digest": "sha256:86d7a8b0a7d5347362b0fa480b124feea47b3a95a5f4cb5075f5d0873eec2125",
+      "byteLength": 1449
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave12-2026-04-05-becf2c16.md",
+      "digest": "sha256:b6b756b99bd891ad426946f2e05ac136bf65149b38e64cfcc97b0879f29213d1",
+      "byteLength": 1443
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave13-2026-04-05-14d8a483.md",
+      "digest": "sha256:8bcec4e1c8162b4048f784a31ecbb6c29eaf918897017e2de95adbb57712a869",
+      "byteLength": 1426
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave14-2026-04-05-2d9933bb.md",
+      "digest": "sha256:a5345b78e21ceea919e8fa5c4cfaffb08a892e726a8dde0096602e0fe580b212",
+      "byteLength": 1480
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave15-2026-04-05-ef57101f.md",
+      "digest": "sha256:0f9fa0590b15b8b4fc04d7a49eab666fcbac6808608d5a8745d83d353917dea0",
+      "byteLength": 1545
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave16-2026-04-05-be872632.md",
+      "digest": "sha256:fbba18d4b442cef591f3d74c8bc7b307fe51d70ea4ee1f5aa8302cc195b5825d",
+      "byteLength": 1491
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/bun-windows-crash-note.md",
+      "digest": "sha256:3447013a1ba42629bae41e0a9d2ef25f1c8aeeb1d4f200091725c9a233790ed0",
+      "byteLength": 2911
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/lammps-agent-test-report.md",
+      "digest": "sha256:0ee2dc7d751cf6257e9a705c379012e432f2768f99699d733ed085bb9c42d99f",
+      "byteLength": 10366
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/lammps-cli-implementation-checklist.md",
+      "digest": "sha256:05b594cde47bd0e13a031bdf3986b157e12e8f40193580711923d3548165c188",
+      "byteLength": 3819
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/lammps-cli-test-suite.md",
+      "digest": "sha256:fe23c32245805af1e6cc24a105e5767e26696c9e2fcc381b2b2e0a54c7de01e8",
+      "byteLength": 2185
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/lammps-implementation-summary.md",
+      "digest": "sha256:2695d2f084bc7b255b8fada39edc59e68080c44a64eab145ff6e722954938c0c",
+      "byteLength": 9658
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/legacy-knowledge-readme.md",
+      "digest": "sha256:d91ada9381eba4971135d4484ba2c8db017e8ec4eff2377c112c9273a82dba2f",
+      "byteLength": 1435
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/reports/README.md",
+      "digest": "sha256:7a9adbfe0a7a1b56f13c448c4589a2d4a6e7acac8eb2fb1b6cfcc2231f6c171b",
+      "byteLength": 98
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/execution-workflow.md",
+      "digest": "sha256:b001e9cdc6c5551008fadc02beb8a0d237bb7be718198e1fe3d74caf75ee3d58",
+      "byteLength": 3426
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/failure-patterns.md",
+      "digest": "sha256:3306457a31341a6cdb954a827808a5bdf108351cbc9908fa50076670fdeef8b9",
+      "byteLength": 3313
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/learned-rules.md",
+      "digest": "sha256:3fffba13a1b1ef148be0e8d858b4912d78d6d268b0106fd914f066dea83b5756",
+      "byteLength": 5851
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/light-stage-handoffs.md",
+      "digest": "sha256:d932b591107073949740e7a1f0540409d13e069720feae173d8833a2bbadd344",
+      "byteLength": 5649
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/log-analysis-playbook.md",
+      "digest": "sha256:7df31047596d21ee9a113cc741744a295b83cfeedf49923d71639144d38eb988",
+      "byteLength": 1600
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/mandatory-checks.md",
+      "digest": "sha256:65eb3197e3c86f80d6ccede9850ab8b7bf0ec89fb0ca8460b3e35f9fbe7fc2e1",
+      "byteLength": 6654
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/matplotlib-standards.md",
+      "digest": "sha256:f8e67d1391b9e2eeed734af8545828cfbe70dc6ea6d47b5e75c106536272f0ac",
+      "byteLength": 7668
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/modeling-workflow.md",
+      "digest": "sha256:1bb8ffc4c74908e11a5a9b5fc1514ab710ac475d9bbaed362a8c66f47e8d7384",
+      "byteLength": 2285
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/ovito-rendering-standards.md",
+      "digest": "sha256:f3772b7397ede5ff89f17eda3df76618f94a428ab117eaf335d5d5397a6648d0",
+      "byteLength": 4521
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/post-processing-standards.md",
+      "digest": "sha256:cb8b6ebd8c06ad6628a49e8689592c85d5ab71361befeae0e2775dd3d9c9dc91",
+      "byteLength": 11669
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/potential-selection.md",
+      "digest": "sha256:a913cbf4a9118fb87a40e7333f6fb5be38a573bb09211baf3c8219a7ccfb54dc",
+      "byteLength": 1152
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/project-state-management.md",
+      "digest": "sha256:7a05605cb319d8d651869de007a48fc94930770690d4831dda2698e53031b5d2",
+      "byteLength": 5703
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/README.md",
+      "digest": "sha256:756c0efbdc5d35c193794cfec67822858324df4c2cca43a5ca3e81f27ca8bc0e",
+      "byteLength": 94
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/review-guidelines.md",
+      "digest": "sha256:df64fede3d7f93ce79ce309507e3f37b188e1989ba718e6c8b3b93413d8f7199",
+      "byteLength": 2625
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/simplifications.md",
+      "digest": "sha256:d62ceda2a632eb0902f1c43e8821fbc4a5ee77d413b24334f6588aa11ec75767",
+      "byteLength": 1913
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/wf00-scheme-design.md",
+      "digest": "sha256:3ab89362f6aa890998f981f42d0457cdf827265bdcc093f5cc06cbf376109b98",
+      "byteLength": 4984
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/workflow-handoffs.md",
+      "digest": "sha256:acd21f5cb8c258f194308a91c8efa1d8e960f8feac30f06c919478eb2b541ba9",
+      "byteLength": 11511
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/rules/workflow-stages.md",
+      "digest": "sha256:3ee7667543f311c95d317b639e5e602c01f646306f039e01044d34f9852a3e8a",
+      "byteLength": 7085
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/answers/eam-alloy-multi-element.md",
+      "digest": "sha256:38979bb355fe34f3b510e00bebdb36c86d092e75d9f4450ce6e585912b39ed1a",
+      "byteLength": 1342
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/answers/README.md",
+      "digest": "sha256:f1ef7f1a73b80cb02a4de2f954f4efead3f37917feb25cc654f809c64e02b569",
+      "byteLength": 80
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/atomsk-command-templates.md",
+      "digest": "sha256:732a252d2d411f90be7f2ed677898f6911a20037d3a5d3ff76f6fb9b7143b8e5",
+      "byteLength": 1007
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/input-self-check.md",
+      "digest": "sha256:17d6fc20c613b8d35834fb6e07fa505269b255f545a50e3022cef0067e063e7e",
+      "byteLength": 2570
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/input-template-families.md",
+      "digest": "sha256:4bcdfd8e30699afbaba72c5bbd4b88f7ca6d242eab87b5e2932fd972ce1f4800",
+      "byteLength": 2706
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/ovito-python-templates.md",
+      "digest": "sha256:8b3c9af70a9a1c8a135b1af21e069e318af767efb6fd92f1ec46153caabf2056",
+      "byteLength": 4383
+    },
+    {
+      "path": "domains/lammps/legacy-assets/knowledge/templates/README.md",
+      "digest": "sha256:dc95970c475a0fdadc658c8d8a5e1b80c32cad72cce1ac5613893a2ae719599a",
+      "byteLength": 94
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/hello-agent.md",
+      "digest": "sha256:9039e2b07d2b4bb23d79d04000d1d808de1b1f5ca5bcc96bb1a1c8f3491873d7",
+      "byteLength": 605
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-analyst.md",
+      "digest": "sha256:adfceaee35ac4c1ba2ea83f8dcd317d298aa90b7b19ebf1d7d1b9b67de1e1ce4",
+      "byteLength": 3220
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-case-librarian.md",
+      "digest": "sha256:54a51fae7fd05760fa1eb92f07df57175011ff137efa7096621472af0661ac4f",
+      "byteLength": 6402
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-coordinator.md",
+      "digest": "sha256:7927a6ad0d718fda5872ad6045370ba1eebac5ac5a8a55ecc5c5a68c8c146eb6",
+      "byteLength": 15788
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-data-analyst.md",
+      "digest": "sha256:d4e1bd3b8bbde45f7caa9ff4ea814d4d522487c2bf24d1043df01fba9b57d8b9",
+      "byteLength": 8209
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-input-writer.md",
+      "digest": "sha256:36b9ca1f803d6b9fc54a19720f8eb901b0a06cee0da85081e6d7ef6e1a2b1ce5",
+      "byteLength": 10749
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-kb-coordinator.md",
+      "digest": "sha256:6375109965363193f84190ffe97db88fa1d130905100f43f5d104fa959b77400",
+      "byteLength": 4965
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-kb-curator.md",
+      "digest": "sha256:471dbf919d238ed79d390b253505adc76bf69a59908e4fc44b9f2856e372a7e5",
+      "byteLength": 3846
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-kb-reviewer.md",
+      "digest": "sha256:1d05d4b13be613d7d145081736b864c55ba157c0418cd3a15c5d8aa87dbb2063",
+      "byteLength": 3179
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-paper-researcher.md",
+      "digest": "sha256:b63fc9e0a0e4cfd02e151ccacc44b96ab49a7ea355b2d1b38bea125c55a7b2ef",
+      "byteLength": 4156
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-post-processor.md",
+      "digest": "sha256:fee0d9c10a151b7b6ed315676c1711c8635f79d8557085547b1d316e5a177bda",
+      "byteLength": 9314
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-reviewer.md",
+      "digest": "sha256:50e775d18bd3c01557a2cf5343c65e668087fdb4df9a193b0dd5cf188a34b063",
+      "byteLength": 11280
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-simulation-architect.md",
+      "digest": "sha256:6fe1719e5b2f3c7a29ed5dd9f41971baca10359ca38be344f38a462fe1e54af7",
+      "byteLength": 10773
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/agents/lammps-simulation-reasoner.md",
+      "digest": "sha256:e34dd19901f87d2395a546e3cbbfb39dd4b8161615e22d41c62811fff9b224f1",
+      "byteLength": 10342
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-atomsk-modeling/SKILL.md",
+      "digest": "sha256:a72a82382efb215b62b15f3d947f4770ffc54bdad8cf55b15626b9c8bbf345c9",
+      "byteLength": 1205
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-hpc-submit/references/checklist.md",
+      "digest": "sha256:286a26d79534cddbf9137b3a0d11d7fd092689bc92c4840080672dcb27f543af",
+      "byteLength": 526
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-hpc-submit/SKILL.md",
+      "digest": "sha256:d3de76cd5ff60827dc40337e9d76f4bc77bd120e04b034538b75f99b48df8ee7",
+      "byteLength": 2587
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-paper-reproduction-auditor/SKILL.md",
+      "digest": "sha256:fe6f227f7570ec64ea979c79a345d9b348d554a4d267333920b7c8b978b74e1b",
+      "byteLength": 10479
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-paper-research/SKILL.md",
+      "digest": "sha256:913f40f352f28964bda3ddfa3a03f2cd29ee26dbebf0473aa0c4295a9318b48a",
+      "byteLength": 7550
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-visualization/references/ovito-checklist.md",
+      "digest": "sha256:5ff65f1c8f38329dd9aa447657b4b2b9b4b5af2ef171c6ee1cf51b3db93cfd8f",
+      "byteLength": 527
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/skills/lammps-visualization/SKILL.md",
+      "digest": "sha256:f188f967f8131eba09cea0212762d5504a6e4b819cb20ffda6cfb79f7e4f190b",
+      "byteLength": 5937
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/cif_to_lammps.sh",
+      "digest": "sha256:57d7773372842f7a546cc1948ed7f74fba40a961d9ecd38a0824d0957227511a",
+      "byteLength": 107
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/create_basic_bcc.sh",
+      "digest": "sha256:76fd8083cb181977219b8553eab26a066fa1f18f12e79bc3be587bdbc808a239",
+      "byteLength": 82
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/create_basic_fcc.sh",
+      "digest": "sha256:ece556ec3548ce998660db7a305073e662b1789f6697484578f474aba9eea009",
+      "byteLength": 82
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/dislocation_inclusion_basic.sh",
+      "digest": "sha256:d46fbd0970a510c0632866caab6ca4c170a2ffa17e766f965ac7954839874851",
+      "byteLength": 551
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/orientation_alignx_unskew.sh",
+      "digest": "sha256:f1cf82c7bcca215b8ed300b2dacb75935c73bf74669277102d170ad631c42b2d",
+      "byteLength": 125
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/point_defects_basic.sh",
+      "digest": "sha256:b434a94dbc2e4206ae40d7f21d18432793beb9cb2e45fc942bcea891dba13732",
+      "byteLength": 218
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/polycrystal_basic.sh",
+      "digest": "sha256:495cc610130409dad210600a4776fd1b9373f6d720f283bff00d6dd8ef0dcf88",
+      "byteLength": 184
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/stacking_fault_basic.sh",
+      "digest": "sha256:749250faedfb456af7bcc6e12c8bf515c3906405f21a5d9ad767f0a9da6fe79f",
+      "byteLength": 188
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/atomsk/twin_boundary_basic.sh",
+      "digest": "sha256:0f9c573ffb33671fdf235c882386a100e6407c1ac5c396b72f3ff8a99e9c52f6",
+      "byteLength": 209
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/decisions.md",
+      "digest": "sha256:afb90983cf3035b71d4d50d7d53b7da56af3d406b64dd2e54d9f3a7cf0f234a7",
+      "byteLength": 107
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/execution.json",
+      "digest": "sha256:62b613710844147fbb97bc4eb3df832677c30c758a866058649760d591827abe",
+      "byteLength": 422
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/modeling.json",
+      "digest": "sha256:44678a2e7d05f7aedc5af3c3d47e08eb3c57ac14df617150cf0fa9439d753d76",
+      "byteLength": 121
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/open-issues.md",
+      "digest": "sha256:f6b8a8e7402b57d778473c04ca6133592b2bea4aaa093b29e7663741bac66901",
+      "byteLength": 85
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/project.json",
+      "digest": "sha256:42b3e12815f5e8e9790f15ecf21ee77f7bc969e4e5f3975fdbdae952cabca7ad",
+      "byteLength": 156
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/review-log.md",
+      "digest": "sha256:dde46faa1f051f5afb9737a830ffb9b503144b86f2df151a28e6864ced0436ca",
+      "byteLength": 104
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/stage-summary.md",
+      "digest": "sha256:6da41246a554e6eb970df9b8277cc66281e2efbb454c35b0b169e9423a253274",
+      "byteLength": 114
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/wf02.packet.json",
+      "digest": "sha256:8b3d61eadf1465ec49934918ab8f4c8ccfe2c30c7eeef80c32294a142e15bb27",
+      "byteLength": 565
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-project/wf03a.packet.json",
+      "digest": "sha256:dd7732b0ccc4863be2852cfeeddcec430f624ef7f991dff58b2e62963e5ed955",
+      "byteLength": 526
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps-team/README.md",
+      "digest": "sha256:e03f4084d01ce88ff32193b2bbfd1e701e697a153ee1f07e5385635de8a4fe72",
+      "byteLength": 2240
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps/hea-melt-solidify.in",
+      "digest": "sha256:8409726038fcec7631a16b4ff723afa2a36ac72984b31f5181bdb653c3ee7020",
+      "byteLength": 604
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps/meam-alloy.in",
+      "digest": "sha256:a3c7754b080bdff2d637c2bd5760eebd6a51cf8eba2c4579b925f2ae3ab53bb0",
+      "byteLength": 489
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps/reaxff-reactive.in",
+      "digest": "sha256:00bf8949a72dd0034a7d6f2a18ad8d642ee2b2017826330f28b9cfe747677996",
+      "byteLength": 536
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps/restart-continue.in",
+      "digest": "sha256:5bd7dbb27ffb55d2bb96dd78d04bc0905fc2036c21f6ce0b17b73f34317087bd",
+      "byteLength": 568
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/lammps/tensile-strain.in",
+      "digest": "sha256:e928880282501d7d7b95d6f4775c79688ca795fded90cb1deb2b7b0f80f1c2ae",
+      "byteLength": 570
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/cluster_analysis.py",
+      "digest": "sha256:5266584ba39a054e638eea29ebda0b23230f5a1dfeda305cb251fc7e07156b17",
+      "byteLength": 682
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/cna_render.py",
+      "digest": "sha256:1cee679a54dca585109d208916a6cc3ff62caa837bc30bfac00f3f264e2101ad",
+      "byteLength": 659
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/dislocation_time_series.py",
+      "digest": "sha256:ebd1f8165230b5e5141558de07313c128b0807be182a2d69f13e7d8208d87f64",
+      "byteLength": 1072
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/dislocation_tracking.py",
+      "digest": "sha256:e4218acf6b0c22a901c84bb0f78ea054e77b38ad880d3cc3becadefb38b63bcb",
+      "byteLength": 991
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/export_dump_columns.py",
+      "digest": "sha256:a3e313f24cfda280232ad97df98081d89db46202603768dbb3d7fcaf74cba002",
+      "byteLength": 563
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/focus_region_render.py",
+      "digest": "sha256:8024766d2a6ee3e4c4998d416a83daa2f7f3c4d1f723fb527d918435e5bda039",
+      "byteLength": 906
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/pipelines/general_pipeline.py",
+      "digest": "sha256:936fbecdc791c24b0454bbaf232bce8735d1694a64a581e8a4c6e72f993e8bad",
+      "byteLength": 5452
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/pipelines/melting_pipeline.py",
+      "digest": "sha256:0e3cf956a8bccad1652222adba7a073d2912137dcc6776622e7697cb7296d2d6",
+      "byteLength": 7125
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/pipelines/metal_tension_pipeline.py",
+      "digest": "sha256:5d5ba425fb5e63cb43e032d086fc58d958859dc4183c52f2d60886132ceae538",
+      "byteLength": 9549
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/pipelines/shear_pipeline.py",
+      "digest": "sha256:98e434f1fd4b479b712eaa8c254df6125d3f9396fd81b2ce410181fb045d7824",
+      "byteLength": 7213
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/rdf_analysis.py",
+      "digest": "sha256:f4200e6a7360d3df8139b8861013d1815a290ce3172588b97f83ccd0aa407896",
+      "byteLength": 519
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/render_engine.py",
+      "digest": "sha256:91c202be78d322bd86c346ab218af6a6deb676a30093959dc368fbeec3837794",
+      "byteLength": 11858
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/render_frame.py",
+      "digest": "sha256:6cbe86fbd6905a14af7e7a52ad9894722208dbab38c01354c84b6b2bbed17b3f",
+      "byteLength": 389
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/render_snapshot.py",
+      "digest": "sha256:d73e42af1c0eb724fc4f2db514308a6eb04f4af8b3d23adaaa497006089810ea",
+      "byteLength": 371
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/renderer_compare.py",
+      "digest": "sha256:bf7fe0a367165f83a9ba9a366430ee32b017c191a9a5dd3fdd73dfaec9e9ebb1",
+      "byteLength": 485
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/stress_field_map.py",
+      "digest": "sha256:256ee1823f10e1340fb49b9f67a81ff0bf6a0defb077ff05f6c6d894b3cc3e29",
+      "byteLength": 1084
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/temperature_field_map.py",
+      "digest": "sha256:d206931fb2041e6d3a3a947502b8771517656719187e976d66b68ee0d46886b4",
+      "byteLength": 1249
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/01_import_summary.py",
+      "digest": "sha256:a53c47491be06df3afb6e403a787fa27ddc21d1000f219207b51118fee1390dc",
+      "byteLength": 482
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/02_render_last_frame.py",
+      "digest": "sha256:dc4662b1dd4d9448544bb3e2f4892a57c5af7041a5466068edd0fc89947297c4",
+      "byteLength": 485
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/03_export_cna_dump.py",
+      "digest": "sha256:62c37502b3be91a9c7e13ec2c7724ba9f302b7f688941e5a80c4dab9f4d6a997",
+      "byteLength": 463
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/04_rdf_table.py",
+      "digest": "sha256:7e2e87e3e3d98974a6768312ecf125e627cdd732642e8b96540a2b12a10c3690",
+      "byteLength": 430
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/05_coordination_histogram.py",
+      "digest": "sha256:dd54b165f2aae8991d46c2663280a422a9310fca0aaca73c0a2a748cceef2ce4",
+      "byteLength": 586
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/06_cna_structure_counts.py",
+      "digest": "sha256:5f31bb5ddeca45c4c5a2416f16b5f844e10061a080d2a3b3a7f13ef02b6d092b",
+      "byteLength": 559
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/07_cluster_sizes.py",
+      "digest": "sha256:71d4c5df44d9c2d7b3b57ba0290af6d617100345025e7350aa95ef194693c44d",
+      "byteLength": 487
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/08_displacement_summary.py",
+      "digest": "sha256:463bc43f40d6d098bda2afab3625327c323f5f6e65c657f52ee39ded74d689c6",
+      "byteLength": 801
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/09_displacement_export.py",
+      "digest": "sha256:c815c4c8df83fab0d406eea0d2ffd1f011255bf3400606567c63090570ff24eb",
+      "byteLength": 566
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/10_voronoi_stats.py",
+      "digest": "sha256:f79d35c627a0c4bdf8300f66eb6cce0439fa0262b7f30ce89a3987f7ef956112",
+      "byteLength": 597
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/11_slice_render.py",
+      "digest": "sha256:b58c3a27f376802ba0a1f15798b396281b09ab4ef5f2b16f51d638249846421d",
+      "byteLength": 494
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/12_selection_delete_preview.py",
+      "digest": "sha256:3b183e38cf0c67f410018cdd5e12330f9fdb6c94a0b61639d4cae87648ff3d22",
+      "byteLength": 499
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/13_dislocation_scan.py",
+      "digest": "sha256:78d56818de41be0ac47fd939109028596e8189344c5147835bca7491803f8db7",
+      "byteLength": 741
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/14_renderer_smoke.py",
+      "digest": "sha256:ddff12b2dab102591344b22f44e87a8d44d1a277323a2cc41d70c65dbe7c3f02",
+      "byteLength": 580
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/15_select_type_count.py",
+      "digest": "sha256:92ff639e0e75242b21be6ecaf922fdf0f69f10c386291c568c79dd222f74801d",
+      "byteLength": 449
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/16_colored_focus_render.py",
+      "digest": "sha256:ecce126a82cc1a1bc8c151e30175591c2bc5ca9c15b35da3aad7d3d7aef7bb61",
+      "byteLength": 745
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/17_framewise_particle_count.py",
+      "digest": "sha256:b2fb3f9f43793317112784a59448cf2b470435da896e39bd1a1abc0bbd921c5b",
+      "byteLength": 389
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/18_framewise_cna_evolution.py",
+      "digest": "sha256:d51a3624a60e2b9c66354e2d3478227404f029ff9a7b0af23999707855be9632",
+      "byteLength": 739
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/19_framewise_rdf_peak.py",
+      "digest": "sha256:94ad640301d2862813145636bae26662f92cdbd2d7780367cef82529b03b1227",
+      "byteLength": 744
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/20_temperature_mean.py",
+      "digest": "sha256:1a0c99e6b3ac3c899073820f639ca5fb9abad5df6ad57439fa64a8ebb561d124",
+      "byteLength": 650
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/21_stress_mean.py",
+      "digest": "sha256:ecdd49e49c500ce816e82df42c1349f61a9ebfc9aa63745bbd4c9110422deea6",
+      "byteLength": 664
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/22_delete_type_export.py",
+      "digest": "sha256:e03a6805ecdbf03ae7b670c89e1da4de1767983908c16a139c87e2ae07f58958",
+      "byteLength": 412
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/23_top_view_render.py",
+      "digest": "sha256:e6230caeaa7cb5ce7bb823d1b5d9defd554d9522c9e362c6978051c1e6a2a80a",
+      "byteLength": 361
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/24_attribute_probe.py",
+      "digest": "sha256:0e90f6eb22ad5089fec7d4274d505623abcbe5cd6b33e0191a1b9951db2ab615",
+      "byteLength": 751
+    },
+    {
+      "path": "domains/lammps/legacy-assets/legacy/templates/ovito/tests/README.md",
+      "digest": "sha256:4da25e7cdcbea553587351fb55cf1381c1184669a61321c035043465a9e060cb",
+      "byteLength": 909
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-atomsk-render.ts",
+      "digest": "sha256:40bb68e01d9178ff105395dfbdee1f8abab11c1790354b3fd11c9dcfbf4733ec",
+      "byteLength": 3370
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-auto-repair.ts",
+      "digest": "sha256:dac4dc141167dee7bb4b3ba7e3459a1376d5cbfba57dfeee2d126af8a3eba9bb",
+      "byteLength": 8361
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-cli-test.ts",
+      "digest": "sha256:4c766146dcbff9ca8a0fbffb157e61d8b443087e51a1cf37070688aa97611fd4",
+      "byteLength": 8939
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-error-summary.ts",
+      "digest": "sha256:d7f72c078bce432f3f8ce886fbb2bf597411db50be46a31d0efb4cba8aff3cbb",
+      "byteLength": 5290
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-execute.ts",
+      "digest": "sha256:82721c0b451514dfe2c367b4eaf8a055534c5c20ed25a62d350fa191e41146b2",
+      "byteLength": 8455
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-kb-deep-learn-bob.ts",
+      "digest": "sha256:f2ae7885d848e02429091bc8b6d7cd75981dc722b0cdf11e516ba238aa7fd9f8",
+      "byteLength": 11553
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-kb-eval.ts",
+      "digest": "sha256:5e5e4396e73dd021b74c3b7f9bc5fcb68eda914a278aaa98194bddfac1db0992",
+      "byteLength": 22675
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-kb-ingest-atomsk-study.ts",
+      "digest": "sha256:4138cef9e98cd8b4a9f0dea9ce1e85141c7a5230f74bd3adf23ee8df2328d483",
+      "byteLength": 1684
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-kb-ingest-bob-cases.ts",
+      "digest": "sha256:b38a07dbc0e48368077d5668dc99d6f8b828979704a230cd0f2bcc2501a0a58c",
+      "byteLength": 10602
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-kb-regression.ts",
+      "digest": "sha256:d6633fa00c99522ff80fd271bca7d65733e48d6b11aa14d192b0d536f278b64e",
+      "byteLength": 2698
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-knowledge-maintenance.ts",
+      "digest": "sha256:284db05fe37bd3acc021b9ef3a30f9ad5230178a7e39d3bc51e5a24707fbcb68",
+      "byteLength": 5580
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-log-sections.ts",
+      "digest": "sha256:e12b6b89566b0a07655c0042cbad527c6c638cbfa68167d9f4930138f3282f49",
+      "byteLength": 2155
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-lookup-workflow-test.ts",
+      "digest": "sha256:76612a91fc693992f667b0c18108bc5979159cd61771eb0448992de994fd3975",
+      "byteLength": 1515
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-lookup.ts",
+      "digest": "sha256:24614a1f3b75e6a7fc48c56eb9e4c5a7f32b68ad1ce0f7cf274f44eda62062e7",
+      "byteLength": 1005
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-model-execute.ts",
+      "digest": "sha256:6468e1996943ef1a3d983cb9ef29ba40664af54954c8c32128c315be67aae708",
+      "byteLength": 5800
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-model-route.ts",
+      "digest": "sha256:87fa0430149ae7fcd79b121c6c5c2b65f6e1e5f1f6b26fb5a9e4725f6a6eded7",
+      "byteLength": 11543
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-paper-note-init.ts",
+      "digest": "sha256:0656908142ad552556e8d83d1fb7260299f7905048f24b0b949cf33c49100510",
+      "byteLength": 2842
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-project-state-init.ts",
+      "digest": "sha256:5863ffaa2cb9077e312042a62aeb048b76d7be2bb721056684aafe5d32785baa",
+      "byteLength": 1572
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-repair-loop.ts",
+      "digest": "sha256:cccf5ab3bd44df970274b624ebc53eb7e89a96ad094872c25c88958c7dabaf07",
+      "byteLength": 6624
+    },
+    {
+      "path": "domains/lammps/legacy-assets/scripts/lammps-structure-validate.ts",
+      "digest": "sha256:50e9fe57d5fed25254b274b5a400b24fbf35af0098c7f61403245dafbd588480",
+      "byteLength": 4617
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/INSTALL.md",
+      "digest": "sha256:f92c18d779b577d3d7d422391a796bee60cf262c69251f3e996ef20a6dcfa560",
+      "byteLength": 3589
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/evidence-gate.md",
+      "digest": "sha256:fab1b45feaf69eb34ae22e47ff486605d2968a567f4d01bbaf6027c88fee88bc",
+      "byteLength": 2066
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/failure-patterns-min.md",
+      "digest": "sha256:301830b17eb0cfc6f92009b5096aa2371129a2ce7a5223e7b24b6fd5b05daffd",
+      "byteLength": 1616
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/potential-selection-min.md",
+      "digest": "sha256:9e7d2db5049f7ad09a6e5465c0df642e5c2657b0711d6d06831f5cd71671cde9",
+      "byteLength": 1297
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/review-guidelines.md",
+      "digest": "sha256:6bf56ae8bb91a105fe3f25586f5d881bb8cb61e5a6093155e0f4bcc53ffecb20",
+      "byteLength": 2009
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-fixed-velocity.in",
+      "digest": "sha256:c54e0de64a47ed5bd030280606fa1624fbad3072facb22c28fed920c003c57d8",
+      "byteLength": 483
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-reaxff-no-qeq.in",
+      "digest": "sha256:a575c4753fc43fa255f27a812b07e5afd53c63d5bca29297694ff9e60e93f7ca",
+      "byteLength": 409
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/test-cases/README.md",
+      "digest": "sha256:07df7f3cd627e6dadef57ef94ce4523849b51f9ed462a04e422b977128eac4ad",
+      "byteLength": 985
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/test-cases/reaxff-safe-minimal.in",
+      "digest": "sha256:06812a4ced709fd753f7ef8599e20814d89f97c643dc61a3ea03c17e49d7b61e",
+      "byteLength": 718
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/knowledge-capsule/test-cases/tensile-safe-minimal.in",
+      "digest": "sha256:caf4a4e06066126c8f0c34440a2e746de0588f178f02bbd5f13b731d4bceb69d",
+      "byteLength": 1207
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/README.md",
+      "digest": "sha256:6cc36a39e7f9d4aca3589ed6fd681453ee1604f78ac54621f0de795a1b502b6c",
+      "byteLength": 4714
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/decisions.md",
+      "digest": "sha256:c3acc702579f3770808f01da85e50bc778d76fc98cb219b9d6f2127559fdcb7a",
+      "byteLength": 125
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/evidence-record.json",
+      "digest": "sha256:e8b65c44035bc1e593aded9fb1ca0e1cc214fa61fc169f93109a84b7d744190f",
+      "byteLength": 176
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/result-block.md",
+      "digest": "sha256:8e7ea2a0f9bf4e59dced24f5ac49b630f0912b8e6b1cead3ef08e382dd3e52fe",
+      "byteLength": 293
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/review-log.md",
+      "digest": "sha256:a04e4ddfa61afb31046f6200a01deff3a92cbb7e8b812395c47c8e20e551db00",
+      "byteLength": 137
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/review-result.example.json",
+      "digest": "sha256:9320e36fc324a730cec435bbf29ca3cb5ac1b8f81dccb41858a4572855766df5",
+      "byteLength": 894
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/review-result.high-risk-pass.example.json",
+      "digest": "sha256:b3b0c50a9dad252b7eb03404550ed0742d4b9ebb8e012bbe242b093e5ad542d4",
+      "byteLength": 2367
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/review-result.json",
+      "digest": "sha256:f48ca1749894e02af9d46b0008461db70c2b01ca04753869a6d07c6b26c561a5",
+      "byteLength": 803
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/state.md",
+      "digest": "sha256:d510c5eac9c85cf92af582f643c43b4ee079c9acc562fccc9732cdc4ef13d5a4",
+      "byteLength": 597
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/wf01.packet.json",
+      "digest": "sha256:9ea0feeeef22fdfeeddc198f7d4a86acf39607ac8b2cebbc1e91c021d08f7f19",
+      "byteLength": 659
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/wf02.packet.json",
+      "digest": "sha256:a344d12e7d548aac424ae1eeca93a641c5a4fe763fb6c856345b8ca87e40e262",
+      "byteLength": 646
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/wf03a.packet.json",
+      "digest": "sha256:fc660026c06e81e1c7f3145d5bcee1615d8cbbda615b36d2265343ac27130655",
+      "byteLength": 468
+    },
+    {
+      "path": "domains/lammps/legacy-assets/skills/lammps-agent-workflow/templates/work-log.md",
+      "digest": "sha256:e08bb43761eb7719eb5a7010a4a68e9784f5d7a1baf3b45827b7d5c20e843cd4",
+      "byteLength": 386
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/commands/evidence-check.ts",
+      "digest": "sha256:d50d046937d5a0da14bbfe6b2d728e198a248f3bc08b4bf2863cc08d70d50d45",
+      "byteLength": 426
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/commands/evidence-validate.ts",
+      "digest": "sha256:36bc5a48ea5bfc67c55a81480a125b8933261c4ced8c6f062b038618ebc2fc6e",
+      "byteLength": 441
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/commands/skill-mine-review.ts",
+      "digest": "sha256:6851f21d92dc0c7483fba50db6bc67274aa4e533a9457663ba51c65374214120",
+      "byteLength": 7807
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/commands/skill-mine.ts",
+      "digest": "sha256:166b69caab5ab639dc44b801dabc10df6d935a872ac3111f570b4ac619da1deb",
+      "byteLength": 6595
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/entrypoints/lammps-cli.ts",
+      "digest": "sha256:b979c5dae40ef5bed82f82c4f76bf7ec472acb40938a988acdf0891031a213c0",
+      "byteLength": 32230
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/plugins/bundled/lammpsKbPipeline.ts",
+      "digest": "sha256:8017e447d19da1d74b681705a327d6aa08d1a62efc2e4952d3c645ca4af2ef80",
+      "byteLength": 1255
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/plugins/bundled/lammpsKnowledgeSearch.ts",
+      "digest": "sha256:607568375b4e5c7ecc16cfa96f9018ea0fde669fbc351747a151f2093698b0e6",
+      "byteLength": 1200
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/__tests__/config.test.ts",
+      "digest": "sha256:e2bf4e75acddc244869cf2ecc12650e876a81379258b8b5ce322d35c392429e6",
+      "byteLength": 938
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/__tests__/stagingStore.test.ts",
+      "digest": "sha256:5dfdb8d4a06e3cb5c1db9f1249a28be7c4fd31ad600667c6ca17589516334cf8",
+      "byteLength": 4965
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/config.ts",
+      "digest": "sha256:1bc909232a75671e0de39d56080fcb5bb6a92d60ae1614cb2a254ee7dceb8fa8",
+      "byteLength": 2625
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/historyStore.ts",
+      "digest": "sha256:fcb9aca98071d3e37838b6fdf174247eb7ae5c42199ecce45da07182060c9dac",
+      "byteLength": 10691
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/index.ts",
+      "digest": "sha256:b644faf7cef74dfe21d3607ed68da8c051c40fde3b0071beff052b09fd91b852",
+      "byteLength": 6769
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/patternMiner.ts",
+      "digest": "sha256:e8f11d9bd05db6d8a2f7b063e49c3c83cd2897cc9b08423a38f998704520e939",
+      "byteLength": 10729
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/skills/skillMine/stagingStore.ts",
+      "digest": "sha256:7885ec59f7aa673f8a05ffb5c99be98c9e627e38f2e2a08b8d67e95833169731",
+      "byteLength": 7202
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKbPipeline/classify.ts",
+      "digest": "sha256:fe3f8d237749410d7d76e16f83a4d9f2ebbb2b324a23e0f15c93c45f6ad96b1e",
+      "byteLength": 9508
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKbPipeline/common.ts",
+      "digest": "sha256:45969a915113ec115f31daebe0188f34f8ba1e6d2a8d6d271c8f314baa329476",
+      "byteLength": 6064
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKbPipeline/mcpServer.ts",
+      "digest": "sha256:54cc8281bba0d5047e8201f23b76ee217c844a53e908ff8f05658363f63fcd03",
+      "byteLength": 10161
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKbPipeline/store.ts",
+      "digest": "sha256:34cb138a3287d703ac0dc1f2681cede506a62d336ecb3bc5ad475b055c9b156c",
+      "byteLength": 35902
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/backupManager.ts",
+      "digest": "sha256:710369b5f66e8a44626162ca4c66be4ec66eb43a2cc467f4a6d93480e3e3f833",
+      "byteLength": 9324
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/common.ts",
+      "digest": "sha256:c7d7911d885f8e550868ad4fb2307986f8fb29511cf98be463694ae5f7f81bac",
+      "byteLength": 2231
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/dualSearch.ts",
+      "digest": "sha256:d2ecf4db77c8995b75d219eb0fb0e03cd4779875a01a5a301b555c9794fd4517",
+      "byteLength": 4590
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/indexer.ts",
+      "digest": "sha256:f1e87c2d67022745e81e9ac3ad129e9810eccc54463146917161535a64af5613",
+      "byteLength": 35128
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/layeredIndexer.ts",
+      "digest": "sha256:e76a77f8f4d39325b3042e280c12004940780fc9977826af4838273a4bfc6539",
+      "byteLength": 2171
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/layeredSearch.ts",
+      "digest": "sha256:dc942efa00488bd49d4b02fbd9d4593d6aaa1409e78517c3839eb74c494144fb",
+      "byteLength": 3801
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/mcpServer.ts",
+      "digest": "sha256:c0ae1e84be8bbde2fdd6b77193edd537cd6479ef94d5d40e8c3f74c4ca965457",
+      "byteLength": 18824
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/remoteCommon.ts",
+      "digest": "sha256:ff107d4333fde255108ce6105073b1bb4b65961f1cae85e3fe41649ed6f47304",
+      "byteLength": 2390
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/remoteIndexer.ts",
+      "digest": "sha256:5fef13018b60bd8ea0c63f48985b75173a5ab89b9257b832c91af3458a90872a",
+      "byteLength": 31803
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/search.ts",
+      "digest": "sha256:4176896bb02d8b6c8fd36b7259b0c1f2622e48b0e4cf77085139b53aa10ed4c5",
+      "byteLength": 40018
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/syncService.ts",
+      "digest": "sha256:ca976f1a0d7ae0018a8720e014d7efbdde40b30ff6adc0946a0302050f20f7d5",
+      "byteLength": 9911
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/syncTypes.ts",
+      "digest": "sha256:eb553c9ca73b24034dacac4fbc8e0087b93e2274322edefbf182210330f2c7ab",
+      "byteLength": 2931
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/syncWatcher.ts",
+      "digest": "sha256:807780138ad96999c2cfb03b628e5f2a10653ae4103a3696718a11e13f87ad1b",
+      "byteLength": 1726
+    },
+    {
+      "path": "domains/lammps/legacy-assets/src/utils/lammpsKnowledge/synthesize.ts",
+      "digest": "sha256:b2c68f2d93e197c49ef8708256eb3735a3760037c6fe0279bbea24293758ec77",
+      "byteLength": 3726
+    },
+    {
+      "path": "domains/lammps/manifest.json",
+      "digest": "sha256:fecc9eb5664c136a55d7a1d0999422168d8dde16876e053a8b46bf7094932132",
+      "byteLength": 10482
+    },
+    {
+      "path": "domains/lammps/metrics.json",
+      "digest": "sha256:a19ae073cce971796897e04fc178b576cc4bbbecb3ce1f69d413e009c24d6398",
+      "byteLength": 238
+    },
+    {
+      "path": "domains/lammps/models.json",
+      "digest": "sha256:9e515d78e83da8fb08c4cb7eb3d5d7c31f9d3cc229fb79533bb55d5942d7f600",
+      "byteLength": 473
+    },
+    {
+      "path": "domains/lammps/problem.json",
+      "digest": "sha256:c9ac764eff358e8476645e03acadde6328aaa55809f32710e209824bd4d7f576",
+      "byteLength": 320
+    },
+    {
+      "path": "domains/lammps/references/compute-centro_atom-command.txt",
+      "digest": "sha256:0118469becfde07bc2c112e6208c1d9ad6afc94b40e044630eee625390a8af6e",
+      "byteLength": 2904
+    },
+    {
+      "path": "domains/lammps/references/compute-cna_atom-command.txt",
+      "digest": "sha256:b6e47d342bed290bf984ad769d35e74eccf8500c308cf1d66ba1f5b8396b9aea",
+      "byteLength": 1446
+    },
+    {
+      "path": "domains/lammps/references/compute-coord_atom-command.txt",
+      "digest": "sha256:005ced80a293a4502d5404b600b52736a43218c57e83a6f1abb1f6ac190029c5",
+      "byteLength": 1483
+    },
+    {
+      "path": "domains/lammps/references/compute-pe_atom-command.txt",
+      "digest": "sha256:52c45eedfa6ffad07938eede3930cee330f75148325d8e22c0c72923dbca41ce",
+      "byteLength": 7540
+    },
+    {
+      "path": "domains/lammps/references/fix-indent-command.txt",
+      "digest": "sha256:0217d0e556441e25b0f630a7b2fc039d8d07e9592d6a471e30ff788ec78bd9fb",
+      "byteLength": 11522
+    },
+    {
+      "path": "domains/lammps/references/fix-print-command.txt",
+      "digest": "sha256:3696127626349a08310a0df9b7199d251d21b716abc475258573b8dbbbcdcd6f",
+      "byteLength": 24094
+    },
+    {
+      "path": "domains/lammps/references/in.indent.lmp",
+      "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3",
+      "byteLength": 1218
+    },
+    {
+      "path": "domains/lammps/references/pair_style-eam-command.txt",
+      "digest": "sha256:ece5849a240b425e12386dcbbe1ded4e623e2fceb308ec7cc78d880fc31aed3c",
+      "byteLength": 10548
+    },
+    {
+      "path": "domains/lammps/references/read_data-command.txt",
+      "digest": "sha256:001e1f22fbf8d6e534313e586f5199033ea99dcee7afc6a31a3ff3a437e68672",
+      "byteLength": 14512
+    },
+    {
+      "path": "domains/lammps/references/set-command.txt",
+      "digest": "sha256:e7a41302788fc7ba1ad1972557f9c3f30a7dca6469e4cc50000e70310c4199ac",
+      "byteLength": 5779
+    },
+    {
+      "path": "domains/lammps/references/velocity-command.txt",
+      "digest": "sha256:432e7711ff5f3fb789b76672dbdb811abf85df8923c48cf34a8524b2d7102e4b",
+      "byteLength": 11734
+    },
+    {
+      "path": "domains/lammps/role-config.json",
+      "digest": "sha256:b0d197712aa7283fb3a157bb17d13c1cd7a6f3270e12ef9ad60751ee7b94747a",
+      "byteLength": 112736
+    },
+    {
+      "path": "domains/lammps/roles.json",
+      "digest": "sha256:f5371ec13eb518257186fe54f866b866e3e290e9e33e8e7af6e83377f2af380a",
+      "byteLength": 439
+    },
+    {
+      "path": "domains/lammps/roles/lammps-analyst.md",
+      "digest": "sha256:adfceaee35ac4c1ba2ea83f8dcd317d298aa90b7b19ebf1d7d1b9b67de1e1ce4",
+      "byteLength": 3220
+    },
+    {
+      "path": "domains/lammps/roles/lammps-case-librarian.md",
+      "digest": "sha256:54a51fae7fd05760fa1eb92f07df57175011ff137efa7096621472af0661ac4f",
+      "byteLength": 6402
+    },
+    {
+      "path": "domains/lammps/roles/lammps-coordinator.md",
+      "digest": "sha256:7927a6ad0d718fda5872ad6045370ba1eebac5ac5a8a55ecc5c5a68c8c146eb6",
+      "byteLength": 15788
+    },
+    {
+      "path": "domains/lammps/roles/lammps-data-analyst.md",
+      "digest": "sha256:d4e1bd3b8bbde45f7caa9ff4ea814d4d522487c2bf24d1043df01fba9b57d8b9",
+      "byteLength": 8209
+    },
+    {
+      "path": "domains/lammps/roles/lammps-input-writer.md",
+      "digest": "sha256:36b9ca1f803d6b9fc54a19720f8eb901b0a06cee0da85081e6d7ef6e1a2b1ce5",
+      "byteLength": 10749
+    },
+    {
+      "path": "domains/lammps/roles/lammps-kb-coordinator.md",
+      "digest": "sha256:6375109965363193f84190ffe97db88fa1d130905100f43f5d104fa959b77400",
+      "byteLength": 4965
+    },
+    {
+      "path": "domains/lammps/roles/lammps-kb-curator.md",
+      "digest": "sha256:471dbf919d238ed79d390b253505adc76bf69a59908e4fc44b9f2856e372a7e5",
+      "byteLength": 3846
+    },
+    {
+      "path": "domains/lammps/roles/lammps-kb-reviewer.md",
+      "digest": "sha256:1d05d4b13be613d7d145081736b864c55ba157c0418cd3a15c5d8aa87dbb2063",
+      "byteLength": 3179
+    },
+    {
+      "path": "domains/lammps/roles/lammps-paper-researcher.md",
+      "digest": "sha256:b63fc9e0a0e4cfd02e151ccacc44b96ab49a7ea355b2d1b38bea125c55a7b2ef",
+      "byteLength": 4156
+    },
+    {
+      "path": "domains/lammps/roles/lammps-post-processor.md",
+      "digest": "sha256:fee0d9c10a151b7b6ed315676c1711c8635f79d8557085547b1d316e5a177bda",
+      "byteLength": 9314
+    },
+    {
+      "path": "domains/lammps/roles/lammps-reviewer.md",
+      "digest": "sha256:50e775d18bd3c01557a2cf5343c65e668087fdb4df9a193b0dd5cf188a34b063",
+      "byteLength": 11280
+    },
+    {
+      "path": "domains/lammps/roles/lammps-simulation-architect.md",
+      "digest": "sha256:6fe1719e5b2f3c7a29ed5dd9f41971baca10359ca38be344f38a462fe1e54af7",
+      "byteLength": 10773
+    },
+    {
+      "path": "domains/lammps/roles/lammps-simulation-reasoner.md",
+      "digest": "sha256:e34dd19901f87d2395a546e3cbbfb39dd4b8161615e22d41c62811fff9b224f1",
+      "byteLength": 10342
+    },
+    {
+      "path": "domains/lammps/templates.json",
+      "digest": "sha256:cda793c988d923dbc918bad4d49df78523a39aa61ec85163d4657cd4829e8fdc",
+      "byteLength": 149
+    },
+    {
+      "path": "domains/lammps/validation.json",
+      "digest": "sha256:53e7f339453250c2f60529e29d97df56bef09054f0a10dd7bd23958f848c923c",
+      "byteLength": 147
+    },
+    {
+      "path": "domains/lammps/vocabulary.json",
+      "digest": "sha256:a4634f45e93f5008b8eeb61b7b3967fa77cbaecd67227c2f30420d0f8ce90d70",
+      "byteLength": 155
+    },
+    {
+      "path": "final-audit-inspection.json",
+      "digest": "sha256:eeb989ff8bf8ac35270d111e3d96e858bf3f7eb4f07193d2580f460e78134250",
+      "byteLength": 48713
+    },
+    {
+      "path": "final-audit-resume.json",
+      "digest": "sha256:b8c93e5d3c55ec3c5caaa63342521b4f5c3167233ef2e02cc477a799c69fd1c9",
+      "byteLength": 48713
+    },
+    {
+      "path": "final-smoke-inspected.json",
+      "digest": "sha256:ec353d3ec71b0df6ad596a206b673eb6fad0102e383453d8a8a29b7a18a3ba01",
+      "byteLength": 47446
+    },
+    {
+      "path": "final-smoke-reinspected.json",
+      "digest": "sha256:7fa8b7232ee6f754a08628b42f0715d5bdad226b9e04aa617256e1b9a490f834",
+      "byteLength": 47543
+    },
+    {
+      "path": "final-smoke-resumed.json",
+      "digest": "sha256:ec353d3ec71b0df6ad596a206b673eb6fad0102e383453d8a8a29b7a18a3ba01",
+      "byteLength": 47446
+    },
+    {
+      "path": "grinding-inspected.json",
+      "digest": "sha256:ff5cb5fb6f726e8d9a5d5e15800594964dc82ba45a91d6887784bcf75f1a7860",
+      "byteLength": 47714
+    },
+    {
+      "path": "last-release-path.txt",
+      "digest": "sha256:4448c6373c88c75a43d5385725ecb4cac47c0773bed9f3fdc04b131a62238642",
+      "byteLength": 169
+    },
+    {
+      "path": "package-lock.json",
+      "digest": "sha256:9c6a68330372378c8682a011859646db9a3884d4756526a9015db647f5db359f",
+      "byteLength": 4721
+    },
+    {
+      "path": "package.json",
+      "digest": "sha256:b2961a8fc0e738d7b770a5298839e81362b7bc7a2e370cc659b1beb97b4cc199",
+      "byteLength": 585
+    },
+    {
+      "path": "packages/analysis/index.js",
+      "digest": "sha256:5738fe7c9f51dcfce0021236c83d3a768d1d63b3291c1dbe90b3024b2fe64b40",
+      "byteLength": 2672
+    },
+    {
+      "path": "packages/application/grinding.js",
+      "digest": "sha256:7760e054b7bc7919cbee7ec6160ee7300656b8cb79fda743d81cf802d218666e",
+      "byteLength": 25573
+    },
+    {
+      "path": "packages/application/index.js",
+      "digest": "sha256:5860e59e94df03532556401e59fe1a9100dbfd98663605b518e7ff8c318dcbb7",
+      "byteLength": 2309
+    },
+    {
+      "path": "packages/application/partial.js",
+      "digest": "sha256:b0ff87b4f384182a69dc6f970cacc253f4d84127f453b20ebd0604568c80cd45",
+      "byteLength": 4449
+    },
+    {
+      "path": "packages/application/reproduction.js",
+      "digest": "sha256:651dbfdb3619c55d0352538f483f172d1c2087bf285f14c85bf0b65439d2a2a3",
+      "byteLength": 2851
+    },
+    {
+      "path": "packages/application/workflow.js",
+      "digest": "sha256:0cba764ff2cc39cb99354cae3910f56eec4dacd42e91796de48d26ba26a7b497",
+      "byteLength": 4065
+    },
+    {
+      "path": "packages/artifacts/index.js",
+      "digest": "sha256:e57ccee7b6738c2541d458849998297d61ab7bdc10a356f249f5a7a6f3c8d05f",
+      "byteLength": 4741
+    },
+    {
+      "path": "packages/contracts/index.js",
+      "digest": "sha256:5b9a895f672b440e160317be90582cfde0d54af79f800402016c5676e791ab12",
+      "byteLength": 4846
+    },
+    {
+      "path": "packages/contracts/records.js",
+      "digest": "sha256:f74f4eba566d765df48ad043b806784370f896ddc17ff3945e3578a463842a26",
+      "byteLength": 4415
+    },
+    {
+      "path": "packages/contracts/validation.js",
+      "digest": "sha256:2053d863f32289b0d62f676b494e09803ff4b15065d19acded42491114a6ca0a",
+      "byteLength": 942
+    },
+    {
+      "path": "packages/execution/index.js",
+      "digest": "sha256:0f3a455c1d710a39dd958294ee3c720f21f36d7b35dc78ed7325f3621621f58b",
+      "byteLength": 7136
+    },
+    {
+      "path": "packages/execution/modeling.js",
+      "digest": "sha256:033edf3e30fd7a9b1a56bc4e1640356bc2253437f3e5b04bef41efa3fe82116f",
+      "byteLength": 4086
+    },
+    {
+      "path": "packages/execution/slurm.js",
+      "digest": "sha256:9e9d6283a802d06740fadaaea8b2b7319e6b8c4bd4bb20ff61c6fab317005370",
+      "byteLength": 3192
+    },
+    {
+      "path": "packages/execution/worker.js",
+      "digest": "sha256:d904ffe5a7a1e31ee703a8da14d596ae8d835c0386bdb493473bde2495e09a71",
+      "byteLength": 2779
+    },
+    {
+      "path": "packages/improvement/index.js",
+      "digest": "sha256:e4cbe6ab386575e5b1f41009d9b6da6136402574350ed63cc6e6db0f2f79e04f",
+      "byteLength": 9047
+    },
+    {
+      "path": "packages/kernel/authorization.js",
+      "digest": "sha256:691d35be03655f712fc7c91f74f0b3af606e4bbfbfed12f13be3f9ac5b579c17",
+      "byteLength": 1616
+    },
+    {
+      "path": "packages/kernel/evidence.js",
+      "digest": "sha256:c38295ba3418483f3571da9a637f10876ece8c97e1b5ce1973e8b043c6a36a70",
+      "byteLength": 3008
+    },
+    {
+      "path": "packages/kernel/gates.js",
+      "digest": "sha256:2c9a8d618969643fe0119329677c8f9f6a85465ba4f4574e89b7797c012bf526",
+      "byteLength": 4532
+    },
+    {
+      "path": "packages/kernel/index.js",
+      "digest": "sha256:41ae60ba76dcf9cf1a541f36ad3a6e8944ec2ba72e2cf4980a8036d31dc7e025",
+      "byteLength": 10007
+    },
+    {
+      "path": "packages/kernel/repair.js",
+      "digest": "sha256:52d38d2b3375242a17c57415e2ab09820f65fb1304b836af9c75f8231e0d9255",
+      "byteLength": 1381
+    },
+    {
+      "path": "packages/kernel/state.js",
+      "digest": "sha256:7f853c7db09be39fa58abc47eacdc7f135c3fc27582e77be1b3680d83809008e",
+      "byteLength": 10694
+    },
+    {
+      "path": "packages/kernel/studies.js",
+      "digest": "sha256:fee9624d254f6ba853364cbb6a3f8696d79c6cf653b35bba790c4da529e5dfe2",
+      "byteLength": 2920
+    },
+    {
+      "path": "packages/knowledge/backends.js",
+      "digest": "sha256:efcaf1abb4f8140193141aa8b938895380bc86d681bb1321f063a53e8656b140",
+      "byteLength": 1715
+    },
+    {
+      "path": "packages/knowledge/index.js",
+      "digest": "sha256:c04d059009db74191465c08d51c0a408c912c8efd3a472be9f62d4c776ae0117",
+      "byteLength": 9154
+    },
+    {
+      "path": "packages/knowledge/legacy-index.js",
+      "digest": "sha256:042677a2fb67f261efc5a47ed58a9ab90a7d859daa026db0d138d27158006d5c",
+      "byteLength": 3334
+    },
+    {
+      "path": "packages/migration/index.js",
+      "digest": "sha256:d77c02dbc207db05fe857a7c6b2ef0c7da627f4bca5bc96f203124630e25396c",
+      "byteLength": 3133
+    },
+    {
+      "path": "packages/pack-resolver/index.js",
+      "digest": "sha256:13237d18ad6e6916ef1ce2df629036cd7ef3d725004ac4a961c540f53e4ca97b",
+      "byteLength": 8613
+    },
+    {
+      "path": "packages/pack-resolver/release.js",
+      "digest": "sha256:5ab31740b323598f0f32ef228010c777301f7b625603a5b7a8cbc1181d1acaef",
+      "byteLength": 5308
+    },
+    {
+      "path": "packages/presentation/index.js",
+      "digest": "sha256:5440c72afe381e33aea9f4a0ee7ed23359a7079be4bc8feeb4570fd4c731b76a",
+      "byteLength": 2463
+    },
+    {
+      "path": "packages/presentation/ovito_adapter.py",
+      "digest": "sha256:e0c1b078b297e7197e67bcb7fc5b2b2cf32e1d8d555c41c1b451bad3300c505d",
+      "byteLength": 1410
+    },
+    {
+      "path": "packages/runtime-redmaple/index.js",
+      "digest": "sha256:76f8651f61c6d739ad99324778066c5ed6f72ff684f8976d6909451c2d9fe454",
+      "byteLength": 12404
+    },
+    {
+      "path": "partial-analysis-result.json",
+      "digest": "sha256:067bfd174cf8c2419ef92632ba441e73f6bd3c260ae782c72d2e7447ed29a440",
+      "byteLength": 79179
+    },
+    {
+      "path": "partial-diagnosis-result.json",
+      "digest": "sha256:9ca323ab95d992b12f27aa5241dfdd9fef656e1671be00fba79c2f783c5ddf86",
+      "byteLength": 24110
+    },
+    {
+      "path": "partial-visualization-result.json",
+      "digest": "sha256:8f1531a52cce8f084dc4284b3da413b0d1144f6792c458ed1db182753ae4e96f",
+      "byteLength": 3805
+    },
+    {
+      "path": "README.md",
+      "digest": "sha256:2cee17e577b0e9381cd4f08797f92031354f9004d6522bd21df011849a089aa2",
+      "byteLength": 6505
+    },
+    {
+      "path": "recovered-knowledge-query.json",
+      "digest": "sha256:2d35dda1faf3049e8b6d18b137d467ae9d5dd50ef80300ecd5be612594a2c68b",
+      "byteLength": 3466
+    },
+    {
+      "path": "refreshed-figures.json",
+      "digest": "sha256:dd1009f171a3ed0485d368db0d00dedd4c9f6c4f14e9d95a9d73276b3188c04f",
+      "byteLength": 2749
+    },
+    {
+      "path": "resume-result.json",
+      "digest": "sha256:6ddf8aad0cd4008ae0da46d6b379ae1b06d25786c806de8ea46958b53f0fac2e",
+      "byteLength": 44631
+    },
+    {
+      "path": "runtime.example.json",
+      "digest": "sha256:3ef714b7da264a5055a36bdb579245445657df0497d946e44c513f67bb3b8060",
+      "byteLength": 335
+    },
+    {
+      "path": "schemas/domain-pack.schema.json",
+      "digest": "sha256:e41c1324050a3221a5d792c683bd8239a28d45319e86233b68d54a6de89d44ae",
+      "byteLength": 15523
+    },
+    {
+      "path": "science/benchmarks.py",
+      "digest": "sha256:4b04bb701a0b4c72b13b4bcd638dd1701f7ebdca0ab3519515a0a750ca36cf10",
+      "byteLength": 5304
+    },
+    {
+      "path": "science/extract_paper.py",
+      "digest": "sha256:ac74cf3bc224439f0a36fa21bc9b445bac7266ef4de96d57436d28eca9e18d39",
+      "byteLength": 907
+    },
+    {
+      "path": "science/grinding.py",
+      "digest": "sha256:b0d072a4709b9e11a6df7055ddaa18dce8d8adbfce07adc15fab8a12cfa35e82",
+      "byteLength": 10701
+    },
+    {
+      "path": "science/ovito_render.py",
+      "digest": "sha256:b61d4fbc3e832f9b4ad472c5f312b1ad362279fa0df996a28709fe30b9e83683",
+      "byteLength": 2074
+    },
+    {
+      "path": "scripts/build-packs.js",
+      "digest": "sha256:5e2f113ac8b780c0e3216a6e3bf9dad2ee8b912c603d09b1f6f9492aba9d9a47",
+      "byteLength": 5696
+    },
+    {
+      "path": "scripts/check.js",
+      "digest": "sha256:e74e276657e70eebbff089e2ee3068e31b0f3c0b3ad233b13c6d7a73721aab4c",
+      "byteLength": 864
+    },
+    {
+      "path": "scripts/export-evidence.js",
+      "digest": "sha256:f9e041cc3f94d2ba793b7ac04d6be664c79eb3e3f0dd60fec275a0b0a9856a74",
+      "byteLength": 4724
+    },
+    {
+      "path": "scripts/migrate-legacy.js",
+      "digest": "sha256:1f959579de571ddf204fabb3354566b25243414790d8a6cf00dba2b4fe910e09",
+      "byteLength": 1511
+    },
+    {
+      "path": "tests/core.test.js",
+      "digest": "sha256:2f5a8fe8338e7ce2e764532e904243ac3bedc30cc2725a57127b2fd80ef964e8",
+      "byteLength": 7455
+    },
+    {
+      "path": "tests/execution.test.js",
+      "digest": "sha256:46246d5e5320cd33d42034302cfab4208d2e12fef29c6e7022b004e536d8ee81",
+      "byteLength": 6043
+    },
+    {
+      "path": "tests/fixtures.js",
+      "digest": "sha256:e5dba7342607e1871af9dba4020a74321bf092face2fad5bfaf426f6a3588ff6",
+      "byteLength": 1518
+    },
+    {
+      "path": "tests/host-policy.test.js",
+      "digest": "sha256:9608d543ddad80589fc5f93d590ac1b0cfa3584dbde08a3c168c9a7fbba74ab9",
+      "byteLength": 1644
+    },
+    {
+      "path": "tests/knowledge-improvement.test.js",
+      "digest": "sha256:0ae34b971f3eb8b8b532f4de6eccd20ef735e7cd9fb7680cfdc95b9877eccba7",
+      "byteLength": 4938
+    },
+    {
+      "path": "tests/reliability.test.js",
+      "digest": "sha256:bd81e80de4f4e34ae88ab85f879f49274b3cd28fc0e516497414e5666e6281e5",
+      "byteLength": 6327
+    },
+    {
+      "path": "tests/science-runtime.test.js",
+      "digest": "sha256:c412a8364eb4fd50ca1aa8d18bcad9b81bc9246f6c775a86d7ebac7b3f40c1ce",
+      "byteLength": 7564
+    },
+    {
+      "path": "tests/workflow.test.js",
+      "digest": "sha256:eba8979cb3e4e23bd5d3d36f08930efd82fbc9698953f063326a094282390167",
+      "byteLength": 2702
+    }
+  ],
+  "sourceFingerprint": "sha256:ec9a42a04534b4e9e606fa7ee9e1ad074b8db163703d208588e01a1ea6a4411e"
+}

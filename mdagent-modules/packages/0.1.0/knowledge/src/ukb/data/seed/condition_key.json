@@ -1,0 +1,17 @@
+[
+  {
+    "key_id": "software_version",
+    "label": "软件版本",
+    "value_type": "text"
+  },
+  {
+    "key_id": "scale_note",
+    "label": "规模说明",
+    "value_type": "text"
+  },
+  {
+    "key_id": "validity_note",
+    "label": "适用前提说明",
+    "value_type": "text"
+  }
+]

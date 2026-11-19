@@ -1,0 +1,45 @@
+{
+  "id": "roles",
+  "items": [
+    {
+      "id": "analyst",
+      "responsibility": "按锁定口径计算与解释。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "architect",
+      "responsibility": "明确目标、模型、证据、试验和验收。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "coordinator",
+      "responsibility": "调度、交接和向内核提交推进请求。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "executor",
+      "responsibility": "真实执行、状态对账和数据收集。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "model-builder",
+      "responsibility": "构建候选工件，提交差异和自检。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "post-processor",
+      "responsibility": "生成并核验图表/报告。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    },
+    {
+      "id": "reviewer",
+      "responsibility": "独立审查固定闭包和证据。",
+      "actorPolicy": "独立 actorInstance，不与被审生产者合并。"
+    },
+    {
+      "id": "validator",
+      "responsibility": "控制/验证，记录适用范围和缺口。",
+      "actorPolicy": "由宿主绑定权限和预算。"
+    }
+  ]
+}

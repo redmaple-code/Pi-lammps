@@ -1,0 +1,193 @@
+{
+  "pack": "methodology_deep",
+  "schema_version": 1,
+  "consumer": "evidence",
+  "_doc": "方法论深度分析维度库:每个实验族一组必须分析的方面,评估引擎逐维度分析;新增维度=加条目过人工闸不改代码",
+  "entries": [
+    {
+      "id": "mdev-ec-method",
+      "kind": "methodology-dimension",
+      "family": "elastic-constants",
+      "question": "方法选型是否适用于目标弹性常数（能量法 vs 应力法、静态 vs 动态）",
+      "why": "C11 可由能量-应变二次关系(0K 静态)或应力响应(有限温)求得;方法与温度口径错配会引入系统偏差",
+      "check": {
+        "type": "text_matches",
+        "params": {
+          "decision_regex": "应变能|应力.?应变|energy.*strain|E.*ε",
+          "note_match": "已声明应变能法(0K 静态适用)",
+          "note_miss": "未声明具体求法——需明确方法选型依据"
+        }
+      },
+      "severity_hint": "soft",
+      "rationale": "0K 静态能-应变法对 C11 是标准做法;有限温需应力涨落法（2026-10-22 矩阵测试发现：原正则含 C11，仅写目标量即可蒙混过关，已收紧为只认方法声明）",
+      "status": "active"
+    },
+    {
+      "id": "mdev-ec-strain-linear",
+      "kind": "methodology-dimension",
+      "family": "elastic-constants",
+      "question": "应变幅值是否在线性弹性区间（两组幅值的 C11 一致性 ≤ 15%）",
+      "why": "大应变进入非线性区,C11 被高阶项污染;用两种幅值独立算 C11 互差即非线性度量",
+      "check": {
+        "type": "facts_two_value_consistency",
+        "params": {
+          "key_a": "c11_small_amp",
+          "key_b": "c11_large_amp",
+          "rel_tol": 0.15,
+          "note_fail": "两组幅值 C11 偏差超 15%——非线性污染或未充分弛豫",
+          "note_pass": "两组幅值 C11 一致(线性区确认)"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "线弹性判据:同族幅值结果一致(标准弹性常数计算实践)",
+      "status": "active"
+    },
+    {
+      "id": "mdev-ec-relax",
+      "kind": "methodology-dimension",
+      "family": "elastic-constants",
+      "question": "应变前是否做了完整结构弛豫（盒长+原子位置）",
+      "why": "未弛豫的初始应力会叠加到应变响应上;应力基准点必须是平衡态",
+      "check": {
+        "type": "input_regex_all_present",
+        "params": {
+          "patterns": [
+            "box/relax"
+          ],
+          "note_fail": "输入文件缺少盒长弛豫(box/relax)——晶格未达平衡态,应变响应叠加了初始应力"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "弹性常数定义在平衡态附近;必须先弛豫到平衡",
+      "status": "active"
+    },
+    {
+      "id": "mdev-ec-size",
+      "kind": "methodology-dimension",
+      "family": "elastic-constants",
+      "question": "体系尺寸是否足以代表体相弹性（≥108 原子/≥3×3×3）",
+      "why": "小盒子的表面/周期伪影影响弹性常数;3×3×3 fcc(108 原子)是体相下限",
+      "check": {
+        "type": "numeric_min",
+        "params": {
+          "fact_key": "atom_count",
+          "min": 108,
+          "note_fail": "原子数 <108——有限尺寸效应可能显著(建议 4×4×4 验证)"
+        }
+      },
+      "severity_hint": "soft",
+      "rationale": "EAM fcc 金属弹性常数 3×3×3 收敛性(基准实践)",
+      "status": "active"
+    },
+    {
+      "id": "mdev-ec-temp-basis",
+      "kind": "methodology-dimension",
+      "family": "elastic-constants",
+      "question": "对照基准的温度口径是否一致（0K 计算 vs 300K 实验值须标注为参考）",
+      "why": "弹性常数的温度效应 ~几十 GPa/1000K;0K EAM 值与室温实验值天然有系统差",
+      "check": {
+        "type": "text_matches",
+        "params": {
+          "decision_regex": "0K.*(oracle|理论)|300K.*(实验|参考)",
+          "note_match": "已区分理论基准(0K 同势)与实验参考(300K)",
+          "note_miss": "未区分对照基准温度口径——0K/300K 系统差未声明"
+        }
+      },
+      "severity_hint": "soft",
+      "rationale": "弹性常数温度效应;同类 EAM 势 0K vs 实验室温差约 3-5%",
+      "status": "active"
+    },
+    {
+      "id": "mdev-liq-equil",
+      "kind": "methodology-dimension",
+      "family": "liquid-md",
+      "question": "液体性质统计前是否有充分平衡段（NVT 熔化→NPT 平衡的链条完整）",
+      "why": "未平衡的液体密度/RDF 是记忆固体初始构型的伪影,不是平衡液相",
+      "check": {
+        "type": "input_regex_all_present",
+        "params": {
+          "patterns": [
+            "nvt",
+            "npt"
+          ],
+          "note_fail": "缺 NVT→NPT 平衡链条——液体统计可能未达平衡"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "液体 MD 标准流程:先 NVT 熔化再 NPT 平衡后统计",
+      "status": "active"
+    },
+    {
+      "id": "mdev-liq-sampling",
+      "kind": "methodology-dimension",
+      "family": "liquid-md",
+      "question": "统计段是否足够长（RDF/密度统计 ≥ 生产段 1/4）",
+      "why": "统计段太短则结构函数噪声大;RDF 至少覆盖数千步的构型采样",
+      "check": {
+        "type": "input_regex_all_present",
+        "params": {
+          "patterns": [
+            "ave/time|compute rdf|rerun"
+          ],
+          "note_fail": "缺少结构统计命令(RDF/时间平均)——无法输出验收所需结构量"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "液体结构统计需时间平均",
+      "status": "active"
+    },
+    {
+      "id": "mdev-gs-relax",
+      "kind": "methodology-dimension",
+      "family": "ground-state",
+      "question": "基态计算是否做了双向弛豫（原子位置+盒长）",
+      "why": "只弛豫原子不改盒长,晶格常数无信息;box/relax 才能给出平衡 a0",
+      "check": {
+        "type": "input_regex_all_present",
+        "params": {
+          "patterns": [
+            "box/relax"
+          ],
+          "note_fail": "缺 box/relax——晶格常数未弛豫"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "基态晶格常数定义:总能量对盒长导数为零",
+      "status": "active"
+    },
+    {
+      "id": "mdev-gs-start-off",
+      "kind": "methodology-dimension",
+      "family": "ground-state",
+      "question": "起始晶格是否偏离目标（弛豫有移动余地而非原地不动）",
+      "why": "起始值恰好等于目标会使'弛豫到目标'变成同义反复——验证力度为零",
+      "check": {
+        "type": "text_matches",
+        "params": {
+          "decision_regex": "起始.*[0-9.]+.*(?:偏离|余量|差)|start.*off",
+          "note_match": "起始值已声明偏离目标(验证有效)",
+          "note_miss": "未声明起始值偏离——若恰好等于目标则验证无力度"
+        }
+      },
+      "severity_hint": "soft",
+      "rationale": "从偏移初值弛豫收敛到目标值才是独立验证",
+      "status": "active"
+    },
+    {
+      "id": "mdev-general-dt",
+      "kind": "methodology-dimension",
+      "family": "*",
+      "question": "时间步长对体系是否稳定（dt* ≤ 推荐值；动态模拟必查）",
+      "why": "步长过大数值失稳,步长过小浪费;以体系特征时间为尺",
+      "check": {
+        "type": "reduced_timestep",
+        "params": {
+          "note": "引擎从决策声明 dt + 锚 t_unit 换算 dt* 对照锚区间"
+        }
+      },
+      "severity_hint": "hard",
+      "rationale": "分子动力学积分稳定性通则",
+      "status": "active"
+    }
+  ]
+}

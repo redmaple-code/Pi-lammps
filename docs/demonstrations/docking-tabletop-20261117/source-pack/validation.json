@@ -1,0 +1,72 @@
+{
+  "id": "validation",
+  "items": [
+    {
+      "id": "dock-01",
+      "kind": "positive",
+      "scenario": "官方1IEP重对接",
+      "requiredInputs": [
+        "原始受体/配体摘要",
+        "原子映射",
+        "冻结协议"
+      ],
+      "expected": "多种子真实搜索，top1/best-of-N参考RMSD、失败与分母。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-02",
+      "kind": "positive",
+      "scenario": "已知活性/诱饵回顾性集合",
+      "requiredInputs": [
+        "标签来源",
+        "独立划分",
+        "排名协议"
+      ],
+      "expected": "EF、ROC/PR及区间，完整去重/失败记录。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-03",
+      "kind": "negative",
+      "scenario": "缺键级/立体信息",
+      "expected": "补化学依据或按已记录策略枚举。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-04",
+      "kind": "negative",
+      "scenario": "box坐标/单位错误",
+      "expected": "定位位点覆盖缺口。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-05",
+      "kind": "negative",
+      "scenario": "用内部RMSD替代参考RMSD",
+      "expected": "要求外部参考与映射。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-06",
+      "kind": "negative",
+      "scenario": "混合vina/ad4排名",
+      "expected": "拒绝未经验证的评分混合。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-07",
+      "kind": "negative",
+      "scenario": "控制数据调参后冒称留出",
+      "expected": "标记泄漏和范围。",
+      "status": "planned"
+    },
+    {
+      "id": "dock-08",
+      "kind": "negative",
+      "scenario": "失败状态丢失分母",
+      "expected": "覆盖检查发现不完整。",
+      "status": "planned"
+    }
+  ],
+  "fixturesStatus": "真实科学资料待取得。"
+}

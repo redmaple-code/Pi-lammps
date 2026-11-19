@@ -1,0 +1,264 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "molecular-dynamics",
+  "version": "0.1.0-draft",
+  "publicationStatus": "draft",
+  "scope": {
+    "domains": [
+      "particle-dynamics"
+    ],
+    "scales": [
+      "microscopic"
+    ],
+    "tasks": [
+      "trajectory-study"
+    ],
+    "exclusions": [
+      "continuum-stress-conversion",
+      "reactive-models-without-validation"
+    ]
+  },
+  "kernelCompatibility": ">=1.0.0 <2.0.0",
+  "dependencies": [],
+  "resources": [
+    {
+      "id": "problem",
+      "kind": "problemSchema",
+      "path": "problem-schema.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "knowledge",
+      "kind": "knowledge",
+      "path": "knowledge/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "models",
+      "kind": "model",
+      "path": "models/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "vocabulary",
+      "kind": "vocabulary",
+      "path": "vocabulary.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "checks",
+      "kind": "check",
+      "path": "checks/rules.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "metrics",
+      "kind": "metric",
+      "path": "measurements/metrics.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "failures",
+      "kind": "failure",
+      "path": "failures/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "templates",
+      "kind": "template",
+      "path": "templates/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "roles",
+      "kind": "role",
+      "path": "roles.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "validation",
+      "kind": "validation",
+      "path": "validation/cases.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "artifacts",
+      "kind": "artifactSchema",
+      "path": "artifacts/schemas/catalog.yaml",
+      "availability": "missing"
+    }
+  ],
+  "entrypoints": {
+    "problemSchema": "problem",
+    "knowledge": [
+      "knowledge"
+    ],
+    "models": [
+      "models"
+    ],
+    "vocabulary": "vocabulary",
+    "checks": [
+      "checks"
+    ],
+    "metrics": [
+      "metrics"
+    ],
+    "failures": "failures",
+    "templates": [
+      "templates"
+    ],
+    "roles": "roles",
+    "validation": [
+      "validation"
+    ],
+    "artifactSchemas": [
+      "artifacts"
+    ]
+  },
+  "requiredCapabilities": [
+    "molecular.analysis",
+    "molecular.dynamics.solve",
+    "molecular.input.prepare",
+    "particles.build"
+  ],
+  "toolProfiles": [
+    {
+      "id": "candidate-local",
+      "bindings": [
+        {
+          "capability": "molecular.analysis",
+          "adapterId": "candidate-molecular-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "molecular.dynamics.solve",
+          "adapterId": "candidate-molecular-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "molecular.input.prepare",
+          "adapterId": "candidate-molecular-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "particles.build",
+          "adapterId": "candidate-molecular-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    }
+  ],
+  "defaultToolProfile": "candidate-local",
+  "workflows": [
+    {
+      "id": "trajectory-study",
+      "taskType": "trajectory-study",
+      "inputs": [
+        "approved-problem"
+      ],
+      "outputs": [
+        "metrics"
+      ],
+      "stages": [
+        {
+          "id": "particles",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [],
+          "consumes": [
+            "approved-problem"
+          ],
+          "produces": [
+            "particles"
+          ],
+          "checkRefs": [
+            "checks#required-features"
+          ],
+          "reviewRequired": true,
+          "capability": "particles.build"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "particles"
+          ],
+          "consumes": [
+            "approved-problem",
+            "particles"
+          ],
+          "produces": [
+            "solver-input"
+          ],
+          "checkRefs": [
+            "checks#model-mapping"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.input.prepare"
+        },
+        {
+          "id": "simulate",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "solver-input"
+          ],
+          "produces": [
+            "run-data"
+          ],
+          "checkRefs": [
+            "checks#execution-complete"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "simulate"
+          ],
+          "consumes": [
+            "approved-problem",
+            "run-data"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#sampling-sufficient"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.analysis"
+        }
+      ]
+    }
+  ],
+  "defaultWorkflow": "trajectory-study",
+  "policies": {
+    "referencePolicy": "localCaseRequired",
+    "independentReviewRequired": true,
+    "maxConsecutiveRevisions": 3,
+    "maxConsecutiveRepairFailures": 3
+  },
+  "extensions": {
+    "spec.example": {
+      "purpose": "开发规范示例，不含真实科学资产，不可发布或生产运行。",
+      "toolBindingNote": "adapterId 和版本范围为候选占位；实际工具版本须验证后锁定。",
+      "policyNote": "次数仅为配置示例，非通用科学阈值。"
+    }
+  }
+}

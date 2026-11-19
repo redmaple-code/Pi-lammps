@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "atomCount": 6400,
+  "counts": [
+    1280,
+    1280,
+    1280,
+    1280,
+    1280
+  ],
+  "fixedAtomCount": 800,
+  "mobileAtomCount": 5600,
+  "verifiedFeatures": [
+    "five-components",
+    "fcc-substrate",
+    "fixed-boundary",
+    "thermal-layer",
+    "spherical-abrasive",
+    "lateral-motion"
+  ],
+  "method": "independent-raw-data-fcc-inspection/1"
+}

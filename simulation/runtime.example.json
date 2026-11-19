@@ -1,0 +1,51 @@
+{
+  "model": "aispot-ds/deepseek-v4.1-flash",
+  "allowedModels": ["aispot-ds/deepseek-v4.1-flash"],
+  "thinkingLevel": "low",
+  "compactionThinkingLevel": "off",
+  "maxOutputTokens": 16384,
+  "providerConnection": {
+    "provider": "aispot-ds",
+    "modelId": "deepseek-v4.1-flash",
+    "displayName": "dsv4.1f",
+    "baseUrl": "https://aispot.swj0227.icu/v1",
+    "baseUrlEnv": "AISPOT_DS_BASE_URL",
+    "apiKeyEnv": "AISPOT_DS_API_KEY",
+    "api": "openai-completions",
+    "transport": "curl",
+    "proxyEnv": "HTTPS_PROXY",
+    "contextWindow": 40960,
+    "maxTokens": 16384,
+    "reasoning": true,
+    "thinkingLevelMap": { "minimal": null, "low": "low", "medium": null, "high": "high", "max": "max" },
+    "compat": {
+      "supportsStore": false,
+      "supportsDeveloperRole": false,
+      "maxTokensField": "max_tokens",
+      "requiresReasoningContentOnAssistantMessages": true,
+      "thinkingFormat": "deepseek"
+    }
+  },
+  "noMcp": true,
+  "settings": {
+    "compaction": {
+      "enabled": true,
+      "reserveTokens": 18432,
+      "keepRecentTokens": 8192
+    }
+  },
+  "limits": {
+    "modelCalls": 40,
+    "toolCalls": 100,
+    "seconds": 600
+  },
+  "simulation": {
+    "taskModelCalls": 80,
+    "roleMaxOutputTokens": 8192,
+    "reviewMaxOutputTokens": 16384,
+    "roleTokenBudget": 512000,
+    "recordKnowledge": false,
+    "python": "C:/Users/redmaple/AppData/Local/Programs/Python/Python311/python.exe",
+    "lammps": "E:/LAMMPS 64-bit 2Aug2023-MSMPI/bin/lmp.exe"
+  }
+}

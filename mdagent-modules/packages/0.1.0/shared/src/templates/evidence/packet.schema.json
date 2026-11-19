@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "stage-packet",
+  "description": "阶段交接包骨架(内容是域数据,骨架字段固定): 阶段产物以结构化 JSON 交接给下一阶段。",
+  "type": "object",
+  "required": ["schema_version", "stage", "case_id"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "stage": {"type": "string"},
+    "case_id": {"type": "string"},
+    "chosen": {"type": ["string", "object"], "description": "已选方案"},
+    "candidates": {"type": "array"},
+    "mappings": {"type": "object"},
+    "evidence_refs": {"type": "array"},
+    "known_risks": {"type": "array"},
+    "fallback_options": {"type": "array"},
+    "review_status": {"enum": ["PASS", "REVISE", "BLOCKED"]},
+    "artifacts": {"type": "array", "items": {"type": "string"}}
+  }
+}

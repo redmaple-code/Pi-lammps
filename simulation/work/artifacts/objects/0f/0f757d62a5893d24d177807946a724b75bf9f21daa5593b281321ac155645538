@@ -1,0 +1,211 @@
+{
+  "scheme": "potential-catalogue-assessment/1",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "stageId": "research:2",
+  "producedBy": "lammps-paper-researcher",
+  "decision": "proceed",
+  "summary": "Catalogue identifies one Fe-Ni-Cr-Co-Cu eam/alloy potential (Farkas-Caro 2018) matching the frozen 5-element scheme; DOI exists only in scheme metadata, not the catalogue, and no full-text or quantitative validation data is present. Gaps are explicit and consistent with the approved exploratory scope.",
+  "searchScope": {
+    "sourcesInspected": [
+      {
+        "sourceId": "research-source",
+        "kind": "metadata",
+        "originGroupId": "potential-catalogue",
+        "locator": "domains/lammps/models.json",
+        "digest": "sha256:9e515d78e83da8fb08c4cb7eb3d5d7c31f9d3cc229fb79533bb55d5942d7f600",
+        "linesRead": "1-20 of 20 (complete file)",
+        "evidenceLevel": "catalogue metadata only"
+      },
+      {
+        "sourceId": "support-context",
+        "kind": "task",
+        "originGroupId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+        "locator": "work/artifacts/objects/81/81ceae8f...5562",
+        "digest": "sha256:81ceae8fefe3e50c99aa97bac271bf6dcb30d58e45425d43e3ec8a6680cd5562",
+        "linesRead": "1-531 of 531 (complete file)",
+        "evidenceLevel": "scheme definition (JSON)"
+      }
+    ],
+    "notInspected": [
+      "Potential file contents / parameter header (assets/FeNiCrCoCu-heafixed.setfl) was NOT read; only its catalogue path string was observed.",
+      "No publisher page, PDF, or DOI resolver was consulted in this stage; the DOI is therefore unverified against an authoritative record.",
+      "No external literature corpus (Exa / Semantic Scholar) search was executed in this stage."
+    ]
+  },
+  "requestedStructuredFields": {
+    "catalogueItems": [
+      {
+        "id": "farkas-caro-2018",
+        "doi": {
+          "value": "10.1557/jmr.2018.245",
+          "provenance": "scheme D6.potential.doi (support-context, line ~ 'D6'), NOT present in catalog entry fields",
+          "verification": "unverified-in-stage-2",
+          "note": "Catalogue item exposes id/elements/pairStyle/file/source/limitations only; no 'doi' key exists in models.json."
+        },
+        "elements": ["Fe", "Ni", "Cr", "Co", "Cu"],
+        "elementCount": 5,
+        "compositionInScheme": {
+          "formula": "FeNiCrCoCu",
+          "fractions": [0.2, 0.2, 0.2, 0.2, 0.2],
+          "stoichiometry": "equiatomic (5 x 0.2)"
+        },
+        "pairStyle": "eam/alloy",
+        "potentialFile": {
+          "cataloguePath": "assets/FeNiCrCoCu-heafixed.setfl",
+          "pathExistenceVerified": false,
+          "schemeDownloadUrl": "https://www.ctcms.nist.gov/potentials/Download/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl",
+          "checksumRecorded": null
+        },
+        "catalogueSourceUrl": "https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/",
+        "sourceHost": "NIST CTCMS Interatomic Potentials Repository",
+        "modelScope": {
+          "asStatedInCatalogue": "Idealized FCC model alloy, not quantitatively fitted to all real elemental properties",
+          "structuralScope": "FCC single-phase lattice (per catalogue limitation text)",
+          "defectScope": "not stated in catalogue",
+          "temperatureRange": "not stated in catalogue",
+          "phaseStabilityScope": "not stated in catalogue (no statement on competing BCC/HCP/Sigma phases)",
+          "applicabilityToTask": "Consistent with D1 (equiatomic FCC FeNiCrCoCu model alloy) and D3 (300 K) by element and structure; quantitative fidelity not established."
+        },
+        "catalogueLimitations": [
+          "Idealized FCC model alloy, not quantitatively fitted to all real elemental properties"
+        ]
+      }
+    ],
+    "elementMatchCheck": {
+      "schemeElements": ["Fe", "Ni", "Cr", "Co", "Cu"],
+      "catalogueElements": ["Fe", "Ni", "Cr", "Co", "Cu"],
+      "match": true,
+      "extraOrMissing": "none",
+      "resolvesFeature": "five-components (critical, verificationMethod=data-and-input-check, stage wf-01/wf-03a)"
+    },
+    "pairStyleMatchCheck": {
+      "requiredByScheme": "eam/alloy (implied by D6 potential name 'EAM/alloy')",
+      "cataloguePairStyle": "eam/alloy",
+      "match": true
+    }
+  },
+  "limitations": [
+    {
+      "id": "L1-no-fulltext",
+      "type": "evidence-gap",
+      "severity": "moderate",
+      "statement": "No full text or PDF of Farkas & Caro (J. Mater. Res. 2018) was read in this stage. All model-scope statements are the catalogue's single-sentence limitation, not the authors' own scope statement.",
+      "impact": "Cannot confirm fitted properties, reference structures, or the composition/phase envelope the authors validated.",
+      "mitigation": "Resolve and extract the paper PDF (doi:10.1557/jmr.2018.245) in a follow-up research stage before any non-exploratory claim.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L2-no-quantitative-validation",
+      "type": "evidence-gap",
+      "severity": "moderate",
+      "statement": "Catalogue contains no quantitative validation data: no lattice constant, cohesive energy, elastic constants (C11/C12/C44), stacking-fault energy, surface energy, or melting-point comparison, and no per-element property residuals.",
+      "impact": "CandidateValidation features cannot be quantitatively validated against the potential; only structural/elemental/input checks are supported.",
+      "mitigation": "Record scheme-supplied lattice 3.56 Angstrom as an input assumption, not a validated output; treat any future comparison to experiment as qualitative.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L3-no-experimental-reference",
+      "type": "missing-source",
+      "severity": "expected",
+      "statement": "No matched grinding reference (composition, abrasive model, speed, depth, force definition) exists in the registered sources; D7 already declares this via comparison 'grinding-reference' with missingReason set.",
+      "impact": "meanNormalForceNn has no external benchmark; strategy stays exploratory.",
+      "mitigation": "None required for this scope; keep the declared missingReason in the frozen D7 block.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L4-doi-outside-catalogue",
+      "type": "provenance-gap",
+      "severity": "low",
+      "statement": "The DOI 10.1557/jmr.2018.245 appears only in the scheme (D6) and is absent from the catalogue entry, which lists id, elements, pairStyle, file, source URL and limitations. The catalogue and scheme are therefore not mutually cross-referenced by DOI.",
+      "impact": "A catalogue item could silently point to a different paper without contradiction; the DOI-to-item binding is unverified.",
+      "mitigation": "Add an explicit doi field to the catalogue entry and verify against the NIST entry page and publisher record.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L5-no-alternatives",
+      "type": "selection-gap",
+      "severity": "low",
+      "statement": "The catalogue offers exactly one candidate (items array length 1) for FeNiCrCoCu, so no potential-to-potential sensitivity or selection justification is possible from registered metadata.",
+      "impact": "Potential-selection uncertainty cannot be quantified; model choice is asserted, not compared.",
+      "mitigation": "Note in the write-up that potential choice is unbenchmarked; add a second candidate only if scope later widens.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L6-file-unverified",
+      "type": "artifact-gap",
+      "severity": "low",
+      "statement": "assets/FeNiCrCoCu-heafixed.setfl was not opened; no checksum, no element ordering, and no 'setfl' header consistency check against eam/alloy was performed in this stage.",
+      "impact": "Functional-form and element-order correctness remain unconfirmed until the build stage reads the file.",
+      "mitigation": "At wf-01/wf-03a, assert pair_style eam/alloy, 5 element lines in order Fe Ni Cr Co Cu, and record the file sha256.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L7-model-form-limits",
+      "type": "model-semantics",
+      "severity": "expected",
+      "statement": "EAM/alloy is a central-force, spherically symmetric embedded-atom formulation: it does not capture explicit angular bonding; it is typically parameterized near equilibrium FCC, and its accuracy for severe plastic deformation, high local strains and abrasive contact is outside the catalogue's stated scope.",
+      "impact": "Force magnitudes from the 3 Angstrom depth grinding pass are model-dependent, not physical predictions.",
+      "mitigation": "Report results as model-relative; do not convert to engineering grinding-force claims.",
+      "acceptableUnderExploratoryScope": true
+    },
+    {
+      "id": "L8-scheme-side-limitations-carried",
+      "type": "inherent",
+      "severity": "expected",
+      "statement": "Inherited from scheme limitations: idealized model alloy; rigid repulsive sphere abrasive; single short small-cell integration test (20x10x8 FCC cells, 6400 atoms, 400 equil + 400 approach + 800 grinding steps at dt=0.001 ps, 300 K); convergence, repeat-seed statistics and experimental comparison pending.",
+      "impact": "Findings are a workflow/plumbing demonstration, not a materials result.",
+      "mitigation": "Preserve these strings verbatim in report limitations.",
+      "acceptableUnderExploratoryScope": true
+    }
+  ],
+  "directEvidence": {
+    "catalogueVerbatimKeyFields": {
+      "id": "farkas-caro-2018",
+      "pairStyle": "eam/alloy",
+      "file": "assets/FeNiCrCoCu-heafixed.setfl",
+      "source": "https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/",
+      "limitations[0]": "Idealized FCC model alloy, not quantitatively fitted to all real elemental properties"
+    },
+    "schemeVerbatimKeyFields": {
+      "D6.potential": "Farkas-Caro 2018 corrected EAM/alloy",
+      "D6.doi": "10.1557/jmr.2018.245",
+      "D1.material": "equiatomic FCC FeNiCrCoCu model alloy",
+      "D3.temperatureK": 300,
+      "D4.cells": [20, 10, 8],
+      "criteria.atoms.acceptanceSpec.equals": 6400,
+      "validationProtocol.mode": "exploratory"
+    }
+  },
+  "findings": [
+    "Element coverage: catalogue potential spans exactly {Fe, Ni, Cr, Co, Cu}, matching the equiatomic 5-component requirement; no missing or extra species, so the critical feature 'five-components' is satisfiable from the declared metadata.",
+    "Pair style: eam/alloy matches the scheme's EAM/alloy expectation; LAMMPS support is native, no plugin required.",
+    "Model scope: FCC idealised model alloy; suitable as a demonstrator substrate but explicitly not quantitatively fitted to all real elemental properties, which directly caps the strength of any candidate-validation claim.",
+    "Provenance: catalogue and scheme agree on the NIST CTCMS source; they disagree in that the DOI lives only in the scheme. Cross-check needed.",
+    "Validation posture: zero quantitative validation content exists in registered sources; the frozen D7 already encodes this as three missingReason entries (time-step convergence, material-model validation, grinding reference), so the gap is declared rather than concealed."
+  ],
+  "recommendedLocalWriteBackPath": [
+    "knowledge/papers/notes/farkas-caro-2018-feniCrCoCu-eam-alloy.md",
+    "knowledge/papers/topics/hea-grinding-potential-selection.md",
+    "scratchpad/papers/hea-grinding-potential-catalogue.md"
+  ],
+  "nextActions": [
+    {
+      "action": "verify-doi-and-fulltext",
+      "priority": "medium",
+      "detail": "Resolve doi:10.1557/jmr.2018.245 to publisher page and PDF; extract scope, fitted properties and stated limits; record sections/pages read.",
+      "blocksCurrentStage": false
+    },
+    {
+      "action": "harden-catalogue",
+      "priority": "low",
+      "detail": "Add doi, checksum, element ordering, and explicit defect/phase scope fields to domains/lammps/models.json.",
+      "blocksCurrentStage": false
+    },
+    {
+      "action": "build-stage-assertions",
+      "priority": "high",
+      "detail": "At wf-01/wf-03a assert 5 element lines in Fe/Ni/Cr/Co/Cu order, pair_style eam/alloy, and record setfl file sha256.",
+      "blocksCurrentStage": false
+    }
+  ]
+}

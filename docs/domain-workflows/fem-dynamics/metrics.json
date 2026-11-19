@@ -1,0 +1,140 @@
+{
+  "id": "metrics",
+  "items": [
+    {
+      "id": "frequency",
+      "title": "固有频率",
+      "unit": "Hz",
+      "method": "omega/(2*pi)，振型匹配采用锁定MAC或子空间定义。",
+      "requiredOutputs": [
+        "frequencies",
+        "modeShapes",
+        "normalization"
+      ],
+      "scope": "modal/模态基础",
+      "acceptance": "参考和网格差异按任务目标。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "displacement",
+      "title": "位移峰值",
+      "unit": "m",
+      "method": "明示方向/位置/窗口的峰值、峰时、时程范数和过滤。",
+      "requiredOutputs": [
+        "time",
+        "displacement",
+        "coordinate",
+        "selection"
+      ],
+      "scope": "时间域",
+      "acceptance": "各物理量阈值单独声明单位。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "velocity",
+      "title": "速度峰值",
+      "unit": "m/s",
+      "method": "明示方向/位置/窗口的峰值、峰时、时程范数和过滤。",
+      "requiredOutputs": [
+        "time",
+        "velocity",
+        "coordinate",
+        "selection"
+      ],
+      "scope": "时间域",
+      "acceptance": "各物理量阈值单独声明单位。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "acceleration",
+      "title": "加速度峰值",
+      "unit": "m/s^2",
+      "method": "明示方向/位置/窗口的峰值、峰时、时程范数和过滤。",
+      "requiredOutputs": [
+        "time",
+        "acceleration",
+        "coordinate",
+        "selection"
+      ],
+      "scope": "时间域",
+      "acceptance": "各物理量阈值单独声明单位。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "frf",
+      "title": "频率响应",
+      "unit": "m/N",
+      "method": "保留复数H及abs(H)、arg(H)，声明幅相约定。",
+      "requiredOutputs": [
+        "frequency",
+        "complexDisplacement",
+        "complexForce",
+        "modalBasis"
+      ],
+      "scope": "harmonic-response下的位移/力FRF",
+      "acceptance": "频点、阻尼和截断研究满足目标。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "base-frf",
+      "title": "位移/基底加速度FRF",
+      "unit": "s^2",
+      "method": "保留复数H及abs(H)、arg(H)，声明幅相约定。",
+      "requiredOutputs": [
+        "frequency",
+        "complexDisplacement",
+        "complexBaseAcceleration",
+        "responseFrame"
+      ],
+      "scope": "经工具验证的基底加速度路线",
+      "acceptance": "频点、阻尼和截断研究满足目标。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "impulse",
+      "title": "接触冲量",
+      "unit": "N*s",
+      "method": "指定界面/方向的合力按真实时间积分。",
+      "requiredOutputs": [
+        "contactForce",
+        "time",
+        "sampling"
+      ],
+      "scope": "接触瞬态",
+      "acceptance": "与动量变化和其它外力冲量比较。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "energy",
+      "title": "能量收支",
+      "unit": "1",
+      "method": "[E(t)-E(0)+D(t)-W_ext(t)]/S，去重耗散项，S为锁定正参考尺度。",
+      "requiredOutputs": [
+        "kinetic",
+        "internal",
+        "dissipation",
+        "externalWork",
+        "artificialEnergy",
+        "initialEnergy"
+      ],
+      "scope": "按工具映射",
+      "acceptance": "固定容差；核耗散重复计数。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "stress",
+      "title": "动态应力",
+      "unit": "Pa",
+      "method": "按积分点/外推位置、坐标、平均规则抽取。",
+      "requiredOutputs": [
+        "stress",
+        "location",
+        "timeOrFrequency",
+        "coordinate"
+      ],
+      "scope": "评价区",
+      "acceptance": "说明奇异性、网格和材料判据。",
+      "definitionVersion": "1.0.0"
+    }
+  ]
+}

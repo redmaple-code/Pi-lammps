@@ -1,0 +1,525 @@
+{
+  "validatedAt": "2026-11-17T14:20:33.806793+00:00",
+  "checks": [
+    {
+      "check": "downloadHashes",
+      "result": "passed",
+      "files": 5
+    },
+    {
+      "check": "officialPyPIWheelDigests",
+      "result": "passed",
+      "wheels": 21
+    },
+    {
+      "check": "environmentDependencies",
+      "result": "passed"
+    },
+    {
+      "check": "frozenInputClosure",
+      "result": "passed"
+    },
+    {
+      "check": "realProcessAndNativeOutput",
+      "result": "passed",
+      "completedRuns": 3
+    },
+    {
+      "check": "receptorFramePreserved",
+      "result": "passed",
+      "atoms": 2229
+    },
+    {
+      "check": "independentAtomMappedRMSDFormula",
+      "result": "passed",
+      "heavyAtoms": 37
+    },
+    {
+      "check": "scoreAndCriterionAggregation",
+      "result": "passed",
+      "poseCount": 20
+    },
+    {
+      "check": "reportReferences",
+      "result": "passed",
+      "checkedLinks": 20
+    }
+  ],
+  "scope": "Deployment, actual execution provenance, fixed-frame RMSD, aggregation and report references.",
+  "dataOrigin": "realVinaRuns",
+  "independentScientificReview": "notPerformed",
+  "criteriaOutcome": true,
+  "artifactManifest": [
+    {
+      "path": "analysis/all-poses.csv",
+      "digest": "sha256:7d6538745394f636a98fe9376f4e7e5986de841b6cb1827952bd06b1d27d5b10",
+      "bytes": 5473
+    },
+    {
+      "path": "analysis/atom-maps.json",
+      "digest": "sha256:5f183b7f159294e703024fe79df37661ce21bf8e22c63c3eb497acdfc7903ce7",
+      "bytes": 2180
+    },
+    {
+      "path": "analysis/results.json",
+      "digest": "sha256:d5e3810be4b816de2cf99adf79f0b102d46ba9de3c6a94316dc3357a8c1c5bfc",
+      "bytes": 1660
+    },
+    {
+      "path": "analysis/run-metrics.csv",
+      "digest": "sha256:116ac0ea9ff6154b66e372eacd04d05325256e1d7defdfea8e21aa918f2bca9a",
+      "bytes": 310
+    },
+    {
+      "path": "evidence/deployment.json",
+      "digest": "sha256:4e2e61342247a649fd8955ebf0c797274d1f25460e630e89c9e2c850681398b3",
+      "bytes": 1226
+    },
+    {
+      "path": "evidence/downloads.json",
+      "digest": "sha256:2180e536f22af9a4209004a778e2a92e8f4448df58d8d5bc1366bee5a8d73566",
+      "bytes": 2936
+    },
+    {
+      "path": "evidence/figure-inspection.json",
+      "digest": "sha256:9510d9546c753c794140c6c34f070b11fbce47019feb01c078dadf8535cafe85",
+      "bytes": 730
+    },
+    {
+      "path": "evidence/installed-license-inventory.json",
+      "digest": "sha256:e541088d440b8f17e2f2fd9da968499d1a688f1819566d8431d3e4ad94191a4c",
+      "bytes": 2962
+    },
+    {
+      "path": "evidence/pip-install-report.json",
+      "digest": "sha256:151076871b66b1ea44061e91894ac8f9215fc1accceb8248c1c22fc11992fe63",
+      "bytes": 380515
+    },
+    {
+      "path": "evidence/preparation.json",
+      "digest": "sha256:b5078143440c1e27f63cc6ed19560cbefadced6e6935e0df7c0b2ffd6099cfe8",
+      "bytes": 2307
+    },
+    {
+      "path": "evidence/receptor-command.attempt01.json",
+      "digest": "sha256:66a7d91d9344d49c924a8aeaaa3d9bcdc713d5797ab470498068fb9ab8d002e2",
+      "bytes": 785
+    },
+    {
+      "path": "evidence/receptor-command.attempt02.json",
+      "digest": "sha256:1ab031f14afd6e3f73944cde97682fc5d6713bd9bf075fff8071014d28be04f0",
+      "bytes": 956
+    },
+    {
+      "path": "evidence/receptor-command.json",
+      "digest": "sha256:43d15bc498b76456090efcdc079445940a8775aa5667c55494e9e300bdded711",
+      "bytes": 962
+    },
+    {
+      "path": "evidence/receptor-heavy-atom-audit.json",
+      "digest": "sha256:d4010ecff2717613b4df86f4641416120e037dbeca86830fd5a64e18224857bb",
+      "bytes": 160
+    },
+    {
+      "path": "evidence/receptor-record-grouping.json",
+      "digest": "sha256:8a89ec072a36fd8bf7a359b59c5b8c365f5f99d0d06c6b2b4b6d5570ecd9e1fd",
+      "bytes": 333
+    },
+    {
+      "path": "evidence/run-plan.json",
+      "digest": "sha256:78b6810285769a596045f348261544f90df89b831abb5bbd72b86501818d8628",
+      "bytes": 955
+    },
+    {
+      "path": "evidence/run-summary.json",
+      "digest": "sha256:4b05a5244ca598b16f1cc51eca429fb3944f8d2135e05873837e08e88bcb2ffc",
+      "bytes": 4432
+    },
+    {
+      "path": "evidence/wheel-integrity.json",
+      "digest": "sha256:32aaee879ab03a79023a558d5bf959291f7609d5013d876112bd0d228823b17f",
+      "bytes": 10534
+    },
+    {
+      "path": "figures/real-redocking-analysis.png",
+      "digest": "sha256:ed637e6b9fb7de12f545ac3c3db03e306e2654961ced2749fbd3c7bf6b2613e4",
+      "bytes": 95646
+    },
+    {
+      "path": "figures/reference-pose-overlay.png",
+      "digest": "sha256:2685169535499c74b263358ee50bbebc274c876b515a41cb5ad6956d2a17374e",
+      "bytes": 187086
+    },
+    {
+      "path": "inputs/prepared/ligand-initial.sdf",
+      "digest": "sha256:07ce9e4b6d93f2546f09e81563b51309d9a955a3024235a805fa6820d4852485",
+      "bytes": 6812
+    },
+    {
+      "path": "inputs/prepared/ligand.pdbqt",
+      "digest": "sha256:07e7a1c998cd6c8577a400e55e00a3b08253081c6449b6a9ecdcddee86a64a9a",
+      "bytes": 3904
+    },
+    {
+      "path": "inputs/prepared/receptor-grouped.pdb",
+      "digest": "sha256:7c672f5a19c35de65f4052b77a097261e28004a6b28e7bde2713bfe2b0136698",
+      "bytes": 361858
+    },
+    {
+      "path": "inputs/prepared/receptor-prepared.pdb",
+      "digest": "sha256:7a2cbbc757b5e95606c69f7b5a6ed21ceafaa3db8b25511763b0354a629db530",
+      "bytes": 357291
+    },
+    {
+      "path": "inputs/prepared/receptor.box.pdb",
+      "digest": "sha256:269f11a8d6535af076903191966a096818d29a25915a421c13cdc140c7a5a32d",
+      "bytes": 936
+    },
+    {
+      "path": "inputs/prepared/receptor.box.txt",
+      "digest": "sha256:c4e1b4d44172778218b6ad3fedfb4769c5deb100ac4caa290df7d3468c440a50",
+      "bytes": 106
+    },
+    {
+      "path": "inputs/prepared/receptor.json",
+      "digest": "sha256:7b0ee31d621825ccc8b3842be235d0b82f2c44ee52bf5a7a9bab2e949326945c",
+      "bytes": 6886468
+    },
+    {
+      "path": "inputs/prepared/receptor.pdbqt",
+      "digest": "sha256:e33a2134a3f0fdca486a949bc4df26ee34422d2e5f7cb3a6f0cd361b313e4cb9",
+      "bytes": 218862
+    },
+    {
+      "path": "inputs/prepared/reference-heavy.sdf",
+      "digest": "sha256:d64e7b3f14e388fb71367cc9dda0306ea72544ccbb6fc708c2e11855e7a2cc37",
+      "bytes": 4092
+    },
+    {
+      "path": "inputs/prepared/search.cfg",
+      "digest": "sha256:212cb9c081810ed082ae794367e9b3232fd8100286f939bc719b73099b8ef1eb",
+      "bytes": 176
+    },
+    {
+      "path": "inputs/raw/1iep_ligand.sdf",
+      "digest": "sha256:051b8742c32adc05c07fb486a4e7c9327f84e131cee33ac4e6a568d07553eb38",
+      "bytes": 6621
+    },
+    {
+      "path": "inputs/raw/1iep_receptorH.pdb",
+      "digest": "sha256:5f6aee6029f9a2a2c2be32d4eb948ae70808690573e1b69a0850cdffd7048ca7",
+      "bytes": 357444
+    },
+    {
+      "path": "licenses/AutoDock-Vina-1.2.7-LICENSE.txt",
+      "digest": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "licenses/installed/gemmi/LICENSE.txt",
+      "digest": "sha256:cde215e5b42363eb28ca2462c4558ff4807b38f383c537624c31e44657ac58f4",
+      "bytes": 17099
+    },
+    {
+      "path": "licenses/installed/gemmi/licenses/LICENSE.txt",
+      "digest": "sha256:cde215e5b42363eb28ca2462c4558ff4807b38f383c537624c31e44657ac58f4",
+      "bytes": 17099
+    },
+    {
+      "path": "licenses/installed/matplotlib/LICENSE",
+      "digest": "sha256:822e8e528147569a41975592aee19c11992ab667ba50451cd929031d5fc74491",
+      "bytes": 63442
+    },
+    {
+      "path": "licenses/installed/meeko/LICENSE",
+      "digest": "sha256:20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331",
+      "bytes": 26526
+    },
+    {
+      "path": "licenses/installed/meeko/licenses/LICENSE",
+      "digest": "sha256:20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331",
+      "bytes": 26526
+    },
+    {
+      "path": "licenses/installed/numpy/COPYING",
+      "digest": "sha256:aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0",
+      "bytes": 704
+    },
+    {
+      "path": "licenses/installed/numpy/dragon4_LICENSE.txt",
+      "digest": "sha256:b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919",
+      "bytes": 1441
+    },
+    {
+      "path": "licenses/installed/numpy/LICENSE",
+      "digest": "sha256:d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7",
+      "bytes": 1616
+    },
+    {
+      "path": "licenses/installed/numpy/LICENSE.md",
+      "digest": "sha256:454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763",
+      "bytes": 340
+    },
+    {
+      "path": "licenses/installed/numpy/LICENSE.txt",
+      "digest": "sha256:19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b",
+      "bytes": 2314
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/LICENSE.txt",
+      "digest": "sha256:a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341",
+      "bytes": 45831
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "digest": "sha256:d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150",
+      "bytes": 1039
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "digest": "sha256:aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0",
+      "bytes": 704
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/src/highway/LICENSE",
+      "digest": "sha256:d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763",
+      "bytes": 21155
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+      "digest": "sha256:b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919",
+      "bytes": 1441
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "digest": "sha256:a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb",
+      "bytes": 1542
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "digest": "sha256:585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41",
+      "bytes": 1573
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "digest": "sha256:8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af",
+      "bytes": 1523
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "digest": "sha256:19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b",
+      "bytes": 2314
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/ma/LICENSE",
+      "digest": "sha256:d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7",
+      "bytes": 1616
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/LICENSE.md",
+      "digest": "sha256:b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a",
+      "bytes": 3582
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/distributions/LICENSE.md",
+      "digest": "sha256:cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e",
+      "bytes": 2805
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "digest": "sha256:92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa",
+      "bytes": 2986
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "digest": "sha256:41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f",
+      "bytes": 1176
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/philox/LICENSE.md",
+      "digest": "sha256:322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013",
+      "bytes": 1540
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "digest": "sha256:28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59",
+      "bytes": 1253
+    },
+    {
+      "path": "licenses/installed/numpy/licenses/numpy/random/src/splitmix64/LICENSE.md",
+      "digest": "sha256:454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763",
+      "bytes": 340
+    },
+    {
+      "path": "licenses/installed/rdkit/LICENSE.md",
+      "digest": "sha256:f4845fb8a7907beff122616d398e936d0ff1c7b915e173c92fa4928270b2db08",
+      "bytes": 1098
+    },
+    {
+      "path": "licenses/installed/scipy/LICENSE.txt",
+      "digest": "sha256:564d63dbef2ef3eb1dec94908966d3edf5f11c487ee2cf2baf8bf3faef01bdd9",
+      "bytes": 46756
+    },
+    {
+      "path": "licenses/Meeko-0.8.0-LICENSE.txt",
+      "digest": "sha256:20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331",
+      "bytes": 26526
+    },
+    {
+      "path": "logs/pip-check.txt",
+      "digest": "sha256:672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "logs/pip-install.attempt01.log",
+      "digest": "sha256:6ef957c253f52cb76b6a22614fdee528bbf8c94dc0783439f22f530806d95937",
+      "bytes": 1513
+    },
+    {
+      "path": "logs/pip-install.attempt02.log",
+      "digest": "sha256:e25255d8759cd8807c01421e837442a1a4fa4321a8777693ed4ce8c622459cdf",
+      "bytes": 84
+    },
+    {
+      "path": "logs/pip-install.log",
+      "digest": "sha256:497df61d20dfb6ea6ca5949101f6926ac73f383216cd3014e990f83b8f6d0fb1",
+      "bytes": 6588
+    },
+    {
+      "path": "logs/receptor-preparation.attempt01.log",
+      "digest": "sha256:85d50f96ac72c2c857c0b12e6248c1f04959d93fecec1a9b1cb6d2299d48c233",
+      "bytes": 273
+    },
+    {
+      "path": "logs/receptor-preparation.attempt02.log",
+      "digest": "sha256:e9934e255a179543dcdb0823511128b3946cff2d57eeb880d184cf21db993e20",
+      "bytes": 1140
+    },
+    {
+      "path": "logs/receptor-preparation.log",
+      "digest": "sha256:f47ecdd96dd5be223dcbd043ef025e4acde583dfdd0a0d95c161a24082f059b4",
+      "bytes": 867
+    },
+    {
+      "path": "logs/vina-version.txt",
+      "digest": "sha256:51f87f0be63b9819408e158293d9b3c138546d680da7f43a40db5c457aac692d",
+      "bytes": 22
+    },
+    {
+      "path": "OPEN_SOURCE_AUDIT.md",
+      "digest": "sha256:3a770db01d85ccae8ae6205c11cf1bb36377573419446624f026f454f925fb46",
+      "bytes": 3093
+    },
+    {
+      "path": "README.md",
+      "digest": "sha256:480ce9942079ca03e00b185f6e778bbb7fe892cf6d6f1e57adc38a90da0aef1d",
+      "bytes": 6474
+    },
+    {
+      "path": "requirements.lock.txt",
+      "digest": "sha256:697ca0e244ab6253fc064ee665c473d933d543ffbb1bf93d9d603afb53897d2b",
+      "bytes": 396
+    },
+    {
+      "path": "runs/seed-104729/poses.pdbqt",
+      "digest": "sha256:d79f0134087f86a6c362b00390823aed9e3b8f2dbf749f80f2c571507834fd62",
+      "bytes": 29365
+    },
+    {
+      "path": "runs/seed-104729/poses.sdf",
+      "digest": "sha256:f9470b3080bd7feeeb771ad3ce36adb91c05ff9c76dc0d4636aea8fc38bee489",
+      "bytes": 24560
+    },
+    {
+      "path": "runs/seed-104729/run.json",
+      "digest": "sha256:fa19f46ac1c6df22e2bcbfa51c68161e99bfea46af9c3ec3fb8ade22684bdb80",
+      "bytes": 1397
+    },
+    {
+      "path": "runs/seed-104729/vina.log",
+      "digest": "sha256:98f75d1d3769da1ec71e36ae639be2725a5237b577069e51ff29aef31b64a850",
+      "bytes": 2594
+    },
+    {
+      "path": "runs/seed-130363/poses.pdbqt",
+      "digest": "sha256:1f83f69896706fea0d7b0e11f8863e3cf19c5b086f5198dc7693d6fb4a27aab2",
+      "bytes": 25170
+    },
+    {
+      "path": "runs/seed-130363/poses.sdf",
+      "digest": "sha256:57dc8dd17f4393cc644731d700d1e446ca15c61043d693756944dda52470e795",
+      "bytes": 21037
+    },
+    {
+      "path": "runs/seed-130363/run.json",
+      "digest": "sha256:397876e56fa7f020ec51995d8ac51482239028291c05db691796b49d5966ee8d",
+      "bytes": 1396
+    },
+    {
+      "path": "runs/seed-130363/vina.log",
+      "digest": "sha256:98e3412a6e2f01af90e30c509eb828d5b84051b57fcfb203cab2b7ede725a7de",
+      "bytes": 2594
+    },
+    {
+      "path": "runs/seed-155921/poses.pdbqt",
+      "digest": "sha256:b78a409703edb3d9dfd231d4610238d7f02ceb49980e060e32964eeac3de3184",
+      "bytes": 29365
+    },
+    {
+      "path": "runs/seed-155921/poses.sdf",
+      "digest": "sha256:10e2f91ae93c447d7418f90e2d4ebde55a0104c99dced70df87575a1c0cc1cfb",
+      "bytes": 24549
+    },
+    {
+      "path": "runs/seed-155921/run.json",
+      "digest": "sha256:f44508839d78e579e863d2f246b4e53ea6e76413a2b9c46a10f97614d97e0778",
+      "bytes": 1385
+    },
+    {
+      "path": "runs/seed-155921/vina.log",
+      "digest": "sha256:8e490f579711b393db933a5c67d233b5e093d332dc700a415c80ee70e3c88015",
+      "bytes": 2594
+    },
+    {
+      "path": "scripts/analyze.py",
+      "digest": "sha256:17e73c027e4839a3050b93bfca59d682dff72c8e16dd3c35b8136f7d73144f08",
+      "bytes": 10730
+    },
+    {
+      "path": "scripts/deploy.py",
+      "digest": "sha256:b6aeeec8454bdbd464fbbae07154560e509b02f5bb70014ddddf91a39d0c8459",
+      "bytes": 4235
+    },
+    {
+      "path": "scripts/prepare.py",
+      "digest": "sha256:b7fe6afe9860f0cb67b446abe1db7c19847365ba9be216e1d9f13279e7ce5e4f",
+      "bytes": 7615
+    },
+    {
+      "path": "scripts/report.py",
+      "digest": "sha256:f8f065e7ae29af2a24326184275f9139a8f246fe36bcd608b0ee091a179f6a80",
+      "bytes": 7386
+    },
+    {
+      "path": "scripts/run_docking.py",
+      "digest": "sha256:090ab5782e42c646a3e2d1d936de0f78f61ae03458d9ba5a647b35228c56864d",
+      "bytes": 4659
+    },
+    {
+      "path": "scripts/validate_results.py",
+      "digest": "sha256:283503138843ca98cbdf2e5be553384d727c4adbfa3dc3da28a46027aa8e94eb",
+      "bytes": 5231
+    },
+    {
+      "path": "scripts/verify_wheels.py",
+      "digest": "sha256:b541ca195209c623c89963954d97b88f1b106a1e76e607d08092355ca7dd0b0f",
+      "bytes": 1522
+    },
+    {
+      "path": "SIMULATION_SCHEME.md",
+      "digest": "sha256:219beb09d2f876a8784f31f14029fea2efbc7e50e33602f83142d86f1f3e1241",
+      "bytes": 2325
+    }
+  ],
+  "verdict": "passedForRecordedScope"
+}

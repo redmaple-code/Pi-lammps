@@ -1,0 +1,143 @@
+{
+  "baseline": "references/in.indent.lmp",
+  "changes": [
+    "3D equiatomic model alloy and EAM mapping",
+    "Frozen/thermal/mobile layers",
+    "Relaxation, equilibration, vertical approach and lateral traverse",
+    "Diagnostic computes, force and trajectory outputs"
+  ],
+  "checks": [
+    {
+      "checkId": "MB-001",
+      "applicability": false,
+      "result": "notApplicable",
+      "observations": [
+        "No fix deform commands in this input"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-002",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "line 13: group fixed region base",
+        "line 14: group mobile subtract all fixed",
+        "line 16: group thermostat region bath",
+        "line 17: group dynamic subtract mobile thermostat",
+        "line 18: velocity fixed set 0.0 0.0 0.0",
+        "line 23: velocity mobile create 300 482748 mom yes rot no dist gaussian"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-003",
+      "applicability": false,
+      "result": "notApplicable",
+      "observations": [
+        "NPT and deform are not simultaneously present"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-004",
+      "applicability": false,
+      "result": "notApplicable",
+      "observations": [
+        "No ReaxFF pair style"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-005",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "line 49: fix contact all print 20 \"$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)\" file approach.csv screen no title \"step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K\"",
+        "line 60: fix contact all print 20 \"$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)\" file grinding.csv screen no title \"step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K\""
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-006",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "line 9: pair_coeff * * FeNiCrCoCu-heafixed.setfl Fe Ni Cr Co Cu",
+        "Mapping verification {\"mapping\":[\"Fe\",\"Ni\",\"Cr\",\"Co\",\"Cu\"],\"potentialElements\":[\"Fe\",\"Ni\",\"Cr\",\"Co\",\"Cu\"],\"masses\":[{\"element\":\"Fe\",\"mass\":55.8},{\"element\":\"Ni\",\"mass\":58.69},{\"element\":\"Cr\",\"mass\":52},{\"element\":\"Co\",\"mass\":58.93},{\"element\":\"Cu\",\"mass\":63.55}]}"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-007",
+      "applicability": false,
+      "result": "notApplicable",
+      "observations": [
+        "read_data builds a new model with source metadata, no continuation requested"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-008",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "{\"features\":[{\"id\":\"five-components\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]},{\"id\":\"fcc-substrate\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]},{\"id\":\"fixed-boundary\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]},{\"id\":\"thermal-layer\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]},{\"id\":\"spherical-abrasive\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]},{\"id\":\"lateral-motion\",\"criticality\":\"critical\",\"verificationMethod\":\"data-and-input-check\",\"requiredStage\":[\"wf-01\",\"wf-03a\"]}],\"verified\":[\"five-components\",\"fcc-substrate\",\"fixed-boundary\",\"thermal-layer\",\"spherical-abrasive\",\"lateral-motion\"]}"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "MB-009",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "line 26: compute Tmobile mobile temp",
+        "line 34: compute pe all pe/atom",
+        "line 35: compute coord all coord/atom cutoff 3.2",
+        "line 36: compute centro all centro/atom fcc",
+        "line 37: compute cna all cna/atom 3.2",
+        "line 38: dump trajectory all custom 200 trajectory.lammpstrj id type x y z c_pe c_coord c_centro c_cna",
+        "line 39: dump_modify trajectory sort id"
+      ],
+      "action": "blocked"
+    },
+    {
+      "checkId": "OUTPUT-CLOSURE",
+      "applicability": true,
+      "result": "passed",
+      "observations": [
+        "Required output references [\"grinding.csv\",\"trajectory.lammpstrj\",\"c_pe\",\"c_coord\",\"c_centro\",\"c_cna\"], missing []"
+      ],
+      "action": "revise"
+    }
+  ],
+  "thermoOutputs": [
+    "step",
+    "atoms",
+    "c_Tmobile",
+    "pe",
+    "ke",
+    "etotal"
+  ],
+  "dumpOutputs": [
+    "id",
+    "type",
+    "x",
+    "y",
+    "z",
+    "c_pe",
+    "c_coord",
+    "c_centro",
+    "c_cna"
+  ],
+  "d7Support": {
+    "criteriaSupported": [
+      "finite",
+      "atoms",
+      "fixed",
+      "contact",
+      "travel"
+    ],
+    "missingOutputs": []
+  }
+}

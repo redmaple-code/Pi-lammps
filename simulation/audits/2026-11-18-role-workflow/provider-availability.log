@@ -1,0 +1,2 @@
+{"error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1002)>"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

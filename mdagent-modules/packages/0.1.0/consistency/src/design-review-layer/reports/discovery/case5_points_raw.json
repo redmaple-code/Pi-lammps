@@ -1,0 +1,202 @@
+[
+  {
+    "title": "剪切应变率的注释值、L18 公式值和 L81 实际施加速度三套不一致",
+    "dimension_guess": "运动学/应变率定义",
+    "locations": {"experiment": ["E-04"], "infile": [18, 81]},
+    "claim_in_text": "E-04 称“模型剪切应变率 ~1×10⁷ s⁻¹”；L18 注释“#shear strain rate = 1E7 / s”，公式为 layer_velocity = 0.0005*(2*size_y-2*layer_thickness)；L81 实际用 fix 6 toplayer move linear -1 0 0。",
+    "why_it_matters": "按 L18 公式，速度除以同一公式给出的间距后只剩 0.0005 ps⁻¹（约 5×10⁸ s⁻¹），并非 1×10⁷ s⁻¹；L81 又直接给 -1 Å/ps，若间距取 2*size_y-2*layer_thickness，则相对 1×10⁷ s⁻¹ 再高约二至三个量级。三套值在给定参数下无法同时自洽，会直接改变屈服应力、位错形核机制以及与实验的可比性。",
+    "physical_question": "实际加载的剪切应变率到底是哪一个？L18 定义的 layer_velocity 是否本应被 L81 使用？",
+    "evidence_needed": ["需补：L18 公式量纲与 0.0005 系数的推导", "E4 案例：同体系剪切模拟的加载速度/应变率记录"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "600 ps 的加载时长与 1×10⁷ s⁻¹ 的应变率不能同时达到屈服",
+    "dimension_guess": "运动学/加载历史",
+    "locations": {"experiment": ["E-04", "E-05"], "infile": [22, 38, 88]},
+    "claim_in_text": "E-04 称“模型剪切应变率 ~1×10⁷ s⁻¹”；E-05 要测“屈服与应力平台”；L22 run_step=600000，L38 timestep=0.001，L88 run ${run_step}。",
+    "why_it_matters": "600000×0.001 ps = 600 ps；按 1×10⁷ s⁻¹ 只能累积约 6×10⁻³（0.6%）剪应变，通常低于屈服应变，更谈不上应力平台。若实际按 L81 的 -1 Å/ps 运行，总应变又远大于此。说明应变率、时长和目标应变三者没有闭合。",
+    "physical_question": "600 ps 内计划达到多大剪应变？目标屈服应变是多少？若应变率真是 1×10⁷ s⁻¹，运行时长是否应延长？",
+    "evidence_needed": ["需补：目标剪应变/屈服应变范围", "E4 案例：同类 Ni/NiPt 剪切模拟的总应变与时长"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "change_box 把 x 也设成非周期，剪切方向出现自由面和 shrink-wrap 漂移",
+    "dimension_guess": "边界条件/几何",
+    "locations": {"experiment": ["E-03", "E-04"], "infile": [3, 74]},
+    "claim_in_text": "L3 初始“boundary p p p”；L74“change_box all boundary s s p #剪切驱动位错滑移模拟时需要上下端非周期边界”。",
+    "why_it_matters": "change_box 的边界顺序是 x y z，s s p 表示 x、y 都非周期，只有 z 周期；注释却只说上下端（y）需要非周期。x 是 L81 的剪切方向，改成 shrink-wrap 后 x 向出现自由面、盒长可能随原子移动，不再是简单剪切；且命令未写 remap，p→s 后原子是否仍在盒内、fix move 是否允许与 shrink-wrap 共用都需核对。",
+    "physical_question": "剪切方向 x 是否应保持周期性？x 自由面/盒长漂移是设计意图还是命令顺序错误？",
+    "evidence_needed": ["需补：L74 边界条件设计说明与 LAMMPS 运行日志", "E3 理论/案例：剪切方向自由面对应力三轴度、位错镜像力的影响"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "夹持层厚度按 yhi 而非 yhi-ylo 定义，且 region/group 在 NPT 前固化",
+    "dimension_guess": "几何/边界条件",
+    "locations": {"experiment": ["E-04"], "infile": [12, 15, 16, 17, 24, 25, 65, 66]},
+    "claim_in_text": "L12“variable size_y equal yhi”；L15“layer_thickness equal 0.2*${size_y}”；L16-17 定义 top/bot limits；L24-25 划分 region；L65-66 做 50000 步 NPT。",
+    "why_it_matters": "只有 ylo=-yhi 时，0.2*yhi 才对应每层约 10% 总高、bottom 层才非空；若 ylo≠-yhi，bottom region 可能为空或厚度错误，上下夹持不对称。公式中的 2*size_y 也只有在对称盒下才等于总高，否则会高估 gauge 长度。并且 ${size_y} 在定义时立即展开，region/group 在 NPT 前固定；NPT 改变 box 后，夹持层边界、自由面和 gauge 长度都可能与当前 box 不对应。",
+    "physical_question": "final.lmp 的 y 范围是否严格为 [-yhi, yhi]？NPT 后 box 变化多少？夹持层和 gauge 长度应按初始还是当前 box 定义？",
+    "evidence_needed": ["需补：final.lmp 的 xlo/xhi/ylo/yhi", "E4 案例：NPT 后 box 尺寸变化与夹持层重定义"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "刚性夹持层占晶体相当比例，夹持/ gauge 界面速度突变造成应变局域化",
+    "dimension_guess": "边界条件/应变局域化",
+    "locations": {"experiment": ["E-04"], "infile": [15, 24, 25, 81, 82]},
+    "claim_in_text": "E-04“上下夹持层施加相对位移”；L15 夹持层厚度 0.2*size_y；L24-25 划分 toplayer/botlayer；L81-82 对 toplayer 施 -1 Å/ps、botlayer 固定。",
+    "why_it_matters": "夹持层是晶体本身而非外部夹具；top/bottom 被刚性平移，mobile 区与夹持层界面存在速度/位移梯度突变，位错优先在界面形核，剪应变集中在界面而非均匀 gauge。对称盒假设下两层合计约占 20% 总高不参与均匀变形，测到的应力-应变包含明显端部效应。",
+    "physical_question": "夹持层/ gauge 界面是否成为主导位错源？实验夹持的刚度、接触和滑移是否与刚性原子层等价？",
+    "evidence_needed": ["E4 案例：刚性夹持 MD 剪切的端部效应", "需补：夹持层厚度/体积分数敏感性测试"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "NVT 温度定义包含以 1 Å/ps 平移的夹持层，10 K 控温对象不是 gauge",
+    "dimension_guess": "热力学/统计",
+    "locations": {"experiment": ["E-04"], "infile": [51, 79, 81]},
+    "claim_in_text": "L51“compute new3d mobile temp”；L79“fix 02 all nvt temp ${Temp} ${Temp} 0.1”；L81 toplayer 以 -1 Å/ps 平移。",
+    "why_it_matters": "fix nvt 默认对整个 all 组使用自己的温度 compute，未见 fix_modify 将其绑定到 new3d；toplayer 的宏观平移速度会被计入温度，且 fix move 与 fix nvt 同时更新同一批原子，恒温器会为把含 streaming 的“温度”压到 10 K 而持续移走/注入能量，gauge 实际温度可能偏离 10 K。new3d 只在 L54 初始化时使用。",
+    "physical_question": "production 中 10 K 是对哪个原子组、扣除了哪些宏观速度分量定义的？gauge 的真实温度是多少？",
+    "evidence_needed": ["需补：fix nvt 的 temp compute 绑定检查与温度时间序列", "E4 案例：移动夹持层时去除宏观速度的温度定义"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "bottom slab 只被 setforce 清零而非真正固定，且 L80 注释把上下夹持角色写反",
+    "dimension_guess": "边界条件/系综实现",
+    "locations": {"experiment": ["E-04"], "infile": [60, 68, 80, 81, 82]},
+    "claim_in_text": "L60“fix 2 botlayer setforce 0 0 0”；L80 注释“固定上端slab,移动下端slab”；L81 实际移动 toplayer、L82 实际固定 botlayer；L68 只 unfix 1。",
+    "why_it_matters": "setforce 只把受力置零，不约束位置和速度；NPT 期间 bottom 原子仍被积分并可能被恒温器驱动，所谓“固定夹持层”不成立。fix 2 未 unfix，production 中 bottom 仍无原子间受力，只靠 fix move 固定，成为与 top 受力处理不对称的刚性壁；L80 注释与实现相反也使剪切方向和应力符号更容易误读。",
+    "physical_question": "NPT 期间 bottom slab 的位移/温度边界是什么？production 中是否应保留 setforce？剪切方向以哪一层为准？",
+    "evidence_needed": ["需补：NPT 期间 bottom slab 位移轨迹", "E4 案例：固定夹持层的正确实现（setforce vs fix move vs rigid）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "剪切过程中的法向应力/压力没有控制，NPT→NVT 路径与实验加载历史未对齐",
+    "dimension_guess": "加载历史/边界条件",
+    "locations": {"experiment": ["E-04"], "infile": [65, 74, 79]},
+    "claim_in_text": "E-04 只写“上下夹持层施加相对位移”，未给法向载荷或围压；L65“fix 1 all npt temp ... iso 0 0 1 drag 0.2”；L79 production 用 NVT；L74 改为 s s p。",
+    "why_it_matters": "预平衡在 0 bar 各向同性 NPT，production 固定 box 的 NVT 且 x/y 为自由面，剪切时法向应力会随剪应变演化而无人控制；实验微剪切/压痕通常在给定法向载荷或位移下进行，剪切强度依赖法向应力。加载历史（预压缩、法向稳压、剪切路径）没有说明，应力-应变曲线不能直接对照。",
+    "physical_question": "剪切时法向应力是保持 0、固定体积还是随位移自由演化？实验的法向载荷/约束是什么？",
+    "evidence_needed": ["需补：实验加载路径（法向载荷/位移控制）", "E4 案例：MD 剪切中法向应力控制方式"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "E-01/E-05 要研究位错滑移，但 in.case 没有初始位错或缺陷来源",
+    "dimension_guess": "初始条件/缺陷",
+    "locations": {"experiment": ["E-01", "E-05"], "infile": [10]},
+    "claim_in_text": "E-01“研究...位错滑移机制”；E-05“位错密度演化”；L10 仅“read_data final.lmp”，没有位错/缺陷生成命令。",
+    "why_it_matters": "若 final.lmp 是完美单晶，10 K 和高应变率下塑性会由均质位错形核控制，而不是既有位错滑移；初始位错类型、密度、分布决定屈服和硬化。E-01 的“滑移机制”与模型初始条件可能不是同一物理过程，E-05 的位错密度演化起点也不明确。",
+    "physical_question": "final.lmp 是否含初始位错？位错类型、密度、滑移系和空间分布是什么？",
+    "evidence_needed": ["需补：final.lmp 的结构表征（DXA/CNA/位错密度）", "E4 案例：含初始位错的 Ni/NiPt 剪切模型"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "E-03 声称按滑移系取向切割，但模型没有给出晶体取向与加载轴的对应",
+    "dimension_guess": "材料/晶体取向",
+    "locations": {"experiment": ["E-03"], "infile": [10, 81]},
+    "claim_in_text": "E-03“单晶试样按滑移系取向切割”；L10“read_data final.lmp”；L81 仅沿 x 方向施加剪切、y 为法向。",
+    "why_it_matters": "fcc 单晶的剪应力-剪应变强烈依赖 x/y 相对晶体 [hkl] 的取向（Schmid 因子、激活滑移系、是否多滑移）。in.case 没有 lattice orientation/orient 命令或取向说明，无法判断模型对应哪个滑移系，也无法与“按滑移系切割”的实验对照；z 向周期还会固定位错线方向。",
+    "physical_question": "x（剪切方向）、y（法向）、z（位错线方向）分别对应晶体的哪个晶向？激活的滑移系是什么？",
+    "evidence_needed": ["需补：final.lmp 的晶向/取向信息", "E3 理论：fcc 不同取向的 Schmid 因子与滑移系"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "NiPt 的 Pt 含量、化学有序度和 MEAM 势的可移植性都未论证",
+    "dimension_guess": "材料/势函数",
+    "locations": {"experiment": ["E-02"], "infile": [10, 33, 34]},
+    "claim_in_text": "E-02“NiPt 合金单晶（fcc），Ni/Pt 两组元”；L33-34“pair_style meam/c”“pair_coeff * * library.meam Ni Pt Ni-Pt.meam Ni Pt”。",
+    "why_it_matters": "没有 Pt 原子百分比、是否随机固溶或有序（如 L1_2/L1_0），也没有说明 type 1/2 与 Ni/Pt 的映射。成分和有序度决定晶格常数、层错能、位错芯结构和析出/有序化，进而决定滑移模式；MEAM 势对 Ni-Pt 的层错能、弹性常数和缺陷能是否验证也未说明，直接用于 10 K 剪切可能给出与真实合金不同的机制。",
+    "physical_question": "Pt 含量和化学有序度是多少？final.lmp 中 type 1/2 是否与 pair_coeff 的 Ni/Pt 顺序一致？势函数是否复现关键缺陷能？",
+    "evidence_needed": ["需补：化学成分/有序度与 type 映射", "E2 文献：Ni-Pt MEAM 势的验证（层错能、弹性常数）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "实验对象是 µm 级微柱/片，模型尺寸未给出，跨尺度只比较了应变率",
+    "dimension_guess": "尺度/尺寸效应",
+    "locations": {"experiment": ["E-02"], "infile": [10]},
+    "claim_in_text": "E-02“实验为 µm 级单晶微柱/片”；L10 仅“read_data final.lmp”；intent 中 system.size.atoms_target 为 null。",
+    "why_it_matters": "MD 模型通常是 nm 级，µm 试样与 nm 试样存在显著尺寸效应（位错源截断、表面形核、位错饥饿/镜像力），屈服强度和硬化行为不可直接等同。cross_scale 只讨论加载速率，没有讨论样品尺寸、表面/体积比和初始缺陷密度；没有原子数/box 尺寸，无法判断模型代表哪个尺度。",
+    "physical_question": "模拟 cell 的三维尺寸和原子数是多少？与 µm 微柱/片的尺寸差几个量级？尺寸效应如何桥接？",
+    "evidence_needed": ["需补：final.lmp 的 box 尺寸/原子数", "E4 案例：微柱/纳米柱尺寸效应"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "E-03 的“微剪切/纳米压痕台”把两种不同应力状态的实验混在一起",
+    "dimension_guess": "加载模式/观测定义",
+    "locations": {"experiment": ["E-03", "E-05"], "infile": [81]},
+    "claim_in_text": "E-03“低温微剪切/纳米压痕台”；E-05“剪应力-剪应变曲线”；L81 是纯剪切位移加载。",
+    "why_it_matters": "纳米压痕是压头下的三轴/非均匀应力场，输出载荷-位移；微剪切是近似简单剪切，输出剪应力-剪应变。两者不能共用同一个“剪应力-剪应变”判据；若实验实际是压痕，E-05 的测量定义与模型加载不对应，若实际是微剪切，E-03 的“纳米压痕台”又未说明。",
+    "physical_question": "实际实验到底是微剪切还是纳米压痕？若是压痕，如何从载荷-位移反演剪应力-剪应变？",
+    "evidence_needed": ["需补：实验装置与测量量", "E3 理论：压痕应力场与简单剪切的差异"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "E-05 的剪应力取自全局 pxy，包含夹持层宏观动能和端部/表面贡献",
+    "dimension_guess": "观测定义/应力",
+    "locations": {"experiment": ["E-05"], "infile": [39, 77]},
+    "claim_in_text": "E-05“剪应力-剪应变曲线”；L39 thermo_style 输出 pxy/pxz/pyz；L77 dump 仅“id type x y z”。",
+    "why_it_matters": "LAMMPS 的 pxy 是全局压力张量分量（含动能项），toplayer 以 1 Å/ps 平移会产生巨大的非热动能贡献；夹持层、自由面和恒温器的 virial 也混入。它不等于 gauge 区的局部剪应力；没有 per-atom stress 或分组 compute stress，无法扣除这些贡献，应力符号约定也未说明。",
+    "physical_question": "报告的剪应力是全局 pxy 还是 gauge 局部 virial 应力？是否扣除夹持层宏观动能和表面/端部贡献？",
+    "evidence_needed": ["需补：pxy 与局部应力的换算/验证", "E4 案例：剪切 MD 中局部应力统计方法"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "1 Å/ps × 600 ps 的相对位移达 600 Å，可能超出模拟 cell 的 x 尺寸",
+    "dimension_guess": "几何/大位移",
+    "locations": {"experiment": ["E-04"], "infile": [38, 81, 88]},
+    "claim_in_text": "E-04“上下夹持层施加相对位移”；L81“move linear -1 0 0”；L88 run 600000 步，L38 timestep 0.001 ps。",
+    "why_it_matters": "相对位移 = 1 Å/ps × 600 ps = 600 Å；intent 没有给 cell 尺寸。若 sample 的 x 长度小于该值，top 夹持层会移出初始 cell/自由面，gauge 几何和接触面积不再保持，后段应力-应变没有物理意义；若 x 是 shrink-wrap，box 还会随原子扩张。需要确认 600 Å 与 cell 尺寸、目标剪应变的关系。",
+    "physical_question": "模拟 cell 的 x 长度是多少？600 Å 相对位移对应多大剪应变？是否会发生夹持层移出/样品分离？",
+    "evidence_needed": ["需补：cell x 尺寸与目标剪应变", "E4 案例：大位移剪切模拟的 cell 尺寸选择"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "单一随机种子、单一样本，没有屈服应力的统计不确定度",
+    "dimension_guess": "统计/不确定度",
+    "locations": {"experiment": ["E-05"], "infile": [54]},
+    "claim_in_text": "L54“velocity mobile create ${Temp} 233333 temp new3d”；全文只有一个 run/一个样本。",
+    "why_it_matters": "位错形核和夹持端应力集中具有随机性；10 K 下热噪声低，但形核事件仍是稀有事件，单个 seed/样本的屈服应力、平台应力和位错密度演化没有误差棒；无法判断模拟与实验差异是否显著。",
+    "physical_question": "需要多少个独立种子/样本才能给出屈服应力的均值与置信区间？",
+    "evidence_needed": ["需补：多 seed 重复与误差分析", "E4 案例：MD 屈服统计的样本量"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "E-05 要“位错密度演化”，但 dump 没有结构识别/位错提取字段，屈服判据也未量化",
+    "dimension_guess": "观测定义/后处理",
+    "locations": {"experiment": ["E-05"], "infile": [77]},
+    "claim_in_text": "E-05“剪应力-剪应变曲线、屈服与位错密度演化；以应力平台与位错结构评定”；L77 dump 仅“id type x y z”。",
+    "why_it_matters": "仅靠 x y z 需要后处理 DXA/CNA，但输入没有 compute centrosymmetry/CNA、没有 per-atom stress、没有 dump_modify 排序/解包；z 仍周期，位错线跨边界会 wrap。位错密度定义为总密度/可动密度、体积/面积归一未说明；“应力平台”也不是定量屈服判据（峰值、0.2% offset、稳态应力？）。",
+    "physical_question": "位错密度如何从 dump 提取、如何归一？屈服用峰值应力、0.2% offset 还是平台起点？",
+    "evidence_needed": ["需补：后处理流程/DXA 参数", "E5 数据：屈服判据与位错密度定义"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "cross_scale 的“宏观 1×10⁷ s⁻¹”与实验描述均由 in 文件反推，0 量级结论是循环论证",
+    "dimension_guess": "证据/跨尺度",
+    "locations": {"experiment": ["E-06", "E-04"], "infile": [18, 88]},
+    "claim_in_text": "E-06“宏观实验描述由助手依据 in 文件（NiPt 位错滑移）反推补写；10 K 为模型温度...待用户确认”；E-04 称“模型剪切应变率 ~1×10⁷ s⁻¹”；cross_scale 却把 1×10⁷ s⁻¹ 写成“macro”并判 gap 0 个数量级。",
+    "why_it_matters": "宏观速率不是独立实验测量，而是模型值；用模型值去验证模型，gap 必然为 0。E-06 又承认 10 K 只是模型温度、实验描述待确认，E-04 却把 10 K 写成实验条件。真实微柱/微剪切实验的应变率和温度没有记录，cross_scale 的“ok”没有独立证据。",
+    "physical_question": "有没有独立的实验应变率、温度、试样尺寸记录？如果没有，cross_scale 的 0 量级结论依据什么？",
+    "evidence_needed": ["需补：原始实验记录/文献（应变率、温度、尺寸）", "E2 文献：微柱/微剪切实验的典型应变率范围"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "10 K 的经典 MD 热力学有效性未论证：量子效应与塑性耗热同时存在",
+    "dimension_guess": "热力学/量子效应",
+    "locations": {"experiment": ["E-01", "E-04"], "infile": [8, 65, 79, 88]},
+    "claim_in_text": "E-01/E-04“10 K 低温剪切”；L8 Temp=10；L65 NPT 10 K；L79 NVT 10 K；L88 600000 步。",
+    "why_it_matters": "10 K 远低于 Ni/Pt 的 Debye 温度，经典 MD 忽略零点能和量子热容，给出的晶格常数、热膨胀和热激活行为不能直接代表真实 10 K 晶体；另一方面高应变率剪切持续做塑性功，Nose-Hoover 只做全局控温，位错芯/剪切带的局部温升和 10 K 等温假设未验证。",
+    "physical_question": "经典 MD 在 10 K 是否足以代表真实材料？塑性耗散是否使 gauge 局部温度显著高于 10 K？",
+    "evidence_needed": ["E2 文献：金属 10 K 量子/经典 MD 对比", "需补：production 中 gauge 温度随时间/空间分布"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "模型是 z 向周期板条，与 E-02/E-03 的微柱/片几何未对齐",
+    "dimension_guess": "几何/维度",
+    "locations": {"experiment": ["E-02", "E-03"], "infile": [3, 74]},
+    "claim_in_text": "E-02“实验为 µm 级单晶微柱/片”；E-03“单晶试样按滑移系取向切割”；L74“change_box all boundary s s p”，z 仍为 p。",
+    "why_it_matters": "s s p 使 x、y 有限而 z 周期，模型是沿 z 无限延伸的板条/带；若实验是微柱，z 向也应有自由表面；若是薄片，需说明 z 周期对应薄片的哪个方向。维度不同会改变位错镜像力、位错出射面和增殖/starvation 行为，不能用同一应力-应变解释。",
+    "physical_question": "实验试样在 z 向是有限微柱还是连续板片？模型的 z 周期与实验几何如何对应？",
+    "evidence_needed": ["需补：实验试样几何尺寸", "E4 案例：z 周期 vs 有限柱的位错行为差异"],
+    "severity_hint": "medium"
+  }
+]

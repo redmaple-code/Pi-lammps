@@ -1,0 +1,8 @@
+(node:38168) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"event":"case","caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stateDirectory":"C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\role-workflow-20261118"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-r","status":"running"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-r","status":"running"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-r","status":"running"}
+{"code":"SCHEMA_INVALID","message":"Support role must publish one stage packet","retryable":false,"sideEffectState":"none"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

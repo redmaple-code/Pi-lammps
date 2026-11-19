@@ -1,0 +1,41 @@
+{
+  "runId": "1iep-seed-104729",
+  "operationId": "1iep-v001-seed-104729",
+  "mode": "real",
+  "seed": 104729,
+  "argv": [
+    "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+    "--receptor",
+    "inputs/prepared/receptor.pdbqt",
+    "--ligand",
+    "inputs/prepared/ligand.pdbqt",
+    "--config",
+    "inputs/prepared/search.cfg",
+    "--seed",
+    "104729",
+    "--out",
+    "runs/seed-104729/poses.pdbqt"
+  ],
+  "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117",
+  "inputs": [
+    {
+      "path": "inputs/prepared/receptor.pdbqt",
+      "digest": "sha256:e33a2134a3f0fdca486a949bc4df26ee34422d2e5f7cb3a6f0cd361b313e4cb9"
+    },
+    {
+      "path": "inputs/prepared/ligand.pdbqt",
+      "digest": "sha256:07e7a1c998cd6c8577a400e55e00a3b08253081c6449b6a9ecdcddee86a64a9a"
+    },
+    {
+      "path": "inputs/prepared/search.cfg",
+      "digest": "sha256:212cb9c081810ed082ae794367e9b3232fd8100286f939bc719b73099b8ef1eb"
+    }
+  ],
+  "status": "completed",
+  "startedAt": "2026-11-17T13:57:29.792748+00:00",
+  "stdoutStderr": "runs/seed-104729/vina.log",
+  "exitCode": 0,
+  "outputDigest": "sha256:d79f0134087f86a6c362b00390823aed9e3b8f2dbf749f80f2c571507834fd62",
+  "durationSeconds": 626.3429999999935,
+  "endedAt": "2026-11-17T14:07:56.136426+00:00"
+}

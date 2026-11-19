@@ -1,0 +1,183 @@
+
+EEEE.EEEE
+======================================================================
+ERROR: test_elastic_full_analysis (test_deep_review.TestDeepReview.test_elastic_full_analysis)
+弹性模量方法完整分析:五维度+通用步长,含真实数据驱动的一致性判据。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 50, in test_elastic_full_analysis
+    rec, ref = deep_review.analyze(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_elastic_missing_facts_concern (test_deep_review.TestDeepReview.test_elastic_missing_facts_concern)
+缺幅值数据 → concern(无法核验,不静默放行)。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 95, in test_elastic_missing_facts_concern
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_elastic_missing_relax_detected (test_deep_review.TestDeepReview.test_elastic_missing_relax_detected)
+输入缺 box/relax → critical(应力基准不是平衡态)。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 86, in test_elastic_missing_relax_detected
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_elastic_nonlinear_detected (test_deep_review.TestDeepReview.test_elastic_nonlinear_detected)
+两组幅值 C11 偏差大 → 非线性污染被抓住(critical)。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 75, in test_elastic_nonlinear_detected
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_ground_state_family (test_deep_review.TestDeepReview.test_ground_state_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 120, in test_ground_state_family
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_liquid_family (test_deep_review.TestDeepReview.test_liquid_family)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 106, in test_liquid_family
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_record_immutable_and_cited (test_deep_review.TestDeepReview.test_record_immutable_and_cited)
+深度分析记录不可变;每个维度 basis 引用知识条目 id。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 150, in test_record_immutable_and_cited
+    rec, ref = deep_review.analyze(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_unknown_check_type_concern (test_deep_review.TestDeepReview.test_unknown_check_type_concern)
+条目声明了引擎不认识的检查类型 → concern(不静默跳过)。
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 34, in load_dimensions
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 138, in test_unknown_check_type_concern
+    rec, _ = deep_review.analyze(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 175, in analyze
+    dims = load_dimensions(data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_deep_review.py", line 135, in <lambda>
+    dims, **{"*": orig(self.tmp).get("*", [])})
+                  ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\deep_review.py", line 36, in load_dimensions
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.483s
+
+FAILED (errors=8)

@@ -1,0 +1,23 @@
+{
+  "name": "@redmaple/agent-modules",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "files": ["core", "knowledge", "evidence", "gate", "consistency", "README.md"],
+  "engines": { "node": ">=22.19.0" },
+  "exports": {
+    "./core": "./core/index.js",
+    "./audit-sqlite": "./core/audit-sqlite.js",
+    "./knowledge": "./knowledge/index.js",
+    "./evidence": "./evidence/index.js",
+    "./gate": "./gate/index.js",
+    "./consistency": "./consistency/index.js",
+    "./domain-initialization": "./domain-initialization/index.js",
+    "./domain-initialization/pi": "./domain-initialization/pi-extension.js",
+    "./domain-initialization/host": "./domain-initialization/host.js"
+  },
+  "dependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1"
+  }
+}

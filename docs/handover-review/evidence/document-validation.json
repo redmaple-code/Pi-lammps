@@ -1,0 +1,14 @@
+{
+  "revision": "HR-1",
+  "checks": 631,
+  "passed": 631,
+  "errors": [],
+  "scope": "document structure/source bytes only; does not close product findings",
+  "findings": 12,
+  "work_items": 8,
+  "acceptance_cases": 21,
+  "priority_counts": {
+    "P1": 8,
+    "P2": 4
+  }
+}

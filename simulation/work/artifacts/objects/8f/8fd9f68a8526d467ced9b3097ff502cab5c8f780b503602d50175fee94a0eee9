@@ -1,0 +1,83 @@
+{
+  "stageId": "wf-04",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "runId": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+  "attempt": 5,
+  "decision": "proceed",
+  "summary": "WF-04 analysis of run-c88d07d4 (equiatomic FeNiCrCoCu, Farkas-Caro EAM/alloy, 6400 atoms, one 12 A sphere, 3 A nominal depth, 10 A/ps, 300 K setpoint, seed 482748, dt 0.001 ps): LAMMPS 2Aug2023 exitCode 0 with completion marker REDMAPLE_GRINDING_COMPLETE, no ERROR/WARNING, empty stderr. Host check HOST-wf-04 passed and all five acceptance criteria are met: outputs finite; 6400 atoms retained (6400 at start); 41 grind-pass samples with nonzero normal force (>=10); measured tip travel 25.8-17.8 = 8.00 A (>=7.6); frozen-layer max displacement 0.000 A (fix freeze + zero velocity; atoms 1-4 identical in initial and final dumps, spot-checked). Signed definitions: fx, fy, fz are the fix-indent global vector f_tool[1..3] as printed in the CSVs, in eV/A; the load on the tool is the reaction -f_tool, so reported normal-load magnitude = |fz|. Full-window (steps 800-1600, 41 samples, every 20 steps): fz 15.53-55.51 eV/A, mean 26.95 eV/A = 43.18 nN; second-half window (1200-1600) mean fz 26.95 eV/A = 43.18 nN, mean fx -1.70 eV/A (2.72 nN), apparent friction proxy |F_t|/|F_n| = 0.063; single-sample peak |fz| 88.93 nN at step 800 (first-contact transient), minimum 24.89 nN at step 880. Temperature scope: c_Tmobile covers all 5600 mobile atoms, only 1600 of which are Langevin-thermostatted at 300 K; mean 330.30 K (+30.3 K) over the pass, 297.32 K at equilibration end. Potential energy rises 61.1 eV (0.011 eV/atom); peak displacement 2.66 A with 49 atoms >1 A. Interpretation is qualitative only: no experimental grinding reference and no time-step or material-model convergence data were available, so absolute force values are neither converged nor validated; defensible content is the relative response (first-contact spike decaying to a steady plateau, moderate frictional heating, shallow subsurface damage).",
+  "handoff": {
+    "runResult": {"runId": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c", "exitCode": 0, "lammpsVersion": "2Aug2023", "completionMarker": "REDMAPLE_GRINDING_COMPLETE"},
+    "analysisArtifactRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+    "summaryMetrics": {
+      "atomCount": {"value": 6400, "unit": "atoms"},
+      "contactSamples": {"value": 41, "unit": "samples", "note": "rows with nonzero normal force in grinding.csv, every 20 steps"},
+      "tipTravelAngstrom": {"value": 8.0, "unit": "A", "definition": "tip_x final 25.8 minus initial 17.8"},
+      "fixedMaxDisplacementAngstrom": {"value": 0.0, "unit": "A"},
+      "meanNormalForce": {"value": 26.95, "unit": "eV/A", "alternate": "43.18 nN", "window": "steps 1200-1600"},
+      "peakNormalForce": {"value": 55.51, "unit": "eV/A", "alternate": "88.93 nN", "step": 800},
+      "minNormalForce": {"value": 15.53, "unit": "eV/A", "alternate": "24.89 nN", "step": 880},
+      "meanTangentialForce": {"value": 1.70, "unit": "eV/A", "alternate": "2.72 nN", "window": "steps 1200-1600"},
+      "meanFx": {"value": -1.696, "unit": "eV/A", "window": "steps 1200-1600"},
+      "meanFy": {"value": -0.524, "unit": "eV/A", "window": "steps 1200-1600"},
+      "apparentFrictionProxy": {"value": 0.063, "unit": "1", "definition": "|mean tangential| / |mean normal|, vector-averaged lower bound"},
+      "meanMobileTemperature": {"value": 330.30, "unit": "K", "scope": "5600 mobile atoms; 1600 Langevin-thermostatted at 300 K"},
+      "equilibrationEndTemperature": {"value": 297.32, "unit": "K"},
+      "potentialEnergyRise": {"value": 61.1, "unit": "eV", "alternate": "0.0109 eV/atom", "window": "step 400 to step 1600"},
+      "maxDisplacement": {"value": 2.66, "unit": "A"},
+      "atomsDisplacedAboveOneAngstrom": {"value": 49, "unit": "atoms"},
+      "contactOnsetDepth": {"value": 2.8, "unit": "A", "definition": "tip-centre descent from first detectable fz (step ~500-520, tip_z ~38.9 A) to final tip_z 36.145 A", "caveat": "onset threshold dependent; geometry not inferred from force magnitude"}
+    },
+    "criteriaVerdicts": [
+      {"criterion": "finite outputs", "computed": true, "verdict": "met"},
+      {"criterion": "retained atoms", "computed": 6400, "reference": 6400, "verdict": "met"},
+      {"criterion": "contact samples", "computed": 41, "reference": ">=10", "verdict": "met"},
+      {"criterion": "tip travel (A)", "computed": 8.0, "reference": ">=7.6", "verdict": "met"},
+      {"criterion": "frozen-layer max displacement (A)", "computed": 0.0, "reference": "<=1e-6", "verdict": "met"}
+    ],
+    "literatureComparison": {
+      "status": "insufficient",
+      "reason": "Validation protocol (artifact-51761c44) records grinding-reference, time-step-convergence and material-model-validation comparisons as unavailable (missingReason). No experimental single-asperity grinding normal-force or friction data for equiatomic FeNiCrCoCu Farkas-Caro EAM were present in the case KB, and no retrieval was performed for this exploratory stage.",
+      "consequence": "No D7 deviation or literature discrepancy can be quantified; absolute values are reported as measured, not validated."
+    },
+    "wf05Trigger": {
+      "generatePlots": true,
+      "quantitiesToPlot": [
+        "fz_fx_fy_vs_step (approach.csv and grinding.csv, separate panels, labelled full/mean/peak windows)",
+        "mobile_temperature_vs_step",
+        "potential_and_total_energy_vs_step",
+        "final.lammpstrj per-atom c_centro / c_cna / c_coord: surface and subsurface damage maps, top-view and x-z cross-section",
+        "displacement magnitude from initial.lammpstrj vs final.lammpstrj (49 atoms >1 A)"
+      ],
+      "figureOutputDir": "work/cases/hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869/figures"
+    },
+    "rollbackRecommendation": {"recommended": false, "target": null, "reason": null}
+  },
+  "limitations": [
+    "Exploratory run inside a frozen protocol with no available grinding-reference, time-step-convergence or EAM-validation comparison (artifact-51761c44 missingReason); all absolute force and temperature numbers are measured but not converged or experimentally validated.",
+    "No quantitative experimental single-asperity grinding normal force or friction coefficient for equiatomic FeNiCrCoCu was available in the case KB; no MCP retrieval was performed, so literature comparison is recorded as insufficient rather than satisfied.",
+    "Sign convention of f_tool is taken as printed by the run: fz is positive along +z. A substrate reaction on an indenter pushed downward is +z, so the recorded positive fz is consistent with a reaction/load reading, but the underlying fix definition was not independently verified against LAMMPS source in this stage.",
+    "Reported temperature is c_Tmobile over all 5600 mobile atoms while only the 1600-atom bath group is Langevin-thermostatted at 300 K; the 4000 dynamic atoms are NVE, so 330.3 K is a measured sample temperature and not a thermostat realisation; a single seed and one trajectory give no uncertainty estimate.",
+    "Friction proxy |mean tangential|/|mean normal| uses vector-averaged components and is a lower bound; per-sample tangential magnitudes are larger (peak ~3.5 eV/A = 5.6 nN at step 840) so no friction coefficient should be quoted from it.",
+    "Contact geometry (penetration depth ~2.8 A, contact radius) is derived from tip-centre kinematics and first detectable force, not from atomic contact analysis; single 12 A repulsive sphere with stiffness 10 eV/A^3 and no abrasive atoms or chemistry.",
+    "Frozen-layer zero displacement is established structurally (fix freeze, zero initial velocity, no other fix acting on the fixed group) and spot-checked on atoms 1-4 only; a full 800-atom per-atom comparison was not performed.",
+    "Short trajectories (400/400/800 steps at 0.001 ps, 1.9 ns aggregate wall time 115 s) and a 6400-atom cell; wear debris, tribolayer formation and long-time steady state are outside the accessible scope.",
+    "Cross-reference to any prior rolling/indentation case in work/cases was not performed; only the present case's protocol and log were used."
+  ],
+  "dataRefs": [
+    {"role": "raw log (full, 267 lines, read in two sections 1-140 and 140-267)", "artifactId": "artifact-dc8b53f6-7361-4f83-aa9b-a6f19cb92fc2", "digest": "sha256:0b108ce910837fefe088ae5bc57c60458c6ebbde2a8d206cbdeca85059799704", "name": "log.lammps", "byteLength": 12113},
+    {"role": "grinding force/temperature samples", "artifactId": "artifact-58ff231a-b2bd-44b3-96ef-b8d12842097d", "digest": "sha256:27a9fdbcf6fe655c41653d806e83e72882e8fabcb26dc12ec06f7b2135adafd4", "name": "grinding.csv", "byteLength": 6535},
+    {"role": "approach force/temperature samples", "artifactId": "artifact-305f6fbe-6599-462a-bd0f-74f82f15796f", "digest": "sha256:05ab107ea9718445065ab3c812b8614678ae8b666921e4b62df8fee720d7cb2c", "name": "approach.csv", "byteLength": 3165},
+    {"role": "initial configuration (frozen-layer spot check)", "artifactId": "artifact-9b6e1b2f-7b0d-4a0f-9316-8463a842a9df", "digest": "sha256:c35a99f2be4a14ca6d5be7b9b2af8e90f54b7dfa5331f3c71b7092cf6f3f7550", "name": "initial.lammpstrj", "byteLength": 198954},
+    {"role": "final configuration with c_pe/c_coord/c_centro/c_cna", "artifactId": "artifact-0e726af1-2986-41eb-ae98-c88ad5f790ac", "digest": "sha256:bd489e757ebfdc477dc95e6cb9c29720f0a189b51eea0e6d6e8a8a913f07d321", "name": "final.lammpstrj", "byteLength": 343135},
+    {"role": "input script (as executed, full text in log.lammps)", "artifactId": "artifact-863fd6a3", "name": "run record with inputText", "note": "input is reproduced verbatim at the head of log.lammps; no separate input file artifact was registered"},
+    {"role": "final data file", "artifactId": "artifact-4684c408-b113-4e9e-abd7-86b3d30d6f48", "digest": "sha256:2eb01249214ed456a8294fd85fd856253e0ca0eac985e11cf99d3a5cc57b464f", "name": "final.data", "byteLength": 781519},
+    {"role": "validation protocol (exploratory, references missing)", "artifactId": "artifact-51761c44", "note": "wf-03 stage packet"}
+  ],
+  "signConventions": {
+    "forces": "fx=f_tool[1], fy=f_tool[2], fz=f_tool[3] from the fix-indent global vector, eV/A; force on the tool = -f_tool; normal load magnitude = |fz|; 1 eV/A = 1.602176634 nN",
+    "displacement": "unwrapped Cartesian displacement between initial.lammpstrj (step 400) and final.lammpstrj (step 1600), A",
+    "temperature": "c_Tmobile, compute temp over the mobile group (5600 atoms), K"
+  },
+  "analystAgent": "lammps-data-analyst",
+  "confidence": "medium"
+}

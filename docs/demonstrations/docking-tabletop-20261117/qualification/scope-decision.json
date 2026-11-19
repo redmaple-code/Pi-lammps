@@ -1,0 +1,9 @@
+{
+  "dataOrigin": "synthetic-tabletop",
+  "demoRedockingTop1Recovered": "4/5",
+  "demoBest5Recovered": "5/5",
+  "demoVerdict": "允许继续演练并评估留出排序",
+  "screeningEnrichment": "留出标签在排序冻结后才进行关联的流程示意。",
+  "actualModelValidation": "notEvaluated",
+  "actualPoseRecovery": "notEvaluated"
+}

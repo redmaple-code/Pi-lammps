@@ -1,0 +1,90 @@
+units       metal
+dimension   3  
+boundary    p p p        #在周期性边界条件下驰豫
+atom_style  atomic
+
+shell      "mkdir -p dump"
+
+variable   Temp equal 10
+
+read_data  final.lmp
+
+variable   size_y equal yhi
+
+#上下两端slab的位置和剪切的速度
+variable   layer_thickness equal 0.2*${size_y}
+variable   top_layer_limit  equal  ${size_y}-${layer_thickness}
+variable   bot_layer_limit  equal  ${layer_thickness}-${size_y}
+variable   layer_velocity  equal  0.0005*(2*${size_y}-2*${layer_thickness})   #shear strain rate = 1E7 / s   
+#驰豫和变形和步数
+variable   dump_step equal 100
+variable   equi_step equal 50000
+variable   run_step equal 600000 
+#划分各个区域
+region     toplayer block INF INF ${top_layer_limit} INF INF INF   units box       #上层slab   
+region     botlayer block INF INF INF ${bot_layer_limit} INF INF  units box        #下层slab  
+#将上下slab和晶粒原子单独分组,之后会固定下端slab,对上端slab施加速度,晶粒内原子自由
+group      toplayer region toplayer
+group      botlayer region botlayer
+group      boundary union toplayer botlayer
+group      mobile subtract all boundary
+
+#----------------------------------------- 势函数,初始化速度,设置compute等 ------------------------------------
+pair_style       meam/c
+pair_coeff      * * library.meam Ni Pt Ni-Pt.meam Ni Pt
+
+#--------------------------------------------- 输出thermo, dump等 -----------------------------------------------
+thermo        1000
+timestep      0.001
+thermo_style  custom step etotal pe ke pxy pxz pyz pxx pyy pzz temp press vol
+
+newton         on
+
+#--------------------------------------------- 能量最小化,驰豫 ---------------------------------------
+#能量最小化,优化初始结构
+dump    min all custom ${dump_step} dump_minimize.*.lammpstrj id type x y z 
+min_style cg
+minimize 1.0e-6 1.0e-6 10000 10000
+undump  min
+reset_timestep    0
+
+compute        new3d mobile temp
+compute        new2d mobile temp/partial 0 1 1
+
+velocity    mobile create ${Temp} 233333 temp new3d # dist gaussian 
+
+#驰豫
+dump      equil all custom 1000 dump_equil.*.lammpstrj id type x y z 
+
+#fix        1 all nve
+fix        2 botlayer setforce 0 0 0
+#fix        3 mobile temp/rescale 10 ${Temp} ${Temp} 10 1.0
+#fix_modify    3 temp new3d
+
+
+fix       1  all  npt  temp  ${Temp}  ${Temp}  0.1  iso  0 0 1 drag  0.2  
+run       ${equi_step}
+undump    equil  
+unfix     1
+
+write_data  Dislocation_slip_equil.data
+write_restart  Dislocation_slip_equil.restart
+
+#--------------------------------------改变体系边界条件,模拟位错滑移-------------------------------------
+change_box all boundary s s p            #剪切驱动位错滑移模拟时需要上下端非周期边界
+
+reset_timestep 0
+dump       result2 all custom 1000 dump/dump.*.lammps id type x  y  z  
+#NVT系综下积分
+fix        02  all  nvt  temp  ${Temp}  ${Temp}  0.1 
+#固定上端slab,移动下端slab
+fix        6  toplayer move linear  -1 0 0   units box
+fix        7  botlayer move linear  0 0 0  units box  
+
+
+# velocity    toplayer set -5 0 0 units box
+# velocity    mobile ramp vx 0.0 -5 y ${bot_layer_limit} ${top_layer_limit} sum yes units box
+
+run ${run_step}
+write_data  Dislocation_slip.*.data
+write_restart  Dislocation_slip.*.restart

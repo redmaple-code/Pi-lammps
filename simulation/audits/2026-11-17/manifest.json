@@ -1,0 +1,192 @@
+{
+  "revision": "AUDIT-1",
+  "createdAt": "2026-11-17T13:30:54.301847+00:00",
+  "mainCaseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+  "findings": 40,
+  "checkedLocalLinks": 16,
+  "originalOutputFilesVerified": 10,
+  "controlStatus": "succeeded",
+  "scientificValidation": "partial",
+  "experimentalConsistency": "unverified",
+  "activeConfirmedImplementationProblems": [
+    "AI-001",
+    "AI-002"
+  ],
+  "files": [
+    {
+      "path": "docs/audit/2026-11-17/AI工作错误清单.md",
+      "byteSha256": "d56ee65ce8aba3af23bb3969c6057bf3482f564fb2e92d4e93df2096fd7f67b2",
+      "bytes": 11055
+    },
+    {
+      "path": "docs/audit/2026-11-17/README.md",
+      "byteSha256": "2863d2a534b9141080864229460618d5aafd87a37f54a772cdfa675aae48a71d",
+      "bytes": 10034
+    },
+    {
+      "path": "simulation/audits/2026-11-17/audit_case.py",
+      "byteSha256": "d9856450351fcd910dc033e23400686b02f817add06aeca3f0d1c2962bb59716",
+      "bytes": 9252
+    },
+    {
+      "path": "simulation/audits/2026-11-17/audit_final_state.py",
+      "byteSha256": "ea5e5edc647d6b21f9f08eb7c95f0b2e7d2e7fd1949df77c24afb3d9dda3a65a",
+      "bytes": 3867
+    },
+    {
+      "path": "simulation/audits/2026-11-17/compare_control.py",
+      "byteSha256": "981789301dafb08a1217684f6357d4686c9dbbb24520a2bd0a0ae42199065f74",
+      "bytes": 3140
+    },
+    {
+      "path": "simulation/audits/2026-11-17/control-comparison.json",
+      "byteSha256": "48a85495193999e28cb5d2fe364690ea078b79f2523b564f9ebe31a0282909dc",
+      "bytes": 1381
+    },
+    {
+      "path": "simulation/audits/2026-11-17/control-comparison.log",
+      "byteSha256": "9da558beb99a516a206c0a4724b04fa82154509554d42bad25bbd45478442170",
+      "bytes": 1383
+    },
+    {
+      "path": "simulation/audits/2026-11-17/control-input-integrity.json",
+      "byteSha256": "a2aa4eb9659663a55ffafff6e4829608ba11b0b58662befcb1591ae2cdd4b640",
+      "bytes": 1640
+    },
+    {
+      "path": "simulation/audits/2026-11-17/control-launch.log",
+      "byteSha256": "5f9db7b17ad608f983d8d6a3ef48649f21bf7d15cbc7c9ff529cff33d8b22526",
+      "bytes": 772
+    },
+    {
+      "path": "simulation/audits/2026-11-17/final-state-audit.json",
+      "byteSha256": "3f1c2f252a1e435bb0fdfaaa1e7199b19cdf8135cd58f428143bd3c077a1a863",
+      "bytes": 2607
+    },
+    {
+      "path": "simulation/audits/2026-11-17/finalize_audit.py",
+      "byteSha256": "862a487302d8c63d9b03a8a819a39ebe7fd7eb5787c1455da1a84065f46d89fd",
+      "bytes": 3017
+    },
+    {
+      "path": "simulation/audits/2026-11-17/findings.json",
+      "byteSha256": "469fd17f6ca59565d3c0a3f5bfa6cbb412bf3b78bd391b294fd01343a57742e7",
+      "bytes": 12201
+    },
+    {
+      "path": "simulation/audits/2026-11-17/main-case-audit.json",
+      "byteSha256": "101ddbd7e41be5776972aea40364555427e71133bca2231d8f9e933e80f0f179",
+      "bytes": 16647
+    },
+    {
+      "path": "simulation/audits/2026-11-17/main-case-audit.log",
+      "byteSha256": "7db58204852a48b8faceb42d5db46df72e9d2ae1f3f279ceecb681620d9448fe",
+      "bytes": 4320
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/alloy.data",
+      "byteSha256": "9ce4ce4ac71260e03da07e3786af96e77d619b021dfb4a57cfefbebe8b3019e3",
+      "bytes": 568896
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/approach.csv",
+      "byteSha256": "4b5e60a12943ea2bd202c8683c3a9c1a3d6bad10fba01cb55a07364631b60be7",
+      "bytes": 9993
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/FeNiCrCoCu-heafixed.setfl",
+      "byteSha256": "5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+      "bytes": 1834403
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/final.data",
+      "byteSha256": "54306f95b631553ff1d74af6c7fb4a29107d504ecd86c5675951e60c541b2728",
+      "bytes": 1434194
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/final.lammpstrj",
+      "byteSha256": "be7848f1d7fd85ad8fc7bd83d736c5dd031bfa014d27a33b7059178b96702c39",
+      "bytes": 621293
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/final.restart",
+      "byteSha256": "6b5d23ecb98d8d0f43511962bc8a2c9621ecc5df01cc3a61fba74ebfb1f6acee",
+      "bytes": 1014734
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/grinding.csv",
+      "byteSha256": "3793885f5a6785388f09d31fcf5a087b70a7d341e0d510ab966d6b748e3e4025",
+      "bytes": 19208
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/in.grinding",
+      "byteSha256": "23454ccbb6f7bb086ff34f0c41012f408e507b3868ff62f7209f9fbc32a74d1d",
+      "bytes": 2589
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/initial.lammpstrj",
+      "byteSha256": "9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+      "bytes": 361421
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/log.lammps",
+      "byteSha256": "cc7fc0b7c0841dbe4a43e5e238c63e185295ed2723f1c252c0c76213652f46f0",
+      "bytes": 17508
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/receipt.json",
+      "byteSha256": "ccb92415418dc94672b3190db5cef284a468f369256bf745e25d0782201d37c8",
+      "bytes": 836
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/solver.stderr.log",
+      "byteSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/solver.stdout.log",
+      "byteSha256": "baba307cc0ac0b402787ab0ada664c9295ef80d906271559c5bd4cf7889505a5",
+      "bytes": 15303
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/structure-report.json",
+      "byteSha256": "894a66c9118336f5835d2276058ad283de10074acbd607bfd4d72372644f9fe8",
+      "bytes": 1300
+    },
+    {
+      "path": "simulation/audits/2026-11-17/no-tool-control/trajectory.lammpstrj",
+      "byteSha256": "9aff050a720a0396dfad1d60fb237892221278ac786611ef07dc8aa9a2927660",
+      "bytes": 19266357
+    },
+    {
+      "path": "simulation/audits/2026-11-17/original-output-integrity.json",
+      "byteSha256": "d3e35d84e041e8813b6d25e03efe95f040e7f220023a3a815875ceb27a515993",
+      "bytes": 1682
+    },
+    {
+      "path": "simulation/audits/2026-11-17/probe_workflow.js",
+      "byteSha256": "43de60b08f2069e3440d80919c91047b23176f2b6fe467c604f3184b00193a14",
+      "bytes": 1663
+    },
+    {
+      "path": "simulation/audits/2026-11-17/process-evidence.json",
+      "byteSha256": "37195d322b0e616aedc22745b1367ba670b73fcf1465db571de0a6932bcda31f",
+      "bytes": 13828
+    },
+    {
+      "path": "simulation/audits/2026-11-17/run_control.py",
+      "byteSha256": "7496f3580001ccde2fdec762eb45553f94f88e0e26ae654765879e2813ccd627",
+      "bytes": 2318
+    },
+    {
+      "path": "simulation/audits/2026-11-17/solver-log-audit.json",
+      "byteSha256": "6b15e1a539e434a2ab57a8b9c9683deb886a97312fe461d416b04aced6d98a45",
+      "bytes": 1317
+    },
+    {
+      "path": "simulation/audits/2026-11-17/workflow-probe.json",
+      "byteSha256": "41cf135bde070e54eb8d5a161737202c08d55b50b6439625e8f8a90fb731eab9",
+      "bytes": 222
+    }
+  ]
+}

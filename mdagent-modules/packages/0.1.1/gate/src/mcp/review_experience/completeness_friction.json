@@ -1,0 +1,22 @@
+{
+  "pack": "completeness_friction",
+  "schema_version": 1,
+  "kind": "completeness",
+  "family": "friction",
+  "_doc": "friction/indentation 族完整性清单(种子):experiment_type 含 friction/indent/wear/摩擦/压痕/磨损/剪切 时生效。",
+  "required_fields": [
+    "experiment_design.experiment_type",
+    "experiment_design.setup",
+    "experiment_design.design_rationale"
+  ],
+  "guidance": [
+    {"aspect": "experiment_design.setup.indenter", "why": "磨头几何与材料决定接触力学", "proposal": "典型:球型磨头 {shape, radius_A, material};半径量级与压深匹配"},
+    {"aspect": "experiment_design.setup.indentation_depth_A", "why": "压深决定接触区与塑性深度", "proposal": "浅压典型 0.05-0.2×磨头半径(赫兹口径)"},
+    {"aspect": "experiment_design.setup.sliding_velocity_m_s", "why": "滑速决定摩擦热与速率外推程度", "proposal": "MD 惯例 1-100 m/s,注明与实验速率的外推关系"},
+    {"aspect": "experiment_design.setup.sliding_length_A", "why": "滑程须落在盒内余量", "proposal": "小于 盒长-磨头直径,留周期像安全边"},
+    {"aspect": "experiment_design.setup.sample", "why": "样品尺度决定边界效应", "proposal": "横向≥磨头直径数倍,厚度≥压深数倍(见 exp-edu-004)"},
+    {"aspect": "experiment_design.setup.box_l_A", "why": "盒长与截断/滑程的几何自洽", "proposal": "大于 2×pair 截断且留滑动余量"},
+    {"aspect": "experiment_design.setup.thermostat", "why": "摩擦控温方案是伪影高发区", "proposal": "控温只放底部/侧向边界层,磨头与接触区绝热(见 exp-edu-007)"},
+    {"aspect": "experiment_design.design_rationale", "why": "设计理由让审阅可核、让复现可溯", "proposal": "逐参数一句话:为什么这个压深/这个磨头/这个速度"}
+  ]
+}

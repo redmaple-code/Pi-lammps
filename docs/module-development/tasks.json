@@ -1,0 +1,1593 @@
+{
+  "schemaVersion": "planning/1",
+  "revision": "MD-1",
+  "date": "2026-11-17",
+  "kind": "planningSnapshot",
+  "note": "本文件只记录规划与引用，不是PM state.json或产品运行状态。需求正文在既有MIG/GSF矩阵，任务真实执行后再增加准确实现/验证回执。",
+  "modules": [
+    {
+      "id": "MOD-01",
+      "name": "公共契约与版本兼容",
+      "document": "modules/MOD-01.md",
+      "ownerRole": "契约维护开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/contracts",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [],
+      "estimatePersonDays": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    {
+      "id": "MOD-02",
+      "name": "Red Maple 运行时适配与角色任务",
+      "document": "modules/MOD-02.md",
+      "ownerRole": "Agent 运行时开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/runtime-redmaple",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-18"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-03",
+      "name": "K1 阶段图与任务入口",
+      "document": "modules/MOD-03.md",
+      "ownerRole": "流程内核开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/stages",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-04",
+        "MOD-08",
+        "MOD-19"
+      ],
+      "estimatePersonDays": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    {
+      "id": "MOD-04",
+      "name": "K2 检查、独立审查与放行",
+      "document": "modules/MOD-04.md",
+      "ownerRole": "流程内核开发；科学审查人员复核规则",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/gates",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-06",
+        "MOD-19"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-05",
+      "name": "K3 工件、输入闭包与影响追踪",
+      "document": "modules/MOD-05.md",
+      "ownerRole": "存储与工件开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/artifacts",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-08"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 4
+      }
+    },
+    {
+      "id": "MOD-06",
+      "name": "K4 证据与实读回执",
+      "document": "modules/MOD-06.md",
+      "ownerRole": "证据系统开发；领域人员审查适用政策",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/evidence",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-05",
+        "MOD-08"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-07",
+      "name": "K5 失败诊断与有界修复",
+      "document": "modules/MOD-07.md",
+      "ownerRole": "流程内核开发；领域诊断人员复核",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/repair",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-03",
+        "MOD-11"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 4
+      }
+    },
+    {
+      "id": "MOD-08",
+      "name": "K6 权威状态、事务与恢复",
+      "document": "modules/MOD-08.md",
+      "ownerRole": "状态与可靠性开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/state",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01"
+      ],
+      "estimatePersonDays": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    {
+      "id": "MOD-09",
+      "name": "K7 指标、科学验证与任务验收",
+      "document": "modules/MOD-09.md",
+      "ownerRole": "科学计算开发；领域验收人员复核",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/measurement 与 simulation/packages/analysis",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-05",
+        "MOD-19",
+        "MOD-11"
+      ],
+      "estimatePersonDays": {
+        "min": 4,
+        "max": 6
+      }
+    },
+    {
+      "id": "MOD-10",
+      "name": "LAMMPS 领域包与科学规则",
+      "document": "modules/MOD-10.md",
+      "ownerRole": "LAMMPS领域开发；科学审查人员",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/domains/lammps",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-19"
+      ],
+      "estimatePersonDays": {
+        "min": 5,
+        "max": 7
+      }
+    },
+    {
+      "id": "MOD-11",
+      "name": "求解器与长作业执行适配",
+      "document": "modules/MOD-11.md",
+      "ownerRole": "执行与HPC开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/execution",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-05",
+        "MOD-08"
+      ],
+      "estimatePersonDays": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    {
+      "id": "MOD-12",
+      "name": "知识检索、入库、记忆与备份",
+      "document": "modules/MOD-12.md",
+      "ownerRole": "知识系统开发；知识审阅人员",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/knowledge",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-06",
+        "MOD-08"
+      ],
+      "estimatePersonDays": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    {
+      "id": "MOD-13",
+      "name": "技能挖掘、角色改进与受控发布",
+      "document": "modules/MOD-13.md",
+      "ownerRole": "Agent评测开发；资产发布责任人",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/improvement",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-02",
+        "MOD-08",
+        "MOD-12",
+        "MOD-18"
+      ],
+      "estimatePersonDays": {
+        "min": 5,
+        "max": 8
+      }
+    },
+    {
+      "id": "MOD-14",
+      "name": "图形、报告与可复现交付",
+      "document": "modules/MOD-14.md",
+      "ownerRole": "科学可视化开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/presentation",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-05",
+        "MOD-09"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-15",
+      "name": "CLI、TUI 与应用装配",
+      "document": "modules/MOD-15.md",
+      "ownerRole": "应用与交互开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/apps/cli",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-02",
+        "MOD-03",
+        "MOD-07",
+        "MOD-09",
+        "MOD-14",
+        "MOD-19"
+      ],
+      "estimatePersonDays": {
+        "min": 2,
+        "max": 4
+      }
+    },
+    {
+      "id": "MOD-16",
+      "name": "历史导入、资产迁移与兼容",
+      "document": "modules/MOD-16.md",
+      "ownerRole": "迁移开发；领域资产维护人",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/migration",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-05",
+        "MOD-08",
+        "MOD-10",
+        "MOD-12"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-17",
+      "name": "验证平台与完整交付审计",
+      "document": "modules/MOD-17.md",
+      "ownerRole": "测试与集成负责人；有权接受者待指定",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/tests 与 docs/evidence",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-02",
+        "MOD-03",
+        "MOD-04",
+        "MOD-05",
+        "MOD-06",
+        "MOD-07",
+        "MOD-08",
+        "MOD-09",
+        "MOD-10",
+        "MOD-11",
+        "MOD-12",
+        "MOD-13",
+        "MOD-14",
+        "MOD-15",
+        "MOD-16",
+        "MOD-18",
+        "MOD-19",
+        "MOD-20",
+        "MOD-21"
+      ],
+      "estimatePersonDays": {
+        "min": 4,
+        "max": 6
+      }
+    },
+    {
+      "id": "MOD-18",
+      "name": "Red Maple 与 Pi 基座优化",
+      "document": "modules/MOD-18.md",
+      "ownerRole": "基座维护开发",
+      "assignedPerson": null,
+      "plannedCodePath": "redmaple-agent/src（现有）；Pi fork（条件性后续）",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-19",
+      "name": "领域包解析、能力绑定与版本锁",
+      "document": "modules/MOD-19.md",
+      "ownerRole": "包与契约开发",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/pack-resolver",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01"
+      ],
+      "estimatePersonDays": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "MOD-20",
+      "name": "研究活动、有界迭代与耦合交换",
+      "document": "modules/MOD-20.md",
+      "ownerRole": "科学工作流开发；耦合模型审查人员",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/packages/kernel/src/studies 与 adapters/exchange",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-03",
+        "MOD-05",
+        "MOD-09",
+        "MOD-11"
+      ],
+      "estimatePersonDays": {
+        "min": 4,
+        "max": 7
+      }
+    },
+    {
+      "id": "MOD-21",
+      "name": "宏观与离散事件领域包及真实基准",
+      "document": "modules/MOD-21.md",
+      "ownerRole": "宏观/统计仿真领域开发；各领域科学审查人员",
+      "assignedPerson": null,
+      "plannedCodePath": "simulation/domains/structural-mechanics 与 simulation/domains/discrete-event",
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "dependsOn": [
+        "MOD-01",
+        "MOD-09",
+        "MOD-11",
+        "MOD-19"
+      ],
+      "estimatePersonDays": {
+        "min": 4,
+        "max": 7
+      }
+    }
+  ],
+  "tasks": [
+    {
+      "id": "DEV-01-1",
+      "moduleId": "MOD-01",
+      "title": "冻结记录注册表、错误表及兼容 fixture",
+      "ownerRole": "契约维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [],
+      "deliverableRef": "modules/MOD-01.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-01-2",
+      "moduleId": "MOD-01",
+      "title": "实现 schema/摘要/迁移接口并接消费者",
+      "ownerRole": "契约维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-01.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-01-3",
+      "moduleId": "MOD-01",
+      "title": "执行跨模块 round-trip 与破坏性变更合约检查",
+      "ownerRole": "契约维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-2"
+      ],
+      "deliverableRef": "modules/MOD-01.md",
+      "acceptanceScenarios": [
+        "ACC-01-01",
+        "ACC-01-02",
+        "ACC-01-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-02-1",
+      "moduleId": "MOD-02",
+      "title": "抽取角色配置和SDK适配边界，建立受控假模型 fixture",
+      "ownerRole": "Agent 运行时开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-02.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-02-2",
+      "moduleId": "MOD-02",
+      "title": "实现 RoleTask/上下文/持久任务桥接",
+      "ownerRole": "Agent 运行时开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-02-1",
+        "DEV-01-2",
+        "DEV-18-2"
+      ],
+      "deliverableRef": "modules/MOD-02.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-02-3",
+      "moduleId": "MOD-02",
+      "title": "核验角色隔离、预算、取消、恢复与全部旧路由",
+      "ownerRole": "Agent 运行时开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-02-2"
+      ],
+      "deliverableRef": "modules/MOD-02.md",
+      "acceptanceScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-03-1",
+      "moduleId": "MOD-03",
+      "title": "实现九入口与阶段实例展开 fixture",
+      "ownerRole": "流程内核开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-03.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-03-2",
+      "moduleId": "MOD-03",
+      "title": "实现分支汇合、受控回退、持久计数调用",
+      "ownerRole": "流程内核开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-03-1",
+        "DEV-01-2",
+        "DEV-04-2",
+        "DEV-08-2",
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-03.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-03-3",
+      "moduleId": "MOD-03",
+      "title": "验证跨域图、局部入口和修订停止场景",
+      "ownerRole": "流程内核开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-03-2"
+      ],
+      "deliverableRef": "modules/MOD-03.md",
+      "acceptanceScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-04-1",
+      "moduleId": "MOD-04",
+      "title": "冻结GateDecision/许可与三值语义fixture",
+      "ownerRole": "流程内核开发；科学审查人员复核规则",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-04.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-04-2",
+      "moduleId": "MOD-04",
+      "title": "实现条件解释器和独立审查校验",
+      "ownerRole": "流程内核开发；科学审查人员复核规则",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-04-1",
+        "DEV-01-2",
+        "DEV-06-2",
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-04.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-04-3",
+      "moduleId": "MOD-04",
+      "title": "验证所有绕门负例及机器/人工回退",
+      "ownerRole": "流程内核开发；科学审查人员复核规则",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-04-2"
+      ],
+      "deliverableRef": "modules/MOD-04.md",
+      "acceptanceScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-05-1",
+      "moduleId": "MOD-05",
+      "title": "定义工件目录、closure算法和legacy定位规则",
+      "ownerRole": "存储与工件开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-05.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-05-2",
+      "moduleId": "MOD-05",
+      "title": "实现流式发布/核验/差异与注册",
+      "ownerRole": "存储与工件开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-05-1",
+        "DEV-01-2",
+        "DEV-08-2"
+      ],
+      "deliverableRef": "modules/MOD-05.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-05-3",
+      "moduleId": "MOD-05",
+      "title": "执行二进制、并发改写、崩溃和大文件边界测试",
+      "ownerRole": "存储与工件开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-05-2"
+      ],
+      "deliverableRef": "modules/MOD-05.md",
+      "acceptanceScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-06-1",
+      "moduleId": "MOD-06",
+      "title": "明确EvidenceRef/实读回执和独立来源规则",
+      "ownerRole": "证据系统开发；领域人员审查适用政策",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-06.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-06-2",
+      "moduleId": "MOD-06",
+      "title": "实现引用核验与包级证据政策",
+      "ownerRole": "证据系统开发；领域人员审查适用政策",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-06-1",
+        "DEV-01-2",
+        "DEV-05-2",
+        "DEV-08-2"
+      ],
+      "deliverableRef": "modules/MOD-06.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-06-3",
+      "moduleId": "MOD-06",
+      "title": "检验本地案例、全文等级、重复来源及失效负例",
+      "ownerRole": "证据系统开发；领域人员审查适用政策",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-06-2"
+      ],
+      "deliverableRef": "modules/MOD-06.md",
+      "acceptanceScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-07-1",
+      "moduleId": "MOD-07",
+      "title": "迁移失败信号与诊断材料要求",
+      "ownerRole": "流程内核开发；领域诊断人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-07.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-07-2",
+      "moduleId": "MOD-07",
+      "title": "实现RepairPlan/链关联/最小回退",
+      "ownerRole": "流程内核开发；领域诊断人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-07-1",
+        "DEV-01-2",
+        "DEV-03-2",
+        "DEV-11-2"
+      ],
+      "deliverableRef": "modules/MOD-07.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-07-3",
+      "moduleId": "MOD-07",
+      "title": "验证计数、原证据保留和设计根因路径",
+      "ownerRole": "流程内核开发；领域诊断人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-07-2"
+      ],
+      "deliverableRef": "modules/MOD-07.md",
+      "acceptanceScenarios": [
+        "ACC-07-01",
+        "ACC-07-02",
+        "ACC-07-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-08-1",
+      "moduleId": "MOD-08",
+      "title": "实现实体/唯一键/事务迁移与命令去重",
+      "ownerRole": "状态与可靠性开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-08.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-08-2",
+      "moduleId": "MOD-08",
+      "title": "实现outbox及owner/unknown恢复",
+      "ownerRole": "状态与可靠性开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-08-1",
+        "DEV-01-2"
+      ],
+      "deliverableRef": "modules/MOD-08.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-08-3",
+      "moduleId": "MOD-08",
+      "title": "做强杀、并发、备份恢复与版本迁移验证",
+      "ownerRole": "状态与可靠性开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-08-2"
+      ],
+      "deliverableRef": "modules/MOD-08.md",
+      "acceptanceScenarios": [
+        "ACC-08-01",
+        "ACC-08-02",
+        "ACC-08-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-09-1",
+      "moduleId": "MOD-09",
+      "title": "定义指标及输出闭合规范与科学fixture",
+      "ownerRole": "科学计算开发；领域验收人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-09.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-09-2",
+      "moduleId": "MOD-09",
+      "title": "实现计算/日志范围/验证报告接口",
+      "ownerRole": "科学计算开发；领域验收人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-09-1",
+        "DEV-01-2",
+        "DEV-05-2",
+        "DEV-19-2",
+        "DEV-11-2"
+      ],
+      "deliverableRef": "modules/MOD-09.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-09-3",
+      "moduleId": "MOD-09",
+      "title": "复核单位方向、统计充分性及D7四类结果",
+      "ownerRole": "科学计算开发；领域验收人员复核",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-09-2"
+      ],
+      "deliverableRef": "modules/MOD-09.md",
+      "acceptanceScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-10-1",
+      "moduleId": "MOD-10",
+      "title": "完成原资产/规则逐条映射与缺件补齐方案",
+      "ownerRole": "LAMMPS领域开发；科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-10.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-10-2",
+      "moduleId": "MOD-10",
+      "title": "实现LAMMPS包、模板、具名验证器",
+      "ownerRole": "LAMMPS领域开发；科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-10-1",
+        "DEV-01-2",
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-10.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-10-3",
+      "moduleId": "MOD-10",
+      "title": "用真实工具和科学审阅关闭四门与MB正反案例",
+      "ownerRole": "LAMMPS领域开发；科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-10-2"
+      ],
+      "deliverableRef": "modules/MOD-10.md",
+      "acceptanceScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-11-1",
+      "moduleId": "MOD-11",
+      "title": "实现ToolPort、预检与本地持久监督",
+      "ownerRole": "执行与HPC开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-11.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-11-2",
+      "moduleId": "MOD-11",
+      "title": "接入SSH/Slurm与显式MPI配置",
+      "ownerRole": "执行与HPC开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-11-1",
+        "DEV-01-2",
+        "DEV-05-2",
+        "DEV-08-2"
+      ],
+      "deliverableRef": "modules/MOD-11.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-11-3",
+      "moduleId": "MOD-11",
+      "title": "真实环境验证取消、未知提交、日志收集和重开",
+      "ownerRole": "执行与HPC开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-11-2"
+      ],
+      "deliverableRef": "modules/MOD-11.md",
+      "acceptanceScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-12-1",
+      "moduleId": "MOD-12",
+      "title": "明确知识类型/状态/检索及后端能力映射",
+      "ownerRole": "知识系统开发；知识审阅人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-12.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-12-2",
+      "moduleId": "MOD-12",
+      "title": "实现入库裁决、合并、memdir和后端适配",
+      "ownerRole": "知识系统开发；知识审阅人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-12-1",
+        "DEV-01-2",
+        "DEV-06-2",
+        "DEV-08-2"
+      ],
+      "deliverableRef": "modules/MOD-12.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-12-3",
+      "moduleId": "MOD-12",
+      "title": "对账历史库、检索评测与备份恢复，保留未支持边界",
+      "ownerRole": "知识系统开发；知识审阅人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-12-2"
+      ],
+      "deliverableRef": "modules/MOD-12.md",
+      "acceptanceScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-13-1",
+      "moduleId": "MOD-13",
+      "title": "扩展EvidenceBundle并迁移技能staging语义",
+      "ownerRole": "Agent评测开发；资产发布责任人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-13.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-13-2",
+      "moduleId": "MOD-13",
+      "title": "实现隔离配对评测和人工发布事务",
+      "ownerRole": "Agent评测开发；资产发布责任人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-13-1",
+        "DEV-01-2",
+        "DEV-02-2",
+        "DEV-08-2",
+        "DEV-12-2",
+        "DEV-18-2"
+      ],
+      "deliverableRef": "modules/MOD-13.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-13-3",
+      "moduleId": "MOD-13",
+      "title": "验证失败来源、自动激活阻断、覆盖冲突与恢复",
+      "ownerRole": "Agent评测开发；资产发布责任人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-13-2"
+      ],
+      "deliverableRef": "modules/MOD-13.md",
+      "acceptanceScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-14-1",
+      "moduleId": "MOD-14",
+      "title": "迁移图模板/OVITO适配及manifest字段",
+      "ownerRole": "科学可视化开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-14.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-14-2",
+      "moduleId": "MOD-14",
+      "title": "实现渲染/核验/分项报告",
+      "ownerRole": "科学可视化开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-14-1",
+        "DEV-01-2",
+        "DEV-05-2",
+        "DEV-09-2"
+      ],
+      "deliverableRef": "modules/MOD-14.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-14-3",
+      "moduleId": "MOD-14",
+      "title": "打开真实输出验证语义与复现依赖",
+      "ownerRole": "科学可视化开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-14-2"
+      ],
+      "deliverableRef": "modules/MOD-14.md",
+      "acceptanceScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-15-1",
+      "moduleId": "MOD-15",
+      "title": "定义用户操作到TaskSpec/Command映射",
+      "ownerRole": "应用与交互开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-15.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-15-2",
+      "moduleId": "MOD-15",
+      "title": "实现应用装配、TUI投影和RPC复用",
+      "ownerRole": "应用与交互开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-15-1",
+        "DEV-01-2",
+        "DEV-02-2",
+        "DEV-03-2",
+        "DEV-07-2",
+        "DEV-09-2",
+        "DEV-14-2",
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-15.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-15-3",
+      "moduleId": "MOD-15",
+      "title": "验证非交互、断连恢复及明确完成范围",
+      "ownerRole": "应用与交互开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-15-2"
+      ],
+      "deliverableRef": "modules/MOD-15.md",
+      "acceptanceScenarios": [
+        "ACC-15-01",
+        "ACC-15-02",
+        "ACC-15-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-16-1",
+      "moduleId": "MOD-16",
+      "title": "补全资产处置表、外部数据及缺件清单",
+      "ownerRole": "迁移开发；领域资产维护人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-16.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-16-2",
+      "moduleId": "MOD-16",
+      "title": "实现dry-run/导入/兼容字段与备份",
+      "ownerRole": "迁移开发；领域资产维护人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-16-1",
+        "DEV-01-2",
+        "DEV-05-2",
+        "DEV-08-2",
+        "DEV-10-2",
+        "DEV-12-2"
+      ],
+      "deliverableRef": "modules/MOD-16.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-16-3",
+      "moduleId": "MOD-16",
+      "title": "对账数量、类型、状态、引用并验证撤回切换",
+      "ownerRole": "迁移开发；领域资产维护人",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-16-2"
+      ],
+      "deliverableRef": "modules/MOD-16.md",
+      "acceptanceScenarios": [
+        "ACC-16-01",
+        "ACC-16-02",
+        "ACC-16-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-17-1",
+      "moduleId": "MOD-17",
+      "title": "冻结验证层次、场景/证据命名与追踪",
+      "ownerRole": "测试与集成负责人；有权接受者待指定",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-17.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-17-2",
+      "moduleId": "MOD-17",
+      "title": "执行跨模块、跨域及故障注入集成",
+      "ownerRole": "测试与集成负责人；有权接受者待指定",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-17-1",
+        "DEV-01-3",
+        "DEV-02-3",
+        "DEV-03-3",
+        "DEV-04-3",
+        "DEV-05-3",
+        "DEV-06-3",
+        "DEV-07-3",
+        "DEV-08-3",
+        "DEV-09-3",
+        "DEV-10-3",
+        "DEV-11-3",
+        "DEV-12-3",
+        "DEV-13-3",
+        "DEV-14-3",
+        "DEV-15-3",
+        "DEV-16-3",
+        "DEV-18-3",
+        "DEV-19-3",
+        "DEV-20-3",
+        "DEV-21-3"
+      ],
+      "deliverableRef": "modules/MOD-17.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-17-3",
+      "moduleId": "MOD-17",
+      "title": "形成完整性回执和未验证清单，交付产品接受",
+      "ownerRole": "测试与集成负责人；有权接受者待指定",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-17-2"
+      ],
+      "deliverableRef": "modules/MOD-17.md",
+      "acceptanceScenarios": [
+        "ACC-17-01",
+        "ACC-17-02",
+        "ACC-17-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-18-1",
+      "moduleId": "MOD-18",
+      "title": "复核基座失败与公开API缺口",
+      "ownerRole": "基座维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [],
+      "deliverableRef": "modules/MOD-18.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-18-2",
+      "moduleId": "MOD-18",
+      "title": "实现小范围通用接口/隔离/兼容补丁",
+      "ownerRole": "基座维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-18-1"
+      ],
+      "deliverableRef": "modules/MOD-18.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-18-3",
+      "moduleId": "MOD-18",
+      "title": "验证旧SDK和候选Pi兼容，保留回退构建",
+      "ownerRole": "基座维护开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-18-2"
+      ],
+      "deliverableRef": "modules/MOD-18.md",
+      "acceptanceScenarios": [
+        "ACC-18-01",
+        "ACC-18-02",
+        "ACC-18-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-19-1",
+      "moduleId": "MOD-19",
+      "title": "确定manifest资源/七文件兼容与包校验",
+      "ownerRole": "包与契约开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-19.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-19-2",
+      "moduleId": "MOD-19",
+      "title": "实现解析、能力绑定和锁比较",
+      "ownerRole": "包与契约开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-19-1",
+        "DEV-01-2"
+      ],
+      "deliverableRef": "modules/MOD-19.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-19-3",
+      "moduleId": "MOD-19",
+      "title": "验证三种领域包、冲突与版本冻结",
+      "ownerRole": "包与契约开发",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-19.md",
+      "acceptanceScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-20-1",
+      "moduleId": "MOD-20",
+      "title": "冻结Study/Exchange/Checkpoint契约及最小反例",
+      "ownerRole": "科学工作流开发；耦合模型审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-20.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-20-2",
+      "moduleId": "MOD-20",
+      "title": "实现有界活动展开、交换核验与同步恢复",
+      "ownerRole": "科学工作流开发；耦合模型审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-20-1",
+        "DEV-01-2",
+        "DEV-03-2",
+        "DEV-05-2",
+        "DEV-09-2",
+        "DEV-11-2"
+      ],
+      "deliverableRef": "modules/MOD-20.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-20-3",
+      "moduleId": "MOD-20",
+      "title": "用两类研究活动和最小耦合fixture验证非旁路语义",
+      "ownerRole": "科学工作流开发；耦合模型审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-20-2"
+      ],
+      "deliverableRef": "modules/MOD-20.md",
+      "acceptanceScenarios": [
+        "ACC-20-01",
+        "ACC-20-02",
+        "ACC-20-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-21-1",
+      "moduleId": "MOD-21",
+      "title": "冻结两类真实基准、工具能力与参考/容差来源",
+      "ownerRole": "宏观/统计仿真领域开发；各领域科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-01-1"
+      ],
+      "deliverableRef": "modules/MOD-21.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-21-2",
+      "moduleId": "MOD-21",
+      "title": "实现领域声明、工具绑定和计量适配",
+      "ownerRole": "宏观/统计仿真领域开发；各领域科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-21-1",
+        "DEV-01-2",
+        "DEV-09-2",
+        "DEV-11-2",
+        "DEV-19-2"
+      ],
+      "deliverableRef": "modules/MOD-21.md",
+      "acceptanceScenarios": [],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "id": "DEV-21-3",
+      "moduleId": "MOD-21",
+      "title": "运行真实宏观及事件正反例，提交独立科学核验",
+      "ownerRole": "宏观/统计仿真领域开发；各领域科学审查人员",
+      "assignedPerson": null,
+      "status": "planned",
+      "dependsOn": [
+        "DEV-21-2"
+      ],
+      "deliverableRef": "modules/MOD-21.md",
+      "acceptanceScenarios": [
+        "ACC-21-01",
+        "ACC-21-02",
+        "ACC-21-03"
+      ],
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    }
+  ]
+}

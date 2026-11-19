@@ -1,0 +1,5 @@
+
+> @redmaple/simulation@0.1.0 check
+> node scripts/check.js
+
+Checked 74 JavaScript files

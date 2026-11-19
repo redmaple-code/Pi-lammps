@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\redmaple\AppData\Local\RedMaple\simulation-envs\docking-v1\Lib\site-packages\meeko\cli\mk_prepare_receptor.py", line 1257, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "C:\Users\redmaple\AppData\Local\RedMaple\simulation-envs\docking-v1\Lib\site-packages\meeko\cli\mk_prepare_receptor.py", line 720, in main
+    polymer = Polymer.from_pdb_string(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\RedMaple\simulation-envs\docking-v1\Lib\site-packages\meeko\polymer.py", line 1653, in from_pdb_string
+    tmp_raw_input_mols = cls._pdb_to_residue_mols(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\RedMaple\simulation-envs\docking-v1\Lib\site-packages\meeko\polymer.py", line 2518, in _pdb_to_residue_mols
+    raise ValueError(msg)
+ValueError: interrupted residues in PDB: {'A:438'}
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m

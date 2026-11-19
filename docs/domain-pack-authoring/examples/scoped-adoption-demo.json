@@ -1,0 +1,582 @@
+{
+  "schemaVersion": "1.0.0",
+  "mode": "demonstration",
+  "storageSelection": "deferred",
+  "session": {
+    "id": "demonstration-session",
+    "revision": 1,
+    "objective": "演示用户引导、打标候选、经验追问及范围采用。",
+    "targetPackId": "fem-dynamics",
+    "scope": [
+      "demonstration",
+      "transient-analysis"
+    ],
+    "scopeState": "proposed",
+    "status": "active",
+    "adoptionPolicy": {
+      "semanticChangesRequireUserDecision": true,
+      "mechanicalActionsWithinAuthorization": true,
+      "batchDecisionsAllowed": true
+    },
+    "lastQuestionRefs": [
+      {
+        "id": "demo-question",
+        "revision": 1
+      }
+    ],
+    "decisionRefs": [],
+    "readiness": {
+      "design": "unassessed",
+      "knowledge": "unassessed",
+      "integration": "unassessed",
+      "validation": "unassessed"
+    }
+  },
+  "records": [
+    {
+      "id": "demo-account",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "source",
+      "data": {
+        "title": "构造经验摘录",
+        "sourceType": "userAccount",
+        "locator": "demo:inline-account",
+        "originGroupId": "demo-project",
+        "provenance": "userAccount",
+        "identityState": "unfrozen",
+        "readCoverage": {
+          "representation": "transcript",
+          "scope": "仅演示片段",
+          "limitations": [
+            "构造资料"
+          ]
+        },
+        "usage": {
+          "scope": [
+            "demonstration"
+          ],
+          "exportMode": "content",
+          "basis": "构造演示资料"
+        },
+        "inlineText": "构造演示材料。某次瞬态分析中，设置调整前后的响应发生变化。具体模型、阻尼、采样和结果证据待用户补充。"
+      }
+    },
+    {
+      "id": "demo-rule-source",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "source",
+      "data": {
+        "title": "构造机构的演示规程",
+        "sourceType": "standard",
+        "locator": "demo:inline-rule",
+        "originGroupId": "demo-rule-group",
+        "provenance": "originalReport",
+        "identityState": "unfrozen",
+        "edition": "DEMO-EDITION",
+        "readCoverage": {
+          "representation": "section",
+          "scope": "演示条款",
+          "limitations": [
+            "虚构机构与规程"
+          ]
+        },
+        "usage": {
+          "scope": [
+            "demonstration"
+          ],
+          "exportMode": "content",
+          "basis": "构造演示资料"
+        },
+        "inlineText": "构造演示条款。项目应在分析方案中说明评价时段与输出采样要求。"
+      }
+    },
+    {
+      "id": "demo-fragment",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "fragment",
+      "data": {
+        "sourceRef": {
+          "id": "demo-account",
+          "revision": 1
+        },
+        "location": {
+          "kind": "paragraph",
+          "value": "1"
+        },
+        "quote": "构造演示材料。某次瞬态分析中，设置调整前后的响应发生变化。具体模型、阻尼、采样和结果证据待用户补充。",
+        "extraction": "transcription",
+        "anchorStatus": "matched",
+        "limitations": [
+          "尚缺实际案例条件"
+        ]
+      }
+    },
+    {
+      "id": "demo-clause-fragment",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "fragment",
+      "data": {
+        "sourceRef": {
+          "id": "demo-rule-source",
+          "revision": 1
+        },
+        "location": {
+          "kind": "section",
+          "value": "演示条款1"
+        },
+        "quote": "构造演示条款。项目应在分析方案中说明评价时段与输出采样要求。",
+        "extraction": "originalText",
+        "anchorStatus": "matched",
+        "limitations": [
+          "虚构条款"
+        ]
+      }
+    },
+    {
+      "id": "demo-tag",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "tag",
+      "data": {
+        "facetId": "topic",
+        "displayName": "输出采样",
+        "definition": "用于定位采样相关材料的候选标签。",
+        "aliases": [
+          "sampling"
+        ],
+        "includeExamples": [
+          "时程输出间隔"
+        ],
+        "excludeExamples": [
+          "空间网格尺寸"
+        ],
+        "status": "proposed",
+        "decisionRefs": []
+      }
+    },
+    {
+      "id": "demo-observation",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "knowledge",
+      "data": {
+        "kind": "observation",
+        "statement": "演示材料报告了设置调整前后响应变化。",
+        "conditions": [
+          "模型/工况/软件版本待补"
+        ],
+        "scope": [
+          "demonstration",
+          "transient-analysis"
+        ],
+        "exceptions": [],
+        "sourceRefs": [
+          {
+            "id": "demo-fragment",
+            "revision": 1
+          }
+        ],
+        "provenance": "userAccount",
+        "lifecycle": "candidate",
+        "epistemicStatus": "unassessed",
+        "useDecision": "referenceOnly",
+        "decisionRefs": []
+      }
+    },
+    {
+      "id": "demo-practice",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "knowledge",
+      "data": {
+        "kind": "practice",
+        "statement": "候选设计动作是在方案中明确评价时段与输出采样。",
+        "conditions": [
+          "项目适用性待审"
+        ],
+        "scope": [
+          "demonstration",
+          "transient-analysis"
+        ],
+        "exceptions": [],
+        "sourceRefs": [
+          {
+            "id": "demo-clause-fragment",
+            "revision": 1
+          }
+        ],
+        "provenance": "analystReconstruction",
+        "lifecycle": "candidate",
+        "epistemicStatus": "unassessed",
+        "useDecision": "referenceOnly",
+        "decisionRefs": []
+      }
+    },
+    {
+      "id": "demo-annotation",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "annotation",
+      "data": {
+        "targetRef": {
+          "id": "demo-clause-fragment",
+          "revision": 1
+        },
+        "anchorRefs": [
+          {
+            "id": "demo-clause-fragment",
+            "revision": 1
+          }
+        ],
+        "assignments": [
+          {
+            "tagRef": {
+              "id": "demo-tag",
+              "revision": 1
+            },
+            "reason": "条款涉及输出采样。",
+            "basisRefs": [
+              {
+                "id": "demo-clause-fragment",
+                "revision": 1
+              }
+            ]
+          }
+        ],
+        "status": "suggested",
+        "assignmentBasis": "aiProposal",
+        "decisionRefs": []
+      }
+    },
+    {
+      "id": "demo-case",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "case",
+      "data": {
+        "title": "待复原的构造案例",
+        "context": "演示瞬态设置经验访谈。",
+        "sourceRefs": [
+          {
+            "id": "demo-account",
+            "revision": 1
+          }
+        ],
+        "stages": [
+          {
+            "id": "finding",
+            "kind": "finding",
+            "statement": "材料中报告了响应变化。",
+            "status": "documented",
+            "provenance": "userAccount",
+            "basisRefs": [
+              {
+                "id": "demo-fragment",
+                "revision": 1
+              }
+            ]
+          },
+          {
+            "id": "mechanism",
+            "kind": "mechanism",
+            "statement": "原因和共同变化待核。",
+            "status": "gap",
+            "provenance": "analystReconstruction",
+            "basisRefs": []
+          }
+        ],
+        "transferLimits": [
+          "实际条件待补"
+        ]
+      }
+    },
+    {
+      "id": "demo-clause",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "clause",
+      "data": {
+        "sourceRef": {
+          "id": "demo-rule-source",
+          "revision": 1
+        },
+        "fragmentRef": {
+          "id": "demo-clause-fragment",
+          "revision": 1
+        },
+        "issuer": "虚构演示机构",
+        "documentNumber": "DEMO-RULE",
+        "edition": "DEMO-EDITION",
+        "clauseLocator": "演示条款1",
+        "normativeForce": "normative",
+        "effectiveStatus": "unknown",
+        "authorityVerification": "unverified",
+        "projectApplicability": "unassessed",
+        "conditions": [
+          "适用项目待用户说明"
+        ],
+        "exceptions": [],
+        "decisionRefs": []
+      }
+    },
+    {
+      "id": "demo-binding",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "binding",
+      "data": {
+        "knowledgeRef": {
+          "id": "demo-practice",
+          "revision": 1
+        },
+        "packElementRef": "fem-dynamics/checks#output-sampling",
+        "purpose": "将待采用内容映射为检查候选。",
+        "transformation": "补齐条件、方法和证据后形成检查。",
+        "status": "proposed",
+        "decisionRefs": [],
+        "validationRefs": []
+      }
+    },
+    {
+      "id": "demo-gap",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "gap",
+      "data": {
+        "question": "哪些条件发生变化，怎样判断结果？",
+        "affectedDecision": "输入设计和采样检查",
+        "impact": "影响经验归因及适用范围。",
+        "status": "waitingUser",
+        "knownRefs": [
+          {
+            "id": "demo-fragment",
+            "revision": 1
+          }
+        ],
+        "nextAction": "围绕原案例追问条件、动作和评价。",
+        "recoveryCondition": "用户补充或取得相关材料。"
+      }
+    },
+    {
+      "id": "demo-question",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "question",
+      "data": {
+        "catalogId": "Q-07",
+        "gapRef": {
+          "id": "demo-gap",
+          "revision": 1
+        },
+        "prompt": "当时具体改了什么，还同时发生了哪些变化？",
+        "purpose": "拆分观察与归因。",
+        "answerForms": [
+          "narrative",
+          "sourceRef",
+          "unknown",
+          "defer"
+        ],
+        "status": "queued",
+        "answerRefs": []
+      }
+    },
+    {
+      "id": "demo-intake",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "intake",
+      "data": {
+        "sourceRefs": [
+          {
+            "id": "demo-account",
+            "revision": 1
+          },
+          {
+            "id": "demo-rule-source",
+            "revision": 1
+          }
+        ],
+        "contributor": "fixture-author",
+        "receivedVia": "import",
+        "purpose": "演示资料与待审候选链。",
+        "status": "reviewReady"
+      }
+    },
+    {
+      "id": "demo-observation",
+      "revision": 2,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-author",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "knowledge",
+      "data": {
+        "kind": "observation",
+        "statement": "演示材料报告了设置调整前后响应变化。",
+        "conditions": [
+          "模型/工况/软件版本待补"
+        ],
+        "scope": [
+          "demonstration",
+          "transient-analysis"
+        ],
+        "exceptions": [],
+        "sourceRefs": [
+          {
+            "id": "demo-fragment",
+            "revision": 1
+          }
+        ],
+        "provenance": "userAccount",
+        "lifecycle": "confirmed",
+        "epistemicStatus": "unassessed",
+        "useDecision": "projectPractice",
+        "decisionRefs": [
+          {
+            "id": "demo-decision",
+            "revision": 1
+          }
+        ]
+      },
+      "adoptionBaseRef": {
+        "id": "demo-observation",
+        "revision": 1
+      }
+    },
+    {
+      "id": "demo-decision",
+      "revision": 1,
+      "createdAt": "2026-11-17T00:00:00Z",
+      "actor": {
+        "id": "fixture-user",
+        "kind": "demonstration"
+      },
+      "originMode": "demonstration",
+      "recordType": "decision",
+      "data": {
+        "subjects": [
+          {
+            "ref": {
+              "id": "demo-observation",
+              "revision": 1
+            },
+            "contentDigest": "sha256:b06cc0694ff3c8fdd55412bee716eff8d6de7df0a6f795b7db2580815ac3235f"
+          }
+        ],
+        "canonicalization": "RFC8785",
+        "verdict": "adopt",
+        "scope": [
+          "demonstration",
+          "transient-analysis"
+        ],
+        "intendedUse": "projectPractice",
+        "reason": "构造采用，用于检验用途与认识状态分离。",
+        "basisRefs": [
+          {
+            "id": "demo-fragment",
+            "revision": 1
+          }
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "fromRef": {
+        "id": "demo-practice",
+        "revision": 1
+      },
+      "relation": "derivedFrom",
+      "toRef": {
+        "id": "demo-clause-fragment",
+        "revision": 1
+      },
+      "scope": [
+        "demonstration"
+      ],
+      "basisRefs": [
+        {
+          "id": "demo-clause-fragment",
+          "revision": 1
+        }
+      ]
+    }
+  ],
+  "externalRefs": []
+}

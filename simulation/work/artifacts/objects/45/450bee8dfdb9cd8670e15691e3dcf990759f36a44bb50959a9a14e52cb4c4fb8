@@ -1,0 +1,157 @@
+{
+  "packet": "research:3",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "stage": "research",
+  "role": "lammps-case-librarian",
+  "decision": "proceed",
+  "summary": "Baseline is domains/lammps/references/in.indent.lmp (2D LJ single-asperity indenter); its geometry-layering, moving-rigid-sphere and boundary-freeze mechanisms are reusable, but it supplies no force-output machinery, is 2D/LJ-only, and is single-component, so it is a mechanism reference only and does not validate material physics.",
+  "baselineSelection": {
+    "sourceId": "research-source",
+    "locator": "domains/lammps/references/in.indent.lmp",
+    "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3",
+    "linesRead": "1-68 of 68",
+    "whySelected": "Only registered case source in this stage; it is the bundled indentation example and contains the substrate-layer + rigid-indenter + hold-layer + thermal-control skeleton that the 3D grinding case needs.",
+    "whatItIs": "2D, Lennard-Jones, single-species, two-type atom system: lattice-filled slab indented by a spring-loaded circle, then unloaded.",
+    "whatItIsNot": [
+      "Not 3D (dimension 2 with fix enforce2d)",
+      "Not multi-component (one mass, one universal LJ coefficient line)",
+      "Not a grinding traverse (tip moves along one axis in a straight indentation ramp)",
+      "Not a metal-potential case (no EAM/alloy, no element-type mapping)",
+      "Not a force-output template (no fix ave/time, no force CSV, dumps commented out)"
+    ]
+  },
+  "evidence": [
+    {"lineRef": "L1", "quote": "# 2d indenter simulation", "significance": "Baseline self-declares 2D dimensionality; 3D porting is required, not optional."},
+    {"lineRef": "L3", "quote": "dimension\t2", "significance": "Must become dimension 3 for the target case."},
+    {"lineRef": "L4", "quote": "boundary\tp s p", "significance": "Shrink-wrapped free surface in y supports the indentation free surface; target D4 asks free x/z, periodic y, i.e. the axis mapping is inverted."},
+    {"lineRef": "L7-L8", "quote": "neighbor 0.3 bin / neigh_modify delay 5", "significance": "Reusable skeleton of a short-delay neighbor rebuild after motion; must be re-tuned for metal-unit cutoffs and a 5-element potential."},
+    {"lineRef": "L12-L15", "quote": "lattice hex 0.9 / region box block 0 20 0 10 -0.25 0.25 / create_box 2 / create_atoms 1 box", "significance": "Reusable lattice+box+region atom construction pattern; target uses 20x10x8 fcc cells (4-atom basis => 6400 atoms), so the same fill-then-counts logic maps onto fcc with a 5-type box."},
+    {"lineRef": "L17-L18", "quote": "mass 1 1.0 / mass 2 1.0", "significance": "Two types carry the substrate/fixed split; target must carry 5 element masses from the EAM setfl file plus an abrasive type, so type-index semantics change."},
+    {"lineRef": "L22-L23", "quote": "pair_style lj/cut 2.5 / pair_coeff * * 1.0 1.0 2.5", "significance": "Universal-coefficient LJ is the single largest physics difference: target needs pair_style eam/alloy with 5 element names in the pair_coeff order matching the setfl file."},
+    {"lineRef": "L27-L30", "quote": "region 1 block INF INF INF 1.25 INF INF / group lower region 1 / group mobile subtract all lower / set group lower type 2", "significance": "Reusable region-based layer definition (fixed layer + mobile = complement). Reusable mechanism; the type-assignment trick is NOT reusable once types encode elements."},
+    {"lineRef": "L34-L35", "quote": "compute new mobile temp / velocity mobile create 0.2 482748 temp new", "significance": "Reusable mobile-layer-only temperature compute and seeded velocity creation (seed 482748 also appears in the target scheme)."},
+    {"lineRef": "L36-L38", "quote": "fix 1 all nve / fix 2 lower setforce 0.0 0.0 0.0 / fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0", "significance": "Static-boundary mechanism is setforce-zero on an integrated group, not exclusion from integration; thermostat is temp/rescale over ALL atoms, which conflicts with the target boundary-Langevin + NVE-mobile design."},
+    {"lineRef": "L42-L44", "quote": "timestep 0.003 / variable k equal 1000.0/xlat / variable y equal \"13.0*ylat - step*dt*0.02*ylat\"", "significance": "Reusable 'lattice-scaled stiffness' and 'time-resolved tip position via equal-style variable driven by step*dt' idiom; unit system here is default LJ (no units command present), target is metal units with 0.001 ps."},
+    {"lineRef": "L46-L47", "quote": "fix 4 all indent $k sphere 10 v_y 0 5.0 / fix 5 all enforce2d", "significance": "Reusable harmonic rigid-sphere asperity mechanism (radius 10, per-atom force k*depth outward); fix enforce2d must be dropped in 3D."},
+    {"lineRef": "L49-L50", "quote": "thermo 1000 / thermo_modify temp new", "significance": "Only scalar time-series output present; no group force reduction, so nothing in the baseline can produce the required grinding.csv/approach.csv force columns."},
+    {"lineRef": "~L52-L58 (commented)", "quote": "#dump 1 all atom 250 dump.indent ... #dump 3 all movie ...", "significance": "Tray/dump machinery exists but is disabled; trajectory output must be enabled and retargeted (100-step trajectory, 20-step force sampling in the scheme)."},
+    {"lineRef": "~L62-L65", "quote": "run 30000 / # run without indenter / unfix 4 / run 30000", "significance": "Reusable unload/relaxation-after-contact structure, the closest analog to a post-pass springback segment."}
+  ],
+  "reusableMechanisms": [
+    {
+      "id": "layered-substrate-construction",
+      "mechanism": "Build the slab by lattice + region box + create_atoms, then carve a hold layer with a plane/block region (region 1 block INF INF INF 1.25 INF INF) and define mobile as subtract all lower. This gives an exact, restart-stable layer partition without per-atom selection logic.",
+      "evidence": "L12-L15, L27-L30",
+      "portTo3D": "Replace hex/2D box with fcc lattice at 3.56 A over 20x10x8 cells; use a z-based block region for the bottom fixed layer and a second z-band for the thermostatted layer; 6400 atoms must be confirmed by the same region-bounded fill."
+    },
+    {
+      "id": "region-to-group-partition (not type-to-group)",
+      "mechanism": "Groups are defined from geometry, mobile is the complement of the fixed region; type reassignment is only used as a visualization/species tag.",
+      "evidence": "L27-L30",
+      "portTo3D": "Keep the geometric partition, delete the 'set group lower type 2' step: in the target, atom types 1-5 are Fe Ni Cr Co Cu, so retyping a boundary atom would corrupt composition accounting (equatomic 20% each). Use groups (fixed/thermal/mobile) instead of types for mechanics."
+    },
+    {
+      "id": "harmonic-rigid-sphere-asperity",
+      "mechanism": "fix indent with a sphere center/radius applies a per-atom harmonic repulsion proportional to penetration depth, giving a stiff, non-deformable abrasive with a tunable k.",
+      "evidence": "L46",
+      "portTo3D": "Same fix works in 3D with a 3D center and sphere radius 12 A; depth of 3 A sets penetration. k must be re-expressed in eV/A^3-per-atom form (scheme stiffnessEVPerAngstromCubed = 10) rather than the baseline's 1000/xlat LJ scaling - unit conversion is unresolved (see limitations)."
+    },
+    {
+      "id": "time-resolved-tip-position",
+      "mechanism": "An equal-style variable y = f(ylat, step, dt) plus a velocity on the fix drives the tip progressively; stiffness itself is a variable so it can be scaled with lattice constant.",
+      "evidence": "L43-L44, L46",
+      "portTo3D": "Drive the abrasive with a lateral +x position at 10 A/ps and a fixed depth; the tip displacement actually achieved must be logged to prove the 7.6 A travel minimum, which the baseline never measures."
+    },
+    {
+      "id": "boundary-freeze-via-setforce",
+      "mechanism": "The hold layer stays put because its net force is zeroed each step while it remains in the integration fix and neighbor lists.",
+      "evidence": "L37 (+L36)",
+      "portTo3D": "Usable, but for the fixedMaxDisplacementAngstrom <= 1e-6 acceptance the safer variant is to exclude the fixed group from the NVE fix (fix nve mobile) and additionally zero its velocities; setforce-only leaves the zero-drift guarantee implicit."
+    },
+    {
+      "id": "sampled-thermostat-band",
+      "mechanism": "A dedicated temp compute over the mobile (non-rigid) region plus a thermostat with a damping window keeps sheared material near target T while the rigid layer is untouched.",
+      "evidence": "L34-L35, L38",
+      "portTo3D": "Replace global temp/rescale with a boundary Langevin layer and NVE on the mobile core (scheme D5); global rescaling would erase the shear-heating signal the grinding force/temperature outputs are meant to capture."
+    },
+    {
+      "id": "contact-then-release-segmentation",
+      "mechanism": "Two run segments with unfix 4 in between separate the loaded pass from the unloading/relaxation response.",
+      "evidence": "~L62-L65",
+      "portTo3D": "Maps onto approach (400 steps) -> grinding (800 steps) -> release; keep the segmentation so approach.csv and grinding.csv are separated by unfix/run boundaries rather than by post-hoc time slicing."
+    }
+  ],
+  "differencesFor3DMultiComponentGrinding": [
+    {
+      "axis": "dimensionality",
+      "baseline": "dimension 2 + fix enforce2d, hex 2D lattice, shrink-wrapped y",
+      "target": "dimension 3, fcc 3.56 A, 20x10x8 cells, free x/z and periodic y",
+      "consequence": "enforce2d must be removed; boundary axis roles invert (baseline shrink-wraps the indentation normal, target shrink-wraps the loaded normal stack)."
+    },
+    {
+      "axis": "chemistry / potential",
+      "baseline": "one universal LJ coefficient line for 2 types",
+      "target": "Farkas-Caro 2018 corrected EAM/alloy for Fe-Ni-Cr-Co-Cu (doi 10.1557/jmr.2018.245), 5 types + abrasive type",
+      "consequence": "pair_coeff must name the 5 elements in the setfl-file order; mixing rules, cutoffs and neighbor skin all change; the abrasive-substrate interaction must become an explicit repulsive/contact treatment because EAM covers only the metal."
+    },
+    {
+      "axis": "type semantics",
+      "baseline": "type 2 means 'fixed layer'",
+      "target": "types 1-5 are elements; mechanics must key on groups",
+      "consequence": "Composition audit (equatomic 20% each) requires type counts to stay pure; reusing 'set group lower type 2' would silently change the alloy."
+    },
+    {
+      "axis": "motion / kinematics",
+      "baseline": "single-axis indentation ramp (13.0*ylat - step*dt*0.02*ylat), no lateral traverse, no travel accounting",
+      "target": "approach normal then lateral +x at 10 A/ps, R=12 A, depth 3 A, travel >= 7.6 A",
+      "consequence": "Traverse must be an explicit position schedule; the baseline has no mechanism to separate normal from tangential force or to track contact duration (>=10 contact samples)."
+    },
+    {
+      "axis": "units",
+      "baseline": "no units command => default LJ units; timestep 0.003 (tau); stiffness 1000/xlat (LJ energy/length^2)",
+      "target": "metal units; timestep 0.001 ps; 300 K; stiffness expressed as 10 eV/A^3",
+      "consequence": "Every numeric constant (timestep, velocity, thermostat damping, k, cutoff, dump/force intervals at 100/20 steps) must be re-derived; direct copy is a silent unit error."
+    },
+    {
+      "axis": "thermostat architecture",
+      "baseline": "temp/rescale over ALL atoms with a 100-step window",
+      "target": "boundary Langevin layer, NVE mobile, single temperature target",
+      "consequence": "Global rescaling would mask the grinding heating signal; the baseline pattern is the one thing to deliberately not reuse."
+    },
+    {
+      "axis": "force output",
+      "baseline": "none: only thermo 1000 and thermo_modify temp new; dumps commented out; no compute reduce, no fix ave/time, no per-group force columns",
+      "target": "grinding.csv + approach.csv with normal/tangential force sampled every 20 steps, plus trajectory/initial/final dumps every 100 and final.data/final.restart",
+      "consequence": "Force-output machinery must be written from scratch: contact group = abrasive atoms or substrate atoms within cutoff of the tip, then compute reduce sum on fx/fy/fz for that group, cached by fix ave/time at 20 steps into the CSV. The baseline contributes nothing here and cannot be cited as a force-output precedent."
+    },
+    {
+      "axis": "atoms / bookkeeping",
+      "baseline": "count implied by lattice fill of a 20x10 2D box (~3600 atoms, 2 types)",
+      "target": "exactly 6400 retained atoms (acceptance field atomCount equals 6400)",
+      "consequence": "Count must be closed at build time and re-verified after the 400-step equilibration; any loss/insertion breaks the retention criterion."
+    }
+  ],
+  "nonClaims": [
+    "This baseline does NOT validate material physics: it uses Lennard-Jones parameters with unit masses, not a FeNiCrCoCu EAM potential.",
+    "Agreement or plausibility of the baseline's indentation response says nothing about grinding forces, wear or temperature in the target case.",
+    "No quantitative material-model validation is claimed: support-context records material-model-validation and grinding-reference comparisons as missing for lack of applicable data.",
+    "The baseline has no time-step convergence evidence; the target's time-step-convergence comparison is likewise recorded as missing (no finer-step run exists).",
+    "Reuse is limited to input mechanics (geometry layering, rigid-sphere contact, group partitioning, run segmentation), not to physics or to force output."
+  ],
+  "limitations": [
+    "Baseline mismatch: the only registered case source is 2D and Lennard-Jones with a single universal coefficient, while the target is 3D, metal units, five-element EAM/alloy with a separate abrasive type.",
+    "No 3D multi-component indentation/grinding baseline is registered in this stage; the mechanism mapping above is an adaptation proposal, not a verified port.",
+    "Force-output evidence gap is total: in.indent.lmp contains no fix ave/time, no compute reduce, no force CSV and no active dump, so required grinding.csv/approach.csv columns have no local precedent.",
+    "Stiffness unit ambiguity: the scheme names stiffnessEVPerAngstromCubed = 10 while fix indent takes a force-per-length constant; the conversion implied by the baseline's 1000/xlat lattice scaling is not resolved from available sources.",
+    "Potential file content was not read in this stage; the correct pair_coeff element ordering and the abrasive interaction form must be confirmed against the actual FeNiCrCoCu-heafixed.setfl file before writing inputs.",
+    "Local knowledge-base retrieval (case-family index, potential-selection rules, failure patterns, confirmed vs pending lessons, LAMMPS manual pages) was not available from the two sources registered for this stage; no lesson is cited as confirmed experience memory.",
+    "The baseline's fixed-layer hold is setforce-only while the group remains integrated; the <=1e-6 A drift acceptance is therefore not demonstrated by this precedent.",
+    "Frame-of-reference caution: baseline boundary is p s p with the free surface on y, whereas D4 requests free x/z with periodic y, so axis conventions cannot be copied line-for-line."
+  ],
+  "handoff": {
+    "recommendedArtifactLocation": "work/cases/<case-slug>/",
+    "nextStageAction": "Architect may proceed: author in.case from this mechanism map, adding (a) eam/alloy pair_coeff with confirmed element order, (b) group-based fixed/thermal/mobile partition instead of retyping, (c) explicit normal+tangential force reduction with fix ave/time at 20 steps, (d) tip-travel accounting for the 7.6 A minimum, and (e) removal of enforce2d and global temp/rescale.",
+    "mustNotDo": "Do not cite in.indent.lmp as physics evidence or as a force-output precedent."
+  },
+  "confidence": "medium"
+}

@@ -1,0 +1,48 @@
+TAP version 13
+# Subtest: cURL transport preserves JSON Unicode, quoting, headers and incremental SSE content
+ok 1 - cURL transport preserves JSON Unicode, quoting, headers and incremental SSE content
+  ---
+  duration_ms: 745.1576
+  type: 'test'
+  ...
+# Subtest: cURL transport preserves HTTP error bodies and aborts streaming requests
+ok 2 - cURL transport preserves HTTP error bodies and aborts streaming requests
+  ---
+  duration_ms: 634.4768
+  type: 'test'
+  ...
+# (node:52348) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: provider configuration requires the explicit endpoint and credentials
+ok 3 - provider configuration requires the explicit endpoint and credentials
+  ---
+  duration_ms: 185.8129
+  type: 'test'
+  ...
+# Subtest: model selection preserves the host callback and blocks a different provider/model before sending
+ok 4 - model selection preserves the host callback and blocks a different provider/model before sending
+  ---
+  duration_ms: 1.4725
+  type: 'test'
+  ...
+# Subtest: shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+ok 5 - shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+  ---
+  duration_ms: 8.1655
+  type: 'test'
+  ...
+# Subtest: real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+ok 6 - real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+  ---
+  duration_ms: 20454.2971
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 27842.581

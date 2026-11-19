@@ -1,0 +1,48 @@
+{
+  "type_id": "legacy_anchor",
+  "label": "旧库物理锚点",
+  "description": "从 review_experience 的 physics-anchor 条目迁移；raw_json 保存原始记录，quantity/unit/range/reduction 等字段由消费者按原名读取。",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "quantity": {
+        "kind": "text",
+        "max_len": 500
+      },
+      "unit": {
+        "kind": "text",
+        "max_len": 120
+      },
+      "rationale": {
+        "kind": "text",
+        "max_len": 4000
+      },
+      "raw_json": {
+        "kind": "text",
+        "required": true,
+        "max_len": 20000
+      }
+    },
+    "render": [
+      "statement",
+      "quantity",
+      "unit",
+      "rationale",
+      "raw_json"
+    ],
+    "required_facets": [
+      "topic"
+    ],
+    "review_checklist": [
+      "原始记录完整保存在 raw_json",
+      "legacy_id 与旧库一致",
+      "状态映射正确"
+    ],
+    "require_sources": false
+  }
+}

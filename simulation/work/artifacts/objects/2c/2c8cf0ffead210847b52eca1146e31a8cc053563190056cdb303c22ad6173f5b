@@ -1,0 +1,129 @@
+[
+  {
+    "id": "figure-draft-6e1153aa-66d0-4539-8773-b2ed191d8ecc",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-e13a57f2-0e24-4998-9493-31a4d8f8bd3f",
+        "digest": "sha256:a3b2a1b3b028d67234b236661e1151f2444957fff6e6417028b79bc94d18b609",
+        "byteLength": 175028,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a3\\a3b2a1b3b028d67234b236661e1151f2444957fff6e6417028b79bc94d18b609",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T07:16:14.890Z",
+        "metadata": {
+          "type": "image",
+          "name": "cross-section.png",
+          "caseId": "hea-grinding-71f5363a-92f3-4b73-90d9-f899f5030a07",
+          "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+          "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224"
+        },
+        "dependencies": []
+      }
+    ],
+    "name": "cross-section.png",
+    "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+    "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224",
+    "inspection": {
+      "name": "cross-section.png",
+      "opened": true,
+      "checked": [
+        "Actual before/after image opened",
+        "Panels have equal spatial scales",
+        "Localized displacement is visible at the short-pass contact region",
+        "Fixed bottom layer remains stationary"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-637d44a2-3966-47c8-8dc4-20b358c19b1a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T07:17:19.292Z"
+    },
+    "status": "generated"
+  },
+  {
+    "id": "figure-draft-2af59ebb-687c-475a-8443-f709dc125ec8",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-5aaefba6-279a-4df2-b6bd-1a9ecd4eba2b",
+        "digest": "sha256:517fa7c8f11a58b1ee6654773f799a3731199f62b54bda7bc199765384600e9f",
+        "byteLength": 75935,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\51\\517fa7c8f11a58b1ee6654773f799a3731199f62b54bda7bc199765384600e9f",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T07:16:14.904Z",
+        "metadata": {
+          "type": "image",
+          "name": "force-temperature.png",
+          "caseId": "hea-grinding-71f5363a-92f3-4b73-90d9-f899f5030a07",
+          "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+          "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224"
+        },
+        "dependencies": []
+      }
+    ],
+    "name": "force-temperature.png",
+    "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+    "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224",
+    "inspection": {
+      "name": "force-temperature.png",
+      "opened": true,
+      "checked": [
+        "Actual force/temperature image opened",
+        "Axes and units match the short regression run",
+        "High initial normal-force and temperature transients are visible and retained",
+        "This short run is used for software regression"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-637d44a2-3966-47c8-8dc4-20b358c19b1a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T07:17:19.295Z"
+    },
+    "status": "generated"
+  },
+  {
+    "id": "figure-draft-9edbbb02-d320-43b1-9837-7cfa0fc5045d",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-0d5b194b-ed3a-4a72-8e55-c099c60b8a9f",
+        "digest": "sha256:ca164fa193f0bb11d8689857eba3504fb946de3c46ac5f538d2a218ead43ccf2",
+        "byteLength": 809053,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ca\\ca164fa193f0bb11d8689857eba3504fb946de3c46ac5f538d2a218ead43ccf2",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T07:16:14.932Z",
+        "metadata": {
+          "type": "image",
+          "name": "grinding-atoms-ovito.png",
+          "caseId": "hea-grinding-71f5363a-92f3-4b73-90d9-f899f5030a07",
+          "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+          "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224"
+        },
+        "dependencies": []
+      }
+    ],
+    "name": "grinding-atoms-ovito.png",
+    "runRef": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+    "analysisRef": "artifact-b951ec7c-90fc-4384-812f-ce4e08fa3224",
+    "inspection": {
+      "name": "grinding-atoms-ovito.png",
+      "opened": true,
+      "checked": [
+        "Actual OVITO Tachyon image opened",
+        "Central y slab contains the substrate and final contact groove",
+        "Positive x runs left to right with z upward",
+        "Five particle types use distinct colors",
+        "Analytical spherical abrasive has no explicit atoms and is described in render metadata"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-637d44a2-3966-47c8-8dc4-20b358c19b1a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T07:17:19.308Z"
+    },
+    "status": "generated"
+  }
+]

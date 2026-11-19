@@ -1,0 +1,89 @@
+{
+  "id": "models",
+  "items": [
+    {
+      "id": "dynamic-equilibrium",
+      "equation": "M a + C v + f_int(u) = f_ext(t)",
+      "parameters": [
+        "density",
+        "material",
+        "damping",
+        "initialState",
+        "boundary",
+        "excitation"
+      ],
+      "sourceRefs": [
+        "dynamics-methods"
+      ]
+    },
+    {
+      "id": "linear-modes",
+      "equation": "K phi = omega^2 M phi",
+      "assumptions": [
+        "指定状态线性化",
+        "固定质量和约束"
+      ],
+      "parameters": [
+        "modeRange",
+        "preload",
+        "normalization"
+      ],
+      "sourceRefs": [
+        "dynamics-methods"
+      ]
+    },
+    {
+      "id": "rayleigh",
+      "equation": "C=alpha*M+beta*K; zeta=alpha/(2*omega)+beta*omega/2",
+      "units": {
+        "alpha": "1/s",
+        "beta": "s"
+      },
+      "parameters": [
+        "fitFrequencies",
+        "targetRatios",
+        "analysisBand"
+      ],
+      "toolRequirement": "核对当前步骤/工具所支持阻尼。",
+      "sourceRefs": [
+        "dynamics-methods"
+      ]
+    },
+    {
+      "id": "harmonic-linear",
+      "equation": "(K-omega^2*M+i*omega*C) U=F, exp(i*omega*t)",
+      "assumptions": [
+        "线性周期稳态",
+        "明确峰值/RMS"
+      ],
+      "parameters": [
+        "band",
+        "modeCutoff",
+        "damping",
+        "phase"
+      ],
+      "sourceRefs": [
+        "dynamics-methods",
+        "ccx-harmonic"
+      ]
+    },
+    {
+      "id": "explicit-impact",
+      "assumptions": [
+        "验证过的时间推进/材料/接触",
+        "步长和人工处理受控"
+      ],
+      "parameters": [
+        "initialVelocity",
+        "contact",
+        "stableStep",
+        "massTreatment",
+        "hourglass"
+      ],
+      "sourceRefs": [
+        "ccx-direct",
+        "dynamics-methods"
+      ]
+    }
+  ]
+}

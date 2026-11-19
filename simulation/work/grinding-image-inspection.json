@@ -1,0 +1,17 @@
+[
+  {
+    "name": "force-temperature.png",
+    "opened": true,
+    "checked": ["Actual force and temperature curves opened", "Distance axis in nm and force axis in nN match the stored analysis", "Contact reactions are nonzero through the pass", "Mobile temperature remains finite and rises during the pass"]
+  },
+  {
+    "name": "cross-section.png",
+    "opened": true,
+    "checked": ["Before and after panels opened with the same spatial scale", "Initial center-slab atom IDs remain associated with final positions", "Surface depression and local displacement are visible near final abrasive location", "Displacement colorbar includes the observed maximum and bottom layer remains fixed"]
+  },
+  {
+    "name": "grinding-atoms-ovito.png",
+    "opened": true,
+    "checked": ["Actual OVITO Tachyon image opened", "Central y slab contains the substrate and final contact groove", "Positive x runs left to right with z upward", "Five particle types use distinct colors", "Analytical spherical abrasive has no explicit atoms and is described in render metadata"]
+  }
+]

@@ -1,0 +1,275 @@
+[
+  {
+    "id": "AI-001",
+    "finding": "质量核验使用输入声明，未核实 EAM 加载后实际质量",
+    "impact": "Ni、Co、Cu 的实际运行质量与 structure-report 不一致。Cu 从 63.55 变为 63.0，变化 −0.865%",
+    "statusAndEvidence": "待修复。final.data、势文件头及 [质量核验](../../../simulation/audits/2026-11-17/final-state-audit.json)",
+    "remediation20261118": {
+      "status": "acceptedByUser",
+      "note": "用户接受该质量误差，本轮不处理"
+    }
+  },
+  {
+    "id": "AI-002",
+    "finding": "resume 的缓存命中仅核对 revisionId，遗漏阶段失效状态",
+    "impact": "当前阶段 pending、案例 active 时，仍返回旧 completed",
+    "statusAndEvidence": "待修复。已在隔离临时案例重现，[复现结果](../../../simulation/audits/2026-11-17/workflow-probe.json)",
+    "remediation20261118": {
+      "status": "verifiedWithinROLE2Scope",
+      "evidence": "../2026-11-18-role-workflow/handoff.json",
+      "note": "本轮工程验证通过，历史发现及原证据保留"
+    }
+  },
+  {
+    "id": "AI-003",
+    "finding": "真实磨削主链的全角色语义编排未贯通",
+    "impact": "主流程主要由硬编码领域程序与宿主检查执行，13 个角色定义和 SDK 端口尚未形成完整自主研究链",
+    "statusAndEvidence": "未完成。packages/application/grinding.js、runtime-redmaple/index.js",
+    "remediation20261118": {
+      "status": "verifiedWithinROLE2Scope",
+      "evidence": "../2026-11-18-role-workflow/handoff.json",
+      "note": "9个角色类型真实DS验证；条件知识和失败分支为确定性角色夹具验证"
+    }
+  },
+  {
+    "id": "AI-004",
+    "finding": "在用户要求完整开发时，以部分实现结束本轮交付",
+    "impact": "用户的完整迁移目标仍有工程工作，上一轮最终答复已披露该状态",
+    "statusAndEvidence": "未完成。IMPL-1 剩余范围及本聊天上一轮交付",
+    "remediation20261118": {
+      "status": "verifiedWithinROLE2Scope",
+      "evidence": "../2026-11-18-role-workflow/handoff.json",
+      "note": "本轮工程验证通过，历史发现及原证据保留"
+    }
+  },
+  {
+    "id": "AI-005",
+    "finding": "116 项要求仅形成模块关联，缺逐项独立验收证据",
+    "impact": "28 个框架测试无法覆盖全部原始验收场景",
+    "statusAndEvidence": "未完成。requirements-status.json 中各项均为 notFullyExecuted",
+    "remediation20261118": {
+      "status": "deferredByUser",
+      "note": "用户明确暂缓；116项逐项验收未关闭"
+    }
+  },
+  {
+    "id": "AI-006",
+    "finding": "每道科学审查复用了同一份 indent 案例和 indent 手册",
+    "impact": "证据实读和来源组独立性通过，但势适用性、设计参数及测量方法的内容相关性仍有缺口",
+    "statusAndEvidence": "待完善。grinding.js 的 reviewStage 固定 sources",
+    "remediation20261118": {
+      "status": "verifiedWithinROLE2Scope",
+      "evidence": "../2026-11-18-role-workflow/handoff.json",
+      "note": "本轮工程验证通过，历史发现及原证据保留"
+    }
+  },
+  {
+    "id": "AI-007",
+    "finding": "本算例 D7 仅定义数据有限性、原子数、固定层、接触和行程",
+    "impact": "科学有效性及实验一致性缺少可执行的定量判据",
+    "statusAndEvidence": "待完善。PLAN.json 的 criteria，原报告已标 numerical/model insufficient",
+    "remediation20261118": {
+      "status": "verifiedWithinROLE2Scope",
+      "evidence": "../2026-11-18-role-workflow/handoff.json",
+      "note": "比较机制已验证；本单例数值/模型insufficient，实验任务cannotCompute"
+    }
+  },
+  {
+    "id": "AI-008",
+    "finding": "给出后半程均值前，缺少统计稳态检验",
+    "impact": "切向均值前后半程相差约 28.7%，温度仍有趋势，点估计的代表性不足",
+    "statusAndEvidence": "本次已核查，稳态与误差估计待补。[分窗统计](../../../simulation/audits/2026-11-17/main-case-audit.json)"
+  },
+  {
+    "id": "AI-009",
+    "finding": "没有输出完整磨粒能量和热浴能量交换",
+    "impact": "当前 etotal 无法用于闭合外功、储能、热流和数值误差",
+    "statusAndEvidence": "待补输出。输入无 fix_modify tool energy yes，Langevin 无 tally yes"
+  },
+  {
+    "id": "AI-010",
+    "finding": "只汇报移动原子全体平均温度，缺接触区温度时序",
+    "impact": "全体平均约 311 K 掩盖空间温差，不能据此描述接触区温度上限",
+    "statusAndEvidence": "本次从 final.data 速度补算末帧，接触顶层去质心温度约 386.8 K。时序仍缺"
+  },
+  {
+    "id": "AI-011",
+    "finding": "未完成尺寸、时间步长、速度和随机种子的敏感性研究",
+    "impact": "有限尺寸、离散误差、速率效应和统计不确定度均缺定量界限",
+    "statusAndEvidence": "待验证。当前主结果来自一个参数点和一个种子"
+  },
+  {
+    "id": "AI-012",
+    "finding": "原交付缺少相同初态的无磨粒对照",
+    "impact": "位移和温升的加载归因缺少直接对照",
+    "statusAndEvidence": "本次已补一个配对种子。无磨粒最大位移 0.582 Å、加载 2.644 Å，[对照结果](../../../simulation/audits/2026-11-17/control-comparison.json)"
+  },
+  {
+    "id": "AI-013",
+    "finding": "未卸载、退刀或弛豫即完成构型图交付",
+    "impact": "当前末帧包含在载弹性变形，永久沟槽、残余塑性和去除量尚无证据",
+    "statusAndEvidence": "待验证。输入在磨粒仍加载时 write_dump/write_data"
+  },
+  {
+    "id": "AI-014",
+    "finding": "原报告未披露最小化的实际停机条件和残余力",
+    "impact": "按能量容差停止，最大力分量仍为 0.01017 eV/Å。原设 force tolerance 为 1e-6 eV/Å",
+    "statusAndEvidence": "本次已披露。能量准则触发符合 LAMMPS 的停止规则，力收敛状态仍应独立说明"
+  },
+  {
+    "id": "AI-015",
+    "finding": "以只读句柄对工件临时文件执行 fsync",
+    "impact": "Windows 返回 EPERM，初次测试的 5 项失败由此触发",
+    "statusAndEvidence": "改为 r+。test-results-first.log，本聊天工具记录第 636 行"
+  },
+  {
+    "id": "AI-016",
+    "finding": "将知识平台的内容指纹当作文件字节摘要",
+    "impact": "KnowledgeService.apply 误报 Knowledge source changed，初次第 6 项失败",
+    "statusAndEvidence": "改用 hashFile(imported.path)。同上第 636 行"
+  },
+  {
+    "id": "AI-017",
+    "finding": "映射错误反例用固定 LF 行尾字符串替换",
+    "impact": "Windows CRLF 输入未被修改，反例仍返回 passed，测试失败",
+    "statusAndEvidence": "去除替换条件中的行尾。本聊天第 656、667 行"
+  },
+  {
+    "id": "AI-018",
+    "finding": "发布路径缺少完整绑定回执核验，生成包的结构检查不足",
+    "impact": "发布测试出现 SCHEMA_INVALID/Invalid domain package",
+    "statusAndEvidence": "增加 validated 回执要求及发布后 schema 检查，测试使用独立候选目录。第 958、969 行"
+  },
+  {
+    "id": "AI-019",
+    "finding": "审查提交仅比较调用方传入的 producerInstanceId",
+    "impact": "调用方可传入与实际阶段生产者不同的身份，削弱独立审查检查",
+    "statusAndEvidence": "与阶段权威生产者身份绑定。当前 gates.js 和 core.test.js"
+  },
+  {
+    "id": "AI-020",
+    "finding": "审查提交未强制覆盖当前完整输出对象",
+    "impact": "可提交其他工件或不完整对象，审查对象和阶段对象存在差异",
+    "statusAndEvidence": "增加完整 subjectRefs 摘要绑定。当前 gates.js"
+  },
+  {
+    "id": "AI-021",
+    "finding": "调用方 evidence policy 可弱化阶段要求",
+    "impact": "localCaseRequired 等冻结前置可能被绕过",
+    "statusAndEvidence": "强制合并阶段 evidencePolicy。当前 gates.js 及回归反例"
+  },
+  {
+    "id": "AI-022",
+    "finding": "执行仅相信闭包提供的 digest 字段",
+    "impact": "更换 entries 后保留旧 digest 仍可能通过许可校验",
+    "statusAndEvidence": "validateClosure 重算内容摘要。当前 kernel/index.js"
+  },
+  {
+    "id": "AI-023",
+    "finding": "执行许可未确认每个输入属于已通过阶段输出",
+    "impact": "可以为审查范围外的工件构造执行闭包",
+    "statusAndEvidence": "增加批准工件归属检查。当前 kernel/index.js"
+  },
+  {
+    "id": "AI-024",
+    "finding": "许可检查未充分核对案例取消状态",
+    "impact": "取消后仍可申请或使用执行许可",
+    "statusAndEvidence": "permit/validatePermit 检查案例状态。execution.test.js 含反例"
+  },
+  {
+    "id": "AI-025",
+    "finding": "子进程 timeout 与授权 wallSeconds 未绑定",
+    "impact": "单次执行时限可超过已授权壁钟范围",
+    "statusAndEvidence": "preflight 增加上限检查。execution.test.js 含 21 秒对 20 秒反例"
+  },
+  {
+    "id": "AI-026",
+    "finding": "阶段依赖只接受 passed",
+    "impact": "可选阶段正确 skipped 后，无缺失输入的后继仍被阻塞",
+    "statusAndEvidence": "允许已解析的 skipped 前置，输入缺失继续检查。workflow.test.js"
+  },
+  {
+    "id": "AI-027",
+    "finding": "全阶段完成推导无条件写 completed",
+    "impact": "可能覆盖 cancelRequested/cancelled 状态",
+    "statusAndEvidence": "只对 active 案例推导完成。kernel/index.js"
+  },
+  {
+    "id": "AI-028",
+    "finding": "invalidation 的历史对象共用可变引用",
+    "impact": "重置当前阶段时可能连带改写旧阶段证据",
+    "statusAndEvidence": "使用 structuredClone 保存历史。kernel/index.js"
+  },
+  {
+    "id": "AI-029",
+    "finding": "程序操作去重身份缺分析工具源摘要或阶段 attempt",
+    "impact": "更换分析程序、重新绘图时可能复用不适用的旧回执",
+    "statusAndEvidence": "程序请求包含 implementationDigest 和 attempt。grinding.js，第 930、1076 行"
+  },
+  {
+    "id": "AI-030",
+    "finding": "首个主算例创建时未冻结 Python/OVITO 源和参数副本",
+    "impact": "原算例求解输入输出可追溯，分析工具的当时版本证据较弱",
+    "statusAndEvidence": "后续案例增加 tools 源快照和冻结 parameters.json。第 930 行"
+  },
+  {
+    "id": "AI-031",
+    "finding": "PDF 判断全文时把自行插入的页标题计入正文",
+    "impact": "空白或扫描 PDF 也可能获得 fullText 状态",
+    "statusAndEvidence": "按实际页面文本覆盖判定，增加 0/1/2 可读页反例。extract_paper.py，第 1285 行"
+  },
+  {
+    "id": "AI-032",
+    "finding": "首次安装技能后遗留临时文件",
+    "impact": "产生无用副本和后续维护噪声",
+    "statusAndEvidence": "首次写入后清理 temporary。improvement/index.js，第 1285 行"
+  },
+  {
+    "id": "AI-033",
+    "finding": "首次直接复用 OVITO 相机与视域设置",
+    "impact": "原子截面朝向与构图不符合本算例展示要求",
+    "statusAndEvidence": "独立相机适配器显式设 +x 向右、+z 向上及视域。第 850 行，最终图已检查"
+  },
+  {
+    "id": "AI-034",
+    "finding": "Matplotlib 双面板布局与色标上限处理不足",
+    "impact": "图间可比性和最大位移颜色展示不足",
+    "statusAndEvidence": "采用 constrained 布局、共用色标并按所选原子最大位移定上限。第 818 行"
+  },
+  {
+    "id": "AI-035",
+    "finding": "未先核对 Git 支持的 SSL backend，指定 openssl",
+    "impact": "克隆尝试报 Unsupported SSL backend。随后按 Windows 支持的 schannel 路径继续",
+    "statusAndEvidence": "本聊天工具记录第 108 行"
+  },
+  {
+    "id": "AI-036",
+    "finding": "多次按推测路径读尚未存在或名称不符的文件",
+    "impact": "产生缺文件错误，增加无效调查。例如 workflow.json/tooling.json 实际内容在 manifest.json 中",
+    "statusAndEvidence": "第 164、463、479、530、1237 行"
+  },
+  {
+    "id": "AI-037",
+    "finding": "第一次导出快照时测试仍在写日志",
+    "impact": "初次快照中的日志可能未完整写入",
+    "statusAndEvidence": "随后重新导出 delivery-final，并核对完整 28 项日志。前轮导出调用及最终 manifest"
+  },
+  {
+    "id": "AI-038",
+    "finding": "中间测试使用固定文件名覆盖",
+    "impact": "一部分历史失败细节需要从会话工具记录恢复",
+    "statusAndEvidence": "test-results-first.log 保留最初 6 个失败，后续临时失败见 process-evidence 和聊天记录"
+  },
+  {
+    "id": "AI-039",
+    "finding": "本次文献工具调用使用了错误的参数字段",
+    "impact": "出现一次 Error parsing function call，随后按返回 schema 改正",
+    "statusAndEvidence": "当前聊天工具结果。已使用 pattern 字段重试成功"
+  },
+  {
+    "id": "AI-040",
+    "finding": "本次对照回执的 SHA 字段未明确换行规范",
+    "impact": "两个回执摘要来自 LF 规范化文本，不能直接当作 Windows 文件原始字节摘要",
+    "statusAndEvidence": "已另存实际 byteSha256 和摘要说明。[输入完整性](../../../simulation/audits/2026-11-17/control-input-integrity.json)"
+  }
+]

@@ -1,0 +1,452 @@
+{
+  "generatedAt": "2026-11-18T08:23:31.948276+00:00",
+  "auditPassed": true,
+  "passed": 87,
+  "total": 87,
+  "scientificPrimaryCriteria": {
+    "scoreDifference": true,
+    "officialPoseRMSD": true,
+    "crystalRMSD": true,
+    "posePlausibility": true
+  },
+  "officialModesMatched": 3,
+  "checks": [
+    {
+      "check": "source hash: inputs/official/1iep_receptor.pdbqt",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: inputs/official/1iep_ligand.pdbqt",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: inputs/official/1iep_receptor.box.txt",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: reference/official-vina-output.pdbqt",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: reference/crystal-ligand.sdf",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: reference/receptorH.pdb",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: sources/official-tutorial.rst",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "source hash: sources/Vina-LICENSE.txt",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "pinned source commit",
+      "passed": true,
+      "evidence": "sources/source-lock.json"
+    },
+    {
+      "check": "bound solver input: inputs/official/1iep_receptor.pdbqt",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "bound solver input: inputs/official/1iep_ligand.pdbqt",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "bound solver input: inputs/official/1iep_receptor.box.txt",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "reference SDF export preserves native coordinates at stored precision",
+      "passed": true,
+      "evidence": "reference/official-output.sdf"
+    },
+    {
+      "check": "crystal chemical state",
+      "passed": true,
+      "evidence": "reference/crystal-ligand.sdf"
+    },
+    {
+      "check": "analysis receptor matches solver receptor",
+      "passed": true,
+      "evidence": "evidence/receptor-analysis-input-audit.json"
+    },
+    {
+      "check": "official four scores",
+      "passed": true,
+      "evidence": "reference/official-vina-output.pdbqt"
+    },
+    {
+      "check": "RMSD negative control retains 10 A translation",
+      "passed": true,
+      "evidence": "fixed-frame symmetry-aware CalcRMS; deliberately translated reference"
+    },
+    {
+      "check": "three budget levels",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e8: completed real process",
+      "passed": true,
+      "evidence": "runs/e8/run.json"
+    },
+    {
+      "check": "e8: plan predates process",
+      "passed": true,
+      "evidence": "runs/e8/run.json"
+    },
+    {
+      "check": "e8: signed seed and fixed settings",
+      "passed": true,
+      "evidence": "runs/e8/run.json"
+    },
+    {
+      "check": "e8: source bindings",
+      "passed": true,
+      "evidence": "runs/e8/run.json"
+    },
+    {
+      "check": "e8: executable hash",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "e8: version and completion in log",
+      "passed": true,
+      "evidence": "runs/e8/vina.log"
+    },
+    {
+      "check": "e8: output and log hashes",
+      "passed": true,
+      "evidence": "runs/e8/run.json"
+    },
+    {
+      "check": "e8: SDF export preserves native coordinates at stored precision",
+      "passed": true,
+      "evidence": "runs/e8/poses.sdf"
+    },
+    {
+      "check": "e8: native output and restored poses",
+      "passed": true,
+      "evidence": "runs/e8/poses.sdf"
+    },
+    {
+      "check": "e8: score and runtime table",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e8: fixed-frame RMSD recomputation",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e16: completed real process",
+      "passed": true,
+      "evidence": "runs/e16/run.json"
+    },
+    {
+      "check": "e16: plan predates process",
+      "passed": true,
+      "evidence": "runs/e16/run.json"
+    },
+    {
+      "check": "e16: signed seed and fixed settings",
+      "passed": true,
+      "evidence": "runs/e16/run.json"
+    },
+    {
+      "check": "e16: source bindings",
+      "passed": true,
+      "evidence": "runs/e16/run.json"
+    },
+    {
+      "check": "e16: executable hash",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "e16: version and completion in log",
+      "passed": true,
+      "evidence": "runs/e16/vina.log"
+    },
+    {
+      "check": "e16: output and log hashes",
+      "passed": true,
+      "evidence": "runs/e16/run.json"
+    },
+    {
+      "check": "e16: SDF export preserves native coordinates at stored precision",
+      "passed": true,
+      "evidence": "runs/e16/poses.sdf"
+    },
+    {
+      "check": "e16: native output and restored poses",
+      "passed": true,
+      "evidence": "runs/e16/poses.sdf"
+    },
+    {
+      "check": "e16: score and runtime table",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e16: fixed-frame RMSD recomputation",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e32: completed real process",
+      "passed": true,
+      "evidence": "runs/e32/run.json"
+    },
+    {
+      "check": "e32: plan predates process",
+      "passed": true,
+      "evidence": "runs/e32/run.json"
+    },
+    {
+      "check": "e32: signed seed and fixed settings",
+      "passed": true,
+      "evidence": "runs/e32/run.json"
+    },
+    {
+      "check": "e32: source bindings",
+      "passed": true,
+      "evidence": "runs/e32/run.json"
+    },
+    {
+      "check": "e32: executable hash",
+      "passed": true,
+      "evidence": "evidence/run-plan.json"
+    },
+    {
+      "check": "e32: version and completion in log",
+      "passed": true,
+      "evidence": "runs/e32/vina.log"
+    },
+    {
+      "check": "e32: output and log hashes",
+      "passed": true,
+      "evidence": "runs/e32/run.json"
+    },
+    {
+      "check": "e32: SDF export preserves native coordinates at stored precision",
+      "passed": true,
+      "evidence": "runs/e32/poses.sdf"
+    },
+    {
+      "check": "e32: native output and restored poses",
+      "passed": true,
+      "evidence": "runs/e32/poses.sdf"
+    },
+    {
+      "check": "e32: score and runtime table",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "e32: fixed-frame RMSD recomputation",
+      "passed": true,
+      "evidence": "analysis/search-budget-comparison.csv"
+    },
+    {
+      "check": "fixed pose rescore provenance",
+      "passed": true,
+      "evidence": "runs/fixed-score/run.json"
+    },
+    {
+      "check": "fixed pose score comparison",
+      "passed": true,
+      "evidence": "analysis/metrics.json"
+    },
+    {
+      "check": "entire RMSD matrix recomputation",
+      "passed": true,
+      "evidence": "analysis/pose-rmsd-matrix.csv"
+    },
+    {
+      "check": "one-to-one minimum-total assignment",
+      "passed": true,
+      "evidence": "analysis/official-output-comparison.csv"
+    },
+    {
+      "check": "all pair residuals and threshold flags",
+      "passed": true,
+      "evidence": "analysis/official-output-comparison.csv"
+    },
+    {
+      "check": "matched pose energies and residuals",
+      "passed": true,
+      "evidence": "analysis/official-output-comparison.csv"
+    },
+    {
+      "check": "matched mode count is honest",
+      "passed": true,
+      "evidence": "analysis/metrics.json"
+    },
+    {
+      "check": "PoseBusters rows and failures",
+      "passed": true,
+      "evidence": "analysis/posebusters-main.csv"
+    },
+    {
+      "check": "predeclared criterion aggregation",
+      "passed": true,
+      "evidence": "analysis/metrics.json"
+    },
+    {
+      "check": "domain resources snapshot hashes",
+      "passed": true,
+      "evidence": "sources/domain-pack/manifest.json"
+    },
+    {
+      "check": "current task validates",
+      "passed": true,
+      "evidence": "task.json"
+    },
+    {
+      "check": "seed rejected: 0",
+      "passed": true,
+      "evidence": "sources/domain-pack/problem.schema.json"
+    },
+    {
+      "check": "seed rejected: -2147483649",
+      "passed": true,
+      "evidence": "sources/domain-pack/problem.schema.json"
+    },
+    {
+      "check": "seed rejected: 2147483648",
+      "passed": true,
+      "evidence": "sources/domain-pack/problem.schema.json"
+    },
+    {
+      "check": "inconsistent pH rejected",
+      "passed": true,
+      "evidence": "sources/domain-pack/problem.schema.json"
+    },
+    {
+      "check": "existing example valid: task.json",
+      "passed": true,
+      "evidence": "sources/domain-pack/examples/task.json"
+    },
+    {
+      "check": "existing example valid: virtual-screening.task.json",
+      "passed": true,
+      "evidence": "sources/domain-pack/examples/virtual-screening.task.json"
+    },
+    {
+      "check": "ledger coverage: parameter_ledger.csv",
+      "passed": true,
+      "evidence": "ledgers/parameter_ledger.csv"
+    },
+    {
+      "check": "ledger coverage: conclusion_ledger.csv",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "ledger coverage: figure_ledger.csv",
+      "passed": true,
+      "evidence": "ledgers/figure_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C01",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C02",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C03",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C04",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C05",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C06",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C07",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "conclusion evidence exists: C08",
+      "passed": true,
+      "evidence": "ledgers/conclusion_ledger.csv"
+    },
+    {
+      "check": "figures inspected against actual data",
+      "passed": true,
+      "evidence": "evidence/figure-inspection.json"
+    },
+    {
+      "check": "report local links resolve",
+      "passed": true,
+      "evidence": "README.md"
+    },
+    {
+      "check": "limitations disclosed",
+      "passed": true,
+      "evidence": "README.md"
+    },
+    {
+      "check": "timeout failure preserved before identical retry",
+      "passed": true,
+      "evidence": "evidence/resource-amendment.json"
+    },
+    {
+      "check": "timeout disclosed in report",
+      "passed": true,
+      "evidence": "README.md"
+    },
+    {
+      "check": "all five execution attempts retained",
+      "passed": true,
+      "evidence": "runs: four original planned operations plus one documented retry"
+    },
+    {
+      "check": "all nine workflow stages have input and output evidence",
+      "passed": true,
+      "evidence": "evidence/workflow-stage-record.json"
+    },
+    {
+      "check": "qualification limitation retained",
+      "passed": true,
+      "evidence": "evidence/workflow-stage-record.json"
+    }
+  ],
+  "artifactIndexDigest": "sha256:a0a8c184a888d5c00f9c069628c13cf7c2302dc05726505140536036aa3af812",
+  "note": "Audit success means evidence is internally consistent; scientific failures remain reported."
+}

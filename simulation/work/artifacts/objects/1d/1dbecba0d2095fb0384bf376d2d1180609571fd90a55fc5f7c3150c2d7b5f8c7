@@ -1,0 +1,73 @@
+{
+  "stageId": "wf-05",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "runId": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+  "attempt": 2,
+  "decision": "proceed",
+  "summary": "WF-05 post-processing for the equiatomic FeNiCrCoCu single-asperity grinding run (6400 atoms, one 12 A sphere, 3 A nominal depth, 10 A/ps, 300 K setpoint, seed 482748, dt 0.001 ps) generated three image artifacts from the wf-04 analysis set (artifact-a39f7539): force-temperature.png (matplotlib, fz/fx/fy and c_Tmobile vs step using approach.csv and grinding.csv, 1 eV/A = 1.602176634 nN, temperature in K), grinding-atoms-ovito.png (OVITO render of atom positions with per-atom c_centro/c_cna/c_coord colouring) and cross-section.png (OVITO x-z cross-section of the same damage fields). Tool boundary respected: no atom positions drawn in matplotlib. Host check HOST-wf-05 passed with the note that actual image artifacts exist but visual inspection is pending; no hard check blocked publication. Numbers reused exactly from the frozen analysis: 41 contact samples (every 20 steps 800-1600), tip travel 8.00 A (25.8 -> 17.8 A), fixed-layer max displacement 0.000 A (<= 1e-6 A), mean normal load 26.95 eV/A = 43.18 nN over the second-half window steps 1200-1600, peak |fz| 55.51 eV/A = 88.93 nN at step 800, minimum 24.89 nN at step 880, mean fx -1.696 eV/A (2.72 nN), vector-averaged friction proxy 0.063, mean c_Tmobile 330.30 K over all 5600 mobile atoms of which 1600 are Langevin-thermostatted at 300 K, equilibration end 297.32 K, potential-energy rise 61.1 eV (0.0109 eV/atom) from step 400 to 1600, peak displacement 2.66 A with 49 atoms above 1 A. Signs are those printed by the run: f_tool[3] positive along +z, load on tool = -f_tool, normal-load magnitude = |fz|.",
+  "figures": [
+    {
+      "name": "force-temperature.png",
+      "kind": "curve",
+      "tool": "matplotlib",
+      "artifactId": "artifact-96ca9d7f-ab44-4c42-8859-3271d08f5b2e",
+      "digest": "sha256:549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b",
+      "byteLength": 102587,
+      "sourceData": ["artifact-58ff231a-b2bd-44b3-96ef-b8d12842097d", "artifact-305f6fbe-6599-462a-bd0f-74f82f15796f"]
+    },
+    {
+      "name": "grinding-atoms-ovito.png",
+      "kind": "atom-render",
+      "tool": "ovito",
+      "artifactId": "artifact-5c4f1c88-ca0a-4e89-8f8a-bee5b9bbee96",
+      "digest": "sha256:735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67",
+      "byteLength": 807804,
+      "sourceData": ["artifact-0e726af1-2986-41eb-ae98-c88ad5f790ac"]
+    },
+    {
+      "name": "cross-section.png",
+      "kind": "atom-render",
+      "tool": "ovito",
+      "artifactId": "artifact-45c1ac80-e817-43e3-8a59-5573a02b143b",
+      "digest": "sha256:cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af",
+      "byteLength": 175460,
+      "sourceData": ["artifact-0e726af1-2986-41eb-ae98-c88ad5f790ac"]
+    }
+  ],
+  "hardChecks": [
+    {
+      "checkId": "HOST-wf-05",
+      "applicability": true,
+      "result": "passed",
+      "action": "blocked",
+      "observations": ["Actual image artifacts generated; visual inspection remains pending"]
+    }
+  ],
+  "handoff": {
+    "figureManifestRef": "artifact-48b612ab-1961-41e3-b674-150d48c7b09b",
+    "figureOutputDir": "work/cases/hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869/figures",
+    "requestedButNotProduced": [
+      "potential_and_total_energy_vs_step (wf-04 wf05Trigger requested an energy panel; not present in the returned figure manifest)",
+      "displacement_magnitude_map (initial vs final, 49 atoms >1 A; not present in the returned figure manifest)",
+      "d7_validation annotated summary (5 acceptance criteria colour-coded met/not_met/cannot_compute; not present in the returned figure manifest)"
+    ],
+    "scientificStatus": {
+      "mode": "exploratory",
+      "acceptanceCriteriaMet": 5,
+      "acceptanceCriteriaTotal": 5,
+      "quantitativeReferencesAvailable": false,
+      "note": "no grinding-reference, time-step-convergence or EAM material-model validation data; absolute forces and temperatures are measured, not converged or validated"
+    }
+  },
+  "limitations": [
+    "All three figures are marked inspection.opened = false in the figure manifest; pixel content, axis labels, colour bar and 70-80% framing were not verified by this stage, only artifact existence and non-zero size (102 kB, 176 kB, 808 kB).",
+    "Three of the items requested by the wf-04 wf05Trigger were not returned by the adapter: potential/total energy vs step, the initial-vs-final displacement-magnitude map (peak 2.66 A, 49 atoms >1 A), and an annotated D7 validation summary with the five criteria (finite, atoms 6400, fixed 0.000 A <= 1e-6 A, contact 41 >= 10, travel 8.00 A >= 7.6 A).",
+    "Exploratory run under a frozen protocol whose three scientific comparisons (time-step convergence, EAM material-model validation, matched experimental grinding reference) are all recorded as unavailable (missingReason), so no deviation, error bar or friction coefficient can be quantified; the vector-averaged proxy 0.063 is a lower bound only.",
+    "Force signs follow the printed fix-indent global vector: f_tool[3] positive along +z, reported normal-load magnitude = |fz|; the magnitude numbers (26.95 eV/A = 43.18 nN mean, 55.51 eV/A = 88.93 nN peak at step 800, 15.53 eV/A = 24.89 nN minimum at step 880) are magnitudes, not signed components; the fix definition was not re-verified against LAMMPS source in this stage.",
+    "Temperature 330.30 K is c_Tmobile over 5600 mobile atoms while only 1600 are Langevin-thermostatted at 300 K; the 4000 dynamic atoms are NVE, so this is a sampled kinetic temperature from a single seed and one trajectory with no uncertainty estimate.",
+    "Contact geometry (about 2.8 A tip-centre descent to first detectable force) is kinematic only; the abrasive is a single repulsive sphere of stiffness 10 eV/A^3 with no abrasive atoms or chemistry, and the cell is 6400 atoms over 400/400/800 steps at 0.001 ps, so wear debris, tribolayer formation and long-time steady state are outside scope.",
+    "Frozen-layer zero displacement rests on fix freeze plus zero initial velocity and was spot-checked on atoms 1-4 only in wf-04; no full 800-atom per-atom comparison supports the figure set."
+  ],
+  "producer": "lammps-post-processor",
+  "producerInstanceId": "role-fa1ba140-35fb-4ccb-ba57-c69e968f12de"
+}

@@ -1,0 +1,138 @@
+TAP version 13
+# Subtest: cURL transport preserves JSON Unicode, quoting, headers and incremental SSE content
+ok 1 - cURL transport preserves JSON Unicode, quoting, headers and incremental SSE content
+  ---
+  duration_ms: 361.1903
+  type: 'test'
+  ...
+# Subtest: cURL transport preserves HTTP error bodies and aborts streaming requests
+ok 2 - cURL transport preserves HTTP error bodies and aborts streaming requests
+  ---
+  duration_ms: 259.1366
+  type: 'test'
+  ...
+# (node:62568) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AI002 completed cache is rejected after invalidation even with the same science revision
+ok 3 - AI002 completed cache is rejected after invalidation even with the same science revision
+  ---
+  duration_ms: 203.7915
+  type: 'test'
+  ...
+# Subtest: AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+ok 4 - AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+  ---
+  duration_ms: 99.341
+  type: 'test'
+  ...
+# Subtest: AI002 image inspection is a durable stop and resume does not regenerate images
+ok 5 - AI002 image inspection is a durable stop and resume does not regenerate images
+  ---
+  duration_ms: 89.6186
+  type: 'test'
+  ...
+# Subtest: AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+ok 6 - AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+  ---
+  duration_ms: 88.453
+  type: 'test'
+  ...
+# Subtest: AI003 confirmed failure can resume and passed predecessors are not repeated
+ok 7 - AI003 confirmed failure can resume and passed predecessors are not repeated
+  ---
+  duration_ms: 146.9391
+  type: 'test'
+  ...
+# Subtest: AI006 source category and actual reading cannot satisfy an unrelated claim
+ok 8 - AI006 source category and actual reading cannot satisfy an unrelated claim
+  ---
+  duration_ms: 89.3627
+  type: 'test'
+  ...
+# Subtest: AI006 required host checks survive model review and duplicate checks are rejected
+ok 9 - AI006 required host checks survive model review and duplicate checks are rejected
+  ---
+  duration_ms: 303.3434
+  type: 'test'
+  ...
+# Subtest: AI007 exploratory protocol produces explicit missing scientific comparisons
+ok 10 - AI007 exploratory protocol produces explicit missing scientific comparisons
+  ---
+  duration_ms: 5.6139
+  type: 'test'
+  ...
+# Subtest: AI007 finite references enforce tolerances, matching conditions and immutable protocol
+ok 11 - AI007 finite references enforce tolerances, matching conditions and immutable protocol
+  ---
+  duration_ms: 14.2957
+  type: 'test'
+  ...
+# Subtest: AI004 delivery cannot close with missing, failed or stale verification evidence
+ok 12 - AI004 delivery cannot close with missing, failed or stale verification evidence
+  ---
+  duration_ms: 2.1204
+  type: 'test'
+  ...
+# Subtest: AI003 publication contract rejects JSON null and incorrect artifact types before writing
+ok 13 - AI003 publication contract rejects JSON null and incorrect artifact types before writing
+  ---
+  duration_ms: 64.6011
+  type: 'test'
+  ...
+# Subtest: AI003 analyst reads outputs through their owning solver operation and rejects foreign or binary artifacts
+not ok 14 - AI003 analyst reads outputs through their owning solver operation and rejects foreign or binary artifacts
+  ---
+  duration_ms: 186.5973
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\grinding-recovery.test.js:171:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'includes')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    RedMapleRuntimePort.createServiceTools (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/runtime-redmaple/index.js:134:46)
+    TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/grinding-recovery.test.js:179:24)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# (node:28808) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: provider configuration requires the explicit endpoint and credentials
+ok 15 - provider configuration requires the explicit endpoint and credentials
+  ---
+  duration_ms: 80.9039
+  type: 'test'
+  ...
+# Subtest: model selection preserves the host callback and blocks a different provider/model before sending
+ok 16 - model selection preserves the host callback and blocks a different provider/model before sending
+  ---
+  duration_ms: 1.5322
+  type: 'test'
+  ...
+# Subtest: shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+ok 17 - shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+  ---
+  duration_ms: 6.1797
+  type: 'test'
+  ...
+# Subtest: real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+ok 18 - real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+  ---
+  duration_ms: 14530.8109
+  type: 'test'
+  ...
+# Subtest: native compaction uses the configured fetch transport and the same model ledger
+ok 19 - native compaction uses the configured fetch transport and the same model ledger
+  ---
+  duration_ms: 856.8579
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 18
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 23800.9628

@@ -1,0 +1,104 @@
+TAP version 13
+# (node:12024) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AI002 completed cache is rejected after invalidation even with the same science revision
+ok 1 - AI002 completed cache is rejected after invalidation even with the same science revision
+  ---
+  duration_ms: 210.9307
+  type: 'test'
+  ...
+# Subtest: AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+ok 2 - AI002 completed result checks actual bytes and legacy snapshots need reconstruction
+  ---
+  duration_ms: 104.794
+  type: 'test'
+  ...
+# Subtest: AI002 image inspection is a durable stop and resume does not regenerate images
+ok 3 - AI002 image inspection is a durable stop and resume does not regenerate images
+  ---
+  duration_ms: 95.6263
+  type: 'test'
+  ...
+# Subtest: AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+ok 4 - AI003 stage/role dispatch overrides a shared capability and uses host producer identity
+  ---
+  duration_ms: 108.3524
+  type: 'test'
+  ...
+# Subtest: AI003 confirmed failure can resume and passed predecessors are not repeated
+ok 5 - AI003 confirmed failure can resume and passed predecessors are not repeated
+  ---
+  duration_ms: 130.3353
+  type: 'test'
+  ...
+# Subtest: AI006 source category and actual reading cannot satisfy an unrelated claim
+ok 6 - AI006 source category and actual reading cannot satisfy an unrelated claim
+  ---
+  duration_ms: 65.4211
+  type: 'test'
+  ...
+# Subtest: AI006 required host checks survive model review and duplicate checks are rejected
+ok 7 - AI006 required host checks survive model review and duplicate checks are rejected
+  ---
+  duration_ms: 296.9862
+  type: 'test'
+  ...
+# Subtest: AI007 exploratory protocol produces explicit missing scientific comparisons
+ok 8 - AI007 exploratory protocol produces explicit missing scientific comparisons
+  ---
+  duration_ms: 3.9081
+  type: 'test'
+  ...
+# Subtest: AI007 finite references enforce tolerances, matching conditions and immutable protocol
+ok 9 - AI007 finite references enforce tolerances, matching conditions and immutable protocol
+  ---
+  duration_ms: 17.8425
+  type: 'test'
+  ...
+# Subtest: AI004 delivery cannot close with missing, failed or stale verification evidence
+ok 10 - AI004 delivery cannot close with missing, failed or stale verification evidence
+  ---
+  duration_ms: 3.2975
+  type: 'test'
+  ...
+# (node:54472) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AI003 research branches execute the librarian and metadata-limited paper researcher
+ok 11 - AI003 research branches execute the librarian and metadata-limited paper researcher
+  ---
+  duration_ms: 322.4892
+  type: 'test'
+  ...
+# Subtest: AI003 knowledge branches curate and independently adjudicate a bounded real knowledge candidate
+ok 12 - AI003 knowledge branches curate and independently adjudicate a bounded real knowledge candidate
+  ---
+  duration_ms: 461.5345
+  type: 'test'
+  ...
+# Subtest: AI002/003 recovered solver production reconciles the original operation without resubmitting
+not ok 13 - AI002/003 recovered solver production reconciles the original operation without resubmitting
+  ---
+  duration_ms: 60.5922
+  type: 'test'
+  location: 'F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\tests\\support-roles.test.js:56:1'
+  failureType: 'testCodeFailure'
+  error: 'The "path" argument must be of type string. Received undefined'
+  code: 'ERR_INVALID_ARG_TYPE'
+  name: 'TypeError'
+  stack: |-
+    join (node:path:510:7)
+    runStageTool (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/application/grinding-stages.js:41:18)
+    recoverSolver (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/application/grinding-workflow.js:299:27)
+    async TestContext.<anonymous> (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/tests/support-roles.test.js:71:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 12
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9769.0178

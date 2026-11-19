@@ -1,0 +1,107 @@
+{
+  "schemaVersion": "1.0.0",
+  "taskId": "tabletop-abl-retrospective-20",
+  "taskType": "virtual-screening",
+  "parameterStatus": "locked",
+  "target": {
+    "structure": {
+      "id": "1iep-receptor",
+      "locator": "unavailable/1iep_receptorH.pdb",
+      "status": "planned"
+    },
+    "chains": [
+      "A"
+    ],
+    "provenance": "1IEP方法背景；当前演练以受体准备台账占位。",
+    "assemblyDecision": "按教程受体选择，核对口袋。",
+    "retainedComponents": [],
+    "missingSitePolicy": "检查缺失和关键组分，逐项保存保留/删除理由。"
+  },
+  "ligands": {
+    "input": {
+      "id": "demo-library-sdf",
+      "locator": "unavailable/demo_library.sdf",
+      "status": "planned"
+    },
+    "format": "sdf",
+    "stereochemistryPolicy": "specifiedOnly",
+    "saltPolicy": "保留母体/盐组分台账。",
+    "deduplicationPolicy": "按母体和化学状态分别去重。"
+  },
+  "preparation": {
+    "pHRange": [
+      7.4,
+      7.4
+    ],
+    "stateEnumerationMethod": "经验证的 Molscrub 或明确专家状态选择。",
+    "maxStatesPerParent": 2,
+    "unresolvedStatesPolicy": "hold",
+    "receptorStateDecision": "依据口袋/模板审阅。"
+  },
+  "site": {
+    "method": "referenceLigand",
+    "basisRef": "vina-basic",
+    "center": [
+      15.19,
+      53.903,
+      16.917
+    ],
+    "size": [
+      20,
+      20,
+      20
+    ],
+    "unit": "angstrom"
+  },
+  "search": {
+    "scoring": "vina",
+    "exhaustiveness": 32,
+    "numModes": 20,
+    "energyRange": {
+      "value": 3,
+      "unit": "kcal/mol"
+    },
+    "seeds": [
+      104729,
+      130363,
+      155921,
+      181081,
+      205759
+    ],
+    "cpuPerRun": 1
+  },
+  "qualification": {
+    "claim": "screeningEnrichment",
+    "labeledSet": {
+      "id": "demo-assay-labels",
+      "locator": "analysis/synthetic-experimental-labels.csv",
+      "status": "acquired",
+      "digest": "sha256:2539154a0e375411c315e58472ac5b773f58617820f3d0aaf3e801debb62c397"
+    },
+    "evidenceRequirement": "演练锁定标签映射和留出访问步骤；所有实验标签为synthetic-tabletop。"
+  },
+  "ranking": {
+    "parentAggregation": "bestValidStateWithCountDisclosure",
+    "clusterRmsd": {
+      "value": 2,
+      "unit": "angstrom"
+    },
+    "failedRunPolicy": "失败保留分母；母体全部失败则标不可排名。",
+    "tiePolicy": "保留并列分数和预定稳定次序。"
+  },
+  "resources": {
+    "maxRuns": 130,
+    "wallTimePerRun": {
+      "value": 600,
+      "unit": "s"
+    },
+    "maxConcurrentRuns": 2
+  },
+  "deliverables": [
+    "poses",
+    "ranking",
+    "contacts",
+    "controls",
+    "report"
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.0.0",
+  "taskId": "demo-elastic-impact",
+  "taskType": "explicit-impact",
+  "parameterStatus": "proposed",
+  "unitSystem": "SI",
+  "geometry": {
+    "kind": "imported",
+    "source": {
+      "id": "impact-assembly",
+      "locator": "inputs/elastic-impact-assembly.step",
+      "status": "planned"
+    },
+    "idealization": "solid",
+    "coordinateDefinition": "弹性杆与刚性平面装配，接触法向global-x，实际几何和质量待取得。"
+  },
+  "materials": [
+    {
+      "id": "elastic-steel-demo",
+      "model": "isotropicElastic",
+      "youngsModulus": {
+        "value": 210000000000.0,
+        "unit": "Pa"
+      },
+      "poissonRatio": 0.3,
+      "density": {
+        "value": 7800,
+        "unit": "kg/m^3"
+      },
+      "source": "演示用参数，实际材料需来源。"
+    }
+  ],
+  "mesh": {
+    "elementFamily": "由适配器核验的二次实体单元",
+    "targetSize": {
+      "value": 0.001,
+      "unit": "m"
+    },
+    "sectionAndOrientation": "全域材料映射，检查厚度分辨和弯曲精度。",
+    "refinementRatios": [
+      1.5,
+      2
+    ]
+  },
+  "boundaries": {
+    "supports": [
+      "刚性平面固定",
+      "弹性杆按基准保留预期刚体运动"
+    ],
+    "expectedRigidBodyModes": 6,
+    "preloadDecision": "接触初始间隙按基准。",
+    "contactDecision": "无摩擦法向接触，参数与工具模型待核。"
+  },
+  "initialState": {
+    "displacement": "0 m",
+    "velocity": "弹性杆global-x方向-1 m/s，刚性面0。",
+    "equilibriumBasis": "无初始变形，接触初态检查。"
+  },
+  "damping": {
+    "model": "none",
+    "source": "解析对照演示。"
+  },
+  "excitation": {
+    "kind": "initialVelocity",
+    "selection": "弹性杆全体",
+    "direction": "global-x",
+    "timeBasis": "step",
+    "source": "通过初态速度输入冲击动量。"
+  },
+  "time": {
+    "endTime": {
+      "value": 0.0001,
+      "unit": "s"
+    },
+    "initialStep": {
+      "value": 1e-08,
+      "unit": "s"
+    },
+    "maximumStep": {
+      "value": 1e-08,
+      "unit": "s"
+    },
+    "outputInterval": {
+      "value": 1e-07,
+      "unit": "s"
+    },
+    "targetFrequency": {
+      "value": 100000.0,
+      "unit": "Hz"
+    },
+    "integrationMethod": "经目标版本和单元验证的显式时间推进；实际稳定步长由工具校核。"
+  },
+  "evaluation": {
+    "regions": [
+      "接触界面",
+      "弹性杆全域"
+    ],
+    "directions": [
+      "global-x"
+    ],
+    "requestedQuantities": [
+      "contactForce",
+      "impulse",
+      "momentum",
+      "energy"
+    ],
+    "verificationTargets": {
+      "frequencyRelativeError": 0.02,
+      "timeHistoryRelativeError": 0.05,
+      "meshChange": 0.02,
+      "energyBalance": 0.02
+    },
+    "referenceBasis": "候选目标，仅用于首轮验证设计；固定SDOF/梁解析或加密参考的适用条件和比较范数。"
+  },
+  "resources": {
+    "maxRuns": 12,
+    "wallTimePerRun": {
+      "value": 1800,
+      "unit": "s"
+    },
+    "memoryLimit": {
+      "value": 8,
+      "unit": "GiB"
+    }
+  },
+  "deliverables": [
+    "timeHistories",
+    "fields",
+    "verification",
+    "report"
+  ],
+  "explicitControls": {
+    "stableStepMethod": "取工具给出的稳定步长和安全系数，候选步长仅供预算估算。",
+    "massTreatment": "基准首轮关闭质量处理，必要变更单独对照。",
+    "hourglassPolicy": "按单元形式评估和输出人工能量。",
+    "contactLaw": "经验证的无摩擦接触模型，记录罚刚度与穿透。",
+    "materialRateDecision": "弹性基准，适用速度和应变范围需确认。",
+    "energyTerms": [
+      "initialKinetic",
+      "kinetic",
+      "internal",
+      "externalWork",
+      "contact",
+      "artificial"
+    ]
+  }
+}

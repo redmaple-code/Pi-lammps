@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-30",
+  "note": "常见问题/已知局限内置解释库。默认折叠；不要求用户逐条回答，但需在方案中做适用性声明。provenance 类不隐藏。",
+  "entries": [
+    {
+      "id": "CI-001",
+      "name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "category": "known_limitation",
+      "match_terms": ["周期边界", "pbc", "颈缩", "断裂", "延伸率", "均匀变形"],
+      "disposition": "explained",
+      "explanation": "全周期边界下没有自由表面，均匀变形不会产生颈缩、裂纹或断口；这是 MD 的固有边界限制，不是本案例特有错误。",
+      "required_declaration": "声明：本模型只用于均匀塑性流变/机制趋势，不比较断裂应变或延伸率；如需断裂，应改用含自由表面/缺口的模型。",
+      "evidence_level": "E5/E6",
+      "status": "accepted_industry_practice"
+    },
+    {
+      "id": "CI-002",
+      "name": "MD 应变率比实验高多个数量级",
+      "category": "known_limitation",
+      "match_terms": ["应变率", "1e8", "1×10⁸", "数量级", "声速", "位错速度", "orowan", "准静态"],
+      "disposition": "explained",
+      "explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。",
+      "evidence_level": "E2/E4",
+      "status": "accepted_industry_practice"
+    },
+    {
+      "id": "CI-003",
+      "name": "初始结构重叠删除原子（delete_atoms overlap）",
+      "category": "standard_practice",
+      "match_terms": ["delete_atoms", "overlap", "删除原子", "空位", "初始重叠"],
+      "disposition": "record_required",
+      "explanation": "删除近邻重叠原子是常见初始清理步骤；关键是记录删除数量、各 type 数量与成分偏差，而不是把它当开放物理问题。",
+      "required_declaration": "记录：删除原子总数/各 type 数量、删除前后成分、空位浓度；若成分偏差超阈值需重建初始结构。",
+      "evidence_level": "E4",
+      "status": "standard_practice"
+    },
+    {
+      "id": "CI-004",
+      "name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "category": "known_limitation",
+      "match_terms": ["尺寸效应", "单晶", "多晶", "晶粒", "mm 级", "µm", "尺度差"],
+      "disposition": "explained",
+      "explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。",
+      "evidence_level": "E2/E4",
+      "status": "accepted_industry_practice"
+    },
+    {
+      "id": "CI-005",
+      "name": "多组元势函数的交叉项/适用性",
+      "category": "verification_required",
+      "match_terms": ["势函数", "eam", "meam", "多组元", "交叉项", "混合规则", "势的适用"],
+      "disposition": "record_required",
+      "explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。",
+      "evidence_level": "E2/E4",
+      "status": "verification_required"
+    },
+    {
+      "id": "CI-006",
+      "name": "单次 run/单 seed 无统计不确定度",
+      "category": "standard_practice",
+      "match_terms": ["单次", "单 seed", "单一 seed", "重复", "误差棒", "统计不确定", "run-to-run"],
+      "disposition": "record_required",
+      "explanation": "MD 屈服/位错形核具有随机性；单次 run 无法给出误差棒。需记录 seed/样本数，或明确声明结果为单样本。",
+      "required_declaration": "记录：seed 数/重复次数；若单样本，声明不确定度未知，结论仅作演示/趋势。",
+      "evidence_level": "E4",
+      "status": "standard_practice"
+    },
+    {
+      "id": "CI-007",
+      "name": "热浴/恒温器参数与塑性耗热",
+      "category": "verification_required",
+      "match_terms": ["nose-hoover", "阻尼", "热浴", "控温", "温升", "berendsen", "等温"],
+      "disposition": "record_required",
+      "explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。",
+      "evidence_level": "E2/E4",
+      "status": "verification_required"
+    },
+    {
+      "id": "CI-008",
+      "name": "实验方案由 AI 反推/缺原始记录",
+      "category": "provenance",
+      "match_terms": ["反推", "AI 补写", "未经实验记录", "循环论证", "E-06"],
+      "disposition": "open",
+      "explanation": "若宏观实验是从仿真输入反推的，对照不独立；这是溯源问题，不能作为行业共识隐藏。",
+      "required_declaration": "必须提供真实实验记录/文献，或由用户确认该实验描述为假设并承担相应结论限制。",
+      "evidence_level": "E1",
+      "status": "must_answer"
+    },
+    {
+      "id": "CI-009",
+      "name": "应力/应变定义（virial、总压、工程/真应力）",
+      "category": "standard_practice",
+      "match_terms": ["virial", "pressure tensor", "pxx", "应力定义", "动能项", "工程应变", "真应力", "stress/atom"],
+      "disposition": "record_required",
+      "explanation": "LAMMPS 压力张量含动能项；stress/atom 是维里分配；工程应变/真应力定义不同。需记录所用定义与基线扣除方式。",
+      "required_declaration": "记录：应力定义（virial/总压）、是否扣动能/初始基线、应变定义（工程/真）、与实验曲线的转换关系。",
+      "evidence_level": "E2/E4",
+      "status": "standard_practice"
+    },
+    {
+      "id": "CI-010",
+      "name": "低温经典 MD 的量子效应",
+      "category": "known_limitation",
+      "match_terms": ["10 k", "量子", "零点能", "经典 md", "低温"],
+      "disposition": "explained",
+      "explanation": "经典 MD 忽略零点能与量子热容，低温结果只能作机制/趋势参考，不能直接比较热力学量。",
+      "required_declaration": "声明：经典 MD 在低温的量子效应未计入；结论限机制趋势。",
+      "evidence_level": "E2",
+      "status": "accepted_industry_practice"
+    },
+    {
+      "id": "CI-011",
+      "name": "夹具/边界与实验加载路径不等效",
+      "category": "known_limitation",
+      "match_terms": ["夹具", "夹持", "边界条件", "自由面", "周期", "应力三轴度"],
+      "disposition": "explained",
+      "explanation": "周期/刚性夹持与实验夹具的刚度、接触、摩擦和应力三轴度不同；需声明等效假设与适用范围。",
+      "required_declaration": "声明：边界/夹持与实验的差异；结论限趋势；必要时做边界敏感性测试。",
+      "evidence_level": "E2/E4",
+      "status": "accepted_industry_practice"
+    },
+    {
+      "id": "CI-012",
+      "name": "观测量的实验-仿真映射",
+      "category": "standard_practice",
+      "match_terms": ["引伸计", "观测", "测量", "摩擦系数", "粗糙度", "磨屑", "统计口径"],
+      "disposition": "record_required",
+      "explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。",
+      "evidence_level": "E2/E4",
+      "status": "standard_practice"
+    }
+  ]
+}

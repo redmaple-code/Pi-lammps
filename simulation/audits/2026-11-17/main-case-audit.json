@@ -1,0 +1,592 @@
+{
+  "directory": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work",
+  "inputSha256": "700e7cbd73dde40d26ef7f54993e72c0188d4ba78c8045ebf9c0e45914656a34",
+  "solverErrors": [],
+  "solverWarnings": [],
+  "dangerousBuilds": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "completionMarker": true,
+  "minimization": {
+    "stoppingCriterion": "energy tolerance",
+    "finalForceMaxEVPerA": 0.010172196,
+    "requestedForceToleranceEVPerA": 1e-06
+  },
+  "identity": {
+    "initialAtoms": 11520,
+    "finalAtoms": 11520,
+    "idsMatch": true,
+    "typesMatch": true,
+    "compositionCountsByType": {
+      "1": 2304,
+      "2": 2304,
+      "3": 2304,
+      "4": 2304,
+      "5": 2304
+    },
+    "fixedAtoms": 1152,
+    "fixedMaxDisplacementAngstrom": 0.0
+  },
+  "kinematics": {
+    "initialStep": 2000,
+    "finalStep": 8000,
+    "scratchTimePs": 4.0,
+    "travelAngstrom": 40.0,
+    "speedMPerS": 1000.0,
+    "approachSpeedMPerS": 200.0,
+    "trajectoryFrameCount": 31
+  },
+  "statistics": {
+    "all": {
+      "firstStep": 4000,
+      "lastStep": 8000,
+      "samples": 201,
+      "meanDragNn": 2.1706909409932127,
+      "meanNormalNn": 45.77917766324758,
+      "meanTemperatureK": 310.7567578286571,
+      "temperatureSlopeKPerPs": 4.03287044209717
+    },
+    "firstHalf": {
+      "firstStep": 4000,
+      "lastStep": 5980,
+      "samples": 100,
+      "meanDragNn": 2.5361470630833125,
+      "meanNormalNn": 43.60479244921962,
+      "meanTemperatureK": 305.87045121504576,
+      "temperatureSlopeKPerPs": 1.606267794279677
+    },
+    "secondHalf": {
+      "firstStep": 6000,
+      "lastStep": 8000,
+      "samples": 101,
+      "meanDragNn": 1.8088531963495496,
+      "meanNormalNn": 47.93203431080002,
+      "meanTemperatureK": 315.5946851688663,
+      "temperatureSlopeKPerPs": 1.6287954673166163
+    },
+    "quarters": [
+      {
+        "firstStep": 4000,
+        "lastStep": 5000,
+        "samples": 51,
+        "meanDragNn": 2.6240429085466923,
+        "meanNormalNn": 42.08216106982558,
+        "meanTemperatureK": 305.263338564672,
+        "temperatureSlopeKPerPs": -0.8678736818029156
+      },
+      {
+        "firstStep": 5020,
+        "lastStep": 6000,
+        "samples": 50,
+        "meanDragNn": 2.4279663263115516,
+        "meanNormalNn": 45.2684958217561,
+        "meanTemperatureK": 306.6106592302781,
+        "temperatureSlopeKPerPs": 6.978123859903933
+      },
+      {
+        "firstStep": 6020,
+        "lastStep": 7000,
+        "samples": 50,
+        "meanDragNn": 2.187251830668789,
+        "meanNormalNn": 48.119471703752936,
+        "meanTemperatureK": 314.875440072556,
+        "temperatureSlopeKPerPs": 5.1274011101350006
+      },
+      {
+        "firstStep": 7020,
+        "lastStep": 8000,
+        "samples": 50,
+        "meanDragNn": 1.4344356590947485,
+        "meanNormalNn": 47.72052238952415,
+        "meanTemperatureK": 316.3874618324021,
+        "temperatureSlopeKPerPs": -1.6654687676112365
+      }
+    ],
+    "dragWorkEV": 54.33034324893246,
+    "apparentForceRatioSecondHalf": 0.03773787660712703,
+    "temperatureMinK": 300.531894535802,
+    "temperatureMaxK": 321.767213108372
+  },
+  "lateEquilibration": {
+    "samples": 11,
+    "temperatureMeanK": 300.11061181818184,
+    "temperatureMinK": 296.71198,
+    "temperatureMaxK": 304.8875
+  },
+  "geometry": {
+    "substrateNm": [
+      8.544,
+      4.272,
+      3.56
+    ],
+    "sphereRadiusNm": 1.2,
+    "nominalDepthNm": 0.3,
+    "nominalContactRadiusNm": 0.7937253933193772,
+    "widthToContactDiameter": 2.6911070478256978,
+    "nominalMeanPressureGPa": 24.217841882584597,
+    "pressureCaveat": "Geometrical reference area, actual atomic contact area and hardness are unvalidated"
+  },
+  "displacement": {
+    "maxAngstrom": 2.6440245933046858,
+    "countOverOneAngstrom": 90,
+    "quantilesAngstrom": [
+      0.2071724553174163,
+      0.5549230166615166,
+      0.9450965486786094
+    ]
+  },
+  "forceReconstruction": {
+    "frames": [
+      {
+        "step": 4000,
+        "contactAtoms": 28,
+        "maxPenetrationAngstrom": 0.5277469562426393,
+        "recalculatedForceEVPerA": [
+          -0.7073159580702426,
+          0.5399009396738994,
+          30.22120604492061
+        ],
+        "csvForceEVPerA": [
+          -0.707254795084564,
+          0.540232136293084,
+          30.221010657726
+        ],
+        "errorNn": [
+          -9.799390651992603e-05,
+          -0.000530635484517315,
+          0.0003130447977846181
+        ],
+        "toolPotentialEnergyEV": 4.57112287627146
+      },
+      {
+        "step": 4200,
+        "contactAtoms": 22,
+        "maxPenetrationAngstrom": 0.5198632177138229,
+        "recalculatedForceEVPerA": [
+          -1.0690237775148441,
+          -0.07735679391022238,
+          26.469785314695436
+        ],
+        "csvForceEVPerA": [
+          -1.06877413396453,
+          -0.0774549571781554,
+          26.4703713533062
+        ],
+        "errorNn": [
+          -0.0003999730631420443,
+          0.00015727489419936825,
+          -0.0009389373687859545
+        ],
+        "toolPotentialEnergyEV": 3.774263590040814
+      },
+      {
+        "step": 4400,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.5174664598791594,
+        "recalculatedForceEVPerA": [
+          -1.6125998498923813,
+          -0.1908352665606718,
+          27.02537074492028
+        ],
+        "csvForceEVPerA": [
+          -1.61282058547457,
+          -0.190745726118639,
+          27.0262709236905
+        ],
+        "errorNn": [
+          0.0003536573920753214,
+          -0.00014345960402298093,
+          -0.0014422453920687616
+        ],
+        "toolPotentialEnergyEV": 4.04132818727895
+      },
+      {
+        "step": 4600,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.4942446940672358,
+        "recalculatedForceEVPerA": [
+          -0.9471961483565554,
+          0.27207911166335574,
+          26.40052433408559
+        ],
+        "csvForceEVPerA": [
+          -0.947435174481221,
+          0.271884946894488,
+          26.3994556340057
+        ],
+        "errorNn": [
+          0.000382962071854863,
+          0.00031108625582590996,
+          0.0017122462967496274
+        ],
+        "toolPotentialEnergyEV": 3.7833585191151897
+      },
+      {
+        "step": 4800,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.4998042794915847,
+        "recalculatedForceEVPerA": [
+          -1.3432063758940644,
+          0.4131268112234401,
+          26.44738192390562
+        ],
+        "csvForceEVPerA": [
+          -1.34316165165738,
+          0.412861033544218,
+          26.4455495963679
+        ],
+        "errorNn": [
+          -7.165612698912684e-05,
+          0.00042582278748838,
+          0.0029357123667695635
+        ],
+        "toolPotentialEnergyEV": 3.836052622537764
+      },
+      {
+        "step": 5000,
+        "contactAtoms": 26,
+        "maxPenetrationAngstrom": 0.5082986416283877,
+        "recalculatedForceEVPerA": [
+          -1.213778927569068,
+          0.6854461767016965,
+          28.715471196583398
+        ],
+        "csvForceEVPerA": [
+          -1.21331983970999,
+          0.685160917433382,
+          28.7151072840209
+        ],
+        "errorNn": [
+          -0.0007355398407678566,
+          0.00045703573432537064,
+          0.0005830522044542728
+        ],
+        "toolPotentialEnergyEV": 4.151174429950476
+      },
+      {
+        "step": 5200,
+        "contactAtoms": 26,
+        "maxPenetrationAngstrom": 0.5117842808380377,
+        "recalculatedForceEVPerA": [
+          -1.4598777553038327,
+          0.2146089828455287,
+          23.891194082120638
+        ],
+        "csvForceEVPerA": [
+          -1.45967571955366,
+          0.21472313201654,
+          23.8913429044229
+        ],
+        "errorNn": [
+          -0.00032369695815925815,
+          -0.00018288713458476907,
+          -0.00023843961530099439
+        ],
+        "toolPotentialEnergyEV": 3.3016599572613243
+      },
+      {
+        "step": 5400,
+        "contactAtoms": 22,
+        "maxPenetrationAngstrom": 0.5041613155020297,
+        "recalculatedForceEVPerA": [
+          -1.2110023924865219,
+          -0.9752035351128174,
+          24.123963306775714
+        ],
+        "csvForceEVPerA": [
+          -1.21131734960296,
+          -0.975213910951485,
+          24.1241845248624
+        ],
+        "errorNn": [
+          0.0005046169326690297,
+          1.662392627136116e-05,
+          -0.000354430449506964
+        ],
+        "toolPotentialEnergyEV": 3.4096333098376763
+      },
+      {
+        "step": 5600,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.5756026762896589,
+        "recalculatedForceEVPerA": [
+          -1.1971724663968997,
+          0.1356778388802046,
+          27.32588578716037
+        ],
+        "csvForceEVPerA": [
+          -1.19692124679876,
+          0.135837132596499,
+          27.3265016787591
+        ],
+        "errorNn": [
+          -0.000402498170142255,
+          -0.00025521667018989626,
+          -0.0009867671285631607
+        ],
+        "toolPotentialEnergyEV": 3.902814867657449
+      },
+      {
+        "step": 5800,
+        "contactAtoms": 27,
+        "maxPenetrationAngstrom": 0.564342653786797,
+        "recalculatedForceEVPerA": [
+          -1.5135700921030866,
+          0.11354433762077848,
+          29.267130363657426
+        ],
+        "csvForceEVPerA": [
+          -1.5133256203148,
+          0.113049209775823,
+          29.2683266123684
+        ],
+        "errorNn": [
+          -0.000391686986864939,
+          0.0007932822640304426,
+          -0.001916601733177673
+        ],
+        "toolPotentialEnergyEV": 4.347353200935972
+      },
+      {
+        "step": 6000,
+        "contactAtoms": 24,
+        "maxPenetrationAngstrom": 0.5217879384461614,
+        "recalculatedForceEVPerA": [
+          -1.0052042284251608,
+          -0.3785418756450666,
+          30.669422509441635
+        ],
+        "csvForceEVPerA": [
+          -1.0047570966683,
+          -0.37870357031767,
+          30.6681296457775
+        ],
+        "errorNn": [
+          -0.0007163840531618091,
+          0.00025906342628745935,
+          0.0020713959536221454
+        ],
+        "toolPotentialEnergyEV": 4.55545338585395
+      },
+      {
+        "step": 6200,
+        "contactAtoms": 29,
+        "maxPenetrationAngstrom": 0.5463630243489899,
+        "recalculatedForceEVPerA": [
+          -1.3261649943561433,
+          0.21579056493007298,
+          32.95760780836134
+        ],
+        "csvForceEVPerA": [
+          -1.32637103704263,
+          0.215755937438714,
+          32.9592032850164
+        ],
+        "errorNn": [
+          0.00033011677789560745,
+          5.54793575494116e-05,
+          -0.002556235416832975
+        ],
+        "toolPotentialEnergyEV": 4.904984722886759
+      },
+      {
+        "step": 6400,
+        "contactAtoms": 24,
+        "maxPenetrationAngstrom": 0.6318852886681352,
+        "recalculatedForceEVPerA": [
+          -2.9347925328865387,
+          -0.6061659960185934,
+          29.871500923017564
+        ],
+        "csvForceEVPerA": [
+          -2.93506787205146,
+          -0.606074438358778,
+          29.8719118977096
+        ],
+        "errorNn": [
+          0.00044114197646195435,
+          -0.0001466915432201147,
+          -0.0006584540487482591
+        ],
+        "toolPotentialEnergyEV": 4.628649632535107
+      },
+      {
+        "step": 6600,
+        "contactAtoms": 28,
+        "maxPenetrationAngstrom": 0.5809014502019423,
+        "recalculatedForceEVPerA": [
+          -1.5719105265723952,
+          -1.3910129358621108,
+          29.859392492494244
+        ],
+        "csvForceEVPerA": [
+          -1.57228944196729,
+          -1.39128968525243,
+          29.8584992398443
+        ],
+        "errorNn": [
+          0.0006070893919632726,
+          0.0004434014066429685,
+          0.0014311485240004569
+        ],
+        "toolPotentialEnergyEV": 4.510328521204026
+      },
+      {
+        "step": 6800,
+        "contactAtoms": 24,
+        "maxPenetrationAngstrom": 0.5424464068458317,
+        "recalculatedForceEVPerA": [
+          -1.4787068798283032,
+          -1.2170238014529111,
+          33.59753142023878
+        ],
+        "csvForceEVPerA": [
+          -1.47919558390041,
+          -1.21695699898785,
+          33.5975341243107
+        ],
+        "errorNn": [
+          0.0007829902452702983,
+          -0.00010702934861463792,
+          -4.332400842861261e-06
+        ],
+        "toolPotentialEnergyEV": 5.304488078524232
+      },
+      {
+        "step": 7000,
+        "contactAtoms": 26,
+        "maxPenetrationAngstrom": 0.5170890402302621,
+        "recalculatedForceEVPerA": [
+          -1.3995342353241336,
+          0.11594466735558442,
+          29.274022115783772
+        ],
+        "csvForceEVPerA": [
+          -1.39949023950393,
+          0.115880799618401,
+          29.2738020992149
+        ],
+        "errorNn": [
+          -7.048907512394693e-05,
+          0.00010232739618172954,
+          0.0003525054057384053
+        ],
+        "toolPotentialEnergyEV": 4.235876024419753
+      },
+      {
+        "step": 7200,
+        "contactAtoms": 25,
+        "maxPenetrationAngstrom": 0.5177685766223945,
+        "recalculatedForceEVPerA": [
+          -1.2076183533637879,
+          -1.251770550205972,
+          28.980689016242074
+        ],
+        "csvForceEVPerA": [
+          -1.20743687167275,
+          -1.25203279068908,
+          28.9800086653312
+        ],
+        "errorNn": [
+          -0.00029076572487978257,
+          0.0004201555745246347,
+          0.0010900423323210453
+        ],
+        "toolPotentialEnergyEV": 4.279045622213803
+      },
+      {
+        "step": 7400,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.5285066804709349,
+        "recalculatedForceEVPerA": [
+          -1.4012565426604826,
+          -0.36622221055190496,
+          34.645369172037334
+        ],
+        "csvForceEVPerA": [
+          -1.40127334446464,
+          -0.366031094611753,
+          34.6433206411764
+        ],
+        "errorNn": [
+          2.6919458029881388e-05,
+          -0.000306201493696438,
+          0.003282108279413753
+        ],
+        "toolPotentialEnergyEV": 5.470141375810248
+      },
+      {
+        "step": 7600,
+        "contactAtoms": 28,
+        "maxPenetrationAngstrom": 0.508380059800098,
+        "recalculatedForceEVPerA": [
+          0.4703426292562666,
+          0.017149160019603964,
+          29.984585669734887
+        ],
+        "csvForceEVPerA": [
+          0.470307800200859,
+          0.0171729209114644,
+          29.9834874978628
+        ],
+        "errorNn": [
+          5.580229875831829e-05,
+          -3.8069145741793495e-05,
+          0.001759465313573909
+        ],
+        "toolPotentialEnergyEV": 4.416304827029526
+      },
+      {
+        "step": 7800,
+        "contactAtoms": 23,
+        "maxPenetrationAngstrom": 0.5621321899577776,
+        "recalculatedForceEVPerA": [
+          -1.3442955351066423,
+          0.5392988480611949,
+          31.794853881522563
+        ],
+        "csvForceEVPerA": [
+          -1.34434806860578,
+          0.539212971814762,
+          31.7944226174734
+        ],
+        "errorNn": [
+          8.416794482067712e-05,
+          0.0001375889154503523,
+          0.0006909611826514861
+        ],
+        "toolPotentialEnergyEV": 4.93781707923203
+      },
+      {
+        "step": 8000,
+        "contactAtoms": 26,
+        "maxPenetrationAngstrom": 0.5520382871010607,
+        "recalculatedForceEVPerA": [
+          -0.6341345706245655,
+          0.5646129840212709,
+          27.397686038834774
+        ],
+        "csvForceEVPerA": [
+          -0.63447839915896,
+          0.564791499593773,
+          27.3967593639861
+        ],
+        "errorNn": [
+          0.0005508740439093639,
+          -0.000286013479067895,
+          0.0014846967898617383
+        ],
+        "toolPotentialEnergyEV": 3.964203966228078
+      }
+    ],
+    "maxComponentAbsoluteErrorNn": 0.003282108279413753
+  },
+  "energyAccounting": {
+    "toolEnergyAddedToThermo": false,
+    "thermostatEnergyTallied": false,
+    "velocityInDump": false
+  }
+}

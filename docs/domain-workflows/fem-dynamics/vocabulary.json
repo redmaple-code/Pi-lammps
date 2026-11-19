@@ -1,0 +1,54 @@
+{
+  "id": "vocabulary",
+  "items": [
+    {
+      "id": "modal",
+      "term": "模态",
+      "aliases": [
+        "modal"
+      ]
+    },
+    {
+      "id": "transient",
+      "term": "瞬态",
+      "aliases": [
+        "transient"
+      ]
+    },
+    {
+      "id": "harmonic",
+      "term": "谐响应",
+      "aliases": [
+        "harmonic"
+      ]
+    },
+    {
+      "id": "explicit",
+      "term": "显式",
+      "aliases": [
+        "explicit"
+      ]
+    },
+    {
+      "id": "frf",
+      "term": "频率响应函数",
+      "aliases": [
+        "frf"
+      ]
+    },
+    {
+      "id": "rayleigh",
+      "term": "比例阻尼",
+      "aliases": [
+        "rayleigh"
+      ]
+    },
+    {
+      "id": "mass-treatment",
+      "term": "工具特定质量处理",
+      "aliases": [
+        "mass-treatment"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "command_purpose": {
+    "fix.indent": {
+      "purpose": "球形压头的弹簧力（纳米压痕/摩擦）",
+      "experiment_types": [
+        "indentation",
+        "friction_indentation"
+      ]
+    },
+    "fix.wall/region": {
+      "purpose": "以区域壁面表示模具/约束边界",
+      "experiment_types": [
+        "drawing",
+        "tension",
+        "compression",
+        "indentation",
+        "friction_indentation"
+      ]
+    },
+    "fix.move": {
+      "purpose": "对夹持组施加匀速位移（牵引/加载）",
+      "experiment_types": [
+        "drawing",
+        "tension",
+        "compression",
+        "shear"
+      ],
+      "require_group_not_all": true
+    },
+    "fix.rigid": {
+      "purpose": "刚性组（模具/压头）",
+      "experiment_types": [
+        "drawing",
+        "tension",
+        "compression",
+        "indentation",
+        "friction_indentation"
+      ]
+    }
+  },
+  "experiment_type_disallow": {
+    "drawing": [
+      "fix.indent"
+    ],
+    "tension": [
+      "fix.indent"
+    ],
+    "compression": [
+      "fix.indent"
+    ]
+  }
+}

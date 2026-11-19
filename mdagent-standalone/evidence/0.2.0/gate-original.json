@@ -1,0 +1,9 @@
+{
+  "module": "gate",
+  "isolated_mode": "-I -S",
+  "returncode": 0,
+  "tests": 19,
+  "skipped": 0,
+  "scope": "test_physics_gate.py",
+  "ok": true
+}

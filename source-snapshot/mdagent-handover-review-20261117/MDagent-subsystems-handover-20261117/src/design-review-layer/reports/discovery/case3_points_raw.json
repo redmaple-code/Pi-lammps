@@ -1,0 +1,202 @@
+[
+  {
+    "title": "E-04 的 1×10⁻³ s⁻¹ 应变率控制在 in 文件中没有实现",
+    "dimension_guess": "加载控制方式",
+    "locations": {"experiment": ["E-04"], "infile": [66, 67]},
+    "claim_in_text": "E-04 要求“300 K，单轴拉伸，应变率 1×10⁻³ s⁻¹”；in 文件生产段只有 `fix 1 all npt temp 300 300 1 y 0 -50000 2` 和 `run 100000`，没有 fix deform 或位移边界。",
+    "why_it_matters": "实验是位移/应变率控制，模拟是应力（压力）控制；两者加载历史不同，屈服强度和硬化响应不可直接比较；1×10⁻³ s⁻¹ 的准静态条件在 140000 步 × 1 fs 的模拟中无法实现。",
+    "physical_question": "模拟实际以什么应变率加载？如何把 1×10⁻³ s⁻¹ 的实验加载映射到应力控制的 MD？是否应改用 fix deform 的 erate 控制？",
+    "evidence_needed": ["E2 文献：Cu 率相关屈服", "E4 案例：实验加载曲线", "需补：模拟应变率-时间曲线"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "总时长 140000 步 × 1 fs 与 1×10⁻³ s⁻¹ 的准静态实验不在同一时间尺度",
+    "dimension_guess": "时间尺度",
+    "locations": {"experiment": ["E-04"], "infile": [52, 67]},
+    "claim_in_text": "key_params 的 total_steps=140000、timestep_fs=1.0；E-04 的实验应变率为 1×10⁻³ s⁻¹；in 文件两段 run 分别为 40000 和 100000 步。",
+    "why_it_matters": "模拟总时长由 140000 步 × 1 fs 决定，远短于实验准静态加载所需时间；模拟必然在极高应变率下运行，而 Cu 的屈服强度、硬化和孪生/位错机制具有率敏感性，直接对比会系统性偏离。",
+    "physical_question": "140000 步的模拟对应实验的哪一段加载历史？是否需要率相关本构外推，或明确只比较零率极限的弹性常数？",
+    "evidence_needed": ["E2 文献：Cu 应变率敏感性", "E4 案例：实验应变率与试样尺寸", "需补：模拟应变率估算"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "`fix npt y 0 -50000 2` 在整个 run 内是 0→-50000 bar 的压力斜坡，不是恒应力",
+    "dimension_guess": "加载历史",
+    "locations": {"experiment": ["E-04"], "infile": [66, 67]},
+    "claim_in_text": "生产段命令为 `fix 1 all npt temp 300 300 1 y 0 -50000 2`；Pstart=0、Pstop=-50000 bar，随后 `run 100000`。",
+    "why_it_matters": "fix npt 的 Pstart/Pstop 不同时压力目标随 run 线性变化，因此实际加载是快速应力斜坡，不是恒定的 5 GPa，也不是实验的恒应变率；屈服点、硬化曲线和 E 的提取都依赖这个未说明的加载路径。",
+    "physical_question": "设计意图是恒应力保持还是 0→5 GPa 斜坡？实际应力率是多少？barostat 的 2 ps 阻尼是否跟得上该斜坡？",
+    "evidence_needed": ["LAMMPS fix npt 文档：Pstart/Pstop 斜坡语义", "E4 案例：实验加载路径", "需补：stress-time 输出"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "目标应力 5 GPa 量级远高于宏观 Cu 屈服强度，σy 只能读到斜坡拐点而非材料屈服强度",
+    "dimension_guess": "应力水平与屈服判据",
+    "locations": {"experiment": ["E-01", "E-05"], "infile": [66]},
+    "claim_in_text": "E-01 要“获取弹性模量与屈服强度”，E-05 要“σy（0.2% 偏移）”；in 文件把 y 向压力目标设为 -50000 bar（约 5 GPa 拉伸）。",
+    "why_it_matters": "5 GPa 量级的轴向应力通常已远高于宏观 Cu 试样的屈服强度；试样一旦屈服就进入大塑性流动，barostat 仍把应力推向 5 GPa，观察不到屈服降落，σy 只能是斜坡拐点且强烈依赖加载速率。",
+    "physical_question": "5 GPa 的选取依据是什么？在该应力下如何定义和测量屈服强度？是否需要先做低应力弹性段/卸载以确定 σy？",
+    "evidence_needed": ["E2 文献：Cu 屈服强度范围", "E4 案例：实验屈服判据", "需补：5 GPa 选择依据"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "生产段只控 y 向压力，x/z 盒长被固定，实际是三轴应力状态而非 E-04 的侧向零压",
+    "dimension_guess": "边界条件",
+    "locations": {"experiment": ["E-04"], "infile": [6, 50, 66]},
+    "claim_in_text": "E-04 写“NPT 条件下保持侧向零压”；生产段 `fix 1 all npt temp 300 300 1 y 0 -50000 2` 只给出 y 关键字，x、z 没有压力控制；边界为 `p p p`。",
+    "why_it_matters": "LAMMPS fix npt 未指定的维度不被 barostat 控制，盒长保持固定；拉伸 y 时 x/z 不能自由收缩，会发展出侧向应力，应力状态是三轴/约束拉伸，不是单轴拉伸；E-04 的“侧向零压”没有实现，且实验上也无法用 NPT 实现。",
+    "physical_question": "x/z 是固定盒长还是零压？生产过程中 pxx、pzz 是多少？实验的自由表面/环境压力如何映射到周期边界？",
+    "evidence_needed": ["LAMMPS fix npt 文档：未指定维度固定", "E4 案例：实验侧向边界", "需补：pxx/pzz 输出"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "固定 x/z 时测到的是约束模量而非 Young 模量，且单晶取向未与实验对应",
+    "dimension_guess": "弹性常数与取向",
+    "locations": {"experiment": ["E-01", "E-02", "E-05"], "infile": [8, 9, 66]},
+    "claim_in_text": "E-01/E-05 要测“弹性模量 E”；E-02 只说“fcc 单晶或多晶”；in 文件用 `lattice fcc 3.6150`、`region box block 0 10 0 10 0 10`，加载沿 y。",
+    "why_it_matters": "在 x/z 盒长固定的约束下，轴向 σyy-εyy 斜率对应约束模量（含侧向应力贡献），不是单轴应力下的 Young 模量；Cu 单晶弹性常数强烈依赖取向，多晶与单晶也不同；实验未给取向/织构，E 的定义不可比。",
+    "physical_question": "E-05 的 E 是单轴应力 Young 模量、约束模量还是多晶平均模量？实验取向/织构是什么？模拟的加载方向对应哪个实验方向？",
+    "evidence_needed": ["E2 文献：Cu 单晶弹性常数与取向依赖", "E4 案例：实验织构/取向", "E1 势函数：Cu_u3 弹性常数"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "应变零点 Ly0 取在 300 K NPT 预平衡之前，热膨胀被计入生产应变",
+    "dimension_guess": "初始条件与应变参考",
+    "locations": {"experiment": ["E-05"], "infile": [32, 33, 34, 50, 52]},
+    "claim_in_text": "`variable Ly0 equal ${tmpy}` 在预平衡前取值；随后 `fix 1 all npt temp 300 300 1 aniso 0 0 1`、`run 40000` 在 300 K、0 bar 下改变盒长；生产段 `strainy` 仍用该 Ly0。",
+    "why_it_matters": "从 0 K 最小化构型到 300 K 平衡态的热膨胀会使生产段起始应变不为零；0.2% 偏移屈服判据和应力-应变曲线的应变原点被整体平移，可能把热膨胀误判为弹性/塑性应变。",
+    "physical_question": "生产段开始时 ly 相对 Ly0 的偏移是多少？是否应在预平衡后重新定义 Ly0（或记录 300 K 参考长度）？",
+    "evidence_needed": ["E4 案例：预平衡前后 lx/ly/lz", "E2 文献：Cu 热膨胀", "需补：应变原点修正说明"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "输出把瞬时真应力与工程应变混用，不能直接当作 E-05 的 σ-ε 曲线",
+    "dimension_guess": "应力应变定义",
+    "locations": {"experiment": ["E-05"], "infile": [37, 41]},
+    "claim_in_text": "`variable strainy equal “(ly - v_Ly0)/v_Ly0”` 是以初始盒长为参考的工程应变；`variable stressy equal “-pyy/10000”` 是当前构型的压力张量分量（真应力）。",
+    "why_it_matters": "真应力-工程应变曲线与实验常用的工程应力-工程应变曲线在有限变形下不同；屈服后截面/体积变化、真应力与工程应力差异增大，直接比较 E、σy 和硬化段会产生定义性偏差。",
+    "physical_question": "E-05 的 σ-ε 曲线是工程应力-工程应变还是真应力-真应变？模拟输出应如何转换到与实验一致的定义？",
+    "evidence_needed": ["E2/E4 文献：工程与真应力定义", "E1 输出：应力应变转换", "需补：实验曲线类型"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "10×10×10 周期单晶与 E-02 的 mm 级试样尺度差过大，屈服强度不可比",
+    "dimension_guess": "尺度效应",
+    "locations": {"experiment": ["E-02", "E-03"], "infile": [8, 9, 11]},
+    "claim_in_text": "E-02 写“实验试样为 mm 级丝/片”，E-03 写“标距段按标准试样配置”；in 文件是 `region box block 0 10 0 10 0 10` 的完美 fcc 单晶，`create_atoms 1 box`。",
+    "why_it_matters": "mm 级试样含大量晶界、位错、表面和缺陷，屈服由既有位错运动/晶界强化控制；10×10×10 晶胞的周期完美单晶没有这些缺陷，屈服接近理想强度，尺寸和缺陷密度差异会主导 σy，E 也可能受表面/图像应力影响。",
+    "physical_question": "实验的晶粒尺寸、位错密度、表面状态是什么？模拟的完美单晶如何代表 mm 级试样？是否需要含缺陷/多晶/更大尺寸的模型？",
+    "evidence_needed": ["E2 文献：Cu 屈服强度尺寸效应", "E4 案例：晶粒尺寸/位错密度", "E1 势函数：缺陷模型验证"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "E-02 的“单晶或多晶”未定，模拟却是固定取向的完美单晶",
+    "dimension_guess": "材料织构与微观结构",
+    "locations": {"experiment": ["E-02"], "infile": [8, 9, 66]},
+    "claim_in_text": "E-02 写“fcc 单晶或多晶”；in 文件用 `lattice fcc 3.6150` 和立方 box，加载沿 y，等价于固定晶体取向的单晶。",
+    "why_it_matters": "单晶与多晶的弹性模量、屈服强度、硬化率和失效模式不同；即使是单晶，不同拉伸轴取向的 Schmid 因子和弹性模量也差异显著；E-02 的“或”使实验-模拟对应关系不唯一。",
+    "physical_question": "实验到底是单晶还是多晶？若是单晶，拉伸轴取向是什么？若是多晶，晶粒尺寸和织构是什么？模拟的取向如何与实验匹配？",
+    "evidence_needed": ["E4 案例：试样类型/取向/织构", "E2 文献：Cu 各取向力学响应", "需补：E-02 的明确材料状态"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "E-06 自述实验方案是由 in 文件反推补写，缺少独立实验证据链",
+    "dimension_guess": "证据与可追溯性",
+    "locations": {"experiment": ["E-02", "E-03", "E-04", "E-06"], "infile": [1, 66]},
+    "claim_in_text": "E-06 写“宏观实验描述由助手依据 in 文件（NPTload/in.melt.lmp，实际为 NPT 拉伸协议）反推补写，待用户确认”；E-02/E-03/E-04 的 99.99%、mm 级、1×10⁻³ s⁻¹ 等细节没有给出实验来源。",
+    "why_it_matters": "如果实验方案是从模拟输入反推的，所谓“实验-仿真对照”就不是独立基准，而是自我一致的叙述；E-02/E-03/E-04 的数值可能是为了匹配 in 文件而补写的，无法验证势函数或模型。",
+    "physical_question": "E-01..E-05 对应哪一篇/哪一个真实实验？试样尺寸、纯度、应变率、温度是如何测量/控制的？谁确认了这些参数？",
+    "evidence_needed": ["E4 案例：原始实验论文/数据", "E2 文献：独立实验基准", "需补：实验方案确认记录"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "文件头写 Lennard-Jones melt，却使用 EAM Cu_u3，势函数适用性未论证",
+    "dimension_guess": "势函数与材料模型",
+    "locations": {"experiment": ["E-01", "E-06"], "infile": [1, 14, 15]},
+    "claim_in_text": "in 文件第 1 行注释为 `# 3d Lennard-Jones melt`；第 14–15 行为 `pair_style eam`、`pair_coeff * * Cu_u3.eam`；E-01 要把结果作为“势函数/模型的对照基准”。",
+    "why_it_matters": "文件头与势函数不一致，说明脚本可能是从 LJ melt 案例改写而来，时间步、邻居表、预平衡时长等参数未必针对 Cu 验证；Cu_u3 EAM 对弹性常数、层错能、Peierls 应力的再现能力需要证据，否则屈服强度对比可能反映势函数误差而非实验差异。",
+    "physical_question": "为什么 LJ melt 模板被改成 EAM Cu？Cu_u3 在 300 K 的弹性常数、层错能、热膨胀和屈服行为是否经过验证？",
+    "evidence_needed": ["E1 势函数：Cu_u3 验证数据", "E2 文献：EAM Cu 适用性", "需补：脚本来源/参数继承说明"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "`lattice fcc 3.6150` 未说明是 0 K 势函数平衡值还是 300 K 实验值，初始压力/热膨胀可能不一致",
+    "dimension_guess": "晶格常数与初始状态",
+    "locations": {"experiment": ["E-02", "E-04"], "infile": [8, 21, 50]},
+    "claim_in_text": "in 文件在 0 K 设置 `lattice fcc 3.6150`，随后 `minimize`，再在 300 K、0 bar 下 `fix npt ... aniso 0 0 1` 预平衡；E-02 只写纯 Cu fcc，未给晶格常数来源。",
+    "why_it_matters": "若 3.6150 是 300 K 实验晶格常数而非 Cu_u3 的 0 K 平衡值，最小化后会有初始压力，NPT 预平衡会改变盒长；这会影响应变零点、弹性常数和预平衡后的位错/缺陷状态，也影响与实验晶格常数的对应。",
+    "physical_question": "Cu_u3 的 0 K 平衡晶格常数是多少？3.6150 取自哪里？最小化后的初始压力是多少？预平衡盒长变化是否被记录？",
+    "evidence_needed": ["E1 势函数：Cu_u3 平衡晶格常数", "E2 文献：Cu 晶格常数/热膨胀", "E4 案例：实验温度/晶格常数"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "1 ps 阻尼的 Nose-Hoover 恒温可能把塑性耗散热带走，实验的散热路径不同",
+    "dimension_guess": "热力学路径",
+    "locations": {"experiment": ["E-04"], "infile": [50, 66]},
+    "claim_in_text": "两段 `fix npt` 均用 `temp 300 300 1`（1 ps 阻尼）；E-04 只写“300 K”，没有说明实验的散热/温升。",
+    "why_it_matters": "高应变率 MD 中塑性功会局部升温，1 ps 的全局恒温器可能无法代表位错核/剪切带的局部温升，也可能过度抑制热激活过程；实验准静态拉伸的温升和散热条件与 MD 不同，影响屈服和硬化。",
+    "physical_question": "模拟是等温还是绝热？屈服时局部温升多少？1 ps 阻尼是否足以/过度带走塑性热？实验的温升/散热条件是什么？",
+    "evidence_needed": ["E2 文献：Cu 塑性耗散/温升", "E4 案例：实验温度控制", "需补：模拟温度/动能演化"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "单一 seed、单次 run，没有 E/σy 的统计不确定度",
+    "dimension_guess": "统计与不确定度",
+    "locations": {"experiment": ["E-05"], "infile": [26, 52]},
+    "claim_in_text": "in 文件用 `velocity all create 300 123456 ...` 初始化，只做一次 40000 步预平衡和一次 100000 步生产；E-05 直接给出 E、σy。",
+    "why_it_matters": "小尺寸完美晶体的屈服是随机位错成核事件，单次 run 的 σy 可能随初始速度/热涨落显著波动；没有多 seed/多构型重复，无法给出 E、σy 的误差棒，也无法判断与实验差异是否显著。",
+    "physical_question": "E 和 σy 的 run-to-run scatter 是多少？需要多少个独立 seed/样本才能给出可信区间？实验的不确定度是多少？",
+    "evidence_needed": ["E4 案例：实验误差棒", "E2 文献：MD 屈服统计", "需补：多 seed 重复结果"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "只输出轴向 strainy/stressy，未输出 pxx/pzz 和侧向应变，无法验证“侧向零压”",
+    "dimension_guess": "观测定义",
+    "locations": {"experiment": ["E-04", "E-05"], "infile": [36, 38, 40, 42, 59]},
+    "claim_in_text": "in 文件定义了 `strainx`、`strainz`、`stressx`、`stressz`，但 `fix def3` 只打印 `${strainy} ${stressy}`；thermo_style 也没有 pxx/pyy/pzz。",
+    "why_it_matters": "E-04 声称侧向零压，但输出中没有侧向应力/应变，无法确认生产段到底是不是单轴应力；若 x/z 被固定，侧向应力可能很大，轴向 stressy 不能代表单轴屈服。",
+    "physical_question": "生产过程中 pxx、pzz、strainx、strainz 分别是多少？侧向压力是否为零？是否需要输出 von Mises 等效应力？",
+    "evidence_needed": ["E4 案例：侧向应力/应变", "E1 输出：完整压力张量", "需补：thermo/fix print 增补"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "两次 `velocity create` 重复初始化，第二次未移除质心动量/转动",
+    "dimension_guess": "初始条件",
+    "locations": {"experiment": ["E-04"], "infile": [26, 48]},
+    "claim_in_text": "第 26 行 `velocity all create 300 123456 mom yes rot yes dist gaussian`；第 48 行又执行 `velocity all create 300 123456 dist gaussian`，没有 `mom yes rot yes`。",
+    "why_it_matters": "第二次 velocity create 覆盖第一次，且不再移除净动量/角动量；系统可能带整体漂移/转动，恒温器把漂移动能计入温度，导致实际热温度偏低，也会影响 barostat 和早期应力响应。",
+    "physical_question": "哪一次初始化是设计意图？为什么不保留 `mom yes rot yes`？净动量/角动量是否为零？",
+    "evidence_needed": ["LAMMPS velocity 文档", "E4 案例：初始速度设置", "需补：初始动量/温度检查"],
+    "severity_hint": "low"
+  },
+  {
+    "title": "热力学输出每 5000 步、应力应变每 1000 步，弹性段/屈服瞬态可能采样不足",
+    "dimension_guess": "采样分辨率",
+    "locations": {"experiment": ["E-05"], "infile": [24, 59]},
+    "claim_in_text": "`thermo 5000`；`fix def3 all print 1000 ...`；生产段 `run 100000`。",
+    "why_it_matters": "若应力斜坡在早期快速通过弹性段，1000 步间隔的应力/应变点可能只有少量，热涨落使有限差分斜率噪声大；5000 步的 thermo 输出不足以检查预平衡收敛和压力/温度稳定性，E、σy 的提取缺少分辨率依据。",
+    "physical_question": "弹性段和屈服瞬态持续多少步？1000 步采样是否足够？E 的拟合窗口和 σy 判据如何选择？采样间隔收敛性是否验证？",
+    "evidence_needed": ["E4 案例：实验采样率", "E2 文献：MD 应力噪声", "需补：采样收敛测试"],
+    "severity_hint": "low"
+  },
+  {
+    "title": "周期边界无自由表面/夹持，实验的标距、颈缩和断裂无法对应",
+    "dimension_guess": "试样几何与失效模式",
+    "locations": {"experiment": ["E-03", "E-05"], "infile": [6]},
+    "claim_in_text": "in 文件 `boundary p p p`，没有自由表面、夹持或标距；E-03 写“微型拉伸台 + 引伸计，标距段按标准试样配置”，E-05 要 σ-ε 曲线。",
+    "why_it_matters": "周期边界下试样没有颈缩、剪切带和断裂，变形是均匀的；实验 mm 级试样有夹持、标距、颈缩和断裂，后屈服段和失效行为不可比；模拟 stressy 是整个周期盒的平均压力张量，而实验是标距段/引伸计测量，空间平均范围不同。",
+    "physical_question": "E-05 是否只比较屈服前？实验的标距、夹持和颈缩如何影响 σ-ε 曲线？模拟的均匀变形如何对应实验的局部颈缩？",
+    "evidence_needed": ["E4 案例：试样几何/断口", "E2 文献：颈缩/断裂", "需补：实验-模拟几何映射"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "E-03 未给标距、截面积、夹持和机架柔度，E 的测量定义不完整",
+    "dimension_guess": "实验几何与柔度",
+    "locations": {"experiment": ["E-03", "E-05"], "infile": [6]},
+    "claim_in_text": "E-03 只写“微型拉伸台 + 引伸计，标距段按标准试样配置”；E-05 要给 E。",
+    "why_it_matters": "E 的测量对引伸计标距、试样截面积、夹持对齐和机架柔度敏感；mm 级微型试样中机架柔度可能显著，若用十字头位移而非引伸计，E 会被低估；没有这些参数无法判断实验 E 与模拟 E 是否同一定义。",
+    "physical_question": "标距、截面积、引伸计类型和机架柔度是多少？E 是从引伸计还是十字头位移计算？是否做了柔度修正？",
+    "evidence_needed": ["E3 标准：拉伸试验方法", "E4 案例：实验装置参数", "需补：柔度修正记录"],
+    "severity_hint": "medium"
+  }
+]

@@ -1,0 +1,214 @@
+{
+  "id": "checks",
+  "items": [
+    {
+      "id": "scope-inputs",
+      "title": "任务适用性",
+      "appliesWhen": "所有任务",
+      "method": "核靶标、化学和任务声明。",
+      "checkerCapability": "review.scope-inputs",
+      "evidenceRequirements": [
+        "方案",
+        "来源",
+        "输入台账"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "vina-basic",
+        "vina-faq"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "receptor-quality",
+      "title": "受体与位点",
+      "appliesWhen": "所有任务",
+      "method": "核链、组装体、缺失、状态和保留组分。",
+      "checkerCapability": "review.receptor-quality",
+      "evidenceRequirements": [
+        "结构差异",
+        "残基映射",
+        "准备日志"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "vina-basic"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "ligand-identity",
+      "title": "配体身份",
+      "appliesWhen": "所有任务",
+      "method": "核键级、电荷、立体、盐、原子映射及状态数。",
+      "checkerCapability": "review.ligand-identity",
+      "evidenceRequirements": [
+        "SDF/SMILES",
+        "状态/过滤台账",
+        "映射"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "meeko-basic"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "box-protocol",
+      "title": "搜索与输出",
+      "appliesWhen": "所有任务",
+      "method": "核坐标/Å单位、位点覆盖、版本、种子、预算和输出。",
+      "checkerCapability": "review.box-protocol",
+      "evidenceRequirements": [
+        "box视图",
+        "协议摘要",
+        "任务矩阵"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "vina-basic",
+        "vina-faq"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "qualification-scope",
+      "title": "控制与结论",
+      "appliesWhen": "所有任务",
+      "method": "按claim核redocking/独立标签或探索性证据，形成允许结论范围。",
+      "checkerCapability": "review.qualification-scope",
+      "evidenceRequirements": [
+        "控制",
+        "数据划分",
+        "scopeDecision"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "docking-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "execution-complete",
+      "title": "运行与分母",
+      "appliesWhen": "所有任务",
+      "method": "逐受体/状态/种子核真实调用、日志和姿态。",
+      "checkerCapability": "review.execution-complete",
+      "evidenceRequirements": [
+        "运行矩阵",
+        "命令/API",
+        "输入摘要",
+        "输出"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "docking-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "pose-integrity",
+      "title": "姿态完整性",
+      "appliesWhen": "所有任务",
+      "method": "按映射恢复化学并核重叠/位点/分子完整性。",
+      "checkerCapability": "review.pose-integrity",
+      "evidenceRequirements": [
+        "恢复SDF",
+        "原子映射",
+        "冲突和簇"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "meeko-basic"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "rmsd-reference",
+      "title": "参考RMSD",
+      "appliesWhen": "claim为poseRecovery",
+      "method": "受体对齐，固定框架对称重原子映射，分别报top1/best-of-N。",
+      "checkerCapability": "review.rmsd-reference",
+      "evidenceRequirements": [
+        "参考",
+        "变换",
+        "映射",
+        "RMSD"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "docking-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "ranking-valid",
+      "title": "排名口径",
+      "appliesWhen": "所有任务",
+      "method": "统一评分和准备条件，核状态数、失败与聚合。",
+      "checkerCapability": "review.ranking-valid",
+      "evidenceRequirements": [
+        "全量表",
+        "聚合方法",
+        "重复性",
+        "分母"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "revise",
+      "sourceRefs": [
+        "vina-faq",
+        "docking-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "report-traceable",
+      "title": "交付追踪",
+      "appliesWhen": "所有任务",
+      "method": "核图表身份和实际数据一致。",
+      "checkerCapability": "review.report-traceable",
+      "evidenceRequirements": [
+        "图像核验",
+        "指标",
+        "manifest"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "revise",
+      "sourceRefs": [
+        "docking-methods"
+      ],
+      "implementationStatus": "specified"
+    }
+  ],
+  "resultContract": {
+    "applicability": [
+      "true",
+      "false",
+      "unknown"
+    ],
+    "result": [
+      "passed",
+      "failed",
+      "insufficient",
+      "notApplicable"
+    ],
+    "requiredFields": [
+      "checkId",
+      "subjectDigest",
+      "actorInstanceId",
+      "evidenceRefs",
+      "observations",
+      "action"
+    ],
+    "triggerImplementation": "appliesWhen为领域审查说明，实施时映射受限条件DSL并保留语义。",
+    "checkerImplementation": "具名能力需实现或由独立审查职责执行，并记录实际方式。"
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "rel_id": "supersedes",
+    "label": "取代",
+    "inverse_label": "被取代",
+    "acyclic": true
+  },
+  {
+    "rel_id": "contradicts",
+    "label": "矛盾",
+    "inverse_label": "矛盾",
+    "symmetric": true
+  },
+  {
+    "rel_id": "refines",
+    "label": "细化",
+    "inverse_label": "被细化",
+    "acyclic": true
+  },
+  {
+    "rel_id": "depends_on",
+    "label": "依赖",
+    "inverse_label": "被依赖",
+    "acyclic": true
+  },
+  {
+    "rel_id": "example_of",
+    "label": "是其示例",
+    "inverse_label": "示例",
+    "acyclic": true
+  },
+  {
+    "rel_id": "adapted_from",
+    "label": "改编自",
+    "inverse_label": "被改编为",
+    "acyclic": true
+  },
+  {
+    "rel_id": "duplicate_of",
+    "label": "重复于",
+    "inverse_label": "有重复",
+    "acyclic": true
+  },
+  {
+    "rel_id": "cites",
+    "label": "引用",
+    "inverse_label": "被引用",
+    "acyclic": false
+  },
+  {
+    "rel_id": "related",
+    "label": "相关",
+    "inverse_label": "相关",
+    "symmetric": true
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "name": "dsh-md-flow-gate",
+  "version": "0.1.0",
+  "description": "Enforce the MD-sim inspection pipeline at harness level: status/inspection intents arm a gate that injects a system reminder until sim_pipeline_check (or sim_status) has been called; unresolved arms are logged as violations.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  }
+}

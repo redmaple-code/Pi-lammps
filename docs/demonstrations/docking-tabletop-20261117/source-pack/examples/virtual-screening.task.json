@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "taskId": "demo-retrospective-screen",
+  "taskType": "virtual-screening",
+  "parameterStatus": "proposed",
+  "target": {
+    "structure": {
+      "id": "1iep-receptor",
+      "locator": "inputs/1iep_receptorH.pdb",
+      "status": "planned"
+    },
+    "chains": [
+      "A"
+    ],
+    "provenance": "候选参考为 Vina 官方 1IEP 教程，取得后核对实际链与结构身份。",
+    "assemblyDecision": "按教程受体选择，核对口袋。",
+    "retainedComponents": [],
+    "missingSitePolicy": "检查缺失和关键组分，逐项保存保留/删除理由。"
+  },
+  "ligands": {
+    "input": {
+      "id": "labeled-candidates",
+      "locator": "inputs/labeled_candidates.sdf",
+      "status": "planned"
+    },
+    "format": "sdf",
+    "stereochemistryPolicy": "specifiedOnly",
+    "saltPolicy": "保留母体/盐组分台账。",
+    "deduplicationPolicy": "按母体和化学状态分别去重。"
+  },
+  "preparation": {
+    "pHRange": [
+      6.5,
+      7.5
+    ],
+    "stateEnumerationMethod": "经验证的 Molscrub 或明确专家状态选择。",
+    "maxStatesPerParent": 8,
+    "unresolvedStatesPolicy": "hold",
+    "receptorStateDecision": "依据口袋/模板审阅。"
+  },
+  "site": {
+    "method": "referenceLigand",
+    "basisRef": "vina-basic",
+    "center": [
+      15.19,
+      53.903,
+      16.917
+    ],
+    "size": [
+      20,
+      20,
+      20
+    ],
+    "unit": "angstrom"
+  },
+  "search": {
+    "scoring": "vina",
+    "exhaustiveness": 32,
+    "numModes": 20,
+    "energyRange": {
+      "value": 3,
+      "unit": "kcal/mol"
+    },
+    "seeds": [
+      104729,
+      130363,
+      155921,
+      181081,
+      205759
+    ],
+    "cpuPerRun": 1
+  },
+  "qualification": {
+    "claim": "screeningEnrichment",
+    "labeledSet": {
+      "id": "held-out-labels",
+      "locator": "validation/held_out_labels.csv",
+      "status": "planned"
+    },
+    "evidenceRequirement": "取得带来源标签和诱饵集合，独立于协议开发，锁定 EF 截断和bootstrap方法。"
+  },
+  "ranking": {
+    "parentAggregation": "bestValidStateWithCountDisclosure",
+    "clusterRmsd": {
+      "value": 2,
+      "unit": "angstrom"
+    },
+    "failedRunPolicy": "失败保留分母；母体全部失败则标不可排名。",
+    "tiePolicy": "保留并列分数和预定稳定次序。"
+  },
+  "resources": {
+    "maxRuns": 1000,
+    "wallTimePerRun": {
+      "value": 600,
+      "unit": "s"
+    },
+    "maxConcurrentRuns": 2
+  },
+  "deliverables": [
+    "poses",
+    "ranking",
+    "contacts",
+    "controls",
+    "report"
+  ]
+}

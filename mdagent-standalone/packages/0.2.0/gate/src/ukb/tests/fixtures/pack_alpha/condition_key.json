@@ -1,0 +1,4 @@
+[
+  {"key_id": "temp_q", "label": "Quantity Q", "value_type": "number", "unit": "uq"},
+  {"key_id": "mode_m", "label": "Mode M", "value_type": "enum", "enum": ["m1", "m2"]}
+]

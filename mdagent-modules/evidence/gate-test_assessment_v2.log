@@ -1,0 +1,212 @@
+
+EEEEEEEEE
+======================================================================
+ERROR: test_acceptance_quantifiability (test_assessment_v2.TestAssessmentEngine.test_acceptance_quantifiability)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 38, in load_anchors
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 74, in test_acceptance_quantifiability
+    rec, _ = assessment.assess_plan("TASK-UT-V2", self.tmp)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 270, in assess_plan
+    return _build("plan", case_id, decisions, {}, data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 228, in _build
+    anchors = load_anchors(data_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 40, in load_anchors
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_dt_concern_25fs (test_assessment_v2.TestAssessmentEngine.test_dt_concern_25fs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 38, in load_anchors
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 56, in test_dt_concern_25fs
+    rec, _ = assessment.assess_plan("TASK-UT-V2", self.tmp)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 270, in assess_plan
+    return _build("plan", case_id, decisions, {}, data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 228, in _build
+    anchors = load_anchors(data_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 40, in load_anchors
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_dt_critical (test_assessment_v2.TestAssessmentEngine.test_dt_critical)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 38, in load_anchors
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 43, in test_dt_critical
+    rec, ref = assessment.assess_plan("TASK-UT-V2", self.tmp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 270, in assess_plan
+    return _build("plan", case_id, decisions, {}, data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 228, in _build
+    anchors = load_anchors(data_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 40, in load_anchors
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_rdf_anchor (test_assessment_v2.TestAssessmentEngine.test_rdf_anchor)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 38, in load_anchors
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 65, in test_rdf_anchor
+    rec, _ = assessment.assess_results(cid, facts, self.tmp)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 276, in assess_results
+    return _build("results", case_id, decisions, facts or {}, data_root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 228, in _build
+    anchors = load_anchors(data_root)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\assessment.py", line 40, in load_anchors
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_content_check_roundtrip (test_assessment_v2.TestE2E3.test_content_check_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 84, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_e2_factchecks (test_assessment_v2.TestE2E3.test_e2_factchecks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 84, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_e3_clean_passes (test_assessment_v2.TestE2E3.test_e3_clean_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 84, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_e3_critical_blocks (test_assessment_v2.TestE2E3.test_e3_critical_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 84, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_e3_missing_blocks (test_assessment_v2.TestE2E3.test_e3_missing_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_assessment_v2.py", line 84, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.395s
+
+FAILED (errors=9)

@@ -1,0 +1,1045 @@
+{
+  "reviewedAt": "2026-11-17T15:38:17.010261+00:00",
+  "scope": "Existing outputs, original crystallography and supplementary physical plausibility.",
+  "experimentalEntry": {
+    "id": "1IEP",
+    "title": "CRYSTAL STRUCTURE OF THE C-ABL KINASE DOMAIN IN COMPLEX WITH STI-571.",
+    "method": "X-RAY DIFFRACTION",
+    "resolution_A": [
+      2.1
+    ],
+    "crystalLigands": [
+      {
+        "authChain": "A",
+        "residue": "201",
+        "component": "STI",
+        "heavyAtoms": 37,
+        "tutorialToOriginalCrystalRMSD_A": 0.0
+      },
+      {
+        "authChain": "B",
+        "residue": "202",
+        "component": "STI",
+        "heavyAtoms": 37,
+        "tutorialToOriginalCrystalRMSD_A": 61.94711529483316
+      }
+    ],
+    "chosenAuthChain": "A",
+    "chosenResidue": "201"
+  },
+  "sources": [
+    {
+      "file": "1iep.cif",
+      "url": "https://files.rcsb.org/download/1IEP.cif",
+      "digest": "sha256:0929a6fae4aa67875ed0c8d06b650f0a4ec7bb104011abfc7c8ee402c672ca27"
+    },
+    {
+      "file": "1iep-entry.json",
+      "url": "https://data.rcsb.org/rest/v1/core/entry/1IEP",
+      "digest": "sha256:09499268eccba586c0443425240eccc171748fd24bc964c448e792c2ad96e4c2"
+    }
+  ],
+  "seedResults": [
+    {
+      "seed": 104729,
+      "heavyAtoms": 37,
+      "fixedFrameChemicalRMSD_A": 0.619579848921177,
+      "maxMappedAtomDisplacement_A": 2.084713409560171,
+      "nativePDBQTvsRestoredSDF_RMSD_A": 0.0,
+      "nativeToOriginalCrystalElementAssignmentRMSD_A": 0.619579848921177,
+      "minimumHeavyAtomDistance_A": 2.889509820021382,
+      "minimumVDWDistanceRatio": 0.9029718187566818,
+      "atomPairsBelowVDWRatio0_75": 0,
+      "referenceContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ARG362",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "predictedContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE293",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE359",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "contactJaccard4A": 0.8695652173913043,
+      "recoveredReferenceContactFraction": 0.9523809523809523,
+      "contactDefinition": "Any heavy atom within4A; geometric proximity only."
+    },
+    {
+      "seed": 130363,
+      "heavyAtoms": 37,
+      "fixedFrameChemicalRMSD_A": 0.6097979949086374,
+      "maxMappedAtomDisplacement_A": 2.120813758914252,
+      "nativePDBQTvsRestoredSDF_RMSD_A": 0.0,
+      "nativeToOriginalCrystalElementAssignmentRMSD_A": 0.6097979949086374,
+      "minimumHeavyAtomDistance_A": 2.895489941270735,
+      "minimumVDWDistanceRatio": 0.9048406066471046,
+      "atomPairsBelowVDWRatio0_75": 0,
+      "referenceContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ARG362",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "predictedContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE293",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "contactJaccard4A": 0.9090909090909091,
+      "recoveredReferenceContactFraction": 0.9523809523809523,
+      "contactDefinition": "Any heavy atom within4A; geometric proximity only."
+    },
+    {
+      "seed": 155921,
+      "heavyAtoms": 37,
+      "fixedFrameChemicalRMSD_A": 0.6365767400289972,
+      "maxMappedAtomDisplacement_A": 2.1628259291954106,
+      "nativePDBQTvsRestoredSDF_RMSD_A": 0.0,
+      "nativeToOriginalCrystalElementAssignmentRMSD_A": 0.6365767400289972,
+      "minimumHeavyAtomDistance_A": 2.881714767287004,
+      "minimumVDWDistanceRatio": 0.9005358647771886,
+      "atomPairsBelowVDWRatio0_75": 0,
+      "referenceContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ARG362",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "predictedContactResidues": [
+        "A:ALA269",
+        "A:ALA380",
+        "A:ASP381",
+        "A:GLU286",
+        "A:GLY321",
+        "A:HIS361",
+        "A:ILE293",
+        "A:ILE313",
+        "A:ILE360",
+        "A:LEU248",
+        "A:LEU370",
+        "A:LYS271",
+        "A:MET290",
+        "A:MET318",
+        "A:PHE317",
+        "A:PHE359",
+        "A:PHE382",
+        "A:THR315",
+        "A:TYR253",
+        "A:VAL256",
+        "A:VAL270",
+        "A:VAL289",
+        "A:VAL299"
+      ],
+      "contactJaccard4A": 0.8333333333333334,
+      "recoveredReferenceContactFraction": 0.9523809523809523,
+      "contactDefinition": "Any heavy atom within4A; geometric proximity only."
+    }
+  ],
+  "seedPairs": [
+    {
+      "seeds": [
+        104729,
+        130363
+      ],
+      "fixedFrameSymmetricRMSD_A": 0.0717392048569922
+    },
+    {
+      "seeds": [
+        104729,
+        155921
+      ],
+      "fixedFrameSymmetricRMSD_A": 0.05342233564667442
+    },
+    {
+      "seeds": [
+        130363,
+        155921
+      ],
+      "fixedFrameSymmetricRMSD_A": 0.09158351675132607
+    }
+  ],
+  "poseBustersInputs": [
+    "top1-seed-104729.sdf",
+    "top1-seed-130363.sdf",
+    "top1-seed-155921.sdf"
+  ],
+  "nativeReceptorCheck": {
+    "solverInputHeavyAtoms": 2229,
+    "maxHeavyAtomDisplacementVsPreparedPDB_A": 0.0,
+    "maxPreparedHeavyAtomDisplacementVsOriginalCrystal_A": 0.0,
+    "missingExperimentalAtomKeys": []
+  },
+  "perAtomDisplacements": [
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 0,
+      "crystalAtomName": "C1",
+      "element": "C",
+      "displacement_A": 0.14956938189348756
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 1,
+      "crystalAtomName": "C6",
+      "element": "C",
+      "displacement_A": 0.12324366109459883
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 2,
+      "crystalAtomName": "C5",
+      "element": "C",
+      "displacement_A": 0.1611893296716618
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 3,
+      "crystalAtomName": "C4",
+      "element": "C",
+      "displacement_A": 0.3226065715387708
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 4,
+      "crystalAtomName": "N3",
+      "element": "N",
+      "displacement_A": 0.3916260971896525
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 5,
+      "crystalAtomName": "C2",
+      "element": "C",
+      "displacement_A": 0.324283826300357
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 6,
+      "crystalAtomName": "C7",
+      "element": "C",
+      "displacement_A": 0.27115678121706727
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 7,
+      "crystalAtomName": "C12",
+      "element": "C",
+      "displacement_A": 0.42035937006327917
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 8,
+      "crystalAtomName": "C11",
+      "element": "C",
+      "displacement_A": 0.5564575455504204
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 9,
+      "crystalAtomName": "N10",
+      "element": "N",
+      "displacement_A": 0.5621111989633368
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 10,
+      "crystalAtomName": "C9",
+      "element": "C",
+      "displacement_A": 0.48089291947376356
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 11,
+      "crystalAtomName": "N8",
+      "element": "N",
+      "displacement_A": 0.31056561303530955
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 12,
+      "crystalAtomName": "N13",
+      "element": "N",
+      "displacement_A": 0.500112987233883
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 13,
+      "crystalAtomName": "C14",
+      "element": "C",
+      "displacement_A": 0.24730750089716574
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 14,
+      "crystalAtomName": "C19",
+      "element": "C",
+      "displacement_A": 0.15079787796915534
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 15,
+      "crystalAtomName": "C18",
+      "element": "C",
+      "displacement_A": 0.3180393057469449
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 16,
+      "crystalAtomName": "C17",
+      "element": "C",
+      "displacement_A": 0.4156031761187576
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 17,
+      "crystalAtomName": "C16",
+      "element": "C",
+      "displacement_A": 0.28222331583340327
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 18,
+      "crystalAtomName": "C15",
+      "element": "C",
+      "displacement_A": 0.19231744590650093
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 19,
+      "crystalAtomName": "N21",
+      "element": "N",
+      "displacement_A": 0.35060233883988945
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 20,
+      "crystalAtomName": "C22",
+      "element": "C",
+      "displacement_A": 0.3509002707322971
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 21,
+      "crystalAtomName": "C23",
+      "element": "C",
+      "displacement_A": 0.36051213571806356
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 22,
+      "crystalAtomName": "C25",
+      "element": "C",
+      "displacement_A": 0.504067455803289
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 23,
+      "crystalAtomName": "C26",
+      "element": "C",
+      "displacement_A": 0.5611755518552092
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 24,
+      "crystalAtomName": "C27",
+      "element": "C",
+      "displacement_A": 0.4942246452778343
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 25,
+      "crystalAtomName": "C28",
+      "element": "C",
+      "displacement_A": 0.44866579990010585
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 26,
+      "crystalAtomName": "C29",
+      "element": "C",
+      "displacement_A": 0.41033401028917804
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 27,
+      "crystalAtomName": "C46",
+      "element": "C",
+      "displacement_A": 0.6243220322878219
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 28,
+      "crystalAtomName": "N48",
+      "element": "N",
+      "displacement_A": 0.5637871938950034
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 29,
+      "crystalAtomName": "C53",
+      "element": "C",
+      "displacement_A": 0.41844234967316785
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 30,
+      "crystalAtomName": "C52",
+      "element": "C",
+      "displacement_A": 0.4750831506168137
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 31,
+      "crystalAtomName": "N51",
+      "element": "N",
+      "displacement_A": 1.7478781422055711
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 32,
+      "crystalAtomName": "C54",
+      "element": "C",
+      "displacement_A": 2.084713409560171
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 33,
+      "crystalAtomName": "C50",
+      "element": "C",
+      "displacement_A": 0.9379269694384519
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 34,
+      "crystalAtomName": "C49",
+      "element": "C",
+      "displacement_A": 0.8244671006171177
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 35,
+      "crystalAtomName": "O29",
+      "element": "O",
+      "displacement_A": 0.4156392666724355
+    },
+    {
+      "seed": 104729,
+      "referenceAtomIndex": 36,
+      "crystalAtomName": "C20",
+      "element": "C",
+      "displacement_A": 0.22045407685048715
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 0,
+      "crystalAtomName": "C1",
+      "element": "C",
+      "displacement_A": 0.2844468315872028
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 1,
+      "crystalAtomName": "C6",
+      "element": "C",
+      "displacement_A": 0.15651517498313078
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 2,
+      "crystalAtomName": "C5",
+      "element": "C",
+      "displacement_A": 0.12241731903615848
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 3,
+      "crystalAtomName": "C4",
+      "element": "C",
+      "displacement_A": 0.20672203559369254
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 4,
+      "crystalAtomName": "N3",
+      "element": "N",
+      "displacement_A": 0.2699814808463709
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 5,
+      "crystalAtomName": "C2",
+      "element": "C",
+      "displacement_A": 0.3441351478707155
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 6,
+      "crystalAtomName": "C7",
+      "element": "C",
+      "displacement_A": 0.22621449997734122
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 7,
+      "crystalAtomName": "C12",
+      "element": "C",
+      "displacement_A": 0.3625686141959898
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 8,
+      "crystalAtomName": "C11",
+      "element": "C",
+      "displacement_A": 0.5044769568572987
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 9,
+      "crystalAtomName": "N10",
+      "element": "N",
+      "displacement_A": 0.5296196748611263
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 10,
+      "crystalAtomName": "C9",
+      "element": "C",
+      "displacement_A": 0.4542807501974938
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 11,
+      "crystalAtomName": "N8",
+      "element": "N",
+      "displacement_A": 0.27741124706831555
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 12,
+      "crystalAtomName": "N13",
+      "element": "N",
+      "displacement_A": 0.47778237723884365
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 13,
+      "crystalAtomName": "C14",
+      "element": "C",
+      "displacement_A": 0.2256767599909234
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 14,
+      "crystalAtomName": "C19",
+      "element": "C",
+      "displacement_A": 0.10056838469419395
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 15,
+      "crystalAtomName": "C18",
+      "element": "C",
+      "displacement_A": 0.31103215267878476
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 16,
+      "crystalAtomName": "C17",
+      "element": "C",
+      "displacement_A": 0.41272387864043064
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 17,
+      "crystalAtomName": "C16",
+      "element": "C",
+      "displacement_A": 0.28121166405396586
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 18,
+      "crystalAtomName": "C15",
+      "element": "C",
+      "displacement_A": 0.1988416455373479
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 19,
+      "crystalAtomName": "N21",
+      "element": "N",
+      "displacement_A": 0.3341511633976462
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 20,
+      "crystalAtomName": "C22",
+      "element": "C",
+      "displacement_A": 0.34190203275207165
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 21,
+      "crystalAtomName": "C23",
+      "element": "C",
+      "displacement_A": 0.3527463678055397
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 22,
+      "crystalAtomName": "C25",
+      "element": "C",
+      "displacement_A": 0.49024585668825127
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 23,
+      "crystalAtomName": "C26",
+      "element": "C",
+      "displacement_A": 0.5467741764202083
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 24,
+      "crystalAtomName": "C27",
+      "element": "C",
+      "displacement_A": 0.5005536934235914
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 25,
+      "crystalAtomName": "C28",
+      "element": "C",
+      "displacement_A": 0.4541959929369721
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 26,
+      "crystalAtomName": "C29",
+      "element": "C",
+      "displacement_A": 0.3968904130865378
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 27,
+      "crystalAtomName": "C46",
+      "element": "C",
+      "displacement_A": 0.6404818498599287
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 28,
+      "crystalAtomName": "N48",
+      "element": "N",
+      "displacement_A": 0.5595337344611169
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 29,
+      "crystalAtomName": "C53",
+      "element": "C",
+      "displacement_A": 0.36819152624687423
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 30,
+      "crystalAtomName": "C52",
+      "element": "C",
+      "displacement_A": 0.43348933089523395
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 31,
+      "crystalAtomName": "N51",
+      "element": "N",
+      "displacement_A": 1.7521444004419284
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 32,
+      "crystalAtomName": "C54",
+      "element": "C",
+      "displacement_A": 2.120813758914252
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 33,
+      "crystalAtomName": "C50",
+      "element": "C",
+      "displacement_A": 0.9038108209133138
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 34,
+      "crystalAtomName": "C49",
+      "element": "C",
+      "displacement_A": 0.7796627476030891
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 35,
+      "crystalAtomName": "O29",
+      "element": "O",
+      "displacement_A": 0.40541583590185665
+    },
+    {
+      "seed": 130363,
+      "referenceAtomIndex": 36,
+      "crystalAtomName": "C20",
+      "element": "C",
+      "displacement_A": 0.13328540805354763
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 0,
+      "crystalAtomName": "C1",
+      "element": "C",
+      "displacement_A": 0.0841724420460761
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 1,
+      "crystalAtomName": "C6",
+      "element": "C",
+      "displacement_A": 0.1583571911849878
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 2,
+      "crystalAtomName": "C5",
+      "element": "C",
+      "displacement_A": 0.1422040787038147
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 3,
+      "crystalAtomName": "C4",
+      "element": "C",
+      "displacement_A": 0.2852139547778117
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 4,
+      "crystalAtomName": "N3",
+      "element": "N",
+      "displacement_A": 0.3280487768610035
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 5,
+      "crystalAtomName": "C2",
+      "element": "C",
+      "displacement_A": 0.2197908096349823
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 6,
+      "crystalAtomName": "C7",
+      "element": "C",
+      "displacement_A": 0.27569911135148617
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 7,
+      "crystalAtomName": "C12",
+      "element": "C",
+      "displacement_A": 0.41099513379114416
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 8,
+      "crystalAtomName": "C11",
+      "element": "C",
+      "displacement_A": 0.5354409397870113
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 9,
+      "crystalAtomName": "N10",
+      "element": "N",
+      "displacement_A": 0.5525613088155922
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 10,
+      "crystalAtomName": "C9",
+      "element": "C",
+      "displacement_A": 0.4846699908184942
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 11,
+      "crystalAtomName": "N8",
+      "element": "N",
+      "displacement_A": 0.3112523092283793
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 12,
+      "crystalAtomName": "N13",
+      "element": "N",
+      "displacement_A": 0.5025355708803075
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 13,
+      "crystalAtomName": "C14",
+      "element": "C",
+      "displacement_A": 0.25802519256848155
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 14,
+      "crystalAtomName": "C19",
+      "element": "C",
+      "displacement_A": 0.1636092906897391
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 15,
+      "crystalAtomName": "C18",
+      "element": "C",
+      "displacement_A": 0.333204141630922
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 16,
+      "crystalAtomName": "C17",
+      "element": "C",
+      "displacement_A": 0.4341082814229651
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 17,
+      "crystalAtomName": "C16",
+      "element": "C",
+      "displacement_A": 0.3106412722096031
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 18,
+      "crystalAtomName": "C15",
+      "element": "C",
+      "displacement_A": 0.2174396467988311
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 19,
+      "crystalAtomName": "N21",
+      "element": "N",
+      "displacement_A": 0.373906405401138
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 20,
+      "crystalAtomName": "C22",
+      "element": "C",
+      "displacement_A": 0.37672934581739487
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 21,
+      "crystalAtomName": "C23",
+      "element": "C",
+      "displacement_A": 0.3857382532236077
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 22,
+      "crystalAtomName": "C25",
+      "element": "C",
+      "displacement_A": 0.5291323085958723
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 23,
+      "crystalAtomName": "C26",
+      "element": "C",
+      "displacement_A": 0.5883204908891078
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 24,
+      "crystalAtomName": "C27",
+      "element": "C",
+      "displacement_A": 0.5206179021124815
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 25,
+      "crystalAtomName": "C28",
+      "element": "C",
+      "displacement_A": 0.45167023368825177
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 26,
+      "crystalAtomName": "C29",
+      "element": "C",
+      "displacement_A": 0.41097323513824735
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 27,
+      "crystalAtomName": "C46",
+      "element": "C",
+      "displacement_A": 0.6560899328598172
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 28,
+      "crystalAtomName": "N48",
+      "element": "N",
+      "displacement_A": 0.5931829397411931
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 29,
+      "crystalAtomName": "C53",
+      "element": "C",
+      "displacement_A": 0.391650354270236
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 30,
+      "crystalAtomName": "C52",
+      "element": "C",
+      "displacement_A": 0.4907494268972716
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 31,
+      "crystalAtomName": "N51",
+      "element": "N",
+      "displacement_A": 1.8052371035406962
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 32,
+      "crystalAtomName": "C54",
+      "element": "C",
+      "displacement_A": 2.1628259291954106
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 33,
+      "crystalAtomName": "C50",
+      "element": "C",
+      "displacement_A": 0.9760973312124143
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 34,
+      "crystalAtomName": "C49",
+      "element": "C",
+      "displacement_A": 0.8518826210224023
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 35,
+      "crystalAtomName": "O29",
+      "element": "O",
+      "displacement_A": 0.4553075883400113
+    },
+    {
+      "seed": 155921,
+      "referenceAtomIndex": 36,
+      "crystalAtomName": "C20",
+      "element": "C",
+      "displacement_A": 0.21538337911733196
+    }
+  ],
+  "notes": [
+    "Element-only assignment against crystallography is a coordinate-provenance cross-check.",
+    "The reported primary RMSD uses chemical-graph-preserving mappings.",
+    "Contact4A denotes geometric proximity, without assigning hydrogen bonds."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "knowledge",
+  "items": [
+    {
+      "id": "vina-basic",
+      "title": "Vina Basic docking",
+      "locator": "https://autodock-vina.readthedocs.io/en/stable/docking_basic.html",
+      "version": "网页标示1.2.0文档",
+      "sourceKind": "manual",
+      "readStatus": "sectionRead",
+      "readScope": "准备、box、运行及1IEP案例",
+      "supports": [
+        "对接路线",
+        "SDF准备",
+        "搜索配置"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "vina-basic",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "vina-faq",
+      "title": "Vina FAQ",
+      "locator": "https://autodock-vina.readthedocs.io/en/latest/faq.html",
+      "version": "latest未冻结",
+      "sourceKind": "manual",
+      "readStatus": "sectionRead",
+      "readScope": "适用性、随机搜索、质子化、空间单位",
+      "supports": [
+        "靶标相关验证",
+        "种子与单位"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "vina-faq",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "meeko-basic",
+      "title": "Meeko Basic Docking",
+      "locator": "https://apidocmeeko.readthedocs.io/en/latest/tutorial1.html",
+      "version": "latest未冻结",
+      "sourceKind": "manual",
+      "readStatus": "sectionRead",
+      "readScope": "受体/配体准备及状态枚举",
+      "supports": [
+        "准备接口",
+        "化学身份与状态"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "meeko-basic",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "docking-methods",
+      "title": "本包方法约定",
+      "locator": "README.md",
+      "version": "0.1.0",
+      "sourceKind": "methodNote",
+      "readStatus": "authored",
+      "readScope": "计量、控制、聚合与结论范围",
+      "supports": [
+        "reference RMSD",
+        "运行分母",
+        "适用边界"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "docking-methods",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    }
+  ],
+  "retrievalPolicy": {
+    "defaultScope": [
+      "small-molecule-docking",
+      "shared-chemistry",
+      "shared-statistics"
+    ],
+    "filters": [
+      "targetFamily",
+      "preparationMethod",
+      "scoringVersion",
+      "chemicalState",
+      "site"
+    ],
+    "useRequirement": "实读来源并核对适用性；取得原始案例后另存摘要。"
+  }
+}

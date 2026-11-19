@@ -1,0 +1,20 @@
+{
+  "operationId": "provider-role-check-672ecd88-7cd5-4645-83bb-2bad4e20c779",
+  "provider": "aispot-ds",
+  "model": "deepseek-v4.1-flash",
+  "checks": {
+    "succeeded": false,
+    "sourceRead": true,
+    "artifactPublished": false,
+    "speedCorrect": false,
+    "printSemanticsCorrect": false,
+    "strainSemanticsCorrect": false,
+    "massSemanticsCorrect": false
+  },
+  "sessionId": "01a1e9e6-02fb-70dc-bf3d-a4dc23b6af21",
+  "outputRefs": [],
+  "evidenceRefs": [
+    "read-ba0ed2f3-2ea3-435e-a8fb-70f39397d7dd"
+  ],
+  "scope": "Real provider single-role tool/read/publish check against independent LAMMPS command probes"
+}

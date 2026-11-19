@@ -1,0 +1,25 @@
+dsh-agent — 分子模拟（LAMMPS/ReaxFF）运维助手
+Copyright (c) 2026 AI4Science MD Team
+
+本仓库主体代码按 PolyForm Noncommercial License 1.0.0 授权（见 LICENSE），
+仅限非商业用途；商业使用须事先获得版权人书面授权。
+
+第三方组件（各自保留其原始许可证与版权声明）：
+
+1. @deepseek-ai/dsh（deepseek-harness）
+   MIT License, Copyright (c) 2026 DeepSeek
+   本项目以 npm 依赖方式使用，并通过 scripts/apply-branding.py 对其
+   前端产物做品牌补丁（MIT 许可证明确允许修改）。其 MIT 许可证全文见
+   node_modules/@deepseek-ai/dsh/LICENSE（pnpm install 后生成）。
+
+2. evolution/rsi_knowledge/graph.json
+   自 github.com/clawinfra/rsi-os 项目 vendor 的自进化知识图谱数据，
+   经 jsDelivr CDN 获取。上游仓库当前无法访问，其许可证未能核实；
+   若权利人对使用方式有异议，请联系删除后移除该文件。
+
+3. agent_deploy_kit（被引用的外部 LAMMPS 编排系统，不在本仓库内）
+   为版权人自有代码，随其自身条款发布。
+
+本项目的学术使用（论文复现、方法对比等）属于许可证明示的
+"Personal Uses / Noncommercial Organizations" 许可范围，无需另行授权，
+引用时注明出处即可。

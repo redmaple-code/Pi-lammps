@@ -1,0 +1,83 @@
+[
+  {
+    "facet": "stage",
+    "slug": "planning",
+    "label": "方案设计",
+    "description": "确定目标、方法与方案；不含具体执行。",
+    "aliases": [
+      "方案",
+      "设计",
+      "plan",
+      "design"
+    ]
+  },
+  {
+    "facet": "stage",
+    "slug": "setup",
+    "label": "准备与建模",
+    "description": "准备输入、模型、环境。",
+    "aliases": [
+      "建模",
+      "准备",
+      "setup",
+      "modeling"
+    ]
+  },
+  {
+    "facet": "stage",
+    "slug": "execution",
+    "label": "执行",
+    "description": "运行、监控、处理运行中的故障。",
+    "aliases": [
+      "运行",
+      "执行",
+      "run",
+      "execution"
+    ]
+  },
+  {
+    "facet": "stage",
+    "slug": "analysis",
+    "label": "分析",
+    "description": "结果处理、分析与解释。",
+    "aliases": [
+      "分析",
+      "后处理",
+      "analysis",
+      "postprocessing"
+    ]
+  },
+  {
+    "facet": "stage",
+    "slug": "validation",
+    "label": "验证与验收",
+    "description": "对照基准、核对、验收。",
+    "aliases": [
+      "验证",
+      "验收",
+      "validation",
+      "verification"
+    ]
+  },
+  {
+    "facet": "stage",
+    "slug": "reporting",
+    "label": "报告",
+    "description": "撰写报告、交付。",
+    "aliases": [
+      "报告",
+      "交付",
+      "report"
+    ]
+  },
+  {
+    "facet": "topic",
+    "slug": "general",
+    "label": "通用",
+    "description": "暂时没有更合适主题时使用；审核时优先改挂到具体主题。",
+    "aliases": [
+      "通用",
+      "general"
+    ]
+  }
+]

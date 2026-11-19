@@ -1,0 +1,18 @@
+(node:53200) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"event":"case","caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stateDirectory":"C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\role-workflow-20261118"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-04","status":"running"}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":14074,"model":"deepseek-v4.1-flash","thinking":{"type":"enabled"},"reasoningEffort":"low","maxTokens":8192,"toolCount":4}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":80967,"model":"deepseek-v4.1-flash","thinking":{"type":"enabled"},"reasoningEffort":"low","maxTokens":8192,"toolCount":4}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":8827,"model":"deepseek-v4.1-flash","thinking":{"type":"disabled"},"maxTokens":8192}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":33423,"model":"deepseek-v4.1-flash","thinking":{"type":"enabled"},"reasoningEffort":"low","maxTokens":8192,"toolCount":4}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":45818,"model":"deepseek-v4.1-flash","thinking":{"type":"enabled"},"reasoningEffort":"low","maxTokens":8192,"toolCount":4}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":false},"bodyBytes":65587,"model":"deepseek-v4.1-flash","thinking":{"type":"enabled"},"reasoningEffort":"low","maxTokens":8192,"toolCount":4}
+{"event":"transportFailure","code":"CURL_TRANSPORT_FAILED","message":"cURL transport exited with code 55"}
+{"code":"RESULT_UNKNOWN","message":"Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:2 unknown: Connection error.","retryable":false,"sideEffectState":"unknown"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

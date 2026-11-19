@@ -1,0 +1,12 @@
+# dsh-md-ops-gate bundle patch: one insert registering the approval gate.
+# The row id must match the plugin's exported cordis `name`.
+# boardToken 与 /etc/mdsim/md-board.env 同源; 文件 640 user:mdagent(F7 纪律)。
+- insert:
+    - id: dsh-md-ops-gate
+      name: 'dsh-md-ops-gate'
+      config:
+        tools:
+          - 'mcp__mdsim__sim_exec'
+          - 'mcp__mdagent__sim_exec'
+        boardUrl: 'http://127.0.0.1:8080'
+        boardToken: '<REDACTED-TOKEN>'

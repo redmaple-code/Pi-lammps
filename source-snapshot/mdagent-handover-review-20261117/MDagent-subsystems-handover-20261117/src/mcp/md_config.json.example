@@ -1,0 +1,75 @@
+{
+  "mode": "local",
+  "local_base": "/absolute/path/to/agent_deploy_kit",
+  "ssh": {
+    "host": "",
+    "user": "",
+    "password": "",
+    "key_file": "",
+    "remote_base": "/absolute/path/to/agent_deploy_kit"
+  },
+  "monitor_url": "http://127.0.0.1:8080",
+  "_note": "mode=local 直读 local_base 下的 state/日志;mode=ssh 填 ssh.* 拉 remote_base 的实时状态。所有工具只读,绝不写/杀进程/改力场。本文件为模板——setup.sh 会把 local_base/remote_base/data_root/run_case_base 改写为机器实际路径。",
+  "evidence_execution_registrations": [],
+  "_evidence_execution_note": "由 scripts/install_config.py 在检测到 kit 与 LAMMPS 可执行文件后播种；条目键集必须恰好是 profile_id/executable/command/kinds/entrypoints，entrypoints 是精确文件名（约定 in.production / in.validation）。空列表 = fail-closed 不可执行，sim_selfcheck 会报告缺失项。",
+  "hpc": {
+    "enabled": false,
+    "scheduler": "auto",
+    "default_partition": "",
+    "default_account": "",
+    "default_walltime": "24:00:00",
+    "clusters": {},
+    "_note": "超算预留。enabled=false 时 sim_hpc_submit 只渲染脚本(dry_run),hpc_collector 不启动;启用属人工决策(红线)。clusters 可放每集群独立 ssh 连接:{\"<name>\": {\"host\",\"user\",\"key_file\"}},缺省回退顶层 ssh 段。"
+  },
+  "scnet": {
+    "enabled": false,
+    "auto_submit": false,
+    "cluster_id": "20027",
+    "work_root": "YMY-AI",
+    "lmp_cmd": "",
+    "whitelist": {
+      "queues": [
+        "tyhcnormal"
+      ],
+      "max_nodes": 2,
+      "max_walltime_h": 48
+    },
+    "_note": "SCNet 开放平台提交(2026-09-03 真机联调通:华北二区太原 tyhcnormal,SLURM 调度器 1697599991)。凭证在 <数据根>/dsh-home/.credentials.yaml。enabled+auto_submit 双 true 才允许提交,且仅限白名单;人工确认为代码强制(scnet_client 内 TTY/一次性批准文件,非提示词),无法经配置关闭。work_root=YMY-AI(用户拍板),远端=<homePath>/YMY-AI/<case_id>/。lmp_cmd 待填:该集群 LAMMPS 加载命令,如 module load xxx && mpirun -np {nproc} lmp_mpi -in {input}。"
+  },
+  "data_root": "/absolute/path/to/mdsim-data",
+  "run_case_base": "/absolute/path/to/程序运行-case",
+  "schedule": [
+    [
+      0,
+      100000,
+      300.0,
+      300.0
+    ],
+    [
+      100000,
+      400000,
+      300.0,
+      600.0
+    ],
+    [
+      400000,
+      700000,
+      600.0,
+      900.0
+    ],
+    [
+      700000,
+      1000000,
+      900.0,
+      1200.0
+    ],
+    [
+      1000000,
+      1350000,
+      1200.0,
+      1200.0
+    ]
+  ],
+  "schedules": {},
+  "_schedule_note": "温度程序唯一出处(2026-08-29 按项目统一):schedule=全局默认;schedules={<project>: [...]} 按项目覆盖。web_monitor 与 monitor_agent(经 pipeline_check 注入)都从这里读;段格式 [起始步, 结束步, 起始K, 结束K]。setup.sh 不改写本字段。"
+}

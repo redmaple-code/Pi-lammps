@@ -1,0 +1,176 @@
+{
+  "status": "completed",
+  "startedAt": "2026-11-17T07:15:39.495Z",
+  "endedAt": "2026-11-17T07:16:03.475Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "timedOut": false,
+  "argv": [
+    "E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe",
+    "-in",
+    "in.grinding",
+    "-log",
+    "log.lammps"
+  ],
+  "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e\\work",
+  "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+  "workerPid": 59220,
+  "workerToken": "worker-6f30bc3c-e349-4ec4-9a9f-7f5facd32542",
+  "observedAt": "2026-11-17T07:16:03.476Z",
+  "id": "run-2e752349-02f9-4630-8beb-8ed8c437cf8e",
+  "executionMode": "real",
+  "outputRefs": [
+    {
+      "artifactId": "artifact-926b5b22-e336-4720-ab8d-f0c7eb11edf0",
+      "digest": "sha256:bf13b5848a9a638fa8768a3969ae4c78f04ade0c07a68a1f618ebff4a8685c9b",
+      "byteLength": 11260,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\bf\\bf13b5848a9a638fa8768a3969ae4c78f04ade0c07a68a1f618ebff4a8685c9b",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.689Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "log.lammps"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-ad5076d9-fe85-4352-88d5-09403464b044",
+      "digest": "sha256:202745d8fbc335ed4920731af856b87ba1bec958d73db1c1c8c928007ed401f6",
+      "byteLength": 3379,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\20\\202745d8fbc335ed4920731af856b87ba1bec958d73db1c1c8c928007ed401f6",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.705Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "grinding.csv"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-e56fa928-4f34-4c2e-bd92-95c04a2099e4",
+      "digest": "sha256:ca02689d15f14e89e6a3717c095a5f78bb1f7e94a917d74b5814dd1e20e028a2",
+      "byteLength": 3082,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ca\\ca02689d15f14e89e6a3717c095a5f78bb1f7e94a917d74b5814dd1e20e028a2",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.723Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "approach.csv"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-c37fd3ad-49cf-48e3-b8b5-1d10f1d0c7fc",
+      "digest": "sha256:6b7a36f45d436233ee1b0706e00a430219706ebf163def9126c621ffd64a3f1f",
+      "byteLength": 3084163,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\6b\\6b7a36f45d436233ee1b0706e00a430219706ebf163def9126c621ffd64a3f1f",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.802Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "trajectory.lammpstrj"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-bfad7a84-bda0-435b-8879-d6d54efc05e4",
+      "digest": "sha256:817f14499c49e8a911c1c542de5b024f7c5100b30237470c7964e830670ed7c7",
+      "byteLength": 198885,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\81\\817f14499c49e8a911c1c542de5b024f7c5100b30237470c7964e830670ed7c7",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.823Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "initial.lammpstrj"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-e8714e30-e706-420c-98ce-6ba04b414a46",
+      "digest": "sha256:f4ecb238677441dc96dca64a9eb34e187ec28b3696b9051a6572125bd97ade17",
+      "byteLength": 342882,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\f4\\f4ecb238677441dc96dca64a9eb34e187ec28b3696b9051a6572125bd97ade17",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.845Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "final.lammpstrj"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-6977d868-b587-4976-8338-23f2ca79cb9b",
+      "digest": "sha256:0c84ec6a5f96820034af38a2fdb7aa4f2ec9e866e683c4d02d820023d7d858c2",
+      "byteLength": 780509,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\0c\\0c84ec6a5f96820034af38a2fdb7aa4f2ec9e866e683c4d02d820023d7d858c2",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.881Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "final.data"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-c8aa9cb6-a625-469d-b71e-26be23e1e03d",
+      "digest": "sha256:ad70967618ed1220ed2b79d62298c99443c9311eeddbe64c427135da5ba3765f",
+      "byteLength": 564174,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ad\\ad70967618ed1220ed2b79d62298c99443c9311eeddbe64c427135da5ba3765f",
+      "type": "file",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.908Z",
+      "metadata": {
+        "type": "file",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "final.restart"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-245c0817-057b-4fe5-be1b-42489572ee3d",
+      "digest": "sha256:408083915577b1e3ceb70e974ca86ff451d138428764a1952be58f6b52bf9e6b",
+      "byteLength": 8915,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\40\\408083915577b1e3ceb70e974ca86ff451d138428764a1952be58f6b52bf9e6b",
+      "type": "log",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.923Z",
+      "metadata": {
+        "type": "log",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "stdout.log"
+      },
+      "dependencies": []
+    },
+    {
+      "artifactId": "artifact-2be4a625-e322-4c36-a7de-115db030840d",
+      "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "byteLength": 0,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "type": "log",
+      "status": "available",
+      "createdAt": "2026-11-17T07:16:03.931Z",
+      "metadata": {
+        "type": "log",
+        "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+        "name": "stderr.log"
+      },
+      "dependencies": []
+    }
+  ],
+  "collectedAt": "2026-11-17T07:16:03.932Z"
+}

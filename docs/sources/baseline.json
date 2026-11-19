@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-17",
+  "repository": "https://github.com/redmaplewww/redmaple-agent",
+  "head": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+  "cloneDepth": "1",
+  "branch": "main",
+  "node": "v22.19.0",
+  "npm": "10.9.3",
+  "packageLockSha256": "f538629ba5d2882155d50e86405e2e05802c3d2748607d82f41f3acd85f8c1b9",
+  "sourceWorkflow": {
+    "file": "sources/完整仿真工作流设计.md",
+    "sha256": "a6244c3726750ae8d8eff4ff1146174c3a39de941e6626a6435d36af0baacbcd"
+  },
+  "autolammpsCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9",
+  "tests": {
+    "total": 79,
+    "passed": 75,
+    "failed": 1,
+    "skipped": 3,
+    "elapsedMs": 164586.4749,
+    "log": "evidence/baseline-tests-25dec99.log",
+    "focusedRecheck": "failed_same_assertion"
+  },
+  "productSourceModified": false
+}

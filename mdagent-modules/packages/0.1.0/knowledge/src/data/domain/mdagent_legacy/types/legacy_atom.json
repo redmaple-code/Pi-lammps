@@ -1,0 +1,43 @@
+{
+  "type_id": "legacy_atom",
+  "label": "旧库原子观察",
+  "description": "从 atoms.jsonl 迁移；原 atom（含 t / kind / fact / refs / axes）保存在 raw_json 中，读取时原样还原。",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "kind": {
+        "kind": "text",
+        "max_len": 120
+      },
+      "refs": {
+        "kind": "list",
+        "item": "text"
+      },
+      "raw_json": {
+        "kind": "text",
+        "required": true,
+        "max_len": 20000
+      }
+    },
+    "render": [
+      "statement",
+      "kind",
+      "refs",
+      "raw_json"
+    ],
+    "required_facets": [
+      "topic"
+    ],
+    "review_checklist": [
+      "原始记录完整保存在 raw_json",
+      "legacy_id 与旧库一致",
+      "状态映射正确"
+    ],
+    "require_sources": false
+  }
+}

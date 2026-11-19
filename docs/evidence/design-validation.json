@@ -1,0 +1,10 @@
+{
+  "requirementRows": 92,
+  "uniqueContiguousIds": true,
+  "sourceChaptersInCoverageIndex": 13,
+  "checkedLocalLinks": 15,
+  "sourceHashMatches": true,
+  "baselineJsonParses": true,
+  "productWorkingTreeClean": true,
+  "scope": "Design artifacts only; does not validate implementation or scientific correctness."
+}

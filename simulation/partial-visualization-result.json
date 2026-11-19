@@ -1,0 +1,94 @@
+{
+  "caseId": "hea-grinding-8a1aa874-858a-424c-aa00-d75f9471d1fc",
+  "scope": "visualize",
+  "status": "awaitingImageInspection",
+  "figures": [
+    {
+      "id": "figure-draft-c42f7139-441c-408e-aff0-b55e7ad10f6e",
+      "name": "cross-section.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-d753cef5-fbb3-4efe-a5eb-6357d7678469",
+          "digest": "sha256:a3b2a1b3b028d67234b236661e1151f2444957fff6e6417028b79bc94d18b609",
+          "byteLength": 175028,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a3\\a3b2a1b3b028d67234b236661e1151f2444957fff6e6417028b79bc94d18b609",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-17T07:02:38.798Z",
+          "metadata": {
+            "type": "image",
+            "name": "cross-section.png",
+            "caseId": "hea-grinding-8a1aa874-858a-424c-aa00-d75f9471d1fc",
+            "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+            "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+            "tool": "matplotlib"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+      "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+      "inspection": {
+        "opened": false
+      }
+    },
+    {
+      "id": "figure-draft-7840c79e-1b51-4af1-aef7-fd759642211e",
+      "name": "force-temperature.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-2ac6ac97-98f1-4b24-a231-89b13ac56a80",
+          "digest": "sha256:517fa7c8f11a58b1ee6654773f799a3731199f62b54bda7bc199765384600e9f",
+          "byteLength": 75935,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\51\\517fa7c8f11a58b1ee6654773f799a3731199f62b54bda7bc199765384600e9f",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-17T07:02:38.815Z",
+          "metadata": {
+            "type": "image",
+            "name": "force-temperature.png",
+            "caseId": "hea-grinding-8a1aa874-858a-424c-aa00-d75f9471d1fc",
+            "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+            "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+            "tool": "matplotlib"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+      "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+      "inspection": {
+        "opened": false
+      }
+    },
+    {
+      "id": "figure-draft-fcac5d0e-d439-4511-80ae-31befa1186d0",
+      "name": "grinding-atoms-ovito.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-c9b13392-6d28-4489-857a-668b2ddc5c1e",
+          "digest": "sha256:ca164fa193f0bb11d8689857eba3504fb946de3c46ac5f538d2a218ead43ccf2",
+          "byteLength": 809053,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ca\\ca164fa193f0bb11d8689857eba3504fb946de3c46ac5f538d2a218ead43ccf2",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-17T07:02:38.843Z",
+          "metadata": {
+            "type": "image",
+            "name": "grinding-atoms-ovito.png",
+            "caseId": "hea-grinding-8a1aa874-858a-424c-aa00-d75f9471d1fc",
+            "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+            "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+            "tool": "OVITO"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-120f37b1-43dc-4163-893f-954af98aab03",
+      "analysisRef": "artifact-09ebb436-d109-4532-94b6-5eea4895e4d4",
+      "inspection": {
+        "opened": false
+      }
+    }
+  ]
+}

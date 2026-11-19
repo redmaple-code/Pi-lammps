@@ -1,0 +1,6 @@
+No module named 'prody'
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m
+option --read_with_prody requires Prody, which is not installed.
+Installable from PyPI (pip install prody) or conda-forge (micromamba install prody)

@@ -1,0 +1,38 @@
+{
+  "mode": "isolated stdio; no external model or solver",
+  "results": [
+    {
+      "module": "knowledge",
+      "returncode": 0,
+      "tools": 16,
+      "required_present": [
+        "ukb_catalog",
+        "ukb_overview",
+        "ukb_read"
+      ],
+      "ok": true
+    },
+    {
+      "module": "gate",
+      "returncode": 0,
+      "tools": 9,
+      "required_present": [
+        "confirm_intent",
+        "intent_view",
+        "validate_intent"
+      ],
+      "ok": true
+    },
+    {
+      "module": "evidence",
+      "returncode": 0,
+      "tools": 17,
+      "required_present": [
+        "sim_evidence",
+        "sim_exec"
+      ],
+      "ok": true
+    }
+  ],
+  "ok": true
+}

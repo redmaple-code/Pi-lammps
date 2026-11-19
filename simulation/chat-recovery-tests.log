@@ -1,0 +1,51 @@
+TAP version 13
+# (node:51464) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: full SDK uses native tools, Code Mode, themes, resources and one ledger
+ok 1 - full SDK uses native tools, Code Mode, themes, resources and one ledger
+  ---
+  duration_ms: 447777.6704
+  type: 'test'
+  ...
+# Subtest: native session replacements release locks and preserve resources
+ok 2 - native session replacements release locks and preserve resources
+  ---
+  duration_ms: 30201.121
+  type: 'test'
+  ...
+# Subtest: native resource hot reload retains runtime settings and deferred tool discovery
+ok 3 - native resource hot reload retains runtime settings and deferred tool discovery
+  ---
+  duration_ms: 35576.0175
+  type: 'test'
+  ...
+# Subtest: shared native ModelRuntime is metered once and restored after final owner closes
+ok 4 - shared native ModelRuntime is metered once and restored after final owner closes
+  ---
+  duration_ms: 27893.0403
+  type: 'test'
+  ...
+# Subtest: runtime cleanup failures still restore the shared model transport
+ok 5 - runtime cleanup failures still restore the shared model transport
+  ---
+  duration_ms: 11026.457
+  type: 'test'
+  ...
+# Subtest: workspace policy blocks external paths before native read executes
+ok 6 - workspace policy blocks external paths before native read executes
+  ---
+  duration_ms: 15878.4111
+  type: 'test'
+  ...
+# Subtest: money gate rejects incomplete prices before dispatch and applies explicit zero prices
+ok 7 - money gate rejects incomplete prices before dispatch and applies explicit zero prices
+  ---
+  duration_ms: 34906.7483
+  type: 'test'
+  ...
+# Subtest: image edit preprocessing and native image generation share parent accounting
+ok 8 - image edit preprocessing and native image generation share parent accounting
+  ---
+  duration_ms: 27491.2497
+  type: 'test'
+  ...

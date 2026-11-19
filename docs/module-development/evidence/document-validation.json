@@ -1,0 +1,22 @@
+{
+  "revision": "MD-1",
+  "validationDate": "2026-11-17",
+  "modules": 21,
+  "tasks": 63,
+  "requirements": 116,
+  "moduleScenarios": 63,
+  "requirementSpecificScenarioPlans": 116,
+  "moduleAndTaskDependenciesAcyclic": true,
+  "allRequirementIdsMappedExactlyOnce": true,
+  "checkedLocalLinks": 465,
+  "existingSourceEntriesChecked": 13,
+  "inputHashesCurrent": true,
+  "productCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+  "productWorkingTreeClean": true,
+  "estimatePersonDays": [
+    73,
+    119
+  ],
+  "productTestsRunThisTurn": false,
+  "scope": "Document structure and references only. No claim of implementation, scientific validity or product acceptance."
+}

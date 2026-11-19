@@ -1,0 +1,13 @@
+{
+  "geometry": {
+    "periodicWidthExceedsDiameter": true,
+    "thermalLayerBelowContact": true,
+    "abrasiveStaysWithinLength": true,
+    "positiveTimestep": true
+  },
+  "limitations": [
+    "Idealized model-alloy potential",
+    "Rigid repulsive sphere represents the abrasive geometry",
+    "Single short small-cell integration test. Convergence, repeat-seed statistics and experimental grinding comparison are pending."
+  ]
+}

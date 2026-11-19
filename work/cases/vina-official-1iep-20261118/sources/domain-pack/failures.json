@@ -1,0 +1,83 @@
+{
+  "id": "failures",
+  "items": [
+    {
+      "id": "chemistry-loss",
+      "signal": "分子化学变化",
+      "candidateCauses": [
+        "键级/映射缺失",
+        "原子类型不支持"
+      ],
+      "diagnosticEvidence": [
+        "原始分子",
+        "日志",
+        "身份对比"
+      ],
+      "returnStage": "ligands",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "site-mismatch",
+      "signal": "姿态离开位点",
+      "candidateCauses": [
+        "box坐标/单位",
+        "受体改变",
+        "链选择"
+      ],
+      "diagnosticEvidence": [
+        "box视图",
+        "变换",
+        "残基"
+      ],
+      "returnStage": "configure",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "control-fails",
+      "signal": "控制恢复或富集不足",
+      "candidateCauses": [
+        "模型/状态不适用",
+        "搜索不足",
+        "数据泄漏"
+      ],
+      "diagnosticEvidence": [
+        "控制表",
+        "种子/预算研究",
+        "划分"
+      ],
+      "returnStage": "qualify",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "run-incomplete",
+      "signal": "缺姿态或未知回执",
+      "candidateCauses": [
+        "环境/资源",
+        "输入不支持",
+        "提交中断"
+      ],
+      "diagnosticEvidence": [
+        "operationId",
+        "日志",
+        "外部状态"
+      ],
+      "returnStage": "dock",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "aggregation-bias",
+      "signal": "排名受枚举数影响",
+      "candidateCauses": [
+        "状态数不同",
+        "失败丢弃",
+        "跨scoring混合"
+      ],
+      "diagnosticEvidence": [
+        "全量矩阵",
+        "聚合规则"
+      ],
+      "returnStage": "analyze",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    }
+  ]
+}

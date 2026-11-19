@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\Scripts\\python.exe",
+    "-m",
+    "meeko.cli.mk_prepare_receptor",
+    "--read_pdb",
+    "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\prepared\\receptor-grouped.pdb",
+    "-o",
+    "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\prepared\\receptor",
+    "-p",
+    "-v",
+    "-j",
+    "--write_pdb",
+    "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\prepared\\receptor-prepared.pdb",
+    "--box_size",
+    "20",
+    "20",
+    "20",
+    "--box_center",
+    "15.190",
+    "53.903",
+    "16.917"
+  ],
+  "startedAt": "2026-11-17T13:56:29.792428+00:00",
+  "endedAt": "2026-11-17T13:56:37.692326+00:00",
+  "durationSeconds": 7.89000000001397,
+  "exitCode": 0,
+  "log": "logs/receptor-preparation.log"
+}

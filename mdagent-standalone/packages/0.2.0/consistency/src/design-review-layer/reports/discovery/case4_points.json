@@ -1,0 +1,868 @@
+{
+  "case": "case4",
+  "provider": "external-ai:case4_points.json",
+  "points": [
+    {
+      "point_id": "RP-001",
+      "title": "所有原子质量被设为 12 amu，Ti/Al/V 的元素身份与动力学失真",
+      "dimension_guess": "材料参数-质量",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          18,
+          45,
+          46,
+          47,
+          48
+        ]
+      },
+      "claim_in_text": "E-02 称工件为 TiAlV 合金（Ti/Al/V）；L18 先设 mass 4 12.01，L45-L48 又把 type 1-4 全部设为 12。",
+      "why_it_matters": "Ti、Al、V 的原子质量远大于碳的 12 amu；统一为 12 会改变声子频率、热容、热导、动量传递和动能-温度换算，使切削力、温升、塑性响应与真实 TiAlV 不可比。",
+      "physical_question": "这些 mass 命令是笔误、类型映射错误，还是有意做的质量归一化？若为笔误，所有热-力学结果是否需要重算？",
+      "evidence_needed": [
+        "E2 文献（Ti/Al/V 原子质量与势函数质量约定）",
+        "E4 案例（原始 in 文件的元素-类型映射）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-002",
+      "title": "E-04 的 2.5 Å 压入深度与代码中 35 Å 量级的位移驱动不一致",
+      "dimension_guess": "加载历史-压入深度",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          34,
+          71,
+          80,
+          117
+        ]
+      },
+      "claim_in_text": "E-04 称“先压入（模型 2.5 Å，宏观 µm 级）”；L34 displace_atoms ball move 0 0 -2.5，随后 L71 velocity ball set 0 0 -1 units box，L80 run 35000（timestep 0.001 ps）；L117 的 fix def3 在压入结束后才定义，压入段没有力-深度记录。",
+      "why_it_matters": "按原文参数，35000 步 × 0.001 ps/步 × 1 Å/ps 给出约 35 Å 的额外向下位移；扣除初始间隙后净压入约 30 Å 量级，而非 2.5 Å。球半径 40 Å，30 Å 已接近半埋，接触几何、塑性区与力-深度曲线完全不同于 2.5 Å 浅压入，且压入段本身没有力/温度输出可验证。",
+      "physical_question": "E-04 的 2.5 Å 是只指 L34 的初始 offset，还是设计压入深度？L71 的恒速压入为何没有停止条件或力控制？压入段为何不记录力-深度曲线？",
+      "evidence_needed": [
+        "E2 文献（纳米压入深度定义）",
+        "E4 案例（原始 in.friction 的压入段协议）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-003",
+      "title": "压入速度 100 m/s 使压入成为动态冲击，未论证与宏观压入的相似性",
+      "dimension_guess": "加载历史-应变率",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          71,
+          80
+        ]
+      },
+      "claim_in_text": "E-04 只写“先压入（模型 2.5 Å…）”；L71 velocity ball set 0 0 -1 units box（metal 单位下 1 Å/ps = 100 m/s），L80 run 35000。",
+      "why_it_matters": "100 m/s 的压入速度远高于常规纳米压入的准静态速率；惯性力、位错成核动力学和局部绝热温升会改变硬度、塑性区与残余应力，E-04 没有给出该速率的宏观对应或无量纲依据。1 fs 时间步在该速度和 12 amu 质量下是否收敛也未验证。",
+      "physical_question": "压入阶段为什么采用 100 m/s？惯性力与准静态极限的偏差如何量化？1 fs 时间步是否足以解析该速率下的声子/位错事件？",
+      "evidence_needed": [
+        "E2 文献（纳米压入应变率效应）",
+        "E4 案例（压入速度设定依据）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-002",
+      "common_issue_name": "MD 应变率比实验高多个数量级",
+      "disposition": "explained",
+      "builtin_explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。"
+    },
+    {
+      "point_id": "RP-004",
+      "title": "200 Å 厚工件加 10 Å 固定底层不能代表 E-03 的 mm 级块体",
+      "dimension_guess": "力学边界-工件厚度",
+      "locations": {
+        "experiment": [
+          "E-03"
+        ],
+        "infile": [
+          20,
+          21,
+          22,
+          79,
+          133
+        ]
+      },
+      "claim_in_text": "E-03 称“工件尺寸 mm 级”；L20-L22 把工件分为 boundary 0-10 Å、temp_layer 10-20 Å、newton_layer 20-200 Å，L79/L133 对 boundary 施加 setforce 0，且 system.size.atoms_target 为空。",
+      "why_it_matters": "按 L20-L22 的分区，模型工件只有约 200 Å 厚，底部 10 Å 被完全固定，侧向为周期边界；这不是 mm 级块体，固定边界会反射应力波，塑性区/热影响区与边界的距离也没有收敛性验证。E-03 的宏观尺寸与模型尺寸相差多个数量级。",
+      "physical_question": "工件厚度 200 Å 是否足以容纳 40 Å 球压入产生的塑性区和热影响区？固定边界反射是否污染力平台？厚度/侧向尺寸是否做过收敛性测试？",
+      "evidence_needed": [
+        "E2 文献（MD 纳米压入工件厚度收敛性）",
+        "E4 案例（宏观工件尺寸与模型尺寸映射）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-001",
+      "common_issue_name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "disposition": "explained",
+      "builtin_explanation": "全周期边界下没有自由表面，均匀变形不会产生颈缩、裂纹或断口；这是 MD 的固有边界限制，不是本案例特有错误。",
+      "required_declaration": "声明：本模型只用于均匀塑性流变/机制趋势，不比较断裂应变或延伸率；如需断裂，应改用含自由表面/缺口的模型。"
+    },
+    {
+      "point_id": "RP-005",
+      "title": "摩擦系数未定义：恒深划擦下法向力不受控，Fx/Fz 的稳态性未论证",
+      "dimension_guess": "观测定义-摩擦学",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          110,
+          111,
+          112,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "E-05 称测量“摩擦系数”；L110-L112 只对 ball 求 fx/fy/fz 合力，L121 把球 z 速度置 0，L134 以恒定深度 run 200000，没有法向载荷控制或 μ 的计算。",
+      "why_it_matters": "恒深划擦的法向力 fz 随接触状态波动，甚至可能变号；μ=Fx/Fz 的分母不是独立控制的载荷，且摩擦系数需要在稳态段平均。只输出三向力不足以定义 E-05 的摩擦系数，也无法与宏观摩擦磨损试验的载荷-速度条件对照。",
+      "physical_question": "摩擦系数的定义是瞬时 Fx/Fz 还是稳态平均值？法向载荷由什么控制？200 Å 滑动是否已达到稳态？平均窗口如何确定？",
+      "evidence_needed": [
+        "E2 文献（划擦摩擦系数定义与稳态判据）",
+        "E4 案例（摩擦段输出与平均协议）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-006",
+      "title": "同一 temp_layer 同时施加 fix nve 与 fix temp/berendsen，时间积分被重复执行",
+      "dimension_guess": "恒温器-积分一致性",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          128,
+          129,
+          130
+        ]
+      },
+      "claim_in_text": "L128 fix 30 temp_layer nve；L129 fix 31 temp_layer temp/berendsen 300 300 0.1；L130 fix_modify 31 temp new_temp1。",
+      "why_it_matters": "LAMMPS 的 fix temp/berendsen 自带时间积分；同一原子组再叠加 fix nve 会对位置/速度重复积分，等效于非物理的数值格式，可能直接破坏 300 K 控温和摩擦轨迹。",
+      "physical_question": "是否应删除 L128 的 fix nve，或改用 fix nvt 单独控温？当前 200 ps 摩擦轨迹是否已经因双重积分而失真？",
+      "evidence_needed": [
+        "E2 文献（LAMMPS fix temp/berendsen 与 fix nve 的积分职责）",
+        "E4 案例（原始 in 文件控温段）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-007",
+      "title": "仅 10 Å 薄层控温、180 Å 牛顿层绝热且边界 0 K，接触区不可能是 300 K 平衡态",
+      "dimension_guess": "热边界-温度场/系综",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          20,
+          21,
+          22,
+          74,
+          76,
+          78,
+          79,
+          95,
+          126,
+          129,
+          132,
+          133
+        ]
+      },
+      "claim_in_text": "intent.ensemble_sequence 写 production nve（thermostat none）→ production nvt（berendsen），E-04 称 300 K；但 L74/L126 对 newton_layer 只用 nve，L76/L129 只对 temp_layer 控温，L78-L79/L132-L133 把 boundary 冻结为 0 K；L95 的 thermo temp 是全局温度。",
+      "why_it_matters": "实际是分区非平衡体系：表面所在的 180 Å 牛顿层没有控温，只有底部 10 Å 层被控温；0 K 边界是冷汇，接触区产热必须通过 180 Å 牛顿层传导，稳态温度可能显著高于 300 K。全局 NVE→NVT 序列不存在；thermo 的全局 temp 还包含以 1 Å/ps 定向运动的球和 0 K 边界，不能代表工件温度。",
+      "physical_question": "接触区稳态温度是多少？180 Å 牛顿层的温度梯度是否经过能量平衡验证？0 K 边界是否把结果拉向非物理冷态？ensemble_sequence 的全局 NVE→NVT 标签应如何修正？",
+      "evidence_needed": [
+        "E2 文献（TiAlV 热导率、摩擦生热与控温层厚度）",
+        "E4 案例（控温层/热边界设置）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-008",
+      "title": "hybrid/overlay 势函数拼接导致 Ti–Ti 双重计数、Al–V 仅靠 Morse，且势文件与 TiAlV 成分不对应",
+      "dimension_guess": "材料-势函数一致性",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          38,
+          40,
+          41,
+          42,
+          43
+        ]
+      },
+      "claim_in_text": "L38 pair_style hybrid/overlay meam/c eam/alloy morse 6.0 lj/cut 10.0；L40 注释称 MEAM 为 Ti/Al/V 三元，但 L41 的 MEAM 映射为 Ti/V、Al 和 C 为 NULL，库元素还含 Ni；L42 EAM 映射为 Ti/Al、V 和 C 为 NULL；L43 仅对 type 2-3（V–Al）加 Morse，且注释 D0=0.5 eV、α=3.0 Å⁻¹、r0=2.0 Å 与实际 0.35、1.8、2.8 不符。",
+      "why_it_matters": "overlay 会把同一对原子在所有子势中的贡献相加：Ti–Ti 同时有 MEAM 与 EAM，能量/力被重复计入；Ti–V 只有 MEAM、Ti–Al 只有 EAM、Al–V 只有 Morse，三元合金没有统一的势能面，混合焓、晶格常数和弹性常数不可比。从文件名与库元素看，VNiTi.meam 面向 V–Ni–Ti，而非 Ti–Al–V。",
+      "physical_question": "Ti–Ti 的 MEAM+EAM 叠加是否经过验证？三个子势在 TiAlV 成分下是否给出同一平衡体积/弹性常数？Al–V 的单一 Morse 是否足以描述金属键？VNiTi 势用于 TiAlV 的依据是什么？",
+      "evidence_needed": [
+        "E2 文献（TiAlV 三元势函数与交叉项）",
+        "E4 案例（原始 in 文件的 pair_coeff 映射与势文件来源）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-005",
+      "common_issue_name": "多组元势函数的交叉项/适用性",
+      "disposition": "record_required",
+      "builtin_explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。"
+    },
+    {
+      "point_id": "RP-009",
+      "title": "金刚石球内部用 LJ C–C，σ 远大于金刚石键长，球内势能/应力非物理",
+      "dimension_guess": "材料-磨头模型",
+      "locations": {
+        "experiment": [
+          "E-01",
+          "E-03"
+        ],
+        "infile": [
+          16,
+          17,
+          55,
+          98,
+          120
+        ]
+      },
+      "claim_in_text": "E-01 称磨头为刚性金刚石；L16 lattice diamond 3.57，L17 create_atoms 4 region ball，L55 pair_coeff 4 4 lj/cut 0.00455323 3.851；L98/L120 对所有原子计算应力并 dump v_mises。",
+      "why_it_matters": "金刚石键长由 3.57 Å 晶格常数决定（约 1.5 Å），而 C–C LJ 的 σ=3.851 Å，平衡距离远大于键长，球内 C–C 处于强排斥核。虽然 nve/noforce 忽略球受力，但球内势能、per-atom 应力和 dump 的 v_mises 可能被巨大非物理值主导。总力 fx/fy/fz 的内力成对抵消，但能量与应力输出不可用；球还是 0 K 刚性冷体，界面热交换不物理。",
+      "physical_question": "球内 C–C 势在 1.5 Å 键长下的能量/力有多大？pe、v_mises 是否被球内 C–C 主导？为何不用金刚石专用势或纯刚性球？",
+      "evidence_needed": [
+        "E2 文献（金刚石 C–C 势/键长）",
+        "E4 案例（磨头建模方式）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-010",
+      "title": "C–金属界面仅用极弱 LJ，粘着/摩擦/磨损机制不具代表性",
+      "dimension_guess": "材料-界面",
+      "locations": {
+        "experiment": [
+          "E-01",
+          "E-05"
+        ],
+        "infile": [
+          52,
+          53,
+          54
+        ]
+      },
+      "claim_in_text": "L52-L54 对 Ti–C、V–C、Al–C 分别设 lj/cut ε=0.00329558/0.0017774/0.0099855 eV、σ=4.18133/3.4796/4.1624 Å；E-01 称研究切削力、摩擦系数与表面损伤。",
+      "why_it_matters": "这些 ε 仅几 meV，远低于典型金属–碳界面的化学结合能；界面几乎无粘着，摩擦系数和磨损机制可能由弱范德华作用主导，难以代表金刚石磨头对 TiAlV 的磨削/滑动。σ 约 3.5-4.2 Å 也使界面平衡距离远离实际金属–碳键长。",
+      "physical_question": "这些 LJ 参数来自何处？是否与 Ti–C/Al–C 的实际粘着能、接触角或第一性原理结果匹配？弱粘着是否会使摩擦系数系统性偏低、磨屑机制缺失？",
+      "evidence_needed": [
+        "E2 文献（Ti–C/Al–C 界面结合能与 LJ 参数）",
+        "E4 案例（界面势参数来源）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-011",
+      "title": "初始球–表面间隙仅 5 Å，再下移 2.5 Å 后进入 LJ 排斥核，且无能量最小化/弛豫",
+      "dimension_guess": "初始条件-接触",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          12,
+          14,
+          22,
+          34,
+          38,
+          67,
+          80
+        ]
+      },
+      "claim_in_text": "L14 球心 z=245、R=40（球底约 205 Å），L22 牛顿层到 z=200 Å（表面约 200 Å），L34 displace_atoms ball move 0 0 -2.5，L38 才定义势函数，L67 write_data，随后 L80 直接 run 35000，无 minimize 或预弛豫。",
+      "why_it_matters": "初始间隙仅约 5 Å，下移 2.5 Å 后球底距表面约 2.5 Å；Ti–C LJ 的平衡距离由 σ≈4.18 Å 决定，远大于 2.5 Å，初始构型处于强排斥区。第一帧就可能有巨大接触力/势能，造成冲击波、原子重叠和非物理初始损伤，污染压入段和后续划擦。",
+      "physical_question": "初始 2.5 Å 间隙是否做过势能扫描？为何不在接触前做能量最小化和热浴平衡？初始接触力是否已超过屈服？",
+      "evidence_needed": [
+        "E2 文献（LJ 参数与平衡距离）",
+        "E4 案例（初始接触设置）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-012",
+      "title": "周期性边界加 200 Å 滑动与未知箱尺寸：可能重复划擦、磨屑无法排出",
+      "dimension_guess": "边界-统计",
+      "locations": {
+        "experiment": [
+          "E-04",
+          "E-05"
+        ],
+        "infile": [
+          5,
+          14,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "L5 boundary p p p；L14 球心 x=60、y=100；L121 velocity ball set 1 0 0 units box；L134 run 200000（timestep 0.001 ps），按 1 Å/ps 计算滑动 200 Å。",
+      "why_it_matters": "x/y 周期边界下，若箱长小于 200 Å，球会绕回并重复划擦同一轨迹；磨屑/切屑无法离开周期单元，会与后续接触重复作用，摩擦力和损伤随滑动距离不收敛。箱的 x/y 尺寸在 intent 和 in.case 中都没有给出。",
+      "physical_question": "箱的 x/y 尺寸是多少？200 Å 滑动是否超过一个周期？磨屑在周期边界下如何排出或被统计？",
+      "evidence_needed": [
+        "E2 文献（周期划擦的磨屑处理）",
+        "E4 案例（箱尺寸与滑动距离）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-001",
+      "common_issue_name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "disposition": "explained",
+      "builtin_explanation": "全周期边界下没有自由表面，均匀变形不会产生颈缩、裂纹或断口；这是 MD 的固有边界限制，不是本案例特有错误。",
+      "required_declaration": "声明：本模型只用于均匀塑性流变/机制趋势，不比较断裂应变或延伸率；如需断裂，应改用含自由表面/缺口的模型。"
+    },
+    {
+      "point_id": "RP-013",
+      "title": "应力用 stress/atom 加 Voronoi 体积归一，表面/真空区体积无定义，不能当宏观应力",
+      "dimension_guess": "观测定义-应力",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          98,
+          99,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108
+        ]
+      },
+      "claim_in_text": "L98 compute s all stress/atom NULL；L99 compute v all voronoi/atom；L101-L106 用 c_s[i]/c_v[1]/10000 得到 sx…syz；L107-L108 计算 mean 与 mises。",
+      "why_it_matters": "stress/atom 是维里应力的原子分配，不是连续介质 Cauchy 应力；在自由表面、球–工件界面和 z 向真空区，Voronoi 体积包含真空或无定义，归一后表面应力可能被严重低估或放大；若 c_v[1] 为零/异常还会产生 inf/nan。E-05 的表面损伤判据若依赖该应力，结论不可靠。",
+      "physical_question": "表面原子的 Voronoi 体积如何处理？应力是否扣除动能项？原子应力如何粗粒化到 E-05 的表面损伤尺度？",
+      "evidence_needed": [
+        "E2 文献（维里应力与 Voronoi 归一）",
+        "E4 案例（应力后处理协议）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-009",
+      "common_issue_name": "应力/应变定义（virial、总压、工程/真应力）",
+      "disposition": "record_required",
+      "builtin_explanation": "LAMMPS 压力张量含动能项；stress/atom 是维里分配；工程应变/真应力定义不同。需记录所用定义与基线扣除方式。",
+      "required_declaration": "记录：应力定义（virial/总压）、是否扣动能/初始基线、应变定义（工程/真）、与实验曲线的转换关系。"
+    },
+    {
+      "point_id": "RP-014",
+      "title": "目标性能写 stress_strain_curve，但实验只测力/摩擦系数/损伤，且无应变控制加载",
+      "dimension_guess": "目标-观测一致性",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          110,
+          111,
+          112,
+          117,
+          134
+        ]
+      },
+      "claim_in_text": "intent.objective.target_property 为 stress_strain_curve；E-05 称测量三向切削力、摩擦系数、磨屑形貌与表面粗糙度；L110-L117 只输出 ball 合力，L134 为恒速划擦，没有应变控制或单轴加载。",
+      "why_it_matters": "压入/划擦不是单轴应力-应变实验；由接触力只能通过 Hertz/划擦模型间接换算应力-应变，且换算需要接触面积、压头形状和塑性假设。声明的目标性能与实际观测量不匹配，后续验证可能无法闭环。",
+      "physical_question": "stress_strain_curve 是指接触应力-应变还是材料本构曲线？若是后者，为何没有单轴/剪切加载？若是前者，换算协议和接触面积定义是什么？",
+      "evidence_needed": [
+        "E2 文献（压入/划擦到应力-应变的换算）",
+        "E4 案例（目标性能定义）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-015",
+      "title": "宏观尺度映射只给了速度 10–100×，未论证 R=40 Å→µm、200 Å→mm、2.5 Å→µm 的相似性与应变率差",
+      "dimension_guess": "尺度-相似性",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-03",
+          "E-04"
+        ],
+        "infile": [
+          12,
+          14,
+          20,
+          22
+        ]
+      },
+      "claim_in_text": "E-02 称 µm 级磨粒/压头、工件表面抛光；E-03 称模型 R=40 Å、宏观 µm 级磨粒、工件尺寸 mm 级，并同时列“磨削台/摩擦磨损试验机”；E-04 称模型 2.5 Å、宏观 µm 级；cross_scale 只讨论 1 Å/ps=100 m/s 与宏观 1–10 m/s 的 10–100× 速度差。",
+      "why_it_matters": "几何尺度同时跨越 40 Å→µm、200 Å→mm 和 2.5 Å→µm，均相差多个数量级；仅用速度比不能建立力学相似。模型应变率（v/R）会比 cross_scale 文中给出的宏观 1e6–1e8 s⁻¹ 高多个数量级，惯性力/表面力、Peclet 数、塑性区/晶粒尺寸比和磨屑形成机制都会改变；磨削台与往复摩擦磨损试验机的运动学也不同，单一划擦不能同时代表两者。",
+      "physical_question": "三个尺度比各自对应什么无量纲数？R、压入深度、工件厚度是否按同一比例缩放？为何只论证速度差而不比较应变率与 Peclet 数？宏观对照到底是磨削还是往复摩擦？",
+      "evidence_needed": [
+        "E2 文献（磨削尺度相似性与无量纲分析）",
+        "E4 案例（宏观实验参数与运动学）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-002",
+      "common_issue_name": "MD 应变率比实验高多个数量级",
+      "disposition": "explained",
+      "builtin_explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。"
+    },
+    {
+      "point_id": "RP-016",
+      "title": "E-04 称“宏观对应高速磨削”，cross_scale 却写宏观 1–10 m/s，内部口径矛盾",
+      "dimension_guess": "尺度-证据",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          121
+        ]
+      },
+      "claim_in_text": "E-04 称 1 Å/ps=100 m/s“宏观对应高速磨削”；cross_scale.loading.macro 写“磨削速度约 1–10 m/s（宏观）”，并称 100 m/s 与宏观差 10–100×。",
+      "why_it_matters": "若宏观是 1–10 m/s，则 100 m/s 比宏观快 10–100×，不能称“对应高速磨削”；若宏观是高速磨削，则速度差不是 10–100×。两种说法不能同时成立，直接影响尺度外推和实验对照的可信度。",
+      "physical_question": "宏观对照到底是普通磨削（1–10 m/s）还是高速磨削？100 m/s 的目标宏观速度是多少？10–100× 的倍数如何得到？",
+      "evidence_needed": [
+        "E2 文献（高速磨削速度范围）",
+        "E4 案例（宏观磨削参数）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-017",
+      "title": "restart.equil 的成分/相/温度/盒尺寸/势函数历史未知，change_box 后未再平衡",
+      "dimension_guess": "初始条件-证据",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-04"
+        ],
+        "infile": [
+          10,
+          12,
+          20,
+          22,
+          41,
+          42
+        ]
+      },
+      "claim_in_text": "L10 read_restart restart.equil；L12 change_box all z delta 0 100 units box；L20-L22 以绝对 z 坐标划分 0-10/10-20/20-200 Å；L41-L42 使用 MEAM/EAM 映射。",
+      "why_it_matters": "restart 决定工件成分、相（α/β/α+β）、晶粒/取向、初始温度、残余应力和原子类型顺序，这些在 intent 中没有记录。若 restart 是用另一套势或另一成分平衡的，当前 hybrid 势会改变平衡体积/应力；change_box 后直接加载，未重新弛豫，初始应力状态不明。绝对 z 分区还依赖 restart 盒下界为 0，盒尺寸未给出。",
+      "physical_question": "restart.equil 的成分为何？Ti/Al/V 比例、相结构、初始 T、P、势函数是什么？change_box 后是否重新平衡？原子类型顺序是否与 pair_coeff 映射一致？",
+      "evidence_needed": [
+        "E2 文献（TiAlV 相图/势函数）",
+        "E4 案例（restart 生成协议与盒尺寸）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-018",
+      "title": "E-06 自认宏观实验是 AI 依据 in 文件反推，缺真实实验来源与不确定度",
+      "dimension_guess": "证据-实验来源",
+      "locations": {
+        "experiment": [
+          "E-06"
+        ],
+        "infile": [
+          10,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "E-06 称“宏观实验描述由助手依据 in 文件（TiAlV 磨削/in.friction）反推补写，待用户确认”。",
+      "why_it_matters": "宏观实验的装置、速度、载荷、工件尺寸、磨粒形状和测量不确定度都不是来自真实实验记录，而是从 MD 输入反推；这样“宏观实验”与“模拟”不是独立对照，E-05 的力平台/形貌判据也缺实验基准和不确定度。",
+      "physical_question": "是否有真实的磨削/摩擦实验数据、装置参数和不确定度？E-06 的反推描述是否已由用户确认？若无，宏观对照的依据是什么？",
+      "evidence_needed": [
+        "E2 文献（TiAlV 磨削实验）",
+        "E4 案例（真实实验记录/不确定度）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-008",
+      "common_issue_name": "实验方案由 AI 反推/缺原始记录",
+      "disposition": "open",
+      "builtin_explanation": "若宏观实验是从仿真输入反推的，对照不独立；这是溯源问题，不能作为行业共识隐藏。",
+      "required_declaration": "必须提供真实实验记录/文献，或由用户确认该实验描述为假设并承担相应结论限制。"
+    },
+    {
+      "point_id": "RP-019",
+      "title": "金刚石球是晶格切球而非光滑球，表面原子台阶与 E-03 的光滑球假设不符",
+      "dimension_guess": "几何-表面",
+      "locations": {
+        "experiment": [
+          "E-03"
+        ],
+        "infile": [
+          14,
+          16,
+          17
+        ]
+      },
+      "claim_in_text": "E-03 称“球形磨头（模型 R=40 Å…）”；L14 region ball sphere 60 100 245 40，L16 lattice diamond 3.57，L17 create_atoms 4 region ball；E-02 称工件表面抛光。",
+      "why_it_matters": "用金刚石晶格在球区域内切出的原子团簇，表面是阶梯/刻面，粗糙度约一个晶格间距；在 E-04 的 2.5 Å 浅压入尺度，表面原子台阶与压入深度同量级，实际接触是离散原子接触而非光滑 Hertz 接触。模型表面还是 change_box 后的新鲜自由表面，不是 E-02 的抛光表面；真实磨粒也非理想球形。",
+      "physical_question": "球面原子粗糙度是否与 2.5 Å 压入深度同量级？是否做过球面重构/抛光？Hertz 接触假设是否仍成立？",
+      "evidence_needed": [
+        "E2 文献（原子尺度球面接触与粗糙度）",
+        "E4 案例（磨头几何与表面制备）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-020",
+      "title": "E-05 声称磨屑形貌/表面粗糙度，但输入无磨屑识别、卸载后表面扫描或粗糙度计算协议",
+      "dimension_guess": "观测定义-后处理",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          120,
+          134
+        ]
+      },
+      "claim_in_text": "E-05 称测量“磨屑形貌与表面粗糙度”并以“形貌损伤”评定；L120 只 dump 原子坐标/温度/应力，L134 结束时球仍在接触状态，没有卸载、表面提取或粗糙度计算。",
+      "why_it_matters": "磨屑需要按配位数/团簇/与基体分离判据识别；表面粗糙度需要在卸载后提取表面高度分布；当前输出只有轨迹和原子量，且球未撤回，无法区分磨屑、堆积和弹性回复，E-05 的判据无法执行，也没有统计不确定度。",
+      "physical_question": "磨屑如何定义（团簇/配位数/与基体断开）？表面粗糙度用哪位面、什么滤波长度？为何没有卸载段和最终表面扫描？",
+      "evidence_needed": [
+        "E2 文献（磨屑/表面粗糙度表征）",
+        "E4 案例（后处理协议）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-021",
+      "title": "恒容周期盒+固定底、无压力/体积监测：摩擦生热下的热压与法向应力状态未定义",
+      "dimension_guess": "设定自洽（系综/控温/加载）",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          5,
+          12,
+          95,
+          126,
+          129,
+          134
+        ]
+      },
+      "claim_in_text": "E-04 只规定 300 K；L5 为 p p p，L12 仅 z 向加 100 Å 真空，L95 的 thermo_style 只输出 step/temp/两层温度/etotal/ke/pe，没有 press 或 vol；L126 的 newton_layer 为 NVE，L129 仅 temp_layer 用 Berendsen，200 ps 摩擦段没有 barostat 或压力输出。",
+      "why_it_matters": "摩擦功不断转化为热，恒容盒和固定底使试样不能自由膨胀；热压会以法向压应力形式积累，接触区的实际静水压可能远高于 1 atm。『300 K』只是恒温器设定，不是完整的热力学状态（T, P）；没有压力监测就无法判断接触是在常压还是 GPa 级压缩下进行，也无法与宏观实验的载荷/环境对照。",
+      "physical_question": "初始和稳态的压力/法向应力是多少？初始状态是否在 300 K、1 atm 下平衡？是否应先做 NPT 平衡再切换 NVT/NVE 加载？恒容对摩擦力和磨损机制有多大偏置？",
+      "evidence_needed": [
+        "E2 文献（TiAlV 热膨胀、摩擦生热与压力效应）",
+        "E4 案例（原始 in.friction 是否含 NPT/压力输出）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-022",
+      "title": "压入→划擦之间无卸载/再平衡，球速从 -z 瞬时切到 +x，摩擦段起始是瞬态",
+      "dimension_guess": "设定自洽（系综/控温/加载）",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          71,
+          80,
+          82,
+          83,
+          84,
+          85,
+          86,
+          117,
+          121,
+          123,
+          134
+        ]
+      },
+      "claim_in_text": "E-04 称先压入再恒速滑动；L71 设球 z 速度 -1 Å/ps，L80 run 35000 后仍在向下压；L82-L86 解除全部 fix 并 reset_timestep 0，L117 才开始记录力，L121 直接把球速改为 +1 Å/ps（z 分量为 0），L123-L134 立即开始 200000 步划擦；没有卸载、保持、重新平衡或过渡段记录。",
+      "why_it_matters": "压入结束时工件有塑性区、残余应力和向下的速度场；瞬时把球从 -z 运动切到 +x 100 m/s，接触力和工件惯性会在划擦起始产生瞬态。F.txt 从第一步划擦就记录，若把前段当作稳态，摩擦系数和切削力会被 running-in 偏置；压入段又没有力-深度记录，无法定义划擦的初始状态。",
+      "physical_question": "设计是『压入后不卸载直接划擦』还是『压入-卸载-重定位-划擦』？过渡瞬态持续多久、应排除多长的起始窗口？过渡点的残余应力/温度/接触力是多少？",
+      "evidence_needed": [
+        "E2 文献（划擦试验的加载序列与 running-in）",
+        "E4 案例（原始 in.friction 的两段衔接）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-007",
+      "common_issue_name": "热浴/恒温器参数与塑性耗热",
+      "disposition": "record_required",
+      "builtin_explanation": "恒温器阻尼/分组控温会影响塑性耗热与局部温升；需记录温度/能量演化，声明等温或绝热近似。",
+      "required_declaration": "记录：恒温器类型/阻尼、控温组、温度漂移；说明等温近似对屈服/摩擦的影响。"
+    },
+    {
+      "point_id": "RP-023",
+      "title": "全流程 1 fs 时间步未对 mass=12 的声子频率、NVE 能量漂移与 cutoff/箱尺寸做收敛检验",
+      "dimension_guess": "数值与有限尺度",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-04"
+        ],
+        "infile": [
+          8,
+          38,
+          45,
+          46,
+          47,
+          48,
+          74,
+          95,
+          126,
+          134
+        ]
+      },
+      "claim_in_text": "L8 设 timestep 0.001 ps；L45-L48 把 type 1-4 质量全设为 12 amu；L38 用 hybrid/overlay meam/c+eam/alloy+morse+lj/cut；L74/L126 的 newton_layer 为 NVE；L95 只打印 etotal/ke/pe，没有能量漂移或温度漂移判据；案例中没有 0.5 fs、cutoff 6/10 Å、箱尺寸或球半径的收敛矩阵。",
+      "why_it_matters": "Ti/Al/V 的真实质量分别约为 47.9/27.0/50.9 amu，统一为 12 后声子频率按 sqrt(m_real/12) 放大 1.5-2.1 倍，1 fs 步长等效于真实质量下的 1.5-2.1 fs；对 MEAM 金属和 100 m/s 接触，这个等效步长未做 0.5 fs/0.25 fs 对比。NVE 牛顿层没有恒温器，若积分误差导致 etotal 漂移，温度会虚假漂移，而 etotal 只被打印、从未分析；cutoff/箱尺寸/球半径也没有收敛性依据，数值不确定度无法界定。",
+      "physical_question": "mass=12 下该势的最高声子频率和稳定步长是多少？200 ps 内 NVE 层每原子 etotal 漂移多少？步长减半、cutoff 改变、箱尺寸/球半径加倍是否改变接触力、温升和缺陷密度？",
+      "evidence_needed": [
+        "E2 文献（MEAM 时间步/质量缩放、cutoff 收敛）",
+        "E4 案例（原始 timestep 与收敛测试）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-005",
+      "common_issue_name": "多组元势函数的交叉项/适用性",
+      "disposition": "record_required",
+      "builtin_explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。"
+    },
+    {
+      "point_id": "RP-024",
+      "title": "压入深度与接触面积只有名义球位移，没有瞬时表面/接触半径的测量定义",
+      "dimension_guess": "观测与判据",
+      "locations": {
+        "experiment": [
+          "E-04",
+          "E-05"
+        ],
+        "infile": [
+          34,
+          71,
+          117,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "E-04 称压入 2.5 Å，E-05 以力平台和形貌损伤评定；L34 只把球整体下移 2.5 Å，L71 以 1 Å/ps 继续下压，L117 起才记录力，L121/L134 进入划擦；全程没有输出工件表面高度、接触半径或接触面积。",
+      "why_it_matters": "可测的只是球的刚体位移，不是压头相对瞬时工件表面的压入深度。弹性凹陷、pile-up/sink-in 和残余应力会使真实深度与名义位移不同；没有接触半径/面积，就无法把力换算成接触应力或硬度，也无法与 E-05 的『力平台』和宏观压入曲线对齐。",
+      "physical_question": "深度的 z 基准是初始表面、瞬时表面还是未变形表面？pile-up/sink-in 和接触半径如何测量？2.5 Å 是目标深度还是位移指令？",
+      "evidence_needed": [
+        "E2 文献（纳米压入深度/接触面积标定，Oliver-Pharr）",
+        "E4 案例（原始压入协议）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-025",
+      "title": "力/轨迹采样 0.1-0.5 ps 未与接触振动和位错事件对齐，F.txt 列名/单位不可复现",
+      "dimension_guess": "观测与判据",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          70,
+          94,
+          117,
+          120,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "E-05 以力平台和形貌损伤为判据；L117 每 100 步（0.1 ps）写一次瞬时 fx/fy/fz 到 F.txt，L120 每 500 步（0.5 ps）dump 一次，L94 thermo 每 100 步；没有 fix ave/time、滑动平均或分块平均。F.txt 无表头/单位，变量 distance=step/1000 实际是 ps（仅因球速 1 Å/ps 才与 Å 数值相等）。",
+      "why_it_matters": "300 K、100 m/s 接触的力在亚 ps 尺度涨落；0.1 ps 点采样可能混叠接触振动，0.5 ps 轨迹可能漏掉位错成核/磨屑脱离事件。『力平台』若由原始瞬时值目测，无法复现；列名 distance 在速度改变时会误导。",
+      "physical_question": "采样间隔相对接触振动周期是多少？用什么滑动/分块平均窗口定义平台？F.txt 的列是时间还是距离、单位是什么？0.5 ps 是否足以解析 E-05 的损伤事件？",
+      "evidence_needed": [
+        "E2 文献（力噪声/分块平均、位错时间尺度）",
+        "E4 案例（后处理协议）"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-026",
+      "title": "单条轨迹、无重复/种子/分块平均，力与摩擦系数没有统计不确定度",
+      "dimension_guess": "不确定度与对照协议",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          70,
+          117,
+          120,
+          134
+        ]
+      },
+      "claim_in_text": "E-05 报告三向切削力、摩擦系数和表面损伤；L70/L120 只有一次 dump，L117 只有一条 F.txt，L134 只 run 一次 200000 步；没有多 seed、多初始构型、重复划擦或误差棒。",
+      "why_it_matters": "300 K 的 MD 是随机过程，摩擦力/磨损体积/粗糙度存在 run-to-run 散布；2000 个 0.1 ps 采样点高度相关，不等于 2000 个独立样本。没有重复或分块平均，无法判断不同势函数/速度/深度之间的差异是物理效应还是热噪声，E-05 的判据也没有置信区间。",
+      "physical_question": "需要多少个独立 seed/初始构型？稳态窗口内摩擦力的标准差和 95% 置信区间是多少？分块大小如何选取？",
+      "evidence_needed": [
+        "E2 文献（MD 统计不确定度/重复运行）",
+        "E4 案例（重复协议）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-006",
+      "common_issue_name": "单次 run/单 seed 无统计不确定度",
+      "disposition": "record_required",
+      "builtin_explanation": "MD 屈服/位错形核具有随机性；单次 run 无法给出误差棒。需记录 seed/样本数，或明确声明结果为单样本。",
+      "required_declaration": "记录：seed 数/重复次数；若单样本，声明不确定度未知，结论仅作演示/趋势。"
+    },
+    {
+      "point_id": "RP-027",
+      "title": "只有单一速度/深度/构型，没有速度-载荷-深度扫描与无磨损对照",
+      "dimension_guess": "不确定度与对照协议",
+      "locations": {
+        "experiment": [
+          "E-04",
+          "E-05"
+        ],
+        "infile": [
+          34,
+          71,
+          121,
+          134
+        ]
+      },
+      "claim_in_text": "E-04/E-05 只给一组条件：2.5 Å 压入、1 Å/ps=100 m/s、300 K；L34/L71/L121/L134 中只有这一个压入深度和一个滑动速度，没有速度/载荷/深度扫描，也没有纯压入、无划擦或不同取向的对照。",
+      "why_it_matters": "摩擦系数和磨损机制随速度、法向载荷、压入深度变化；单点无法验证摩擦定律，也无法分离粘着、犁沟和切削三种机制。没有零磨损/纯压入基线，测到的力不能归因于划擦；没有与文献/实验的定量对照表，E-05 的『力平台』无法校准。",
+      "physical_question": "对照矩阵是什么（速度 1/10/100 m/s、深度 1/2.5/5 Å、载荷、取向）？零磨损基线如何定义？哪个实验数据集用于定量对照、容差多少？",
+      "evidence_needed": [
+        "E2 文献（摩擦速率/载荷依赖性）",
+        "E4 案例（实验矩阵）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    },
+    {
+      "point_id": "RP-028",
+      "title": "案例包缺 restart.equil、三个势文件、LAMMPS 版本与日志，输出坐标还是 wrapped",
+      "dimension_guess": "证据完备性",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-06"
+        ],
+        "infile": [
+          10,
+          41,
+          42,
+          67,
+          70,
+          117,
+          120
+        ]
+      },
+      "claim_in_text": "intent.source.path 只写『WSL:/home/red/lmp (copied)』；L10 依赖 restart.equil，L41-L42 依赖 library.meam、VNiTi.meam、TiAl.eam.alloy，L67 只写 initial.data；L70/L120 的 dump 只输出 x y z（wrapped），L117 的 F.txt 无表头/单位；案例中没有 LAMMPS 版本、log.lammps、文件哈希或输入版本记录。",
+      "why_it_matters": "没有 restart.equil 和三个势文件，就无法核对成分、type→element 映射和势参数；没有版本/日志/哈希，无法复现或审计这次 235000 步运行。周期边界下 wrapped 坐标在原子跨箱时跳变，磨屑轨迹、位移和应变无法重建；F.txt 缺表头会被误读。",
+      "physical_question": "restart.equil 与三个势文件在哪里、哈希是多少？LAMMPS 版本和命令行是什么？是否有 unwrapped 坐标/image flags？F.txt 的列定义和单位是什么？",
+      "evidence_needed": [
+        "E4 案例包（restart、势文件、log、哈希）",
+        "E2 文献（势文件引用）"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-001",
+      "common_issue_name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "disposition": "explained",
+      "builtin_explanation": "全周期边界下没有自由表面，均匀变形不会产生颈缩、裂纹或断口；这是 MD 的固有边界限制，不是本案例特有错误。",
+      "required_declaration": "声明：本模型只用于均匀塑性流变/机制趋势，不比较断裂应变或延伸率；如需断裂，应改用含自由表面/缺口的模型。"
+    }
+  ],
+  "disposition_counts": {
+    "explained": 6,
+    "record_required": 18,
+    "open": 4
+  }
+}

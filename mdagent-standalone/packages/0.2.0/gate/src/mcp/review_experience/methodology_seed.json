@@ -1,0 +1,51 @@
+{
+  "pack": "methodology_seed",
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "methodo-001",
+      "kind": "methodology",
+      "statement": "拉伸/变形类实验：变形方向不得同时被各向同性控压抵消——恒压会把应力拉回去，样品拉不断，整组数据无效",
+      "conditions": {"aspect": "input-composition"},
+      "constraints": {
+        "violate_if": [
+          {"all_of": [{"cmd": "fix", "args_regex": "\\bnpt\\b[^\\n]*\\siso\\b"},
+                      {"cmd": "fix", "args_regex": "\\bdeform\\b"}],
+           "note": "各向同性 NPT 控压与变形同时存在：应力被恒压抵消，样品拉不断（正确做法：控压只耦合非变形方向，或改 NVT+目标应力）"}
+        ]
+      },
+      "severity_hint": "hard",
+      "machine_gate": true,
+      "rationale": "方法学硬约束：变形实验中恒压会反向补偿应变（来源：用户指示 2026-10-15，通用力学仿真方法学）",
+      "refs": ["user:2026-10-15"],
+      "remediation": ["npt 改为仅非变形方向耦合", "或改用 NVT/目标应力控"],
+      "provenance": {"source": "human", "injected_by": "user-directive", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "methodo-002",
+      "kind": "methodology",
+      "statement": "往复类实验（如往复摩擦）输入中必须有往复运动特征——设计成单向运动则实验类型错误，直接打回",
+      "conditions": {"aspect": "input-composition"},
+      "constraints": {
+        "violate_if": [
+          {"decision_text_regex": "往复|reciproc|oscillat",
+           "missing_any_of": [{"cmd_regex": "\\bwiggle\\b"},
+                              {"cmd_regex": "\\bsin(\\b|usoidal)"},
+                              {"cmd_regex": "\\bosci\\w*"},
+                              {"cmd_regex": "move.*back|reverse|swap"}],
+           "note": "任务声明为往复实验，但输入文件缺少任何往复运动特征命令——被做成了单向运动（正确做法：周期反转加载方向）"}
+        ]
+      },
+      "severity_hint": "hard",
+      "machine_gate": true,
+      "rationale": "方法学硬约束：实验类型必须与任务声明一致（来源：用户指示 2026-10-15）",
+      "refs": ["user:2026-10-15"],
+      "remediation": ["用周期往复命令替代恒定单向加载"],
+      "provenance": {"source": "human", "injected_by": "user-directive", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    }
+  ]
+}

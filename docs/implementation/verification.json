@@ -1,0 +1,62 @@
+{
+  "revision": "IMPL-1",
+  "date": "2026-11-17",
+  "environment": {
+    "platform": "Windows",
+    "node": "22.19.0",
+    "python": "3.11",
+    "pi": "1.5.0",
+    "lammps": "2Aug2023-MSMPI",
+    "ovito": "3.13.1"
+  },
+  "checks": [
+    {
+      "command": "npm test",
+      "cwd": "simulation",
+      "exitCode": 0,
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 37814.6066,
+      "evidence": "../../simulation/test-results.log"
+    },
+    {
+      "command": "npm run check",
+      "cwd": "simulation",
+      "exitCode": 0,
+      "files": 44,
+      "evidence": "../../simulation/static-check.log"
+    },
+    {
+      "command": "python -m compileall -q science packages/presentation",
+      "cwd": "simulation",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "cwd": "redmaple-agent",
+      "exitCode": 0,
+      "passed": 76,
+      "failed": 0,
+      "skipped": 3,
+      "skipReason": "Docker or real PaperPilot host configuration",
+      "evidence": "../../simulation/redmaple-regression.log"
+    },
+    {
+      "command": "node apps/cli/main.js grinding --validation --parameters work/smoke.parameters.json",
+      "cwd": "simulation",
+      "executableOptions": "Explicit local Python311 and LAMMPS executable paths recorded in PLAN.json",
+      "exitCode": 0,
+      "caseId": "hea-grinding-71f5363a-92f3-4b73-90d9-f899f5030a07",
+      "evidence": "../../simulation/final-audit-smoke.log"
+    },
+    {
+      "command": "inspect and resume hea-grinding-71f5363a-92f3-4b73-90d9-f899f5030a07",
+      "exitCode": 0,
+      "evidence": "../../simulation/final-audit-inspection.json"
+    }
+  ],
+  "overallAcceptance": "partial",
+  "scientificModelValidation": "insufficient",
+  "requirementSpecificAcceptance": "116 source rows mapped, full individual acceptance remains incomplete"
+}

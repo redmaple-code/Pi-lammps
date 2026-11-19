@@ -1,0 +1,63 @@
+{
+  "feature": "domain-initialization",
+  "verifiedAt": "2026-11-17T15:25:22Z",
+  "workspace": "F:/BaiduSyncdisk/Codex/Pi-lammps",
+  "environment": {
+    "platform": "Windows",
+    "node": "v22.19.0",
+    "python": "3.11.4"
+  },
+  "commands": [
+    {
+      "workingDirectory": "simulation",
+      "command": "npm test *> domain-initialization-regression.log",
+      "exitCode": 0,
+      "log": "../../simulation/domain-initialization-regression.log",
+      "tests": 58,
+      "passed": 58,
+      "failed": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "durationMs": 197637.388
+    },
+    {
+      "workingDirectory": "simulation",
+      "command": "npm run check *> domain-initialization-check.log",
+      "exitCode": 0,
+      "log": "../../simulation/domain-initialization-check.log",
+      "checkedJavaScriptFiles": 84
+    }
+  ],
+  "featureTests": "../../simulation/tests/domain-initialization.test.js",
+  "verifiedBehaviors": [
+    "Independent ModuleHost registration and application/Pi/CLI integration",
+    "User-guided questions, unknown/deferred answers and gap tracking",
+    "Source registration, UTF-8/PDF extraction and precise evidence ranges",
+    "Host-UI user answers and candidate adoption identity enforcement",
+    "Individual and atomic batch review of knowledge and tags",
+    "Candidate editing preserves source ranges and user-entered conditions",
+    "Revision invalidation, correction reassessment and adopted-knowledge queries",
+    "Idempotency, concurrent revision conflicts and persistence across instances",
+    "Recognizable restricted-data rejection and payload-free module audit",
+    "Pause/resume, snapshots and scholar-apprentice-inspired research guidance",
+    "Public offline CLI parser and real Pi SDK tool execution"
+  ],
+  "verificationMethod": {
+    "piSdk": "Real SDK sessions and tool execution driven by controlled model responses",
+    "liveCloudModelEvaluated": false,
+    "realIndustryUserValidationPerformed": false,
+    "credentialsAccessed": false
+  },
+  "implementationDecisions": {
+    "repositoryContract": "read/list/save(document, expectedRevision)",
+    "defaultRepository": "Local JSON snapshots under application stateDirectory/domain-libraries",
+    "databaseProduct": "Open for deployment-specific selection",
+    "scholarApprenticeIntegration": "Embedded methodological guidance and research briefs using the Pi session's configured research tools"
+  },
+  "limitations": [
+    "File locks left by a forcibly terminated writer require verified manual recovery",
+    "PII and credential pattern detection has finite coverage; source materials require de-identification",
+    "Live domain reasoning and real-user interview quality require evaluation with actual industry materials",
+    "Complete domain-pack assembly, specialized standards-clause editors and additional repository backends remain extensions"
+  ]
+}

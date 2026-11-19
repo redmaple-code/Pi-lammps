@@ -1,0 +1,428 @@
+{
+  "artifacts": [
+    {
+      "path": "analysis/all-poses.csv",
+      "bytes": 695,
+      "digest": "sha256:f673358e5bc8758b4a34859822a41acad178571a297dc46d9bf0db80be2d8df8"
+    },
+    {
+      "path": "analysis/comparison.log",
+      "bytes": 2842,
+      "digest": "sha256:382e97ed415855432187ed66101fb89ff22862a4f747ecbc92c1e33769680ba5"
+    },
+    {
+      "path": "analysis/main-top1-contacts.csv",
+      "bytes": 10913,
+      "digest": "sha256:2ad9274d4ec05741d9e347467959bef0ba4adb00bce2b43f37eb66b5f5a367d2"
+    },
+    {
+      "path": "analysis/main-top1.sdf",
+      "bytes": 3432,
+      "digest": "sha256:21673ad164ebe9117a25643de62c12f7bca919447b4a2cfe2d9427a2bce9e4e2"
+    },
+    {
+      "path": "analysis/metrics.json",
+      "bytes": 2842,
+      "digest": "sha256:382e97ed415855432187ed66101fb89ff22862a4f747ecbc92c1e33769680ba5"
+    },
+    {
+      "path": "analysis/official-output-comparison.csv",
+      "bytes": 653,
+      "digest": "sha256:bfe99cfaad932cf6ce770e4fa1a7aa8ac48d6c6ec88aa598d4d164a82fa59529"
+    },
+    {
+      "path": "analysis/pose-rmsd-matrix.csv",
+      "bytes": 393,
+      "digest": "sha256:8be8f62a8ea8ff56519707d1c1c7200d2090bece63243605a1286aa226a94221"
+    },
+    {
+      "path": "analysis/posebusters-main.csv",
+      "bytes": 1611,
+      "digest": "sha256:81e39a44a2cbaa0ba8463f8a0641d28c2449bc108bcba920b48fe2f741eeb526"
+    },
+    {
+      "path": "analysis/posebusters-summary.json",
+      "bytes": 1021,
+      "digest": "sha256:c971b4896c03a4196cfbcb295e2f5aadf40b5fe06826071d1bbb61b031072f8e"
+    },
+    {
+      "path": "analysis/search-budget-comparison.csv",
+      "bytes": 523,
+      "digest": "sha256:17c7bb2bf10891590dfa0494e87379d312837189bb45aad95cc491f35de9d850"
+    },
+    {
+      "path": "evidence/domain-schema-regression.json",
+      "bytes": 670,
+      "digest": "sha256:a326aed7cd11c667f7ade1c2284701d08b8e6fb750365f120db107fc9ba61529"
+    },
+    {
+      "path": "evidence/environment.json",
+      "bytes": 115115,
+      "digest": "sha256:a1a78897304fdb7efd1eb0597ee3d3363652311d8891a9c3a7f53b051f9033a6"
+    },
+    {
+      "path": "evidence/figure-inspection.json",
+      "bytes": 1030,
+      "digest": "sha256:23faa374420323e5aec4f2a0eaa668fec64fb5b74f6d055a8aa16b5d30417086"
+    },
+    {
+      "path": "evidence/input-chemical-audit.json",
+      "bytes": 377,
+      "digest": "sha256:84d67f69016fe94517e3223de267deb1e6d3dc245a9522be6d94750efa1d529a"
+    },
+    {
+      "path": "evidence/posebusters-config.json",
+      "bytes": 11656,
+      "digest": "sha256:79ee2a00609cf10842e3d062cd4ca1ab8a9dd97d5db3b2180a473dad357d8f32"
+    },
+    {
+      "path": "evidence/receptor-analysis-input-audit.json",
+      "bytes": 499,
+      "digest": "sha256:b4c840a9e6f195ee33775470ca270506e0a87b2db592ee3691235bd0861c1081"
+    },
+    {
+      "path": "evidence/resource-amendment.json",
+      "bytes": 774,
+      "digest": "sha256:5a6fed892158f89d01d51ddbb46e85ad54f8c2d473bc3f84c7af00749dfc664a"
+    },
+    {
+      "path": "evidence/run-plan.json",
+      "bytes": 1932,
+      "digest": "sha256:804173dba2d298cd6a9503ef838953515ccf10c4a8fc50687d1bc568c1193cf7"
+    },
+    {
+      "path": "evidence/run-summary-attempt01.json",
+      "bytes": 6861,
+      "digest": "sha256:9f01a3e8f86128eeb68dec7c33920510e211042b391d0a14f171faf5a7985706"
+    },
+    {
+      "path": "evidence/run-summary.json",
+      "bytes": 7017,
+      "digest": "sha256:f3e332208f1a71f5063b8aeaf7e9f0adc430b99ffab4f67e8729a743607babdf"
+    },
+    {
+      "path": "evidence/workflow-stage-record.json",
+      "bytes": 4177,
+      "digest": "sha256:c7d9d549a5ced4fac609f333b3ca4aeb2cb3526d88963d2a581dd0bef19f649e"
+    },
+    {
+      "path": "figures/reference-comparison.png",
+      "bytes": 104106,
+      "digest": "sha256:c26a703e911eb1a64680e92246c79297aaca367fe812018fb70fa4626269844e"
+    },
+    {
+      "path": "figures/three-way-pose-overlay.png",
+      "bytes": 195029,
+      "digest": "sha256:de085913bdb5824612a6e55e091f9a6b757a7b13eda1e7b6efd3e669d44260d1"
+    },
+    {
+      "path": "input-output-manifest.json",
+      "bytes": 3786,
+      "digest": "sha256:8af635229eb20415f16ae5748cb7b7feb284854aefb6b7d3b2943cb1b1c8b4ce"
+    },
+    {
+      "path": "inputs/official/1iep_ligand.pdbqt",
+      "bytes": 3841,
+      "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+    },
+    {
+      "path": "inputs/official/1iep_receptor.box.txt",
+      "bytes": 101,
+      "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+    },
+    {
+      "path": "inputs/official/1iep_receptor.pdbqt",
+      "bytes": 216160,
+      "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+    },
+    {
+      "path": "ledgers/conclusion_ledger.csv",
+      "bytes": 824,
+      "digest": "sha256:e08a5d532e45d3ac89097880b673c82601184b63ee40df74767f1c841f9fb468"
+    },
+    {
+      "path": "ledgers/figure_ledger.csv",
+      "bytes": 418,
+      "digest": "sha256:29b5d09c0d3d5f147b6c5e8f4a2a7f475ee95744495457ba57e1cb894bcd0fb8"
+    },
+    {
+      "path": "ledgers/parameter_ledger.csv",
+      "bytes": 1560,
+      "digest": "sha256:186a827ad92ac7b68aef2c271542b6086db17cedcda8c5645e381e19d325c99c"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11363,
+      "digest": "sha256:54088c2a7423c1fa49ae20dc36846b3db40f3208ffe0dcbc16bc1f932160a02c"
+    },
+    {
+      "path": "reference/crystal-ligand.sdf",
+      "bytes": 6621,
+      "digest": "sha256:051b8742c32adc05c07fb486a4e7c9327f84e131cee33ac4e6a568d07553eb38"
+    },
+    {
+      "path": "reference/official-output.sdf",
+      "bytes": 13748,
+      "digest": "sha256:f3a5afc0e9cd684638bcebe56bd6e4e32f4b320b8fcdbc7253b9ee587d714aa4"
+    },
+    {
+      "path": "reference/official-top1.pdbqt",
+      "bytes": 4113,
+      "digest": "sha256:90964def9287047813ad3843fa799f3a38d85d8bc1b687cbc8c365d6cfc6ea51"
+    },
+    {
+      "path": "reference/official-vina-output.pdbqt",
+      "bytes": 16240,
+      "digest": "sha256:4137e1960b3491f17a24579d991f32a2c0cb254af1f58d7278f77579fc27d93f"
+    },
+    {
+      "path": "reference/receptorH.pdb",
+      "bytes": 357444,
+      "digest": "sha256:5f6aee6029f9a2a2c2be32d4eb948ae70808690573e1b69a0850cdffd7048ca7"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "bytes": 446,
+      "digest": "sha256:9ee7674cf6c1d3d64b11d11093673a90aaac42133ac4c1e69d324a6ea2d33b61"
+    },
+    {
+      "path": "runs/attempts/e32-timeout-01/run.json",
+      "bytes": 1567,
+      "digest": "sha256:e5c66f72ded007ad26ff3f5900fd2dea72158e3964ee919bd64bb169e75400a1"
+    },
+    {
+      "path": "runs/attempts/e32-timeout-01/vina.log",
+      "bytes": 1650,
+      "digest": "sha256:665db4e5ec612a8629079bc71f3dfb5274f2a27f130711e69963a171f8fa3f29"
+    },
+    {
+      "path": "runs/e16/poses.pdbqt",
+      "bytes": 16520,
+      "digest": "sha256:1f6c93285ff98d43dd524bd90273c7a48655a76460e9d4369124d9ae19c1765c"
+    },
+    {
+      "path": "runs/e16/poses.sdf",
+      "bytes": 13704,
+      "digest": "sha256:352e1204531b298a773e6640c34719959b11a7ff56d2c8a095bbf3d2f924c6ae"
+    },
+    {
+      "path": "runs/e16/run.json",
+      "bytes": 1680,
+      "digest": "sha256:bb208eb24f48223d54a84970097c1263fd871442c640d752d7c581de583638dd"
+    },
+    {
+      "path": "runs/e16/vina.log",
+      "bytes": 2158,
+      "digest": "sha256:f2d822ed8dae70cc28580a69c1c6e711e1fc6b43f71fa43fffaf47c34941e0f3"
+    },
+    {
+      "path": "runs/e32/poses.pdbqt",
+      "bytes": 16520,
+      "digest": "sha256:065ccf38a9e3e23e62f5ad7757bfc94e7d4d087826d3090bacfd9b25e49b61fd"
+    },
+    {
+      "path": "runs/e32/poses.sdf",
+      "bytes": 13704,
+      "digest": "sha256:e5b097b1fa951d13dfda1b8bd2a96171a068e47ae61c99b88589ebf1abd1ef2b"
+    },
+    {
+      "path": "runs/e32/run.json",
+      "bytes": 1717,
+      "digest": "sha256:5779f1a8365ae00eb75f80cf1acffcb7865e93fc3896f5d01014dedfa8f9b16c"
+    },
+    {
+      "path": "runs/e32/vina.log",
+      "bytes": 2158,
+      "digest": "sha256:acc27143bbd1f380ade0a4c1ad2f912d871cee9e8716a77b169c377e1bf09d73"
+    },
+    {
+      "path": "runs/e8/poses.pdbqt",
+      "bytes": 12390,
+      "digest": "sha256:26ab35567a329ae38a48aa90b92d931fd8a19a0482c10e008418747927c93f63"
+    },
+    {
+      "path": "runs/e8/poses.sdf",
+      "bytes": 10284,
+      "digest": "sha256:768cfe6b251afe8bd6c1bcd6d2d002813ab24f20758016bd38eada9bc1d010b1"
+    },
+    {
+      "path": "runs/e8/run.json",
+      "bytes": 1676,
+      "digest": "sha256:b12caba701fee5d3cf205f172c1d35ada21fd31aad586bc30f38031b81e4d2c7"
+    },
+    {
+      "path": "runs/e8/vina.log",
+      "bytes": 2157,
+      "digest": "sha256:d6afebc216e7a05cff75dcccfae82ca06a5b6f19728ba28ef5c7dc762b3c9dcf"
+    },
+    {
+      "path": "runs/fixed-score/run.json",
+      "bytes": 1515,
+      "digest": "sha256:ed88aa6c3e631611d34eceea3aa74cbf656ad680f318f1341cb72a7f22c0b6e9"
+    },
+    {
+      "path": "runs/fixed-score/vina.log",
+      "bytes": 2021,
+      "digest": "sha256:4fa101cd8c910ab3417f0c68d9383cb1d90e9df3d20ca5a7a2813b8d7ff01cf0"
+    },
+    {
+      "path": "scripts/audit_receptor.py",
+      "bytes": 2055,
+      "digest": "sha256:af23fbe0e8c5b33650a8b956fb1f0e18a3ea8afc191d89814fe424b72861b95e"
+    },
+    {
+      "path": "scripts/capture_environment.py",
+      "bytes": 1649,
+      "digest": "sha256:80df86fbe7d669d373c3a7d3888b586a218475b3ef66bcc8ab787da352523d56"
+    },
+    {
+      "path": "scripts/compare_case.py",
+      "bytes": 13844,
+      "digest": "sha256:52cc92f899b0b4d56706f649d65e5886ab684b242ae7bee3e34fd684ddf7b3c8"
+    },
+    {
+      "path": "scripts/package_case.py",
+      "bytes": 2130,
+      "digest": "sha256:d06d04f860b6f0af52b7342e6ad3898b2c2c6eb0b48172fc7b7e465766b5550e"
+    },
+    {
+      "path": "scripts/recover_timeout.py",
+      "bytes": 1970,
+      "digest": "sha256:4c2d8ba554be5437b119cfe246da8432737ba771d4ccaa306e1dede3a9952bc7"
+    },
+    {
+      "path": "scripts/run_case.py",
+      "bytes": 11180,
+      "digest": "sha256:7955c72f17e257703117644d9aeabd7ba7d2e0006e5e6ef0536985f14751185a"
+    },
+    {
+      "path": "scripts/validate_case.py",
+      "bytes": 16420,
+      "digest": "sha256:fcf5147e6f1bf3b552167dd18f9a8703fcb1e7eed34cede8aa7fb2a95f8cd13c"
+    },
+    {
+      "path": "scripts/write_report.py",
+      "bytes": 17284,
+      "digest": "sha256:09a2e58eceb7576112d8e45898328475d03bad54d2e41874d08010916e745a96"
+    },
+    {
+      "path": "SIMULATION_SCHEME.md",
+      "bytes": 2668,
+      "digest": "sha256:fac3a81e3c322281d4756c5f562b1ee929578117fde095ad31870dbba7782cb7"
+    },
+    {
+      "path": "sources/domain-pack/artifacts.json",
+      "bytes": 11720,
+      "digest": "sha256:99177a9102bc61cbf88e2a92efd7d004b07a3c7f7ad5d4b32f2400bfe5965df3"
+    },
+    {
+      "path": "sources/domain-pack/checks.json",
+      "bytes": 6016,
+      "digest": "sha256:3ce264da762680d7adb78af5578da2e4641d0abab196cfefc84c35b5d9f75beb"
+    },
+    {
+      "path": "sources/domain-pack/examples/task.json",
+      "bytes": 2770,
+      "digest": "sha256:7ba56c62163600015b100f4a7ac2274508da5ab83f5242de254f93bb5cd49afc"
+    },
+    {
+      "path": "sources/domain-pack/examples/virtual-screening.task.json",
+      "bytes": 2694,
+      "digest": "sha256:0cd842b7650570f2d04a0beaa40d71a255a0a5f501ec0ffee466fc5db65ad67c"
+    },
+    {
+      "path": "sources/domain-pack/failures.json",
+      "bytes": 2163,
+      "digest": "sha256:a964608219c6af66414a4d81c71297f90408ff3da615170338c838e6f3aac64a"
+    },
+    {
+      "path": "sources/domain-pack/knowledge.json",
+      "bytes": 2880,
+      "digest": "sha256:2761183713cb27fb005b18234bccf5ccadc6a4388f7f33dc4c5440aa5b786edb"
+    },
+    {
+      "path": "sources/domain-pack/manifest.json",
+      "bytes": 18084,
+      "digest": "sha256:971e306ca92c6411ee499fc779c5814d4419e038056ad23c730d32e1bb9f1b13"
+    },
+    {
+      "path": "sources/domain-pack/metrics.json",
+      "bytes": 2582,
+      "digest": "sha256:0495d5b52c2dfbf56c2e0fb78d68d5185a5567017735f509a22447d5388f1998"
+    },
+    {
+      "path": "sources/domain-pack/models.json",
+      "bytes": 1013,
+      "digest": "sha256:6e068ebcb0538bdda8c826b1ec689bdadc0264a19d04798d8cc6156c27b25f07"
+    },
+    {
+      "path": "sources/domain-pack/problem.schema.json",
+      "bytes": 15843,
+      "digest": "sha256:d05584873f0170fa1c088e7d9498b1abe55d35df256295bd9e1be9ab1f790e76"
+    },
+    {
+      "path": "sources/domain-pack/protocols.json",
+      "bytes": 1023,
+      "digest": "sha256:d4329291b11a8e2103019d509e70c563195c692bc100223c9a90cf355116975b"
+    },
+    {
+      "path": "sources/domain-pack/README.md",
+      "bytes": 9406,
+      "digest": "sha256:e1fcf7462b6ce2d19a97e1ee7c18ec0207b595032c16d28c63b235221826af33"
+    },
+    {
+      "path": "sources/domain-pack/record.schema.json",
+      "bytes": 1363,
+      "digest": "sha256:6db15b3be97c41ccd8400053c1ca4935d244f15f5ff8a5e38449c6045180312b"
+    },
+    {
+      "path": "sources/domain-pack/roles.json",
+      "bytes": 1428,
+      "digest": "sha256:a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa"
+    },
+    {
+      "path": "sources/domain-pack/templates.json",
+      "bytes": 823,
+      "digest": "sha256:eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1"
+    },
+    {
+      "path": "sources/domain-pack/tooling.md",
+      "bytes": 1964,
+      "digest": "sha256:1cda67ce15e9230548818229b4eff6cc5144a846c96e934635c3a8eb05f55b35"
+    },
+    {
+      "path": "sources/domain-pack/validation.json",
+      "bytes": 1964,
+      "digest": "sha256:986d3fcb07868eb507992c00931fe773927566b830c05bbd98efc2b2fcbecfea"
+    },
+    {
+      "path": "sources/domain-pack/vocabulary.json",
+      "bytes": 794,
+      "digest": "sha256:a06d1f9f3e7d9ed0a8c78fa6f34266f0108faa14800d2e75c2777cf01e530d0e"
+    },
+    {
+      "path": "sources/official-tutorial.rst",
+      "bytes": 11239,
+      "digest": "sha256:08349b4bc7d6899a75762bb88423d7fb9fdfe8080ef328d2098e3ff750506d9a"
+    },
+    {
+      "path": "sources/source-lock.json",
+      "bytes": 3492,
+      "digest": "sha256:5813c978094f55b208dcf637851e83a7870c205e1b42f5225ad17dac308a782c"
+    },
+    {
+      "path": "sources/Vina-LICENSE.txt",
+      "bytes": 11358,
+      "digest": "sha256:cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "task.json",
+      "bytes": 3071,
+      "digest": "sha256:ac0903b82c609f2b6969358008baa144ca88865977fe7a87c2916df71dcea4e2"
+    }
+  ],
+  "excludedSelfReferences": [
+    "artifact-index.json",
+    "evidence/case-validation.json"
+  ]
+}

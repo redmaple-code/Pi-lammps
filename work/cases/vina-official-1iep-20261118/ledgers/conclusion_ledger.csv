@@ -1,0 +1,9 @@
+﻿id,claim,verdict,evidence
+C01,Official inputs preserved byte-for-byte,match,sources/source-lock.json; evidence/run-plan.json
+C02,Current scorer recovers reference-pose energy,match,runs/fixed-score/vina.log
+C03,Main top1 energy agrees with official reference,match,analysis/search-budget-comparison.csv
+C04,Main top1 recovers official and crystal poses,match,analysis/metrics.json
+C05,All four official modes have current counterparts,partial,analysis/official-output-comparison.csv
+C06,Main top1 passes configured physical plausibility checks,match,analysis/posebusters-main.csv
+C07,8/16/32 search-budget study executed with fixed inputs/seed,match,analysis/search-budget-comparison.csv
+C08,Bitwise reproduction of original hardware/producer version,not_tested,evidence/run-plan.json: reference provenance gaps

@@ -1,0 +1,674 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "small-molecule-docking",
+  "version": "0.1.1-draft",
+  "publicationStatus": "draft",
+  "scope": {
+    "domains": [
+      "protein-ligand-docking"
+    ],
+    "scales": [
+      "molecular"
+    ],
+    "tasks": [
+      "focused-docking",
+      "virtual-screening"
+    ],
+    "exclusions": [
+      "protein-protein-docking",
+      "covalent-docking",
+      "unvalidated-metal-coordination",
+      "binding-free-energy-calculation"
+    ]
+  },
+  "kernelCompatibility": ">=1.0.0 <2.0.0",
+  "dependencies": [],
+  "resources": [
+    {
+      "id": "problem",
+      "kind": "problemSchema",
+      "path": "problem.schema.json",
+      "availability": "available",
+      "digest": "sha256:d05584873f0170fa1c088e7d9498b1abe55d35df256295bd9e1be9ab1f790e76"
+    },
+    {
+      "id": "knowledge",
+      "kind": "knowledge",
+      "path": "knowledge.json",
+      "availability": "available",
+      "digest": "sha256:2761183713cb27fb005b18234bccf5ccadc6a4388f7f33dc4c5440aa5b786edb"
+    },
+    {
+      "id": "models",
+      "kind": "model",
+      "path": "models.json",
+      "availability": "available",
+      "digest": "sha256:6e068ebcb0538bdda8c826b1ec689bdadc0264a19d04798d8cc6156c27b25f07"
+    },
+    {
+      "id": "vocabulary",
+      "kind": "vocabulary",
+      "path": "vocabulary.json",
+      "availability": "available",
+      "digest": "sha256:a06d1f9f3e7d9ed0a8c78fa6f34266f0108faa14800d2e75c2777cf01e530d0e"
+    },
+    {
+      "id": "checks",
+      "kind": "check",
+      "path": "checks.json",
+      "availability": "available",
+      "digest": "sha256:3ce264da762680d7adb78af5578da2e4641d0abab196cfefc84c35b5d9f75beb"
+    },
+    {
+      "id": "metrics",
+      "kind": "metric",
+      "path": "metrics.json",
+      "availability": "available",
+      "digest": "sha256:0495d5b52c2dfbf56c2e0fb78d68d5185a5567017735f509a22447d5388f1998"
+    },
+    {
+      "id": "failures",
+      "kind": "failure",
+      "path": "failures.json",
+      "availability": "available",
+      "digest": "sha256:a964608219c6af66414a4d81c71297f90408ff3da615170338c838e6f3aac64a"
+    },
+    {
+      "id": "protocols",
+      "kind": "protocol",
+      "path": "protocols.json",
+      "availability": "available",
+      "digest": "sha256:d4329291b11a8e2103019d509e70c563195c692bc100223c9a90cf355116975b"
+    },
+    {
+      "id": "templates",
+      "kind": "template",
+      "path": "templates.json",
+      "availability": "available",
+      "digest": "sha256:eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1"
+    },
+    {
+      "id": "roles",
+      "kind": "role",
+      "path": "roles.json",
+      "availability": "available",
+      "digest": "sha256:a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa"
+    },
+    {
+      "id": "validation",
+      "kind": "validation",
+      "path": "validation.json",
+      "availability": "available",
+      "digest": "sha256:986d3fcb07868eb507992c00931fe773927566b830c05bbd98efc2b2fcbecfea"
+    },
+    {
+      "id": "artifacts",
+      "kind": "artifactSchema",
+      "path": "artifacts.json",
+      "availability": "available",
+      "digest": "sha256:99177a9102bc61cbf88e2a92efd7d004b07a3c7f7ad5d4b32f2400bfe5965df3"
+    },
+    {
+      "id": "record-schema",
+      "kind": "artifactSchema",
+      "path": "record.schema.json",
+      "availability": "available",
+      "digest": "sha256:6db15b3be97c41ccd8400053c1ca4935d244f15f5ff8a5e38449c6045180312b"
+    },
+    {
+      "id": "workflow-guide",
+      "kind": "template",
+      "path": "README.md",
+      "availability": "available",
+      "digest": "sha256:e1fcf7462b6ce2d19a97e1ee7c18ec0207b595032c16d28c63b235221826af33"
+    },
+    {
+      "id": "tooling-guide",
+      "kind": "template",
+      "path": "tooling.md",
+      "availability": "available",
+      "digest": "sha256:1cda67ce15e9230548818229b4eff6cc5144a846c96e934635c3a8eb05f55b35"
+    },
+    {
+      "id": "task-example",
+      "kind": "template",
+      "path": "examples/task.json",
+      "availability": "available",
+      "digest": "sha256:7ba56c62163600015b100f4a7ac2274508da5ab83f5242de254f93bb5cd49afc"
+    },
+    {
+      "id": "virtual-screening-example",
+      "kind": "template",
+      "path": "examples/virtual-screening.task.json",
+      "availability": "available",
+      "digest": "sha256:0cd842b7650570f2d04a0beaa40d71a255a0a5f501ec0ffee466fc5db65ad67c"
+    }
+  ],
+  "entrypoints": {
+    "problemSchema": "problem",
+    "knowledge": [
+      "knowledge"
+    ],
+    "models": [
+      "models"
+    ],
+    "vocabulary": "vocabulary",
+    "checks": [
+      "checks"
+    ],
+    "metrics": [
+      "metrics"
+    ],
+    "failures": "failures",
+    "templates": [
+      "templates"
+    ],
+    "roles": "roles",
+    "validation": [
+      "validation"
+    ],
+    "artifactSchemas": [
+      "artifacts"
+    ]
+  },
+  "requiredCapabilities": [
+    "docking.batch.execute",
+    "docking.ligands.prepare",
+    "docking.plan",
+    "docking.poses.analyze",
+    "docking.protocol.prepare",
+    "docking.protocol.qualify",
+    "docking.ranking.evaluate",
+    "docking.receptor.prepare",
+    "docking.report.render"
+  ],
+  "toolProfiles": [
+    {
+      "id": "vina-meeko-candidate",
+      "bindings": [
+        {
+          "capability": "docking.batch.execute",
+          "adapterId": "candidate-vina",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.ligands.prepare",
+          "adapterId": "candidate-meeko-rdkit",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.plan",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.poses.analyze",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.protocol.prepare",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.protocol.qualify",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.ranking.evaluate",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.receptor.prepare",
+          "adapterId": "candidate-meeko-rdkit",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "docking.report.render",
+          "adapterId": "candidate-docking-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    }
+  ],
+  "defaultToolProfile": "vina-meeko-candidate",
+  "workflows": [
+    {
+      "id": "focused-docking",
+      "taskType": "focused-docking",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.plan"
+        },
+        {
+          "id": "receptor",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "receptor-bundle"
+          ],
+          "checkRefs": [
+            "checks#receptor-quality"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.receptor.prepare"
+        },
+        {
+          "id": "ligands",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "ligand-bundle"
+          ],
+          "checkRefs": [
+            "checks#ligand-identity"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.ligands.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "receptor",
+            "ligands"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "receptor-bundle",
+            "ligand-bundle"
+          ],
+          "produces": [
+            "protocol"
+          ],
+          "checkRefs": [
+            "checks#box-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.protocol.prepare"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "protocol"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#qualification-scope"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.protocol.qualify"
+        },
+        {
+          "id": "dock",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "protocol",
+            "qualification"
+          ],
+          "produces": [
+            "docking-batch"
+          ],
+          "checkRefs": [
+            "checks#execution-complete"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.batch.execute"
+        },
+        {
+          "id": "poses",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "dock"
+          ],
+          "consumes": [
+            "task",
+            "protocol",
+            "docking-batch"
+          ],
+          "produces": [
+            "pose-analysis"
+          ],
+          "checkRefs": [
+            "checks#pose-integrity",
+            "checks#rmsd-reference"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.poses.analyze"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "poses"
+          ],
+          "consumes": [
+            "task",
+            "pose-analysis",
+            "qualification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#ranking-valid"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.ranking.evaluate"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "metrics",
+            "pose-analysis",
+            "qualification"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.report.render"
+        }
+      ]
+    },
+    {
+      "id": "virtual-screening",
+      "taskType": "virtual-screening",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.plan"
+        },
+        {
+          "id": "receptor",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "receptor-bundle"
+          ],
+          "checkRefs": [
+            "checks#receptor-quality"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.receptor.prepare"
+        },
+        {
+          "id": "ligands",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "ligand-bundle"
+          ],
+          "checkRefs": [
+            "checks#ligand-identity"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.ligands.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "receptor",
+            "ligands"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "receptor-bundle",
+            "ligand-bundle"
+          ],
+          "produces": [
+            "protocol"
+          ],
+          "checkRefs": [
+            "checks#box-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.protocol.prepare"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "protocol"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#qualification-scope"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.protocol.qualify"
+        },
+        {
+          "id": "dock",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "protocol",
+            "qualification"
+          ],
+          "produces": [
+            "docking-batch"
+          ],
+          "checkRefs": [
+            "checks#execution-complete"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.batch.execute"
+        },
+        {
+          "id": "poses",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "dock"
+          ],
+          "consumes": [
+            "task",
+            "protocol",
+            "docking-batch"
+          ],
+          "produces": [
+            "pose-analysis"
+          ],
+          "checkRefs": [
+            "checks#pose-integrity",
+            "checks#rmsd-reference"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.poses.analyze"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "poses"
+          ],
+          "consumes": [
+            "task",
+            "pose-analysis",
+            "qualification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#ranking-valid"
+          ],
+          "reviewRequired": true,
+          "capability": "docking.ranking.evaluate"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "metrics",
+            "pose-analysis",
+            "qualification"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "docking.report.render"
+        }
+      ]
+    }
+  ],
+  "defaultWorkflow": "focused-docking",
+  "policies": {
+    "referencePolicy": "verifiedBasis",
+    "independentReviewRequired": true,
+    "maxConsecutiveRevisions": 3,
+    "maxConsecutiveRepairFailures": 3
+  },
+  "extensions": {
+    "workflow.spec": {
+      "designStatus": "authored",
+      "adapterStatus": "unverified",
+      "scientificRuns": "notRun",
+      "protocolRefs": [
+        "protocols"
+      ],
+      "taskCapabilityPolicy": "就绪按所选流程能力闭包检查；包级集合用于安装盘点。",
+      "externalDataRequirement": "JSON资源已齐全，实际科学数据和工具版本由具体案例取得并锁定。",
+      "thresholdPolicy": "示例数值为proposed，按任务和参考审阅后锁定。"
+    }
+  }
+}

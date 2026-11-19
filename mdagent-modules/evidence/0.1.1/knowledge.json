@@ -1,0 +1,33 @@
+{
+  "module": "knowledge",
+  "assembly": {
+    "modules": [
+      "knowledge",
+      "shared"
+    ],
+    "files": 151
+  },
+  "python": "3.11.4",
+  "environment": "temporary isolated data root; Python UTF-8 mode",
+  "suites": [
+    {
+      "name": "ukb-package",
+      "returncode": 0,
+      "ok": true,
+      "tests": 103,
+      "skipped": 0,
+      "seconds": 76.6,
+      "log": "knowledge-ukb-package.log"
+    },
+    {
+      "name": "knowledge-evidence-integration",
+      "returncode": 0,
+      "ok": true,
+      "tests": 44,
+      "skipped": 6,
+      "seconds": 76.0,
+      "log": "knowledge-knowledge-evidence-integration.log"
+    }
+  ],
+  "ok": true
+}

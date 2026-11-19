@@ -1,0 +1,20 @@
+{
+  "dataOrigin": "synthetic-tabletop",
+  "figureId": "demo-analysis-overview",
+  "status": "generated",
+  "outputRef": "figures/synthetic-analysis-overview.png",
+  "outputDigest": "sha256:cd2436b175c27c87f444b290d63633d23967e0b277b6560e577e2bccac1ff009",
+  "tool": "matplotlib/Agg",
+  "inputRefs": [
+    "analysis/synthetic-dose-response.csv",
+    "analysis/ranking-with-synthetic-labels.csv",
+    "analysis/metrics.json"
+  ],
+  "inspection": {
+    "method": "opened image through view_image",
+    "result": "检查四面板、构造数据标记、单位、对照点和图例可读。",
+    "observedFigure": true
+  },
+  "scientificDataOrigin": "constructed",
+  "molecularCoordinatesAvailable": false
+}

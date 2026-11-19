@@ -1,0 +1,21 @@
+{
+  "name": "@redmaple/simulation",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "bin": { "redmaple-sim": "apps/cli/main.js" },
+  "scripts": {
+    "test": "node --test --test-concurrency=1 tests/*.test.js",
+    "check": "node scripts/check.js",
+    "start": "node apps/cli/main.js",
+    "test:grinding": "node apps/cli/main.js grinding --validation"
+  },
+  "dependencies": {
+    "@paperpilot/agent-base": "file:../redmaple-agent",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "semver": "7.7.3",
+    "yaml": "2.8.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "caseCount": 4,
+  "restoredStateEqualsExport": true,
+  "integrity": {
+    "integrity_check": "ok"
+  },
+  "knowledge": {
+    "schemaVersion": 1,
+    "quickCheck": [
+      {
+        "quick_check": "ok"
+      }
+    ],
+    "foreignKeyErrors": [],
+    "synchronous": 2,
+    "scopeId": "04bdfc18-5210-46a8-bf8a-7060be58ffd0"
+  },
+  "restoreDirectory": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\recovery-check-r1MoI0",
+  "scope": "Both databases reopened at a new state directory with original workspace and artifact locators preserved"
+}

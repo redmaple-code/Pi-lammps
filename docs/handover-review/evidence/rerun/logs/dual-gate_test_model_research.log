@@ -1,0 +1,8 @@
+............C:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\mcp\md_mcp.py:30: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\mdhandoff-review-rsfdibqc\\MDagent-subsystems-handover-20261117\\src\\mcp\\md_config.json.example' mode='r' encoding='utf-8'>
+  CFG = json.load(open(_cfg_path, "r", encoding="utf-8"))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......
+----------------------------------------------------------------------
+Ran 18 tests in 0.163s
+
+OK

@@ -1,0 +1,775 @@
+{
+  "case": "case2",
+  "provider": "external-ai:case2_points.json",
+  "points": [
+    {
+      "point_id": "RP-001",
+      "title": "Cr 在 pair_coeff 中被映射为 Ti，TiAlCr 的第三组元实际没有 Cr 势",
+      "dimension_guess": "材料-势函数映射",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          30,
+          31,
+          32,
+          36
+        ]
+      },
+      "claim_in_text": "E-02 称对象为“TiAlCr 合金，hcp 基体，含 Ti/Al/Cr 三组元”；L30-L32 将 type 3 设为 Cr 质量 51.996，L36 却是 `pair_coeff * * TiAl.eam.alloy Ti Al Ti`。",
+      "why_it_matters": "type 3 的 Cr 原子在势函数中获得 Ti 的 EAM 相互作用，Cr-Cr、Cr-Ti、Cr-Al 的能量与质量不一致；势函数不含 Cr，无法代表 TiAlCr 的化学键合、层错能与塑性机制。",
+      "physical_question": "Cr 原子究竟由什么势描述？用 Ti 代替 Cr 后，测得的 G、τy 和塑性载体还能否归因于 TiAlCr？",
+      "evidence_needed": [
+        "需补：potential 文件的元素列表与拟合范围",
+        "E2 文献：TiAlCr 可用 EAM/MEAM 势及元素映射",
+        "E4 案例：同体系势函数验证"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-005",
+      "common_issue_name": "多组元势函数的交叉项/适用性",
+      "disposition": "record_required",
+      "builtin_explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。"
+    },
+    {
+      "point_id": "RP-002",
+      "title": "hcp 随机固溶体与“TiAlCr 金属间化合物”的结构与成分主张不一致",
+      "dimension_guess": "材料结构/成分",
+      "locations": {
+        "experiment": [
+          "E-01",
+          "E-02"
+        ],
+        "infile": [
+          23,
+          24,
+          26,
+          27,
+          28
+        ]
+      },
+      "claim_in_text": "E-01/E-02 称 TiAlCr 合金；intent.system 称“TiAlCr 金属间化合物/合金（hcp 基）”；L23-L28 用 `lattice hcp 2.95`、`create_atoms 1 box`，再以 type/ratio 0.0755/0.1625 随机替换 type 1。",
+      "why_it_matters": "随机替代的 hcp 单晶没有金属间化合物所需的有序占位与化学有序，且 Al 仅 0.0755、最终 Cr 还低于 0.1625，实际是 Ti 富集的稀 Al/Cr 固溶体；结构、成分与“金属间化合物”主张不符。",
+      "physical_question": "实验对象到底是 TiAl 基金属间化合物还是 Ti 富集 hcp 固溶体？其化学有序、相组成和成分能否由该建模步骤代表？",
+      "evidence_needed": [
+        "E2 文献：TiAlCr 相图与有序结构",
+        "需补：目标合金成分（at%/wt%）与热处理状态",
+        "E4 案例：同类合金建模"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-003",
+      "title": "两次 type/ratio 串联使最终 Cr 分数低于 0.1625，目标成分换算未说明",
+      "dimension_guess": "成分换算",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          27,
+          28
+        ]
+      },
+      "claim_in_text": "L27-L28 连续执行 `set type 1 type/ratio 2 0.0755 123456` 与 `set type 1 type/ratio 3 0.1625 123456`；E-02 只称“含 Ti/Al/Cr 三组元”，未给目标成分。",
+      "why_it_matters": "第二次替换只从剩余 type 1 中取 0.1625，最终 Cr 原子分数不是 0.1625；若 0.1625 是目标 at%，实际成分偏低，影响势函数适用性和力学响应。",
+      "physical_question": "0.0755 与 0.1625 是目标原子分数还是相对剩余 Ti 的比例？最终成分是多少，是否与实验合金一致？",
+      "evidence_needed": [
+        "需补：目标合金成分表",
+        "需补：LAMMPS set type/ratio 语义核对",
+        "E2 文献：成分-性能关系"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-005",
+      "common_issue_name": "多组元势函数的交叉项/适用性",
+      "disposition": "record_required",
+      "builtin_explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。"
+    },
+    {
+      "point_id": "RP-004",
+      "title": "Shear_data.txt 记录的是 σzz 法向应力，不是实验定义的剪应力 τxz",
+      "dimension_guess": "观测定义/应力度量",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          91,
+          92,
+          93,
+          105,
+          106
+        ]
+      },
+      "claim_in_text": "E-05 要“剪应力-剪应变曲线、剪切模量 G、剪切屈服强度 τy”；L91-L93 把 `-pxx/10000`、`-pyy/10000`、`-pzz/10000` 都注释为“calculate shear stress”，L105 实际打印 `${strain} ${szz}`。",
+      "why_it_matters": "pxx/pyy/pzz 是法向压力分量，不是剪应力；xz 剪切对应的剪应力应为 pxz，L106 虽输出 pxz 但未写入 Shear_data.txt。用 σzz 代替 τxz 会把法向压缩/膨胀响应误读为剪切响应，G 与 τy 均失真。",
+      "physical_question": "Shear_data.txt 中的第二列到底是 τxz、σzz 还是别的应力分量？若实验要 τxz-γ 曲线，为何输出 σzz？",
+      "evidence_needed": [
+        "需补：LAMMPS 压力张量分量定义与符号约定",
+        "需补：实验剪切应力原始记录",
+        "需补：后处理脚本/变量定义"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-009",
+      "common_issue_name": "应力/应变定义（virial、总压、工程/真应力）",
+      "disposition": "record_required",
+      "builtin_explanation": "LAMMPS 压力张量含动能项；stress/atom 是维里分配；工程应变/真应力定义不同。需记录所用定义与基线扣除方式。",
+      "required_declaration": "记录：应力定义（virial/总压）、是否扣动能/初始基线、应变定义（工程/真）、与实验曲线的转换关系。"
+    },
+    {
+      "point_id": "RP-005",
+      "title": "`z erate -0.01 remap x` 叠加 z 向大压缩，加载不是恒体积简单剪切",
+      "dimension_guess": "加载路径/变形模式",
+      "locations": {
+        "experiment": [
+          "E-03",
+          "E-04"
+        ],
+        "infile": [
+          87,
+          88,
+          89,
+          102
+        ]
+      },
+      "claim_in_text": "E-04 称“300 K，剪切应变率 1×10⁻³ s⁻¹，加载至剪应变 0.9（大应变）”；L87-L89 设 `srate=0.01`、`final_strain=0.9`，L102 为 `fix 3 all deform 1 z erate -${srate} remap x`。",
+      "why_it_matters": "`z erate -0.01` 使 z 盒长持续压缩，按 `final_strain=0.9` 的设定 z 向也积累了约 0.9 的压缩应变；`remap x` 叠加 xz 剪切。试样同时被大幅压缩，应力状态与实验的简单剪切/双剪不同，τ-γ 曲线会混入法向压缩功与泊松响应。",
+      "physical_question": "该加载是纯剪切、压缩-剪切还是其他组合？z 向 0.9 的压缩是否实验设计的一部分？若不是，如何从含压缩的应力中分离 τxz？",
+      "evidence_needed": [
+        "需补：LAMMPS fix deform `z erate` 与 `remap x` 的变形梯度定义",
+        "E2 文献：TiAlCr 压缩-剪切耦合效应",
+        "E4 案例：同类剪切脚本对照"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-006",
+      "title": "注释写 xy 面剪切，代码实际为 xz 面剪切，剪切系未与实验对齐",
+      "dimension_guess": "几何/剪切系",
+      "locations": {
+        "experiment": [
+          "E-03",
+          "E-05"
+        ],
+        "infile": [
+          72,
+          102
+        ]
+      },
+      "claim_in_text": "L72 注释为“shear in xy plane”；L102 为 `fix 3 all deform 1 z erate -${srate} remap x`，即 z 向变形、x 向 remap，对应 xz 面剪切；E-03 只说“剪切夹具（双剪或扭转等效）”，未指定剪切面。",
+      "why_it_matters": "hcp 单晶的剪切响应强烈依赖剪切面与 c 轴取向；xy 与 xz 面对应不同滑移系/孪生系，G、τy 和塑性机制不可互换。注释与代码矛盾说明剪切几何未锁定。",
+      "physical_question": "实验的剪切面是哪一个？模拟的 xz 面剪切对应基面/柱面/锥面中的哪个滑移系？",
+      "evidence_needed": [
+        "E2 文献：hcp 各滑移系临界分切应力",
+        "需补：试样取向/织构",
+        "需补：LAMMPS deform 方向核对"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-007",
+      "title": "NPT 只把 x/y 法向压力控制为 0，z 向无压力控制，应力三轴度与实验不符",
+      "dimension_guess": "系综/应力边界",
+      "locations": {
+        "experiment": [
+          "E-03",
+          "E-04"
+        ],
+        "infile": [
+          99,
+          102
+        ]
+      },
+      "claim_in_text": "L99 `fix 2 all npt temp ${Temp} ${Temp} ${tdamp} x 0 0 1 y 0 0 1 couple none`，只对 x/y 施加 0 bar 恒压；L102 对 z 施加变形。E-03/E-04 描述剪切夹具与 300 K 剪切加载，未说明法向压力控制。",
+      "why_it_matters": "NPT 把 σxx、σyy 控制为 0，但 σzz 自由演化；同时 z 被强制压缩，试样处于压缩-剪切复合应力状态。实验的双剪/扭转试样通常有不同的 lateral 约束与法向应力；应力三轴度不同会改变屈服与损伤机制。此外 NPT 与 fix deform 都改变盒子，需核实 LAMMPS 是否允许以及实际盒长由谁控制。",
+      "physical_question": "实验剪切时的法向边界条件是什么（自由表面、常压、刚性夹具）？模拟的 σxx=σyy=0、εzz 受控是否与之等效？",
+      "evidence_needed": [
+        "需补：实验夹具边界条件与法向压力记录",
+        "E2 文献：应力三轴度对剪切屈服的影响",
+        "需补：NPT 与 fix deform 同时使用的合法性/实际系综"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-011",
+      "common_issue_name": "夹具/边界与实验加载路径不等效",
+      "disposition": "explained",
+      "builtin_explanation": "周期/刚性夹持与实验夹具的刚度、接触、摩擦和应力三轴度不同；需声明等效假设与适用范围。",
+      "required_declaration": "声明：边界/夹持与实验的差异；结论限趋势；必要时做边界敏感性测试。"
+    },
+    {
+      "point_id": "RP-008",
+      "title": "temp/partial 0 1 1 把 x 分量排除在温度和压力之外，剪切方向的热/动压不受控",
+      "dimension_guess": "统计/温控",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          57,
+          58,
+          99,
+          100
+        ]
+      },
+      "claim_in_text": "L58 `compute new2d all temp/partial 0 1 1`，L100 `fix_modify 2 temp new2d`；E-04 要求 300 K 剪切。",
+      "why_it_matters": "xz 剪切的流动方向是 x；把 x 从温度中排除，等于不统计/不恒温 x 方向的热动能。剪切功首先进入 x 向速度，若 x 向热化后不被温控，实际温度会高于 300 K 且温度各向异性；同时 NPT 的压力计算使用 new2d，xx 向动压贡献被剔除，0 bar 目标可能偏置。",
+      "physical_question": "300 K 是指哪个温度定义（全 3D、y/z 部分、还是去掉流动后的 peculiar temperature）？x 向剪切生热由什么机制移除？",
+      "evidence_needed": [
+        "需补：compute temp/partial 与 fix npt 压力耦合语义",
+        "E2 文献：剪切流中温度各向异性",
+        "需补：剪切阶段温度演化数据"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-009",
+      "title": "剪切阶段 thermo 不输出 temp，300 K 等温条件无法验证",
+      "dimension_guess": "观测/证据",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          106
+        ]
+      },
+      "claim_in_text": "L106 `thermo_style custom step press pe pxx pyy pzz pxy pxz pyz v_strain` 没有 temp；E-04 明确 300 K。",
+      "why_it_matters": "高应变率剪切会局部升温；没有温度记录就无法判断温控是否维持 300 K，也无法排除热软化对 τy 的影响。",
+      "physical_question": "剪切全过程的实际温度是多少？是否存在剪切生热/热软化？",
+      "evidence_needed": [
+        "需补：thermo 输出或 dump 中的温度序列",
+        "需补：等温条件控制记录",
+        "E2 文献：TiAlCr 热软化"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-002",
+      "common_issue_name": "MD 应变率比实验高多个数量级",
+      "disposition": "explained",
+      "builtin_explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。"
+    },
+    {
+      "point_id": "RP-010",
+      "title": "实验 1×10⁻³ s⁻¹ 与模拟 1×10¹⁰ s⁻¹ 相差 13 个数量级，机制不变假设未论证",
+      "dimension_guess": "尺度/率相关",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          87,
+          102
+        ]
+      },
+      "claim_in_text": "E-04 写“剪切应变率 1×10⁻³ s⁻¹”；L87 `srate=0.01`（ps⁻¹）、L102 `z erate -${srate}`；intent 的 cross_scale 自述“1×10¹⁰ s⁻¹”“13 个数量级”“未论证（需 E2/E4）→ 存疑”。",
+      "why_it_matters": "TiAlCr 金属间化合物的屈服、孪生、位错速度与局部化可能强烈率敏感；1e10/s 下测得的 τy 与塑性机制不能直接映射到 1e-3/s。E-05 仍要给出 τy 与 G，和 cross_scale “不外推绝对强度”的免责声明自相矛盾。",
+      "physical_question": "在 13 个数量级差距下，哪些机制/趋势可以外推、哪些绝对量不能？是否有同材料率扫描或文献支持？",
+      "evidence_needed": [
+        "E2 文献：TiAlCr 率敏感性/孪生",
+        "E4 案例：同体系不同应变率 MD 对照",
+        "需补：MD 率扫描"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-002",
+      "common_issue_name": "MD 应变率比实验高多个数量级",
+      "disposition": "explained",
+      "builtin_explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。"
+    },
+    {
+      "point_id": "RP-011",
+      "title": "50 个晶格单元的单晶 PBC 盒子不能代表 E-02 的 µm 级晶粒块体/片状试样",
+      "dimension_guess": "尺度/微结构",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          13,
+          23,
+          24
+        ]
+      },
+      "claim_in_text": "E-02 称“块体/片状试样，晶粒 µm 级”；L13 `boundary p p p`，L23-L24 `lattice hcp 2.95` + `region box block 0 50 0 50 0 50`，为单晶周期盒子。",
+      "why_it_matters": "µm 级晶粒的多晶试样由晶界、织构、晶粒尺寸效应和晶界滑动/裂纹控制；50 个晶格单元的单晶盒子没有晶界，屈服由均匀位错成核/滑移控制，强度与塑性机制不可直接比较。",
+      "physical_question": "实验的晶粒尺寸、织构和晶界特征是什么？单晶 MD 的 τy 如何与 µm 多晶的 τy 建立联系？",
+      "evidence_needed": [
+        "需补：晶粒尺寸/织构/EBSD",
+        "E2 文献：晶界与晶粒尺寸效应",
+        "E4 案例：多晶 vs 单晶 MD 对照"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-012",
+      "title": "双剪/扭转试样与周期均匀简单剪切之间缺少几何与应力换算",
+      "dimension_guess": "几何/加载等效",
+      "locations": {
+        "experiment": [
+          "E-03"
+        ],
+        "infile": [
+          13,
+          24,
+          102
+        ]
+      },
+      "claim_in_text": "E-03 称“剪切夹具（双剪或扭转等效），试样标距段厚度与宽度按夹具设计”；L13 `boundary p p p`、L24 周期盒子、L102 均匀 affine 剪切。",
+      "why_it_matters": "双剪有两个剪切带，扭转有径向应变梯度；两者都不是均匀简单剪切。周期盒子没有夹具、标距和自由表面，无法直接给出实验的 nominal shear stress/engineering shear strain。",
+      "physical_question": "实验的标距、剪切带宽度和应力集中如何映射到周期盒子的均匀剪切？双剪/扭转的 τ-γ 定义与 MD 的 pxz-γ 是否同一量？",
+      "evidence_needed": [
+        "需补：夹具图纸/标距尺寸",
+        "E2 文献：双剪与简单剪切的应力换算",
+        "需补：试样几何与边界条件说明"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-011",
+      "common_issue_name": "夹具/边界与实验加载路径不等效",
+      "disposition": "explained",
+      "builtin_explanation": "周期/刚性夹持与实验夹具的刚度、接触、摩擦和应力三轴度不同；需声明等效假设与适用范围。",
+      "required_declaration": "声明：边界/夹持与实验的差异；结论限趋势；必要时做边界敏感性测试。"
+    },
+    {
+      "point_id": "RP-013",
+      "title": "初始 hcp 2.95 固定盒子只弛豫原子，未做 box/relax，残余应力未报告",
+      "dimension_guess": "初始条件/残余应力",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          23,
+          24,
+          49,
+          51,
+          62
+        ]
+      },
+      "claim_in_text": "L23-L24 用 `lattice hcp 2.95` 建 50×50×50 盒子；L49 `minimize` 只弛豫原子；L62 NVT 固定体积；E-05 要用应力-应变曲线定 G 与 τy。",
+      "why_it_matters": "TiAlCr 合金的平衡晶格常数与纯 Ti hcp 2.95 Å 不同，固定盒子会留下残余正压力；NVT 预平衡不消除全局应力，随后 NPT 只放松 x/y。初始应力会叠加到 τ-γ 曲线，改变表观 G、屈服点和 0.2% 偏移。",
+      "physical_question": "初始构型的残余压力/应力张量是多少？是否在 300 K、0 bar 下达到平衡？G 与 τy 是否扣除了初始应力？",
+      "evidence_needed": [
+        "需补：minimize/NVT 后的压力张量",
+        "E2 文献：TiAlCr 平衡晶格常数",
+        "需补：box/relax 或 NPT 预平衡记录"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-014",
+      "title": "hcp 单晶的剪切模量 G 不唯一，未指定取向/滑移系与弹性常数定义",
+      "dimension_guess": "弹性各向异性",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-05"
+        ],
+        "infile": [
+          23,
+          102
+        ]
+      },
+      "claim_in_text": "E-02 称“hcp 基体”；E-05 要“剪切模量 G”；L23 `lattice hcp 2.95` 未给取向，L102 为 xz 面剪切。",
+      "why_it_matters": "hcp 晶体有多个独立弹性常数，基面/柱面/锥面剪切模量不同；单晶 xz 剪切的表观 G 取决于 c 轴与剪切面的夹角。实验若测多晶/特定织构的 G，不能与任一单晶剪切模量直接对应。",
+      "physical_question": "实验测的是哪个剪切模量（基面/柱面/锥面或多晶等效）？模拟的 xz 剪切对应哪个取向，弹性常数是否已校验？",
+      "evidence_needed": [
+        "E2 文献：TiAlCr/hcp 弹性常数",
+        "需补：织构与加载方向",
+        "需补：MD 弹性常数计算/取向说明"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-015",
+      "title": "0.2% 偏移屈服判据缺少应力平均、应变分辨率与不确定度定义",
+      "dimension_guess": "统计/屈服判据",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          105
+        ]
+      },
+      "claim_in_text": "E-05 要“以 0.2% 偏移定屈服”；L105 `fix def1 all print 100 “${strain} ${szz}”`，每 100 步一个瞬时应力点。",
+      "why_it_matters": "MD 瞬时应力含热噪声，单点应力-应变曲线在弹性段可能被噪声淹没；0.2% 偏移需要拟合初始斜率并做时间/系综平均。未定义平均窗口、应变分辨率和误差，τy 不可复现。",
+      "physical_question": "τy 是对哪条平均曲线、用什么窗口和拟合区间得到的？0.2% 偏移在 1e10/s 的高率曲线中是否仍有物理意义？",
+      "evidence_needed": [
+        "需补：应力平均/后处理流程",
+        "需补：0.2% 偏移原始曲线",
+        "E2 文献：MD 屈服判据"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-016",
+      "title": "0.9 大应变叠加 0.9 压缩可能改变相结构/塑性载体，未验证“塑性流动”机制",
+      "dimension_guess": "塑性机制/相稳定性",
+      "locations": {
+        "experiment": [
+          "E-01",
+          "E-04"
+        ],
+        "infile": [
+          88,
+          102
+        ]
+      },
+      "claim_in_text": "E-01 要“大应变塑性流动”，E-04 “加载至剪应变 0.9（大应变）”；L88 `final_strain=0.9`，L102 `z erate -${srate} remap x`。",
+      "why_it_matters": "在 TiAlCr 金属间化合物中，0.9 的大应变可能引入孪生、有序-无序转变、非晶化或位错胞；同时 z 向 0.9 压缩会显著改变晶格与缺陷结构。若机制改变，“塑性流动”不能只用位错滑移解释，且实验的 µm 多晶机制可能不同。",
+      "physical_question": "0.9 应变后材料是否仍保持 hcp/金属间化合物结构？塑性载体是位错、孪生还是非晶化？与实验的大应变机制是否一致？",
+      "evidence_needed": [
+        "需补：RDF/配位数/结构因子演化",
+        "E2 文献：TiAlCr 大应变相稳定性",
+        "E4 案例：大应变剪切 MD"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-017",
+      "title": "fix deform 的 xz 倾斜需要 triclinic 盒子，change_box 只重设 boundary",
+      "dimension_guess": "几何/边界设置",
+      "locations": {
+        "experiment": [
+          "E-03"
+        ],
+        "infile": [
+          13,
+          76,
+          102
+        ]
+      },
+      "claim_in_text": "L13 `boundary p p p`，L76 `change_box all boundary p p p`，L102 `fix 3 all deform 1 z erate -${srate} remap x`；E-03 要求剪切几何。",
+      "why_it_matters": "`remap x` 会改变 xz tilt；正交盒子无法表示 tilt，LAMMPS 通常要求先 `change_box all triclinic`。若盒子仍为正交，fix deform 的剪切几何可能无法建立或行为与预期不同，E-03 的剪切面/标距更无从对应。",
+      "physical_question": "模拟盒子是否实际为 triclinic？xz tilt 如何演化，周期边界下剪切是否连续？",
+      "evidence_needed": [
+        "需补：LAMMPS fix deform/change_box 文档核对",
+        "需补：运行日志中的 box 类型/tilt",
+        "E4 案例：同类脚本"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-001",
+      "common_issue_name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "disposition": "explained",
+      "builtin_explanation": "全周期边界下没有自由表面，均匀变形不会产生颈缩、裂纹或断口；这是 MD 的固有边界限制，不是本案例特有错误。",
+      "required_declaration": "声明：本模型只用于均匀塑性流变/机制趋势，不比较断裂应变或延伸率；如需断裂，应改用含自由表面/缺口的模型。"
+    },
+    {
+      "point_id": "RP-018",
+      "title": "E-06 自述实验方案由 in 文件反推，实验与模拟不独立，存在循环验证",
+      "dimension_guess": "证据/溯源",
+      "locations": {
+        "experiment": [
+          "E-06"
+        ],
+        "infile": [
+          1,
+          36,
+          102
+        ]
+      },
+      "claim_in_text": "E-06 原文：“宏观实验描述由助手依据 in 文件（TiAlCr 剪切）反推补写，待用户确认。”",
+      "why_it_matters": "如果实验方案是从同一 in 文件反推的，E-01..E-05 的“实验”参数可能只是对模拟设定的复述，不能作为独立实验基准；E-04 的 1e-3 s⁻¹ 等宏观量也没有独立来源。任何“仿真-实验一致”都可能循环。",
+      "physical_question": "E-01..E-05 中哪些量来自真实实验/文献，哪些是从 in 文件反推的？E-04 的 1e-3 s⁻¹ 和 0.2% 偏移判据的独立来源是什么？",
+      "evidence_needed": [
+        "需补：真实实验报告/文献",
+        "需补：E-06 的用户确认记录",
+        "E4 案例：独立实验对照"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-008",
+      "common_issue_name": "实验方案由 AI 反推/缺原始记录",
+      "disposition": "open",
+      "builtin_explanation": "若宏观实验是从仿真输入反推的，对照不独立；这是溯源问题，不能作为行业共识隐藏。",
+      "required_declaration": "必须提供真实实验记录/文献，或由用户确认该实验描述为假设并承担相应结论限制。"
+    },
+    {
+      "point_id": "RP-019",
+      "title": "TiAl.eam.alloy 对 Ti 富集 TiAlCr 成分的适用性未验证，且与注释中的 CrTiAl.meam 备选矛盾",
+      "dimension_guess": "势函数适用性",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          35,
+          36,
+          37
+        ]
+      },
+      "claim_in_text": "L35-L36 使用 `pair_style eam/alloy` + `pair_coeff * * TiAl.eam.alloy Ti Al Ti`；L37 注释掉 `library.meam ... CrTiAl.meam Cr Ti Al`；E-02 称 TiAlCr 三组元。",
+      "why_it_matters": "TiAl.eam.alloy 从文件名和映射看是 Ti-Al 二元势，未包含 Cr；其拟合成分/相区未必覆盖 Ti 富集 hcp 固溶体。注释中的 CrTiAl.meam 表明作者知道 Cr 需要单独势，但当前未用；势函数选择与材料主张不一致。",
+      "physical_question": "为什么放弃含 Cr 的 MEAM 备选而用 Ti-Al 二元 EAM？该势在目标成分/相区的验证数据是什么？",
+      "evidence_needed": [
+        "需补：TiAl.eam.alloy 拟合范围/文献",
+        "E2 文献：TiAlCr MEAM/EAM 势",
+        "E4 案例：势函数对比"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-005",
+      "common_issue_name": "多组元势函数的交叉项/适用性",
+      "disposition": "record_required",
+      "builtin_explanation": "多组元 EAM/MEAM 的交叉项常来自混合规则或有限拟合；需记录势函数版本/拟合范围，并验证关键缺陷能/弹性常数。",
+      "required_declaration": "记录：势函数来源、拟合成分/相区、验证过的性质（晶格常数/弹性常数/层错能）；未验证项列入局限。"
+    },
+    {
+      "point_id": "RP-020",
+      "title": "`strain=srate*step*tstp` 的线性名义应变与 fix deform 的盒长/tilt 演化未核对",
+      "dimension_guess": "应变定义/运动学",
+      "locations": {
+        "experiment": [
+          "E-04",
+          "E-05"
+        ],
+        "infile": [
+          89,
+          94,
+          102
+        ]
+      },
+      "claim_in_text": "L89 `dyna_step=${final_strain}/(${srate}*${tstp})`，L94 `strain=${srate}*step*${tstp}`，L102 `fix deform z erate -${srate} remap x`；E-04/E-05 以剪应变 0.9 和 τ-γ 曲线为基准。",
+      "why_it_matters": "LAMMPS `fix deform erate` 的盒长演化与 `remap x` 的 tilt 定义未必等于 `srate*step*tstp` 的线性名义应变；NPT 又改变 x/y 长度，`strain` 变量的横坐标可能偏离实际工程剪应变 γ=Δx/lz。若二者不等，G 与 0.2% 偏移全部偏移。",
+      "physical_question": "实际剪切应变应如何从 box tilt/lz 或原子位移计算？`strain` 变量与真实 γ 的偏差随时间/应变是多少？",
+      "evidence_needed": [
+        "需补：LAMMPS fix deform 变形梯度公式",
+        "需补：从 dump 计算的实际 γ(t)",
+        "E4 案例：应变定义对照"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-021",
+      "title": "1 fs 时间步是唯一取值，未做步长收敛检验，高应变率塑性结果对步长的敏感性未知",
+      "dimension_guess": "数值与有限尺度（时间步/积分收敛）",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          17,
+          41,
+          107
+        ]
+      },
+      "claim_in_text": "L17 `variable tstp equal 0.001`、L41 `timestep ${tstp}` 固定 1 fs；L107 以该步长连续运行 90000 步至剪应变 0.9；文件中没有 0.5 fs/2 fs 对照，也没有能量守恒或力/位移误差检查。",
+      "why_it_matters": "在 1e10 s⁻¹ 的剪切率下每步应变增量约 1e-5，位错成核、孪生与热激活事件对积分步长敏感；若 1 fs 改变了事件序列或引入温升，G、τy 与流动应力都可能偏离步长收敛值，而单一步长无法判断偏差方向与大小。",
+      "physical_question": "把步长减半到 0.5 fs（或增大到 2 fs）时，应力-应变曲线、屈服点与缺陷形貌是否在可接受误差内重合？1 fs 下的能量漂移与温升是多少？",
+      "evidence_needed": [
+        "需补：0.5/1/2 fs 三组同构型对照曲线",
+        "需补：NVE 或 NPT 下的能量/温度漂移记录",
+        "E2 文献：EAM 金属剪切模拟的常用步长与收敛判据"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-002",
+      "common_issue_name": "MD 应变率比实验高多个数量级",
+      "disposition": "explained",
+      "builtin_explanation": "受机时限制，MD 应变率通常比实验高 6–12 个数量级；需用 Orowan 关系/应变率敏感性论证机制不变，并将结论限定为趋势与机制对比。",
+      "required_declaration": "声明：应变率差 N 个数量级；结论仅用于趋势/机制，不外推绝对强度；需附 E2 文献或 E4 同门案例。"
+    },
+    {
+      "point_id": "RP-022",
+      "title": "最小化与 20 ps 预平衡没有收敛/平台判据，剪切起始态是否达到稳态未验证",
+      "dimension_guess": "数值与有限尺度（弛豫/平衡收敛）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          21,
+          49,
+          67,
+          107
+        ]
+      },
+      "claim_in_text": "L21 `equi_step equal 20000`、L67 只跑 20 ps NVT；L49 `minimize 1.0e-6 1.0e-6 10000 10000` 未在脚本中检查是否在步数上限内收敛；L107 随即进入 90000 步剪切，未设 PE/T/应力平台或漂移阈值。",
+      "why_it_matters": "预平衡不足会把未弛豫的结构与应力状态带入剪切段，表现为 G 与 τy 的偏移；单条应力曲线无法区分“平衡不足”与“真实物理”，也无法知道 20 ps 是否只是恰好截在某个亚稳态。",
+      "physical_question": "最小化在第几步、以能量还是力判据终止？20 ps 后 PE、T 与压力张量是否已平台、漂移率多少？延长到 50–100 ps 是否改变 G/τy？",
+      "evidence_needed": [
+        "需补：minimize 日志（终止原因、fmax、能量变化）",
+        "需补：PE、T、压力随时间的平台与漂移统计",
+        "需补：不同预平衡时长的同条件对照"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-023",
+      "title": "单一 50³ 晶胞周期盒子的尺寸效应未做收敛检验，屈服与流动应力可能由盒子尺寸控制",
+      "dimension_guess": "数值与有限尺度（尺寸效应/PBC）",
+      "locations": {
+        "experiment": [
+          "E-02"
+        ],
+        "infile": [
+          13,
+          23,
+          24
+        ]
+      },
+      "claim_in_text": "L23-L24 `lattice hcp 2.95` + `region box block 0 50 0 50 0 50` 给出约 147.5 Å（≈14.8 nm）、约 2.5×10⁵ 原子的单晶盒子；L13 三向周期；没有 25³/75³ 晶胞或不同截面尺寸的对照。",
+      "why_it_matters": "即使不要求对应 µm 多晶，MD 盒子自身的尺寸收敛仍需检验：全周期单晶中位错成核、镜像相互作用与局部化带宽都随盒子尺寸变化。G 对尺寸相对不敏感，但 τy、加工硬化率与流动应力常显著依赖盒子尺寸，单一尺寸的结果不能作为收敛值使用。",
+      "physical_question": "把盒子从 25³ 增到 75³ 晶胞（或固定长度改变截面）时，τy、流动应力与缺陷密度是否收敛？当前盒子是否已明显大于位错特征尺度？",
+      "evidence_needed": [
+        "需补：两到三个盒子尺寸的同条件剪切对照",
+        "需补：位错密度/局部化形貌随尺寸的变化",
+        "E2 文献：MD 剪切屈服对 PBC 盒子尺寸的敏感性"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": "CI-004",
+      "common_issue_name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "disposition": "explained",
+      "builtin_explanation": "MD 模型为 nm 级、实验为 µm–mm 级，尺寸/晶粒/缺陷密度差异是固有跨尺度限制；只能比较机制与趋势，不能直接比较绝对强度。",
+      "required_declaration": "声明：模型尺寸/晶粒数与实验的差异；结论限机制/趋势；必要时补充尺寸效应文献或更大模型。"
+    },
+    {
+      "point_id": "RP-024",
+      "title": "随机固溶构型与初速度各只有一个随机种子，缺少重复样本与 run-to-run 分散度",
+      "dimension_guess": "不确定度与对照协议（重复性）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          27,
+          28,
+          61
+        ]
+      },
+      "claim_in_text": "L27-L28 两次 `set type/ratio` 都使用种子 123456，只生成一个 TiAlCr 随机固溶构型；L61 `velocity all create ${Temp} 12345` 也只有一个初速度实现；未见多构型/多种子重复。",
+      "why_it_matters": "随机替代固溶体的局部成分涨落、短程有序与热噪声都会影响位错成核应力；单一样本给出的 G/τy 无法与构型间分散度区分，也无法判断一条曲线是否具有统计代表性。",
+      "physical_question": "不同随机种子（至少 3–5 个独立构型）下 G、τy 与流动应力的均值与标准差是多少？当前单条结果落在什么分位？",
+      "evidence_needed": [
+        "需补：≥3 个独立构型/种子的重复运行",
+        "需补：均值、标准差与运行平均的收敛性",
+        "需补：同种子重启的复现性检查"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-006",
+      "common_issue_name": "单次 run/单 seed 无统计不确定度",
+      "disposition": "record_required",
+      "builtin_explanation": "MD 屈服/位错形核具有随机性；单次 run 无法给出误差棒。需记录 seed/样本数，或明确声明结果为单样本。",
+      "required_declaration": "记录：seed 数/重复次数；若单样本，声明不确定度未知，结论仅作演示/趋势。"
+    },
+    {
+      "point_id": "RP-025",
+      "title": "G 与流动应力由单条瞬时应力曲线直接读取，未做时间平均/分块统计与误差传递",
+      "dimension_guess": "不确定度与对照协议（误差传递）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          91,
+          92,
+          93,
+          105,
+          106
+        ]
+      },
+      "claim_in_text": "L91-L93 用瞬时 `pxx/pyy/pzz` 换算应力，L105 每 100 步打印一次 `${strain} ${szz}`，L106 thermo 同样输出瞬时量；没有时间平均、分块平均、自相关时间或拟合窗口说明，G（弹性斜率）与流动应力均来自单点序列。",
+      "why_it_matters": "300 K 下瞬时维里应力涨落大且相邻采样点强相关；不给自相关时间与分块误差，G 的斜率与流动应力的置信区间未知，无法判断与实验/文献的差异是否超出数值噪声，也无法做跨案例比较。",
+      "physical_question": "应力自相关时间与独立样本数是多少？G 和流动应力对平均窗口、拟合区间与分块大小是否稳定，95% 置信区间多宽？",
+      "evidence_needed": [
+        "需补：应力时间序列与自相关分析",
+        "需补：分块平均/bootstrap 误差棒",
+        "需补：G 拟合区间与流动应力平均窗口的敏感性分析"
+      ],
+      "severity_hint": "high",
+      "common_issue_id": null,
+      "common_issue_name": null,
+      "disposition": "open",
+      "builtin_explanation": "",
+      "required_declaration": ""
+    },
+    {
+      "point_id": "RP-026",
+      "title": "缺乏零应变基线与弹性加-卸载对照，G 的测量分辨率与可逆性未标定",
+      "dimension_guess": "不确定度与对照协议（对照判据）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          49,
+          61,
+          67,
+          107
+        ]
+      },
+      "claim_in_text": "L49 最小化、L61 赋 300 K 初速度、L67 平衡 20 ps 后，L107 直接进入单调剪切至 0.9；没有零应变保持段测应力噪声底与漂移，也没有在小应变区做加-卸载回线。",
+      "why_it_matters": "没有零应变基线，就不知道应力噪声底对应多大的 G 分辨率；没有加-卸载回线，就无法确认拟合 G 的区段处于弹性可逆范围，还是已含塑性或残余应力贡献。缺少这两个对照，G 的偏差无法分解为数值噪声、初态或本构响应。",
+      "physical_question": "零应变保持时应力均值、涨落与漂移多大？小应变加-卸载的斜率是否一致、卸载后残余应变多少？G 的拟合区间是否落在可逆段内？",
+      "evidence_needed": [
+        "需补：零应变 NVT/NPT 基线（应力均值/标准差/漂移）",
+        "需补：±0.005 应变内的加-卸载回线",
+        "需补：G 拟合区间与回线线性段的对照"
+      ],
+      "severity_hint": "medium",
+      "common_issue_id": "CI-012",
+      "common_issue_name": "观测量的实验-仿真映射",
+      "disposition": "record_required",
+      "builtin_explanation": "实验测量（引伸计/轮廓仪/力传感器）与仿真输出（盒长应变/原子应力/团簇）定义不同，需要明确映射和统计窗口。",
+      "required_declaration": "记录：实验测量定义、仿真输出定义、空间/时间平均窗口与不确定度。"
+    }
+  ],
+  "disposition_counts": {
+    "explained": 12,
+    "record_required": 6,
+    "open": 8
+  }
+}

@@ -1,0 +1,206 @@
+[
+  {
+    "pattern": "*.dump",
+    "reason": "轨迹/转储文件不入库：体量大、可由输入复现，留在计算工作区"
+  },
+  {
+    "pattern": "dump.*",
+    "reason": "轨迹/转储文件不入库"
+  },
+  {
+    "pattern": "*.lammpstrj",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.dcd",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.xtc",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.trr",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.trj",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.traj",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "xdatcar",
+    "reason": "轨迹文件不入库"
+  },
+  {
+    "pattern": "*.nc",
+    "reason": "轨迹/大数据文件不入库"
+  },
+  {
+    "pattern": "*.netcdf",
+    "reason": "大数据文件不入库"
+  },
+  {
+    "pattern": "*.h5",
+    "reason": "大数据文件不入库"
+  },
+  {
+    "pattern": "*.hdf5",
+    "reason": "大数据文件不入库"
+  },
+  {
+    "pattern": "*.restart",
+    "reason": "重启文件不入库：二进制且与软件版本绑定"
+  },
+  {
+    "pattern": "restart.*",
+    "reason": "重启文件不入库"
+  },
+  {
+    "pattern": "*.rst7",
+    "reason": "重启文件不入库"
+  },
+  {
+    "pattern": "*.cpt",
+    "reason": "检查点文件不入库"
+  },
+  {
+    "pattern": "*.chk",
+    "reason": "检查点文件不入库"
+  },
+  {
+    "pattern": "wavecar",
+    "reason": "大体量中间文件不入库"
+  },
+  {
+    "pattern": "chgcar",
+    "reason": "大体量中间文件不入库"
+  },
+  {
+    "pattern": "*.tpr",
+    "reason": "二进制运行输入不入库，请入库其文本源"
+  },
+  {
+    "pattern": "*.edr",
+    "reason": "二进制能量文件不入库"
+  },
+  {
+    "pattern": "*.bin",
+    "reason": "二进制数据不入库"
+  },
+  {
+    "pattern": "*.npy",
+    "reason": "数组数据不入库"
+  },
+  {
+    "pattern": "*.npz",
+    "reason": "数组数据不入库"
+  },
+  {
+    "pattern": "*.pkl",
+    "reason": "序列化对象不入库"
+  },
+  {
+    "pattern": "*.pickle",
+    "reason": "序列化对象不入库"
+  },
+  {
+    "pattern": "*.zip",
+    "reason": "压缩包不入库：请解包后按文件提交"
+  },
+  {
+    "pattern": "*.tar",
+    "reason": "压缩包不入库"
+  },
+  {
+    "pattern": "*.gz",
+    "reason": "压缩文件不入库"
+  },
+  {
+    "pattern": "*.tgz",
+    "reason": "压缩包不入库"
+  },
+  {
+    "pattern": "*.bz2",
+    "reason": "压缩文件不入库"
+  },
+  {
+    "pattern": "*.xz",
+    "reason": "压缩文件不入库"
+  },
+  {
+    "pattern": "*.7z",
+    "reason": "压缩包不入库"
+  },
+  {
+    "pattern": "*.rar",
+    "reason": "压缩包不入库"
+  },
+  {
+    "pattern": "*.exe",
+    "reason": "可执行文件不入库"
+  },
+  {
+    "pattern": "*.dll",
+    "reason": "可执行文件不入库"
+  },
+  {
+    "pattern": "*.so",
+    "reason": "可执行文件不入库"
+  },
+  {
+    "pattern": "*.dylib",
+    "reason": "可执行文件不入库"
+  },
+  {
+    "pattern": "a.out",
+    "reason": "可执行文件不入库"
+  },
+  {
+    "pattern": "*.mp4",
+    "reason": "视频不入库"
+  },
+  {
+    "pattern": "*.avi",
+    "reason": "视频不入库"
+  },
+  {
+    "pattern": "*.mov",
+    "reason": "视频不入库"
+  },
+  {
+    "pattern": "*.gif",
+    "reason": "动图不入库"
+  },
+  {
+    "pattern": ".env",
+    "reason": "凭证文件不入库"
+  },
+  {
+    "pattern": "*.pem",
+    "reason": "密钥文件不入库"
+  },
+  {
+    "pattern": "*.key",
+    "reason": "密钥文件不入库"
+  },
+  {
+    "pattern": "id_rsa*",
+    "reason": "密钥文件不入库"
+  },
+  {
+    "pattern": "*.p12",
+    "reason": "密钥文件不入库"
+  },
+  {
+    "pattern": "*.sqlite",
+    "reason": "数据库文件不入库"
+  },
+  {
+    "pattern": "*.db",
+    "reason": "数据库文件不入库"
+  }
+]

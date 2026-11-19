@@ -1,0 +1,25 @@
+{
+  "pack": "completeness_generic",
+  "schema_version": 1,
+  "kind": "completeness",
+  "family": "*",
+  "_doc": "通用完整性清单(种子):required_fields 由代码做存在性扫描(缺=hard 事实);guidance 供 AI 审阅生成补全建议(缺什么+为什么+典型补法)。注入新清单即扩展'完整方案'的定义。",
+  "required_fields": [
+    "key_params.timestep_fs",
+    "key_params.units",
+    "key_params.total_steps",
+    "system.target_elements",
+    "system.declared_net_charge",
+    "objective.simulation_goal"
+  ],
+  "guidance": [
+    {"aspect": "key_params.timestep_fs", "why": "步长决定积分精度与总时长口径", "proposal": "ReaxFF 一般 0.1-0.25fs;经典力场 1-2fs;剧烈工况取下限"},
+    {"aspect": "key_params.units", "why": "单位制错配则全盘数值口径错", "proposal": "ReaxFF/有机体系用 real;金属体系可与审阅确认 metal"},
+    {"aspect": "key_params.total_steps", "why": "总步数与墙钟/目标性质时间尺度挂钩", "proposal": "先按目标物理时间倒推,再按经验速率核墙钟"},
+    {"aspect": "system.target_elements", "why": "元素表决定力场覆盖检查", "proposal": "列出全部元素符号(如 C/H/O/N)"},
+    {"aspect": "system.declared_net_charge", "why": "净电荷口径供 data 电荷核对", "proposal": "中性体系填 0.0;带电体系写明来源"},
+    {"aspect": "objective.simulation_goal", "why": "目标性质决定系综与分析口径", "proposal": "一句话目标+目标性质列表"},
+    {"aspect": "ensemble_sequence", "why": "系综序列是平衡/生产链条的真相源", "proposal": "典型链条 minimize→NVT/Langevin 预平衡→NPT 生产;续跑场景声明 restart"},
+    {"aspect": "system.size.density_target", "why": "密度目标决定建模与核对口径", "proposal": "按文献骨架/宏观密度填,注明口径"}
+  ]
+}

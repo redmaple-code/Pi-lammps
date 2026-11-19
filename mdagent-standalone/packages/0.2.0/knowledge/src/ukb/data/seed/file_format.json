@@ -1,0 +1,177 @@
+[
+  {
+    "format_id": "markdown",
+    "label": "Markdown 文档",
+    "patterns": [
+      "*.md",
+      "*.markdown"
+    ],
+    "kind": "text"
+  },
+  {
+    "format_id": "plain_text",
+    "label": "纯文本",
+    "patterns": [
+      "*.txt",
+      "*.rst"
+    ],
+    "kind": "text"
+  },
+  {
+    "format_id": "tabular_text",
+    "label": "表格文本",
+    "patterns": [
+      "*.csv",
+      "*.tsv"
+    ],
+    "kind": "text",
+    "max_bytes": 5242880
+  },
+  {
+    "format_id": "structured_text",
+    "label": "结构化文本",
+    "patterns": [
+      "*.json",
+      "*.yaml",
+      "*.yml",
+      "*.toml",
+      "*.xml",
+      "*.ini",
+      "*.cfg",
+      "*.conf"
+    ],
+    "kind": "text"
+  },
+  {
+    "format_id": "script",
+    "label": "脚本与源码",
+    "patterns": [
+      "*.py",
+      "*.sh",
+      "*.bash",
+      "*.ps1",
+      "*.bat",
+      "*.r",
+      "*.m",
+      "*.jl",
+      "*.js",
+      "*.ts",
+      "*.c",
+      "*.h",
+      "*.cpp",
+      "*.hpp",
+      "*.f",
+      "*.f90",
+      "*.tcl",
+      "*.mk",
+      "makefile",
+      "dockerfile",
+      "*.slurm",
+      "*.pbs",
+      "*.job"
+    ],
+    "kind": "text"
+  },
+  {
+    "format_id": "input_text",
+    "label": "计算输入与模型文件（文本）",
+    "patterns": [
+      "in.*",
+      "*.in",
+      "*.inp",
+      "*.input",
+      "*.ctrl",
+      "*.mdp",
+      "*.top",
+      "*.itp",
+      "*.param",
+      "*.par",
+      "*.def",
+      "*.data",
+      "*.lmp",
+      "*.pdb",
+      "*.gro",
+      "*.xyz",
+      "*.cif",
+      "*.poscar",
+      "poscar",
+      "incar",
+      "kpoints",
+      "*.vasp",
+      "*.mol2",
+      "*.sdf"
+    ],
+    "kind": "text",
+    "max_bytes": 5242880
+  },
+  {
+    "format_id": "log_text",
+    "label": "运行日志（文本，建议只截关键部分）",
+    "patterns": [
+      "*.log",
+      "log.*",
+      "*.out",
+      "*.err",
+      "*.lammps"
+    ],
+    "kind": "text",
+    "max_bytes": 2097152
+  },
+  {
+    "format_id": "parameter_text",
+    "label": "参数集/势函数（文本）",
+    "patterns": [
+      "*.eam",
+      "*.alloy",
+      "*.fs",
+      "*.meam",
+      "*.tersoff",
+      "*.sw",
+      "*.reax",
+      "*.ff",
+      "*.potential"
+    ],
+    "kind": "text",
+    "max_bytes": 10485760
+  },
+  {
+    "format_id": "pdf",
+    "label": "PDF 文档",
+    "patterns": [
+      "*.pdf"
+    ],
+    "kind": "pdf",
+    "magic_hex": "25504446",
+    "max_bytes": 31457280
+  },
+  {
+    "format_id": "png",
+    "label": "PNG 图片",
+    "patterns": [
+      "*.png"
+    ],
+    "kind": "binary",
+    "magic_hex": "89504e47",
+    "max_bytes": 5242880
+  },
+  {
+    "format_id": "jpeg",
+    "label": "JPEG 图片",
+    "patterns": [
+      "*.jpg",
+      "*.jpeg"
+    ],
+    "kind": "binary",
+    "magic_hex": "ffd8ff",
+    "max_bytes": 5242880
+  },
+  {
+    "format_id": "svg",
+    "label": "SVG 矢量图",
+    "patterns": [
+      "*.svg"
+    ],
+    "kind": "text",
+    "max_bytes": 5242880
+  }
+]

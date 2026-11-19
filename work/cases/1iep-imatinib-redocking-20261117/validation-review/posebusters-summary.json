@@ -1,0 +1,292 @@
+{
+  "tool": "PoseBusters",
+  "version": "0.6.5",
+  "checkedAt": "2026-11-17T15:28:31.864662+00:00",
+  "configuration": "Unmodified redock defaults; saved in posebusters-config.json",
+  "durationSeconds": 37.203000000095926,
+  "checkColumns": [
+    "mol_pred_loaded",
+    "mol_true_loaded",
+    "mol_cond_loaded",
+    "sanitization",
+    "inchi_convertible",
+    "all_atoms_connected",
+    "no_radicals",
+    "molecular_formula",
+    "molecular_bonds",
+    "double_bond_stereochemistry",
+    "tetrahedral_chirality",
+    "bond_lengths",
+    "bond_angles",
+    "internal_steric_clash",
+    "aromatic_ring_flatness",
+    "non-aromatic_ring_non-flatness",
+    "double_bond_flatness",
+    "internal_energy",
+    "protein-ligand_maximum_distance",
+    "minimum_distance_to_protein",
+    "minimum_distance_to_organic_cofactors",
+    "minimum_distance_to_inorganic_cofactors",
+    "minimum_distance_to_waters",
+    "volume_overlap_with_protein",
+    "volume_overlap_with_organic_cofactors",
+    "volume_overlap_with_inorganic_cofactors",
+    "volume_overlap_with_waters",
+    "rmsd_\u2264_2\u00e5"
+  ],
+  "poses": [
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        0
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        1
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        2
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        3
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        4
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        5
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-104729\\poses.sdf",
+        "",
+        6
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        0
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        1
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        2
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        3
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        4
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-130363\\poses.sdf",
+        "",
+        5
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        0
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        1
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        2
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        3
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        4
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        5
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    },
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\runs\\seed-155921\\poses.sdf",
+        "",
+        6
+      ],
+      "checkCount": 28,
+      "failedChecks": [
+        "rmsd_\u2264_2\u00e5"
+      ],
+      "allChecksPassed": false
+    }
+  ],
+  "reference": [
+    {
+      "index": [
+        "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\prepared\\reference-heavy.sdf",
+        "STI",
+        0
+      ],
+      "checkCount": 28,
+      "failedChecks": [],
+      "allChecksPassed": true
+    }
+  ],
+  "licenseExpression": null,
+  "licenseField": null,
+  "licenseFiles": [
+    "licenses/licenses/LICENSE"
+  ],
+  "limitations": [
+    "Checks use the deployed single-receptor model.",
+    "Cofactor/water absence can yield vacuous passes for those categories.",
+    "These tests evaluate pose plausibility under their configured tolerances."
+  ],
+  "installedLicenseHeader": "MIT License"
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": "3.0",
+  "case_id": "case2",
+  "status": "DESIGNED",
+  "source": {
+    "kind": "external_lammps_case",
+    "path": "WSL:/home/red/lmp (copied)"
+  },
+  "objective": {
+    "simulation_goal": "TiAlCr 合金 300 K 剪切：测剪切模量、剪切屈服与大应变塑性流动",
+    "target_property": [
+      "stress_strain_curve"
+    ]
+  },
+  "system": {
+    "molecule": "TiAlCr 金属间化合物/合金（hcp 基）",
+    "target_elements": [
+      "Ti",
+      "Al",
+      "Cr"
+    ],
+    "size": {
+      "atoms_target": null
+    }
+  },
+  "constraints": {
+    "temperature_range": [
+      300,
+      300
+    ]
+  },
+  "ensemble_sequence": [
+    {
+      "stage": "minimize"
+    },
+    {
+      "stage": "pre_equil",
+      "ensemble": "nvt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    },
+    {
+      "stage": "production",
+      "ensemble": "npt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    }
+  ],
+  "key_params": {
+    "timestep_fs": 1.0,
+    "total_steps": 110000,
+    "units": "metal",
+    "pair_style": "eam/alloy",
+    "forcefield": {
+      "preferred": "TiAl.eam.alloy"
+    }
+  },
+  "experiment_design": {
+    "experiment_type": "shear"
+  },
+  "experiment_plan": {
+    "authored_by": "assistant (AI-drafted macro context; needs user confirmation)",
+    "sections": [
+      {
+        "id": "E-01",
+        "title": "实验目的与假设",
+        "text": "测定 TiAlCr 合金的剪切响应（剪切模量、剪切屈服强度、大应变塑性流动），评估其抗剪切变形能力。"
+      },
+      {
+        "id": "E-02",
+        "title": "对象与材料",
+        "text": "TiAlCr 合金，hcp 基体，含 Ti/Al/Cr 三组元；实验为块体/片状试样，晶粒 µm 级。"
+      },
+      {
+        "id": "E-03",
+        "title": "装置与几何",
+        "text": "剪切夹具（双剪或扭转等效），试样标距段厚度与宽度按夹具设计。"
+      },
+      {
+        "id": "E-04",
+        "title": "加载与条件",
+        "text": "300 K，剪切应变率 1×10⁻³ s⁻¹，加载至剪应变 0.9（大应变）。"
+      },
+      {
+        "id": "E-05",
+        "title": "测量与判据",
+        "text": "剪应力-剪应变曲线、剪切模量 G、剪切屈服强度 τy；以 0.2% 偏移定屈服。"
+      },
+      {
+        "id": "E-06",
+        "title": "来源与备注",
+        "text": "宏观实验描述由助手依据 in 文件（TiAlCr 剪切）反推补写，待用户确认。"
+      }
+    ]
+  },
+  "cross_scale": {
+    "loading": {
+      "macro": "1×10⁻³ s⁻¹（剪切）",
+      "micro": "fix deform z erate 0.01 ps⁻¹ = 1×10¹⁰ s⁻¹",
+      "gap": "13 个数量级（1e10 / 1e-3 = 1e13）",
+      "verdict": "q",
+      "rationale": "MD 机时限制要求剪切应变率提高到 1e10 s⁻¹（差 13 个数量级）。论证依赖：① 剪切塑性由位错滑移/孪生主导，高应变率主要通过提高位错速度改变流动应力，不必然改变机制；② 但 TiAlCr 金属间化合物的孪生/局部化可能对速率敏感，需文献（E2）与同门案例（E4）确认机制不变；③ 结论只用于剪切应力-应变趋势与缺陷形貌，不外推绝对强度。当前证据缺失 → 存疑。",
+      "status": "未论证（需 E2/E4）→ 存疑"
+    }
+  }
+}

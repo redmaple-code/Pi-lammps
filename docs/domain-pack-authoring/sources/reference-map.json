@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0.0",
+  "date": "2026-11-17",
+  "usage": "方法参考；制作协议及存储接口按当前用户要求定义。",
+  "skillReferences": [
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\SKILL.md",
+      "sha256": "3080fa89d8aaa5829ffb8696a2bdf2f145bd8ac5598c3043469f6f7f690cd075",
+      "use": "领域包与通用研究流程边界；本轮参考其设计方法。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    },
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\references\\domain-knowledge-model.md",
+      "sha256": "0bfabb946299dbe3062a7230d78d247e1815404b0a450dfe9281be80d0daf8fa",
+      "use": "知识单元、任务角色、条件及证据/维护状态分离。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    },
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\references\\research-route-reconstruction.md",
+      "sha256": "971ae90e80d4adc665308709e5e65c52fe63e04dfe1d1c461f377e46f73aede3",
+      "use": "问题到结果/限制/迁移的案例复原。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    },
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\references\\core-concepts.md",
+      "sha256": "09a628b68b6acfc70ddfd0436aba77e8c1bfbf9f59f366c727d68f66ac264873",
+      "use": "目标相关概念、条件、依赖与反例。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    },
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\references\\research-contract.md",
+      "sha256": "9ea03c5de859afcd721aee74f9f743921fcaf083b5140b6bf2a6805f7b619a83",
+      "use": "问题、范围、义务和交付类型。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    },
+    {
+      "path": "C:\\Users\\redmaple\\.codex\\skills\\scholar-apprentice\\references\\experience-feedback.md",
+      "sha256": "d6abea49e812e0b9406ab84976d173a2d7275618be21139cdcc8ae54df19005c",
+      "use": "取用知识、实际动作、效果及后续修订。",
+      "readScope": "本轮读取相关正文或开头相关部分；见use字段。"
+    }
+  ],
+  "implementationReadOnlyReferences": [
+    "simulation/packages/knowledge/index.js",
+    "simulation/packages/knowledge/backends.js",
+    "simulation/packages/pack-resolver/index.js"
+  ],
+  "designReferenceFiles": [
+    "docs/development-spec/03-domain-pack.md",
+    "docs/development-spec/06-knowledge.md"
+  ],
+  "databaseTypeSelection": "deferred"
+}

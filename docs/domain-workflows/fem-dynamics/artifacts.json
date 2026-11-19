@@ -1,0 +1,643 @@
+{
+  "id": "artifacts",
+  "items": [
+    {
+      "workflowId": "modal",
+      "slotName": "deliverables",
+      "artifactType": "fem-dynamics.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "discrete-model",
+      "artifactType": "fem-dynamics.discrete-model",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "dynamic-input",
+      "artifactType": "fem-dynamics.dynamic-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "geometry-bundle",
+      "artifactType": "fem-dynamics.geometry-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "metrics",
+      "artifactType": "fem-dynamics.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "plan",
+      "artifactType": "fem-dynamics.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "qualification",
+      "artifactType": "fem-dynamics.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "solution",
+      "artifactType": "fem-dynamics.solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "task",
+      "artifactType": "fem-dynamics.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "modal",
+      "slotName": "verification",
+      "artifactType": "fem-dynamics.verification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "deliverables",
+      "artifactType": "fem-dynamics.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "discrete-model",
+      "artifactType": "fem-dynamics.discrete-model",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "dynamic-input",
+      "artifactType": "fem-dynamics.dynamic-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "geometry-bundle",
+      "artifactType": "fem-dynamics.geometry-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "metrics",
+      "artifactType": "fem-dynamics.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "plan",
+      "artifactType": "fem-dynamics.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "qualification",
+      "artifactType": "fem-dynamics.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "solution",
+      "artifactType": "fem-dynamics.solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "task",
+      "artifactType": "fem-dynamics.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "implicit-transient",
+      "slotName": "verification",
+      "artifactType": "fem-dynamics.verification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "deliverables",
+      "artifactType": "fem-dynamics.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "discrete-model",
+      "artifactType": "fem-dynamics.discrete-model",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "dynamic-input",
+      "artifactType": "fem-dynamics.dynamic-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "geometry-bundle",
+      "artifactType": "fem-dynamics.geometry-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "metrics",
+      "artifactType": "fem-dynamics.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "modal-basis",
+      "artifactType": "fem-dynamics.modal-basis",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "plan",
+      "artifactType": "fem-dynamics.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "qualification",
+      "artifactType": "fem-dynamics.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "solution",
+      "artifactType": "fem-dynamics.solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "task",
+      "artifactType": "fem-dynamics.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "harmonic-response",
+      "slotName": "verification",
+      "artifactType": "fem-dynamics.verification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "deliverables",
+      "artifactType": "fem-dynamics.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "discrete-model",
+      "artifactType": "fem-dynamics.discrete-model",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "dynamic-input",
+      "artifactType": "fem-dynamics.dynamic-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "geometry-bundle",
+      "artifactType": "fem-dynamics.geometry-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "metrics",
+      "artifactType": "fem-dynamics.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "plan",
+      "artifactType": "fem-dynamics.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "qualification",
+      "artifactType": "fem-dynamics.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "solution",
+      "artifactType": "fem-dynamics.solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "task",
+      "artifactType": "fem-dynamics.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "explicit-impact",
+      "slotName": "verification",
+      "artifactType": "fem-dynamics.verification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "节点/单元/集合/积分点和坐标映射",
+        "units": "SI、Hz/rad/s、复数相位和峰值/RMS",
+        "sampleBasis": "真实时间/频率/模态/研究级次"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "dynamic-input",
+      "artifactType": "fem-dynamics.dynamic-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "plan",
+      "artifactType": "fem-dynamics.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "qualification",
+      "artifactType": "fem-dynamics.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "solution",
+      "artifactType": "fem-dynamics.solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "study-input",
+      "artifactType": "fem-dynamics.study-input",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "study-solution",
+      "artifactType": "fem-dynamics.study-solution",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "task",
+      "artifactType": "fem-dynamics.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    },
+    {
+      "workflowId": "verification-sample",
+      "slotName": "verification",
+      "artifactType": "fem-dynamics.verification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "保持节点/单元/评价位置映射，样本保留iterationIndex和runId。",
+        "units": "SI与显式的时频/幅相约定。",
+        "sampleBasis": "单轮样本或累计verification bundle，聚合协议区分二者。"
+      },
+      "recordRequirement": "父流程/子流程使用同一类型化插槽语义。"
+    }
+  ],
+  "nativeFormatPolicy": "保存原生数据，内容envelope关联实际工件和语义；解析器另行实现。"
+}

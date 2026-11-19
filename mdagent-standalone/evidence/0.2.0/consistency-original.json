@@ -1,0 +1,9 @@
+{
+  "module": "consistency",
+  "isolated_mode": "-I -S",
+  "returncode": 0,
+  "tests": 16,
+  "skipped": 0,
+  "scope": "test_consistency.py",
+  "ok": true
+}

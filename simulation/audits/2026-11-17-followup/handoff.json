@@ -1,0 +1,79 @@
+{
+  "revision": "FOLLOWUP-1",
+  "provider": "aispot-ds",
+  "model": "deepseek-v4.1-flash",
+  "requestedAlias": "dsv4.1f",
+  "credentialMethod": "twin inject aispot-ds --env AISPOT_DS_API_KEY",
+  "apiConnection": "verified",
+  "liveRoleToolRoundTrip": "verified",
+  "liveLowReasoningMainAnswers": "4/4 correct",
+  "liveRoleOperationId": "provider-role-check-ff062a13-ceb8-4080-8422-4c98934bb3f3",
+  "semanticLimitations": [
+    "AI-046/047/048 observed in the separate thinking-off exercise",
+    "AI-050 explanatory error remains in low output"
+  ],
+  "localRegression": {
+    "fullSuitePassed": 37,
+    "targetedPassed": 5
+  },
+  "clientBudget": {
+    "contextTokens": 32768,
+    "maxOutputTokens": 16384,
+    "thinkingLevel": "low"
+  },
+  "pricingStatus": "unknown",
+  "files": [
+    {
+      "path": "simulation/apps/cli/main.js",
+      "byteSha256": "851000fb196e27a6a074b5cbfb67d5d06b98eb5ac493aee220df68d61571a27b"
+    },
+    {
+      "path": "simulation/packages/runtime-redmaple/configuration.js",
+      "byteSha256": "7709f01ed2066d90f5ee919b660e5ea1e4e39108abf6aaf11ce4dfe97e84c797"
+    },
+    {
+      "path": "simulation/packages/runtime-redmaple/index.js",
+      "byteSha256": "d4924b6f207251a1e7d20b3bd70ae4e46343ce4e62c717280e2c422c71bd3415"
+    },
+    {
+      "path": "simulation/runtime.example.json",
+      "byteSha256": "00a20df2a95d7bd8675bbac4e6c697b6ac94f36e85eaef09d31eaed77cf30b68"
+    },
+    {
+      "path": "simulation/scripts/probe-provider.js",
+      "byteSha256": "732c23e88c75e846a4228006f67a75ad08ba8586ef59ef5a967fa28493b7497d"
+    },
+    {
+      "path": "simulation/scripts/check-provider-role.js",
+      "byteSha256": "c0a34eba8a7ec08f9957926def7c9b98424dd57260d7e4aa9cb8295d67ca5b53"
+    },
+    {
+      "path": "simulation/scripts/assess-command-answers.js",
+      "byteSha256": "6d960c3b515d784326110b31171f3e23cc96f67612578634b40c00f9155b3e80"
+    },
+    {
+      "path": "simulation/tests/provider-configuration.test.js",
+      "byteSha256": "6c8493e391a951477db0299dfa156dbd2609e37b5e57280fe76773b75676f374"
+    },
+    {
+      "path": "simulation/tests/provider-answer-assessment.test.js",
+      "byteSha256": "278bd87e6453892797dff4d598fa2db4a5aee92ea55ed0710bb159777530007e"
+    },
+    {
+      "path": "simulation/provider-live-canonical.log",
+      "byteSha256": "91996bdae46f5a8ea9deb96b92f1d7674d21c3a59b114ddaa1105dd7d5749a17"
+    },
+    {
+      "path": "simulation/provider-targeted-final.log",
+      "byteSha256": "50afc3a936c997c5bbda0334fb4f2dcb435a115989d2b9d8dde1801b94840c06"
+    },
+    {
+      "path": "simulation/test-results-aispot-final.log",
+      "byteSha256": "0407e125ee98526bc2c180733acface97ae95f8a60ec989b041aff736b330a70"
+    },
+    {
+      "path": "docs/audit/2026-11-17/责任归因与命令语义复核.md",
+      "byteSha256": "278d2294ab035d6f3ee2e31d1e65e601ba884a761ca85f6bf348b64f43abdceb"
+    }
+  ]
+}

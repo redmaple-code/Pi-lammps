@@ -1,0 +1,41 @@
+{
+  "stageId": "execute",
+  "decision": "proceed",
+  "requestParameters": {},
+  "parameterOverrides": {},
+  "validationProtocol": {
+    "mode": "exploratory",
+    "comparisons": [
+      {"id": "time-step-convergence", "dimension": "numerical", "field": "meanNormalForceNn", "unit": "nN", "reference": "matching time-step study", "missingReason": "User selected one solver case; no matching finer-step result is available"},
+      {"id": "material-model-validation", "dimension": "model", "field": "meanNormalForceNn", "unit": "nN", "reference": "applicable model-validation data", "missingReason": "Applicable quantitative material-model validation data is unavailable"},
+      {"id": "grinding-reference", "dimension": "task", "field": "meanNormalForceNn", "unit": "nN", "reference": "matched experimental or literature grinding result", "missingReason": "A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established"}
+    ]
+  },
+  "summary": "Executed the wf-03a single-asperity grinding input unmodified (baselineInputRef was null; no inputText replacement supplied, empty {} parameters). The trusted stage adapter ran the real LAMMPS engine (E:\\LAMMPS 64-bit 2Aug2023-MSMPI lmp.exe -in in.grinding -log log.lammps) in a real execution mode, solver receipt lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c, exit code 0, no signal, no timeout, no stderr output (stderr.log byteLength 0). Wall time 11:31:47.674Z to 11:33:46.517Z, about 119 s. All eight D7-required outputs were produced: log.lammps (12113 B), grinding.csv (6535 B), approach.csv (3165 B), trajectory.lammpstrj (4454588 B), initial.lammpstrj (198954 B), final.lammpstrj (343135 B), final.data (781519 B) and final.restart (564174 B). The single applicable hard check, HOST-execute, is passed with observation \"Confirmed solver receipt lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c\" and \"Exit code 0\", so the hard checks permit advancement and the decision is proceed. No parameterOverrides were needed and the design's exploratory validation protocol is carried forward unchanged. Production of the mechanistic metrics (atom count, fixed-layer drift, contact samples, tip travel, force trace) and their comparison against the D7 acceptance specs is deferred to the analysis stage, which will report the measured values with signs and units.",
+  "limitations": [
+    "Only one hard check (HOST-execute) was applicable at this stage; D7 numerical acceptance specs (atomCount = 6400, fixedMaxDisplacementAngstrom <= 1e-6, contactSamples >= 10, tipTravelAngstrom >= 7.6, finite outputs) were not evaluated here and remain unverified until analysis.",
+    "Numeric trace quantities from grinding.csv and approach.csv were not readable in this role's text-artifact scope, so no measured force, temperature or displacement values are asserted in this packet.",
+    "Scientific mode is exploratory: no time-step convergence study, no repeat-seed statistics, and no matched experimental grinding reference exist, so the comparison fields meanNormalForceNn carry explicit missingReason entries rather than references.",
+    "The model is idealized: an EAM/alloy FeNiCrCoCu model alloy interacting with a rigid repulsive sphere; absolute force magnitudes are not transferable to real abrasive contacts.",
+    "Single short small-cell pass (400 equilibration + 400 approach + 800 grinding steps at 0.001 ps), so the result does not establish steady-state grinding behaviour.",
+    "Exit code 0 confirms execution completed but is not itself evidence of physical validity; the run outcome must still be interpreted against the analysis-stage metrics."
+  ],
+  "runRef": {
+    "artifactId": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+    "type": "run",
+    "digest": "sha256:a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276"
+  },
+  "hardChecks": [
+    {"checkId": "HOST-execute", "applicability": true, "result": "passed", "observations": ["Confirmed solver receipt lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c", "Exit code 0"]}
+  ],
+  "outputs": [
+    {"name": "log.lammps", "artifactId": "artifact-dc8b53f6-7361-4f83-aa9b-a6f19cb92fc2", "byteLength": 12113},
+    {"name": "grinding.csv", "artifactId": "artifact-58ff231a-b2bd-44b3-96ef-b8d12842097d", "byteLength": 6535},
+    {"name": "approach.csv", "artifactId": "artifact-305f6fbe-6599-462a-bd0f-74f82f15796f", "byteLength": 3165},
+    {"name": "trajectory.lammpstrj", "artifactId": "artifact-bc647046-1234-4e3d-93ab-271361f663db", "byteLength": 4454588},
+    {"name": "initial.lammpstrj", "artifactId": "artifact-9b6e1b2f-7b0d-4a0f-9316-8463a842a9df", "byteLength": 198954},
+    {"name": "final.lammpstrj", "artifactId": "artifact-0e726af1-2986-41eb-ae98-c88ad5f790ac", "byteLength": 343135},
+    {"name": "final.data", "artifactId": "artifact-4684c408-b113-4e9e-abd7-86b3d30d6f48", "byteLength": 781519},
+    {"name": "final.restart", "artifactId": "artifact-e3172a3b-f904-45d0-a546-a898c3604f7a", "byteLength": 564174}
+  ]
+}

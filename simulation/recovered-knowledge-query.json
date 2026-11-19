@@ -1,0 +1,110 @@
+{
+  "current": {
+    "items": [],
+    "total": 0,
+    "offset": 0,
+    "limit": 50,
+    "hasMore": false,
+    "truncated": false,
+    "totalIsExact": false,
+    "strategy": "fts5-trigram+unicode-terms",
+    "scope": "all-explicitly-selected"
+  },
+  "legacy": [
+    {
+      "path": "knowledge/rules/diagnostic-compute-requirements.md",
+      "title": "diagnostic-compute-requirements.md",
+      "source_type": "rule",
+      "source_tier": "rule",
+      "material_system": null,
+      "potential_family": "reaxff",
+      "stage": "WF-03",
+      "first_chunk": 0,
+      "matching_chunks": 9,
+      "sourceId": "sha256:3834d2d5fd525774955a6f7a0e6ed7ff41bf5fdcdb0596d993aea983acde62b7",
+      "originGroupId": "knowledge/rules/diagnostic-compute-requirements.md",
+      "provenance": "indexedSnapshot",
+      "whyRanked": [
+        "legacy-content-match",
+        "distinct-original-path"
+      ],
+      "originalAvailable": false
+    },
+    {
+      "path": "knowledge/rules/structural-health-check.md",
+      "title": "structural-health-check.md [5]",
+      "source_type": "rule",
+      "source_tier": "rule",
+      "material_system": null,
+      "potential_family": null,
+      "stage": "WF-04",
+      "first_chunk": 4,
+      "matching_chunks": 3,
+      "sourceId": "sha256:48f1a591a140b1f067af553209c090230064558e8aa41eedb27b83aeca2b39c8",
+      "originGroupId": "knowledge/rules/structural-health-check.md",
+      "provenance": "indexedSnapshot",
+      "whyRanked": [
+        "legacy-content-match",
+        "distinct-original-path"
+      ],
+      "originalAvailable": false
+    },
+    {
+      "path": "knowledge/memory/confirmed-lessons.md",
+      "title": "confirmed-lessons.md [13]",
+      "source_type": "experience",
+      "source_tier": "memory",
+      "material_system": null,
+      "potential_family": "reaxff",
+      "stage": "WF-01",
+      "first_chunk": 12,
+      "matching_chunks": 2,
+      "sourceId": "sha256:ffcc4cb3cf71f3ddd4aaabd19c48aa23065dfa1756110565456967bcff47746a",
+      "originGroupId": "knowledge/memory/confirmed-lessons.md",
+      "provenance": "indexedSnapshot",
+      "whyRanked": [
+        "legacy-content-match",
+        "distinct-original-path"
+      ],
+      "originalAvailable": false
+    },
+    {
+      "path": "knowledge/memory/core-checks.md",
+      "title": "core-checks.md [3]",
+      "source_type": "experience",
+      "source_tier": "memory",
+      "material_system": null,
+      "potential_family": "reaxff",
+      "stage": "WF-01",
+      "first_chunk": 2,
+      "matching_chunks": 2,
+      "sourceId": "sha256:5eb0fada966cae36a5c111bc006715173368d317f9fd706c68fb1e45eb863668",
+      "originGroupId": "knowledge/memory/core-checks.md",
+      "provenance": "indexedSnapshot",
+      "whyRanked": [
+        "legacy-content-match",
+        "distinct-original-path"
+      ],
+      "originalAvailable": false
+    },
+    {
+      "path": "knowledge/memory/INDEX.md",
+      "title": "INDEX.md [4]",
+      "source_type": "experience",
+      "source_tier": "memory",
+      "material_system": null,
+      "potential_family": "reaxff",
+      "stage": "WF-01",
+      "first_chunk": 3,
+      "matching_chunks": 1,
+      "sourceId": "sha256:d9003dd87331c602d528e77d60e272a54b07333cca6b8562d651621bf44676e1",
+      "originGroupId": "knowledge/memory/INDEX.md",
+      "provenance": "indexedSnapshot",
+      "whyRanked": [
+        "legacy-content-match",
+        "distinct-original-path"
+      ],
+      "originalAvailable": false
+    }
+  ]
+}

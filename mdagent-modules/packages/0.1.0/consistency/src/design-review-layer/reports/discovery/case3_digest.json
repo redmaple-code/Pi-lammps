@@ -1,0 +1,150 @@
+{
+  "case": "case3",
+  "provider": "external-ai:case3_points.json",
+  "open_points": [
+    {
+      "id": "RP-007",
+      "title": "应变零点 Ly0 取在 300 K NPT 预平衡之前，热膨胀被计入生产应变",
+      "dimension": "初始条件与应变参考",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          32,
+          33,
+          34,
+          50,
+          52
+        ]
+      },
+      "question": "生产段开始时 ly 相对 Ly0 的偏移是多少？是否应在预平衡后重新定义 Ly0（或记录 300 K 参考长度）？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-011",
+      "title": "E-06 自述实验方案是由 in 文件反推补写，缺少独立实验证据链",
+      "dimension": "证据与可追溯性",
+      "locations": {
+        "experiment": [
+          "E-02",
+          "E-03",
+          "E-04",
+          "E-06"
+        ],
+        "infile": [
+          1,
+          66
+        ]
+      },
+      "question": "E-01..E-05 对应哪一篇/哪一个真实实验？试样尺寸、纯度、应变率、温度是如何测量/控制的？谁确认了这些参数？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-018",
+      "title": "热力学输出每 5000 步、应力应变每 1000 步，弹性段/屈服瞬态可能采样不足",
+      "dimension": "采样分辨率",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          24,
+          59
+        ]
+      },
+      "question": "弹性段和屈服瞬态持续多少步？1000 步采样是否足够？E 的拟合窗口和 σy 判据如何选择？采样间隔收敛性是否验证？",
+      "severity": "low"
+    },
+    {
+      "id": "RP-021",
+      "title": "E 的不确定度如何传入 σy 的 0.2% 偏移线：误差传递与协方差未定义",
+      "dimension": "误差传递",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          36,
+          37,
+          38,
+          59,
+          61
+        ]
+      },
+      "question": "0.2% 偏移线用的是实验 E、模拟 E 还是名义 E？σy 对 E 的敏感度 dσy/dE 是多少？E 与 σy 的协方差/联合置信区如何随拟合区间和应力噪声变化？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-025",
+      "title": "预平衡 40 ps 无稳态判据，生产段初始态缺少证据",
+      "dimension": "证据完备性",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          50,
+          52,
+          66
+        ]
+      },
+      "question": "40 ps 后 T、P、PE、volume 的漂移/斜率是多少？用什么阈值判定达到 300 K、0 bar 平衡？预平衡时长改为 20/80 ps 时 E、σy 变化多大？",
+      "severity": "medium"
+    }
+  ],
+  "common_groups": [
+    {
+      "id": "CI-002",
+      "name": "MD 应变率比实验高多个数量级",
+      "occurrences": 4
+    },
+    {
+      "id": "CI-012",
+      "name": "观测量的实验-仿真映射",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-011",
+      "name": "夹具/边界与实验加载路径不等效",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-004",
+      "name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "occurrences": 3
+    },
+    {
+      "id": "CI-009",
+      "name": "应力/应变定义（virial、总压、工程/真应力）",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-005",
+      "name": "多组元势函数的交叉项/适用性",
+      "occurrences": 4
+    },
+    {
+      "id": "CI-007",
+      "name": "热浴/恒温器参数与塑性耗热",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-006",
+      "name": "单次 run/单 seed 无统计不确定度",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-001",
+      "name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "occurrences": 2
+    }
+  ],
+  "stats": {
+    "total": 26,
+    "open": 5,
+    "record_required": 11,
+    "explained": 10,
+    "capped": ""
+  }
+}

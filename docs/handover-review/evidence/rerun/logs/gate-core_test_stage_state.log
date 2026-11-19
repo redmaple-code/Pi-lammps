@@ -1,0 +1,14 @@
+.C:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\evolution\memory.py:70: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\mdhandoff-review-rsfdibqc\\runtime-data\\memory\\atoms.jsonl' mode='r' encoding='utf-8'>
+  for line in open(path, encoding="utf-8", errors="replace"):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...C:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\tests\test_stage_state.py:108: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_wmdxap3u\\memory\\tasks\\TASK-UT-008\\decisions/20261117T055418-x-0a8fda.json' mode='r' encoding='utf-8'>
+  before = open(fp1, encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\tests\test_stage_state.py:111: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_wmdxap3u\\memory\\tasks\\TASK-UT-008\\decisions/20261117T055418-x-0a8fda.json' mode='r' encoding='utf-8'>
+  self.assertEqual(open(fp1, encoding="utf-8").read(), before)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+............
+----------------------------------------------------------------------
+Ran 16 tests in 10.400s
+
+OK

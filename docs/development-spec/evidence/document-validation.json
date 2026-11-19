@@ -1,0 +1,246 @@
+{
+  "documentPackageVersion": "1.0.0",
+  "validatedAt": "2026-11-17T05:35:49.612073+00:00",
+  "scope": "Documentation and declarative fixture audit only; no product implementation, runtime tests or scientific simulations.",
+  "method": "Python jsonschema Draft202012Validator plus temporary local graph/reference/link auditor; the auditor is not a shipped product validator.",
+  "environment": {
+    "python": "3.11.4"
+  },
+  "schemaMetaValidation": "passed",
+  "examples": [
+    {
+      "file": "examples/discrete-event.json",
+      "schemaValidation": "passed",
+      "declarationGraphAudit": "passed",
+      "missingResources": 12,
+      "unverifiedBindings": 4,
+      "expectedProductionReady": false,
+      "scientificValidation": "notRun"
+    },
+    {
+      "file": "examples/molecular-dynamics.json",
+      "schemaValidation": "passed",
+      "declarationGraphAudit": "passed",
+      "missingResources": 11,
+      "unverifiedBindings": 4,
+      "expectedProductionReady": false,
+      "scientificValidation": "notRun"
+    },
+    {
+      "file": "examples/structural-mechanics.json",
+      "schemaValidation": "passed",
+      "declarationGraphAudit": "passed",
+      "missingResources": 11,
+      "unverifiedBindings": 5,
+      "expectedProductionReady": false,
+      "scientificValidation": "notRun"
+    }
+  ],
+  "negativeCases": [
+    {
+      "case": "unknown-core-field",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "parent-path-traversal",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "absolute-windows-path",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "available-resource-without-digest",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "released-with-missing-assets",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "validated-tool-without-receipt",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "action-without-capability",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "executable-condition-op",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "zero-iteration-limit",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "iteration-without-protocol",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "action-with-iteration-field",
+      "check": "schema",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "duplicate-stage-id",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "stage-dependency-cycle",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missing-data-producer",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missing-check-resource",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "duplicate-capability-binding",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missing-iteration-protocol-resource",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "wrong-artifact-resource-kind",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    },
+    {
+      "case": "missing-default-workflow",
+      "check": "declarationAudit",
+      "observed": "rejectedAsExpected"
+    }
+  ],
+  "nestedConditionSchemaCase": "passed",
+  "markdownFiles": 13,
+  "checkedLocalLinks": 48,
+  "legacyRequirementMappings": 92,
+  "generalRequirements": 24,
+  "productRepository": {
+    "head": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+    "workingTreeClean": true,
+    "testsRunThisTurn": false
+  },
+  "originalSourceHashMatches": true,
+  "artifactManifest": [
+    {
+      "file": "00-scope-and-decisions.md",
+      "sha256": "19860f1e097e63b39bcbff9f3d22e4dadb478ac31b9ab469fb58d0dcb4f23384",
+      "bytes": 4729
+    },
+    {
+      "file": "01-architecture.md",
+      "sha256": "074681037fcb03454dc827927c9304952ac0816745bf8873e86b35e777413d5b",
+      "bytes": 4676
+    },
+    {
+      "file": "02-contracts.md",
+      "sha256": "a04c8afc53f8c5a77721ce44a659c9c86be867f9f333ba68bf4452df4f65028b",
+      "bytes": 9470
+    },
+    {
+      "file": "03-domain-pack.md",
+      "sha256": "4e696d8a70e3ccf4208ab2c2e97c5f653184c152d9236369ccbebfa2da8cf540",
+      "bytes": 8498
+    },
+    {
+      "file": "04-workflow.md",
+      "sha256": "9e0da0d6e15c31d1551a1e653bc186729a6055055cc61aad18350938756a4ff0",
+      "bytes": 6129
+    },
+    {
+      "file": "05-adapters.md",
+      "sha256": "9a8c978af6120a4aec7fc9c685a8af943418d8681a5e9cb00bc33955ad22fe68",
+      "bytes": 4125
+    },
+    {
+      "file": "06-knowledge.md",
+      "sha256": "c3517522991b213494d843aa7121e8bcbdcd3dd0ea720ca22ff242fe2231b4f7",
+      "bytes": 4124
+    },
+    {
+      "file": "07-scientific-validation.md",
+      "sha256": "e6e2e79742e1bbba5720af26df7bc8ba0f554ebe8207b980c260716a5dd35af0",
+      "bytes": 5772
+    },
+    {
+      "file": "08-development.md",
+      "sha256": "45a6ddbfa71239ffb0750ff3f0740628ac3e8c57336620577eb7621105a5e4c6",
+      "bytes": 4821
+    },
+    {
+      "file": "09-migration.md",
+      "sha256": "20d16093208c3cabb2eb08b9bda7fce40feb81f71f9f385b6b5326d932ec960a",
+      "bytes": 5432
+    },
+    {
+      "file": "10-acceptance.md",
+      "sha256": "0165790222e41d417f052103df44de2bf990b6b4b822e879ef75803b6acc7546",
+      "bytes": 6165
+    },
+    {
+      "file": "11-handoff.md",
+      "sha256": "83facb8e9b363848e7fbd0a489620507c830f257c029152a0eb6ae48106f24e3",
+      "bytes": 2174
+    },
+    {
+      "file": "examples/discrete-event.json",
+      "sha256": "5d1bb5ea01cf4eaa4e280d1adf35857fbf447b6d4c6143410424b093e584a4b5",
+      "bytes": 7418
+    },
+    {
+      "file": "examples/molecular-dynamics.json",
+      "sha256": "d47d62c25b0a94428eb580757635346cbaa57c69fb129b7d601cc54aed8bad50",
+      "bytes": 6528
+    },
+    {
+      "file": "examples/structural-mechanics.json",
+      "sha256": "deebb4240027db47a3a33817f7925fcfa6eb5bd6434bee9eaf0af05a68129f98",
+      "bytes": 7190
+    },
+    {
+      "file": "legacy-mapping.json",
+      "sha256": "d737c0eb6e8e8db7c70d9a399ab082b55df5704bbf474ad5c7971660f87021d7",
+      "bytes": 48009
+    },
+    {
+      "file": "README.md",
+      "sha256": "39705bd83f2afe763ce762f22b593f095bbbebbe1cc76a13a8804b6063834a52",
+      "bytes": 3305
+    },
+    {
+      "file": "schemas/domain-pack.schema.json",
+      "sha256": "e41c1324050a3221a5d792c683bd8239a28d45319e86233b68d54a6de89d44ae",
+      "bytes": 15523
+    }
+  ],
+  "limitations": [
+    "Referenced scientific resources and their item fragments remain missing; no full resource semantic validation was possible.",
+    "Declared adapter IDs and version ranges are illustrative and unverified.",
+    "No simulation kernel, solver, UI, deployment or release was implemented or exercised.",
+    "Previously recorded product baseline failures and skips remain unchanged."
+  ],
+  "verdict": "passedForDocumentScope"
+}

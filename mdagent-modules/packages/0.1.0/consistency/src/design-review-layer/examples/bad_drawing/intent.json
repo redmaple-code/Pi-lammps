@@ -1,0 +1,11 @@
+{
+  "schema_version": "3.0",
+  "case_id": "bad_drawing_fixture",
+  "status": "DESIGNED",
+  "system": {"molecule": "82B 钢丝", "target_elements": ["Fe", "C"], "size": {"atoms_target": 34335}},
+  "objective": {"simulation_goal": "钢丝拉拔力与表面损伤趋势", "target_property": ["drawing_force"]},
+  "constraints": {"temperature_range": [300, 300]},
+  "ensemble_sequence": [{"stage": "minimize"}, {"stage": "production", "ensemble": "nvt", "thermostat": "langevin", "T_K": 300}],
+  "key_params": {"timestep_fs": 1.0, "total_steps": 60000, "forcefield": {"preferred": "Fe_C.eam.alloy"}, "units": "metal", "pair_style": "eam/alloy"},
+  "experiment_design": {"experiment_type": "drawing"}
+}

@@ -1,0 +1,18 @@
+TAP version 13
+# (node:44636) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: AI003 confirmed input failure is diagnosed, revised, independently reviewed and re-executed with history
+ok 1 - AI003 confirmed input failure is diagnosed, revised, independently reviewed and re-executed with history
+  ---
+  duration_ms: 83690.412
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 145003.8041

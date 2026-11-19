@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/bb64e5e26b520569a86360d69248069b5e665b3f/example/basic_docking/data/1iep_ligand.sdf",
+    "resolvedUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/bb64e5e26b520569a86360d69248069b5e665b3f/example/basic_docking/data/1iep_ligand.sdf",
+    "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\raw\\1iep_ligand.sdf",
+    "sha256": "051b8742c32adc05c07fb486a4e7c9327f84e131cee33ac4e6a568d07553eb38",
+    "bytes": 6621,
+    "downloadedAt": "2026-11-17T13:40:46.482690+00:00",
+    "resolvedQueryOmitted": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/bb64e5e26b520569a86360d69248069b5e665b3f/example/basic_docking/data/1iep_receptorH.pdb",
+    "resolvedUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/bb64e5e26b520569a86360d69248069b5e665b3f/example/basic_docking/data/1iep_receptorH.pdb",
+    "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\inputs\\raw\\1iep_receptorH.pdb",
+    "sha256": "5f6aee6029f9a2a2c2be32d4eb948ae70808690573e1b69a0850cdffd7048ca7",
+    "bytes": 357444,
+    "downloadedAt": "2026-11-17T13:40:48.125759+00:00",
+    "resolvedQueryOmitted": false
+  },
+  {
+    "url": "https://github.com/forlilab/AutoDock-Vina/releases/download/v1.2.7/vina_1.2.7_win.exe",
+    "resolvedUrl": "https://release-assets.githubusercontent.com/github-production-release-asset/258054635/92d9684d-a27d-4faf-bf94-92988162e85c",
+    "path": "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+    "sha256": "e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5",
+    "bytes": 1233920,
+    "downloadedAt": "2026-11-17T13:43:20.378713+00:00",
+    "resolvedQueryOmitted": true
+  },
+  {
+    "url": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/v1.2.7/LICENSE",
+    "resolvedUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/v1.2.7/LICENSE",
+    "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\licenses\\AutoDock-Vina-1.2.7-LICENSE.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bytes": 11358,
+    "downloadedAt": "2026-11-17T13:43:20.767306+00:00",
+    "resolvedQueryOmitted": false
+  },
+  {
+    "url": "https://raw.githubusercontent.com/forlilab/Meeko/v0.8.0/LICENSE",
+    "resolvedUrl": "https://raw.githubusercontent.com/forlilab/Meeko/v0.8.0/LICENSE",
+    "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\1iep-imatinib-redocking-20261117\\licenses\\Meeko-0.8.0-LICENSE.txt",
+    "sha256": "20c17d8b8c48a600800dfd14f95d5cb9ff47066a9641ddeab48dc54aec96e331",
+    "bytes": 26526,
+    "downloadedAt": "2026-11-17T13:43:21.422125+00:00",
+    "resolvedQueryOmitted": false
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "massChecks": [
+    {
+      "element": "Fe",
+      "declaredInputMassAmu": 55.8,
+      "potentialMassAmu": 55.8,
+      "actualRunMassAmu": 55.8,
+      "changePercent": 0.0
+    },
+    {
+      "element": "Ni",
+      "declaredInputMassAmu": 58.69,
+      "potentialMassAmu": 58.7,
+      "actualRunMassAmu": 58.7,
+      "changePercent": 0.01703867779860868
+    },
+    {
+      "element": "Cr",
+      "declaredInputMassAmu": 52.0,
+      "potentialMassAmu": 52.0,
+      "actualRunMassAmu": 52.0,
+      "changePercent": 0.0
+    },
+    {
+      "element": "Co",
+      "declaredInputMassAmu": 58.93,
+      "potentialMassAmu": 59.0,
+      "actualRunMassAmu": 59.0,
+      "changePercent": 0.11878499915154439
+    },
+    {
+      "element": "Cu",
+      "declaredInputMassAmu": 63.55,
+      "potentialMassAmu": 63.0,
+      "actualRunMassAmu": 63.0,
+      "changePercent": -0.8654602675058909
+    }
+  ],
+  "potentialMassMatchesFinalData": true,
+  "declaredMassMatchesFinalData": false,
+  "kineticAtStep8000": {
+    "mobile": {
+      "atoms": 10368,
+      "centerVelocityAngstromPerPs": [
+        -0.06727987462738023,
+        -0.012304814856567389,
+        -0.052176288735277854
+      ],
+      "rawKineticTemperatureK": 315.3280698003371,
+      "centerVelocityRemovedTemperatureK": 315.15692136339317
+    },
+    "thermostat": {
+      "atoms": 2304,
+      "centerVelocityAngstromPerPs": [
+        -0.01712152429325404,
+        -0.0526726808404058,
+        0.002727340004402631
+      ],
+      "rawKineticTemperatureK": 311.0464600250818,
+      "centerVelocityRemovedTemperatureK": 310.97532410360697
+    },
+    "dynamic": {
+      "atoms": 8064,
+      "centerVelocityAngstromPerPs": [
+        -0.08160987061126818,
+        -0.0007719124869103972,
+        -0.06786198760893458
+      ],
+      "rawKineticTemperatureK": 316.59011561234416,
+      "centerVelocityRemovedTemperatureK": 316.3295547449468
+    },
+    "nearContactTopLayer": {
+      "atoms": 274,
+      "centerVelocityAngstromPerPs": [
+        -0.011499008985111839,
+        -0.01584234712159183,
+        -0.2645889691092451
+      ],
+      "rawKineticTemperatureK": 388.4320087114932,
+      "centerVelocityRemovedTemperatureK": 386.7981899921638
+    }
+  },
+  "nearContactSelection": {
+    "xyRadiusAngstrom": 12,
+    "minimumZAngstrom": 27.705,
+    "tipCenterAngstrom": [
+      57.8,
+      21.36,
+      43.265
+    ]
+  },
+  "temperatureCaveat": "One instantaneous final-state sample with center velocity subtraction, no local-temperature time history or confidence interval"
+}

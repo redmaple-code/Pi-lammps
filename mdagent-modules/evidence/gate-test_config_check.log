@@ -1,0 +1,198 @@
+
+EEEEEEEEE
+======================================================================
+ERROR: test_directional_npt_ok (test_config_check.TestConfigCheck.test_directional_npt_ok)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_npt_iso_plus_deform_violation (test_config_check.TestConfigCheck.test_npt_iso_plus_deform_violation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_parse_basic (test_config_check.TestConfigCheck.test_parse_basic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_recip_declared_but_oneway (test_config_check.TestConfigCheck.test_recip_declared_but_oneway)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_recip_with_wiggle_ok (test_config_check.TestConfigCheck.test_recip_with_wiggle_ok)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_unreadable_fail_closed (test_config_check.TestConfigCheck.test_unreadable_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 183, in load_methodology_entries
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 52, in setUp
+    self.entries = load_entries()
+                   ^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 45, in load_entries
+    return [e for e in stage_gate.load_methodology_entries(None)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 185, in load_methodology_entries
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_bad_tensile_blocked_at_build (test_config_check.TestGateE4.test_bad_tensile_blocked_at_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 104, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_good_tensile_passes (test_config_check.TestGateE4.test_good_tensile_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 104, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_missing_input_files_blocks (test_config_check.TestGateE4.test_missing_input_files_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_config_check.py", line 104, in setUp
+    surface_fixture.fill_all(self.tmp, self.cid)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 32, in fill_all
+    fill_phase(data_root, case_id, phase, paper=paper)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.111s
+
+FAILED (errors=9)

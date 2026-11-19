@@ -1,0 +1,247 @@
+{
+  "source": "original-handoff-tool-registry",
+  "module": "gate",
+  "tools": [
+    {
+      "name": "draft_intent",
+      "description": "【前置双门·C0 前置必调】把对用户需求的理解落成 intent.json(DRAFT):任何新仿真需求(自由文本/文献/参照case)必须先经本工具落白纸黑字,再谈方案。intent 传结构化理解(system/objective/constraints/ensemble_sequence/key_params),歧义点全部进 open_questions(带选项),不臆测。注入 status/prod_dir_ref/未知段一律丢弃。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string",
+            "description": "项目名([A-Za-z0-9_-])"
+          },
+          "case_id": {
+            "type": "string",
+            "description": "语义 case 标识([A-Za-z0-9_-])"
+          },
+          "intent": {
+            "type": "object",
+            "description": "结构化意图(payload 段白名单过滤)"
+          },
+          "open_questions": {
+            "type": "array",
+            "description": "澄清问题[{id,question,options,answered}]"
+          },
+          "note": {
+            "type": "string",
+            "description": "起草说明(进决策链)"
+          }
+        },
+        "required": [
+          "project",
+          "case_id",
+          "intent"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "update_intent",
+      "description": "【状态机写口】分段白名单更新意图(C1 物理框架/C2 四要素/C0 答疑/C4r 差异整改)。section 仅限白名单段;patch 整段替换。跃迁自动判定:DRAFT→CLARIFIED 需 open_questions 全答,CLARIFIED→DESIGNED 需 design 四要素(system/forcefield/dynamics/resources)均含 chosen_by;CONFIRMED/GATED_FAIL 后改动仅当 minor_revision=true 且 section 属 gate_report 点名字段才保留 CONFIRMED,否则降回 DESIGNED(revision+1)。每次调用把 cp/question_digest/answer 落 decisions 决策链。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string",
+            "description": "白名单段名(source/intake_summary/system/objective/constraints/ensemble_sequence/key_params/design/open_questions/exemptions)"
+          },
+          "patch": {
+            "description": "该段新值(整段替换)。experiment_design 的 plausibility.evidence 禁止自填(只能走 design_evidence 参数);unverified_assumptions(用户显式接受)可写"
+          },
+          "cp": {
+            "type": "string",
+            "description": "检查点标记(C0/C1/C2a-e/C4r)"
+          },
+          "question_digest": {
+            "type": "string"
+          },
+          "answer": {
+            "type": "string"
+          },
+          "minor_revision": {
+            "type": "boolean",
+            "description": "C4r 差异整改:仅违规点名字段合法"
+          },
+          "design_evidence": {
+            "type": "array",
+            "description": "C2e 外部论证入账:sim_design_research 返回提炼的逐字段判定 [{field,verdict,literature_range,evidence:[url]}](每条须带 http 证据 URL)"
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "本次决策的证据出处 URL(留痕进 decisions)"
+          }
+        },
+        "required": [
+          "project",
+          "case_id",
+          "section",
+          "patch"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "confirm_intent",
+      "description": "【C3 方案终审·唯一 CONFIRMED 入口】仅 DESIGNED 可调;必须带用户批准原话 confirm_quote(逐字摘录,进决策链与审计)。调用前应先 intent_view 渲染完整方案说明书并向用户回显(含与文献/参照 case 的差异表)。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "confirm_quote": {
+            "type": "string",
+            "description": "用户批准原话摘录"
+          }
+        },
+        "required": [
+          "project",
+          "case_id",
+          "confirm_quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "validate_intent",
+      "description": "【功能二·物理一致性校核】仅 CONFIRMED 可调;确定性跑 physics_gate 全 PRE 门(H1 步长/H2 裸NVE/H3 NPT硬压/H4 近距/H5 净电荷/C1 单位/C2 元素覆盖/C4 温度程序 + S/C 软门),写 gate_report 并置 GATED_PASS/GATED_FAIL。hard_violations 的 cited_fields 是 C4r 整改的唯一合法改动域。H6/H7 运行期门延后给 sim_pipeline_check。accepted_warnings 传 C5 处置留痕(接受警示的门 id)。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "accepted_warnings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "design_evidence": {
+            "type": "array",
+            "description": "C2e 外部论证补账(同 update_intent;E-VERIFY 整改通道) [{field,verdict,literature_range,evidence:[url]}]"
+          },
+          "data_file": {
+            "type": "string",
+            "description": "data 草案路径(缺省自动取 inputs/ 最新 *.data)"
+          },
+          "ffield_file": {
+            "type": "string",
+            "description": "力场文件路径(缺省按 forcefield.preferred 搜索)"
+          }
+        },
+        "required": [
+          "project",
+          "case_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "new_project",
+      "description": "建项目夹(PROJECT_ROOT 内 mkdir + project.json + 归纳说明自动生成)。首个写必须在对话里回显目标路径并经用户确认(批量预览可合并,最终确认不可省)。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "project"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "new_task",
+      "description": "建任务夹(run_folder=case_id+时间戳,{inputs,logs,results} + intent.json DRAFT 骨架 + 归纳说明 + 登记 project.json.case_ids)。run_folder 是本地标识,勿反推 prod_dir。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "project",
+          "case_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "list_projects",
+      "description": "列 PROJECT_ROOT 下项目与 project.json 摘要(只读)。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "task_status",
+      "description": "一屏任务态:intent 状态/revision/门摘要/决策链尾(默认8条)/status_bus 实时交叉(指针一致才并,否则'无对应活动 run')/下一步检查点指引。回答'这个 case 方案到哪了/还差什么确认'用它。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "n": {
+            "type": "integer",
+            "description": "决策链尾条数(默认8,最大50)"
+          }
+        },
+        "required": [
+          "project",
+          "case_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "intent_view",
+      "description": "渲染人读方案说明书(C3 终审物料):体系/目标/约束/系综序列/关键参数字段表+四要素确认痕迹+豁免+门报告摘要+决策链+下一步指引。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "project": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "project",
+          "case_id"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

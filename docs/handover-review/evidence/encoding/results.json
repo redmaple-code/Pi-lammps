@@ -1,0 +1,64 @@
+[
+  {
+    "mode": "native-locale",
+    "settings": {},
+    "locale_encoding": "cp936",
+    "returncode": 1,
+    "command": [
+      "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-t",
+      "tests",
+      "-p",
+      "test_md_mcp_contract.py"
+    ],
+    "cwd": "<disposable-package>/src"
+  },
+  {
+    "mode": "stdio-utf8-only",
+    "settings": {
+      "PYTHONIOENCODING": "utf-8"
+    },
+    "locale_encoding": "cp936",
+    "returncode": 1,
+    "command": [
+      "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-t",
+      "tests",
+      "-p",
+      "test_md_mcp_contract.py"
+    ],
+    "cwd": "<disposable-package>/src"
+  },
+  {
+    "mode": "full-utf8",
+    "settings": {
+      "PYTHONIOENCODING": "utf-8",
+      "PYTHONUTF8": "1"
+    },
+    "locale_encoding": "cp936",
+    "returncode": 0,
+    "command": [
+      "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-t",
+      "tests",
+      "-p",
+      "test_md_mcp_contract.py"
+    ],
+    "cwd": "<disposable-package>/src"
+  }
+]

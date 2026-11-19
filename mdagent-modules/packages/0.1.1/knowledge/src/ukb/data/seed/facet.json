@@ -1,0 +1,64 @@
+[
+  {
+    "facet_id": "domain",
+    "label": "领域",
+    "description": "条目所属学科或业务领域。粗分即可；具体领域标签由域数据包提供。",
+    "multi": true,
+    "governing": true,
+    "scope_budget_chars": 60000,
+    "ord": 1
+  },
+  {
+    "facet_id": "topic",
+    "label": "主题",
+    "description": "条目讨论的主题或问题类别。每条至少一个。",
+    "multi": true,
+    "governing": false,
+    "scope_budget_chars": 40000,
+    "ord": 2
+  },
+  {
+    "facet_id": "stage",
+    "label": "工作阶段",
+    "description": "条目适用于工作流的哪个阶段。",
+    "multi": true,
+    "governing": true,
+    "scope_budget_chars": 60000,
+    "ord": 3
+  },
+  {
+    "facet_id": "method",
+    "label": "方法",
+    "description": "所用的方法或技术。",
+    "multi": true,
+    "governing": false,
+    "scope_budget_chars": 40000,
+    "ord": 4
+  },
+  {
+    "facet_id": "object",
+    "label": "对象",
+    "description": "研究或处理的对象、系统、材料。",
+    "multi": true,
+    "governing": false,
+    "scope_budget_chars": 40000,
+    "ord": 5
+  },
+  {
+    "facet_id": "tool",
+    "label": "工具",
+    "description": "涉及的软件、仪器或命令。",
+    "multi": true,
+    "governing": false,
+    "scope_budget_chars": 40000,
+    "ord": 6
+  },
+  {
+    "facet_id": "consumer",
+    "label": "使用方",
+    "description": "条目主要面向哪个使用方（Agent 角色、审阅环节）。",
+    "multi": true,
+    "governing": true,
+    "ord": 7
+  }
+]

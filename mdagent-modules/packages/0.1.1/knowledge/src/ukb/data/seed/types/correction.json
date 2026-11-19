@@ -1,0 +1,46 @@
+{
+  "type_id": "correction",
+  "label": "纠正",
+  "description": "对某个条目或常见错误的纠正",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "wrong": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1500
+      },
+      "right": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1500
+      },
+      "target": {
+        "kind": "ref"
+      },
+      "why": {
+        "kind": "text",
+        "required": false,
+        "max_len": 1500
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "wrong",
+      "right",
+      "target",
+      "why"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type_id": "evidence_claim",
+  "label": "证据知识",
+  "description": "来自任务证据或核查知识提案的可复用主张。入库审核不是对科学正确性或执行权限的自动确认。",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {"kind": "text", "required": true, "max_len": 4000},
+      "raw_json": {"kind": "text", "required": true, "max_len": 60000},
+      "scope_note": {"kind": "text", "max_len": 2000}
+    },
+    "render": ["statement", "scope_note", "raw_json"],
+    "required_facets": ["topic"],
+    "review_checklist": [
+      "来源工件可回读且内容摘要一致",
+      "适用条件、主张、验证方法与局限完整保留",
+      "运行结果未被当作新的任务执行许可",
+      "复用不增加独立证据来源数",
+      "内容经过预审与管理员批准后才可使用"
+    ],
+    "require_sources": true
+  }
+}

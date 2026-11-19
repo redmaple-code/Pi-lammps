@@ -1,0 +1,35 @@
+{
+  "stageId": "wf-00",
+  "reviewer": "lammps-reviewer",
+  "decision": "PASS",
+  "scope": "Exploratory (candidateValidation) scheme design: geometry consistency, D1-D7 explicitness, D2.1 critical-feature coverage, fix-indent geometry mapping.",
+  "subjectArtifacts": [
+    {"artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c", "type": "design", "role": "current-stage"},
+    {"artifactId": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403", "type": "stage-packet", "role": "wf-00 packet"}
+  ],
+  "evidenceReads": [
+    {"readRef": "read-96a1d047-8fbc-46b2-9614-8886bc93b9c7", "source": "current-stage", "lines": "1-529"},
+    {"readRef": "read-53a6743a-cef6-4d5e-ad04-a6036c5a8ac8", "source": "method-reference (fix indent command, 17.71)", "lines": "1-165"},
+    {"readRef": "read-ddf14714-4d02-4959-8db6-c038dc6ec9c9", "source": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403 (wf-00.json)", "lines": "1-18"}
+  ],
+  "geometryArithmetic": {
+    "atomCount": "20*10*8 cells * 4 fcc basis = 6400, equals acceptance atomCount 6400",
+    "boxAngstrom": "71.2 x 35.6 x 28.48 (a=3.56)",
+    "travel": "800 steps * 0.001 ps * 10 Angstrom/ps = 8.0 Angstrom >= 7.6 Angstrom criterion",
+    "contactSamples": "forceEvery=20 -> 40 grind samples, criterion needs >=10",
+    "tipSpeed": "10 Angstrom/ps = 1000 m/s (1 Angstrom/ps = 100 m/s), not 100 m/s"
+  },
+  "mandatory_check_results": {
+    "MB-008": {"triggered": true, "passed": true, "location": "current-stage D21 array", "issue": "none: five-components, fcc-substrate, fixed-boundary, thermal-layer, spherical-abrasive, lateral-motion all listed critical with wf-01/wf-03a verification"}
+  },
+  "findings": [
+    {"severity": "minor", "id": "F1", "finding": "Packet summary states tip speed 10 Angstrom/ps as '(100 m/s)'; correct value is 1000 m/s. The qualitative caveat (orders of magnitude above experimental grinding speeds) still holds, so no design change is required, but the unit arithmetic should be corrected in the record.", "location": "artifact-6a07d5ea limitations[4]"},
+    {"severity": "minor", "id": "F2", "finding": "fix indent defaults to units = lattice and side = out per the manual. The scheme geometry is stated in Angstrom, so the downstream input must set 'units box' (or consistent lattice) explicitly and keep the default side=out for a repulsive indenter pressing into the surface.", "location": "design D2/D4 + method-reference 17.71.7"},
+    {"severity": "note", "id": "F3", "finding": "Indenter stiffness 10 eV/Angstrom^3 is dimensionally consistent with K in force/distance^2 (eV/Angstrom^3) and the manual's per-atom energy K/3*(r-R)^3; 3 Angstrom penetration gives ~90 eV/Angstrom (~1.4 nN) per contact atom, which is plausible force magnitude but remains unvalidated."},
+    {"severity": "note", "id": "F4", "finding": "fix indent does not add indenter energy to the potential energy unless fix_modify energy yes is set; relevant to any later pe/atom or energy-based diagnostic at wf-03a."},
+    {"severity": "note", "id": "F5", "finding": "Design honestly records all three validation comparisons as missing (no finer-step result, no quantitative model validation, no matched grinding reference) and states results are exploratory only; material-scope validity is therefore insufficient by construction, not by omission."}
+  ],
+  "materialScopeStatement": "Verdict covers scheme/geometry logic and command-mapping only. The EAM-style command path and fix-indent geometry semantics are supported by the manual; quantitative material validity (force magnitudes in nN, comparison to real grinding) is explicitly NOT established and is not claimed by this PASS.",
+  "requiredNextActor": "lammps-coordinator",
+  "confidence": "high"
+}

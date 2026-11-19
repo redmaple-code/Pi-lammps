@@ -1,0 +1,1147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Finite element dynamics task",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "taskId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "taskType": {
+      "enum": [
+        "modal",
+        "implicit-transient",
+        "harmonic-response",
+        "explicit-impact"
+      ]
+    },
+    "parameterStatus": {
+      "enum": [
+        "proposed",
+        "locked"
+      ]
+    },
+    "unitSystem": {
+      "const": "SI"
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "parametricCantilever",
+            "imported"
+          ]
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        },
+        "length": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "m"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "width": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "m"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "height": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "m"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "idealization": {
+          "enum": [
+            "beam",
+            "shell",
+            "solid"
+          ]
+        },
+        "coordinateDefinition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "idealization",
+        "coordinateDefinition"
+      ]
+    },
+    "materials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "model": {
+            "enum": [
+              "isotropicElastic",
+              "calibratedNonlinear"
+            ]
+          },
+          "youngsModulus": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "unit": {
+                "const": "Pa"
+              }
+            },
+            "required": [
+              "value",
+              "unit"
+            ]
+          },
+          "poissonRatio": {
+            "type": "number",
+            "exclusiveMinimum": -1,
+            "exclusiveMaximum": 0.5
+          },
+          "density": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "unit": {
+                "const": "kg/m^3"
+              }
+            },
+            "required": [
+              "value",
+              "unit"
+            ]
+          },
+          "source": {
+            "type": "string",
+            "minLength": 1
+          },
+          "nonlinearCalibrationRef": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "locator": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "planned",
+                  "acquired"
+                ]
+              },
+              "digest": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "id",
+              "locator",
+              "status"
+            ],
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "status": {
+                      "const": "acquired"
+                    }
+                  }
+                },
+                "then": {
+                  "required": [
+                    "digest"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "model",
+          "youngsModulus",
+          "poissonRatio",
+          "density",
+          "source"
+        ],
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "model": {
+                  "const": "calibratedNonlinear"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "nonlinearCalibrationRef"
+              ]
+            }
+          }
+        ]
+      },
+      "minItems": 1
+    },
+    "mesh": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "elementFamily": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetSize": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "m"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "sectionAndOrientation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "refinementRatios": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "elementFamily",
+        "targetSize",
+        "sectionAndOrientation",
+        "refinementRatios"
+      ]
+    },
+    "boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "supports": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "expectedRigidBodyModes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "preloadDecision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contactDecision": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "supports",
+        "expectedRigidBodyModes",
+        "preloadDecision",
+        "contactDecision"
+      ]
+    },
+    "initialState": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "displacement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "velocity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "equilibriumBasis": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "displacement",
+        "velocity",
+        "equilibriumBasis"
+      ]
+    },
+    "damping": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "enum": [
+            "none",
+            "rayleigh",
+            "modal",
+            "calibratedOther"
+          ]
+        },
+        "alpha": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "const": "1/s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "beta": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definitionRef": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "model",
+        "source"
+      ]
+    },
+    "excitation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "none",
+            "forceHistory",
+            "baseMotion",
+            "harmonicForce",
+            "initialVelocity"
+          ]
+        },
+        "selection": {
+          "type": "string",
+          "minLength": 1
+        },
+        "direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "timeBasis": {
+          "enum": [
+            "step",
+            "total",
+            "frequency"
+          ]
+        },
+        "referenceMagnitude": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "const": "N"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "history": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2
+        },
+        "historyUnit": {
+          "enum": [
+            "s,N",
+            "s,m/s^2",
+            "s,m",
+            "Hz,N"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "selection",
+        "direction",
+        "timeBasis",
+        "source"
+      ]
+    },
+    "time": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "endTime": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "initialStep": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "maximumStep": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "outputInterval": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "targetFrequency": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "Hz"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "integrationMethod": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "endTime",
+        "initialStep",
+        "maximumStep",
+        "outputInterval",
+        "targetFrequency",
+        "integrationMethod"
+      ]
+    },
+    "frequency": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "const": "Hz"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "max": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "Hz"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "points": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "modesRequested": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "phaseConvention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "amplitudeConvention": {
+          "enum": [
+            "peak",
+            "rms"
+          ]
+        }
+      },
+      "required": [
+        "min",
+        "max",
+        "points",
+        "modesRequested",
+        "phaseConvention",
+        "amplitudeConvention"
+      ]
+    },
+    "explicitControls": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "stableStepMethod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "massTreatment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hourglassPolicy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contactLaw": {
+          "type": "string",
+          "minLength": 1
+        },
+        "materialRateDecision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "energyTerms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "stableStepMethod",
+        "massTreatment",
+        "hourglassPolicy",
+        "contactLaw",
+        "materialRateDecision",
+        "energyTerms"
+      ]
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "directions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "requestedQuantities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "verificationTargets": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "frequencyRelativeError": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "timeHistoryRelativeError": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "meshChange": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "energyBalance": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": []
+        },
+        "referenceBasis": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "regions",
+        "directions",
+        "requestedQuantities",
+        "verificationTargets",
+        "referenceBasis"
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxRuns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "wallTimePerRun": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "memoryLimit": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "GiB"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        }
+      },
+      "required": [
+        "maxRuns",
+        "wallTimePerRun",
+        "memoryLimit"
+      ]
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "modes",
+          "timeHistories",
+          "frequencyResponse",
+          "fields",
+          "verification",
+          "report"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "taskId",
+    "taskType",
+    "parameterStatus",
+    "unitSystem",
+    "geometry",
+    "materials",
+    "mesh",
+    "boundaries",
+    "initialState",
+    "damping",
+    "excitation",
+    "evaluation",
+    "resources",
+    "deliverables"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "geometry": {
+            "properties": {
+              "kind": {
+                "const": "parametricCantilever"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry": {
+            "required": [
+              "length",
+              "width",
+              "height"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "geometry": {
+            "properties": {
+              "kind": {
+                "const": "imported"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "geometry": {
+            "required": [
+              "source"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "taskType": {
+            "enum": [
+              "implicit-transient",
+              "explicit-impact"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "time"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "taskType": {
+            "enum": [
+              "modal",
+              "harmonic-response"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "frequency"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "taskType": {
+            "const": "explicit-impact"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "explicitControls"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "damping"
+        ],
+        "properties": {
+          "damping": {
+            "properties": {
+              "model": {
+                "const": "rayleigh"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "damping": {
+            "required": [
+              "alpha",
+              "beta"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "excitation": {
+            "properties": {
+              "kind": {
+                "const": "forceHistory"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "excitation": {
+            "required": [
+              "history",
+              "historyUnit"
+            ],
+            "properties": {
+              "historyUnit": {
+                "const": "s,N"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "excitation": {
+            "properties": {
+              "kind": {
+                "const": "baseMotion"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "excitation": {
+            "required": [
+              "history",
+              "historyUnit"
+            ],
+            "properties": {
+              "historyUnit": {
+                "enum": [
+                  "s,m",
+                  "s,m/s^2"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "excitation": {
+            "properties": {
+              "kind": {
+                "const": "harmonicForce"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "excitation": {
+            "required": [
+              "referenceMagnitude"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "damping": {
+            "properties": {
+              "model": {
+                "enum": [
+                  "modal",
+                  "calibratedOther"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "damping": {
+            "required": [
+              "definitionRef"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

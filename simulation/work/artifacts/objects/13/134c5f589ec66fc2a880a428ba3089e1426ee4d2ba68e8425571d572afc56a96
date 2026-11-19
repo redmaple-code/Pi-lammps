@@ -1,0 +1,216 @@
+LAMMPS (2 Aug 2023)
+  using 1 OpenMP thread(s) per MPI task
+Loaded 1 plugins from e:\LAMMPS 64-bit 2Aug2023-MSMPI\plugins
+Reading data file ...
+  orthogonal box = (-12 0 -5) to (83.2 35.6 58.48)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  6400 atoms
+  read_data CPU = 0.168 seconds
+800 atoms in group fixed
+5600 atoms in group mobile
+1600 atoms in group thermostat
+4000 atoms in group dynamic
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.80375
+  ghost atom cutoff = 7.80375
+  binsize = 3.901875, bins = 25 10 17
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Setting up cg style minimization ...
+  Unit style    : metal
+  Current step  : 0
+Per MPI rank memory allocation (min/avg/max) = 6.261 | 6.261 | 6.261 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   0             -26072.835      0             -26072.835     -9982.6675    
+        75   0             -26098.225      0             -26098.225     -3618.6641    
+Loop time of 7.23417 on 1 procs for 75 steps with 6400 atoms
+
+82.7% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -26072.8349877915  -26098.2245959153  -26098.2248191968
+  Force two-norm initial, final = 19.091657 0.071246596
+  Force max component initial, final = 1.3830018 0.024766195
+  Final line search alpha, max atom move = 1 0.024766195
+  Iterations, force evaluations = 75 147
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 7.1334     | 7.1334     | 7.1334     |   0.0 | 98.61
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.009917   | 0.009917   | 0.009917   |   0.0 |  0.14
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0.003384   | 0.003384   | 0.003384   |   0.0 |  0.05
+Other   |            | 0.08747    |            |       |  1.21
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         485680 ave      485680 max      485680 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 485680
+Ave neighs/atom = 75.8875
+Neighbor list builds = 0
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 0
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 5.136 | 5.136 | 5.136 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+         0        6400   300           -26098.225      217.11827     -25881.107    
+       100        6400   248.96645     -25934.432      180.18388     -25754.248    
+       200        6400   278.64407     -25906.456      201.66239     -25704.794    
+       300        6400   291.88729     -25898.993      211.24688     -25687.746    
+       400        6400   297.31753     -25896.682      215.17689     -25681.505    
+Loop time of 20.3094 on 1 procs for 400 steps with 6400 atoms
+
+Performance: 1.702 ns/day, 14.104 hours/ns, 19.695 timesteps/s, 126.050 katom-step/s
+79.7% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 19.825     | 19.825     | 19.825     |   0.0 | 97.62
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.025908   | 0.025908   | 0.025908   |   0.0 |  0.13
+Output  | 0.000994   | 0.000994   | 0.000994   |   0.0 |  0.00
+Modify  | 0.41981    | 0.41981    | 0.41981    |   0.0 |  2.07
+Other   |            | 0.03764    |            |       |  0.19
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         485849 ave      485849 max      485849 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 485849
+Ave neighs/atom = 75.913906
+Neighbor list builds = 0
+Dangerous builds = 0
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.80375
+  ghost atom cutoff = 7.80375
+  binsize = 3.901875, bins = 25 10 17
+  4 neighbor lists, perpetual/occasional/extra = 1 3 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+  (2) compute coord/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (3) compute centro/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (4) compute cna/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 400
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 7.155 | 7.155 | 7.155 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+       400        6400   297.31753     -25896.682      215.17689     -25681.505    
+       500        6400   295.30452     -25895.074      213.72002     -25681.354    
+       600        6400   299.3614      -25891.331      216.65609     -25674.675    
+       700        6400   320.18274     -25877.759      231.72507     -25646.034    
+       800        6400   339.74413     -25851.036      245.88219     -25605.154    
+Loop time of 22.9643 on 1 procs for 400 steps with 6400 atoms
+
+Performance: 1.505 ns/day, 15.947 hours/ns, 17.418 timesteps/s, 111.477 katom-step/s
+74.2% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 21.276     | 21.276     | 21.276     |   0.0 | 92.65
+Neigh   | 0.06589    | 0.06589    | 0.06589    |   0.0 |  0.29
+Comm    | 0.035747   | 0.035747   | 0.035747   |   0.0 |  0.16
+Output  | 1.254      | 1.254      | 1.254      |   0.0 |  5.46
+Modify  | 0.26227    | 0.26227    | 0.26227    |   0.0 |  1.14
+Other   |            | 0.07057    |            |       |  0.31
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2879 ave        2879 max        2879 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         488462 ave      488462 max      488462 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       976670 ave      976670 max      976670 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 976670
+Ave neighs/atom = 152.60469
+Neighbor list builds = 2
+Dangerous builds = 0
+Setting up Verlet run ...
+  Unit style    : metal
+  Current step  : 800
+  Time step     : 0.001
+Per MPI rank memory allocation (min/avg/max) = 21.22 | 21.22 | 21.22 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+       800        6400   339.74413     -25851.036      245.88219     -25605.154    
+       900        6400   331.37317     -25834.441      239.82389     -25594.617    
+      1000        6400   330.29256     -25833.088      239.04183     -25594.046    
+      1100        6400   324.81038     -25833.964      235.07422     -25598.89     
+      1200        6400   326.43052     -25835.663      236.24676     -25599.417    
+      1300        6400   325.58145     -25837.299      235.63226     -25601.667    
+      1400        6400   337.13525     -25841.533      243.99407     -25597.539    
+      1500        6400   329.74325     -25839.376      238.64427     -25600.731    
+      1600        6400   325.68251     -25835.545      235.70541     -25599.839    
+Loop time of 61.6614 on 1 procs for 800 steps with 6400 atoms
+
+Performance: 1.121 ns/day, 21.410 hours/ns, 12.974 timesteps/s, 83.034 katom-step/s
+58.2% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 57.233     | 57.233     | 57.233     |   0.0 | 92.82
+Neigh   | 0.20991    | 0.20991    | 0.20991    |   0.0 |  0.34
+Comm    | 0.077777   | 0.077777   | 0.077777   |   0.0 |  0.13
+Output  | 3.1997     | 3.1997     | 3.1997     |   0.0 |  5.19
+Modify  | 0.67675    | 0.67675    | 0.67675    |   0.0 |  1.10
+Other   |            | 0.2645     |            |       |  0.43
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2876 ave        2876 max        2876 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         488828 ave      488828 max      488828 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       978084 ave      978084 max      978084 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 978084
+Ave neighs/atom = 152.82563
+Neighbor list builds = 5
+Dangerous builds = 0
+System init for write_data ...
+System init for write_restart ...
+REDMAPLE_GRINDING_COMPLETE
+Total wall time: 0:01:55

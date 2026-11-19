@@ -1,0 +1,3255 @@
+{
+  "schemaVersion": "trace/1",
+  "revision": "MD-1",
+  "note": "Derived trace only. Behavior and acceptance remain authoritative in the referenced MIG/GSF source rows. All test paths are planned, not executable or passing evidence.",
+  "requirements": [
+    {
+      "requirementId": "GSF-001",
+      "moduleId": "MOD-19",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-001",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-001",
+        "acceptanceSourceRow": "GSF-001",
+        "plannedTestPath": "simulation/tests/requirements/gsf-001.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-002",
+      "moduleId": "MOD-19",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-002",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-002",
+        "acceptanceSourceRow": "GSF-002",
+        "plannedTestPath": "simulation/tests/requirements/gsf-002.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-003",
+      "moduleId": "MOD-03",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-003",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-003",
+        "acceptanceSourceRow": "GSF-003",
+        "plannedTestPath": "simulation/tests/requirements/gsf-003.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-004",
+      "moduleId": "MOD-20",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-004",
+      "moduleDocument": "modules/MOD-20.md",
+      "implementationTasks": [
+        "DEV-20-1",
+        "DEV-20-2",
+        "DEV-20-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-004",
+        "acceptanceSourceRow": "GSF-004",
+        "plannedTestPath": "simulation/tests/requirements/gsf-004.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-20-01",
+        "ACC-20-02",
+        "ACC-20-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-005",
+      "moduleId": "MOD-05",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-005",
+      "moduleDocument": "modules/MOD-05.md",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-005",
+        "acceptanceSourceRow": "GSF-005",
+        "plannedTestPath": "simulation/tests/requirements/gsf-005.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-006",
+      "moduleId": "MOD-06",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-006",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-006",
+        "acceptanceSourceRow": "GSF-006",
+        "plannedTestPath": "simulation/tests/requirements/gsf-006.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-007",
+      "moduleId": "MOD-04",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-007",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-007",
+        "acceptanceSourceRow": "GSF-007",
+        "plannedTestPath": "simulation/tests/requirements/gsf-007.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-008",
+      "moduleId": "MOD-11",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-008",
+      "moduleDocument": "modules/MOD-11.md",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-008",
+        "acceptanceSourceRow": "GSF-008",
+        "plannedTestPath": "simulation/tests/requirements/gsf-008.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-009",
+      "moduleId": "MOD-11",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-009",
+      "moduleDocument": "modules/MOD-11.md",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-009",
+        "acceptanceSourceRow": "GSF-009",
+        "plannedTestPath": "simulation/tests/requirements/gsf-009.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-010",
+      "moduleId": "MOD-03",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-010",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-010",
+        "acceptanceSourceRow": "GSF-010",
+        "plannedTestPath": "simulation/tests/requirements/gsf-010.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-011",
+      "moduleId": "MOD-12",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-011",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-011",
+        "acceptanceSourceRow": "GSF-011",
+        "plannedTestPath": "simulation/tests/requirements/gsf-011.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-012",
+      "moduleId": "MOD-19",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-012",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-012",
+        "acceptanceSourceRow": "GSF-012",
+        "plannedTestPath": "simulation/tests/requirements/gsf-012.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-013",
+      "moduleId": "MOD-19",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-013",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-013",
+        "acceptanceSourceRow": "GSF-013",
+        "plannedTestPath": "simulation/tests/requirements/gsf-013.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-014",
+      "moduleId": "MOD-09",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-014",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-014",
+        "acceptanceSourceRow": "GSF-014",
+        "plannedTestPath": "simulation/tests/requirements/gsf-014.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-015",
+      "moduleId": "MOD-09",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-015",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-015",
+        "acceptanceSourceRow": "GSF-015",
+        "plannedTestPath": "simulation/tests/requirements/gsf-015.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-016",
+      "moduleId": "MOD-20",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-016",
+      "moduleDocument": "modules/MOD-20.md",
+      "implementationTasks": [
+        "DEV-20-1",
+        "DEV-20-2",
+        "DEV-20-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-016",
+        "acceptanceSourceRow": "GSF-016",
+        "plannedTestPath": "simulation/tests/requirements/gsf-016.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-20-01",
+        "ACC-20-02",
+        "ACC-20-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-017",
+      "moduleId": "MOD-10",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-017",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-017",
+        "acceptanceSourceRow": "GSF-017",
+        "plannedTestPath": "simulation/tests/requirements/gsf-017.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-018",
+      "moduleId": "MOD-21",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-018",
+      "moduleDocument": "modules/MOD-21.md",
+      "implementationTasks": [
+        "DEV-21-1",
+        "DEV-21-2",
+        "DEV-21-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-018",
+        "acceptanceSourceRow": "GSF-018",
+        "plannedTestPath": "simulation/tests/requirements/gsf-018.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-21-01",
+        "ACC-21-02",
+        "ACC-21-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-019",
+      "moduleId": "MOD-21",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-019",
+      "moduleDocument": "modules/MOD-21.md",
+      "implementationTasks": [
+        "DEV-21-1",
+        "DEV-21-2",
+        "DEV-21-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-019",
+        "acceptanceSourceRow": "GSF-019",
+        "plannedTestPath": "simulation/tests/requirements/gsf-019.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-21-01",
+        "ACC-21-02",
+        "ACC-21-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-020",
+      "moduleId": "MOD-16",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-020",
+      "moduleDocument": "modules/MOD-16.md",
+      "implementationTasks": [
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-020",
+        "acceptanceSourceRow": "GSF-020",
+        "plannedTestPath": "simulation/tests/requirements/gsf-020.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-16-01",
+        "ACC-16-02",
+        "ACC-16-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-021",
+      "moduleId": "MOD-18",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-021",
+      "moduleDocument": "modules/MOD-18.md",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-021",
+        "acceptanceSourceRow": "GSF-021",
+        "plannedTestPath": "simulation/tests/requirements/gsf-021.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-18-01",
+        "ACC-18-02",
+        "ACC-18-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-022",
+      "moduleId": "MOD-15",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-022",
+      "moduleDocument": "modules/MOD-15.md",
+      "implementationTasks": [
+        "DEV-15-1",
+        "DEV-15-2",
+        "DEV-15-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-022",
+        "acceptanceSourceRow": "GSF-022",
+        "plannedTestPath": "simulation/tests/requirements/gsf-022.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-15-01",
+        "ACC-15-02",
+        "ACC-15-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-023",
+      "moduleId": "MOD-13",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-023",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-023",
+        "acceptanceSourceRow": "GSF-023",
+        "plannedTestPath": "simulation/tests/requirements/gsf-023.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-024",
+      "moduleId": "MOD-04",
+      "requirementSource": "../development-spec/10-acceptance.md",
+      "sourceRowId": "GSF-024",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-GSF-024",
+        "acceptanceSourceRow": "GSF-024",
+        "plannedTestPath": "simulation/tests/requirements/gsf-024.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-001",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-001",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-001",
+        "acceptanceSourceRow": "MIG-001",
+        "plannedTestPath": "simulation/tests/requirements/mig-001.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-002",
+      "moduleId": "MOD-05",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-002",
+      "moduleDocument": "modules/MOD-05.md",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-002",
+        "acceptanceSourceRow": "MIG-002",
+        "plannedTestPath": "simulation/tests/requirements/mig-002.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-003",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-003",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-003",
+        "acceptanceSourceRow": "MIG-003",
+        "plannedTestPath": "simulation/tests/requirements/mig-003.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-004",
+      "moduleId": "MOD-19",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-004",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-004",
+        "acceptanceSourceRow": "MIG-004",
+        "plannedTestPath": "simulation/tests/requirements/mig-004.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-005",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-005",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-005",
+        "acceptanceSourceRow": "MIG-005",
+        "plannedTestPath": "simulation/tests/requirements/mig-005.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-006",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-006",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-006",
+        "acceptanceSourceRow": "MIG-006",
+        "plannedTestPath": "simulation/tests/requirements/mig-006.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-007",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-007",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-007",
+        "acceptanceSourceRow": "MIG-007",
+        "plannedTestPath": "simulation/tests/requirements/mig-007.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-008",
+      "moduleId": "MOD-14",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-008",
+      "moduleDocument": "modules/MOD-14.md",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-008",
+        "acceptanceSourceRow": "MIG-008",
+        "plannedTestPath": "simulation/tests/requirements/mig-008.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-009",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-009",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-009",
+        "acceptanceSourceRow": "MIG-009",
+        "plannedTestPath": "simulation/tests/requirements/mig-009.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-010",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-010",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-010",
+        "acceptanceSourceRow": "MIG-010",
+        "plannedTestPath": "simulation/tests/requirements/mig-010.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-011",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-011",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-011",
+        "acceptanceSourceRow": "MIG-011",
+        "plannedTestPath": "simulation/tests/requirements/mig-011.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-012",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-012",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-012",
+        "acceptanceSourceRow": "MIG-012",
+        "plannedTestPath": "simulation/tests/requirements/mig-012.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-013",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-013",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-013",
+        "acceptanceSourceRow": "MIG-013",
+        "plannedTestPath": "simulation/tests/requirements/mig-013.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-014",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-014",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-014",
+        "acceptanceSourceRow": "MIG-014",
+        "plannedTestPath": "simulation/tests/requirements/mig-014.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-015",
+      "moduleId": "MOD-04",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-015",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-015",
+        "acceptanceSourceRow": "MIG-015",
+        "plannedTestPath": "simulation/tests/requirements/mig-015.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-016",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-016",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-016",
+        "acceptanceSourceRow": "MIG-016",
+        "plannedTestPath": "simulation/tests/requirements/mig-016.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-017",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-017",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-017",
+        "acceptanceSourceRow": "MIG-017",
+        "plannedTestPath": "simulation/tests/requirements/mig-017.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-018",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-018",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-018",
+        "acceptanceSourceRow": "MIG-018",
+        "plannedTestPath": "simulation/tests/requirements/mig-018.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-019",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-019",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-019",
+        "acceptanceSourceRow": "MIG-019",
+        "plannedTestPath": "simulation/tests/requirements/mig-019.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-020",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-020",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-020",
+        "acceptanceSourceRow": "MIG-020",
+        "plannedTestPath": "simulation/tests/requirements/mig-020.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-021",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-021",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-021",
+        "acceptanceSourceRow": "MIG-021",
+        "plannedTestPath": "simulation/tests/requirements/mig-021.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-022",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-022",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-022",
+        "acceptanceSourceRow": "MIG-022",
+        "plannedTestPath": "simulation/tests/requirements/mig-022.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-023",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-023",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-023",
+        "acceptanceSourceRow": "MIG-023",
+        "plannedTestPath": "simulation/tests/requirements/mig-023.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-024",
+      "moduleId": "MOD-02",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-024",
+      "moduleDocument": "modules/MOD-02.md",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-024",
+        "acceptanceSourceRow": "MIG-024",
+        "plannedTestPath": "simulation/tests/requirements/mig-024.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-025",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-025",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-025",
+        "acceptanceSourceRow": "MIG-025",
+        "plannedTestPath": "simulation/tests/requirements/mig-025.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-026",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-026",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-026",
+        "acceptanceSourceRow": "MIG-026",
+        "plannedTestPath": "simulation/tests/requirements/mig-026.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-027",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-027",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-027",
+        "acceptanceSourceRow": "MIG-027",
+        "plannedTestPath": "simulation/tests/requirements/mig-027.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-028",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-028",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-028",
+        "acceptanceSourceRow": "MIG-028",
+        "plannedTestPath": "simulation/tests/requirements/mig-028.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-029",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-029",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-029",
+        "acceptanceSourceRow": "MIG-029",
+        "plannedTestPath": "simulation/tests/requirements/mig-029.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-030",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-030",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-030",
+        "acceptanceSourceRow": "MIG-030",
+        "plannedTestPath": "simulation/tests/requirements/mig-030.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-031",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-031",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-031",
+        "acceptanceSourceRow": "MIG-031",
+        "plannedTestPath": "simulation/tests/requirements/mig-031.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-032",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-032",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-032",
+        "acceptanceSourceRow": "MIG-032",
+        "plannedTestPath": "simulation/tests/requirements/mig-032.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-033",
+      "moduleId": "MOD-05",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-033",
+      "moduleDocument": "modules/MOD-05.md",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-033",
+        "acceptanceSourceRow": "MIG-033",
+        "plannedTestPath": "simulation/tests/requirements/mig-033.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-034",
+      "moduleId": "MOD-04",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-034",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-034",
+        "acceptanceSourceRow": "MIG-034",
+        "plannedTestPath": "simulation/tests/requirements/mig-034.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-035",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-035",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-035",
+        "acceptanceSourceRow": "MIG-035",
+        "plannedTestPath": "simulation/tests/requirements/mig-035.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-036",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-036",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-036",
+        "acceptanceSourceRow": "MIG-036",
+        "plannedTestPath": "simulation/tests/requirements/mig-036.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-037",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-037",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-037",
+        "acceptanceSourceRow": "MIG-037",
+        "plannedTestPath": "simulation/tests/requirements/mig-037.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-038",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-038",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-038",
+        "acceptanceSourceRow": "MIG-038",
+        "plannedTestPath": "simulation/tests/requirements/mig-038.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-039",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-039",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-039",
+        "acceptanceSourceRow": "MIG-039",
+        "plannedTestPath": "simulation/tests/requirements/mig-039.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-040",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-040",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-040",
+        "acceptanceSourceRow": "MIG-040",
+        "plannedTestPath": "simulation/tests/requirements/mig-040.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-041",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-041",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-041",
+        "acceptanceSourceRow": "MIG-041",
+        "plannedTestPath": "simulation/tests/requirements/mig-041.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-042",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-042",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-042",
+        "acceptanceSourceRow": "MIG-042",
+        "plannedTestPath": "simulation/tests/requirements/mig-042.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-043",
+      "moduleId": "MOD-10",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-043",
+      "moduleDocument": "modules/MOD-10.md",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-043",
+        "acceptanceSourceRow": "MIG-043",
+        "plannedTestPath": "simulation/tests/requirements/mig-043.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-044",
+      "moduleId": "MOD-06",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-044",
+      "moduleDocument": "modules/MOD-06.md",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-044",
+        "acceptanceSourceRow": "MIG-044",
+        "plannedTestPath": "simulation/tests/requirements/mig-044.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-045",
+      "moduleId": "MOD-04",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-045",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-045",
+        "acceptanceSourceRow": "MIG-045",
+        "plannedTestPath": "simulation/tests/requirements/mig-045.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-046",
+      "moduleId": "MOD-04",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-046",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-046",
+        "acceptanceSourceRow": "MIG-046",
+        "plannedTestPath": "simulation/tests/requirements/mig-046.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-047",
+      "moduleId": "MOD-04",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-047",
+      "moduleDocument": "modules/MOD-04.md",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-047",
+        "acceptanceSourceRow": "MIG-047",
+        "plannedTestPath": "simulation/tests/requirements/mig-047.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-048",
+      "moduleId": "MOD-11",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-048",
+      "moduleDocument": "modules/MOD-11.md",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-048",
+        "acceptanceSourceRow": "MIG-048",
+        "plannedTestPath": "simulation/tests/requirements/mig-048.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-049",
+      "moduleId": "MOD-11",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-049",
+      "moduleDocument": "modules/MOD-11.md",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-049",
+        "acceptanceSourceRow": "MIG-049",
+        "plannedTestPath": "simulation/tests/requirements/mig-049.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-050",
+      "moduleId": "MOD-11",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-050",
+      "moduleDocument": "modules/MOD-11.md",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-050",
+        "acceptanceSourceRow": "MIG-050",
+        "plannedTestPath": "simulation/tests/requirements/mig-050.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-051",
+      "moduleId": "MOD-07",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-051",
+      "moduleDocument": "modules/MOD-07.md",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-051",
+        "acceptanceSourceRow": "MIG-051",
+        "plannedTestPath": "simulation/tests/requirements/mig-051.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-07-01",
+        "ACC-07-02",
+        "ACC-07-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-052",
+      "moduleId": "MOD-07",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-052",
+      "moduleDocument": "modules/MOD-07.md",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-052",
+        "acceptanceSourceRow": "MIG-052",
+        "plannedTestPath": "simulation/tests/requirements/mig-052.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-07-01",
+        "ACC-07-02",
+        "ACC-07-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-053",
+      "moduleId": "MOD-07",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-053",
+      "moduleDocument": "modules/MOD-07.md",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-053",
+        "acceptanceSourceRow": "MIG-053",
+        "plannedTestPath": "simulation/tests/requirements/mig-053.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-07-01",
+        "ACC-07-02",
+        "ACC-07-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-054",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-054",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-054",
+        "acceptanceSourceRow": "MIG-054",
+        "plannedTestPath": "simulation/tests/requirements/mig-054.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-055",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-055",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-055",
+        "acceptanceSourceRow": "MIG-055",
+        "plannedTestPath": "simulation/tests/requirements/mig-055.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-056",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-056",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-056",
+        "acceptanceSourceRow": "MIG-056",
+        "plannedTestPath": "simulation/tests/requirements/mig-056.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-057",
+      "moduleId": "MOD-09",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-057",
+      "moduleDocument": "modules/MOD-09.md",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-057",
+        "acceptanceSourceRow": "MIG-057",
+        "plannedTestPath": "simulation/tests/requirements/mig-057.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-058",
+      "moduleId": "MOD-14",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-058",
+      "moduleDocument": "modules/MOD-14.md",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-058",
+        "acceptanceSourceRow": "MIG-058",
+        "plannedTestPath": "simulation/tests/requirements/mig-058.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-059",
+      "moduleId": "MOD-14",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-059",
+      "moduleDocument": "modules/MOD-14.md",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-059",
+        "acceptanceSourceRow": "MIG-059",
+        "plannedTestPath": "simulation/tests/requirements/mig-059.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-060",
+      "moduleId": "MOD-14",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-060",
+      "moduleDocument": "modules/MOD-14.md",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-060",
+        "acceptanceSourceRow": "MIG-060",
+        "plannedTestPath": "simulation/tests/requirements/mig-060.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-061",
+      "moduleId": "MOD-14",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-061",
+      "moduleDocument": "modules/MOD-14.md",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-061",
+        "acceptanceSourceRow": "MIG-061",
+        "plannedTestPath": "simulation/tests/requirements/mig-061.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-062",
+      "moduleId": "MOD-05",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-062",
+      "moduleDocument": "modules/MOD-05.md",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-062",
+        "acceptanceSourceRow": "MIG-062",
+        "plannedTestPath": "simulation/tests/requirements/mig-062.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-063",
+      "moduleId": "MOD-08",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-063",
+      "moduleDocument": "modules/MOD-08.md",
+      "implementationTasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-063",
+        "acceptanceSourceRow": "MIG-063",
+        "plannedTestPath": "simulation/tests/requirements/mig-063.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-08-01",
+        "ACC-08-02",
+        "ACC-08-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-064",
+      "moduleId": "MOD-05",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-064",
+      "moduleDocument": "modules/MOD-05.md",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-064",
+        "acceptanceSourceRow": "MIG-064",
+        "plannedTestPath": "simulation/tests/requirements/mig-064.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-065",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-065",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-065",
+        "acceptanceSourceRow": "MIG-065",
+        "plannedTestPath": "simulation/tests/requirements/mig-065.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-066",
+      "moduleId": "MOD-08",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-066",
+      "moduleDocument": "modules/MOD-08.md",
+      "implementationTasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-066",
+        "acceptanceSourceRow": "MIG-066",
+        "plannedTestPath": "simulation/tests/requirements/mig-066.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-08-01",
+        "ACC-08-02",
+        "ACC-08-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-067",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-067",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-067",
+        "acceptanceSourceRow": "MIG-067",
+        "plannedTestPath": "simulation/tests/requirements/mig-067.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-068",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-068",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-068",
+        "acceptanceSourceRow": "MIG-068",
+        "plannedTestPath": "simulation/tests/requirements/mig-068.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-069",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-069",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-069",
+        "acceptanceSourceRow": "MIG-069",
+        "plannedTestPath": "simulation/tests/requirements/mig-069.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-070",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-070",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-070",
+        "acceptanceSourceRow": "MIG-070",
+        "plannedTestPath": "simulation/tests/requirements/mig-070.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-071",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-071",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-071",
+        "acceptanceSourceRow": "MIG-071",
+        "plannedTestPath": "simulation/tests/requirements/mig-071.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-072",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-072",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-072",
+        "acceptanceSourceRow": "MIG-072",
+        "plannedTestPath": "simulation/tests/requirements/mig-072.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-073",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-073",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-073",
+        "acceptanceSourceRow": "MIG-073",
+        "plannedTestPath": "simulation/tests/requirements/mig-073.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-074",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-074",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-074",
+        "acceptanceSourceRow": "MIG-074",
+        "plannedTestPath": "simulation/tests/requirements/mig-074.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-075",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-075",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-075",
+        "acceptanceSourceRow": "MIG-075",
+        "plannedTestPath": "simulation/tests/requirements/mig-075.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-076",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-076",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-076",
+        "acceptanceSourceRow": "MIG-076",
+        "plannedTestPath": "simulation/tests/requirements/mig-076.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-077",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-077",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-077",
+        "acceptanceSourceRow": "MIG-077",
+        "plannedTestPath": "simulation/tests/requirements/mig-077.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-078",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-078",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-078",
+        "acceptanceSourceRow": "MIG-078",
+        "plannedTestPath": "simulation/tests/requirements/mig-078.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-079",
+      "moduleId": "MOD-12",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-079",
+      "moduleDocument": "modules/MOD-12.md",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-079",
+        "acceptanceSourceRow": "MIG-079",
+        "plannedTestPath": "simulation/tests/requirements/mig-079.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-080",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-080",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-080",
+        "acceptanceSourceRow": "MIG-080",
+        "plannedTestPath": "simulation/tests/requirements/mig-080.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-081",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-081",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-081",
+        "acceptanceSourceRow": "MIG-081",
+        "plannedTestPath": "simulation/tests/requirements/mig-081.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-082",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-082",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-082",
+        "acceptanceSourceRow": "MIG-082",
+        "plannedTestPath": "simulation/tests/requirements/mig-082.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-083",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-083",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-083",
+        "acceptanceSourceRow": "MIG-083",
+        "plannedTestPath": "simulation/tests/requirements/mig-083.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-084",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-084",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-084",
+        "acceptanceSourceRow": "MIG-084",
+        "plannedTestPath": "simulation/tests/requirements/mig-084.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-085",
+      "moduleId": "MOD-13",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-085",
+      "moduleDocument": "modules/MOD-13.md",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-085",
+        "acceptanceSourceRow": "MIG-085",
+        "plannedTestPath": "simulation/tests/requirements/mig-085.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-086",
+      "moduleId": "MOD-19",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-086",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-086",
+        "acceptanceSourceRow": "MIG-086",
+        "plannedTestPath": "simulation/tests/requirements/mig-086.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-087",
+      "moduleId": "MOD-19",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-087",
+      "moduleDocument": "modules/MOD-19.md",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-087",
+        "acceptanceSourceRow": "MIG-087",
+        "plannedTestPath": "simulation/tests/requirements/mig-087.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-088",
+      "moduleId": "MOD-03",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-088",
+      "moduleDocument": "modules/MOD-03.md",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-088",
+        "acceptanceSourceRow": "MIG-088",
+        "plannedTestPath": "simulation/tests/requirements/mig-088.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-089",
+      "moduleId": "MOD-01",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-089",
+      "moduleDocument": "modules/MOD-01.md",
+      "implementationTasks": [
+        "DEV-01-1",
+        "DEV-01-2",
+        "DEV-01-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-089",
+        "acceptanceSourceRow": "MIG-089",
+        "plannedTestPath": "simulation/tests/requirements/mig-089.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-01-01",
+        "ACC-01-02",
+        "ACC-01-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-090",
+      "moduleId": "MOD-18",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-090",
+      "moduleDocument": "modules/MOD-18.md",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-090",
+        "acceptanceSourceRow": "MIG-090",
+        "plannedTestPath": "simulation/tests/requirements/mig-090.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-18-01",
+        "ACC-18-02",
+        "ACC-18-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-091",
+      "moduleId": "MOD-18",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-091",
+      "moduleDocument": "modules/MOD-18.md",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-091",
+        "acceptanceSourceRow": "MIG-091",
+        "plannedTestPath": "simulation/tests/requirements/mig-091.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-18-01",
+        "ACC-18-02",
+        "ACC-18-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-092",
+      "moduleId": "MOD-16",
+      "requirementSource": "../功能迁移与验收矩阵.md",
+      "sourceRowId": "MIG-092",
+      "moduleDocument": "modules/MOD-16.md",
+      "implementationTasks": [
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3"
+      ],
+      "requirementScenario": {
+        "id": "REQ-MIG-092",
+        "acceptanceSourceRow": "MIG-092",
+        "plannedTestPath": "simulation/tests/requirements/mig-092.test.ts",
+        "mappingRole": "planned"
+      },
+      "moduleScenarios": [
+        "ACC-16-01",
+        "ACC-16-02",
+        "ACC-16-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun",
+      "implementationCommit": null,
+      "verificationRefs": [],
+      "productAcceptance": null
+    }
+  ]
+}

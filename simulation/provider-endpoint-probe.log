@@ -1,0 +1,2 @@
+{"status":200,"provider":"aispot-ds","requestedModel":"dsv4.1f","modelIds":["deepseek-v4-pro","deepseek-v4-pro-0813","deepseek-v4.1-flash","deepseek-v4.1-flash-1017","deepseek-v4.1-flash-expires-on-0910"],"error":null}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 0

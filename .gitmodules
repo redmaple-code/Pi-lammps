@@ -1,0 +1,9 @@
+[submodule "redmaple-agent"]
+	path = redmaple-agent
+	url = https://github.com/redmaple-code/redmaple-agent.git
+[submodule "lammps-workflow-export"]
+	path = lammps-workflow-export
+	url = https://github.com/redmaple-code/lammps-workflow.git
+[submodule "work/mdagent-github-publish-20261118"]
+	path = work/mdagent-github-publish-20261118
+	url = https://github.com/redmaple-code/MDagent.git

@@ -1,0 +1,31 @@
+{
+  "tool": "PoseBusters",
+  "configuration": "unmodified redock defaults",
+  "checksPerPose": 28,
+  "poseCount": 4,
+  "top1FailedChecks": [],
+  "rows": [
+    {
+      "index": "('F:\\\\BaiduSyncdisk\\\\Codex\\\\Pi-lammps\\\\work\\\\cases\\\\vina-official-1iep-20261118\\\\runs\\\\e32\\\\poses.sdf', '', 0)",
+      "failedChecks": []
+    },
+    {
+      "index": "('F:\\\\BaiduSyncdisk\\\\Codex\\\\Pi-lammps\\\\work\\\\cases\\\\vina-official-1iep-20261118\\\\runs\\\\e32\\\\poses.sdf', '', 1)",
+      "failedChecks": [
+        "rmsd_≤_2å"
+      ]
+    },
+    {
+      "index": "('F:\\\\BaiduSyncdisk\\\\Codex\\\\Pi-lammps\\\\work\\\\cases\\\\vina-official-1iep-20261118\\\\runs\\\\e32\\\\poses.sdf', '', 2)",
+      "failedChecks": [
+        "rmsd_≤_2å"
+      ]
+    },
+    {
+      "index": "('F:\\\\BaiduSyncdisk\\\\Codex\\\\Pi-lammps\\\\work\\\\cases\\\\vina-official-1iep-20261118\\\\runs\\\\e32\\\\poses.sdf', '', 3)",
+      "failedChecks": [
+        "rmsd_≤_2å"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "@redmaple/agent-evidence",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "core",
+    "evidence",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./evidence/index.js",
+    "./core": "./core/index.js",
+    "./audit-sqlite": "./core/audit-sqlite.js"
+  }
+}

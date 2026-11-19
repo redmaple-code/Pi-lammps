@@ -1,0 +1,209 @@
+[
+  {
+    "runId": "fixed-score",
+    "operationId": "official-1iep-v001-fixed-score",
+    "argv": [
+      "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+      "--receptor",
+      "inputs/official/1iep_receptor.pdbqt",
+      "--ligand",
+      "reference/official-top1.pdbqt",
+      "--config",
+      "inputs/official/1iep_receptor.box.txt",
+      "--scoring",
+      "vina",
+      "--cpu",
+      "4",
+      "--spacing",
+      ".375",
+      "--score_only"
+    ],
+    "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\vina-official-1iep-20261118",
+    "mode": "real",
+    "inputs": [
+      {
+        "path": "inputs/official/1iep_receptor.pdbqt",
+        "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+      },
+      {
+        "path": "inputs/official/1iep_ligand.pdbqt",
+        "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+      },
+      {
+        "path": "inputs/official/1iep_receptor.box.txt",
+        "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+      }
+    ],
+    "startedAt": "2026-11-18T07:06:30.436885+00:00",
+    "status": "completed",
+    "processId": 58940,
+    "exitCode": 0,
+    "durationSeconds": 6.234000000054948,
+    "endedAt": "2026-11-18T07:06:36.664271+00:00",
+    "fixedPoseInputDigest": "sha256:90964def9287047813ad3843fa799f3a38d85d8bc1b687cbc8c365d6cfc6ea51",
+    "logDigest": "sha256:4fa101cd8c910ab3417f0c68d9383cb1d90e9df3d20ca5a7a2813b8d7ff01cf0"
+  },
+  {
+    "runId": "e8",
+    "operationId": "official-1iep-v001-e8",
+    "argv": [
+      "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+      "--receptor",
+      "inputs/official/1iep_receptor.pdbqt",
+      "--ligand",
+      "inputs/official/1iep_ligand.pdbqt",
+      "--config",
+      "inputs/official/1iep_receptor.box.txt",
+      "--scoring",
+      "vina",
+      "--cpu",
+      "4",
+      "--spacing",
+      ".375",
+      "--seed",
+      "-1622165383",
+      "--exhaustiveness",
+      "8",
+      "--num_modes",
+      "9",
+      "--energy_range",
+      "3",
+      "--min_rmsd",
+      "1",
+      "--out",
+      "runs/e8/poses.pdbqt"
+    ],
+    "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\vina-official-1iep-20261118",
+    "mode": "real",
+    "inputs": [
+      {
+        "path": "inputs/official/1iep_receptor.pdbqt",
+        "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+      },
+      {
+        "path": "inputs/official/1iep_ligand.pdbqt",
+        "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+      },
+      {
+        "path": "inputs/official/1iep_receptor.box.txt",
+        "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+      }
+    ],
+    "startedAt": "2026-11-18T07:06:36.705329+00:00",
+    "status": "completed",
+    "processId": 61668,
+    "exitCode": 0,
+    "durationSeconds": 379.4220000000205,
+    "endedAt": "2026-11-18T07:12:56.040291+00:00",
+    "outputDigest": "sha256:26ab35567a329ae38a48aa90b92d931fd8a19a0482c10e008418747927c93f63",
+    "logDigest": "sha256:d6afebc216e7a05cff75dcccfae82ca06a5b6f19728ba28ef5c7dc762b3c9dcf"
+  },
+  {
+    "runId": "e16",
+    "operationId": "official-1iep-v001-e16",
+    "argv": [
+      "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+      "--receptor",
+      "inputs/official/1iep_receptor.pdbqt",
+      "--ligand",
+      "inputs/official/1iep_ligand.pdbqt",
+      "--config",
+      "inputs/official/1iep_receptor.box.txt",
+      "--scoring",
+      "vina",
+      "--cpu",
+      "4",
+      "--spacing",
+      ".375",
+      "--seed",
+      "-1622165383",
+      "--exhaustiveness",
+      "16",
+      "--num_modes",
+      "9",
+      "--energy_range",
+      "3",
+      "--min_rmsd",
+      "1",
+      "--out",
+      "runs/e16/poses.pdbqt"
+    ],
+    "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\vina-official-1iep-20261118",
+    "mode": "real",
+    "inputs": [
+      {
+        "path": "inputs/official/1iep_receptor.pdbqt",
+        "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+      },
+      {
+        "path": "inputs/official/1iep_ligand.pdbqt",
+        "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+      },
+      {
+        "path": "inputs/official/1iep_receptor.box.txt",
+        "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+      }
+    ],
+    "startedAt": "2026-11-18T07:12:56.069604+00:00",
+    "status": "completed",
+    "processId": 61660,
+    "exitCode": 0,
+    "durationSeconds": 1379.140000000014,
+    "endedAt": "2026-11-18T07:35:54.885878+00:00",
+    "outputDigest": "sha256:1f6c93285ff98d43dd524bd90273c7a48655a76460e9d4369124d9ae19c1765c",
+    "logDigest": "sha256:f2d822ed8dae70cc28580a69c1c6e711e1fc6b43f71fa43fffaf47c34941e0f3"
+  },
+  {
+    "runId": "e32",
+    "operationId": "official-1iep-v001-e32",
+    "argv": [
+      "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation-envs\\docking-v1\\bin\\vina_1.2.7_win.exe",
+      "--receptor",
+      "inputs/official/1iep_receptor.pdbqt",
+      "--ligand",
+      "inputs/official/1iep_ligand.pdbqt",
+      "--config",
+      "inputs/official/1iep_receptor.box.txt",
+      "--scoring",
+      "vina",
+      "--cpu",
+      "4",
+      "--spacing",
+      ".375",
+      "--seed",
+      "-1622165383",
+      "--exhaustiveness",
+      "32",
+      "--num_modes",
+      "9",
+      "--energy_range",
+      "3",
+      "--min_rmsd",
+      "1",
+      "--out",
+      "runs/e32/poses.pdbqt"
+    ],
+    "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\work\\cases\\vina-official-1iep-20261118",
+    "mode": "real",
+    "inputs": [
+      {
+        "path": "inputs/official/1iep_receptor.pdbqt",
+        "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+      },
+      {
+        "path": "inputs/official/1iep_ligand.pdbqt",
+        "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+      },
+      {
+        "path": "inputs/official/1iep_receptor.box.txt",
+        "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+      }
+    ],
+    "startedAt": "2026-11-18T07:06:36.703330+00:00",
+    "status": "timeout",
+    "processId": 54100,
+    "durationSeconds": 1800.6570000000065,
+    "endedAt": "2026-11-18T07:36:36.934071+00:00",
+    "logDigest": "sha256:665db4e5ec612a8629079bc71f3dfb5274f2a27f130711e69963a171f8fa3f29"
+  }
+]

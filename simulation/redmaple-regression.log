@@ -1,0 +1,498 @@
+
+> @paperpilot/agent-base@0.2.0 test
+> node --test --test-concurrency=1 test/*.test.js
+
+TAP version 13
+# Subtest: real Pi loop continues after complete-looking tool results with one system prompt
+ok 1 - real Pi loop continues after complete-looking tool results with one system prompt
+  ---
+  duration_ms: 105.2733
+  type: 'test'
+  ...
+# Subtest: concurrent duplicate requests share one run and changed input is rejected
+ok 2 - concurrent duplicate requests share one run and changed input is rejected
+  ---
+  duration_ms: 17.6721
+  type: 'test'
+  ...
+# Subtest: a tool observes the durably persisted assistant request before execution
+ok 3 - a tool observes the durably persisted assistant request before execution
+  ---
+  duration_ms: 29.0417
+  type: 'test'
+  ...
+# Subtest: budgets block the next provider request and truncation remains visible
+ok 4 - budgets block the next provider request and truncation remains visible
+  ---
+  duration_ms: 34.9738
+  type: 'test'
+  ...
+# Subtest: invalid schema arguments cannot enter the tool handler
+ok 5 - invalid schema arguments cannot enter the tool handler
+  ---
+  duration_ms: 22.8664
+  type: 'test'
+  ...
+# Subtest: cancellation fences a late successful tool result
+ok 6 - cancellation fences a late successful tool result
+  ---
+  duration_ms: 8.2659
+  type: 'test'
+  ...
+# Subtest: unknown side effects require reconciliation and never execute twice on resume
+ok 7 - unknown side effects require reconciliation and never execute twice on resume
+  ---
+  duration_ms: 20.8561
+  type: 'test'
+  ...
+# Subtest: steering and follow-up queues persist and are consumed by the real Pi loop
+ok 8 - steering and follow-up queues persist and are consumed by the real Pi loop
+  ---
+  duration_ms: 16.9279
+  type: 'test'
+  ...
+# Subtest: file sessions lock competing owners, retain history and reject incompatible tool versions
+ok 9 - file sessions lock competing owners, retain history and reject incompatible tool versions
+  ---
+  duration_ms: 232.4242
+  type: 'test'
+  ...
+# Subtest: tool catalog discovers and loads tools beyond a provider cap
+ok 10 - tool catalog discovers and loads tools beyond a provider cap
+  ---
+  duration_ms: 45.8566
+  type: 'test'
+  ...
+# Subtest: host hooks and plugin lifecycle carry policy, result transforms and call identities
+ok 11 - host hooks and plugin lifecycle carry policy, result transforms and call identities
+  ---
+  duration_ms: 8.7323
+  type: 'test'
+  ...
+# Subtest: a known host refusal leaves no unknown external request
+ok 12 - a known host refusal leaves no unknown external request
+  ---
+  duration_ms: 5.5621
+  type: 'test'
+  ...
+# Subtest: time budget preserves sent unknown calls until reconciliation before a new bounded task
+ok 13 - time budget preserves sent unknown calls until reconciliation before a new bounded task
+  ---
+  duration_ms: 32.7965
+  type: 'test'
+  ...
+# Subtest: a tool call identifier cannot be reused for a different tool with identical arguments
+ok 14 - a tool call identifier cannot be reused for a different tool with identical arguments
+  ---
+  duration_ms: 15.4933
+  type: 'test'
+  ...
+# Subtest: plugin cleanup errors still dispose remaining plugins and release the file owner
+ok 15 - plugin cleanup errors still dispose remaining plugins and release the file owner
+  ---
+  duration_ms: 49.8547
+  type: 'test'
+  ...
+# Subtest: nested model calls share the run budget and the same sending hook
+ok 16 - nested model calls share the run budget and the same sending hook
+  ---
+  duration_ms: 6.5849
+  type: 'test'
+  ...
+# Subtest: sending hook denial is recorded as an unsent failure
+ok 17 - sending hook denial is recorded as an unsent failure
+  ---
+  duration_ms: 3.5315
+  type: 'test'
+  ...
+# Subtest: failed run persistence at write 1 releases active state and fences subsequent execution
+ok 18 - failed run persistence at write 1 releases active state and fences subsequent execution
+  ---
+  duration_ms: 15.973
+  type: 'test'
+  ...
+# Subtest: failed run persistence at write 2 releases active state and fences subsequent execution
+ok 19 - failed run persistence at write 2 releases active state and fences subsequent execution
+  ---
+  duration_ms: 6.6535
+  type: 'test'
+  ...
+# Subtest: opening an invalid workspace leaves no newly created platform database
+ok 20 - opening an invalid workspace leaves no newly created platform database
+  ---
+  duration_ms: 18.8067
+  type: 'test'
+  ...
+# (node:18596) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: temporary source IO errors preserve approval and remain visible to the caller
+ok 21 - temporary source IO errors preserve approval and remain visible to the caller
+  ---
+  duration_ms: 71.5822
+  type: 'test'
+  ...
+# Subtest: standalone bridge HTTP protocol preserves scope, encoding, approval errors and cancellation
+ok 22 - standalone bridge HTTP protocol preserves scope, encoding, approval errors and cancellation
+  ---
+  duration_ms: 191.1278
+  type: 'test'
+  ...
+# (node:54884) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: full SDK uses native tools, Code Mode, themes, resources and one ledger
+ok 23 - full SDK uses native tools, Code Mode, themes, resources and one ledger
+  ---
+  duration_ms: 12531.9024
+  type: 'test'
+  ...
+# Subtest: native session replacements release locks and preserve resources
+ok 24 - native session replacements release locks and preserve resources
+  ---
+  duration_ms: 1168.7058
+  type: 'test'
+  ...
+# Subtest: native resource hot reload retains runtime settings and deferred tool discovery
+ok 25 - native resource hot reload retains runtime settings and deferred tool discovery
+  ---
+  duration_ms: 912.2928
+  type: 'test'
+  ...
+# Subtest: shared native ModelRuntime is metered once and restored after final owner closes
+ok 26 - shared native ModelRuntime is metered once and restored after final owner closes
+  ---
+  duration_ms: 992.2283
+  type: 'test'
+  ...
+# Subtest: runtime cleanup failures still restore the shared model transport
+ok 27 - runtime cleanup failures still restore the shared model transport
+  ---
+  duration_ms: 579.6416
+  type: 'test'
+  ...
+# Subtest: workspace policy blocks external paths before native read executes
+ok 28 - workspace policy blocks external paths before native read executes
+  ---
+  duration_ms: 644.9684
+  type: 'test'
+  ...
+# Subtest: money gate rejects incomplete prices before dispatch and applies explicit zero prices
+ok 29 - money gate rejects incomplete prices before dispatch and applies explicit zero prices
+  ---
+  duration_ms: 1406.6516
+  type: 'test'
+  ...
+# Subtest: image edit preprocessing and native image generation share parent accounting
+ok 30 - image edit preprocessing and native image generation share parent accounting
+  ---
+  duration_ms: 1671.731
+  type: 'test'
+  ...
+# Subtest: multimodal token reservations use native image estimates rather than encoded image bytes
+ok 31 - multimodal token reservations use native image estimates rather than encoded image bytes
+  ---
+  duration_ms: 1239.078
+  type: 'test'
+  ...
+# Subtest: manual native compaction uses the same model ledger and retains original session history
+ok 32 - manual native compaction uses the same model ledger and retains original session history
+  ---
+  duration_ms: 896.8412
+  type: 'test'
+  ...
+# Subtest: SQLite session ownership, persistence and release are enforced
+ok 33 - SQLite session ownership, persistence and release are enforced
+  ---
+  duration_ms: 187.2366
+  type: 'test'
+  ...
+# Subtest: unknown result reconciliation preserves the canonical native transcript
+ok 34 - unknown result reconciliation preserves the canonical native transcript
+  ---
+  duration_ms: 857.3639
+  type: 'test'
+  ...
+# Subtest: sourced memory requires approval, handles conflicts and excludes changed sources
+ok 35 - sourced memory requires approval, handles conflicts and excludes changed sources
+  ---
+  duration_ms: 670.6026
+  type: 'test'
+  ...
+# Subtest: workflow validates DAG, approval, optimistic versions and completion evidence
+ok 36 - workflow validates DAG, approval, optimistic versions and completion evidence
+  ---
+  duration_ms: 738.6462
+  type: 'test'
+  ...
+# Subtest: proposal approval fingerprints, stale writes and undo preserve user changes
+ok 37 - proposal approval fingerprints, stale writes and undo preserve user changes
+  ---
+  duration_ms: 876.2468
+  type: 'test'
+  ...
+# (node:5008) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: native Code Mode nested tools share permissions and durable ledger
+ok 38 - native Code Mode nested tools share permissions and durable ledger
+  ---
+  duration_ms: 1774.7086
+  type: 'test'
+  ...
+# Subtest: MCP stdio discovery and direct execution use the native tool pipeline
+ok 39 - MCP stdio discovery and direct execution use the native tool pipeline
+  ---
+  duration_ms: 936.5336
+  type: 'test'
+  ...
+# Subtest: parallel child agents use independent native sessions and a shared parent budget
+ok 40 - parallel child agents use independent native sessions and a shared parent budget
+  ---
+  duration_ms: 1641.2205
+  type: 'test'
+  ...
+# Subtest: actual durable harness persists submissions, extensions and restart idempotency
+ok 41 - actual durable harness persists submissions, extensions and restart idempotency
+  ---
+  duration_ms: 753.3462
+  type: 'test'
+  ...
+# Subtest: truncated delegated output is recorded as failure and exposed as a tool error
+ok 42 - truncated delegated output is recorded as failure and exposed as a tool error
+  ---
+  duration_ms: 1214.7329
+  type: 'test'
+  ...
+# Subtest: knowledge import and Chinese retrieval work through native model tool calls
+ok 43 - knowledge import and Chinese retrieval work through native model tool calls
+  ---
+  duration_ms: 685.7432
+  type: 'test'
+  ...
+# Subtest: native workflow tool executes a child, verifies the artifact and shares the parent budget
+ok 44 - native workflow tool executes a child, verifies the artifact and shares the parent budget
+  ---
+  duration_ms: 1226.426
+  type: 'test'
+  ...
+# Subtest: evolution tool uses configured evaluation and activates the fixed version on the next native turn
+ok 45 - evolution tool uses configured evaluation and activates the fixed version on the next native turn
+  ---
+  duration_ms: 726.5761
+  type: 'test'
+  ...
+# Subtest: reopened native sessions resume the original shared budget without granting new calls
+ok 46 - reopened native sessions resume the original shared budget without granting new calls
+  ---
+  duration_ms: 1201.9669
+  type: 'test'
+  ...
+# Subtest: root session cancellation reaches a workflow child even without an outer prompt
+ok 47 - root session cancellation reaches a workflow child even without an outer prompt
+  ---
+  duration_ms: 1182.0017
+  type: 'test'
+  ...
+# Subtest: native TUI renders maple branding, keyboard editor, help and theme palette
+ok 48 - native TUI renders maple branding, keyboard editor, help and theme palette
+  ---
+  duration_ms: 2094.317
+  type: 'test'
+  ...
+# Subtest: Docker sandbox runs with network disabled and cancellation removes its container
+ok 49 - Docker sandbox runs with network disabled and cancellation removes its container # SKIP
+  ---
+  duration_ms: 0.2793
+  type: 'test'
+  ...
+# Subtest: native sandbox tool forwards fractional and long explicit timeouts
+ok 50 - native sandbox tool forwards fractional and long explicit timeouts # SKIP
+  ---
+  duration_ms: 0.1081
+  type: 'test'
+  ...
+# Subtest: redmaple CLI streams native JSON and exports an actual native session
+ok 51 - redmaple CLI streams native JSON and exports an actual native session
+  ---
+  duration_ms: 24270.6786
+  type: 'test'
+  ...
+# (node:53660) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: native retry after an explicit HTTP 429 records both sends in one run
+ok 52 - native retry after an explicit HTTP 429 records both sends in one run
+  ---
+  duration_ms: 2045.847
+  type: 'test'
+  ...
+# Subtest: redmaple RPC uses the native protocol and releases storage after stdin closes
+ok 53 - redmaple RPC uses the native protocol and releases storage after stdin closes
+  ---
+  duration_ms: 13662.142
+  type: 'test'
+  ...
+# Subtest: PaperPilot bridge uses actual isolated API, versioned candidates and native scholar state
+ok 54 - PaperPilot bridge uses actual isolated API, versioned candidates and native scholar state # SKIP
+  ---
+  duration_ms: 3.5282
+  type: 'test'
+  ...
+# Subtest: process death leaves an unknown call and recovery reuses its reconciled result
+ok 55 - process death leaves an unknown call and recovery reuses its reconciled result
+  ---
+  duration_ms: 1198.0338
+  type: 'test'
+  ...
+# (node:56660) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: sandbox seconds preserve explicit long timeouts and obey the remaining run deadline
+ok 56 - sandbox seconds preserve explicit long timeouts and obey the remaining run deadline
+  ---
+  duration_ms: 16.6353
+  type: 'test'
+  ...
+# Subtest: resumed budgets count previously elapsed time exactly once
+ok 57 - resumed budgets count previously elapsed time exactly once
+  ---
+  duration_ms: 7.4848
+  type: 'test'
+  ...
+# Subtest: legacy JSON migrates with stable records, normalized workflow steps and a consistent backup
+ok 58 - legacy JSON migrates with stable records, normalized workflow steps and a consistent backup
+  ---
+  duration_ms: 97.9166
+  type: 'test'
+  ...
+# Subtest: explicit workspace identity restores backed-up knowledge, memory and receipts after relocation
+ok 59 - explicit workspace identity restores backed-up knowledge, memory and receipts after relocation
+  ---
+  duration_ms: 200.5719
+  type: 'test'
+  ...
+# Subtest: source validation cannot override a newer user decision
+ok 60 - source validation cannot override a newer user decision
+  ---
+  duration_ms: 68.1752
+  type: 'test'
+  ...
+# Subtest: new workflows require verifications and reject artifacts changed after validation
+ok 61 - new workflows require verifications and reject artifacts changed after validation
+  ---
+  duration_ms: 112.8719
+  type: 'test'
+  ...
+# Subtest: custom verifier inputs and implementation versions are bound to the receipt
+ok 62 - custom verifier inputs and implementation versions are bound to the receipt
+  ---
+  duration_ms: 69.057
+  type: 'test'
+  ...
+# Subtest: knowledge indexes Chinese short queries, revisions, citations, invalidation and rebuilding
+ok 63 - knowledge indexes Chinese short queries, revisions, citations, invalidation and rebuilding
+  ---
+  duration_ms: 167.6227
+  type: 'test'
+  ...
+# Subtest: durable harness rejects competing owners and closes the FULL SQLite connection
+ok 64 - durable harness rejects competing owners and closes the FULL SQLite connection
+  ---
+  duration_ms: 7995.3271
+  type: 'test'
+  ...
+# Subtest: experience candidates deduplicate, reject regressions, activate with CAS and roll back
+ok 65 - experience candidates deduplicate, reject regressions, activate with CAS and roll back
+  ---
+  duration_ms: 154.1711
+  type: 'test'
+  ...
+# Subtest: failed evaluations resume their checkpoints and stale evidence cannot be promoted
+ok 66 - failed evaluations resume their checkpoints and stale evidence cannot be promoted
+  ---
+  duration_ms: 88.8083
+  type: 'test'
+  ...
+# Subtest: durable workflow execution verifies steps, persists the task identity and reopens without duplicate effects
+ok 67 - durable workflow execution verifies steps, persists the task identity and reopens without duplicate effects
+  ---
+  duration_ms: 374.7142
+  type: 'test'
+  ...
+# Subtest: copy-mode proposals preserve originals and remain idempotent
+ok 68 - copy-mode proposals preserve originals and remain idempotent
+  ---
+  duration_ms: 79.6459
+  type: 'test'
+  ...
+# Subtest: strong-kill recovery reconciles a sent effect and never blindly replays it
+ok 69 - strong-kill recovery reconciles a sent effect and never blindly replays it
+  ---
+  duration_ms: 8651.9659
+  type: 'test'
+  ...
+# Subtest: two domain-independent skills and ancestor instructions load on demand
+ok 70 - two domain-independent skills and ancestor instructions load on demand
+  ---
+  duration_ms: 136.1381
+  type: 'test'
+  ...
+# Subtest: workspace tools create, read and conditionally edit real files
+ok 71 - workspace tools create, read and conditionally edit real files
+  ---
+  duration_ms: 61.1396
+  type: 'test'
+  ...
+# Subtest: exec streams real child output, reports nonzero status and terminates on cancellation
+ok 72 - exec streams real child output, reports nonzero status and terminates on cancellation
+  ---
+  duration_ms: 1310.0662
+  type: 'test'
+  ...
+# Subtest: context projection keeps archived history, task and whole tool exchanges
+ok 73 - context projection keeps archived history, task and whole tool exchanges
+  ---
+  duration_ms: 3.1829
+  type: 'test'
+  ...
+# Subtest: automatic compaction uses the same model call budget as the response
+ok 74 - automatic compaction uses the same model call budget as the response
+  ---
+  duration_ms: 15.0503
+  type: 'test'
+  ...
+# Subtest: Pi executes parallel reads together and serializes a batch containing a sequential tool
+ok 75 - Pi executes parallel reads together and serializes a batch containing a sequential tool
+  ---
+  duration_ms: 89.01
+  type: 'test'
+  ...
+# Subtest: actual Pi OpenAI adapter streams from a local HTTP endpoint
+ok 76 - actual Pi OpenAI adapter streams from a local HTTP endpoint
+  ---
+  duration_ms: 1165.1343
+  type: 'test'
+  ...
+# Subtest: malformed streamed JSON cannot invoke an empty-parameter tool
+ok 77 - malformed streamed JSON cannot invoke an empty-parameter tool
+  ---
+  duration_ms: 94.1864
+  type: 'test'
+  ...
+# Subtest: CLI uses actual streamed tool calls and keeps credentials out of session state
+ok 78 - CLI uses actual streamed tool calls and keeps credentials out of session state
+  ---
+  duration_ms: 2489.1227
+  type: 'test'
+  ...
+# Subtest: JSONL RPC exposes prompt and snapshot through the normal CLI entry point
+ok 79 - JSONL RPC exposes prompt and snapshot through the normal CLI entry point
+  ---
+  duration_ms: 2209.9121
+  type: 'test'
+  ...
+1..79
+# tests 79
+# suites 0
+# pass 76
+# fail 0
+# cancelled 0
+# skipped 3
+# todo 0
+# duration_ms 123415.2294

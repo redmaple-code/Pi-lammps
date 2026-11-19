@@ -1,0 +1,150 @@
+{
+  "sourceDigest": "sha256:aaad3ba233390bf64d0d92963bf5b7139e687b952a6d19c03e1f44a84ec9e38d",
+  "sources": [
+    {
+      "path": "apps/cli/main.js",
+      "byteSha256": "sha256:fcbf3b517b5f9f838930487a2fc1ef31046a52aa1d400ab3f9907fa95792c0ad"
+    },
+    {
+      "path": "runtime.example.json",
+      "byteSha256": "sha256:e413462b70ea4ecf25006e0aee816ffa08a861e1ed8e015d14f796082b81db90"
+    },
+    {
+      "path": "packages/runtime-redmaple/index.js",
+      "byteSha256": "sha256:3aa3213c51913ffce8c9dccdcf8f296eeb574e0598008be0c4c52456e91383b9"
+    },
+    {
+      "path": "packages/application/grinding.js",
+      "byteSha256": "sha256:9e130d7ee4b386ffa9312e3386e1f570f7b14b65a189b51cbaa5283c65dc05a7"
+    },
+    {
+      "path": "packages/application/grinding-workflow.js",
+      "byteSha256": "sha256:59908e62dddc619dbd53a5fed90ffc4ed62025b186567c2e5bbc30057bbe5fe9"
+    },
+    {
+      "path": "packages/application/grinding-stages.js",
+      "byteSha256": "sha256:bd1859a453ecde2e34ccdcf3c3acc2b216986231a6484c54e4b9ff4bde006fce"
+    },
+    {
+      "path": "packages/application/result-state.js",
+      "byteSha256": "sha256:09aff321af84f8208a43fed4322c0003c02c0d78be75770ed77ffb099de5a29d"
+    },
+    {
+      "path": "packages/application/workflow.js",
+      "byteSha256": "sha256:2906f4caf15a1412b2ae6f488a1b761b2cff8e77abceb4e3b70b42b75fbabb0f"
+    },
+    {
+      "path": "packages/application/partial.js",
+      "byteSha256": "sha256:6c799e2a5a8f192e0905c7d6ab3e4776c40d7a2fa441606ca97c4148e97edc47"
+    },
+    {
+      "path": "packages/application/support-roles.js",
+      "byteSha256": "sha256:a8b98274a59944a10ca5280ff31c4d05e5387cc6d54c29d5533143a741363289"
+    },
+    {
+      "path": "packages/application/delivery-status.js",
+      "byteSha256": "sha256:0b91c7407a3ade74b4d2c14c0d84ece0971e415ee993628b4e9635a2c271e66a"
+    },
+    {
+      "path": "packages/kernel/index.js",
+      "byteSha256": "sha256:61647ae42a7877f2b084707da3983fd54a7f60830ef372a42fa98f0a1311d316"
+    },
+    {
+      "path": "packages/kernel/state.js",
+      "byteSha256": "sha256:91fd8f94ed18210f2457aeac4c0df61c7e43ab1eaa4204365106c877d7a7943e"
+    },
+    {
+      "path": "packages/kernel/gates.js",
+      "byteSha256": "sha256:e3b5f76281e7f3b980356a92a60038b02b1712a4f0f4bf92c9a0f112cc0e6ce8"
+    },
+    {
+      "path": "packages/kernel/evidence.js",
+      "byteSha256": "sha256:85f6da4a3be325cb0634cbd96f22e2e3fd56d4725f653ba1782f1e85dc8fb7d7"
+    },
+    {
+      "path": "packages/execution/index.js",
+      "byteSha256": "sha256:029a9d59d673aab8476d6ae7d17899857016d2875e1a813bcf171fcbe48735a6"
+    },
+    {
+      "path": "packages/execution/worker.js",
+      "byteSha256": "sha256:d904ffe5a7a1e31ee703a8da14d596ae8d835c0386bdb493473bde2495e09a71"
+    },
+    {
+      "path": "tests/execution.test.js",
+      "byteSha256": "sha256:46246d5e5320cd33d42034302cfab4208d2e12fef29c6e7022b004e536d8ee81"
+    },
+    {
+      "path": "packages/analysis/scientific-validation.js",
+      "byteSha256": "sha256:999f6fb8dbd222d222342ab12368c31f0845f3d918d2badaa96302eb55a9e49f"
+    },
+    {
+      "path": "packages/presentation/index.js",
+      "byteSha256": "sha256:dd0f815fe23734267e7cd4a10482508ad83d4ddc98e2231b05a11bce593d0c35"
+    },
+    {
+      "path": "tests/grinding-recovery.test.js",
+      "byteSha256": "sha256:1c5570d5b08b0589a1bce7ea78352283e50e6bcb9e12afc6b28bbcf9e5cedf5e"
+    },
+    {
+      "path": "tests/support-roles.test.js",
+      "byteSha256": "sha256:f4a700a582940570da0fdf1d31957f12ddcbe3a44a01b12f62c80f01baa905d7"
+    },
+    {
+      "path": "tests/role-failure.test.js",
+      "byteSha256": "sha256:26ed13ade987edd3a4ecb1c0ec39b2baccf4105e7513ec0494d6f96eef043114"
+    },
+    {
+      "path": "scripts/verify-role-grinding.js",
+      "byteSha256": "sha256:7e8f03ac73a31141ba31a05a50b95c4ae5a5d2c486ff0d2a04a0c8eb657ceb63"
+    },
+    {
+      "path": "scripts/export-role-workflow-audit.js",
+      "byteSha256": "sha256:a41517fe688aea486a569578370d6534973cdc03e972ce5d065b0f1358478b01"
+    },
+    {
+      "path": "domains/lammps/references/fix-print-command.corrected.txt",
+      "byteSha256": "sha256:efe4a533b95c01d477d5dd51635c6cab2dc9d57d4d70204cd9ae9e7fc1f74bb0"
+    },
+    {
+      "path": "packages/runtime-redmaple/curl-fetch.js",
+      "byteSha256": "sha256:df89129ced59c28a62d7fb8f3d883fe17efa48ed15192012d5ea478bcce3df88"
+    },
+    {
+      "path": "packages/runtime-redmaple/configuration.js",
+      "byteSha256": "sha256:8182d0b24bf20f71d47ec131f8bbbbf709bb16fd52d131f2c128a5bdf4f43616"
+    },
+    {
+      "path": "tests/curl-fetch.test.js",
+      "byteSha256": "sha256:d4795613a984ce3f4af6ab406a1bcc38325fdf862eed7a0618a805189f706313"
+    },
+    {
+      "path": "tests/provider-configuration.test.js",
+      "byteSha256": "sha256:76ea85e7eabb9d5e0d8efe2933bb8e551828f620a68a9bad438ab9f64920c34b"
+    },
+    {
+      "path": "../redmaple-agent/src/session-controls.js",
+      "byteSha256": "sha256:78a0a4ff74d39d0468e9736bdf1effb096fd9a59ff0afdb8159cb08bc4f250cf"
+    },
+    {
+      "path": "../redmaple-agent/src/compaction.js",
+      "byteSha256": "sha256:2c1f363a16ac23e15137b6932dae338b1e1da07989e63e9a0d16a4761a506458"
+    },
+    {
+      "path": "../redmaple-agent/src/native-compaction.js",
+      "byteSha256": "sha256:914e30d813a5099ff6d3a4d8d272a3ee748c9cffd072d25d548941b86954c15b"
+    },
+    {
+      "path": "../redmaple-agent/src/permissions.js",
+      "byteSha256": "sha256:86d7c3381cfce2ef5ccda85f221f4af7451eb43c724324ebde27fb17db487da9"
+    },
+    {
+      "path": "../redmaple-agent/test/agent.test.js",
+      "byteSha256": "sha256:17f52956efe571b618da82e9247a9e7ca180afacd6241c86bd6f64db8e350484"
+    },
+    {
+      "path": "../redmaple-agent/test/full-runtime.test.js",
+      "byteSha256": "sha256:d51507c5fd7bb43101c0c5579e48741dab4530f350f2068edc77295e04dbd9ce"
+    }
+  ],
+  "preparedAt": "2026-11-18T11:57:22.956Z"
+}

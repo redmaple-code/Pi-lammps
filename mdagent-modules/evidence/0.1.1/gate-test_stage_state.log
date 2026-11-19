@@ -1,0 +1,15 @@
+
+.C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-cc6_atci\assembly\src\evolution\memory.py:70: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\mdagent-modular-cc6_atci\\runtime\\memory\\atoms.jsonl' mode='r' encoding='utf-8'>
+  for line in open(path, encoding="utf-8", errors="replace"):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+...C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-cc6_atci\assembly\src\tests\test_stage_state.py:108: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_z9owbz7_\\memory\\tasks\\TASK-UT-008\\decisions/20261117T144731-x-f75da4.json' mode='r' encoding='utf-8'>
+  before = open(fp1, encoding="utf-8").read()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-cc6_atci\assembly\src\tests\test_stage_state.py:111: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\stage_state_test_z9owbz7_\\memory\\tasks\\TASK-UT-008\\decisions/20261117T144731-x-f75da4.json' mode='r' encoding='utf-8'>
+  self.assertEqual(open(fp1, encoding="utf-8").read(), before)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+............
+----------------------------------------------------------------------
+Ran 16 tests in 10.561s
+
+OK

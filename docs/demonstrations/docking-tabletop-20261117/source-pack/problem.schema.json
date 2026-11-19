@@ -1,0 +1,623 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Protein small molecule docking task",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "taskId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "taskType": {
+      "enum": [
+        "focused-docking",
+        "virtual-screening"
+      ]
+    },
+    "parameterStatus": {
+      "enum": [
+        "proposed",
+        "locked"
+      ]
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "structure": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        },
+        "chains": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1
+        },
+        "assemblyDecision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "retainedComponents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "missingSitePolicy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "structure",
+        "chains",
+        "provenance",
+        "assemblyDecision",
+        "retainedComponents",
+        "missingSitePolicy"
+      ]
+    },
+    "ligands": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        },
+        "format": {
+          "enum": [
+            "sdf",
+            "smiles"
+          ]
+        },
+        "stereochemistryPolicy": {
+          "enum": [
+            "preserveSpecifiedEnumerateUnspecified",
+            "specifiedOnly"
+          ]
+        },
+        "saltPolicy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deduplicationPolicy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "input",
+        "format",
+        "stereochemistryPolicy",
+        "saltPolicy",
+        "deduplicationPolicy"
+      ]
+    },
+    "preparation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pHRange": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 14
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "stateEnumerationMethod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "maxStatesPerParent": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "unresolvedStatesPolicy": {
+          "enum": [
+            "hold",
+            "includeWithFlag"
+          ]
+        },
+        "receptorStateDecision": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "pHRange",
+        "stateEnumerationMethod",
+        "maxStatesPerParent",
+        "unresolvedStatesPolicy",
+        "receptorStateDecision"
+      ]
+    },
+    "site": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "enum": [
+            "referenceLigand",
+            "knownResidues",
+            "externalPocket"
+          ]
+        },
+        "basisRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "center": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "size": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "unit": {
+          "const": "angstrom"
+        }
+      },
+      "required": [
+        "method",
+        "basisRef",
+        "center",
+        "size",
+        "unit"
+      ]
+    },
+    "search": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scoring": {
+          "const": "vina"
+        },
+        "exhaustiveness": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "numModes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "energyRange": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "kcal/mol"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "seeds": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "cpuPerRun": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "scoring",
+        "exhaustiveness",
+        "numModes",
+        "energyRange",
+        "seeds",
+        "cpuPerRun"
+      ]
+    },
+    "qualification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "claim": {
+          "enum": [
+            "poseHypothesis",
+            "poseRecovery",
+            "screeningEnrichment"
+          ]
+        },
+        "referenceLigand": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        },
+        "labeledSet": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "enum": [
+                "planned",
+                "acquired"
+              ]
+            },
+            "digest": {
+              "type": "string",
+              "pattern": "^sha256:[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "id",
+            "locator",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "acquired"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "digest"
+                ]
+              }
+            }
+          ]
+        },
+        "redockingRmsdLimit": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "angstrom"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "topN": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "evidenceRequirement": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "claim",
+        "evidenceRequirement"
+      ]
+    },
+    "ranking": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parentAggregation": {
+          "enum": [
+            "bestValidStateWithCountDisclosure",
+            "predefinedStateWeighted"
+          ]
+        },
+        "clusterRmsd": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "angstrom"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "failedRunPolicy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tiePolicy": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "parentAggregation",
+        "clusterRmsd",
+        "failedRunPolicy",
+        "tiePolicy"
+      ]
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "maxRuns": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "wallTimePerRun": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "unit": {
+              "const": "s"
+            }
+          },
+          "required": [
+            "value",
+            "unit"
+          ]
+        },
+        "maxConcurrentRuns": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "maxRuns",
+        "wallTimePerRun",
+        "maxConcurrentRuns"
+      ]
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "poses",
+          "ranking",
+          "contacts",
+          "controls",
+          "report"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "taskId",
+    "taskType",
+    "parameterStatus",
+    "target",
+    "ligands",
+    "preparation",
+    "site",
+    "search",
+    "qualification",
+    "ranking",
+    "resources",
+    "deliverables"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "qualification": {
+            "properties": {
+              "claim": {
+                "const": "poseRecovery"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "qualification": {
+            "required": [
+              "referenceLigand",
+              "redockingRmsdLimit",
+              "topN"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "qualification": {
+            "properties": {
+              "claim": {
+                "const": "screeningEnrichment"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "taskType": {
+            "const": "virtual-screening"
+          },
+          "qualification": {
+            "required": [
+              "labeledSet"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

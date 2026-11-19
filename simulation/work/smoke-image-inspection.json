@@ -1,0 +1,33 @@
+[
+  {
+    "name": "force-temperature.png",
+    "opened": true,
+    "checked": [
+      "Actual force/temperature image opened",
+      "Axes and units match the short regression run",
+      "High initial normal-force and temperature transients are visible and retained",
+      "This short run is used for software regression"
+    ]
+  },
+  {
+    "name": "cross-section.png",
+    "opened": true,
+    "checked": [
+      "Actual before/after image opened",
+      "Panels have equal spatial scales",
+      "Localized displacement is visible at the short-pass contact region",
+      "Fixed bottom layer remains stationary"
+    ]
+  },
+  {
+    "name": "grinding-atoms-ovito.png",
+    "opened": true,
+    "checked": [
+      "Actual OVITO Tachyon image opened",
+      "Central y slab contains the substrate and final contact groove",
+      "Positive x runs left to right with z upward",
+      "Five particle types use distinct colors",
+      "Analytical spherical abrasive has no explicit atoms and is described in render metadata"
+    ]
+  }
+]

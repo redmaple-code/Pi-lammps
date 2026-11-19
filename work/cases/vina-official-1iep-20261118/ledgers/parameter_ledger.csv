@@ -1,0 +1,22 @@
+﻿parameter,referenceValue,unit,source,implementationAndDifference
+receptor,inputs/official/1iep_receptor.pdbqt,file,official solution,unaltered bytes
+ligand,inputs/official/1iep_ligand.pdbqt,file,official solution,unaltered bytes
+crystal reference,reference/crystal-ligand.sdf,file,official data,unaltered bytes
+reference output,reference/official-vina-output.pdbqt,file,official solution,unaltered bytes
+box center,"15.190,53.903,16.917",angstrom,official box.txt,same
+box size,"20,20,20",angstrom,official box.txt,same
+scoring,vina,name,tutorial Vina branch,same
+seed,-1622165383,integer,tutorial section5.b,same signed seed
+exhaustiveness,32,integer,official command,main e32; sensitivity8/16
+num_modes,9,integer,Vina1.2.7 default,explicit
+energy_range,3,kcal/mol,Vina default/output cutoff,explicit
+min_rmsd,1,angstrom,Vina default,explicit
+spacing,0.375,angstrom,tutorial log,explicit
+cpu,auto; effective count unknown,threads,official log CPU0,4; disclosed difference
+solver,reference producer version unknown,version,reference file lacks version,Vina1.2.7
+ligand state,provided +1 state,formalCharge,official structure,fixed; no pH enumeration
+scope,"rigid receptor/flexible ligand, known site",model,official tutorial,same
+timeout,1800,s,implementation resource bound,new execution setting
+score tolerance,0.5,kcal/mol,predeclared engineering target,same for all comparisons
+reference RMSD limit,2,angstrom,predeclared recovery target,no ligand alignment
+physical time step,not applicable,none,stochastic docking,not introduced

@@ -1,0 +1,256 @@
+LAMMPS (2 Aug 2023)
+  using 1 OpenMP thread(s) per MPI task
+Loaded 1 plugins from e:\LAMMPS 64-bit 2Aug2023-MSMPI\plugins
+# Minimal changes from bundled LAMMPS Examples/indent/in.indent.lmp.
+# Explicit 3D alloy, frozen boundary, local thermostat, approach and lateral pass.
+units metal
+dimension 3
+boundary f p f
+atom_style atomic
+read_data alloy.data
+Reading data file ...
+  orthogonal box = (-12 0 -5) to (83.2 35.6 58.48)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  6400 atoms
+  read_data CPU = 0.067 seconds
+pair_style eam/alloy
+pair_coeff * * FeNiCrCoCu-heafixed.setfl Fe Ni Cr Co Cu
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+region base block INF INF INF INF INF 3.56000000 units box
+group fixed region base
+800 atoms in group fixed
+group mobile subtract all fixed
+5600 atoms in group mobile
+region bath block INF INF INF INF 3.56001000 10.68000000 units box
+group thermostat region bath
+1600 atoms in group thermostat
+group dynamic subtract mobile thermostat
+4000 atoms in group dynamic
+velocity fixed set 0.0 0.0 0.0
+fix freeze fixed setforce 0.0 0.0 0.0
+min_style cg
+minimize 1.0e-8 1.0e-6 1000 10000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.80375
+  ghost atom cutoff = 7.80375
+  binsize = 3.901875, bins = 25 10 17
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 6.261 | 6.261 | 6.261 Mbytes
+   Step          Temp          E_pair         E_mol          TotEng         Press     
+         0   0             -26072.835      0             -26072.835     -9982.6675    
+        75   0             -26098.225      0             -26098.225     -3618.6641    
+Loop time of 4.13006 on 1 procs for 75 steps with 6400 atoms
+
+94.2% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -26072.8349877915  -26098.2245959153  -26098.2248191968
+  Force two-norm initial, final = 19.091657 0.071246596
+  Force max component initial, final = 1.3830018 0.024766195
+  Final line search alpha, max atom move = 1 0.024766195
+  Iterations, force evaluations = 75 147
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.0631     | 4.0631     | 4.0631     |   0.0 | 98.38
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.010078   | 0.010078   | 0.010078   |   0.0 |  0.24
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0.002668   | 0.002668   | 0.002668   |   0.0 |  0.06
+Other   |            | 0.05421    |            |       |  1.31
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         485680 ave      485680 max      485680 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 485680
+Ave neighs/atom = 75.8875
+Neighbor list builds = 0
+Dangerous builds = 0
+reset_timestep 0
+velocity mobile create 300 482748 mom yes rot no dist gaussian
+fix integrate mobile nve
+fix equilibrate mobile langevin 300 300 0.1 482761 zero yes
+compute Tmobile mobile temp
+thermo 100
+thermo_style custom step atoms c_Tmobile pe ke etotal
+thermo_modify lost error flush yes
+timestep 0.001
+run 200
+Per MPI rank memory allocation (min/avg/max) = 5.136 | 5.136 | 5.136 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+         0        6400   300           -26098.225      217.11827     -25881.107    
+       100        6400   248.96645     -25934.432      180.18388     -25754.248    
+       200        6400   278.64407     -25906.456      201.66239     -25704.794    
+Loop time of 5.36746 on 1 procs for 200 steps with 6400 atoms
+
+Performance: 3.219 ns/day, 7.455 hours/ns, 37.262 timesteps/s, 238.474 katom-step/s
+96.4% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.2118     | 5.2118     | 5.2118     |   0.0 | 97.10
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.014032   | 0.014032   | 0.014032   |   0.0 |  0.26
+Output  | 0.001105   | 0.001105   | 0.001105   |   0.0 |  0.02
+Modify  | 0.12266    | 0.12266    | 0.12266    |   0.0 |  2.29
+Other   |            | 0.01791    |            |       |  0.33
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         485849 ave      485849 max      485849 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 485849
+Ave neighs/atom = 75.913906
+Neighbor list builds = 0
+Dangerous builds = 0
+unfix equilibrate
+fix bath thermostat langevin 300 300 0.1 482765 zero yes
+compute pe all pe/atom
+compute coord all coord/atom cutoff 3.2
+compute centro all centro/atom fcc
+compute cna all cna/atom 3.2
+dump trajectory all custom 50 trajectory.lammpstrj id type x y z c_pe c_coord c_centro c_cna
+dump_modify trajectory sort id
+write_dump all custom initial.lammpstrj id type x y z modify sort id
+variable ztip equal "40.1450000000+(step-200)*dt*(-20.0000000000)"
+fix tool mobile indent 10 sphere 17.8000000000 17.8000000000 v_ztip 12 units box
+variable tipx equal 17.8000000000
+variable tipz equal v_ztip
+variable tempmobile equal c_Tmobile
+variable fx equal f_tool[1]
+variable fy equal f_tool[2]
+variable fz equal f_tool[3]
+fix contact all print 10 "$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)" file approach.csv screen no title "step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K"
+run 200
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 7.80375
+  ghost atom cutoff = 7.80375
+  binsize = 3.901875, bins = 25 10 17
+  4 neighbor lists, perpetual/occasional/extra = 1 3 0
+  (1) pair eam/alloy, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d
+      bin: standard
+  (2) compute coord/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (3) compute centro/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+  (4) compute cna/atom, occasional
+      attributes: full, newton on
+      pair build: full/bin/atomonly
+      stencil: full/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 7.155 | 7.155 | 7.155 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+       200        6400   278.64407     -25906.456      201.66239     -25704.794    
+       300        6400   283.14166     -25901.067      204.91742     -25696.149    
+       400        6400   376.77667     -25849.446      272.68366     -25576.763    
+Loop time of 6.69482 on 1 procs for 200 steps with 6400 atoms
+
+Performance: 2.581 ns/day, 9.298 hours/ns, 29.874 timesteps/s, 191.193 katom-step/s
+95.5% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.8931     | 5.8931     | 5.8931     |   0.0 | 88.03
+Neigh   | 0.033744   | 0.033744   | 0.033744   |   0.0 |  0.50
+Comm    | 0.013872   | 0.013872   | 0.013872   |   0.0 |  0.21
+Output  | 0.63371    | 0.63371    | 0.63371    |   0.0 |  9.47
+Modify  | 0.10269    | 0.10269    | 0.10269    |   0.0 |  1.53
+Other   |            | 0.01766    |            |       |  0.26
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         488594 ave      488594 max      488594 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       977402 ave      977402 max      977402 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 977402
+Ave neighs/atom = 152.71906
+Neighbor list builds = 2
+Dangerous builds = 0
+unfix contact
+unfix tool
+variable ztip delete
+variable xtip equal "17.8000000000+(step-400)*dt*10"
+variable tipx delete
+variable tipx equal v_xtip
+variable tipz delete
+variable tipz equal 36.1450000000
+fix tool mobile indent 10 sphere v_xtip 17.8000000000 36.1450000000 12 units box
+fix contact all print 10 "$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)" file grinding.csv screen no title "step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K"
+run 200
+Per MPI rank memory allocation (min/avg/max) = 21.22 | 21.22 | 21.22 Mbytes
+   Step        Atoms      c_Tmobile        PotEng         KinEng         TotEng    
+       400        6400   376.77667     -25849.446      272.68366     -25576.763    
+       500        6400   372.81758     -25815.402      269.81836     -25545.583    
+       600        6400   366.34903     -25809.906      265.13689     -25544.769    
+Loop time of 6.47655 on 1 procs for 200 steps with 6400 atoms
+
+Performance: 2.668 ns/day, 8.995 hours/ns, 30.881 timesteps/s, 197.636 katom-step/s
+97.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 5.7456     | 5.7456     | 5.7456     |   0.0 | 88.71
+Neigh   | 0.035851   | 0.035851   | 0.035851   |   0.0 |  0.55
+Comm    | 0.012818   | 0.012818   | 0.012818   |   0.0 |  0.20
+Output  | 0.56382    | 0.56382    | 0.56382    |   0.0 |  8.71
+Modify  | 0.10057    | 0.10057    | 0.10057    |   0.0 |  1.55
+Other   |            | 0.01794    |            |       |  0.28
+
+Nlocal:           6400 ave        6400 max        6400 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           2880 ave        2880 max        2880 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:         488232 ave      488232 max      488232 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       976398 ave      976398 max      976398 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 976398
+Ave neighs/atom = 152.56219
+Neighbor list builds = 2
+Dangerous builds = 0
+write_dump all custom final.lammpstrj id type x y z c_pe c_coord c_centro c_cna modify sort id
+write_data final.data
+System init for write_data ...
+write_restart final.restart
+System init for write_restart ...
+print "REDMAPLE_GRINDING_COMPLETE"
+REDMAPLE_GRINDING_COMPLETE
+Total wall time: 0:00:23

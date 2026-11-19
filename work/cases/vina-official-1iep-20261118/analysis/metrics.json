@@ -1,0 +1,84 @@
+{
+  "caseId": "vina-official-1iep-20261118",
+  "generatedAt": "2026-11-18T08:21:00.832671+00:00",
+  "reproductionLevel": "method_reproduction",
+  "referenceTop1Score_kcal_per_mol": -13.234,
+  "referenceTop1CrystalRMSD_A": 0.3790942660992772,
+  "fixedReferencePoseCurrentScore_kcal_per_mol": -13.236,
+  "fixedPoseScoreDifference_kcal_per_mol": -0.002000000000000668,
+  "mainRun": {
+    "runId": "e32",
+    "exhaustiveness": 32,
+    "seed": -1622165383,
+    "top1Score_kcal_per_mol": -13.229,
+    "officialTop1Score_kcal_per_mol": -13.234,
+    "scoreDifference_kcal_per_mol": 0.005000000000000782,
+    "top1CrystalRMSD_A": 0.3612400910512978,
+    "top1OfficialPoseRMSD_A": 0.06196573288179322,
+    "poseCount": 4,
+    "durationSeconds": 1267.5160000000615
+  },
+  "searchBudgetStudy": [
+    {
+      "runId": "e8",
+      "exhaustiveness": 8,
+      "seed": -1622165383,
+      "top1Score_kcal_per_mol": -13.271,
+      "officialTop1Score_kcal_per_mol": -13.234,
+      "scoreDifference_kcal_per_mol": -0.03700000000000081,
+      "top1CrystalRMSD_A": 0.354566036516136,
+      "top1OfficialPoseRMSD_A": 0.0486292550248367,
+      "poseCount": 3,
+      "durationSeconds": 379.4220000000205
+    },
+    {
+      "runId": "e16",
+      "exhaustiveness": 16,
+      "seed": -1622165383,
+      "top1Score_kcal_per_mol": -13.271,
+      "officialTop1Score_kcal_per_mol": -13.234,
+      "scoreDifference_kcal_per_mol": -0.03700000000000081,
+      "top1CrystalRMSD_A": 0.354566036516136,
+      "top1OfficialPoseRMSD_A": 0.0486292550248367,
+      "poseCount": 4,
+      "durationSeconds": 1379.140000000014
+    },
+    {
+      "runId": "e32",
+      "exhaustiveness": 32,
+      "seed": -1622165383,
+      "top1Score_kcal_per_mol": -13.229,
+      "officialTop1Score_kcal_per_mol": -13.234,
+      "scoreDifference_kcal_per_mol": 0.005000000000000782,
+      "top1CrystalRMSD_A": 0.3612400910512978,
+      "top1OfficialPoseRMSD_A": 0.06196573288179322,
+      "poseCount": 4,
+      "durationSeconds": 1267.5160000000615
+    }
+  ],
+  "officialModes": 4,
+  "bestOfUpTo5CrystalPose": {
+    "runId": "e32",
+    "exhaustiveness": 32,
+    "poseRank": 1,
+    "score_kcal_per_mol": -13.229,
+    "crystalRMSD_A": 0.3612400910512978,
+    "officialTop1RMSD_A": 0.06196573288179322
+  },
+  "availablePosesWithinTop5": 4,
+  "top1HeavyAtomContactsWithin4A": 111,
+  "mainModes": 4,
+  "matchedOfficialModesWithin2A": 3,
+  "top1PoseBustersChecks": 28,
+  "top1PoseBustersFailures": [],
+  "primaryCriteria": {
+    "scoreDifference": true,
+    "officialPoseRMSD": true,
+    "crystalRMSD": true,
+    "posePlausibility": true
+  },
+  "limitations": [
+    "Reference output producer version and hardware were not recorded.",
+    "The documentation uses CPU auto-detection; the current run fixes four threads."
+  ]
+}

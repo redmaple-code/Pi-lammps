@@ -1,0 +1,467 @@
+{
+  "revision": "MD-1",
+  "existing": [
+    {
+      "path": "../../redmaple-agent/src/full-runtime.js",
+      "entry": "createRedMapleRuntime",
+      "modules": [
+        "MOD-02",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/durable.js",
+      "entry": "openRedMapleHarness",
+      "modules": [
+        "MOD-02",
+        "MOD-08"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/platform-extension.js",
+      "entry": "createPlatformExtension",
+      "modules": [
+        "MOD-02",
+        "MOD-13",
+        "MOD-15",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/native-workflow.js",
+      "entry": "openRuntimeWorkflowRunner",
+      "modules": [
+        "MOD-02",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/workflow-verification.js",
+      "entry": "verifyWorkflow / validateCompletion",
+      "modules": [
+        "MOD-04",
+        "MOD-05"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/platform-store.js",
+      "entry": "PlatformStore",
+      "modules": [
+        "MOD-08",
+        "MOD-12"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/knowledge.js",
+      "entry": "KnowledgeStore",
+      "modules": [
+        "MOD-06",
+        "MOD-12"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/evolution.js",
+      "entry": "EvolutionStore",
+      "modules": [
+        "MOD-13",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/session-controls.js",
+      "entry": "SessionControls",
+      "modules": [
+        "MOD-02",
+        "MOD-11",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/permissions.js",
+      "entry": "authorizeTool",
+      "modules": [
+        "MOD-02",
+        "MOD-11",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/upstream.js",
+      "entry": "upstreamModule",
+      "modules": [
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/src/native-compaction.js",
+      "entry": "compactNativeSession",
+      "modules": [
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    },
+    {
+      "path": "../../redmaple-agent/test/agent.test.js",
+      "entry": "time budget stops acceptances",
+      "modules": [
+        "MOD-17",
+        "MOD-18"
+      ],
+      "mappingRole": "existing",
+      "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+      "meaning": "Observed reuse or change point; does not mean target migration is implemented."
+    }
+  ],
+  "planned": [
+    {
+      "moduleId": "MOD-01",
+      "path": "simulation/packages/contracts",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-01.md",
+      "behavior": "为所有生产者和消费者提供同一套记录、错误、身份与版本规则；不承担流程推进和科学判断。",
+      "tests": [
+        "ACC-01-01",
+        "ACC-01-02",
+        "ACC-01-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-02",
+      "path": "simulation/packages/runtime-redmaple",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-02.md",
+      "behavior": "将角色任务变为独立 Pi 会话和可核回执，保留预算、取消、上下文与调用追踪；不将自然语言结果直接写成阶段通过。",
+      "tests": [
+        "ACC-02-01",
+        "ACC-02-02",
+        "ACC-02-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-03",
+      "path": "simulation/packages/kernel/src/stages",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-03.md",
+      "behavior": "把已解析领域流程和用户范围展开成可执行阶段实例；通用内核不固定 WF 编号，LAMMPS profile 保留原必经链。",
+      "tests": [
+        "ACC-03-01",
+        "ACC-03-02",
+        "ACC-03-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-04",
+      "path": "simulation/packages/kernel/src/gates",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-04.md",
+      "behavior": "校验检查适用性、审查独立性和放行前置；机器证明结构/关联有效，科学结论仍由相应审查产生。",
+      "tests": [
+        "ACC-04-01",
+        "ACC-04-02",
+        "ACC-04-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-05",
+      "path": "simulation/packages/artifacts",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-05.md",
+      "behavior": "将文件与数据绑定到不可变内容、版本和生产链；支持二进制、大轨迹、旧目录和最小修改。",
+      "tests": [
+        "ACC-05-01",
+        "ACC-05-02",
+        "ACC-05-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-06",
+      "path": "simulation/packages/kernel/src/evidence",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-06.md",
+      "behavior": "让每个依据可定位、可核对、可区分独立来源与证据等级；不把检索分数当科学可信度。",
+      "tests": [
+        "ACC-06-01",
+        "ACC-06-02",
+        "ACC-06-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-07",
+      "path": "simulation/packages/kernel/src/repair",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-07.md",
+      "behavior": "保留执行—分类—规划—委派分责，形成最小修复与重审链；不根据关键词直接修改科学参数。",
+      "tests": [
+        "ACC-07-01",
+        "ACC-07-02",
+        "ACC-07-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-08",
+      "path": "simulation/packages/kernel/src/state",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-08.md",
+      "behavior": "提供唯一科学状态写入口、原子事件/outbox、幂等与恢复；与Pi对话和宿主调用账本保持职责分离。",
+      "tests": [
+        "ACC-08-01",
+        "ACC-08-02",
+        "ACC-08-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-09",
+      "path": "simulation/packages/kernel/src/measurement 与 simulation/packages/analysis",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-09.md",
+      "behavior": "确保指标可计算、来源明确，分开运行成功、数值验证、模型验证与任务判据。",
+      "tests": [
+        "ACC-09-01",
+        "ACC-09-02",
+        "ACC-09-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-10",
+      "path": "simulation/domains/lammps",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-10.md",
+      "behavior": "把原科学职责完整保存为可解析、可版本化的领域内容；保留原强要求而不写进通用内核。",
+      "tests": [
+        "ACC-10-01",
+        "ACC-10-02",
+        "ACC-10-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-11",
+      "path": "simulation/packages/execution",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-11.md",
+      "behavior": "管理真实求解器进程或调度器作业的提交、观察、收集和取消；持续任务不依赖TUI存活。",
+      "tests": [
+        "ACC-11-01",
+        "ACC-11-02",
+        "ACC-11-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-12",
+      "path": "simulation/packages/knowledge",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-12.md",
+      "behavior": "保留知识来源、状态、适用范围和经验闭环；检索后端可替换，知识批准不等于仿真批准。",
+      "tests": [
+        "ACC-12-01",
+        "ACC-12-02",
+        "ACC-12-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-13",
+      "path": "simulation/packages/improvement",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-13.md",
+      "behavior": "从授权历史和失败证据产生候选，经配对评估与明确应用发布；不自动修改活跃受保护资产。",
+      "tests": [
+        "ACC-13-01",
+        "ACC-13-02",
+        "ACC-13-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-14",
+      "path": "simulation/packages/presentation",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-14.md",
+      "behavior": "由既定分析生成实际图形与分项报告，准确显示未完成和限制。",
+      "tests": [
+        "ACC-14-01",
+        "ACC-14-02",
+        "ACC-14-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-15",
+      "path": "simulation/apps/cli",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-15.md",
+      "behavior": "给用户可理解的包选择、任务范围、进度、决定和恢复入口，保持UI只是状态投影。",
+      "tests": [
+        "ACC-15-01",
+        "ACC-15-02",
+        "ACC-15-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-16",
+      "path": "simulation/packages/migration",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-16.md",
+      "behavior": "让原角色/规则/知识/案例逐项有去向，保留旧状态证据并可回滚切换。",
+      "tests": [
+        "ACC-16-01",
+        "ACC-16-02",
+        "ACC-16-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-17",
+      "path": "simulation/tests 与 docs/evidence",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-17.md",
+      "behavior": "用分层证据证明功能覆盖、兼容与科学边界；不以mock或文档齐全替代真实验收。",
+      "tests": [
+        "ACC-17-01",
+        "ACC-17-02",
+        "ACC-17-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-18",
+      "path": "redmaple-agent/src（现有）；Pi fork（条件性后续）",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-18.md",
+      "behavior": "为仿真提供通用能力改进，同时保留独立Pi演进、旧SDK和通用任务的兼容性。",
+      "tests": [
+        "ACC-18-01",
+        "ACC-18-02",
+        "ACC-18-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-19",
+      "path": "simulation/packages/pack-resolver",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-19.md",
+      "behavior": "在执行前将包、任务和环境解析成不可变锁及诊断，支持通用包组合与替换而不放宽LAMMPS原规则。",
+      "tests": [
+        "ACC-19-01",
+        "ACC-19-02",
+        "ACC-19-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-20",
+      "path": "simulation/packages/kernel/src/studies 与 adapters/exchange",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-20.md",
+      "behavior": "支持扫描、收敛、随机重复、校准/优化以及显式跨尺度交换；作为K1/K3/K7组合，不能另建旁路状态机。",
+      "tests": [
+        "ACC-20-01",
+        "ACC-20-02",
+        "ACC-20-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    },
+    {
+      "moduleId": "MOD-21",
+      "path": "simulation/domains/structural-mechanics 与 simulation/domains/discrete-event",
+      "entry": "See module APIs and file split",
+      "mappingRole": "planned",
+      "document": "modules/MOD-21.md",
+      "behavior": "用两种不同范式的真实任务检验通用性，交付领域包、工具绑定、基准与负例，不能只用多个LAMMPS材料证明跨域。",
+      "tests": [
+        "ACC-21-01",
+        "ACC-21-02",
+        "ACC-21-03"
+      ],
+      "implementationStatus": "notImplemented",
+      "verificationStatus": "notRun"
+    }
+  ]
+}

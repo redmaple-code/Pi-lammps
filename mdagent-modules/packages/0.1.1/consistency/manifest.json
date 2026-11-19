@@ -1,0 +1,411 @@
+{
+  "name": "consistency",
+  "version": "0.1.1",
+  "layout": "handoff-src-overlay/1",
+  "requires": [
+    "shared"
+  ],
+  "source_zip_sha256": "e7fbae3489c45985cace5cbe9dc03c3ffb4837799828889227f27b57531832ec",
+  "files": {
+    "src/design-review-layer/README.md": {
+      "sha256": "3ced775a7dbe10621c1167348ca1919ca57bbb949e76d66efd360f24229d61df",
+      "upstream_sha256": "3ced775a7dbe10621c1167348ca1919ca57bbb949e76d66efd360f24229d61df",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/baseline/registry.json": {
+      "sha256": "27be6dbd257eafd10436ff9ccd4ba3d9ab8a8da373ac0b01dcc2babddcf064e7",
+      "upstream_sha256": "27be6dbd257eafd10436ff9ccd4ba3d9ab8a8da373ac0b01dcc2babddcf064e7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case1/in.case": {
+      "sha256": "c19a31ccf9138e3e364bd66f230e30bfd9a14f8f50b07842602deaa1a9affbf6",
+      "upstream_sha256": "c19a31ccf9138e3e364bd66f230e30bfd9a14f8f50b07842602deaa1a9affbf6",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case1/intent.json": {
+      "sha256": "8b392c1a7ee5aaee7919e6a2b5fe107680c6ef44dd2bb617f95269fd01946746",
+      "upstream_sha256": "8b392c1a7ee5aaee7919e6a2b5fe107680c6ef44dd2bb617f95269fd01946746",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case2/in.case": {
+      "sha256": "65b7e8731e761830debf6f0cbda0c9c04c6a0b58fdcf381c7b35b5ef6f6778f5",
+      "upstream_sha256": "65b7e8731e761830debf6f0cbda0c9c04c6a0b58fdcf381c7b35b5ef6f6778f5",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case2/intent.json": {
+      "sha256": "7026714114b7587a4bd78a710247c76e3806fb469d3d6c8540f9474fc6a4ebb2",
+      "upstream_sha256": "7026714114b7587a4bd78a710247c76e3806fb469d3d6c8540f9474fc6a4ebb2",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case3/in.case": {
+      "sha256": "8c30aaa59acdd87c36ce6da78c60f23c6341a1f5eafde542872819c9b7a3aea5",
+      "upstream_sha256": "8c30aaa59acdd87c36ce6da78c60f23c6341a1f5eafde542872819c9b7a3aea5",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case3/intent.json": {
+      "sha256": "177f6585c3ce5e619892b251a0931af3d6406f6f8d3715dca815da574181d2cc",
+      "upstream_sha256": "177f6585c3ce5e619892b251a0931af3d6406f6f8d3715dca815da574181d2cc",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case4/in.case": {
+      "sha256": "f5a7d9a37e7ad1d8b124824212d9fc331b3f27e7b831c5fc521461290e9bfc36",
+      "upstream_sha256": "f5a7d9a37e7ad1d8b124824212d9fc331b3f27e7b831c5fc521461290e9bfc36",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case4/intent.json": {
+      "sha256": "9b4ecff8bf2570c3d1e306b9e4bbdb5ae2d64bc6c0673f6d3d66505600bb42e1",
+      "upstream_sha256": "9b4ecff8bf2570c3d1e306b9e4bbdb5ae2d64bc6c0673f6d3d66505600bb42e1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case5/in.case": {
+      "sha256": "b24e2a0b98616e2664e5fa77f1c5029bd20fcd9311012ce0d15e89fe52818de7",
+      "upstream_sha256": "b24e2a0b98616e2664e5fa77f1c5029bd20fcd9311012ce0d15e89fe52818de7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/cases/case5/intent.json": {
+      "sha256": "25d1b658f9be140e700d7c9d63ae3028ca385bc14a30e6b6c92a818aa5519770",
+      "upstream_sha256": "25d1b658f9be140e700d7c9d63ae3028ca385bc14a30e6b6c92a818aa5519770",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/common_issues/registry.json": {
+      "sha256": "3222e46db02cca286004ee76d3d1a7c046a7f0881968409dbc572b4f6fb4680e",
+      "upstream_sha256": "3222e46db02cca286004ee76d3d1a7c046a7f0881968409dbc572b4f6fb4680e",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/examples/bad_drawing/in.case": {
+      "sha256": "2de344bd935b49141b903ff1480cf578c9006d48bb9187d89374412864f913b1",
+      "upstream_sha256": "2de344bd935b49141b903ff1480cf578c9006d48bb9187d89374412864f913b1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/examples/bad_drawing/intent.json": {
+      "sha256": "20b8befd557fb776de6eb980d7ea3857f8244ab7c749f29f3ac105bb34468afb",
+      "upstream_sha256": "20b8befd557fb776de6eb980d7ea3857f8244ab7c749f29f3ac105bb34468afb",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/layer_config.json": {
+      "sha256": "d0ff5ad73cc06a29f46b90916c700c68aaca41bdac389429ea8004ce7c922056",
+      "upstream_sha256": "d0ff5ad73cc06a29f46b90916c700c68aaca41bdac389429ea8004ce7c922056",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case1_coverage.json": {
+      "sha256": "3a1dd722fc8af13a0ef2a5a79907720e138a655ce1053710b8e21359b5d6a3c2",
+      "upstream_sha256": "3a1dd722fc8af13a0ef2a5a79907720e138a655ce1053710b8e21359b5d6a3c2",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case1_digest.json": {
+      "sha256": "e35511e7a0d4cc8ac082864c912d227a44243d57d5c05bcffe8eca5ae701ca26",
+      "upstream_sha256": "e35511e7a0d4cc8ac082864c912d227a44243d57d5c05bcffe8eca5ae701ca26",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case1_points.json": {
+      "sha256": "3209f5ad097c536608b55a0d9fa70c1d3b4430397cb6bdcda45317dc74294bbf",
+      "upstream_sha256": "3209f5ad097c536608b55a0d9fa70c1d3b4430397cb6bdcda45317dc74294bbf",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case1_points_gap.json": {
+      "sha256": "254d0822dae16c994ae0d0beb3985bf9aced5afbdb64183b9c18db9cfb96ee36",
+      "upstream_sha256": "254d0822dae16c994ae0d0beb3985bf9aced5afbdb64183b9c18db9cfb96ee36",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case1_points_raw.json": {
+      "sha256": "7285d7472a739d69b93d68aa0f91b4ed2d0a54cef67240a8a243ee470fc82ae2",
+      "upstream_sha256": "7285d7472a739d69b93d68aa0f91b4ed2d0a54cef67240a8a243ee470fc82ae2",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case2_coverage.json": {
+      "sha256": "d3c9afea35a1977546dd7cc3083053b189921049aa0ef73b61216ebfd4080aa7",
+      "upstream_sha256": "d3c9afea35a1977546dd7cc3083053b189921049aa0ef73b61216ebfd4080aa7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case2_digest.json": {
+      "sha256": "9d0a0f67dd083d13521c7207ba71cf5e9a4614d87cfc81204812f7e40524b2bb",
+      "upstream_sha256": "9d0a0f67dd083d13521c7207ba71cf5e9a4614d87cfc81204812f7e40524b2bb",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case2_points.json": {
+      "sha256": "8425fd4888c2f4e7e29b9f550ed6f083e20299ba891be6ecfd0321eaac21db34",
+      "upstream_sha256": "8425fd4888c2f4e7e29b9f550ed6f083e20299ba891be6ecfd0321eaac21db34",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case2_points_gap.json": {
+      "sha256": "232bade57f6d5ba9d2270b801779b8c7234a2b49fe19f08516adc4b570701432",
+      "upstream_sha256": "232bade57f6d5ba9d2270b801779b8c7234a2b49fe19f08516adc4b570701432",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case2_points_raw.json": {
+      "sha256": "210081645ceeb5eb2cea7caabe435e9475724fda23da96d37732c3e12267c27d",
+      "upstream_sha256": "210081645ceeb5eb2cea7caabe435e9475724fda23da96d37732c3e12267c27d",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case3_coverage.json": {
+      "sha256": "9a53e75e8426b3c8ed875a3d74b4d806c7ffc07bc9961669da883895b9b7f3ed",
+      "upstream_sha256": "9a53e75e8426b3c8ed875a3d74b4d806c7ffc07bc9961669da883895b9b7f3ed",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case3_digest.json": {
+      "sha256": "b24943a4a9918b4c23ac40f885112fb22810d6706773527ae881263c4a0c4aff",
+      "upstream_sha256": "b24943a4a9918b4c23ac40f885112fb22810d6706773527ae881263c4a0c4aff",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case3_points.json": {
+      "sha256": "b8e9470451f76dc3d6dbbf1854903e29fcf78d668c0c0bad25b03f1a97e00d54",
+      "upstream_sha256": "b8e9470451f76dc3d6dbbf1854903e29fcf78d668c0c0bad25b03f1a97e00d54",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case3_points_gap.json": {
+      "sha256": "9fa5868317037d4145112e733d12f3b46a97d1ec392e2e1ca41399334fef1218",
+      "upstream_sha256": "9fa5868317037d4145112e733d12f3b46a97d1ec392e2e1ca41399334fef1218",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case3_points_raw.json": {
+      "sha256": "4793872823823989ac5497eb931bb4a07153d5e37d1ca7127d425d5883c873ad",
+      "upstream_sha256": "4793872823823989ac5497eb931bb4a07153d5e37d1ca7127d425d5883c873ad",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case4_coverage.json": {
+      "sha256": "1ef7afd425d62179e7e209d4cb029f770a531f9fba42940c58e4a70417bbd85f",
+      "upstream_sha256": "1ef7afd425d62179e7e209d4cb029f770a531f9fba42940c58e4a70417bbd85f",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case4_digest.json": {
+      "sha256": "297587866335dad7312187ccdf8b287ee6712ceb16b9ec7cd71db31257999af3",
+      "upstream_sha256": "297587866335dad7312187ccdf8b287ee6712ceb16b9ec7cd71db31257999af3",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case4_points.json": {
+      "sha256": "5d4d5f77988b4b1a4bcbce20fb9eed9550679c8c30a6c283300dceec95d9b578",
+      "upstream_sha256": "5d4d5f77988b4b1a4bcbce20fb9eed9550679c8c30a6c283300dceec95d9b578",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case4_points_gap.json": {
+      "sha256": "6a96176d472e99a22b88c89dfbd98be6c13296239216acc79d75951bda0147a2",
+      "upstream_sha256": "6a96176d472e99a22b88c89dfbd98be6c13296239216acc79d75951bda0147a2",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case4_points_raw.json": {
+      "sha256": "dcd44602d1033c490a8417ee87652b2c9b7b83fcb2bc945196e4737e9e837309",
+      "upstream_sha256": "dcd44602d1033c490a8417ee87652b2c9b7b83fcb2bc945196e4737e9e837309",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case5_coverage.json": {
+      "sha256": "8dc28a7d121f5f2fe3c739adaaccbfff72846d9efe2dc17d8b8c49aad473b155",
+      "upstream_sha256": "8dc28a7d121f5f2fe3c739adaaccbfff72846d9efe2dc17d8b8c49aad473b155",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case5_digest.json": {
+      "sha256": "19945715c3e0d59e8548414009f5f4c2fdc3e5858b5bcf5044443d3ffdf6e0ab",
+      "upstream_sha256": "19945715c3e0d59e8548414009f5f4c2fdc3e5858b5bcf5044443d3ffdf6e0ab",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case5_points.json": {
+      "sha256": "0cee4f63ef35012c22d29d4ae49ecd629c5e1666fd95030b52890df1864c5507",
+      "upstream_sha256": "0cee4f63ef35012c22d29d4ae49ecd629c5e1666fd95030b52890df1864c5507",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case5_points_gap.json": {
+      "sha256": "7c950cc1865d6610898f22a5475851a007f32c2efa38cd846a0865fa3b4a686b",
+      "upstream_sha256": "7c950cc1865d6610898f22a5475851a007f32c2efa38cd846a0865fa3b4a686b",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/reports/discovery/case5_points_raw.json": {
+      "sha256": "a050114ae2b520ae42c76cd8afd2f3b719e6101faf82490756ea8a9f93aa7713",
+      "upstream_sha256": "a050114ae2b520ae42c76cd8afd2f3b719e6101faf82490756ea8a9f93aa7713",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/__init__.py": {
+      "sha256": "dc52ed8fd3df184a8bdad308a870a2cf4c83c7b5c20b04848a0e7be7b63c1913",
+      "upstream_sha256": "dc52ed8fd3df184a8bdad308a870a2cf4c83c7b5c20b04848a0e7be7b63c1913",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/audit_report.py": {
+      "sha256": "d029d1e4220aabb4f92e4da329e628d470b62748e108d3e3ab7af6d017b9956d",
+      "upstream_sha256": "d029d1e4220aabb4f92e4da329e628d470b62748e108d3e3ab7af6d017b9956d",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/baseline.py": {
+      "sha256": "8caec1ff18f0ef59a9dfba9fa1434464adf88cb1036c1bdc263c8d48e15cd86e",
+      "upstream_sha256": "8caec1ff18f0ef59a9dfba9fa1434464adf88cb1036c1bdc263c8d48e15cd86e",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/baseline_cli.py": {
+      "sha256": "c742c01ad8cb159104827b2865d5163a728d60348c699569d84296861b3c528f",
+      "upstream_sha256": "c742c01ad8cb159104827b2865d5163a728d60348c699569d84296861b3c528f",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/cli.py": {
+      "sha256": "e4614c2b5ee27136ce45b347951fec0ffebf9744b9953d802262d846727d2a19",
+      "upstream_sha256": "b7b2977039c011249ee423568fd846152139b222b374d42a4b91c94a8068f9a0",
+      "upstream_source": "v3",
+      "changes": [
+        "Correct CLI exit for PASS"
+      ]
+    },
+    "src/design-review-layer/review_layer/common_issues.py": {
+      "sha256": "1463af80507fb95421e94b428ca94a955c8046dc66d112a9c993fc696012c156",
+      "upstream_sha256": "1463af80507fb95421e94b428ca94a955c8046dc66d112a9c993fc696012c156",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/consistency.py": {
+      "sha256": "d14188216d69d82de85811234e746d1936f6f5ddb643fef2f52ad1c36fb41ed9",
+      "upstream_sha256": "d14188216d69d82de85811234e746d1936f6f5ddb643fef2f52ad1c36fb41ed9",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/discovery.py": {
+      "sha256": "f0217787db095d176e46a20ae98c1562a212aee8a43a68f1a58fbe7490a10ce1",
+      "upstream_sha256": "f0217787db095d176e46a20ae98c1562a212aee8a43a68f1a58fbe7490a10ce1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/discovery_report.py": {
+      "sha256": "756cfb5b346d27b6e2ea0015c91b22d893ece3e90885e65f8ed0dce8cfce1f46",
+      "upstream_sha256": "756cfb5b346d27b6e2ea0015c91b22d893ece3e90885e65f8ed0dce8cfce1f46",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/export_bundle.py": {
+      "sha256": "0bb9beda09bea5bd9e3a1bbd6273d47c8624aff073406dab50669b3514a7db67",
+      "upstream_sha256": "0bb9beda09bea5bd9e3a1bbd6273d47c8624aff073406dab50669b3514a7db67",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/full_report.py": {
+      "sha256": "1997c930beacdaaad3c216ca1b87874796f2e2198cb2b9921c7f52598446a7af",
+      "upstream_sha256": "1997c930beacdaaad3c216ca1b87874796f2e2198cb2b9921c7f52598446a7af",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/kb_api.py": {
+      "sha256": "c2275857483d56e225aca85f7a7d1c77f55e3a963395187bed7d59426d3eca1f",
+      "upstream_sha256": "c2275857483d56e225aca85f7a7d1c77f55e3a963395187bed7d59426d3eca1f",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/models.py": {
+      "sha256": "25e4d898b720dee0aa6a8d073b4efffbc2ecf32f797f90d0e384c3c8f8180726",
+      "upstream_sha256": "25e4d898b720dee0aa6a8d073b4efffbc2ecf32f797f90d0e384c3c8f8180726",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/review.py": {
+      "sha256": "eb534d7d60d2570b81fc5708bc84be20c324d6597f7be9d86c70747dfbb7c6b9",
+      "upstream_sha256": "d08683a5e7768d8826fcf151e1921ae0b854405112f3112e5ad2334f6595c574",
+      "upstream_source": "v3",
+      "changes": [
+        "Empty or unknown consistency verdict cannot PASS"
+      ]
+    },
+    "src/design-review-layer/review_layer/rules/README.md": {
+      "sha256": "a07d7abce7e56f5b1195248a20c0a6d58c88432e657a02fc262cabbb12b549c9",
+      "upstream_sha256": "a07d7abce7e56f5b1195248a20c0a6d58c88432e657a02fc262cabbb12b549c9",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/rules/infile_rules.json": {
+      "sha256": "bc23350c33c3dc88446c1183d059177791deb5d0248991ac4a65de2ef251b16c",
+      "upstream_sha256": "bc23350c33c3dc88446c1183d059177791deb5d0248991ac4a65de2ef251b16c",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/sources.py": {
+      "sha256": "c47462789013ff0319e0c0eb22f648a2c99a5de36085cb6fd30d557f2b458e5c",
+      "upstream_sha256": "c47462789013ff0319e0c0eb22f648a2c99a5de36085cb6fd30d557f2b458e5c",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/template_check.py": {
+      "sha256": "130ab26329214508002e3de265219d024381d37304037ade90a0151e5a9d18f8",
+      "upstream_sha256": "130ab26329214508002e3de265219d024381d37304037ade90a0151e5a9d18f8",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/ukb_cli.py": {
+      "sha256": "ba34e34e520abd6bb7d9e0d0a32076103668b2ceabd4b4661a6202d75c85dd1f",
+      "upstream_sha256": "ba34e34e520abd6bb7d9e0d0a32076103668b2ceabd4b4661a6202d75c85dd1f",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/review_layer/ukb_store.py": {
+      "sha256": "065986cf3e57f544a38f38bdb65587245a88aac411cf8e2d6c382741ace8ba52",
+      "upstream_sha256": "065986cf3e57f544a38f38bdb65587245a88aac411cf8e2d6c382741ace8ba52",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/templates/manifest.json": {
+      "sha256": "8c5e038743878b1947f610c7a4d126b32fc1347ac1dd057ed59a71904de25c72",
+      "upstream_sha256": "8c5e038743878b1947f610c7a4d126b32fc1347ac1dd057ed59a71904de25c72",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/tests/test_consistency.py": {
+      "sha256": "7a5880329c5ce0f0605eabb692015a5a61311de129a28517ae69a823ecca2d8f",
+      "upstream_sha256": "7a5880329c5ce0f0605eabb692015a5a61311de129a28517ae69a823ecca2d8f",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/tests/test_kb_api.py": {
+      "sha256": "13ec9683a1046359aa3609cc356bf5f25d7c102b725170adbb1787b3eeef6159",
+      "upstream_sha256": "13ec9683a1046359aa3609cc356bf5f25d7c102b725170adbb1787b3eeef6159",
+      "upstream_source": "handoff-package",
+      "changes": []
+    },
+    "src/design-review-layer/web/design_plan_server.py": {
+      "sha256": "3c638860b4c061101308ea1f32c04079ffade2e7f0b9fda696426aed9109b552",
+      "upstream_sha256": "3c638860b4c061101308ea1f32c04079ffade2e7f0b9fda696426aed9109b552",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/design-review-layer/web/static/design-plan.html": {
+      "sha256": "0130c76cc71388f594b9be9ddef79f59b86058de4912a259f4f87d579254958b",
+      "upstream_sha256": "0130c76cc71388f594b9be9ddef79f59b86058de4912a259f4f87d579254958b",
+      "upstream_source": "v3",
+      "changes": []
+    }
+  }
+}

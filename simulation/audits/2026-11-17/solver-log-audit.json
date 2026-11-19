@@ -1,0 +1,59 @@
+[
+  {
+    "operationId": "lammps-1b6ba184-dd12-4ce7-a3c4-d1b909726a9e",
+    "status": "succeeded",
+    "exitCode": 0,
+    "timedOut": false,
+    "errors": [],
+    "warnings": [],
+    "dangerousBuilds": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "completionMarker": true,
+    "wallTime": [
+      "0:00:23"
+    ],
+    "log": "simulation\\work\\jobs\\lammps-1b6ba184-dd12-4ce7-a3c4-d1b909726a9e\\work\\log.lammps"
+  },
+  {
+    "operationId": "lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e",
+    "status": "succeeded",
+    "exitCode": 0,
+    "timedOut": false,
+    "errors": [],
+    "warnings": [],
+    "dangerousBuilds": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "completionMarker": true,
+    "wallTime": [
+      "0:00:23"
+    ],
+    "log": "simulation\\work\\jobs\\lammps-56c0c9a2-bf20-4277-96c3-d95c5333b49e\\work\\log.lammps"
+  },
+  {
+    "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+    "status": "succeeded",
+    "exitCode": 0,
+    "timedOut": false,
+    "errors": [],
+    "warnings": [],
+    "dangerousBuilds": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "completionMarker": true,
+    "wallTime": [
+      "0:07:25"
+    ],
+    "log": "simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work\\log.lammps"
+  }
+]

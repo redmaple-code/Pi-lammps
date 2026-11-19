@@ -1,0 +1,28 @@
+(node:2708) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/contracts/index.js:19
+  if (!condition) throw new SimulationError(code, message, details);
+                        ^
+
+SimulationError: Provider role check has unresolved findings
+    at requireCondition (file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/packages/contracts/index.js:19:25)
+    at file:///F:/BaiduSyncdisk/Codex/Pi-lammps/simulation/scripts/check-provider-role.js:53:3 {
+  code: 'PROVIDER_CHECK_FAILED',
+  retryable: false,
+  sideEffectState: 'none',
+  context: {
+    operationId: 'provider-role-check-7f260806-97c4-4c34-929d-56510ab84b70',
+    checks: {
+      succeeded: true,
+      sourceRead: true,
+      artifactPublished: true,
+      speedCorrect: false,
+      printSemanticsCorrect: true,
+      strainSemanticsCorrect: false,
+      massSemanticsCorrect: false
+    }
+  }
+}
+
+Node.js v22.19.0
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

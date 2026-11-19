@@ -1,0 +1,386 @@
+{
+  "package": "MDagent-subsystems-handover-20261117",
+  "generated_at": "2026-11-17T13:55:20+0800",
+  "python": "3.11.4",
+  "platform": "win32",
+  "all_ok": false,
+  "failures": 1,
+  "suites": [
+    {
+      "name": "ukb-package",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "."
+      ],
+      "cwd": "src\\ukb",
+      "returncode": 0,
+      "seconds": 79.4,
+      "ok": true,
+      "detail": "103 tests, 0 skipped"
+    },
+    {
+      "name": "kb-compat",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_kb_*.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 79.1,
+      "ok": true,
+      "detail": "44 tests, 6 skipped"
+    },
+    {
+      "name": "evidence-v3",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_evidence_v3_*.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 118.7,
+      "ok": true,
+      "detail": "218 tests, 1 skipped"
+    },
+    {
+      "name": "gate-core:test_stage_gate",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_stage_gate.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 9.2,
+      "ok": true,
+      "detail": "30 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_stage_state",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_stage_state.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 11.4,
+      "ok": true,
+      "detail": "16 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_assessment_v2",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_assessment_v2.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 4.6,
+      "ok": true,
+      "detail": "9 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_config_check",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_config_check.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 3.2,
+      "ok": true,
+      "detail": "9 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_deep_review",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_deep_review.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 1.4,
+      "ok": true,
+      "detail": "9 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_evidence_grade",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_evidence_grade.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 0.6,
+      "ok": true,
+      "detail": "21 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_human_authority",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_human_authority.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 2.8,
+      "ok": true,
+      "detail": "8 tests, 0 skipped"
+    },
+    {
+      "name": "gate-core:test_md_mcp_contract",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_md_mcp_contract.py"
+      ],
+      "cwd": "src",
+      "returncode": 1,
+      "seconds": 1.6,
+      "ok": false,
+      "detail": "12 tests, 0 skipped"
+    },
+    {
+      "name": "dual-gate:test_design_review",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_design_review.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 1.4,
+      "ok": true,
+      "detail": "16 tests, 0 skipped"
+    },
+    {
+      "name": "dual-gate:test_physics_gate",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_physics_gate.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 0.6,
+      "ok": true,
+      "detail": "19 tests, 0 skipped"
+    },
+    {
+      "name": "dual-gate:test_md_proj_mcp",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_md_proj_mcp.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 4.7,
+      "ok": true,
+      "detail": "36 tests, 1 skipped"
+    },
+    {
+      "name": "dual-gate:test_model_research",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-t",
+        "tests",
+        "-p",
+        "test_model_research.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 1.4,
+      "ok": true,
+      "detail": "18 tests, 0 skipped"
+    },
+    {
+      "name": "dual-gate:e2e",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "tests/e2e_dual_gate_demo.py"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 2.5,
+      "ok": true,
+      "detail": "None tests, 0 skipped"
+    },
+    {
+      "name": "design-review",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests"
+      ],
+      "cwd": "src\\design-review-layer",
+      "returncode": 0,
+      "seconds": 6.6,
+      "ok": true,
+      "detail": "29 tests, 0 skipped"
+    },
+    {
+      "name": "design-review:template",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "review_layer.template_check"
+      ],
+      "cwd": "src\\design-review-layer",
+      "returncode": 0,
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "None tests, 0 skipped"
+    },
+    {
+      "name": "ukb-freeze",
+      "command": [
+        "C:\\Users\\redmaple\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "tools/freeze.py",
+        "--check"
+      ],
+      "cwd": "src\\ukb",
+      "returncode": 0,
+      "seconds": 0.4,
+      "ok": true,
+      "detail": "sha256 unchanged"
+    },
+    {
+      "name": "flow-gate:node",
+      "command": [
+        "node",
+        "tests/test_flow_gate.mjs"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 0.6,
+      "ok": true,
+      "detail": "27/27 passed"
+    },
+    {
+      "name": "usage-patch:node",
+      "command": [
+        "node",
+        "tests/test_patch_dsh_usage.mjs"
+      ],
+      "cwd": "src",
+      "returncode": 0,
+      "seconds": 1.0,
+      "ok": true,
+      "detail": "2/2 passed"
+    }
+  ]
+}

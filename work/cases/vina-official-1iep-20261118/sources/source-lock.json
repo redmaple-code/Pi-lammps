@@ -1,0 +1,64 @@
+{
+  "repository": "https://github.com/forlilab/AutoDock-Vina",
+  "tag": "v1.2.7",
+  "commit": "8eb40404f4f45608acb3b01427587ac049f27c1f",
+  "caseBranch": "basic_docking:Vina forcefield",
+  "files": [
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/solution/1iep_receptor.pdbqt",
+      "repositoryPath": "example/basic_docking/solution/1iep_receptor.pdbqt",
+      "localPath": "inputs/official/1iep_receptor.pdbqt",
+      "sha256": "f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586",
+      "bytes": 216160
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/solution/1iep_ligand.pdbqt",
+      "repositoryPath": "example/basic_docking/solution/1iep_ligand.pdbqt",
+      "localPath": "inputs/official/1iep_ligand.pdbqt",
+      "sha256": "15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8",
+      "bytes": 3841
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/solution/1iep_receptor.box.txt",
+      "repositoryPath": "example/basic_docking/solution/1iep_receptor.box.txt",
+      "localPath": "inputs/official/1iep_receptor.box.txt",
+      "sha256": "3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de",
+      "bytes": 101
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/solution/1iep_ligand_vina_out.pdbqt",
+      "repositoryPath": "example/basic_docking/solution/1iep_ligand_vina_out.pdbqt",
+      "localPath": "reference/official-vina-output.pdbqt",
+      "sha256": "4137e1960b3491f17a24579d991f32a2c0cb254af1f58d7278f77579fc27d93f",
+      "bytes": 16240
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/data/1iep_ligand.sdf",
+      "repositoryPath": "example/basic_docking/data/1iep_ligand.sdf",
+      "localPath": "reference/crystal-ligand.sdf",
+      "sha256": "051b8742c32adc05c07fb486a4e7c9327f84e131cee33ac4e6a568d07553eb38",
+      "bytes": 6621
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/example/basic_docking/data/1iep_receptorH.pdb",
+      "repositoryPath": "example/basic_docking/data/1iep_receptorH.pdb",
+      "localPath": "reference/receptorH.pdb",
+      "sha256": "5f6aee6029f9a2a2c2be32d4eb948ae70808690573e1b69a0850cdffd7048ca7",
+      "bytes": 357444
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/docs/source/docking_basic.rst",
+      "repositoryPath": "docs/source/docking_basic.rst",
+      "localPath": "sources/official-tutorial.rst",
+      "sha256": "08349b4bc7d6899a75762bb88423d7fb9fdfe8080ef328d2098e3ff750506d9a",
+      "bytes": 11239
+    },
+    {
+      "sourceUrl": "https://raw.githubusercontent.com/forlilab/AutoDock-Vina/8eb40404f4f45608acb3b01427587ac049f27c1f/LICENSE",
+      "repositoryPath": "LICENSE",
+      "localPath": "sources/Vina-LICENSE.txt",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    }
+  ]
+}

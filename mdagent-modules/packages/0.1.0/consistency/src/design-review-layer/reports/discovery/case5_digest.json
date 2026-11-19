@@ -1,0 +1,72 @@
+{
+  "case": "case5",
+  "provider": "external-ai:case5_points.json",
+  "open_points": [
+    {
+      "id": "RP-018",
+      "title": "cross_scale 的“宏观 1×10⁷ s⁻¹”与实验描述均由 in 文件反推，0 量级结论是循环论证",
+      "dimension": "证据/跨尺度",
+      "locations": {
+        "experiment": [
+          "E-06",
+          "E-04"
+        ],
+        "infile": [
+          18,
+          88
+        ]
+      },
+      "question": "有没有独立的实验应变率、温度、试样尺寸记录？如果没有，cross_scale 的 0 量级结论依据什么？",
+      "severity": "high"
+    }
+  ],
+  "common_groups": [
+    {
+      "id": "CI-002",
+      "name": "MD 应变率比实验高多个数量级",
+      "occurrences": 4
+    },
+    {
+      "id": "CI-011",
+      "name": "夹具/边界与实验加载路径不等效",
+      "occurrences": 9
+    },
+    {
+      "id": "CI-005",
+      "name": "多组元势函数的交叉项/适用性",
+      "occurrences": 5
+    },
+    {
+      "id": "CI-004",
+      "name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "occurrences": 4
+    },
+    {
+      "id": "CI-012",
+      "name": "观测量的实验-仿真映射",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-009",
+      "name": "应力/应变定义（virial、总压、工程/真应力）",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-006",
+      "name": "单次 run/单 seed 无统计不确定度",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-007",
+      "name": "热浴/恒温器参数与塑性耗热",
+      "occurrences": 1
+    }
+  ],
+  "stats": {
+    "total": 27,
+    "open": 1,
+    "record_required": 9,
+    "explained": 17,
+    "capped": ""
+  }
+}

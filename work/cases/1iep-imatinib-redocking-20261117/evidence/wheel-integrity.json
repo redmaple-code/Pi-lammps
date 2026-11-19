@@ -1,0 +1,233 @@
+[
+  {
+    "name": "meeko",
+    "version": "0.8.0",
+    "officialMetadata": "https://pypi.org/pypi/meeko/0.8.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/88/a0/4bbe2a480bdc278e9709ba2b536afc63fafd8cf5d51c247decd267c07277/meeko-0.8.0-py3-none-any.whl",
+    "sha256": "38e73da7f0b11f7f8f0bfb2c481ccd148b8dfb9957522655b5cb0c4f6d68d1d6",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "meeko-0.8.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "rdkit",
+    "version": "2026.9.2",
+    "officialMetadata": "https://pypi.org/pypi/rdkit/2026.9.2/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/39/37/e2f2d67f4e0d959667607627349f806e855981d98f8fba825d8d2e7efb7c/rdkit-2026.9.2-cp311-cp311-win_amd64.whl",
+    "sha256": "020a72efc524e8721908435b9473f9584e491f732626d03a55c0d28cf8d6cdac",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "rdkit-2026.9.2-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "gemmi",
+    "version": "0.7.5",
+    "officialMetadata": "https://pypi.org/pypi/gemmi/0.7.5/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/b9/5e/62402bf021183bc6122cb01b8f1be17cac67545713fb30f888f59357a782/gemmi-0.7.5-cp311-cp311-win_amd64.whl",
+    "sha256": "06cb44f4e3657b7e3a2b23cd40b67a8e7b5d00bfb92ea94cb4060bd47ba50df6",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "gemmi-0.7.5-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "2.4.6",
+    "officialMetadata": "https://pypi.org/pypi/numpy/2.4.6/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/c5/31/7fc6239c12bce7e931463251cca4426c465e1876ba3cc785402ef4dd8f4e/numpy-2.4.6-cp311-cp311-win_amd64.whl",
+    "sha256": "1e254a00cdf42b1e4d5b3d68d33af63268d41340d8885df2ab6470f2e1500147",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "numpy-2.4.6-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "scipy",
+    "version": "1.17.1",
+    "officialMetadata": "https://pypi.org/pypi/scipy/1.17.1/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/95/da/0d1df507cf574b3f224ccc3d45244c9a1d732c81dcb26b1e8a766ae271a8/scipy-1.17.1-cp311-cp311-win_amd64.whl",
+    "sha256": "d30e57c72013c2a4fe441c2fcb8e77b14e152ad48b5464858e07e2ad9fbfceff",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "scipy-1.17.1-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.11.2",
+    "officialMetadata": "https://pypi.org/pypi/matplotlib/3.11.2/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/66/54/91fe3fdfa29100b4668cbf9721577a10acde6e009694618230e4e7a97527/matplotlib-3.11.2-cp311-cp311-win_amd64.whl",
+    "sha256": "a24d5fd36e4f0e742c3851dcd20810e56a95633a342e4bf6cb591c678e8fe61f",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "matplotlib-3.11.2-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "jsonschema",
+    "version": "4.26.0",
+    "officialMetadata": "https://pypi.org/pypi/jsonschema/4.26.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/69/90/f63fb5873511e014207a475e2bb4e8b2e570d655b00ac19a9a0ca0a385ee/jsonschema-4.26.0-py3-none-any.whl",
+    "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "jsonschema-4.26.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "attrs",
+    "version": "26.1.0",
+    "officialMetadata": "https://pypi.org/pypi/attrs/26.1.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+    "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "attrs-26.1.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "contourpy",
+    "version": "1.3.3",
+    "officialMetadata": "https://pypi.org/pypi/contourpy/1.3.3/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/98/4b/9bd370b004b5c9d8045c6c33cf65bae018b27aca550a3f657cdc99acdbd8/contourpy-1.3.3-cp311-cp311-win_amd64.whl",
+    "sha256": "3519428f6be58431c56581f1694ba8e50626f2dd550af225f82fb5f5814d2a42",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "contourpy-1.3.3-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "officialMetadata": "https://pypi.org/pypi/cycler/0.12.1/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/e7/05/c19819d5e3d95294a6f5947fb9b9629efb316b96de511b418c53d245aae6/cycler-0.12.1-py3-none-any.whl",
+    "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "cycler-0.12.1-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "fonttools",
+    "version": "4.68.0",
+    "officialMetadata": "https://pypi.org/pypi/fonttools/4.68.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/46/87/4ba592099172764aa56e66919b0c3ddaf944c775433e806e36e165062095/fonttools-4.68.0-cp311-cp311-win_amd64.whl",
+    "sha256": "35425bba603cf9d72c9f3c173ea6c98632164f3bdfb1ce1a3dcc928979c6ec6d",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "fonttools-4.68.0-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "officialMetadata": "https://pypi.org/pypi/jsonschema-specifications/2025.9.1/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/41/45/1a4ed80516f02155c51f51e8cedb3c1902296743db0bbc66608a0db2814f/jsonschema_specifications-2025.9.1-py3-none-any.whl",
+    "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "jsonschema_specifications-2025.9.1-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "officialMetadata": "https://pypi.org/pypi/kiwisolver/1.5.1/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/bf/9f/6f9e489c188200e6fb3193935501894811e8c97577c8ffe9033589bf3521/kiwisolver-1.5.1-cp311-cp311-win_amd64.whl",
+    "sha256": "1a7587dc335f2c0f5bd577fd0540bd16c66006bdb60f759a1059f025e6c4f071",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "kiwisolver-1.5.1-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "officialMetadata": "https://pypi.org/pypi/packaging/26.3/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl",
+    "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "packaging-26.3-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "pillow",
+    "version": "13.0.0",
+    "officialMetadata": "https://pypi.org/pypi/pillow/13.0.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/7d/f6/6e2d96413e4c9dbec12ea584d9e646d602877d4cce3ea669099f959deac6/pillow-13.0.0-cp311-cp311-win_amd64.whl",
+    "sha256": "d7710eb676e9bb68965cb045be0d333b4c0d7f9dfbaa7fbf121385b1588683d3",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "pillow-13.0.0-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "officialMetadata": "https://pypi.org/pypi/pyparsing/3.3.3/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl",
+    "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "pyparsing-3.3.3-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "python-dateutil",
+    "version": "4.0.0",
+    "officialMetadata": "https://pypi.org/pypi/python-dateutil/4.0.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/2f/a9/52b89563d154433d79b51ed1eb4842bf7334cb2696891a7fe135618853d7/python_dateutil-4.0.0-py3-none-any.whl",
+    "sha256": "a5e246f79eb80475e691bf93862cead98decd8a498cf53ba0516fcdc0f50dc1c",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "python_dateutil-4.0.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "referencing",
+    "version": "0.37.0",
+    "officialMetadata": "https://pypi.org/pypi/referencing/0.37.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/2c/58/ca301544e1fa93ed4f80d724bf5b194f6e4b945841c5bfd555878eea9fcb/referencing-0.37.0-py3-none-any.whl",
+    "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "referencing-0.37.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "rpds-py",
+    "version": "2026.9.1",
+    "officialMetadata": "https://pypi.org/pypi/rpds-py/2026.9.1/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/df/c9/384a9b62f8cd89c8e3e609b8c9052c140e8c01d807261e0517c904b8bf29/rpds_py-2026.9.1-cp311-cp311-win_amd64.whl",
+    "sha256": "ce4d4f52e2a4324396caddbd45a97d8d7be5f42edd25d2355282a9c34f9b2f7f",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "rpds_py-2026.9.1-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "officialMetadata": "https://pypi.org/pypi/typing_extensions/4.16.0/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+    "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "typing_extensions-4.16.0-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.6",
+    "officialMetadata": "https://pypi.org/pypi/tzdata/2026.6/json",
+    "downloadUrl": "https://pypi.tuna.tsinghua.edu.cn/packages/0a/66/9a06c2227fedfd4919f0eaaa8b94377d9730882a7e4f95823c9a331ab5e1/tzdata-2026.6-py2.py3-none-any.whl",
+    "sha256": "0a10eec6e13ef16b627fabed9a5f2ba61a62b1c67f327305f4e7e412a70b4aec",
+    "officialHashMatched": true,
+    "matchingFiles": [
+      "tzdata-2026.6-py2.py3-none-any.whl"
+    ]
+  }
+]

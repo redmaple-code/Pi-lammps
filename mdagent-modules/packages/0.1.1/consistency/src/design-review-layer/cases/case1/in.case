@@ -1,0 +1,92 @@
+units           metal
+atom_style      atomic
+dimension       3
+boundary        p p p
+variable        run_step equal 5000000
+variable        rate index 0.0001
+variable        seed equal ${rate}*10000
+variable        dump_step equal 1000
+variable        real_rate equal ${rate}*1e12
+
+shell           "mkdir -p dump"
+read_data       Ni_0.lmp
+
+
+newton          on
+
+mass        1  14 #Ni
+mass        2  63 #Co
+mass        3  79 #Mo
+mass        4  95 #W
+mass        5  127 #Al
+mass        6  131 #Ti
+
+pair_style eam/alloy
+pair_coeff * * CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy Ni Co Mo W Al Ti
+delete_atoms overlap 0.4 all all
+
+thermo          100
+thermo_style    custom  step lx ly lz press pxx pyy pzz pe temp
+#dump            1 all custom 2000 cu+${rate}+${run_step}.xyz id type x y z
+dump      min all custom 50 dump_min.xyz id type x y z 
+min_style cg
+minimize 1.0e-15 1.0e-15 10000 10000
+undump min
+write_data    min.data
+#-------------------应力应变设置----
+variable           tmpx equal "lx"
+variable           tmpy equal "ly"
+variable           tmpz equal "lz"
+​
+variable        Lx0 equal ${tmpx}
+variable        Ly0 equal ${tmpy}
+variable         Lz0 equal ${tmpz}
+​
+variable        strainx equal "(lx - v_Lx0)/v_Lx0"
+variable        strainy equal "(ly - v_Ly0)/v_Ly0"
+variable        strainz equal "(lz - v_Lz0)/v_Lz0"
+​
+variable        stressx equal "-pxx/10000"
+variable        stressy equal "-pyy/10000"
+variable        stressz equal "-pzz/10000"
+​
+#-------------------------应力应变保存到文件---------------------------
+compute 1 all stress/atom NULL
+compute v all voronoi/atom 
+compute sumv all reduce sum c_v[1]
+variable atomVolume equal c_sumv/c_v[1]
+
+variable Atomicstressx atom c_1[1]/v_atomVolume/10000
+variable Atomicstressy atom c_1[2]/v_atomVolume/10000
+variable Atomicstressz atom c_1[3]/v_atomVolume/10000
+
+compute  pe all pe/atom
+compute  ke all ke/atom
+variable    KB equal 8.625e-5 
+variable    TEMP atom c_ke/1.5/${KB}
+
+dump      equil all custom 1000 dump_equil.xyz id type x y z 
+
+velocity        all create 300 12345 dist gaussian
+fix             1 all npt temp 300 300 1 iso 0 0 1
+timestep        0.001
+run             200000
+
+undump    equil  
+
+write_data  1e9_equil.data
+write_restart  1e9_equil.restart
+
+reset_timestep 0
+
+#dump       result2 all custom ${dump_step} dump.*.lammps id type x  y  z  
+fix         def3 all print 500 "${strainx} ${stressx}" file stress-strain+${real_rate}+${run_step}.dat screen no
+variable            times equal step*dt
+fix         def4 all print 500 "${times} ${stressx}" file stress-time+${real_rate}+${run_step}.dat screen no
+
+restart         10000 tmp.restart
+dump            1 all custom ${dump_step} dump/result.*.xyz id type x y z v_Atomicstressx v_Atomicstressy v_Atomicstressz c_pe c_ke 
+unfix           1
+fix             1 all nvt temp 300 300 1
+fix             2 all deform 500 x erate ${rate} units box remap x
+run             ${run_step}

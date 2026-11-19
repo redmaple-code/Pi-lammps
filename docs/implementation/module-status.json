@@ -1,0 +1,359 @@
+{
+  "revision": "IMPL-1",
+  "date": "2026-11-17",
+  "modules": [
+    {
+      "moduleId": "MOD-01",
+      "name": "公共契约与版本兼容",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/contracts/index.js",
+        "../../simulation/packages/contracts/records.js",
+        "../../simulation/packages/contracts/validation.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "implemented": "公共身份、三值条件、AJV 记录与包 schema 已实现",
+      "remaining": "完整 DTO 字段、所有版本兼容场景仍需逐项核验",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-02",
+      "name": "Red Maple 运行时适配与角色任务",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "implemented": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-03",
+      "name": "K1 阶段图与任务入口",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "implemented": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-04",
+      "name": "K2 检查、独立审查与放行",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "implemented": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-05",
+      "name": "K3 工件、输入闭包与影响追踪",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "implemented": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-06",
+      "name": "K4 证据与实读回执",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "implemented": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-07",
+      "name": "K5 失败诊断与有界修复",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/repair.js",
+        "../../simulation/packages/kernel/index.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "implemented": "失败信号、修复计划及独立有界计数已实现",
+      "remaining": "真实失败案例的委派修改、重审、新运行与分析自动闭环仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-08",
+      "name": "K6 权威状态、事务与恢复",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/state.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "implemented": "SQLite CAS、命令去重、意图/回执、历史修订与备份已实现",
+      "remaining": "跨数据库联合事务及跨路径恢复重映射仍需开发",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-09",
+      "name": "K7 指标、科学验证与任务验收",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "implemented": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-10",
+      "name": "LAMMPS 领域包与科学规则",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "implemented": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-11",
+      "name": "求解器与长作业执行适配",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "implemented": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-12",
+      "name": "知识检索、入库、记忆与备份",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "implemented": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-13",
+      "name": "技能挖掘、角色改进与受控发布",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "implemented": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-14",
+      "name": "图形、报告与可复现交付",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "implemented": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-15",
+      "name": "CLI、TUI 与应用装配",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/apps/cli/main.js",
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/packages/application/index.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "implemented": "CLI、原生 TUI 扩展与本地磨削装配已实现",
+      "remaining": "云模型全角色端到端编排与跨领域统一任务入口仍待完善",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-16",
+      "name": "历史导入、资产迁移与兼容",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/migration/index.js",
+        "../../simulation/scripts/migrate-legacy.js",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "implemented": "350 资产复制、幂等导入、13 角色和历史来源标注已实现",
+      "remaining": "恢复索引缺原文件字节身份，所有遗留状态冲突迁移尚待完整测试",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-17",
+      "name": "验证平台与完整交付审计",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js",
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/scripts/export-evidence.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "implemented": "自动回归、真实磨削、源摘要、数据库及回执导出已实现",
+      "remaining": "116 原始验收场景尚未逐项全量执行，产品接受仍待真实决定",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-18",
+      "name": "Red Maple 与 Pi 基座优化",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/../redmaple-agent/src/session-controls.js",
+        "../../simulation/../redmaple-agent/test/agent.test.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "implemented": "宿主工具授权钩子与已发送未知请求预算语义已核验",
+      "remaining": "稳定/候选 Pi 跨版本同领域包回放及真实模型服务兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-19",
+      "name": "领域包解析、能力绑定与版本锁",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "implemented": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-20",
+      "name": "研究活动、有界迭代与耦合交换",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/studies.js"
+      ],
+      "verificationRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "implemented": "参数展开、有界迭代、交换与检查点一致性校验已实现",
+      "remaining": "真实多求解器耦合执行、检查点编排和同步恢复尚待开发",
+      "productAcceptance": null
+    },
+    {
+      "moduleId": "MOD-21",
+      "name": "宏观与离散事件领域包及真实基准",
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/science/benchmarks.py",
+        "../../simulation/domains/examples/structural-mechanics.json",
+        "../../simulation/domains/examples/discrete-event.json"
+      ],
+      "verificationRefs": [
+        "../../simulation/work/benchmarks/benchmark-summary.json"
+      ],
+      "implemented": "梁有限元三网格及 M/M/1 十二重复实际参考计算已完成",
+      "remaining": "宏观与事件领域包仍需接入完整案例、门禁及交付主链",
+      "productAcceptance": null
+    }
+  ]
+}

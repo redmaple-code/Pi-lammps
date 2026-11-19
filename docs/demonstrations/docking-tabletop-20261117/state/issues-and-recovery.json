@@ -1,0 +1,43 @@
+{
+  "mode": "tabletop",
+  "issues": [
+    {
+      "id": "DEMO-I01",
+      "stage": "configure",
+      "trigger": "site.unit缺失",
+      "demoTransition": "blocked→补angstrom→复核→passed",
+      "invalidated": [
+        "protocol及其下游尚未开始"
+      ],
+      "evidence": [
+        "plan/task.attempt01.json",
+        "plan/task.json"
+      ]
+    },
+    {
+      "id": "DEMO-I02",
+      "stage": "dock",
+      "trigger": "已知失败的输出目录配置",
+      "demoTransition": "a1 failed→目录配置修复→a2 completed",
+      "invalidated": [
+        "该逻辑任务下游"
+      ],
+      "evidence": [
+        "execution/virtual-run-ledger.csv"
+      ]
+    },
+    {
+      "id": "DEMO-I03",
+      "stage": "poses",
+      "trigger": "C02的-12.0姿态假定存在严重冲突",
+      "demoTransition": "保留原记录→剔除无效pose→使用-9.8的有效pose",
+      "invalidated": [
+        "该母体的排名汇总"
+      ],
+      "evidence": [
+        "execution/synthetic-pose-observations.csv",
+        "analysis/ranking-blinded.csv"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+Red Maple simulation
+
+  node apps/cli/main.js plan --validation [--python PATH --lammps PATH]
+  node apps/cli/main.js grinding --validation
+  node apps/cli/main.js status [CASE_ID]
+  node apps/cli/main.js run CASE_ID
+  node apps/cli/main.js resume CASE_ID
+  node apps/cli/main.js modify CASE_ID --parameters parameters.json
+  node apps/cli/main.js execute CASE_ID
+  node apps/cli/main.js analyze CASE_ID
+  node apps/cli/main.js visualize CASE_ID
+  node apps/cli/main.js diagnose CASE_ID
+  node apps/cli/main.js reproduce PAPER.pdf --config runtime.json
+  node apps/cli/main.js cancel CASE_ID
+  node apps/cli/main.js inspect CASE_ID --observations observations.json
+  node apps/cli/main.js query QUERY
+  node apps/cli/main.js validate MANIFEST --validation
+  node apps/cli/main.js agent --config runtime.json
+
+Environment options --workspace ROOT --state LOCAL_DIRECTORY
+Python and LAMMPS default to executables discovered in PATH.

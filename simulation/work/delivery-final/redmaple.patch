@@ -1,0 +1,38 @@
+diff --git a/src/session-controls.js b/src/session-controls.js
+index 3a5fbd0..0c02329 100644
+--- a/src/session-controls.js
++++ b/src/session-controls.js
+@@ -211,6 +211,8 @@ export class SessionControls {
+       definition.execute = async (id, args, signal, update, context) => {
+         const controls = executionScope.getStore()?.controls || self;
+         return controls.withRun(`tool:${definition.name}`, async () => {
++          await controls.options.authorizeTool?.({ definition, args, context, signal,
++            workflow: executionScope.getStore()?.workflow, sessionId: self.session.sessionId });
+           await authorizeTool(controls.options.policy, self.session.sessionManager.getCwd(), definition, args, context);
+           const execute = controls.options.policy?.profile === 'sandbox' && ['bash', 'powershell'].includes(definition.name)
+             ? () => executeSandbox({ workspace: self.session.sessionManager.getCwd(), command: args.command,
+diff --git a/test/agent.test.js b/test/agent.test.js
+index fde4d67..4aa3dc7 100644
+--- a/test/agent.test.js
++++ b/test/agent.test.js
+@@ -214,7 +214,7 @@ test('a known host refusal leaves no unknown external request', async t => {
+   assert.ok(Object.values(base.snapshot().calls).every(call => call.status === 'failed'));
+ });
+ 
+-test('time budget stops acceptances and a bounded failed task allows a new task', async t => {
++test('time budget preserves sent unknown calls until reconciliation before a new bounded task', async t => {
+   const script = scripted([async () => {
+     await new Promise(done => setTimeout(done, 40)); return assistant('late');
+   }, assistant('new task')]);
+@@ -223,6 +223,11 @@ test('time budget stops acceptances and a bounded failed task allows a new task'
+   const first = await base.prompt('slow', { requestId: 'slow' });
+   assert.equal(first.status, 'blocked');
+   assert.equal(first.errorCode, 'time_exhausted');
++  const unknown = Object.values(base.snapshot().calls).find(item => item.status === 'unknown');
++  assert.ok(unknown, 'The timed-out request was sent and needs an external result');
++  await assert.rejects(base.resume('slow'), { code: 'result_unknown' });
++  await assert.rejects(base.prompt('new task', { requestId: 'new' }), { code: 'result_unknown' });
++  await base.reconcile(unknown.key, assistant('late'));
+   await assert.rejects(base.resume('slow'), { code: 'budget_exhausted' });
+   base.limits.seconds = 10;
+   assert.equal((await base.prompt('new task', { requestId: 'new' })).status, 'succeeded');

@@ -1,0 +1,51 @@
+{
+  "type_id": "procedure",
+  "label": "做法/流程",
+  "description": "步骤化做法",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "goal": {
+        "kind": "text",
+        "required": true,
+        "max_len": 800
+      },
+      "preconditions": {
+        "kind": "list",
+        "item": "text",
+        "required": false
+      },
+      "steps": {
+        "kind": "list",
+        "item": {
+          "kind": "text",
+          "max_len": 1500
+        },
+        "required": true
+      },
+      "pitfalls": {
+        "kind": "list",
+        "item": "text",
+        "required": false
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "goal",
+      "preconditions",
+      "steps",
+      "pitfalls"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

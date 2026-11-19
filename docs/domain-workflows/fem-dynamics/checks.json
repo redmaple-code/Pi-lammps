@@ -1,0 +1,236 @@
+{
+  "id": "checks",
+  "items": [
+    {
+      "id": "scope-inputs",
+      "title": "路线目标",
+      "appliesWhen": "所有任务",
+      "method": "核现象、路线、单位、精度和参考。",
+      "checkerCapability": "review.scope-inputs",
+      "evidenceRequirements": [
+        "方案",
+        "表单",
+        "依据"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "geometry-connectivity",
+      "title": "几何连接",
+      "appliesWhen": "所有任务",
+      "method": "核连接/接触、方向、关键实体。",
+      "checkerCapability": "review.geometry-connectivity",
+      "evidenceRequirements": [
+        "几何",
+        "集合",
+        "简化说明"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "mesh-material-mass",
+      "title": "网格材料质量",
+      "appliesWhen": "所有任务",
+      "method": "核单元、截面/材料映射、密度、质量/惯量和量纲。",
+      "checkerCapability": "review.mesh-material-mass",
+      "evidenceRequirements": [
+        "网格",
+        "映射",
+        "质量表",
+        "单位审计"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "input-protocol",
+      "title": "条件和输出",
+      "appliesWhen": "所有任务",
+      "method": "核约束、初态、载荷时基、阻尼、积分/频段和输出闭合。",
+      "checkerCapability": "review.input-protocol",
+      "evidenceRequirements": [
+        "输入",
+        "载荷换算",
+        "输出表",
+        "参考点"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "procedure-compatible",
+      "title": "工具步骤",
+      "appliesWhen": "所有任务",
+      "method": "核精确版本的材料/单元/接触/阻尼/输出能力和基准。",
+      "checkerCapability": "review.procedure-compatible",
+      "evidenceRequirements": [
+        "工具版本",
+        "能力回执",
+        "资格记录"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "ccx-direct",
+        "ccx-harmonic"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "modal-basis",
+      "title": "模态基础",
+      "appliesWhen": "modal或harmonic-response",
+      "method": "核刚体模态、归一化、覆盖及eig文件与边界/材料/预载摘要。",
+      "checkerCapability": "review.modal-basis",
+      "evidenceRequirements": [
+        "频率/振型",
+        "依赖摘要",
+        "约束",
+        "质量"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "ccx-eigen-storage",
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "execution-complete",
+      "title": "运行完成",
+      "appliesWhen": "所有任务",
+      "method": "核真实命令/日志、终态及时间/频率输出完整性。",
+      "checkerCapability": "review.execution-complete",
+      "evidenceRequirements": [
+        "回执",
+        "日志",
+        "原始结果",
+        "输入闭包"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "numerical-verification",
+      "title": "数值验证",
+      "appliesWhen": "所有任务",
+      "method": "按路线开展网格/时间步/模态/频点研究、收支及参考比较。",
+      "checkerCapability": "review.numerical-verification",
+      "evidenceRequirements": [
+        "研究活动",
+        "基准",
+        "误差",
+        "收支"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "explicit-controls",
+      "title": "显式控制",
+      "appliesWhen": "explicit-impact",
+      "method": "核稳定步长、质量处理、接触、畸变和人工能量及对照。",
+      "checkerCapability": "review.explicit-controls",
+      "evidenceRequirements": [
+        "步长",
+        "能量/质量",
+        "接触",
+        "敏感性"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "blocked",
+      "sourceRefs": [
+        "ccx-direct",
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "metric-definition",
+      "title": "计量口径",
+      "appliesWhen": "所有任务",
+      "method": "核方向、位置、时频、幅相、外推和过滤。",
+      "checkerCapability": "review.metric-definition",
+      "evidenceRequirements": [
+        "语义",
+        "定义",
+        "提取算法",
+        "窗口"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "revise",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    },
+    {
+      "id": "report-traceable",
+      "title": "交付追踪",
+      "appliesWhen": "所有任务",
+      "method": "核实际数据、时间、变形倍数和振型归一化。",
+      "checkerCapability": "review.report-traceable",
+      "evidenceRequirements": [
+        "图像核验",
+        "manifest",
+        "验证报告"
+      ],
+      "onUnknown": "blocked",
+      "onFail": "revise",
+      "sourceRefs": [
+        "dynamics-methods"
+      ],
+      "implementationStatus": "specified"
+    }
+  ],
+  "resultContract": {
+    "applicability": [
+      "true",
+      "false",
+      "unknown"
+    ],
+    "result": [
+      "passed",
+      "failed",
+      "insufficient",
+      "notApplicable"
+    ],
+    "requiredFields": [
+      "checkId",
+      "subjectDigest",
+      "actorInstanceId",
+      "evidenceRefs",
+      "observations",
+      "action"
+    ],
+    "triggerImplementation": "appliesWhen为领域审查说明，实施时映射受限条件DSL并保留语义。",
+    "checkerImplementation": "具名能力需实现或由独立审查职责执行，并记录实际方式。"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "source": "original-handoff-tool-registry",
+  "module": "evidence",
+  "tools": [
+    {
+      "name": "sim_evidence",
+      "description": "开放证据工作流：先recognize识别目标与未知，retrieve检索候选及反例，propose生成动态核查计划；init建档后plan/evidence/review/evaluate/advance。人工授权与事实分开；review内部故障不放行；authorize只签发当前输入的动作许可。状态变更需expected_revision；status返回当前版本。只读咨询不要求生产许可。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "recognize",
+              "retrieve",
+              "propose",
+              "discover",
+              "init",
+              "status",
+              "revise",
+              "plan",
+              "evidence",
+              "proof",
+              "authorization",
+              "revoke_authorization",
+              "review",
+              "evaluate",
+              "advance",
+              "resolve_review",
+              "resolve",
+              "authorize",
+              "finish",
+              "submit_evidence",
+              "publish",
+              "inspect_publication",
+              "recover_publication",
+              "refresh_knowledge",
+              "measure",
+              "inventory",
+              "migrate",
+              "complete"
+            ]
+          },
+          "task_id": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "request": {
+            "type": "string"
+          },
+          "intent": {
+            "type": "object"
+          },
+          "bundle": {
+            "type": "object"
+          },
+          "proposal": {
+            "type": "object"
+          },
+          "recipe": {
+            "type": "object"
+          },
+          "conditions": {
+            "type": "object"
+          },
+          "evidence_id": {
+            "type": "string"
+          },
+          "item_id": {
+            "type": "string"
+          },
+          "publication_id": {
+            "type": "string"
+          },
+          "event_id": {
+            "type": "string"
+          },
+          "decision": {
+            "type": "string",
+            "enum": [
+              "commit",
+              "rollback"
+            ]
+          },
+          "record": {
+            "type": "object"
+          },
+          "authorization": {
+            "type": "object"
+          },
+          "patch": {
+            "type": "object"
+          },
+          "resolution": {
+            "type": "object"
+          },
+          "spec": {
+            "type": "object"
+          },
+          "expected_revision": {
+            "type": "integer"
+          },
+          "expected_state_seq": {
+            "type": "integer"
+          },
+          "request_id": {
+            "type": "string"
+          },
+          "receipt_id": {
+            "type": "string"
+          },
+          "run_id": {
+            "type": "string"
+          },
+          "result": {
+            "type": "object"
+          },
+          "approver": {
+            "type": "string"
+          },
+          "authorization_id": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_path": {
+            "type": "string"
+          },
+          "project_roots": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "finding_id": {
+            "type": "string"
+          },
+          "stage": {
+            "type": "string"
+          },
+          "to_stage": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "plan",
+              "input",
+              "validation"
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "knowledge_dirs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

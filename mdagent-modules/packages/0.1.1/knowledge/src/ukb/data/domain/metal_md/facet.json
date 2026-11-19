@@ -1,0 +1,3 @@
+[
+  {"facet_id": "property", "label": "目标性质", "description": "条目所针对的物性量（弹性、强度、扩散、热学、缺陷能等）。按要算的量归类，不按方法。", "multi": true, "governing": false, "scope_budget_chars": 40000, "ord": 5}
+]

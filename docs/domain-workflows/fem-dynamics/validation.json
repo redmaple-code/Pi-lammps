@@ -1,0 +1,85 @@
+{
+  "id": "validation",
+  "items": [
+    {
+      "id": "fem-01",
+      "kind": "positive",
+      "scenario": "SDOF自由/受迫振动",
+      "equations": [
+        "omega_n=sqrt(k/m)",
+        "u(t)=u0*cos(omega_n*t)+v0/omega_n*sin(omega_n*t), c=0",
+        "H=1/(k-m*omega^2+i*c*omega), exp(i*omega*t)"
+      ],
+      "expected": "固定初值/阻尼，比较频率、时程和幅相。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-02",
+      "kind": "positive",
+      "scenario": "细长均匀悬臂梁弯曲模态",
+      "equations": [
+        "f_n=beta_n^2/(2*pi*L^2)*sqrt(E*I/(rho*A))",
+        "beta_1=1.8751040687; beta_2=4.6940911330"
+      ],
+      "expected": "Euler-Bernoulli假设下比较，做网格研究并报告剪切/截面/支承差异。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-03",
+      "kind": "positive",
+      "scenario": "显式弹性波或简单接触",
+      "expected": "波到达或动量/能量，步长和数值处理敏感性。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-04",
+      "kind": "negative",
+      "scenario": "缺密度/单位混用",
+      "expected": "输入和质量审查检出。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-05",
+      "kind": "negative",
+      "scenario": "非预期刚体模态",
+      "expected": "定位支承/连通。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-06",
+      "kind": "negative",
+      "scenario": "换材料后复用旧eig",
+      "expected": "依赖摘要失效。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-07",
+      "kind": "negative",
+      "scenario": "欠采样",
+      "expected": "输出闭合要求加密或限定带宽。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-08",
+      "kind": "negative",
+      "scenario": "Rayleigh beta单位为1/s",
+      "expected": "量纲检查拒绝。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-09",
+      "kind": "negative",
+      "scenario": "频点漏共振",
+      "expected": "频率研究标精度不足。",
+      "status": "planned"
+    },
+    {
+      "id": "fem-10",
+      "kind": "negative",
+      "scenario": "过大显式步长/人工能量遗漏",
+      "expected": "专属控制检查失败。",
+      "status": "planned"
+    }
+  ],
+  "fixturesStatus": "解析定义已给出，真实求解输入和数值回执待接入。"
+}

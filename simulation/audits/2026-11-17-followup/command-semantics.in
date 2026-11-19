@@ -1,0 +1,25 @@
+# Command-semantics probe with zero forces. No material prediction is intended.
+units metal
+atom_style atomic
+boundary p p p
+lattice fcc 3.56
+region specimen block 0 2 0 2 0 2
+create_box 1 specimen
+create_atoms 1 box
+mass 1 55.8
+pair_style zero 2.5
+pair_coeff * *
+velocity all set 0.0 0.0 0.0
+fix integrate all nve
+timestep 0.001
+variable saved_length equal $(lx)
+variable L0 equal ${saved_length}
+variable strain equal "(lx-v_L0)/v_L0"
+variable current_step equal step
+variable current_time equal time
+fix sampled all print 1 "${current_step} ${current_time}" file variable-print.csv screen no title "step time_ps"
+fix stretch all deform 1 x erate 0.01 remap x units box
+thermo 1
+thermo_style custom step lx v_L0 v_strain
+run 10
+print "COMMAND_SEMANTICS_COMPLETE"

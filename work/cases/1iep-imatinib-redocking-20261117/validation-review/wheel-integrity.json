@@ -1,0 +1,32 @@
+[
+  {
+    "name": "posebusters",
+    "version": "0.6.5",
+    "sha256": "3e0cbca6481079d5ab7d1989a8a8f184dbba27366613c4b515658ea52fb95ea3",
+    "officialMetadata": "https://pypi.org/pypi/posebusters/0.6.5/json",
+    "hashMatched": true,
+    "files": [
+      "posebusters-0.6.5-py3-none-any.whl"
+    ]
+  },
+  {
+    "name": "pandas",
+    "version": "3.1.1",
+    "sha256": "48066660db2f0d652b0f4df5743ca975e9b568043084c86e575b0eda648f7c64",
+    "officialMetadata": "https://pypi.org/pypi/pandas/3.1.1/json",
+    "hashMatched": true,
+    "files": [
+      "pandas-3.1.1-cp311-cp311-win_amd64.whl"
+    ]
+  },
+  {
+    "name": "PyYAML",
+    "version": "6.0.3",
+    "sha256": "9f3bfb4965eb874431221a3ff3fdcddc7e74e3b07799e0e84ca4a0f867d449bf",
+    "officialMetadata": "https://pypi.org/pypi/PyYAML/6.0.3/json",
+    "hashMatched": true,
+    "files": [
+      "pyyaml-6.0.3-cp311-cp311-win_amd64.whl"
+    ]
+  }
+]

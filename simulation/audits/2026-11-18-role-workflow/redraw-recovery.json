@@ -1,0 +1,2361 @@
+{
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "oldCompletedResultRejected": true,
+  "solverOperationsBefore": 1,
+  "solverOperationsAfter": 1,
+  "oldStateBinding": "sha256:b45dcfdf112e8e7181d087cc765f182f86c9104d09e0f52a878dab6e185196d4",
+  "newStateBinding": "sha256:50a9233bd2f9fab58296476a6792bbdb34ce5074edd05edbf98f2a108a9baa05",
+  "figures": [
+    {
+      "id": "figure-draft-c3f4de98-5c97-4e70-a1c4-30f6e8778c91",
+      "name": "cross-section.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-45c1ac80-e817-43e3-8a59-5573a02b143b",
+          "digest": "sha256:cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af",
+          "byteLength": 175460,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\cd\\cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-18T12:07:06.502Z",
+          "metadata": {
+            "type": "image",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+            "name": "cross-section.png",
+            "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+            "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+      "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+      "inspection": {
+        "opened": false
+      }
+    },
+    {
+      "id": "figure-draft-454d7d89-67ff-4d85-9da4-3267f203eea1",
+      "name": "force-temperature.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-96ca9d7f-ab44-4c42-8859-3271d08f5b2e",
+          "digest": "sha256:549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b",
+          "byteLength": 102587,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\54\\549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-18T12:07:06.528Z",
+          "metadata": {
+            "type": "image",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+            "name": "force-temperature.png",
+            "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+            "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+      "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+      "inspection": {
+        "opened": false
+      }
+    },
+    {
+      "id": "figure-draft-7e5594f5-dc4d-4303-b5d5-69b22bb11d32",
+      "name": "grinding-atoms-ovito.png",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-5c4f1c88-ca0a-4e89-8f8a-bee5b9bbee96",
+          "digest": "sha256:735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67",
+          "byteLength": 807804,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\73\\735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-18T12:07:06.556Z",
+          "metadata": {
+            "type": "image",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+            "name": "grinding-atoms-ovito.png",
+            "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+            "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+          },
+          "dependencies": []
+        }
+      ],
+      "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+      "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+      "inspection": {
+        "opened": false
+      }
+    }
+  ],
+  "state": {
+    "id": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+    "title": "FeNiCrCoCu 高熵合金单磨粒磨削验证",
+    "revision": 72,
+    "revisionId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a",
+    "lock": {
+      "contractVersion": "1.0.0",
+      "packs": [
+        {
+          "id": "lammps-hea",
+          "version": "0.1.0",
+          "digest": "sha256:42a4b48b736785f82a8d732281761f77b79cb6d2d4af46ed132c5b8963b06708"
+        }
+      ],
+      "workflowRef": "grinding",
+      "profileRef": "local-validation",
+      "resources": [
+        {
+          "id": "problem",
+          "digest": "sha256:c9ac764eff358e8476645e03acadde6328aaa55809f32710e209824bd4d7f576"
+        },
+        {
+          "id": "knowledge",
+          "digest": "sha256:950b29f5925d3c044dbb331c7e058f7a5dc7ea509c0b7cdc76be62ae37f1e152"
+        },
+        {
+          "id": "models",
+          "digest": "sha256:9e515d78e83da8fb08c4cb7eb3d5d7c31f9d3cc229fb79533bb55d5942d7f600"
+        },
+        {
+          "id": "vocabulary",
+          "digest": "sha256:a4634f45e93f5008b8eeb61b7b3967fa77cbaecd67227c2f30420d0f8ce90d70"
+        },
+        {
+          "id": "checks",
+          "digest": "sha256:7b5d8a2e6ef98d78a27870b21a4a1d7f11afca7cb709b57cb11cb568e4ccd448"
+        },
+        {
+          "id": "metrics",
+          "digest": "sha256:a19ae073cce971796897e04fc178b576cc4bbbecb3ce1f69d413e009c24d6398"
+        },
+        {
+          "id": "failures",
+          "digest": "sha256:907e54c88da2d5e7461eca511ac44611df45b34a89cca4542741f06d180880ea"
+        },
+        {
+          "id": "templates",
+          "digest": "sha256:cda793c988d923dbc918bad4d49df78523a39aa61ec85163d4657cd4829e8fdc"
+        },
+        {
+          "id": "roles",
+          "digest": "sha256:f5371ec13eb518257186fe54f866b866e3e290e9e33e8e7af6e83377f2af380a"
+        },
+        {
+          "id": "validation",
+          "digest": "sha256:53e7f339453250c2f60529e29d97df56bef09054f0a10dd7bd23958f848c923c"
+        },
+        {
+          "id": "artifacts",
+          "digest": "sha256:041d5b9ffb5d2622ebc45b09d659e8c0b22419f75c085eb5ad561d98711278fa"
+        },
+        {
+          "id": "asset-11",
+          "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430"
+        },
+        {
+          "id": "asset-12",
+          "digest": "sha256:0118469becfde07bc2c112e6208c1d9ad6afc94b40e044630eee625390a8af6e"
+        },
+        {
+          "id": "asset-13",
+          "digest": "sha256:b6e47d342bed290bf984ad769d35e74eccf8500c308cf1d66ba1f5b8396b9aea"
+        },
+        {
+          "id": "asset-14",
+          "digest": "sha256:005ced80a293a4502d5404b600b52736a43218c57e83a6f1abb1f6ac190029c5"
+        },
+        {
+          "id": "asset-15",
+          "digest": "sha256:52c45eedfa6ffad07938eede3930cee330f75148325d8e22c0c72923dbca41ce"
+        },
+        {
+          "id": "asset-16",
+          "digest": "sha256:0217d0e556441e25b0f630a7b2fc039d8d07e9592d6a471e30ff788ec78bd9fb"
+        },
+        {
+          "id": "asset-17",
+          "digest": "sha256:3696127626349a08310a0df9b7199d251d21b716abc475258573b8dbbbcdcd6f"
+        },
+        {
+          "id": "asset-18",
+          "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3"
+        },
+        {
+          "id": "asset-19",
+          "digest": "sha256:ece5849a240b425e12386dcbbe1ded4e623e2fceb308ec7cc78d880fc31aed3c"
+        },
+        {
+          "id": "asset-20",
+          "digest": "sha256:001e1f22fbf8d6e534313e586f5199033ea99dcee7afc6a31a3ff3a437e68672"
+        },
+        {
+          "id": "asset-21",
+          "digest": "sha256:e7a41302788fc7ba1ad1972557f9c3f30a7dca6469e4cc50000e70310c4199ac"
+        },
+        {
+          "id": "asset-22",
+          "digest": "sha256:432e7711ff5f3fb789b76672dbdb811abf85df8923c48cf34a8524b2d7102e4b"
+        }
+      ],
+      "adapterBindings": [
+        {
+          "capability": "molecular.dynamics.solve",
+          "adapterId": "local-lammps",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ],
+      "policies": {
+        "referencePolicy": "localCaseRequired",
+        "independentReviewRequired": true,
+        "maxConsecutiveRevisions": 3,
+        "maxConsecutiveRepairFailures": 3
+      },
+      "mode": "candidateValidation",
+      "digest": "sha256:78480cf0e957a54047c1147c04e99fd10b884d784a668ef18eb9f8bd2e85de41"
+    },
+    "workflow": {
+      "id": "grinding",
+      "taskType": "grinding",
+      "inputs": [
+        "request"
+      ],
+      "outputs": [
+        "wf-05-output"
+      ],
+      "stages": [
+        {
+          "id": "wf-00",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "request"
+          ],
+          "produces": [
+            "wf-00-output"
+          ],
+          "checkRefs": [
+            "checks#wf-00"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": true,
+          "evidencePolicy": {
+            "localCaseRequired": true,
+            "dualEvidence": true,
+            "claims": [
+              {
+                "id": "wf-00-object",
+                "sourceIds": [
+                  "current-stage"
+                ],
+                "blocking": true
+              },
+              {
+                "id": "wf-00-method",
+                "sourceIds": [
+                  "method-reference"
+                ],
+                "blocking": true
+              }
+            ]
+          },
+          "requiredCheckIds": [
+            "wf-00",
+            "HOST-wf-00"
+          ]
+        },
+        {
+          "id": "wf-r",
+          "kind": "action",
+          "role": "reasoner",
+          "needs": [
+            "wf-00"
+          ],
+          "consumes": [
+            "wf-00-output"
+          ],
+          "produces": [
+            "wf-r-output"
+          ],
+          "checkRefs": [
+            "checks#wf-r"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": true,
+          "requiredCheckIds": [
+            "wf-r",
+            "HOST-wf-r"
+          ]
+        },
+        {
+          "id": "wf-01",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-r"
+          ],
+          "consumes": [
+            "wf-r-output"
+          ],
+          "produces": [
+            "wf-01-output"
+          ],
+          "checkRefs": [
+            "checks#wf-01"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": true,
+          "evidencePolicy": {
+            "localCaseRequired": true,
+            "dualEvidence": true,
+            "claims": [
+              {
+                "id": "wf-01-object",
+                "sourceIds": [
+                  "current-stage"
+                ],
+                "blocking": true
+              },
+              {
+                "id": "wf-01-method",
+                "sourceIds": [
+                  "method-reference"
+                ],
+                "blocking": true
+              }
+            ]
+          },
+          "requiredCheckIds": [
+            "wf-01",
+            "HOST-wf-01"
+          ]
+        },
+        {
+          "id": "wf-02",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-01"
+          ],
+          "consumes": [
+            "wf-01-output"
+          ],
+          "produces": [
+            "wf-02-output"
+          ],
+          "checkRefs": [
+            "checks#wf-02"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": true,
+          "evidencePolicy": {
+            "localCaseRequired": true,
+            "dualEvidence": true,
+            "claims": [
+              {
+                "id": "wf-02-object",
+                "sourceIds": [
+                  "current-stage"
+                ],
+                "blocking": true
+              },
+              {
+                "id": "wf-02-method",
+                "sourceIds": [
+                  "method-reference"
+                ],
+                "blocking": true
+              }
+            ]
+          },
+          "requiredCheckIds": [
+            "wf-02",
+            "HOST-wf-02"
+          ]
+        },
+        {
+          "id": "wf-03a",
+          "kind": "action",
+          "role": "writer",
+          "needs": [
+            "wf-02"
+          ],
+          "consumes": [
+            "wf-02-output"
+          ],
+          "produces": [
+            "wf-03a-output"
+          ],
+          "checkRefs": [
+            "checks#wf-03a"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": true,
+          "evidencePolicy": {
+            "localCaseRequired": true,
+            "dualEvidence": true,
+            "claims": [
+              {
+                "id": "wf-03a-object",
+                "sourceIds": [
+                  "current-stage"
+                ],
+                "blocking": true
+              },
+              {
+                "id": "wf-03a-method",
+                "sourceIds": [
+                  "method-reference"
+                ],
+                "blocking": true
+              }
+            ]
+          },
+          "requiredCheckIds": [
+            "wf-03a",
+            "HOST-wf-03a",
+            "MB-001",
+            "MB-002",
+            "MB-003",
+            "MB-004",
+            "MB-005",
+            "MB-006",
+            "MB-007",
+            "MB-008",
+            "MB-009",
+            "OUTPUT-CLOSURE"
+          ]
+        },
+        {
+          "id": "execute",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "wf-03a"
+          ],
+          "consumes": [
+            "wf-03a-output"
+          ],
+          "produces": [
+            "execute-output"
+          ],
+          "checkRefs": [
+            "checks#execute"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": false,
+          "requiredCheckIds": [
+            "execute",
+            "HOST-execute"
+          ]
+        },
+        {
+          "id": "wf-04",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "execute"
+          ],
+          "consumes": [
+            "execute-output"
+          ],
+          "produces": [
+            "wf-04-output"
+          ],
+          "checkRefs": [
+            "checks#wf-04"
+          ],
+          "reviewRequired": true,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": false,
+          "evidencePolicy": {
+            "localCaseRequired": true,
+            "dualEvidence": true,
+            "claims": [
+              {
+                "id": "wf-04-object",
+                "sourceIds": [
+                  "current-stage"
+                ],
+                "blocking": true
+              },
+              {
+                "id": "wf-04-method",
+                "sourceIds": [
+                  "method-reference"
+                ],
+                "blocking": true
+              }
+            ]
+          },
+          "requiredCheckIds": [
+            "wf-04",
+            "HOST-wf-04"
+          ]
+        },
+        {
+          "id": "wf-05",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "wf-04"
+          ],
+          "consumes": [
+            "wf-04-output"
+          ],
+          "produces": [
+            "wf-05-output"
+          ],
+          "checkRefs": [
+            "checks#wf-05"
+          ],
+          "reviewRequired": false,
+          "capability": "molecular.dynamics.solve",
+          "requiredForExecution": false,
+          "requiredCheckIds": [
+            "wf-05",
+            "HOST-wf-05"
+          ]
+        }
+      ]
+    },
+    "scope": "new",
+    "authorization": "authorization-62bac0ef-9f48-4c2b-933c-6e70d4706c9b",
+    "createdAt": "2026-11-17T17:57:15.515Z",
+    "status": "active",
+    "externalInputs": {
+      "request": [
+        {
+          "artifactId": "artifact-2cf9cdc6-8299-4bd6-9e68-7e0bf16d3d3d",
+          "digest": "sha256:00e0780300c95122007294af449d7aa47f934207362347d539e56743fdbdeacf",
+          "byteLength": 729,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\00\\00e0780300c95122007294af449d7aa47f934207362347d539e56743fdbdeacf",
+          "type": "task-request",
+          "status": "available",
+          "createdAt": "2026-11-17T17:57:15.508Z",
+          "metadata": {
+            "type": "task-request",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+          },
+          "dependencies": []
+        }
+      ]
+    },
+    "stages": [
+      {
+        "id": "wf-00",
+        "kind": "action",
+        "role": "architect",
+        "needs": [],
+        "consumes": [
+          "request"
+        ],
+        "produces": [
+          "wf-00-output"
+        ],
+        "checkRefs": [
+          "checks#wf-00"
+        ],
+        "reviewRequired": true,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": true,
+        "evidencePolicy": {
+          "localCaseRequired": true,
+          "dualEvidence": true,
+          "claims": [
+            {
+              "id": "wf-00-object",
+              "sourceIds": [
+                "current-stage"
+              ],
+              "blocking": true
+            },
+            {
+              "id": "wf-00-method",
+              "sourceIds": [
+                "method-reference"
+              ],
+              "blocking": true
+            }
+          ]
+        },
+        "requiredCheckIds": [
+          "wf-00",
+          "HOST-wf-00"
+        ],
+        "status": "passed",
+        "attempt": 1,
+        "consecutiveRevisions": 0,
+        "receipts": [
+          "review-e596fa04-b4e7-4794-8d1e-f08fb7065557"
+        ],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-2cf9cdc6-8299-4bd6-9e68-7e0bf16d3d3d",
+            "digest": "sha256:00e0780300c95122007294af449d7aa47f934207362347d539e56743fdbdeacf",
+            "byteLength": 729,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\00\\00e0780300c95122007294af449d7aa47f934207362347d539e56743fdbdeacf",
+            "type": "task-request",
+            "status": "available",
+            "createdAt": "2026-11-17T17:57:15.508Z",
+            "metadata": {
+              "type": "task-request",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c",
+            "digest": "sha256:30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+            "byteLength": 14701,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\30\\30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+            "type": "design",
+            "status": "available",
+            "createdAt": "2026-11-17T17:57:37.858Z",
+            "metadata": {
+              "type": "design",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403",
+            "digest": "sha256:2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+            "byteLength": 4394,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2e\\2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-17T17:57:51.893Z",
+            "metadata": {
+              "name": "wf-00.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f",
+        "outputSlots": {
+          "wf-00-output": [
+            {
+              "artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c",
+              "digest": "sha256:30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+              "byteLength": 14701,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\30\\30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+              "type": "design",
+              "status": "available",
+              "createdAt": "2026-11-17T17:57:37.858Z",
+              "metadata": {
+                "type": "design",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403",
+              "digest": "sha256:2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+              "byteLength": 4394,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2e\\2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-17T17:57:51.893Z",
+              "metadata": {
+                "name": "wf-00.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "wf-r",
+        "kind": "action",
+        "role": "reasoner",
+        "needs": [
+          "wf-00"
+        ],
+        "consumes": [
+          "wf-00-output"
+        ],
+        "produces": [
+          "wf-r-output"
+        ],
+        "checkRefs": [
+          "checks#wf-r"
+        ],
+        "reviewRequired": false,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": true,
+        "requiredCheckIds": [
+          "wf-r",
+          "HOST-wf-r"
+        ],
+        "status": "passed",
+        "attempt": 5,
+        "consecutiveRevisions": 0,
+        "receipts": [],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c",
+            "digest": "sha256:30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+            "byteLength": 14701,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\30\\30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+            "type": "design",
+            "status": "available",
+            "createdAt": "2026-11-17T17:57:37.858Z",
+            "metadata": {
+              "type": "design",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403",
+            "digest": "sha256:2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+            "byteLength": 4394,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2e\\2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-17T17:57:51.893Z",
+            "metadata": {
+              "name": "wf-00.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-53330083-beef-4f8c-81f8-cee3a4a7ddf2",
+            "digest": "sha256:2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+            "byteLength": 431,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2a\\2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+            "type": "assessment",
+            "status": "available",
+            "createdAt": "2026-11-18T07:00:57.219Z",
+            "metadata": {
+              "type": "assessment",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-67fcbbb4-e8f0-4b8d-a607-91b52ee63640",
+            "digest": "sha256:a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+            "byteLength": 15892,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a5\\a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+            "type": "application/json",
+            "status": "available",
+            "createdAt": "2026-11-17T18:16:54.826Z",
+            "metadata": {
+              "name": "stage-packet-research-4-baseline-selection.json",
+              "type": "application/json",
+              "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:4:lammps-case-librarian",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-0de44498-2d31-4f8f-b263-109dbeeaf384"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          },
+          {
+            "artifactId": "artifact-491a076f-cd36-46b8-b974-d9c92b566626",
+            "digest": "sha256:f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+            "byteLength": 10292,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\f9\\f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-17T18:15:23.446Z",
+            "metadata": {
+              "name": "research-3-potential-catalogue-assessment.json",
+              "type": "stage-packet",
+              "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:3:lammps-paper-researcher",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-3b375393-1ccc-4caf-9319-30f2aa2a7b46"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          },
+          {
+            "artifactId": "artifact-f0ecf534-f306-4666-a163-f4e0df0f16e9",
+            "digest": "sha256:085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+            "byteLength": 6091,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\08\\085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:01:14.867Z",
+            "metadata": {
+              "name": "wf-r.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:5",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-444cee49-392d-40d4-8138-37d8ad75a517"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-444cee49-392d-40d4-8138-37d8ad75a517",
+        "failureRef": "failure-2c27c38a-b2fa-445d-97c7-092fbf360cfb",
+        "outputSlots": {
+          "wf-r-output": [
+            {
+              "artifactId": "artifact-53330083-beef-4f8c-81f8-cee3a4a7ddf2",
+              "digest": "sha256:2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+              "byteLength": 431,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2a\\2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+              "type": "assessment",
+              "status": "available",
+              "createdAt": "2026-11-18T07:00:57.219Z",
+              "metadata": {
+                "type": "assessment",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-67fcbbb4-e8f0-4b8d-a607-91b52ee63640",
+              "digest": "sha256:a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+              "byteLength": 15892,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a5\\a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+              "type": "application/json",
+              "status": "available",
+              "createdAt": "2026-11-17T18:16:54.826Z",
+              "metadata": {
+                "name": "stage-packet-research-4-baseline-selection.json",
+                "type": "application/json",
+                "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:4:lammps-case-librarian",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-0de44498-2d31-4f8f-b263-109dbeeaf384"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            },
+            {
+              "artifactId": "artifact-491a076f-cd36-46b8-b974-d9c92b566626",
+              "digest": "sha256:f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+              "byteLength": 10292,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\f9\\f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-17T18:15:23.446Z",
+              "metadata": {
+                "name": "research-3-potential-catalogue-assessment.json",
+                "type": "stage-packet",
+                "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:3:lammps-paper-researcher",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-3b375393-1ccc-4caf-9319-30f2aa2a7b46"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            },
+            {
+              "artifactId": "artifact-f0ecf534-f306-4666-a163-f4e0df0f16e9",
+              "digest": "sha256:085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+              "byteLength": 6091,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\08\\085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T07:01:14.867Z",
+              "metadata": {
+                "name": "wf-r.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:5",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-444cee49-392d-40d4-8138-37d8ad75a517"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "wf-01",
+        "kind": "action",
+        "role": "writer",
+        "needs": [
+          "wf-r"
+        ],
+        "consumes": [
+          "wf-r-output"
+        ],
+        "produces": [
+          "wf-01-output"
+        ],
+        "checkRefs": [
+          "checks#wf-01"
+        ],
+        "reviewRequired": true,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": true,
+        "evidencePolicy": {
+          "localCaseRequired": true,
+          "dualEvidence": true,
+          "claims": [
+            {
+              "id": "wf-01-object",
+              "sourceIds": [
+                "current-stage"
+              ],
+              "blocking": true
+            },
+            {
+              "id": "wf-01-method",
+              "sourceIds": [
+                "method-reference"
+              ],
+              "blocking": true
+            }
+          ]
+        },
+        "requiredCheckIds": [
+          "wf-01",
+          "HOST-wf-01"
+        ],
+        "status": "passed",
+        "attempt": 2,
+        "consecutiveRevisions": 0,
+        "receipts": [
+          "review-37b7bcbc-b32c-4603-a0a2-3deddb2ec664"
+        ],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-53330083-beef-4f8c-81f8-cee3a4a7ddf2",
+            "digest": "sha256:2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+            "byteLength": 431,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2a\\2a38725592ad47bb18ebd5fa0a5639686fb07f2f7b6e334dcd0c61e0ed56758d",
+            "type": "assessment",
+            "status": "available",
+            "createdAt": "2026-11-18T07:00:57.219Z",
+            "metadata": {
+              "type": "assessment",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-67fcbbb4-e8f0-4b8d-a607-91b52ee63640",
+            "digest": "sha256:a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+            "byteLength": 15892,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a5\\a58f0301bb039074f7ba83e22e48ac9e69c011fed6f2516ba1fc4802d1ccb4dd",
+            "type": "application/json",
+            "status": "available",
+            "createdAt": "2026-11-17T18:16:54.826Z",
+            "metadata": {
+              "name": "stage-packet-research-4-baseline-selection.json",
+              "type": "application/json",
+              "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:4:lammps-case-librarian",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-0de44498-2d31-4f8f-b263-109dbeeaf384"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          },
+          {
+            "artifactId": "artifact-491a076f-cd36-46b8-b974-d9c92b566626",
+            "digest": "sha256:f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+            "byteLength": 10292,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\f9\\f9496e8f4316d7a3849fe8a0db9bc2bb7068a457db62392bb095e3fb193cff4f",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-17T18:15:23.446Z",
+            "metadata": {
+              "name": "research-3-potential-catalogue-assessment.json",
+              "type": "stage-packet",
+              "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:3:lammps-paper-researcher",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-3b375393-1ccc-4caf-9319-30f2aa2a7b46"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          },
+          {
+            "artifactId": "artifact-f0ecf534-f306-4666-a163-f4e0df0f16e9",
+            "digest": "sha256:085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+            "byteLength": 6091,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\08\\085ec301cb79be1b705caf6521a8d0f801d78a00bb22c7ce3b763d119834b04e",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:01:14.867Z",
+            "metadata": {
+              "name": "wf-r.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:5",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-444cee49-392d-40d4-8138-37d8ad75a517"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-c6301215-caa5-4635-8bd4-cdf1361aeb3d",
+            "digest": "sha256:e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+            "byteLength": 313870,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e6\\e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+            "type": "structure",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.848Z",
+            "metadata": {
+              "type": "structure",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-ff91f784-4a3b-4dc2-8c3f-190303b8d9a5",
+            "digest": "sha256:b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+            "byteLength": 1292,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\b6\\b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+            "type": "structure-report",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.878Z",
+            "metadata": {
+              "type": "structure-report",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9e772f12-f634-4dae-b46b-f88ca6a2a3af",
+            "digest": "sha256:db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+            "byteLength": 377,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\db\\db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+            "type": "structure-check",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.910Z",
+            "metadata": {
+              "type": "structure-check",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-e087d3ae-49cb-45b7-8811-2c4fe8c44b94",
+            "digest": "sha256:5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+            "byteLength": 4247,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:50.414Z",
+            "metadata": {
+              "name": "wf-01.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:2",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-2711742c-ea94-4290-9756-6f17272c923d"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-2711742c-ea94-4290-9756-6f17272c923d",
+        "failureRef": "failure-b75592c0-94e5-4ff3-be88-e1009ed693b5",
+        "outputSlots": {
+          "wf-01-output": [
+            {
+              "artifactId": "artifact-c6301215-caa5-4635-8bd4-cdf1361aeb3d",
+              "digest": "sha256:e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+              "byteLength": 313870,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e6\\e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+              "type": "structure",
+              "status": "available",
+              "createdAt": "2026-11-18T07:02:24.848Z",
+              "metadata": {
+                "type": "structure",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-ff91f784-4a3b-4dc2-8c3f-190303b8d9a5",
+              "digest": "sha256:b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+              "byteLength": 1292,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\b6\\b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+              "type": "structure-report",
+              "status": "available",
+              "createdAt": "2026-11-18T07:02:24.878Z",
+              "metadata": {
+                "type": "structure-report",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-9e772f12-f634-4dae-b46b-f88ca6a2a3af",
+              "digest": "sha256:db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+              "byteLength": 377,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\db\\db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+              "type": "structure-check",
+              "status": "available",
+              "createdAt": "2026-11-18T07:02:24.910Z",
+              "metadata": {
+                "type": "structure-check",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-e087d3ae-49cb-45b7-8811-2c4fe8c44b94",
+              "digest": "sha256:5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+              "byteLength": 4247,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T07:02:50.414Z",
+              "metadata": {
+                "name": "wf-01.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:2",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-2711742c-ea94-4290-9756-6f17272c923d"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "wf-02",
+        "kind": "action",
+        "role": "writer",
+        "needs": [
+          "wf-01"
+        ],
+        "consumes": [
+          "wf-01-output"
+        ],
+        "produces": [
+          "wf-02-output"
+        ],
+        "checkRefs": [
+          "checks#wf-02"
+        ],
+        "reviewRequired": true,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": true,
+        "evidencePolicy": {
+          "localCaseRequired": true,
+          "dualEvidence": true,
+          "claims": [
+            {
+              "id": "wf-02-object",
+              "sourceIds": [
+                "current-stage"
+              ],
+              "blocking": true
+            },
+            {
+              "id": "wf-02-method",
+              "sourceIds": [
+                "method-reference"
+              ],
+              "blocking": true
+            }
+          ]
+        },
+        "requiredCheckIds": [
+          "wf-02",
+          "HOST-wf-02"
+        ],
+        "status": "passed",
+        "attempt": 1,
+        "consecutiveRevisions": 0,
+        "receipts": [
+          "review-beac1f22-966f-4723-a939-102b079a4523"
+        ],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-c6301215-caa5-4635-8bd4-cdf1361aeb3d",
+            "digest": "sha256:e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+            "byteLength": 313870,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e6\\e6f4f56be12e843a212176227b3accf1cbfa10ace29092003b861d21426fe78d",
+            "type": "structure",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.848Z",
+            "metadata": {
+              "type": "structure",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-ff91f784-4a3b-4dc2-8c3f-190303b8d9a5",
+            "digest": "sha256:b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+            "byteLength": 1292,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\b6\\b6e2edc2dc393577cf7a2fbdb1531faaae163d411a8f04bb7008c7e21f4116b1",
+            "type": "structure-report",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.878Z",
+            "metadata": {
+              "type": "structure-report",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9e772f12-f634-4dae-b46b-f88ca6a2a3af",
+            "digest": "sha256:db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+            "byteLength": 377,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\db\\db81819c97e976c667ae826778bc3c5d0782fce1860fc0e9be49f41e02ddd17f",
+            "type": "structure-check",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:24.910Z",
+            "metadata": {
+              "type": "structure-check",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-e087d3ae-49cb-45b7-8811-2c4fe8c44b94",
+            "digest": "sha256:5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+            "byteLength": 4247,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e7707945cc024064e72939c7e6ccb1639c883433077e4fb2d641fb8fb5b160a",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:02:50.414Z",
+            "metadata": {
+              "name": "wf-01.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:2",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-2711742c-ea94-4290-9756-6f17272c923d"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-6c8fa6ac-8f57-46d4-be0c-754d7bbe586c",
+            "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+            "byteLength": 1834403,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+            "type": "potential",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:19.506Z",
+            "metadata": {
+              "type": "potential",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-e7a8b45d-3e20-424c-92c2-e3aeecbe7b60",
+            "digest": "sha256:04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+            "byteLength": 380,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\04\\04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+            "type": "potential-mapping",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:19.538Z",
+            "metadata": {
+              "type": "potential-mapping",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-bfb972ad-5770-4482-9839-f52307e48e6d",
+            "digest": "sha256:c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+            "byteLength": 4063,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\c8\\c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:35.854Z",
+            "metadata": {
+              "name": "wf-02.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-02:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-75e4939b-a611-485f-84a2-cf5d7ffff985"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-75e4939b-a611-485f-84a2-cf5d7ffff985",
+        "outputSlots": {
+          "wf-02-output": [
+            {
+              "artifactId": "artifact-6c8fa6ac-8f57-46d4-be0c-754d7bbe586c",
+              "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+              "byteLength": 1834403,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+              "type": "potential",
+              "status": "available",
+              "createdAt": "2026-11-18T07:05:19.506Z",
+              "metadata": {
+                "type": "potential",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-e7a8b45d-3e20-424c-92c2-e3aeecbe7b60",
+              "digest": "sha256:04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+              "byteLength": 380,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\04\\04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+              "type": "potential-mapping",
+              "status": "available",
+              "createdAt": "2026-11-18T07:05:19.538Z",
+              "metadata": {
+                "type": "potential-mapping",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-bfb972ad-5770-4482-9839-f52307e48e6d",
+              "digest": "sha256:c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+              "byteLength": 4063,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\c8\\c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T07:05:35.854Z",
+              "metadata": {
+                "name": "wf-02.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-02:1",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-75e4939b-a611-485f-84a2-cf5d7ffff985"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "wf-03a",
+        "kind": "action",
+        "role": "writer",
+        "needs": [
+          "wf-02"
+        ],
+        "consumes": [
+          "wf-02-output"
+        ],
+        "produces": [
+          "wf-03a-output"
+        ],
+        "checkRefs": [
+          "checks#wf-03a"
+        ],
+        "reviewRequired": true,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": true,
+        "evidencePolicy": {
+          "localCaseRequired": true,
+          "dualEvidence": true,
+          "claims": [
+            {
+              "id": "wf-03a-object",
+              "sourceIds": [
+                "current-stage"
+              ],
+              "blocking": true,
+              "sourceDigests": [
+                "sha256:09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5"
+              ]
+            },
+            {
+              "id": "wf-03a-method",
+              "sourceIds": [
+                "method-reference"
+              ],
+              "blocking": true,
+              "sourceDigests": [
+                "sha256:efe4a533b95c01d477d5dd51635c6cab2dc9d57d4d70204cd9ae9e7fc1f74bb0"
+              ]
+            }
+          ]
+        },
+        "requiredCheckIds": [
+          "wf-03a",
+          "HOST-wf-03a",
+          "MB-001",
+          "MB-002",
+          "MB-003",
+          "MB-004",
+          "MB-005",
+          "MB-006",
+          "MB-007",
+          "MB-008",
+          "MB-009",
+          "OUTPUT-CLOSURE"
+        ],
+        "status": "passed",
+        "attempt": 4,
+        "consecutiveRevisions": 0,
+        "receipts": [
+          "review-b025df9c-b741-4d9e-a88a-785189e4d8bf"
+        ],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-6c8fa6ac-8f57-46d4-be0c-754d7bbe586c",
+            "digest": "sha256:5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+            "byteLength": 1834403,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\5e\\5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430",
+            "type": "potential",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:19.506Z",
+            "metadata": {
+              "type": "potential",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-e7a8b45d-3e20-424c-92c2-e3aeecbe7b60",
+            "digest": "sha256:04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+            "byteLength": 380,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\04\\04783c040eeddf597f7340cd152ac466f68c40d5383204b5f21f0e617a43d26f",
+            "type": "potential-mapping",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:19.538Z",
+            "metadata": {
+              "type": "potential-mapping",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-bfb972ad-5770-4482-9839-f52307e48e6d",
+            "digest": "sha256:c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+            "byteLength": 4063,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\c8\\c83ac1e89bc6f951747670536ef7b936817d609286a9dd773b1bb6c8cc8a1a1c",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:05:35.854Z",
+            "metadata": {
+              "name": "wf-02.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-02:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-75e4939b-a611-485f-84a2-cf5d7ffff985"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-10414726-ffef-4986-8c51-e7e460d0d85f",
+            "digest": "sha256:09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+            "byteLength": 2728,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\09\\09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+            "type": "solver-input",
+            "status": "available",
+            "createdAt": "2026-11-18T07:31:39.286Z",
+            "metadata": {
+              "type": "solver-input",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-8a4a0aab-1635-4cf5-b367-d4781f30f8b7",
+            "digest": "sha256:81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+            "byteLength": 6324,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\81\\81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+            "type": "input-checks",
+            "status": "available",
+            "createdAt": "2026-11-18T07:31:39.319Z",
+            "metadata": {
+              "type": "input-checks",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4aceb73c-3dc0-400c-9d00-07dba6315772",
+            "digest": "sha256:adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+            "byteLength": 4728,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ad\\adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:32:00.578Z",
+            "metadata": {
+              "name": "wf-03a.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-550f5f23-fbe2-4fc3-a400-94b62d712ec1"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-550f5f23-fbe2-4fc3-a400-94b62d712ec1",
+        "failureRef": "failure-b8ab4d8e-1ef2-4402-af1f-dbf7bf153408",
+        "outputSlots": {
+          "wf-03a-output": [
+            {
+              "artifactId": "artifact-10414726-ffef-4986-8c51-e7e460d0d85f",
+              "digest": "sha256:09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+              "byteLength": 2728,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\09\\09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+              "type": "solver-input",
+              "status": "available",
+              "createdAt": "2026-11-18T07:31:39.286Z",
+              "metadata": {
+                "type": "solver-input",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-8a4a0aab-1635-4cf5-b367-d4781f30f8b7",
+              "digest": "sha256:81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+              "byteLength": 6324,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\81\\81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+              "type": "input-checks",
+              "status": "available",
+              "createdAt": "2026-11-18T07:31:39.319Z",
+              "metadata": {
+                "type": "input-checks",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-4aceb73c-3dc0-400c-9d00-07dba6315772",
+              "digest": "sha256:adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+              "byteLength": 4728,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ad\\adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T07:32:00.578Z",
+              "metadata": {
+                "name": "wf-03a.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-550f5f23-fbe2-4fc3-a400-94b62d712ec1"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "execute",
+        "kind": "action",
+        "role": "executor",
+        "needs": [
+          "wf-03a"
+        ],
+        "consumes": [
+          "wf-03a-output"
+        ],
+        "produces": [
+          "execute-output"
+        ],
+        "checkRefs": [
+          "checks#execute"
+        ],
+        "reviewRequired": false,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": false,
+        "requiredCheckIds": [
+          "execute",
+          "HOST-execute"
+        ],
+        "status": "passed",
+        "attempt": 1,
+        "consecutiveRevisions": 0,
+        "receipts": [],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-10414726-ffef-4986-8c51-e7e460d0d85f",
+            "digest": "sha256:09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+            "byteLength": 2728,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\09\\09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+            "type": "solver-input",
+            "status": "available",
+            "createdAt": "2026-11-18T07:31:39.286Z",
+            "metadata": {
+              "type": "solver-input",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-8a4a0aab-1635-4cf5-b367-d4781f30f8b7",
+            "digest": "sha256:81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+            "byteLength": 6324,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\81\\81b466cd39ab118c186a82061fd00a5d14986ec38351c13a34954f2e6d01c10d",
+            "type": "input-checks",
+            "status": "available",
+            "createdAt": "2026-11-18T07:31:39.319Z",
+            "metadata": {
+              "type": "input-checks",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4aceb73c-3dc0-400c-9d00-07dba6315772",
+            "digest": "sha256:adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+            "byteLength": 4728,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ad\\adfa1a5dc695c4d57dce16b6f5492d3b96d872da51483860e1a3ae887f0899c2",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T07:32:00.578Z",
+            "metadata": {
+              "name": "wf-03a.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-550f5f23-fbe2-4fc3-a400-94b62d712ec1"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+            "digest": "sha256:a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+            "byteLength": 7195,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a6\\a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+            "type": "run",
+            "status": "available",
+            "createdAt": "2026-11-18T11:33:48.573Z",
+            "metadata": {
+              "type": "run",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-51761c44-7cbe-4a1c-9ef8-d0b1073f6042",
+            "digest": "sha256:208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+            "byteLength": 5014,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\20\\208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T11:34:17.213Z",
+            "metadata": {
+              "name": "execute.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:execute:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653",
+        "operationId": "lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c",
+        "outputSlots": {
+          "execute-output": [
+            {
+              "artifactId": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+              "digest": "sha256:a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+              "byteLength": 7195,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a6\\a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+              "type": "run",
+              "status": "available",
+              "createdAt": "2026-11-18T11:33:48.573Z",
+              "metadata": {
+                "type": "run",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-51761c44-7cbe-4a1c-9ef8-d0b1073f6042",
+              "digest": "sha256:208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+              "byteLength": 5014,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\20\\208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T11:34:17.213Z",
+              "metadata": {
+                "name": "execute.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:execute:1",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "wf-04",
+        "kind": "action",
+        "role": "analyst",
+        "needs": [
+          "execute"
+        ],
+        "consumes": [
+          "execute-output"
+        ],
+        "produces": [
+          "wf-04-output"
+        ],
+        "checkRefs": [
+          "checks#wf-04"
+        ],
+        "reviewRequired": true,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": false,
+        "evidencePolicy": {
+          "localCaseRequired": true,
+          "dualEvidence": true,
+          "claims": [
+            {
+              "id": "wf-04-object",
+              "sourceIds": [
+                "current-stage"
+              ],
+              "blocking": true,
+              "sourceDigests": [
+                "sha256:58a0baaba8e420c3a1a766ccc7ae4c1938639318b33126b79a0cc6ba5ae3ca33"
+              ]
+            },
+            {
+              "id": "wf-04-method",
+              "sourceIds": [
+                "method-reference"
+              ],
+              "blocking": true,
+              "sourceDigests": [
+                "sha256:0217d0e556441e25b0f630a7b2fc039d8d07e9592d6a471e30ff788ec78bd9fb"
+              ]
+            }
+          ]
+        },
+        "requiredCheckIds": [
+          "wf-04",
+          "HOST-wf-04"
+        ],
+        "status": "passed",
+        "attempt": 5,
+        "consecutiveRevisions": 0,
+        "receipts": [
+          "review-e1fb7748-1f5f-4726-922d-183878312722",
+          "review-fd7d21e5-68c3-452b-80cd-6f36fc82a185"
+        ],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+            "digest": "sha256:a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+            "byteLength": 7195,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a6\\a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+            "type": "run",
+            "status": "available",
+            "createdAt": "2026-11-18T11:33:48.573Z",
+            "metadata": {
+              "type": "run",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-51761c44-7cbe-4a1c-9ef8-d0b1073f6042",
+            "digest": "sha256:208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+            "byteLength": 5014,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\20\\208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T11:34:17.213Z",
+            "metadata": {
+              "name": "execute.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:execute:1",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+            "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+            "byteLength": 138586,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\15\\15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+            "type": "analysis",
+            "status": "available",
+            "createdAt": "2026-11-18T11:59:24.949Z",
+            "metadata": {
+              "type": "analysis",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5809a74d-01b2-441e-b03f-2ade8d6effff",
+            "digest": "sha256:8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+            "byteLength": 10601,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\8f\\8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T12:00:31.730Z",
+            "metadata": {
+              "name": "wf-04.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "producerInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931",
+        "outputSlots": {
+          "wf-04-output": [
+            {
+              "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+              "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+              "byteLength": 138586,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\15\\15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+              "type": "analysis",
+              "status": "available",
+              "createdAt": "2026-11-18T11:59:24.949Z",
+              "metadata": {
+                "type": "analysis",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+              },
+              "dependencies": []
+            },
+            {
+              "artifactId": "artifact-5809a74d-01b2-441e-b03f-2ade8d6effff",
+              "digest": "sha256:8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+              "byteLength": 10601,
+              "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\8f\\8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+              "type": "stage-packet",
+              "status": "available",
+              "createdAt": "2026-11-18T12:00:31.730Z",
+              "metadata": {
+                "name": "wf-04.json",
+                "type": "stage-packet",
+                "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+                "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                "producerInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931"
+              },
+              "dependencies": [],
+              "recordVersion": 1
+            }
+          ]
+        },
+        "blockedReason": "reviewBlocked",
+        "failureRef": "failure-a0a7478f-010e-4274-89a3-421987ed37e7"
+      },
+      {
+        "id": "wf-05",
+        "kind": "action",
+        "role": "post-processor",
+        "needs": [
+          "wf-04"
+        ],
+        "consumes": [
+          "wf-04-output"
+        ],
+        "produces": [
+          "wf-05-output"
+        ],
+        "checkRefs": [
+          "checks#wf-05"
+        ],
+        "reviewRequired": false,
+        "capability": "molecular.dynamics.solve",
+        "requiredForExecution": false,
+        "requiredCheckIds": [
+          "wf-05",
+          "HOST-wf-05"
+        ],
+        "status": "awaitingInspection",
+        "attempt": 2,
+        "consecutiveRevisions": 0,
+        "receipts": [],
+        "inputRefs": [
+          {
+            "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+            "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+            "byteLength": 138586,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\15\\15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+            "type": "analysis",
+            "status": "available",
+            "createdAt": "2026-11-18T11:59:24.949Z",
+            "metadata": {
+              "type": "analysis",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5809a74d-01b2-441e-b03f-2ade8d6effff",
+            "digest": "sha256:8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+            "byteLength": 10601,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\8f\\8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T12:00:31.730Z",
+            "metadata": {
+              "name": "wf-04.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputRefs": [
+          {
+            "artifactId": "artifact-48b612ab-1961-41e3-b674-150d48c7b09b",
+            "digest": "sha256:871c781310d55f93ea00566b04555c54fde692de50dbcd73391ee91f243ceb63",
+            "byteLength": 3393,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\87\\871c781310d55f93ea00566b04555c54fde692de50dbcd73391ee91f243ceb63",
+            "type": "figure-manifest",
+            "status": "available",
+            "createdAt": "2026-11-18T12:07:06.590Z",
+            "metadata": {
+              "type": "figure-manifest",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9eda870c-5f73-49c1-aef9-672e1920aabb",
+            "digest": "sha256:1dbecba0d2095fb0384bf376d2d1180609571fd90a55fc5f7c3150c2d7b5f8c7",
+            "byteLength": 6423,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\1d\\1dbecba0d2095fb0384bf376d2d1180609571fd90a55fc5f7c3150c2d7b5f8c7",
+            "type": "stage-packet",
+            "status": "available",
+            "createdAt": "2026-11-18T12:07:25.929Z",
+            "metadata": {
+              "name": "wf-05.json",
+              "type": "stage-packet",
+              "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-05:2",
+              "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+              "producerInstanceId": "role-fa1ba140-35fb-4ccb-ba57-c69e968f12de"
+            },
+            "dependencies": [],
+            "recordVersion": 1
+          }
+        ],
+        "outputSlots": {},
+        "producerInstanceId": "role-fa1ba140-35fb-4ccb-ba57-c69e968f12de"
+      }
+    ],
+    "repairs": {
+      "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r": {
+        "id": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r",
+        "failures": 2,
+        "history": [
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r",
+            "success": false,
+            "stageId": "wf-r",
+            "code": "SCHEMA_INVALID",
+            "reason": "Support role must publish one stage packet"
+          },
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r",
+            "success": false,
+            "stageId": "wf-r",
+            "code": "ROLE_FAILED",
+            "reason": "Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:3 failed: Run call or token budget exceeded"
+          }
+        ]
+      },
+      "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01": {
+        "id": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01",
+        "failures": 1,
+        "history": [
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01",
+            "success": false,
+            "stageId": "wf-01",
+            "code": "ROLE_FAILED",
+            "reason": "Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:1 failed: Run call or token budget exceeded"
+          }
+        ]
+      },
+      "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a": {
+        "id": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a",
+        "failures": 2,
+        "history": [
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a",
+            "success": false,
+            "stageId": "wf-03a",
+            "code": "ROLE_FAILED",
+            "reason": "Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:1 failed: "
+          },
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a",
+            "success": false,
+            "stageId": "wf-03a",
+            "code": "ROLE_FAILED",
+            "reason": "Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:2 failed: "
+          }
+        ]
+      },
+      "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:input-candidate": {
+        "id": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:input-candidate",
+        "failures": 1,
+        "history": [
+          {
+            "chainId": "revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:input-candidate",
+            "stageId": "wf-03a",
+            "success": false,
+            "reason": "Input candidate refinement"
+          }
+        ]
+      }
+    },
+    "invalidations": [
+      {
+        "id": "invalidation-d13737be-bdab-4622-89e0-fc0bb76759d9",
+        "affected": [
+          "wf-04",
+          "wf-05"
+        ],
+        "reason": "Address independent analysis review evidence gaps; reuse approved solver output",
+        "history": [
+          {
+            "id": "wf-04",
+            "kind": "action",
+            "role": "analyst",
+            "needs": [
+              "execute"
+            ],
+            "consumes": [
+              "execute-output"
+            ],
+            "produces": [
+              "wf-04-output"
+            ],
+            "checkRefs": [
+              "checks#wf-04"
+            ],
+            "reviewRequired": true,
+            "capability": "molecular.dynamics.solve",
+            "requiredForExecution": false,
+            "evidencePolicy": {
+              "localCaseRequired": true,
+              "dualEvidence": true,
+              "claims": [
+                {
+                  "id": "wf-04-object",
+                  "sourceIds": [
+                    "current-stage"
+                  ],
+                  "blocking": true,
+                  "sourceDigests": [
+                    "sha256:774fae9d3dd4bcb08e3d09dc6a62c79021568541722c3494df59c5bde9ee624d"
+                  ]
+                },
+                {
+                  "id": "wf-04-method",
+                  "sourceIds": [
+                    "method-reference"
+                  ],
+                  "blocking": true,
+                  "sourceDigests": [
+                    "sha256:0217d0e556441e25b0f630a7b2fc039d8d07e9592d6a471e30ff788ec78bd9fb"
+                  ]
+                }
+              ]
+            },
+            "requiredCheckIds": [
+              "wf-04",
+              "HOST-wf-04"
+            ],
+            "status": "blocked",
+            "attempt": 1,
+            "consecutiveRevisions": 0,
+            "receipts": [
+              "review-e1fb7748-1f5f-4726-922d-183878312722"
+            ],
+            "inputRefs": [
+              {
+                "artifactId": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+                "digest": "sha256:a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+                "byteLength": 7195,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a6\\a600cd5b5f629a9eab57138be789f93c5f385d00dde0ca7aa759b5ddceece276",
+                "type": "run",
+                "status": "available",
+                "createdAt": "2026-11-18T11:33:48.573Z",
+                "metadata": {
+                  "type": "run",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                },
+                "dependencies": []
+              },
+              {
+                "artifactId": "artifact-51761c44-7cbe-4a1c-9ef8-d0b1073f6042",
+                "digest": "sha256:208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+                "byteLength": 5014,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\20\\208e5cfdd5d462963acd3b09a83522876d4c932f9479c616da7df5edf00fdbcd",
+                "type": "stage-packet",
+                "status": "available",
+                "createdAt": "2026-11-18T11:34:17.213Z",
+                "metadata": {
+                  "name": "execute.json",
+                  "type": "stage-packet",
+                  "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:execute:1",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                  "producerInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653"
+                },
+                "dependencies": [],
+                "recordVersion": 1
+              }
+            ],
+            "outputRefs": [
+              {
+                "artifactId": "artifact-057c10a3-6e2b-4562-b9b4-352e0362f576",
+                "digest": "sha256:774fae9d3dd4bcb08e3d09dc6a62c79021568541722c3494df59c5bde9ee624d",
+                "byteLength": 133680,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\77\\774fae9d3dd4bcb08e3d09dc6a62c79021568541722c3494df59c5bde9ee624d",
+                "type": "analysis",
+                "status": "available",
+                "createdAt": "2026-11-18T11:35:05.823Z",
+                "metadata": {
+                  "type": "analysis",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                },
+                "dependencies": []
+              },
+              {
+                "artifactId": "artifact-a45217e6-a464-4add-92a9-864dda0f971c",
+                "digest": "sha256:bba7aa41953abffaa21b4cd85f9a2d866dbdebeba782b7213f1ad4bdd4350a6c",
+                "byteLength": 4746,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\bb\\bba7aa41953abffaa21b4cd85f9a2d866dbdebeba782b7213f1ad4bdd4350a6c",
+                "type": "stage-packet",
+                "status": "available",
+                "createdAt": "2026-11-18T11:36:18.874Z",
+                "metadata": {
+                  "name": "wf-04.json",
+                  "type": "stage-packet",
+                  "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:1",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                  "producerInstanceId": "role-72a27efd-12f2-4a48-94c4-54fcab7be04f"
+                },
+                "dependencies": [],
+                "recordVersion": 1
+              }
+            ],
+            "producerInstanceId": "role-72a27efd-12f2-4a48-94c4-54fcab7be04f",
+            "outputSlots": {
+              "wf-04-output": [
+                {
+                  "artifactId": "artifact-057c10a3-6e2b-4562-b9b4-352e0362f576",
+                  "digest": "sha256:774fae9d3dd4bcb08e3d09dc6a62c79021568541722c3494df59c5bde9ee624d",
+                  "byteLength": 133680,
+                  "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\77\\774fae9d3dd4bcb08e3d09dc6a62c79021568541722c3494df59c5bde9ee624d",
+                  "type": "analysis",
+                  "status": "available",
+                  "createdAt": "2026-11-18T11:35:05.823Z",
+                  "metadata": {
+                    "type": "analysis",
+                    "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                  },
+                  "dependencies": []
+                },
+                {
+                  "artifactId": "artifact-a45217e6-a464-4add-92a9-864dda0f971c",
+                  "digest": "sha256:bba7aa41953abffaa21b4cd85f9a2d866dbdebeba782b7213f1ad4bdd4350a6c",
+                  "byteLength": 4746,
+                  "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\bb\\bba7aa41953abffaa21b4cd85f9a2d866dbdebeba782b7213f1ad4bdd4350a6c",
+                  "type": "stage-packet",
+                  "status": "available",
+                  "createdAt": "2026-11-18T11:36:18.874Z",
+                  "metadata": {
+                    "name": "wf-04.json",
+                    "type": "stage-packet",
+                    "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:1",
+                    "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                    "producerInstanceId": "role-72a27efd-12f2-4a48-94c4-54fcab7be04f"
+                  },
+                  "dependencies": [],
+                  "recordVersion": 1
+                }
+              ]
+            },
+            "blockedReason": "reviewBlocked"
+          },
+          {
+            "id": "wf-05",
+            "kind": "action",
+            "role": "post-processor",
+            "needs": [
+              "wf-04"
+            ],
+            "consumes": [
+              "wf-04-output"
+            ],
+            "produces": [
+              "wf-05-output"
+            ],
+            "checkRefs": [
+              "checks#wf-05"
+            ],
+            "reviewRequired": false,
+            "capability": "molecular.dynamics.solve",
+            "requiredForExecution": false,
+            "requiredCheckIds": [
+              "wf-05",
+              "HOST-wf-05"
+            ],
+            "status": "pending",
+            "attempt": 0,
+            "consecutiveRevisions": 0,
+            "receipts": [],
+            "inputRefs": [],
+            "outputRefs": []
+          }
+        ]
+      },
+      {
+        "id": "invalidation-53d4b36b-f369-4241-a732-3ed81876e08d",
+        "affected": [
+          "wf-05"
+        ],
+        "reason": "Verify redraw invalidation and recovery",
+        "history": [
+          {
+            "id": "wf-05",
+            "kind": "action",
+            "role": "post-processor",
+            "needs": [
+              "wf-04"
+            ],
+            "consumes": [
+              "wf-04-output"
+            ],
+            "produces": [
+              "wf-05-output"
+            ],
+            "checkRefs": [
+              "checks#wf-05"
+            ],
+            "reviewRequired": false,
+            "capability": "molecular.dynamics.solve",
+            "requiredForExecution": false,
+            "requiredCheckIds": [
+              "wf-05",
+              "HOST-wf-05"
+            ],
+            "status": "passed",
+            "attempt": 1,
+            "consecutiveRevisions": 0,
+            "receipts": [],
+            "inputRefs": [
+              {
+                "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+                "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+                "byteLength": 138586,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\15\\15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+                "type": "analysis",
+                "status": "available",
+                "createdAt": "2026-11-18T11:59:24.949Z",
+                "metadata": {
+                  "type": "analysis",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                },
+                "dependencies": []
+              },
+              {
+                "artifactId": "artifact-5809a74d-01b2-441e-b03f-2ade8d6effff",
+                "digest": "sha256:8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+                "byteLength": 10601,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\8f\\8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9",
+                "type": "stage-packet",
+                "status": "available",
+                "createdAt": "2026-11-18T12:00:31.730Z",
+                "metadata": {
+                  "name": "wf-04.json",
+                  "type": "stage-packet",
+                  "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+                  "producerInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931"
+                },
+                "dependencies": [],
+                "recordVersion": 1
+              }
+            ],
+            "outputRefs": [
+              {
+                "artifactId": "artifact-6674bc1b-6a6e-40ce-96f5-69aef90c23b1",
+                "digest": "sha256:9d679374a8ca0e83e99207a0c6d2e18c80a55c2fbeb433b7683d2536c75caa2e",
+                "byteLength": 5300,
+                "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9d\\9d679374a8ca0e83e99207a0c6d2e18c80a55c2fbeb433b7683d2536c75caa2e",
+                "type": "figure-manifest",
+                "status": "available",
+                "createdAt": "2026-11-18T12:06:07.764Z",
+                "metadata": {
+                  "type": "figure-manifest",
+                  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                },
+                "dependencies": []
+              }
+            ],
+            "outputSlots": {
+              "wf-05-output": [
+                {
+                  "artifactId": "artifact-6674bc1b-6a6e-40ce-96f5-69aef90c23b1",
+                  "digest": "sha256:9d679374a8ca0e83e99207a0c6d2e18c80a55c2fbeb433b7683d2536c75caa2e",
+                  "byteLength": 5300,
+                  "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9d\\9d679374a8ca0e83e99207a0c6d2e18c80a55c2fbeb433b7683d2536c75caa2e",
+                  "type": "figure-manifest",
+                  "status": "available",
+                  "createdAt": "2026-11-18T12:06:07.764Z",
+                  "metadata": {
+                    "type": "figure-manifest",
+                    "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+                  },
+                  "dependencies": []
+                }
+              ]
+            },
+            "producerInstanceId": "role-b410362d-1221-4ea4-805b-385441de4492"
+          }
+        ]
+      }
+    ]
+  },
+  "verifiedAt": "2026-11-18T12:07:33.195Z"
+}

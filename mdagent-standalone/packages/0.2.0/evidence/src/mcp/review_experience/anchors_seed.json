@@ -1,0 +1,87 @@
+{
+  "pack": "physics_anchors",
+  "schema_version": 1,
+  "consumer": "evidence",
+  "entries": [
+    {
+      "id": "anchor-md-001",
+      "kind": "physics-anchor",
+      "quantity": "约化时间步长 dt*（dt 除以体系的特征时间）",
+      "unit": "无量纲",
+      "conditions": {"family": "lj-classical"},
+      "reduction": {"t_unit_ps": 2.157, "note": "氩类 LJ 体系特征时间 σ√(m/ε)，由 ε/kB=119.8K、σ=3.405Å、m=39.95amu 算得"},
+      "range": {"recommended_max": 0.005, "critical_max": 0.02},
+      "rationale": "分子动力学标准实践：稳定积分要求 dt* 约 0.001-0.005；超过 0.02 数值失稳风险极高（Allen & Tildesley《Computer Simulation of Liquids》通行口径；本机实测 100fs=dt*0.046 失稳、25fs=dt*0.0116 尚稳但已越推荐值）",
+      "refs": ["paper:10.1093/oso/9780198803200.001.0001"],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "anchor-temp-001",
+      "kind": "physics-anchor",
+      "quantity": "控温末温偏离（|末温−目标温度|）",
+      "unit": "K",
+      "conditions": {"aspect": "thermostat"},
+      "range": {"recommended_max_frac": 0.1, "recommended_max_abs": 15.0, "critical": "nonfinite_or_nonpositive"},
+      "rationale": "恒温浴下体系温度应围绕目标涨落：末温偏离超过 10% 或 15K（取宽者）提示未平衡或失稳；温度发散/非正即数值失稳",
+      "refs": ["atom:run-observation"],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "anchor-rdf-001",
+      "kind": "physics-anchor",
+      "quantity": "LJ 液体径向分布函数首峰位置 r1",
+      "unit": "Å",
+      "conditions": {"family": "lj-classical", "aspect": "liquid-structure"},
+      "params": {"sigma_A": 3.405},
+      "range": {"min_frac": 0.90, "max_frac": 1.15},
+      "rationale": "首峰应在 ~0.9σ–1.15σ（最近邻壳层恰在势阱底部附近）；显著偏离说明结构解析或体系状态异常（σ=3.405Å → 3.06–3.92Å；教科书液氩首峰 ~3.7Å）",
+      "refs": ["paper:10.x/lj-structure-textbook"],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "anchor-density-001",
+      "kind": "physics-anchor",
+      "quantity": "凝聚态体系密度",
+      "unit": "g/cm^3",
+      "conditions": {"aspect": "condensed"},
+      "range": {"min": 0.5, "max": 3.0},
+      "rationale": "分子/原子凝聚态（不含极端压强）密度量级 0.5–3.0 g/cm³；越界即模型或单位出错",
+      "refs": ["paper:10.x/condensed-matter-sanity"],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "anchor-repro-001",
+      "kind": "physics-anchor",
+      "quantity": "复现型计算的相对偏差",
+      "unit": "无量纲",
+      "conditions": {"aspect": "reproduction"},
+      "range": {"recommended_max": 0.005},
+      "rationale": "复现已发表拟合值时，同款模型+正确实现应把偏差压在 0.5% 内（数值方法/实现噪声量级）；显著超出提示配置或解析有误",
+      "refs": ["atom:run-observation"],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    },
+    {
+      "id": "anchor-accept-001",
+      "kind": "physics-anchor",
+      "quantity": "验收标准可量化性",
+      "unit": "—",
+      "conditions": {"aspect": "acceptance"},
+      "range": {"require": "each-item-has-number-and-criterion"},
+      "rationale": "「跑通就算成功」不算验收：每条标准必须含数值与判定条件，否则结果对不对无从谈起",
+      "refs": [],
+      "provenance": {"source": "human", "injected_by": "evidence-v2", "ts": "2026-10-15T00:00:00Z"},
+      "status": "active",
+      "exemptible": false
+    }
+  ]
+}

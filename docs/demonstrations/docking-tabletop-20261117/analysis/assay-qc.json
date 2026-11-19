@@ -1,0 +1,27 @@
+{
+  "dataOrigin": "synthetic-tabletop",
+  "computedFrom": "inputs/synthetic-assay-raw.csv",
+  "plates": [
+    {
+      "plateId": "DEMO-P1",
+      "meanHigh": 1000,
+      "meanLow": 100,
+      "sampleSDHigh": 12.24744871391589,
+      "sampleSDLow": 6.436503043467892,
+      "zPrime": 0.9377201608087208,
+      "illustrativeCriterion": 0.5,
+      "demoVerdict": "met"
+    },
+    {
+      "plateId": "DEMO-P2",
+      "meanHigh": 1000,
+      "meanLow": 100,
+      "sampleSDHigh": 12.24744871391589,
+      "sampleSDLow": 6.436503043467892,
+      "zPrime": 0.9377201608087208,
+      "illustrativeCriterion": 0.5,
+      "demoVerdict": "met"
+    }
+  ],
+  "actualPlateRun": false
+}

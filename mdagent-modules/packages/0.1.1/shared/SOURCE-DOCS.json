@@ -1,0 +1,13 @@
+{
+  "source": "handoff",
+  "files": {
+    "PACKAGING-NOTES.md": "aebd738c5e5adff628d3a028c1653781557ce622306fda7b1909f2d9f2efc474",
+    "README.md": "89882c6f2b1d9ade9174238523d695140aadb2d0f7836d4feab8826c4198e9ad",
+    "SANITIZATION.md": "0f015bd4c57bd940455c7e55b378217bb77f626c09d4a50c0a37bf7a6ff6a1e8",
+    "VERSION": "f01d19d8fe3f686275ac8efc9d6adbe77e43b32cb405c108193607c27e66f786",
+    "docs/90_来源与核验/MDagent代码审查报告_2026-10-24.md": "5965688596eda93f953e81cf288e8cbdc86e38e62c3f10802c00808351caf57d",
+    "docs/90_来源与核验/分支说明_UKB证据系统一致性校核_20261103.md": "7696849b97e90b98004d4cab88f434e4094a4d4c7acd955ccc676c233fb39b4e",
+    "docs/README.md": "b532dceea8e31fe716e2ad7c009f8022eb9589225a6ce3646f1e609c79812471",
+    "交接手册.md": "cf95db814f96372074d93e121f5ed844f62555e876d4a3d9841d7a804248ea25"
+  }
+}

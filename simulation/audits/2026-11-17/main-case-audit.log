@@ -1,0 +1,150 @@
+{
+  "directory": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work",
+  "inputSha256": "700e7cbd73dde40d26ef7f54993e72c0188d4ba78c8045ebf9c0e45914656a34",
+  "solverErrors": [],
+  "solverWarnings": [],
+  "dangerousBuilds": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "completionMarker": true,
+  "minimization": {
+    "stoppingCriterion": "energy tolerance",
+    "finalForceMaxEVPerA": 0.010172196,
+    "requestedForceToleranceEVPerA": 1e-06
+  },
+  "identity": {
+    "initialAtoms": 11520,
+    "finalAtoms": 11520,
+    "idsMatch": true,
+    "typesMatch": true,
+    "compositionCountsByType": {
+      "1": 2304,
+      "2": 2304,
+      "3": 2304,
+      "4": 2304,
+      "5": 2304
+    },
+    "fixedAtoms": 1152,
+    "fixedMaxDisplacementAngstrom": 0.0
+  },
+  "kinematics": {
+    "initialStep": 2000,
+    "finalStep": 8000,
+    "scratchTimePs": 4.0,
+    "travelAngstrom": 40.0,
+    "speedMPerS": 1000.0,
+    "approachSpeedMPerS": 200.0,
+    "trajectoryFrameCount": 31
+  },
+  "statistics": {
+    "all": {
+      "firstStep": 4000,
+      "lastStep": 8000,
+      "samples": 201,
+      "meanDragNn": 2.1706909409932127,
+      "meanNormalNn": 45.77917766324758,
+      "meanTemperatureK": 310.7567578286571,
+      "temperatureSlopeKPerPs": 4.03287044209717
+    },
+    "firstHalf": {
+      "firstStep": 4000,
+      "lastStep": 5980,
+      "samples": 100,
+      "meanDragNn": 2.5361470630833125,
+      "meanNormalNn": 43.60479244921962,
+      "meanTemperatureK": 305.87045121504576,
+      "temperatureSlopeKPerPs": 1.606267794279677
+    },
+    "secondHalf": {
+      "firstStep": 6000,
+      "lastStep": 8000,
+      "samples": 101,
+      "meanDragNn": 1.8088531963495496,
+      "meanNormalNn": 47.93203431080002,
+      "meanTemperatureK": 315.5946851688663,
+      "temperatureSlopeKPerPs": 1.6287954673166163
+    },
+    "quarters": [
+      {
+        "firstStep": 4000,
+        "lastStep": 5000,
+        "samples": 51,
+        "meanDragNn": 2.6240429085466923,
+        "meanNormalNn": 42.08216106982558,
+        "meanTemperatureK": 305.263338564672,
+        "temperatureSlopeKPerPs": -0.8678736818029156
+      },
+      {
+        "firstStep": 5020,
+        "lastStep": 6000,
+        "samples": 50,
+        "meanDragNn": 2.4279663263115516,
+        "meanNormalNn": 45.2684958217561,
+        "meanTemperatureK": 306.6106592302781,
+        "temperatureSlopeKPerPs": 6.978123859903933
+      },
+      {
+        "firstStep": 6020,
+        "lastStep": 7000,
+        "samples": 50,
+        "meanDragNn": 2.187251830668789,
+        "meanNormalNn": 48.119471703752936,
+        "meanTemperatureK": 314.875440072556,
+        "temperatureSlopeKPerPs": 5.1274011101350006
+      },
+      {
+        "firstStep": 7020,
+        "lastStep": 8000,
+        "samples": 50,
+        "meanDragNn": 1.4344356590947485,
+        "meanNormalNn": 47.72052238952415,
+        "meanTemperatureK": 316.3874618324021,
+        "temperatureSlopeKPerPs": -1.6654687676112365
+      }
+    ],
+    "dragWorkEV": 54.33034324893246,
+    "apparentForceRatioSecondHalf": 0.03773787660712703,
+    "temperatureMinK": 300.531894535802,
+    "temperatureMaxK": 321.767213108372
+  },
+  "lateEquilibration": {
+    "samples": 11,
+    "temperatureMeanK": 300.11061181818184,
+    "temperatureMinK": 296.71198,
+    "temperatureMaxK": 304.8875
+  },
+  "geometry": {
+    "substrateNm": [
+      8.544,
+      4.272,
+      3.56
+    ],
+    "sphereRadiusNm": 1.2,
+    "nominalDepthNm": 0.3,
+    "nominalContactRadiusNm": 0.7937253933193772,
+    "widthToContactDiameter": 2.6911070478256978,
+    "nominalMeanPressureGPa": 24.217841882584597,
+    "pressureCaveat": "Geometrical reference area, actual atomic contact area and hardness are unvalidated"
+  },
+  "displacement": {
+    "maxAngstrom": 2.6440245933046858,
+    "countOverOneAngstrom": 90,
+    "quantilesAngstrom": [
+      0.2071724553174163,
+      0.5549230166615166,
+      0.9450965486786094
+    ]
+  },
+  "energyAccounting": {
+    "toolEnergyAddedToThermo": false,
+    "thermostatEnergyTallied": false,
+    "velocityInDump": false
+  },
+  "forceReconstruction": {
+    "frames": 21,
+    "maxComponentAbsoluteErrorNn": 0.003282108279413753
+  }
+}

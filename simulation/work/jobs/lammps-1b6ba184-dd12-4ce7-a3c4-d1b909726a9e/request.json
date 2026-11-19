@@ -1,0 +1,23 @@
+{
+  "operationId": "lammps-1b6ba184-dd12-4ce7-a3c4-d1b909726a9e",
+  "workerToken": "worker-e82a08bd-8e06-4d32-8446-5025074b4c8c",
+  "argv": [
+    "E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe",
+    "-in",
+    "in.grinding",
+    "-log",
+    "log.lammps"
+  ],
+  "timeoutMs": 1800000,
+  "environment": {
+    "OMP_NUM_THREADS": "1"
+  },
+  "preflight": {
+    "status": "passed",
+    "permitRef": "permit-3b3813c9-59fb-4908-ac9f-f3895f5050ed",
+    "executable": "E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe",
+    "executableDigest": "sha256:bd9d9d785bc29c566759ca697fb3fb567c84bdaaff246e7d4f10d4fd4978a096",
+    "inputDigest": "sha256:a330acbae2f9801a88afa359626ca59aecc74c6c0ee10e08e78edfc924c56337",
+    "checkedAt": "2026-11-17T06:52:53.334Z"
+  }
+}

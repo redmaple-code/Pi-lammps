@@ -1,0 +1,10 @@
+{
+  "source": "inputs/raw/1iep_receptorH.pdb",
+  "output": "inputs/prepared/receptor-grouped.pdb",
+  "operation": "Sort existing ATOM records by chain/residue/insertion code/serial.",
+  "atomRecordCount": 4412,
+  "atomRecordMultisetUnchanged": true,
+  "coordinatesUnchanged": true,
+  "atomsDeleted": 0,
+  "atomsAdded": 0
+}

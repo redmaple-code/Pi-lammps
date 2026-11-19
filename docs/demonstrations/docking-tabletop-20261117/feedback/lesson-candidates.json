@@ -1,0 +1,18 @@
+{
+  "mode": "tabletop",
+  "items": [
+    {
+      "id": "DEMO-LESSON01",
+      "status": "candidate",
+      "sourceType": "constructedFailure",
+      "lesson": "单位缺失在输入结构校验处定位，保存字段路径与修复差异。"
+    },
+    {
+      "id": "DEMO-LESSON02",
+      "status": "candidate",
+      "sourceType": "constructedFailure",
+      "lesson": "排名前固定姿态质量策略，保留无效低分pose和剔除理由。"
+    }
+  ],
+  "activeKnowledgeUpdated": false
+}

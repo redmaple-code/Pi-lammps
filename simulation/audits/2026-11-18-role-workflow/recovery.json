@@ -1,0 +1,724 @@
+{
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "solverOperationId": "lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c",
+  "beforeReopen": [
+    {
+      "id": "wf-00",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-r",
+      "status": "passed",
+      "attempt": 5
+    },
+    {
+      "id": "wf-01",
+      "status": "passed",
+      "attempt": 2
+    },
+    {
+      "id": "wf-02",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-03a",
+      "status": "passed",
+      "attempt": 4
+    },
+    {
+      "id": "execute",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-04",
+      "status": "failed",
+      "attempt": 4
+    },
+    {
+      "id": "wf-05",
+      "status": "pending",
+      "attempt": 0
+    }
+  ],
+  "firstResult": "active",
+  "afterReopen": [
+    {
+      "id": "wf-00",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-r",
+      "status": "passed",
+      "attempt": 5
+    },
+    {
+      "id": "wf-01",
+      "status": "passed",
+      "attempt": 2
+    },
+    {
+      "id": "wf-02",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-03a",
+      "status": "passed",
+      "attempt": 4
+    },
+    {
+      "id": "execute",
+      "status": "passed",
+      "attempt": 1
+    },
+    {
+      "id": "wf-04",
+      "status": "passed",
+      "attempt": 5
+    },
+    {
+      "id": "wf-05",
+      "status": "awaitingInspection",
+      "attempt": 1
+    }
+  ],
+  "solverDuplicated": false,
+  "awaitingImageInspection": true,
+  "roleOperations": [
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+      "actor": {
+        "actorId": "lammps-simulation-architect",
+        "actorInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-00"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-5a24c2e4-09e5-4109-8e01-035739fa09c9",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-00"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1:retry-1",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-d3eb6575-a8e4-436c-8be8-a0fa1eafd413",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-00"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1:retry-2",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-5b6ffcfb-763f-4b8c-b529-55c5e80a0a4d",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-00"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:1:lammps-case-librarian",
+      "actor": {
+        "actorId": "lammps-case-librarian",
+        "actorInstanceId": "role-ea0cd654-d8cc-49f8-8b55-f611fa35fe7c",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:1"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:1:lammps-paper-researcher",
+      "actor": {
+        "actorId": "lammps-paper-researcher",
+        "actorInstanceId": "role-09a49a04-ab4b-47d6-835e-0d97231b637a",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:1"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:1",
+      "actor": {
+        "actorId": "lammps-simulation-reasoner",
+        "actorInstanceId": "role-0f860577-8a8a-415b-b633-84e0bb5e2fda",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-r"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:2:lammps-case-librarian",
+      "actor": {
+        "actorId": "lammps-case-librarian",
+        "actorInstanceId": "role-45206410-21be-485a-bcfc-5d5f3d956745",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:2"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:2:lammps-paper-researcher",
+      "actor": {
+        "actorId": "lammps-paper-researcher",
+        "actorInstanceId": "role-d786d605-dff0-4836-858c-a7ddd22bdffc",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:2"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:3:lammps-case-librarian",
+      "actor": {
+        "actorId": "lammps-case-librarian",
+        "actorInstanceId": "role-4e8a49ee-0d2a-4f15-b234-a99ca144c6a5",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:3"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:3:lammps-paper-researcher",
+      "actor": {
+        "actorId": "lammps-paper-researcher",
+        "actorInstanceId": "role-3b375393-1ccc-4caf-9319-30f2aa2a7b46",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:3"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:3",
+      "actor": {
+        "actorId": "lammps-simulation-reasoner",
+        "actorInstanceId": "role-d11cf17c-77f7-4dad-a65d-7d394f6b0623",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-r"
+    },
+    {
+      "id": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:4:lammps-case-librarian",
+      "actor": {
+        "actorId": "lammps-case-librarian",
+        "actorInstanceId": "role-0de44498-2d31-4f8f-b263-109dbeeaf384",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "research:4"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:5",
+      "actor": {
+        "actorId": "lammps-simulation-reasoner",
+        "actorInstanceId": "role-444cee49-392d-40d4-8138-37d8ad75a517",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-r"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:1",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-5d906046-d7c5-4b2d-91c6-a7fa51973b07",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-01"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:2",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-2711742c-ea94-4290-9756-6f17272c923d",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-01"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-01:2",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-409f02c1-0d5a-41ac-9bdb-6ea973bd3526",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-01"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-02:1",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-75e4939b-a611-485f-84a2-cf5d7ffff985",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-02"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-02:1",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-75c3ca67-b4a9-44f2-9970-08b6cd37c5a9",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-02"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:1",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-b81c0865-702e-48ba-aebb-fe37689529b4",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:2",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-abcedca9-c783-4798-b12e-d6e66f338d88",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:3",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-e1c1682d-8f57-4ace-9427-41b994309f81",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4",
+      "actor": {
+        "actorId": "lammps-input-writer",
+        "actorInstanceId": "role-550f5f23-fbe2-4fc3-a400-94b62d712ec1",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-b3443a36-3c95-4900-bc05-dad5ddda6be1",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-1",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-d22571a4-3a71-4da7-852b-034962f1e785",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-2",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-bfa23611-f022-42ae-a8f4-9df28a568ee4",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "failed",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-3",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-81cddbb2-8946-4c80-858d-6f03b0c709e1",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-4",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-0f101c3a-953b-4998-bcfb-fb42f1d01c28",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-5",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-fe07061a-bd3b-41fa-8a8a-a30dac8e5fd9",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-6",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-9a3fe86d-b78a-468c-8ec5-750352385c19",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-7",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-04596321-3043-4a2b-b172-47c4c4413ccf",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:4:retry-8",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-9c7a1fa3-8ad7-4519-bd57-85780ca2f7d3",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-03a"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:execute:1",
+      "actor": {
+        "actorId": "lammps-coordinator",
+        "actorInstanceId": "role-d7d80669-96a7-4412-83e0-60853b0f2653",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "execute"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:1",
+      "actor": {
+        "actorId": "lammps-data-analyst",
+        "actorInstanceId": "role-72a27efd-12f2-4a48-94c4-54fcab7be04f",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:1",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-da228103-1c21-44e0-99d3-1a83b1c39b4b",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:2",
+      "actor": {
+        "actorId": "lammps-data-analyst",
+        "actorInstanceId": "role-b2631ecd-f582-4970-aa48-1042b5385a6a",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:3",
+      "actor": {
+        "actorId": "lammps-data-analyst",
+        "actorInstanceId": "role-d7515cf3-3efa-4f62-b0fd-05ee29d31d35",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:4",
+      "actor": {
+        "actorId": "lammps-data-analyst",
+        "actorInstanceId": "role-49ef8b86-a00e-44a5-8c1c-907f9601204e",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "unknown",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+      "actor": {
+        "actorId": "lammps-data-analyst",
+        "actorInstanceId": "role-724c7e5a-293a-48a9-9e6c-2511c8884931",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "reviewer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-04:5",
+      "actor": {
+        "actorId": "lammps-reviewer",
+        "actorInstanceId": "role-404a7e1f-4624-495a-80ec-e0fa5a7bc9f5",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write",
+          "review.submit"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-04"
+    },
+    {
+      "id": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-05:1",
+      "actor": {
+        "actorId": "lammps-post-processor",
+        "actorInstanceId": "role-b410362d-1221-4ea4-805b-385441de4492",
+        "kind": "agent",
+        "capabilities": [
+          "artifact.write"
+        ]
+      },
+      "status": "succeeded",
+      "provider": "aispot-ds",
+      "model": "deepseek-v4.1-flash",
+      "stageId": "wf-05"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[
+  {"rule_id": "md-potential-mapping", "match_kind": "regex", "pattern": "pair_coeff\\s+\\*\\s+\\*\\s+\\S+\\s+[A-Z][a-z]?(\\s+[A-Z][a-z]?)+", "action": "flag", "note": "多元素势的元素映射写法，映射顺序错会静默得到错误体系，审核时核对 type→element 对应"},
+  {"rule_id": "md-unverified-potential", "match_kind": "keyword", "pattern": "未验证的势", "action": "flag", "note": "使用未经基准验证的势函数，结论需要额外核对"},
+  {"rule_id": "md-secret", "match_kind": "regex", "pattern": "(?i)(api[_-]?key|password|token)\\s*[:=]\\s*\\S{8,}", "action": "quarantine", "note": "疑似凭证"}
+]

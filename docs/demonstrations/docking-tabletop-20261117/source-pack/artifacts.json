@@ -1,0 +1,266 @@
+{
+  "id": "artifacts",
+  "items": [
+    {
+      "workflowId": "focused-docking",
+      "slotName": "deliverables",
+      "artifactType": "small-molecule-docking.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "docking-batch",
+      "artifactType": "small-molecule-docking.docking-batch",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "ligand-bundle",
+      "artifactType": "small-molecule-docking.ligand-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "metrics",
+      "artifactType": "small-molecule-docking.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "plan",
+      "artifactType": "small-molecule-docking.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "pose-analysis",
+      "artifactType": "small-molecule-docking.pose-analysis",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "protocol",
+      "artifactType": "small-molecule-docking.protocol",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "qualification",
+      "artifactType": "small-molecule-docking.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "receptor-bundle",
+      "artifactType": "small-molecule-docking.receptor-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "focused-docking",
+      "slotName": "task",
+      "artifactType": "small-molecule-docking.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "deliverables",
+      "artifactType": "small-molecule-docking.deliverables",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "docking-batch",
+      "artifactType": "small-molecule-docking.docking-batch",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "ligand-bundle",
+      "artifactType": "small-molecule-docking.ligand-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "metrics",
+      "artifactType": "small-molecule-docking.metrics",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "plan",
+      "artifactType": "small-molecule-docking.plan",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "pose-analysis",
+      "artifactType": "small-molecule-docking.pose-analysis",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "protocol",
+      "artifactType": "small-molecule-docking.protocol",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "qualification",
+      "artifactType": "small-molecule-docking.qualification",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "receptor-bundle",
+      "artifactType": "small-molecule-docking.receptor-bundle",
+      "schemaRef": "record-schema",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    },
+    {
+      "workflowId": "virtual-screening",
+      "slotName": "task",
+      "artifactType": "small-molecule-docking.task",
+      "schemaRef": "problem",
+      "cardinality": "one",
+      "semanticConstraints": {
+        "identity": "parent/state/receptor/pose/run 台账",
+        "units": "angstrom、工具评分kcal/mol、无量纲1",
+        "sampleBasis": "固定体系下每状态/种子独立运行"
+      },
+      "recordRequirement": "task按问题schema，其余为内容envelope；内核另加公共ArtifactRef和元数据。"
+    }
+  ],
+  "nativeFormatPolicy": "保存原生数据，内容envelope关联实际工件和语义；解析器另行实现。"
+}

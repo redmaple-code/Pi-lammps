@@ -1,0 +1,276 @@
+{
+  "name": "gate",
+  "version": "0.1.1",
+  "layout": "handoff-src-overlay/1",
+  "requires": [
+    "shared",
+    "knowledge"
+  ],
+  "source_zip_sha256": "e7fbae3489c45985cace5cbe9dc03c3ffb4837799828889227f27b57531832ec",
+  "files": {
+    "src/dsh-plugins/dsh-md-flow-gate/cordis.patch.yml": {
+      "sha256": "fed5784e930b64db3a7d7b66ea19ea2b3cde9e37086d28af1c0794f3b18d6553",
+      "upstream_sha256": "fed5784e930b64db3a7d7b66ea19ea2b3cde9e37086d28af1c0794f3b18d6553",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/dsh-plugins/dsh-md-flow-gate/lib/index.js": {
+      "sha256": "826a14611d797bff2583d7ae01ae48a8339d0613dcc625fb7a78f5f39c5c46d3",
+      "upstream_sha256": "826a14611d797bff2583d7ae01ae48a8339d0613dcc625fb7a78f5f39c5c46d3",
+      "upstream_source": "handoff-package",
+      "changes": []
+    },
+    "src/dsh-plugins/dsh-md-flow-gate/package.json": {
+      "sha256": "42c39f03f9fd4ca4c940cdc50e54ad1ec0e69bc83ee629f8a70b6b21d000c27d",
+      "upstream_sha256": "42c39f03f9fd4ca4c940cdc50e54ad1ec0e69bc83ee629f8a70b6b21d000c27d",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/dsh-plugins/dsh-md-ops-gate/cordis.patch.yml": {
+      "sha256": "a3d1fece528acfe35f2aa8facb4559961c77ebbebd66a24725b7693cefb7b4b1",
+      "upstream_sha256": "a3d1fece528acfe35f2aa8facb4559961c77ebbebd66a24725b7693cefb7b4b1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/dsh-plugins/dsh-md-ops-gate/lib/index.js": {
+      "sha256": "c4b081135b65012f082caeb229a58846369560a08181fea45045fe1230f79a3b",
+      "upstream_sha256": "c4b081135b65012f082caeb229a58846369560a08181fea45045fe1230f79a3b",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/dsh-plugins/dsh-md-ops-gate/package.json": {
+      "sha256": "85af1fe7a25a2d74b83288d9d3346ef97242f0b984af6857e417237148f252c7",
+      "upstream_sha256": "85af1fe7a25a2d74b83288d9d3346ef97242f0b984af6857e417237148f252c7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/assessment.py": {
+      "sha256": "46ebb5d98ae893951809c38803fab479912b6367cca95567de8827e9487a87f7",
+      "upstream_sha256": "46ebb5d98ae893951809c38803fab479912b6367cca95567de8827e9487a87f7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/config_check.py": {
+      "sha256": "a9757f7d5a7e38608897df6dde0844ee42f141a09f474e25e2b77f9377f9fef6",
+      "upstream_sha256": "a9757f7d5a7e38608897df6dde0844ee42f141a09f474e25e2b77f9377f9fef6",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/content_check.py": {
+      "sha256": "db7fd877bafca8d494bfa93944483bab4f0da655e015509fcbf97881497db6b0",
+      "upstream_sha256": "db7fd877bafca8d494bfa93944483bab4f0da655e015509fcbf97881497db6b0",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/deep_review.py": {
+      "sha256": "94f5f55e8aaef811c69e46775a5e179e793ee576cc9696c8183d67a6b12221af",
+      "upstream_sha256": "94f5f55e8aaef811c69e46775a5e179e793ee576cc9696c8183d67a6b12221af",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/evidence_grade.py": {
+      "sha256": "ceee5e0146c72c57b8afb6e321fa272dafe9cb230db1dfcad02d417218c44da7",
+      "upstream_sha256": "ceee5e0146c72c57b8afb6e321fa272dafe9cb230db1dfcad02d417218c44da7",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/stage_gate.py": {
+      "sha256": "f4ec6c401ce29a41f9595026cf094d29d8e4dd7f1b4e7397c7629ae0ab84d015",
+      "upstream_sha256": "f4ec6c401ce29a41f9595026cf094d29d8e4dd7f1b4e7397c7629ae0ab84d015",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/stage_state.py": {
+      "sha256": "e7c3f6cfaee6721681d565f31fa5dd5e8efabb2f876d56fb771325acbe170cf0",
+      "upstream_sha256": "e7c3f6cfaee6721681d565f31fa5dd5e8efabb2f876d56fb771325acbe170cf0",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/evolution/surface.py": {
+      "sha256": "1f5443f23db0bc4d7a4c8d9e4650e37a369652a0225e50083104ed984ced6d48",
+      "upstream_sha256": "1f5443f23db0bc4d7a4c8d9e4650e37a369652a0225e50083104ed984ced6d48",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/design_review.py": {
+      "sha256": "7965cc05aa82bde5c6d88bc5972f7eb44a52ab44a9a3cb095f4a437130234231",
+      "upstream_sha256": "7965cc05aa82bde5c6d88bc5972f7eb44a52ab44a9a3cb095f4a437130234231",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/mcp/md_proj_mcp.py": {
+      "sha256": "9420aaefa6321ef9180439cc70b9fc1a36de6f5d3b9d693dcc7ca37da295ef7b",
+      "upstream_sha256": "9420aaefa6321ef9180439cc70b9fc1a36de6f5d3b9d693dcc7ca37da295ef7b",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/mcp/mdproj_config.json.example": {
+      "sha256": "40904af9fba419bc639d24b86b1414e04dc924f8a9db2961c6c870cf6f240e1a",
+      "upstream_sha256": "40904af9fba419bc639d24b86b1414e04dc924f8a9db2961c6c870cf6f240e1a",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/mcp/physics_gate.py": {
+      "sha256": "2e6457df8b47b5c156152b96f029e2f280c25697018fef5f2e0d279ca29a6d0e",
+      "upstream_sha256": "2e6457df8b47b5c156152b96f029e2f280c25697018fef5f2e0d279ca29a6d0e",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/mcp/review_experience/README.md": {
+      "sha256": "ed3e9e0b61b53c3aa11a7f74ec1100d4af636ec5d77d67fb23426eb8921e9042",
+      "upstream_sha256": "ed3e9e0b61b53c3aa11a7f74ec1100d4af636ec5d77d67fb23426eb8921e9042",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/_template.json": {
+      "sha256": "714610d1aa50ce4f0ae32d8d9aa4dcc79c557b9185625bbd49bbf7e3ff898c65",
+      "upstream_sha256": "714610d1aa50ce4f0ae32d8d9aa4dcc79c557b9185625bbd49bbf7e3ff898c65",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/anchors_seed.json": {
+      "sha256": "d4931bd2f457ca6cddadf722cd8aa95109110970e192e09dac44ec32db6148c0",
+      "upstream_sha256": "d4931bd2f457ca6cddadf722cd8aa95109110970e192e09dac44ec32db6148c0",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/comparability.json": {
+      "sha256": "a0e61900d5cdb84c84be8501383b51f07d8ac9690023af9a482542a7553da229",
+      "upstream_sha256": "a0e61900d5cdb84c84be8501383b51f07d8ac9690023af9a482542a7553da229",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/completeness_friction.json": {
+      "sha256": "1bced8977d3ef5ce10be68a27e6b0de2f294b765e5e70d2f74c27b37d1284deb",
+      "upstream_sha256": "1bced8977d3ef5ce10be68a27e6b0de2f294b765e5e70d2f74c27b37d1284deb",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/completeness_generic.json": {
+      "sha256": "ff5b103e8628aacb4cd35debc1e71f9a257245055b0f087ad8452b9a700d0446",
+      "upstream_sha256": "ff5b103e8628aacb4cd35debc1e71f9a257245055b0f087ad8452b9a700d0446",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/completeness_paper_grade.json": {
+      "sha256": "98721300ab6cb53f55f884e5280945a410d89b0d73b2250e5841ec1f061f9cb9",
+      "upstream_sha256": "98721300ab6cb53f55f884e5280945a410d89b0d73b2250e5841ec1f061f9cb9",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/confirmation_surface.json": {
+      "sha256": "d7ded77395248fbded5b37446adaada6643289e05db964847ed9f9f554c9fdc4",
+      "upstream_sha256": "d7ded77395248fbded5b37446adaada6643289e05db964847ed9f9f554c9fdc4",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/experiment_abstraction.json": {
+      "sha256": "b1490940b1e377d52cd8ae6b5e768ef0be568b97774a64eca82b7424fc07bee3",
+      "upstream_sha256": "b1490940b1e377d52cd8ae6b5e768ef0be568b97774a64eca82b7424fc07bee3",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/experiment_design.json": {
+      "sha256": "bb69db8896e7dfeadf0fb63a6c920a00e2d3ce104c0e81fb84a432dfa06c51cb",
+      "upstream_sha256": "bb69db8896e7dfeadf0fb63a6c920a00e2d3ce104c0e81fb84a432dfa06c51cb",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/gate_seed.json": {
+      "sha256": "8c76d00c4c6c18a5df220bc9232cd7d029fc07e7dddbabcd771764076f38b088",
+      "upstream_sha256": "8c76d00c4c6c18a5df220bc9232cd7d029fc07e7dddbabcd771764076f38b088",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/material_structure.json": {
+      "sha256": "91271c0f6015dceb663b8a81c8658ab685c38eb8a7072c5dce82e00ac9fc86df",
+      "upstream_sha256": "91271c0f6015dceb663b8a81c8658ab685c38eb8a7072c5dce82e00ac9fc86df",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/methodology_deep.json": {
+      "sha256": "1705268ad2e24831cff9c085b14f3df35412392fcd5156e6c6e80cace3c29fc1",
+      "upstream_sha256": "1705268ad2e24831cff9c085b14f3df35412392fcd5156e6c6e80cace3c29fc1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/methodology_seed.json": {
+      "sha256": "70f441b8aac87ee1c7c0147e3ab4f1742144c1a57be893437c9e6059b2bd69c1",
+      "upstream_sha256": "70f441b8aac87ee1c7c0147e3ab4f1742144c1a57be893437c9e6059b2bd69c1",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/mcp/review_experience/physics_basics.json": {
+      "sha256": "e0c58e7c2f5b20da47056a288fa5b908233ea9206a44639eb92cfe392344a25a",
+      "upstream_sha256": "e0c58e7c2f5b20da47056a288fa5b908233ea9206a44639eb92cfe392344a25a",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/e2e_dual_gate_demo.py": {
+      "sha256": "3185fe52c284e63d8878a6591ab304b7c3e4e13c0c795bba904ed59561e1aa6e",
+      "upstream_sha256": "3185fe52c284e63d8878a6591ab304b7c3e4e13c0c795bba904ed59561e1aa6e",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/tests/test_assessment_v2.py": {
+      "sha256": "221f86f15d757765d37bd9f360bdced45a9c663859a36b3b17071bc66382c0e8",
+      "upstream_sha256": "221f86f15d757765d37bd9f360bdced45a9c663859a36b3b17071bc66382c0e8",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_config_check.py": {
+      "sha256": "4092009471971207a27fd5b91fc290f05f0efd44a83dac8ba0c0a745851412ee",
+      "upstream_sha256": "4092009471971207a27fd5b91fc290f05f0efd44a83dac8ba0c0a745851412ee",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_deep_review.py": {
+      "sha256": "60a9455a662242698b3e263c266f8fa0f77f8cd0becc9d892625704460f8ccda",
+      "upstream_sha256": "60a9455a662242698b3e263c266f8fa0f77f8cd0becc9d892625704460f8ccda",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_design_review.py": {
+      "sha256": "430f25d711d296277f9afb5d685e9723f7813a17ebaa034299bbcee64769620d",
+      "upstream_sha256": "430f25d711d296277f9afb5d685e9723f7813a17ebaa034299bbcee64769620d",
+      "upstream_source": "handoff-package",
+      "changes": []
+    },
+    "src/tests/test_evidence_grade.py": {
+      "sha256": "d51779489126cb2d1399be66f83a2664c93be545f659d9870f22f4e04bb6860c",
+      "upstream_sha256": "d51779489126cb2d1399be66f83a2664c93be545f659d9870f22f4e04bb6860c",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_flow_gate.mjs": {
+      "sha256": "e921001b22fe33384d603e747a05a4acf52882df6cbee26278a2791929a54f31",
+      "upstream_sha256": "e921001b22fe33384d603e747a05a4acf52882df6cbee26278a2791929a54f31",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_md_proj_mcp.py": {
+      "sha256": "c9dbfa1e152ec3f897c4e0e833fedb63d45d48d74e1129d55b755dcf96a48b4b",
+      "upstream_sha256": "c9dbfa1e152ec3f897c4e0e833fedb63d45d48d74e1129d55b755dcf96a48b4b",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/tests/test_physics_gate.py": {
+      "sha256": "d458fb5d101b747330b944d96a310987f8186978fb76b40b8833d70c298b9bd4",
+      "upstream_sha256": "d458fb5d101b747330b944d96a310987f8186978fb76b40b8833d70c298b9bd4",
+      "upstream_source": "dual-gate",
+      "changes": []
+    },
+    "src/tests/test_stage_gate.py": {
+      "sha256": "447bfb8139fcefdea73f9c8654c39fb103ef8d412380101d1789f11746e0b4e0",
+      "upstream_sha256": "447bfb8139fcefdea73f9c8654c39fb103ef8d412380101d1789f11746e0b4e0",
+      "upstream_source": "v3",
+      "changes": []
+    },
+    "src/tests/test_stage_state.py": {
+      "sha256": "662e349e18ee3a3b7d8a0b5a004050ad5c090874f3f3abf6d0dd5f91c8c4ddfc",
+      "upstream_sha256": "662e349e18ee3a3b7d8a0b5a004050ad5c090874f3f3abf6d0dd5f91c8c4ddfc",
+      "upstream_source": "v3",
+      "changes": []
+    }
+  }
+}

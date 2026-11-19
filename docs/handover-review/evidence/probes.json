@@ -1,0 +1,61 @@
+{
+  "scope": "isolated behavioral probes; no solver/model calls",
+  "probes": [
+    {
+      "id": "PROBE-01",
+      "subject": "case prefix collision",
+      "observed": "foo_bar_20260102_000000",
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-02",
+      "subject": "interrupted intent save",
+      "observed": "{",
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-08",
+      "subject": "self-reported approval quote",
+      "observed": "CONFIRMED",
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-03",
+      "subject": "empty consistency list",
+      "observed": "PASS",
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-04",
+      "subject": "unknown consistency list",
+      "observed": "PASS",
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-05",
+      "subject": "review input truncation",
+      "observed": {
+        "tail_present": false
+      },
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-06",
+      "subject": "MDSIM_DATA_ROOT-only resolution",
+      "observed": {
+        "adapter_uses_custom": true,
+        "same_store": false
+      },
+      "defect_reproduced": true
+    },
+    {
+      "id": "PROBE-07",
+      "subject": "runner inherits external UKB root",
+      "observed": {
+        "inherits_external_root": true,
+        "admin_filename": "admin.json"
+      },
+      "defect_reproduced": true
+    }
+  ]
+}

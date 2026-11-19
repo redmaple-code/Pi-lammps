@@ -1,0 +1,1415 @@
+(node:10516) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+  "plan": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\cases\\hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d\\PLAN.json",
+  "scheme": {
+    "goal": "Exercise the full scientific workflow with a real single-asperity grinding pass",
+    "scope": "candidateValidation",
+    "parameters": {
+      "alloy": "FeNiCrCoCu",
+      "composition": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "latticeAngstrom": 3.56,
+      "cells": [
+        24,
+        12,
+        10
+      ],
+      "temperatureK": 300,
+      "seed": 482748,
+      "timeStepPs": 0.001,
+      "equilibrationSteps": 2000,
+      "approachSteps": 2000,
+      "grindingSteps": 4000,
+      "radiusAngstrom": 12,
+      "depthAngstrom": 3,
+      "speedAngstromPerPs": 10,
+      "stiffnessEVPerAngstromCubed": 10,
+      "dumpEvery": 200,
+      "forceEvery": 20
+    },
+    "features": [
+      {
+        "id": "five-components",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fcc-substrate",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fixed-boundary",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "thermal-layer",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "spherical-abrasive",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "lateral-motion",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      }
+    ],
+    "criteria": [
+      {
+        "id": "finite",
+        "field": "finite",
+        "quantity": "finite outputs",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": true
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "atoms",
+        "field": "atomCount",
+        "quantity": "retained atoms",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": 11520
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "fixed",
+        "field": "fixedMaxDisplacementAngstrom",
+        "quantity": "fixed layer drift",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "maximum": 0.000001
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "contact",
+        "field": "contactSamples",
+        "quantity": "contact force samples",
+        "unit": "1",
+        "acceptanceSpec": {
+          "minimum": 10
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "travel",
+        "field": "tipTravelAngstrom",
+        "quantity": "grinding distance",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "minimum": 38
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      }
+    ],
+    "authorizationRef": "authorization-1fc70e50-8c31-4890-aad9-2acf55c6bd26",
+    "D1": {
+      "material": "equiatomic FCC FeNiCrCoCu model alloy",
+      "elements": [
+        "Fe",
+        "Ni",
+        "Cr",
+        "Co",
+        "Cu"
+      ]
+    },
+    "D2": "Spherical abrasive approaches the free surface and traverses in +x",
+    "D21": [
+      {
+        "id": "five-components",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fcc-substrate",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fixed-boundary",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "thermal-layer",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "spherical-abrasive",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "lateral-motion",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      }
+    ],
+    "D3": {
+      "temperatureK": 300
+    },
+    "D4": {
+      "cells": [
+        24,
+        12,
+        10
+      ],
+      "boundary": "free x/z, periodic y"
+    },
+    "D5": {
+      "timestepPs": 0.001,
+      "thermostat": "boundary Langevin, NVE mobile",
+      "approach": 2000,
+      "grinding": 4000
+    },
+    "D6": {
+      "potential": "Farkas-Caro 2018 corrected EAM/alloy",
+      "source": "https://www.ctcms.nist.gov/potentials/Download/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl",
+      "doi": "10.1557/jmr.2018.245"
+    },
+    "D7": [
+      {
+        "id": "finite",
+        "field": "finite",
+        "quantity": "finite outputs",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": true
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "atoms",
+        "field": "atomCount",
+        "quantity": "retained atoms",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": 11520
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "fixed",
+        "field": "fixedMaxDisplacementAngstrom",
+        "quantity": "fixed layer drift",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "maximum": 0.000001
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "contact",
+        "field": "contactSamples",
+        "quantity": "contact force samples",
+        "unit": "1",
+        "acceptanceSpec": {
+          "minimum": 10
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "travel",
+        "field": "tipTravelAngstrom",
+        "quantity": "grinding distance",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "minimum": 38
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      }
+    ],
+    "limitations": [
+      "Idealized model-alloy potential",
+      "Rigid repulsive sphere represents the abrasive geometry",
+      "Single short small-cell integration test. Convergence, repeat-seed statistics and experimental grinding comparison are pending."
+    ]
+  },
+  "stateDirectory": "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\c670bb6287f2dce0"
+}
+{"stage":"wf-00","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-r","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-01","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-02","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-03a","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"execute","status":"submitting","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d","operationId":"lammps-f36c8580-d0a7-4e3b-9068-3d190415964d"}
+{"status":"running","operationId":"lammps-f36c8580-d0a7-4e3b-9068-3d190415964d","observedAt":"2026-11-17T06:21:18.141Z","phase":"workerStarting"}
+{"status":"succeeded","startedAt":"2026-11-17T06:21:18.248Z","endedAt":"2026-11-17T06:28:43.576Z","exitCode":0,"signal":null,"error":null,"timedOut":false,"argv":["E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe","-in","in.grinding","-log","log.lammps"],"workdir":"F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work","operationId":"lammps-f36c8580-d0a7-4e3b-9068-3d190415964d","workerPid":55796,"workerToken":"worker-5e6678bd-06a3-4834-91d7-4153fcd88352","observedAt":"2026-11-17T06:28:43.576Z"}
+{"stage":"wf-04","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-05","status":"running","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"}
+{"stage":"wf-05","status":"awaitingImageInspection","caseId":"hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d","reportPath":"F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\cases\\hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d\\REPORT.md"}
+{
+  "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+  "directory": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\cases\\hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+  "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work",
+  "reportPath": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\cases\\hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d\\REPORT.md",
+  "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+  "analysisRef": {
+    "artifactId": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+    "digest": "sha256:02a1b351f5e527c6cd033464c156bbd4057c3e5f5bd48392f3094e28b2adf234",
+    "byteLength": 112223,
+    "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\02\\02a1b351f5e527c6cd033464c156bbd4057c3e5f5bd48392f3094e28b2adf234",
+    "type": "analysis",
+    "status": "available",
+    "createdAt": "2026-11-17T06:28:48.425Z",
+    "metadata": {
+      "type": "analysis",
+      "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d"
+    },
+    "dependencies": []
+  },
+  "status": "awaitingImageInspection",
+  "acceptance": {
+    "task": "met",
+    "numerical": "insufficient",
+    "model": "insufficient",
+    "criteria": [
+      {
+        "id": "metric-e77514d6-da20-40cf-9780-a51318fd086b",
+        "definitionRef": "finite",
+        "quantity": "finite outputs",
+        "unit": "1",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "dataRefs": [
+          {
+            "artifactId": "artifact-0670b31e-d284-4411-b5d7-fa8b3bc11c47",
+            "digest": "sha256:915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "byteLength": 17570,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.801Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "log.lammps"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a3999a9d-720a-4714-bc4d-ea478e5a4b70",
+            "digest": "sha256:79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "byteLength": 31795,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\79\\79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.816Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "grinding.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a444c34d-0aa6-497e-944b-b91830b99f3d",
+            "digest": "sha256:a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "byteLength": 14868,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a0\\a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.830Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "approach.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5bee01a4-1c3d-4899-b023-a88369c4aeab",
+            "digest": "sha256:129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "byteLength": 19265911,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\12\\129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.171Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "trajectory.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-0c1f8a64-0b21-456c-9e5e-84041fb9a9bb",
+            "digest": "sha256:9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "byteLength": 361421,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.193Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "initial.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-b97ea747-755a-4ba7-a195-89327059c59f",
+            "digest": "sha256:d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "byteLength": 621366,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\d8\\d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.215Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-39aea8f1-8ec7-4a75-a60d-c77cc08aac76",
+            "digest": "sha256:9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "byteLength": 1434370,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9e\\9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.251Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.data"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-57fa1c1f-3989-4553-95db-773f3b7e0bb4",
+            "digest": "sha256:ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "byteLength": 1014734,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ae\\ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.277Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.restart"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4cd338f6-716a-4e9e-ba4a-05c9027e9119",
+            "digest": "sha256:98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "byteLength": 15222,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\98\\98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.291Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stdout.log"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9cc5ad72-8928-4110-8866-f250db7594c7",
+            "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "byteLength": 0,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.299Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stderr.log"
+            },
+            "dependencies": []
+          }
+        ],
+        "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+        "createdAt": "2026-11-17T06:28:48.398Z",
+        "value": true,
+        "verdict": "met",
+        "limitations": []
+      },
+      {
+        "id": "metric-d994ceea-9aee-4eeb-9130-322ea21d5e72",
+        "definitionRef": "atoms",
+        "quantity": "retained atoms",
+        "unit": "1",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "dataRefs": [
+          {
+            "artifactId": "artifact-0670b31e-d284-4411-b5d7-fa8b3bc11c47",
+            "digest": "sha256:915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "byteLength": 17570,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.801Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "log.lammps"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a3999a9d-720a-4714-bc4d-ea478e5a4b70",
+            "digest": "sha256:79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "byteLength": 31795,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\79\\79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.816Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "grinding.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a444c34d-0aa6-497e-944b-b91830b99f3d",
+            "digest": "sha256:a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "byteLength": 14868,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a0\\a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.830Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "approach.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5bee01a4-1c3d-4899-b023-a88369c4aeab",
+            "digest": "sha256:129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "byteLength": 19265911,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\12\\129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.171Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "trajectory.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-0c1f8a64-0b21-456c-9e5e-84041fb9a9bb",
+            "digest": "sha256:9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "byteLength": 361421,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.193Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "initial.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-b97ea747-755a-4ba7-a195-89327059c59f",
+            "digest": "sha256:d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "byteLength": 621366,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\d8\\d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.215Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-39aea8f1-8ec7-4a75-a60d-c77cc08aac76",
+            "digest": "sha256:9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "byteLength": 1434370,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9e\\9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.251Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.data"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-57fa1c1f-3989-4553-95db-773f3b7e0bb4",
+            "digest": "sha256:ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "byteLength": 1014734,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ae\\ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.277Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.restart"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4cd338f6-716a-4e9e-ba4a-05c9027e9119",
+            "digest": "sha256:98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "byteLength": 15222,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\98\\98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.291Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stdout.log"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9cc5ad72-8928-4110-8866-f250db7594c7",
+            "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "byteLength": 0,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.299Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stderr.log"
+            },
+            "dependencies": []
+          }
+        ],
+        "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+        "createdAt": "2026-11-17T06:28:48.398Z",
+        "value": 11520,
+        "verdict": "met",
+        "limitations": []
+      },
+      {
+        "id": "metric-aa6c449b-1627-4419-a7fd-9720f13159dc",
+        "definitionRef": "fixed",
+        "quantity": "fixed layer drift",
+        "unit": "angstrom",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "dataRefs": [
+          {
+            "artifactId": "artifact-0670b31e-d284-4411-b5d7-fa8b3bc11c47",
+            "digest": "sha256:915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "byteLength": 17570,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.801Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "log.lammps"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a3999a9d-720a-4714-bc4d-ea478e5a4b70",
+            "digest": "sha256:79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "byteLength": 31795,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\79\\79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.816Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "grinding.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a444c34d-0aa6-497e-944b-b91830b99f3d",
+            "digest": "sha256:a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "byteLength": 14868,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a0\\a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.830Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "approach.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5bee01a4-1c3d-4899-b023-a88369c4aeab",
+            "digest": "sha256:129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "byteLength": 19265911,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\12\\129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.171Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "trajectory.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-0c1f8a64-0b21-456c-9e5e-84041fb9a9bb",
+            "digest": "sha256:9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "byteLength": 361421,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.193Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "initial.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-b97ea747-755a-4ba7-a195-89327059c59f",
+            "digest": "sha256:d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "byteLength": 621366,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\d8\\d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.215Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-39aea8f1-8ec7-4a75-a60d-c77cc08aac76",
+            "digest": "sha256:9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "byteLength": 1434370,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9e\\9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.251Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.data"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-57fa1c1f-3989-4553-95db-773f3b7e0bb4",
+            "digest": "sha256:ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "byteLength": 1014734,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ae\\ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.277Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.restart"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4cd338f6-716a-4e9e-ba4a-05c9027e9119",
+            "digest": "sha256:98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "byteLength": 15222,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\98\\98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.291Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stdout.log"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9cc5ad72-8928-4110-8866-f250db7594c7",
+            "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "byteLength": 0,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.299Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stderr.log"
+            },
+            "dependencies": []
+          }
+        ],
+        "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+        "createdAt": "2026-11-17T06:28:48.398Z",
+        "value": 0,
+        "verdict": "met",
+        "limitations": []
+      },
+      {
+        "id": "metric-ab8233b5-4b24-4108-8d5d-296bf5eae4f9",
+        "definitionRef": "contact",
+        "quantity": "contact force samples",
+        "unit": "1",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "dataRefs": [
+          {
+            "artifactId": "artifact-0670b31e-d284-4411-b5d7-fa8b3bc11c47",
+            "digest": "sha256:915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "byteLength": 17570,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.801Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "log.lammps"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a3999a9d-720a-4714-bc4d-ea478e5a4b70",
+            "digest": "sha256:79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "byteLength": 31795,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\79\\79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.816Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "grinding.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a444c34d-0aa6-497e-944b-b91830b99f3d",
+            "digest": "sha256:a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "byteLength": 14868,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a0\\a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.830Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "approach.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5bee01a4-1c3d-4899-b023-a88369c4aeab",
+            "digest": "sha256:129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "byteLength": 19265911,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\12\\129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.171Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "trajectory.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-0c1f8a64-0b21-456c-9e5e-84041fb9a9bb",
+            "digest": "sha256:9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "byteLength": 361421,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.193Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "initial.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-b97ea747-755a-4ba7-a195-89327059c59f",
+            "digest": "sha256:d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "byteLength": 621366,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\d8\\d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.215Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-39aea8f1-8ec7-4a75-a60d-c77cc08aac76",
+            "digest": "sha256:9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "byteLength": 1434370,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9e\\9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.251Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.data"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-57fa1c1f-3989-4553-95db-773f3b7e0bb4",
+            "digest": "sha256:ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "byteLength": 1014734,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ae\\ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.277Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.restart"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4cd338f6-716a-4e9e-ba4a-05c9027e9119",
+            "digest": "sha256:98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "byteLength": 15222,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\98\\98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.291Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stdout.log"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9cc5ad72-8928-4110-8866-f250db7594c7",
+            "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "byteLength": 0,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.299Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stderr.log"
+            },
+            "dependencies": []
+          }
+        ],
+        "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+        "createdAt": "2026-11-17T06:28:48.398Z",
+        "value": 201,
+        "verdict": "met",
+        "limitations": []
+      },
+      {
+        "id": "metric-a1310394-7c34-43e9-93bb-b33cfd6b63f5",
+        "definitionRef": "travel",
+        "quantity": "grinding distance",
+        "unit": "angstrom",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "dataRefs": [
+          {
+            "artifactId": "artifact-0670b31e-d284-4411-b5d7-fa8b3bc11c47",
+            "digest": "sha256:915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "byteLength": 17570,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\915c5c68fce11ad50d4e914d75fb3df885ca8ef9924f445295ca5ec6a8bad9ff",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.801Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "log.lammps"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a3999a9d-720a-4714-bc4d-ea478e5a4b70",
+            "digest": "sha256:79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "byteLength": 31795,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\79\\79993d57d308805d48ce07c9cc6cb11dd109487533b10e52b82b289c911f2ea1",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.816Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "grinding.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-a444c34d-0aa6-497e-944b-b91830b99f3d",
+            "digest": "sha256:a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "byteLength": 14868,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\a0\\a0e4e4bb53d3ef491f31d7934f90e7ef5d00547f64dcd9d6737b09bfb49dfac8",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:43.830Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "approach.csv"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-5bee01a4-1c3d-4899-b023-a88369c4aeab",
+            "digest": "sha256:129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "byteLength": 19265911,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\12\\129b98c6a81b862f10a641e5a17a680f801dbf11e2694ea9f5b658387d942371",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.171Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "trajectory.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-0c1f8a64-0b21-456c-9e5e-84041fb9a9bb",
+            "digest": "sha256:9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "byteLength": 361421,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\91\\9161068afd30a084deb4f58860807862fb8da5868b0f5cb761b500a1c1dc8628",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.193Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "initial.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-b97ea747-755a-4ba7-a195-89327059c59f",
+            "digest": "sha256:d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "byteLength": 621366,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\d8\\d875649eaa593f1ed162352e9a134722adea40fedb8ac5e75666d39aacdd5536",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.215Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.lammpstrj"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-39aea8f1-8ec7-4a75-a60d-c77cc08aac76",
+            "digest": "sha256:9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "byteLength": 1434370,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\9e\\9e3f7b179fc26bbc271cb94ad64c6f4958879b7167c1477358b68147c144373d",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.251Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.data"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-57fa1c1f-3989-4553-95db-773f3b7e0bb4",
+            "digest": "sha256:ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "byteLength": 1014734,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\ae\\ae3610f091d802ea426824886e44375c3ecf61bed015392e77c922c5cc53d62b",
+            "type": "file",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.277Z",
+            "metadata": {
+              "type": "file",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "final.restart"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-4cd338f6-716a-4e9e-ba4a-05c9027e9119",
+            "digest": "sha256:98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "byteLength": 15222,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\98\\98ca5ce44f55bad10e2c1f94b0e4431d5ea7a969b95ea325aae44f40b11afc59",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.291Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stdout.log"
+            },
+            "dependencies": []
+          },
+          {
+            "artifactId": "artifact-9cc5ad72-8928-4110-8866-f250db7594c7",
+            "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "byteLength": 0,
+            "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\e3\\e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "type": "log",
+            "status": "available",
+            "createdAt": "2026-11-17T06:28:44.299Z",
+            "metadata": {
+              "type": "log",
+              "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+              "name": "stderr.log"
+            },
+            "dependencies": []
+          }
+        ],
+        "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+        "createdAt": "2026-11-17T06:28:48.398Z",
+        "value": 40,
+        "verdict": "met",
+        "limitations": []
+      }
+    ]
+  },
+  "measured": {
+    "atomCount": 11520,
+    "initialAtomCount": 11520,
+    "sampleCount": 201,
+    "fixedMaxDisplacementAngstrom": 0,
+    "finite": true,
+    "contactSamples": 201,
+    "tipTravelAngstrom": 40,
+    "meanTangentialForceNn": 1.8088531963495496,
+    "meanNormalForceNn": 47.93203431080002,
+    "peakNormalForceNn": 57.210449740560705,
+    "meanTemperatureK": 310.7567578286571,
+    "maxDisplacementAngstrom": 2.6440245933046858,
+    "displacedAtomsAboveOneAngstrom": 90,
+    "method": "grinding-force-temperature-displacement/1",
+    "window": {
+      "stepStart": 4000,
+      "stepEnd": 8000,
+      "forceAveraging": "second half of grinding pass"
+    },
+    "limitations": [
+      "Farkas-Caro idealized FCC model alloy",
+      "Repulsive spherical tool without explicit abrasive atoms or chemistry",
+      "Small cell and short MD time, single seed, no convergence or experimental grinding validation"
+    ]
+  },
+  "figures": [
+    {
+      "id": "figure-draft-17f53c78-50ee-49bc-b29a-f83027d89dc3",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-4e6b0ca0-efbc-412c-83f8-f5747d1fb7cb",
+          "digest": "sha256:c214b2bfe3374587820d4d833aba505e6eb721cfad2a700a272999d6be488ba4",
+          "byteLength": 236823,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\c2\\c214b2bfe3374587820d4d833aba505e6eb721cfad2a700a272999d6be488ba4",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-17T06:28:48.455Z",
+          "metadata": {
+            "type": "image",
+            "name": "cross-section.png",
+            "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+            "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+            "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b"
+          },
+          "dependencies": []
+        }
+      ],
+      "name": "cross-section.png",
+      "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+      "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+      "inspection": {
+        "opened": false,
+        "pending": "Open actual image and record inspection"
+      }
+    },
+    {
+      "id": "figure-draft-58977733-247b-46e6-91c3-6e64e48c17f0",
+      "outputRefs": [
+        {
+          "artifactId": "artifact-41275e4d-9c8b-4244-96ae-7e92ce340208",
+          "digest": "sha256:1c8189808927887e47857685d6e238ffde15cda7a0bc94fe4b685e12c770c173",
+          "byteLength": 144392,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\1c\\1c8189808927887e47857685d6e238ffde15cda7a0bc94fe4b685e12c770c173",
+          "type": "image",
+          "status": "available",
+          "createdAt": "2026-11-17T06:28:48.472Z",
+          "metadata": {
+            "type": "image",
+            "name": "force-temperature.png",
+            "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+            "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+            "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b"
+          },
+          "dependencies": []
+        }
+      ],
+      "name": "force-temperature.png",
+      "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+      "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+      "inspection": {
+        "opened": false,
+        "pending": "Open actual image and record inspection"
+      }
+    }
+  ]
+}

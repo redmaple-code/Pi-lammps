@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "fem-dynamics content envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "artifactType": {
+      "type": "string",
+      "minLength": 1
+    },
+    "producer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "units": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinates": {
+          "type": "string",
+          "minLength": 1
+        },
+        "identityMapping": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sampleBasis": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "units",
+        "coordinates",
+        "identityMapping",
+        "sampleBasis"
+      ]
+    },
+    "content": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "artifactType",
+    "producer",
+    "sourceRefs",
+    "semantics",
+    "content"
+  ]
+}

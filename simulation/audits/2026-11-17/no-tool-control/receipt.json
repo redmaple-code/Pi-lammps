@@ -1,0 +1,19 @@
+{
+  "status": "succeeded",
+  "exitCode": 0,
+  "startedAt": "2026-11-17T13:11:18.808575+00:00",
+  "endedAt": "2026-11-17T13:23:56.946626+00:00",
+  "wallSeconds": 758.155999999959,
+  "argv": [
+    "E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe",
+    "-in",
+    "in.grinding",
+    "-log",
+    "log.lammps"
+  ],
+  "directory": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\audits\\2026-11-17\\no-tool-control",
+  "sourceInputSha256": "985bdc88dc73978ece107a4c704182741d1eb5bef5562cf4c513e4a23412511d",
+  "inputSha256": "6bfec2ce66cbc6371b3d70ec3a45787fbf0adf1fb20339c4cafd3868d74b9b03",
+  "purpose": "Compare equilibrium thermal/relaxation displacement against loaded case, with same initial thermal seed",
+  "changedPhysics": "Analytical abrasive forces removed, matching schedules, groups and thermostat retained"
+}

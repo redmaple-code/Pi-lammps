@@ -1,0 +1,17 @@
+# WF-03A exploratory single-asperity grinding pass (FeNiCrCoCu, Farkas-Caro 2018 EAM/alloy)
+# Placeholder guarded probe: minimal, fully explicit, no shell/jump tricks.
+
+units           metal
+dimension       3
+boundary        f f p
+atom_style      atomic
+newton          on
+
+variable        tstep equal 0.001
+variable        T     equal 300.0
+variable        seed  equal 482748
+variable        R     equal 12.0
+variable        depth equal 3.0
+variable        vx    equal 10.0
+
+read_data       substrate.data

@@ -1,0 +1,36 @@
+TAP version 13
+# (node:63972) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: provider configuration requires the explicit endpoint and credentials
+ok 1 - provider configuration requires the explicit endpoint and credentials
+  ---
+  duration_ms: 107.6292
+  type: 'test'
+  ...
+# Subtest: model selection preserves the host callback and blocks a different provider/model before sending
+ok 2 - model selection preserves the host callback and blocks a different provider/model before sending
+  ---
+  duration_ms: 1.4733
+  type: 'test'
+  ...
+# Subtest: shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+ok 3 - shipped AISpot configuration applies the 40K window and explicit automatic-compaction reserves
+  ---
+  duration_ms: 10.5873
+  type: 'test'
+  ...
+# Subtest: real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+ok 4 - real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+  ---
+  duration_ms: 16018.9321
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20001.7928

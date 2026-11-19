@@ -1,0 +1,16 @@
+{
+  "id": "assessment-ed6d397b-8114-404d-8f36-9b4ac63ccbce",
+  "status": "concerns-identified",
+  "checks": {
+    "periodicWidthExceedsDiameter": true,
+    "thermalLayerBelowContact": true,
+    "abrasiveStaysWithinLength": true,
+    "positiveTimestep": true
+  },
+  "concerns": [
+    "Idealized model-alloy potential",
+    "Rigid repulsive sphere represents the abrasive geometry",
+    "Single short small-cell integration test. Convergence, repeat-seed statistics and experimental grinding comparison are pending."
+  ],
+  "disposition": "Proceed with user-authorized candidate integration test, retain physical validation limits"
+}

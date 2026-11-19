@@ -1,0 +1,21 @@
+{
+  "recordedBeforeRetry": "2026-11-18T07:57:36.321235+00:00",
+  "reason": "Main search exceeded the initial 1800-second execution budget; preserve failure and repeat same solver inputs/settings.",
+  "originalPlan": "evidence/run-plan.json",
+  "failedAttempt": "runs/attempts/e32-timeout-01/run.json",
+  "failedReceiptSHA256": "e5c66f72ded007ad26ff3f5900fd2dea72158e3964ee919bd64bb169e75400a1",
+  "effectiveTimeoutSecondsByRun": {
+    "e32": 5400
+  },
+  "unchanged": [
+    "official input bytes",
+    "signed seed",
+    "exhaustiveness=32",
+    "cpu=4",
+    "scoring",
+    "grid",
+    "output cutoffs",
+    "scientific acceptance criteria"
+  ],
+  "execution": "e8/e16/fixed-score completed outputs are hash-verified and reused; only e32 is repeated."
+}

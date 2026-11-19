@@ -1,0 +1,16 @@
+{
+  "source": "handoff",
+  "files": {
+    "docs/10_知识库/审查_Mdagent-main知识库与经验库设计_20261029.md": "5758e2a857957cf8a00be06b4fdc552e29fdd1aa5bae350fac26204a504c90a1",
+    "docs/10_知识库/审核_UKB迁移候选预审摘要_20261102.md": "5db03af58a22c762fee40db7dbf08eb613eeee4579004607c58395829f4bd4a1",
+    "docs/10_知识库/开发_知识库接口层与维护命令_v1.0.md": "ef51b960572cc38dcbc60cd3bb60ac1cd5421c90254c1ded42eff73d330dcdbd",
+    "docs/10_知识库/方案_UKB嵌入MDagent替换知识库_v1.0.md": "c7f1ee6bd2675c6365a4c24fb9a4c1e148093b97357f4b88e6e03b138c67ccb0",
+    "docs/10_知识库/方案_知识元结构与Agentic分级检索_v1.0.md": "2850003e743fc9cb655df59dcceaaf8e4c7ffba812ecda80081450502c1ee78f",
+    "docs/10_知识库/方案_知识元结构与Agentic分级检索_v1.1.md": "ed4d0be58a827ffbfc012522c6d4b1c8bcc59bd609c3a261abc208a7eb8806e6",
+    "docs/10_知识库/核查_UKB召回率与入库准确率盲测_20261031.md": "722dff19d610c90e0a9e975405e448d0ea4a997ba005a16122d48de79fbddbf9",
+    "docs/10_知识库/核查_UKB生产测试与金属MD批次注入_20261031.md": "8c329f82dcd8dbb4cc7d6896abdbd35d2e6b558bff43fb30fdb43e613ced9df1",
+    "docs/10_知识库/核查_UKB证据与一致性三模块联调_20261102.md": "3cf8187a5adfeb501bec5937e872be6c7e5a7290e95415a34adf0bd6d694e838",
+    "docs/10_知识库/核查_本机知识库入库与召回测试_20261030.md": "ad52d6a702e95abab03a080d8e4f10cc923d30486b6e8655e28babbcf0f91445",
+    "docs/10_知识库/设计_通用知识库UKB数据库设计_v0.1.md": "c7b1a446c5cd24680746f8612f47cad42e02d841451bb000979536575e731f96"
+  }
+}

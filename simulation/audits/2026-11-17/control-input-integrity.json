@@ -1,0 +1,29 @@
+{
+  "files": [
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work\\in.grinding",
+      "byteSha256": "700e7cbd73dde40d26ef7f54993e72c0188d4ba78c8045ebf9c0e45914656a34"
+    },
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work\\alloy.data",
+      "byteSha256": "9ce4ce4ac71260e03da07e3786af96e77d619b021dfb4a57cfefbebe8b3019e3"
+    },
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work\\FeNiCrCoCu-heafixed.setfl",
+      "byteSha256": "5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430"
+    },
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\audits\\2026-11-17\\no-tool-control\\in.grinding",
+      "byteSha256": "23454ccbb6f7bb086ff34f0c41012f408e507b3868ff62f7209f9fbc32a74d1d"
+    },
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\audits\\2026-11-17\\no-tool-control\\alloy.data",
+      "byteSha256": "9ce4ce4ac71260e03da07e3786af96e77d619b021dfb4a57cfefbebe8b3019e3"
+    },
+    {
+      "path": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\audits\\2026-11-17\\no-tool-control\\FeNiCrCoCu-heafixed.setfl",
+      "byteSha256": "5e6799423277ae38aeb0e51ccb68c9d1c97ffc05b79580eec6d869d56b988430"
+    }
+  ],
+  "receiptHashNote": "run_control.py receipt sourceInputSha256/inputSha256 hash UTF-8 text with normalized LF endings before Windows text-mode output. byteSha256 values here describe actual files."
+}

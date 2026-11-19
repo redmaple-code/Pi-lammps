@@ -1,0 +1,91 @@
+{
+  "id": "metrics",
+  "items": [
+    {
+      "id": "score",
+      "title": "对接评分",
+      "unit": "kcal/mol",
+      "method": "保存vina原始分数和条件。",
+      "requiredOutputs": [
+        "poseScores",
+        "scoringVersion",
+        "receptorState"
+      ],
+      "scope": "统一协议内",
+      "acceptance": "按案例范围比较。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "reference-rmsd",
+      "title": "参考重原子RMSD",
+      "unit": "angstrom",
+      "method": "固定受体坐标下sqrt(sum(||x_i-y_map(i)||^2)/N)，包含对称映射。",
+      "requiredOutputs": [
+        "referencePose",
+        "receptorTransform",
+        "atomMapping",
+        "poses"
+      ],
+      "scope": "poseRecovery",
+      "acceptance": "top1与best-of-N分别判定；示例proposed=2Å。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "recurrence",
+      "title": "姿态复现率",
+      "unit": "1",
+      "method": "簇命中种子数/预定种子数，另报失败。",
+      "requiredOutputs": [
+        "seedMatrix",
+        "clusters",
+        "failedRuns"
+      ],
+      "scope": "固定体系和协议",
+      "acceptance": "报告分母和不确定性。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "ef",
+      "title": "早期富集",
+      "unit": "1",
+      "method": "EF_x=(top-x活性数/top-x数量)/(总活性数/总数)。",
+      "requiredOutputs": [
+        "labels",
+        "fullRanking",
+        "cutoff",
+        "tiePolicy"
+      ],
+      "scope": "screeningEnrichment",
+      "acceptance": "锁定x和失败策略；零阳性cannotCompute。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "auc",
+      "title": "回顾性判别",
+      "unit": "1",
+      "method": "ROC-AUC与PR面积，锁定PR积分定义、bootstrap及并列策略。",
+      "requiredOutputs": [
+        "labels",
+        "fullRanking",
+        "positivePrevalence"
+      ],
+      "scope": "screeningEnrichment",
+      "acceptance": "与预定基线/区间比较。",
+      "definitionVersion": "1.0.0"
+    },
+    {
+      "id": "coverage",
+      "title": "覆盖",
+      "unit": "1",
+      "method": "母体/状态/run各层分别记录成功、过滤、失败、缺失。",
+      "requiredOutputs": [
+        "inputInventory",
+        "preparedStates",
+        "runMatrix"
+      ],
+      "scope": "所有任务",
+      "acceptance": "分母完整。",
+      "definitionVersion": "1.0.0"
+    }
+  ]
+}

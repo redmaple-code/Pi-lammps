@@ -1,0 +1,33 @@
+{
+  "domainVersion": "0.1.1-draft",
+  "checks": [
+    {
+      "case": "task.json",
+      "verdict": "valid"
+    },
+    {
+      "case": "virtual-screening.task.json",
+      "verdict": "valid"
+    },
+    {
+      "case": "official negative seed and fixed provided state",
+      "verdict": "valid"
+    },
+    {
+      "case": "zero seed",
+      "verdict": "rejectedAsExpected"
+    },
+    {
+      "case": "below int32",
+      "verdict": "rejectedAsExpected"
+    },
+    {
+      "case": "above int32",
+      "verdict": "rejectedAsExpected"
+    },
+    {
+      "case": "null pH with enumeration",
+      "verdict": "rejectedAsExpected"
+    }
+  ]
+}

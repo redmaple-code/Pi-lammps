@@ -1,0 +1,362 @@
+{
+  "scope": "Tabletop walkthrough documentation, synthetic data and arithmetic consistency",
+  "validatedAt": "2026-11-17T13:19:22.445066+00:00",
+  "checks": [
+    {
+      "check": "sourceSnapshot",
+      "result": "passed",
+      "details": "18 local source files match recorded bytes"
+    },
+    {
+      "check": "taskRevision",
+      "result": "passed",
+      "details": "Missing site.unit is rejected and corrected task validates"
+    },
+    {
+      "check": "stageEnvelopes",
+      "result": "passed",
+      "details": "9 domain stage records follow the content schema"
+    },
+    {
+      "check": "assayAccounting",
+      "result": "passed",
+      "details": "512 unique synthetic wells, 2 plates, 8 doses x 3 replicates per parent, Z-prime recalculated"
+    },
+    {
+      "check": "syntheticOriginAndLabels",
+      "result": "passed",
+      "details": "20 parents, 4 active/16 inactive, censoring retained"
+    },
+    {
+      "check": "runAndBudgetAccounting",
+      "result": "passed",
+      "details": "120 logical tasks, 121 attempts, 1 known failure, 5 controls, cap130"
+    },
+    {
+      "check": "qualityBeforeRanking",
+      "result": "passed",
+      "details": "Rejected -12.0 synthetic clash stays in raw table; selected C02 valid pose is -9.8"
+    },
+    {
+      "check": "metricIndependentFormulaCheck",
+      "result": "passed",
+      "details": "Positive ranks1/3/5/12 yield AUC0.828125, AP0.65, EF25=3"
+    },
+    {
+      "check": "stateAggregationSensitivity",
+      "result": "passed",
+      "details": "S1-only constructed ranking matches all-state ranking"
+    },
+    {
+      "check": "illustrativeReviewProvenance",
+      "result": "passed",
+      "details": "Separate example actor IDs, same author disclosed, subjects and closures match"
+    },
+    {
+      "check": "figure",
+      "result": "passed",
+      "details": "Generated plot inspected and hash-bound to synthetic source tables"
+    },
+    {
+      "check": "reportLinks",
+      "result": "passed",
+      "details": "38 local links resolve"
+    },
+    {
+      "check": "scope",
+      "result": "passed",
+      "details": "Session, virtual run ledger and all stage records preserve tabletop provenance"
+    }
+  ],
+  "artifactManifest": [
+    {
+      "file": "analysis/assay-qc.json",
+      "digest": "sha256:e99c9d980fe6618b2e7fd29f91ee7c2bfddba627db89f4c32c945ec59606e9ba",
+      "byteLength": 699
+    },
+    {
+      "file": "analysis/metrics.json",
+      "digest": "sha256:52a2b7c875364a0f8bfff2ef43dfb01cb038cc78725cf76d343ed40a3eb6718a",
+      "byteLength": 1523
+    },
+    {
+      "file": "analysis/ranking-blinded.csv",
+      "digest": "sha256:6ae346c7a1726edde30d45b49b715ac67e9a76486686d1d25269cd0d7089a8c8",
+      "byteLength": 2261
+    },
+    {
+      "file": "analysis/ranking-with-synthetic-labels.csv",
+      "digest": "sha256:df2deaa424157601ffa5b811ee2d2d48e0436fcb1c167df165bd9c2444882ec3",
+      "byteLength": 3141
+    },
+    {
+      "file": "analysis/single-state-sensitivity.csv",
+      "digest": "sha256:ad531580398c3f1e05e12da0a43625b3f1e872b73fda26998c9a2d80d18a0752",
+      "byteLength": 905
+    },
+    {
+      "file": "analysis/synthetic-dose-response.csv",
+      "digest": "sha256:c4493aab8fd0cd218c2ba47074af9bc5c3e897bcdac013b26bd5b751fec5723b",
+      "byteLength": 10313
+    },
+    {
+      "file": "analysis/synthetic-experimental-labels.csv",
+      "digest": "sha256:2539154a0e375411c315e58472ac5b773f58617820f3d0aaf3e801debb62c397",
+      "byteLength": 2844
+    },
+    {
+      "file": "execution/launch-plan.json",
+      "digest": "sha256:b117d9c59d65ef7359f1d41ce3e8e08a9d8dbbd628f6cf4a952d32100ad486f2",
+      "byteLength": 1166
+    },
+    {
+      "file": "execution/synthetic-pose-observations.csv",
+      "digest": "sha256:72c96addd2ab5190d51d23b872415a9411436eba5505c61018553f2c0e6b3a7a",
+      "byteLength": 15675
+    },
+    {
+      "file": "execution/virtual-run-ledger.csv",
+      "digest": "sha256:9f7b46e45ef74f921c5a558ab50664953770a382134a070c37b2bb9c897a66e2",
+      "byteLength": 23598
+    },
+    {
+      "file": "feedback/lesson-candidates.json",
+      "digest": "sha256:8bf65ec73c41fb7831f6686a6e331d433162cc519ce35e8da84f4ed74f7ecb2f",
+      "byteLength": 516
+    },
+    {
+      "file": "figures/figure-record.json",
+      "digest": "sha256:b5d2187143aeeb686c4172d2146deebf091d703fc32d796ee3d1ca1fa3d24765",
+      "byteLength": 724
+    },
+    {
+      "file": "figures/synthetic-analysis-overview.png",
+      "digest": "sha256:cd2436b175c27c87f444b290d63633d23967e0b277b6560e577e2bccac1ff009",
+      "byteLength": 250279
+    },
+    {
+      "file": "inputs/compound-inventory.csv",
+      "digest": "sha256:90dfcc3b90989a92b53ec1181abd4c311ce48a27b2e0c0aabf9afba9ae2a872e",
+      "byteLength": 1991
+    },
+    {
+      "file": "inputs/experiment-plan.json",
+      "digest": "sha256:c7e306a106bf8e40068ca1f3304ee762d590ea4be5462cb3bd19646b3a7f5aae",
+      "byteLength": 1769
+    },
+    {
+      "file": "inputs/synthetic-assay-raw.csv",
+      "digest": "sha256:52364daaf78805501720713d5fead00602d5d577e208067e404a506f961248c9",
+      "byteLength": 33871
+    },
+    {
+      "file": "plan/analysis-plan.json",
+      "digest": "sha256:f5c306cf85fb25b426dff3e0ea4461c4a72f0f7c192445a8de13502d665ad5e4",
+      "byteLength": 1466
+    },
+    {
+      "file": "plan/task.attempt01.json",
+      "digest": "sha256:9f77d8464ff3f8613f37fdf6a7052f75235c8e188016ffc498c437bade450478",
+      "byteLength": 2746
+    },
+    {
+      "file": "plan/task.json",
+      "digest": "sha256:076bfed4108bafb751dd325ba6b25383d012b28e7f8bbfcefde6503a22cfaadf",
+      "byteLength": 2771
+    },
+    {
+      "file": "preparation/virtual-ligand-states.csv",
+      "digest": "sha256:6fe43416e1dea4973787f64a3506b68d47cc5315b0fd2159b7d8e7b5720c760a",
+      "byteLength": 4057
+    },
+    {
+      "file": "preparation/virtual-receptor.json",
+      "digest": "sha256:b10f6a7f57f4ae3cc4b1e14365326e2d4317aecad2e7ec154358c6a04c1d0e9a",
+      "byteLength": 532
+    },
+    {
+      "file": "qualification/scope-decision.json",
+      "digest": "sha256:c9530d7ea813493f7e5a9901421c2f9499afda224cf697d0573e1b3d9de36904",
+      "byteLength": 355
+    },
+    {
+      "file": "qualification/synthetic-redocking.csv",
+      "digest": "sha256:f8a35fc3ed93efbf96784147d1182afbce324d6695cc62fcfe15e3a8a8901bcf",
+      "byteLength": 652
+    },
+    {
+      "file": "README.md",
+      "digest": "sha256:6394586781d37b41179e488ad78a21da93d2607375a8e7d6c374f373195f1203",
+      "byteLength": 17036
+    },
+    {
+      "file": "reviews/illustrative-receipts.json",
+      "digest": "sha256:28d6af94006595ca79f710f315758d657389852f28f2ff2c7fbd81624fd9a0a5",
+      "byteLength": 6632
+    },
+    {
+      "file": "session.json",
+      "digest": "sha256:5d2961be8799299170f36bf460caca0c4470c35586d3f8b1c58e3323efdc4880",
+      "byteLength": 807
+    },
+    {
+      "file": "source-lock.json",
+      "digest": "sha256:477c2b9c18dfab799e807445d269013514cbfc51c5878e4d9d08a81c36429ead",
+      "byteLength": 3601
+    },
+    {
+      "file": "source-pack/artifacts.json",
+      "digest": "sha256:99177a9102bc61cbf88e2a92efd7d004b07a3c7f7ad5d4b32f2400bfe5965df3",
+      "byteLength": 11720
+    },
+    {
+      "file": "source-pack/checks.json",
+      "digest": "sha256:3ce264da762680d7adb78af5578da2e4641d0abab196cfefc84c35b5d9f75beb",
+      "byteLength": 6016
+    },
+    {
+      "file": "source-pack/examples/task.json",
+      "digest": "sha256:7ba56c62163600015b100f4a7ac2274508da5ab83f5242de254f93bb5cd49afc",
+      "byteLength": 2770
+    },
+    {
+      "file": "source-pack/examples/virtual-screening.task.json",
+      "digest": "sha256:0cd842b7650570f2d04a0beaa40d71a255a0a5f501ec0ffee466fc5db65ad67c",
+      "byteLength": 2694
+    },
+    {
+      "file": "source-pack/failures.json",
+      "digest": "sha256:a964608219c6af66414a4d81c71297f90408ff3da615170338c838e6f3aac64a",
+      "byteLength": 2163
+    },
+    {
+      "file": "source-pack/knowledge.json",
+      "digest": "sha256:2761183713cb27fb005b18234bccf5ccadc6a4388f7f33dc4c5440aa5b786edb",
+      "byteLength": 2880
+    },
+    {
+      "file": "source-pack/manifest.json",
+      "digest": "sha256:cb4a9ef021a750b1434ccbc1835bab93fb22cad0cc8d044413e92b6b82f4f2d3",
+      "byteLength": 18084
+    },
+    {
+      "file": "source-pack/metrics.json",
+      "digest": "sha256:0495d5b52c2dfbf56c2e0fb78d68d5185a5567017735f509a22447d5388f1998",
+      "byteLength": 2582
+    },
+    {
+      "file": "source-pack/models.json",
+      "digest": "sha256:6e068ebcb0538bdda8c826b1ec689bdadc0264a19d04798d8cc6156c27b25f07",
+      "byteLength": 1013
+    },
+    {
+      "file": "source-pack/problem.schema.json",
+      "digest": "sha256:d8a5c01f9278557f9fbb2d96a3b660dc5bfc07701e18a3adf06a374687f9cff7",
+      "byteLength": 14132
+    },
+    {
+      "file": "source-pack/protocols.json",
+      "digest": "sha256:d4329291b11a8e2103019d509e70c563195c692bc100223c9a90cf355116975b",
+      "byteLength": 1023
+    },
+    {
+      "file": "source-pack/README.md",
+      "digest": "sha256:176f7b09dfa31b97f6bc770083cd84d2fa7652271936f8458b892a3664e2161a",
+      "byteLength": 9073
+    },
+    {
+      "file": "source-pack/record.schema.json",
+      "digest": "sha256:6db15b3be97c41ccd8400053c1ca4935d244f15f5ff8a5e38449c6045180312b",
+      "byteLength": 1363
+    },
+    {
+      "file": "source-pack/roles.json",
+      "digest": "sha256:a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa",
+      "byteLength": 1428
+    },
+    {
+      "file": "source-pack/templates.json",
+      "digest": "sha256:eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1",
+      "byteLength": 823
+    },
+    {
+      "file": "source-pack/tooling.md",
+      "digest": "sha256:1cda67ce15e9230548818229b4eff6cc5144a846c96e934635c3a8eb05f55b35",
+      "byteLength": 1964
+    },
+    {
+      "file": "source-pack/validation.json",
+      "digest": "sha256:986d3fcb07868eb507992c00931fe773927566b830c05bbd98efc2b2fcbecfea",
+      "byteLength": 1964
+    },
+    {
+      "file": "source-pack/vocabulary.json",
+      "digest": "sha256:a06d1f9f3e7d9ed0a8c78fa6f34266f0108faa14800d2e75c2777cf01e530d0e",
+      "byteLength": 794
+    },
+    {
+      "file": "stages/01-plan.json",
+      "digest": "sha256:363a047466e0aeea1ff50ddaa346ab39e4c3410a76fb50d56593fb2cd8020aff",
+      "byteLength": 1092
+    },
+    {
+      "file": "stages/02-receptor.json",
+      "digest": "sha256:3a3e0aae84d8cd3cf38d436a2a51eb60af1481ac7a393d5f7ed1afd06bca7557",
+      "byteLength": 1131
+    },
+    {
+      "file": "stages/03-ligands.json",
+      "digest": "sha256:0bad5414b2b55b173c01acb6289244ee887d6f97a57cc8e454c241c31085df46",
+      "byteLength": 1094
+    },
+    {
+      "file": "stages/04-configure.json",
+      "digest": "sha256:6a210dd5f21b08254a4a4ec736d54796c4687e1242f1a95a66c8ea8e20478ec1",
+      "byteLength": 1217
+    },
+    {
+      "file": "stages/05-qualify.json",
+      "digest": "sha256:ac706946d6b34a07eb4c9fece2cc24e32d450fddf56d3ef9af43743955d26857",
+      "byteLength": 1122
+    },
+    {
+      "file": "stages/06-dock.json",
+      "digest": "sha256:05a22f2dede1e7d2f53fdc5c02b2ec7a5291d50e0fc0ad821c1345c27081de03",
+      "byteLength": 1129
+    },
+    {
+      "file": "stages/07-poses.json",
+      "digest": "sha256:c5b1d221969e62bd85875c4c99877b528a5ac6716d9333df967864932402f15b",
+      "byteLength": 1193
+    },
+    {
+      "file": "stages/08-analyze.json",
+      "digest": "sha256:27c8b947e56a3747c17977fb206b4e781fa991cf02b589f1fc993484a419a1f8",
+      "byteLength": 1094
+    },
+    {
+      "file": "stages/09-report.json",
+      "digest": "sha256:c48dee0fd28205fe3624c9c8fa1a19696976489336174047be6bd35496b3ec80",
+      "byteLength": 1125
+    },
+    {
+      "file": "state/issues-and-recovery.json",
+      "digest": "sha256:84d16fb9e09daca6c70d6e3c3654ee9a2c18e11031f684047e4f3506e41bdce5",
+      "byteLength": 1138
+    },
+    {
+      "file": "state/tabletop-events.json",
+      "digest": "sha256:6c3e6b25af5d5aec6b219ee77e11d8ff04c3a656c737ad22a1408e4226ca942d",
+      "byteLength": 2143
+    }
+  ],
+  "scientificSolverCalls": 0,
+  "wetLabRuns": 0,
+  "independentScientificReviews": 0,
+  "verdict": "passedForWalkthroughScope",
+  "limitations": [
+    "All experimental/docking data are constructed.",
+    "Receptor/ligand coordinates and target software versions remain unavailable/unverified.",
+    "Statistical computations on synthetic tables and one inspected plot were performed."
+  ]
+}

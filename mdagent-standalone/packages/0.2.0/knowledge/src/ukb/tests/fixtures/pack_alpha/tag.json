@@ -1,0 +1,8 @@
+[
+  {"facet": "topic", "slug": "widgets", "label": "Widgets", "description": "Entries about widgets. Not gadgets.", "aliases": ["widget", "小部件"]},
+  {"facet": "topic", "slug": "widgets-cold", "label": "Cold widgets", "description": "Widgets at low temperature.", "parent": "widgets"},
+  {"facet": "topic", "slug": "gadgets", "label": "Gadgets", "description": "Entries about gadgets.", "aliases": ["gadget"]},
+  {"facet": "method", "slug": "spin", "label": "Spinning", "description": "The spinning method."},
+  {"facet": "method", "slug": "press", "label": "Pressing", "description": "The pressing method."},
+  {"facet": "domain", "slug": "zeta", "label": "Zeta", "description": "Invented test domain."}
+]

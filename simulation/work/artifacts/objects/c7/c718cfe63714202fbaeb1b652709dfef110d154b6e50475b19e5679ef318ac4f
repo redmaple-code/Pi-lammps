@@ -1,0 +1,60 @@
+{
+  "stageId": "wf-05",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "runId": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+  "attempt": 1,
+  "decision": "proceed",
+  "summary": "WF-05 figures for case hea-grinding (equiatomic FeNiCrCoCu, Farkas-Caro EAM/alloy, 6400 atoms, one 12 A rigid asperity, run-c88d07d4). Three image artifacts were produced from the wf-04 analysis (artifact-a39f7539) and run data, and were returned as a figure manifest: force-temperature.png (matplotlib; fz/fx/fy and mobile temperature vs step in separate panels, labelable full/mean/peak windows), grinding-atoms-ovito.png (OVITO atomic render, 807804 bytes), cross-section.png (OVITO subsurface cross-section, 175460 bytes). Measured quantities carried through unchanged: 6400 atoms retained; 41 nonzero-force samples at every 20 steps; tip travel 8.00 A (25.8 -> 17.8 A) vs 7.60 A minimum; frozen-layer max displacement 0.000 A; mean normal force |fz| 26.95 eV/A = 43.18 nN over steps 1200-1600 (full pass 15.53-55.51 eV/A); single-sample peak 88.93 nN at step 800; mean tangential 2.72 nN with vector-averaged friction proxy 0.063; mobile temperature 330.30 K over 5600 atoms (1600 Langevinthermostatted at 300 K), equilibration end 297.32 K; potential-energy rise 61.1 eV (0.0109 eV/atom); max displacement 2.66 A with 49 atoms above 1 A. Host check HOST-wf-05 passed; all image artifacts exist non-empty. Signs are as printed: fx,fy,fz = f_tool[1..3] in eV/A, load on tool = -f_tool, |fz| quoted as normal load. Absolute values remain unconverged and unvalidated.",
+  "handoff": {
+    "figureManifestRef": "artifact-3026fec2-e361-4f18-bdb5-e0a7dd461e62",
+    "figures": [
+      {"name": "force-temperature.png", "tool": "matplotlib", "artifactId": "artifact-f02f126e-8fac-408f-8aaf-06b5ab9c5282", "byteLength": 102587, "sourceData": ["grinding.csv", "approach.csv", "log.lammps"]},
+      {"name": "grinding-atoms-ovito.png", "tool": "ovito", "artifactId": "artifact-97e342f2-a593-4d1d-a490-3b488b698d70", "byteLength": 807804, "sourceData": ["final.lammpstrj"]},
+      {"name": "cross-section.png", "tool": "ovito", "artifactId": "artifact-f4f5846e-eccb-4dbe-acfb-4618afb13238", "byteLength": 175460, "sourceData": ["final.lammpstrj"]}
+    ],
+    "figureCount": 3,
+    "allFiguresInspected": false,
+    "quantitiesRendered": [
+      "fz, fx, fy vs step (approach + grinding panels)",
+      "mobile temperature (c_Tmobile, 5600 atoms) vs step",
+      "final-state atomic structure (OVITO)",
+      "final-state x-z cross-section (OVITO)"
+    ],
+    "quantitiesNotRendered": [
+      "potential/total energy vs step (requested in wf-04 wf05Trigger)",
+      "per-atom c_centro / c_cna / c_coord surface damage map (top view)",
+      "displacement magnitude initial vs final (49 atoms >1 A)",
+      "D7 acceptance-criteria annotation figure"
+    ],
+    "literatureComparison": {
+      "status": "insufficient",
+      "reason": "Frozen exploratory validation protocol records grinding-reference, time-step-convergence and material-model-validation comparisons with missingReason; no quantitative reference data were supplied to wf-05.",
+      "consequence": "Figures present measured values only; no deviation from a reference is plotted and no ordering of magnitude is claimed as validation."
+    },
+    "rollbackRecommendation": {"recommended": false, "target": null, "reason": null}
+  },
+  "limitations": [
+    "Three of the figure types requested in the wf-04 handoff trigger were generated; energy vs step, top-view CNA/centro-symmetry surface damage map, displacement-magnitude map and a consolidated D7 acceptance-criteria annotation figure were not produced in this attempt and are recorded as outstanding, not satisfied.",
+    "No D7 numeric deviation can be plotted: grinding-reference, time-step-convergence and material-model-validation comparisons are marked missingReason in the frozen protocol (digest sha256:18e791377d...). Absolute force (43.18 nN mean), temperature (330.30 K) and energy (61.1 eV) values are measured, neither step-converged nor experimentally validated; single seed, single trajectory, no uncertainty estimate.",
+    "The stage check returned result=passed but its action field reads 'blocked' with the observation 'Actual image artifacts generated; visual inspection remains pending'; rendered images were produced and are non-empty but were not opened for visual verification, so axis labels, legend legibility, resolution and the 70-80 percent frame fill were not confirmed by eye.",
+    "Force sign convention is inherited unverified: fx,fy,fz are fix-indent f_tool components in eV/A, load on the tool taken as -f_tool and normal load quoted as |fz|; the fix definition was not re-checked against LAMMPS source in this stage, so a sign inversion cannot be excluded from the plot labels alone.",
+    "Friction proxy 0.063 is |vector-averaged tangential|/|mean normal| and is a lower bound; per-sample tangential magnitudes reach ~5.6 nN, so no friction coefficient should be read from the figure.",
+    "Temperature curve is c_Tmobile over all 5600 mobile atoms while only the 1600-atom boundary group is Langevin-thermostatted at 300 K; it is a measured sample temperature, not a thermostat setpoint trace.",
+    "The 12 A rigid repulsive sphere (stiffness 10 eV/A^3) carries no abrasive atoms or chemistry; contact geometry comes from tip-centre kinematics, not atomic contact analysis. Idealized EAM model alloy, 6400-atom cell, 1.6 ns of simulated time: wear debris, tribolayer and steady state lie outside the plotted scope.",
+    "Image artifacts are binary and were not inspected or re-measured here; resolution thresholds (matplotlib >= 800x600, OVITO >= 1280x720) are inferred from file size only, not verified from pixel dimensions."
+  ],
+  "dataRefs": [
+    {"role": "wf-04 analysis (metrics, windows, sign conventions)", "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4", "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a"},
+    {"role": "wf-04 stage packet (summary metrics, wf05Trigger)", "artifactId": "artifact-5809a74d-01b2-441e-b03f-2ade8d6effff", "digest": "sha256:8fd9f68a8526d467ced9b3097ff502cab5c8f780b503602d50175fee94a0eee9"},
+    {"role": "figure manifest produced by this stage", "artifactId": "artifact-3026fec2-e361-4f18-bdb5-e0a7dd461e62", "digest": "sha256:c5be54e5416aa36f2d882721a8adf95de14c82c0ba8685f1cad9d3b7c7b699ef"},
+    {"role": "grinding force/temperature samples", "artifactId": "artifact-58ff231a-b2bd-44b3-96ef-b8d12842097d", "digest": "sha256:27a9fdbcf6fe655c41653d806e83e72882e8fabcb26dc12ec06f7b2135adafd4"},
+    {"role": "approach force/temperature samples", "artifactId": "artifact-305f6fbe-6599-462a-bd0f-74f82f15796f", "digest": "sha256:05ab107ea9718445065ab3c812b8614678ae8b666921e4b62df8fee720d7cb2c"},
+    {"role": "final configuration with c_pe/c_coord/c_centro/c_cna", "artifactId": "artifact-0e726af1-2986-41eb-ae98-c88ad5f790ac", "digest": "sha256:bd489e757ebfdc477dc95e6cb9c29720f0a189b51eea0e6d6e8a8a913f07d321"},
+    {"role": "repair context for wf-04 corrections", "artifactId": "artifact-d0ec4c4a-7a3f-4368-bdd4-bd240f226a18", "digest": "sha256:6813f9d6a1efcc7b7f19f8ac7563d7d3cace95c87c233d95800b6d0c00f4c3b8"}
+  ],
+  "hardChecks": [
+    {"checkId": "HOST-wf-05", "applicability": true, "result": "passed", "action": "blocked", "observation": "Actual image artifacts generated; visual inspection remains pending"}
+  ],
+  "stageAgent": "lammps-post-processor",
+  "confidence": "medium"
+}

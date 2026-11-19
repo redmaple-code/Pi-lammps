@@ -1,0 +1,48 @@
+{
+  "type_id": "checklist",
+  "label": "检查清单",
+  "description": "审查或验收清单",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "purpose": {
+        "kind": "text",
+        "required": true,
+        "max_len": 800
+      },
+      "items": {
+        "kind": "list",
+        "item": {
+          "kind": "object",
+          "fields": {
+            "question": {
+              "kind": "text",
+              "required": true
+            },
+            "pass_criteria": {
+              "kind": "text",
+              "required": true
+            }
+          }
+        },
+        "required": true
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "purpose",
+      "items"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

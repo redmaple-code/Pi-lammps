@@ -1,0 +1,267 @@
+{
+ "generated_ts": 1789822506.9561903,
+ "db_path": "/opt/mdagent/kit/.v3.3_strategy_db.json",
+ "atoms_path": "/opt/mdagent/data/memory/atoms.jsonl",
+ "history": {
+  "rows": 80,
+  "kept": 80,
+  "skipped": 0
+ },
+ "atoms": {
+  "exam_ready": 304,
+  "refs_ok": 41,
+  "refs_bad": 0,
+  "refs_na": 263
+ },
+ "atom_ids_verified": 41,
+ "atom_ids_unresolved": [],
+ "holdout_frac": 0.2,
+ "graduation_line": {
+  "hit_rate": 0.8,
+  "fp_rate": 0.1
+ },
+ "candidates": [
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "C",
+   "status": "scored",
+   "seen": {
+    "fires": 1,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "fp_rate": 1.0
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "D",
+   "status": "scored",
+   "seen": {
+    "fires": 1,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "fp_rate": 1.0
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "E",
+   "status": "scored",
+   "seen": {
+    "fires": 1,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "fp_rate": 1.0
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "F",
+   "status": "scored",
+   "seen": {
+    "fires": 1,
+    "hits": 0,
+    "hit_rate": 0.0,
+    "fp_rate": 1.0
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "checkpoint_restart",
+   "status": "scored",
+   "seen": {
+    "fires": 17,
+    "hits": 1,
+    "hit_rate": 1.0,
+    "fp_rate": 0.9412
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "atomic_ejection",
+   "strategy": "checkpoint_restart",
+   "status": "scored",
+   "seen": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "holdout": {
+    "fires": 1,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": 1.0
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "extreme_temp",
+   "strategy": "checkpoint_restart",
+   "status": "scored",
+   "seen": {
+    "fires": 25,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": 1.0
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "general_instability",
+   "strategy": "checkpoint_restart",
+   "status": "scored",
+   "seen": {
+    "fires": 18,
+    "hits": 1,
+    "hit_rate": 1.0,
+    "fp_rate": 0.9444
+   },
+   "holdout": {
+    "fires": 15,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": 1.0
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "仅供参考,毕业裁定在 graduation.py"
+   }
+  },
+  {
+   "root_cause": "thermal_runaway",
+   "strategy": "spec_timestep_floor_damp",
+   "status": "untested",
+   "seen": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "从未真实执行,无结局不成考题"
+   }
+  },
+  {
+   "root_cause": "QEq_instability",
+   "strategy": "spec_qeq_relax_stronger",
+   "status": "untested",
+   "seen": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "从未真实执行,无结局不成考题"
+   }
+  },
+  {
+   "root_cause": "atomic_ejection",
+   "strategy": "spec_nve_limit_tighten",
+   "status": "untested",
+   "seen": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "holdout": {
+    "fires": 0,
+    "hits": 0,
+    "hit_rate": null,
+    "fp_rate": null
+   },
+   "graduation_hint": {
+    "hit_ok": false,
+    "fp_ok": false,
+    "note": "从未真实执行,无结局不成考题"
+   }
+  }
+ ]
+}

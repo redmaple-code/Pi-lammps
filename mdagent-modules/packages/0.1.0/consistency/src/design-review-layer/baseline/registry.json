@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-10-30",
+  "note": "基线是参照/兜底维度，不是每个案例都必须全部适用；适用性由审阅者按案例判断。",
+  "dimensions": [
+    {"id": "D1", "name": "目标与解释角色", "definition": "仿真要回答什么、结论层级与可证伪性", "applies_when": "任何有明确目标的案例"},
+    {"id": "D2", "name": "材料模型保真", "definition": "势函数/成分/组织/缺陷与实验材料的一致性", "applies_when": "涉及具体材料的案例"},
+    {"id": "D3", "name": "抽象映射（几何/尺度）", "definition": "几何、尺寸、边界、周期条件的等效性", "applies_when": "任何有限模型对宏观实验的映射"},
+    {"id": "D4", "name": "物理可表达性（时间/空间）", "definition": "时间/空间尺度、应变率、惯性、温升是否可表达", "applies_when": "有加载速率或跨尺度映射的案例"},
+    {"id": "D5", "name": "设定自洽（系综/控温/加载）", "definition": "系综、热浴、加载路径、输出设定是否自洽", "applies_when": "任何动力学案例"},
+    {"id": "D6", "name": "数值与有限尺度", "definition": "时间步、收敛、尺寸效应、统计采样", "applies_when": "任何数值模拟"},
+    {"id": "D7", "name": "观测与判据", "definition": "实验测量与仿真输出量的定义、统计口径", "applies_when": "有定量对照的案例"},
+    {"id": "D8", "name": "不确定度与对照协议", "definition": "误差传递、重复性、对照判据", "applies_when": "声称定量比较的案例"},
+    {"id": "D9", "name": "证据完备性", "definition": "每条结论是否有 E1–E6 证据引用", "applies_when": "任何要形成结论的案例"}
+  ],
+  "changelog": [
+    {"version": "1.0", "date": "2026-10-30", "change": "初始 9 维参照基线；明确不作为强制清单"}
+  ],
+  "candidates": []
+}

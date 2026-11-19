@@ -1,0 +1,654 @@
+
+EEEEEEEEEEEEEEEEEEEEEEEE.EEE.E
+======================================================================
+ERROR: test_estimate_requires_assessment_backing (test_stage_gate.TestE1DesignEvidence.test_estimate_requires_assessment_backing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 180, in test_estimate_requires_assessment_backing
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_high_risk_human_only_allowed (test_stage_gate.TestE1DesignEvidence.test_high_risk_human_only_allowed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 154, in test_high_risk_human_only_allowed
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_high_risk_requires_a_or_b (test_stage_gate.TestE1DesignEvidence.test_high_risk_requires_a_or_b)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 141, in test_high_risk_requires_a_or_b
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_insufficient_evidence_blocks (test_stage_gate.TestE1DesignEvidence.test_insufficient_evidence_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 120, in test_insufficient_evidence_blocks
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_invalid_basis_kind (test_stage_gate.TestE1DesignEvidence.test_invalid_basis_kind)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 188, in test_invalid_basis_kind
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_no_design_at_plan_gate_blocks (test_stage_gate.TestE1DesignEvidence.test_no_design_at_plan_gate_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 114, in test_no_design_at_plan_gate_blocks
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_override_without_reason_asks (test_stage_gate.TestE1DesignEvidence.test_override_without_reason_asks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 162, in test_override_without_reason_asks
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_paper_satisfies_medium_design (test_stage_gate.TestE1DesignEvidence.test_paper_satisfies_medium_design)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 130, in test_paper_satisfies_medium_design
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_second_confirmation_bypasses_question (test_stage_gate.TestE1DesignEvidence.test_second_confirmation_bypasses_question)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 173, in test_second_confirmation_bypasses_question
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_analyze_factcheck_fail (test_stage_gate.TestE2Computation.test_analyze_factcheck_fail)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 274, in test_analyze_factcheck_fail
+    res = self.gate(self.rec("G-ANALYZE", acceptance_checks=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_analyze_factcheck_pass (test_stage_gate.TestE2Computation.test_analyze_factcheck_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 262, in test_analyze_factcheck_pass
+    res = self.gate(self.rec("G-ANALYZE", acceptance_checks=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_analyze_numeric_claim_needs_factcheck (test_stage_gate.TestE2Computation.test_analyze_numeric_claim_needs_factcheck)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 251, in test_analyze_numeric_claim_needs_factcheck
+    res = self.gate(self.rec("G-ANALYZE", acceptance_checks=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_exec_requires_inputs (test_stage_gate.TestE2Computation.test_exec_requires_inputs)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 247, in test_exec_requires_inputs
+    res = self.gate(self.rec("G-EXEC"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_clean_assessment_passes (test_stage_gate.TestE3Physics.test_clean_assessment_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 213, in test_clean_assessment_passes
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_critical_blocks (test_stage_gate.TestE3Physics.test_critical_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 206, in test_critical_blocks
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_missing_assessment_blocks_plan (test_stage_gate.TestE3Physics.test_missing_assessment_blocks_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 200, in test_missing_assessment_blocks_plan
+    res = self.gate(self.rec("G-PLAN"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_clean_input_passes (test_stage_gate.TestE4Methodology.test_clean_input_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 237, in test_clean_input_passes
+    res = self.gate(self.rec("G-BUILD", input_files=[f]))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_no_input_declared_blocks (test_stage_gate.TestE4Methodology.test_no_input_declared_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 241, in test_no_input_declared_blocks
+    res = self.gate(self.rec("G-BUILD"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_violation_blocks (test_stage_gate.TestE4Methodology.test_violation_blocks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 229, in test_violation_blocks
+    res = self.gate(self.rec("G-BUILD", input_files=[f]))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_failed_item_needs_rollback (test_stage_gate.TestE5Completeness.test_failed_item_needs_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 290, in test_failed_item_needs_rollback
+    res = self.gate(self.rec("G-ANALYZE", acceptance_checks=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_missing_acceptance_item (test_stage_gate.TestE5Completeness.test_missing_acceptance_item)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 284, in test_missing_acceptance_item
+    res = self.gate(self.rec("G-ANALYZE", acceptance_checks=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_grades_reported (test_stage_gate.TestEvidenceReport.test_grades_reported)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 327, in test_grades_reported
+    res = self.gate(self.rec("G-PLAN", evidence_refs=[
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_blocked_is_block (test_stage_gate.TestFailClosed.test_blocked_is_block)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 313, in test_blocked_is_block
+    res = self.gate(self.rec("G-PLAN", decision="BLOCKED"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_gate_log_appended (test_stage_gate.TestFailClosed.test_gate_log_appended)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 317, in test_gate_log_appended
+    self.gate(self.rec("G-PLAN"))
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_revise_is_hold (test_stage_gate.TestFailClosed.test_revise_is_hold)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 309, in test_revise_is_hold
+    res = self.gate(self.rec("G-PLAN", decision="REVISE"))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_unusable_record (test_stage_gate.TestFailClosed.test_unusable_record)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 128, in _load_atoms
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 297, in test_unusable_record
+    res = stage_gate.gate_and_log(self.cid, {"gate": "G-PLAN"}, data_root=self.dr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 691, in gate_and_log
+    ctx = build_context(case_id, data_root, facts=facts, engine=engine,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 235, in build_context
+    ctx["atoms"] = _load_atoms(dr)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 130, in _load_atoms
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_build_gate_does_not_run_e3 (test_stage_gate.TestGateBinding.test_build_gate_does_not_run_e3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 57, in load_items
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 107, in test_build_gate_does_not_run_e3
+    res = self.gate(self.rec("G-BUILD", input_files=["in.x"]))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 51, in gate
+    surface_fixture.fill_phase(self.dr, self.cid, phase)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\surface_fixture.py", line 15, in fill_phase
+    items = [i for i in surface.load_items(data_root).values()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\surface.py", line 59, in load_items
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+======================================================================
+ERROR: test_unbound_gate_skips_evidence_rules (test_stage_gate.TestGateBinding.test_unbound_gate_skips_evidence_rules)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 128, in _load_atoms
+    from .kb import adapter
+ImportError: attempted relative import with no known parent package
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 98, in test_unbound_gate_skips_evidence_rules
+    res = self.gate(r)
+          ^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\tests\test_stage_gate.py", line 52, in gate
+    return stage_gate.gate_and_log(self.cid, record, data_root=self.dr, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 691, in gate_and_log
+    ctx = build_context(case_id, data_root, facts=facts, engine=engine,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 235, in build_context
+    ctx["atoms"] = _load_atoms(dr)
+                   ^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-optpc6uf\assembly\src\evolution\stage_gate.py", line 130, in _load_atoms
+    from kb import adapter
+ModuleNotFoundError: No module named 'kb'
+
+----------------------------------------------------------------------
+Ran 30 tests in 1.801s
+
+FAILED (errors=28)

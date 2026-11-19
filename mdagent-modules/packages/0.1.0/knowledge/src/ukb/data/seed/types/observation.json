@@ -1,0 +1,41 @@
+{
+  "type_id": "observation",
+  "label": "观察",
+  "description": "一次观察到的事实，尚未上升为规律",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "observed_at": {
+        "kind": "text",
+        "required": false
+      },
+      "context": {
+        "kind": "text",
+        "required": false,
+        "max_len": 2000
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "statement",
+      "observed_at",
+      "context"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

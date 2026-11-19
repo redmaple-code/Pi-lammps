@@ -1,0 +1,125 @@
+{
+  "case": "case4",
+  "provider": "external-ai:case4_points.json",
+  "open_points": [
+    {
+      "id": "RP-002",
+      "title": "E-04 的 2.5 Å 压入深度与代码中 35 Å 量级的位移驱动不一致",
+      "dimension": "加载历史-压入深度",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          34,
+          71,
+          80,
+          117
+        ]
+      },
+      "question": "E-04 的 2.5 Å 是只指 L34 的初始 offset，还是设计压入深度？L71 的恒速压入为何没有停止条件或力控制？压入段为何不记录力-深度曲线？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-009",
+      "title": "金刚石球内部用 LJ C–C，σ 远大于金刚石键长，球内势能/应力非物理",
+      "dimension": "材料-磨头模型",
+      "locations": {
+        "experiment": [
+          "E-01",
+          "E-03"
+        ],
+        "infile": [
+          16,
+          17,
+          55,
+          98,
+          120
+        ]
+      },
+      "question": "球内 C–C 势在 1.5 Å 键长下的能量/力有多大？pe、v_mises 是否被球内 C–C 主导？为何不用金刚石专用势或纯刚性球？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-016",
+      "title": "E-04 称“宏观对应高速磨削”，cross_scale 却写宏观 1–10 m/s，内部口径矛盾",
+      "dimension": "尺度-证据",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          121
+        ]
+      },
+      "question": "宏观对照到底是普通磨削（1–10 m/s）还是高速磨削？100 m/s 的目标宏观速度是多少？10–100× 的倍数如何得到？",
+      "severity": "medium"
+    },
+    {
+      "id": "RP-018",
+      "title": "E-06 自认宏观实验是 AI 依据 in 文件反推，缺真实实验来源与不确定度",
+      "dimension": "证据-实验来源",
+      "locations": {
+        "experiment": [
+          "E-06"
+        ],
+        "infile": [
+          10,
+          121,
+          134
+        ]
+      },
+      "question": "是否有真实的磨削/摩擦实验数据、装置参数和不确定度？E-06 的反推描述是否已由用户确认？若无，宏观对照的依据是什么？",
+      "severity": "high"
+    }
+  ],
+  "common_groups": [
+    {
+      "id": "CI-007",
+      "name": "热浴/恒温器参数与塑性耗热",
+      "occurrences": 6
+    },
+    {
+      "id": "CI-002",
+      "name": "MD 应变率比实验高多个数量级",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-001",
+      "name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "occurrences": 3
+    },
+    {
+      "id": "CI-012",
+      "name": "观测量的实验-仿真映射",
+      "occurrences": 8
+    },
+    {
+      "id": "CI-005",
+      "name": "多组元势函数的交叉项/适用性",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-009",
+      "name": "应力/应变定义（virial、总压、工程/真应力）",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-004",
+      "name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-006",
+      "name": "单次 run/单 seed 无统计不确定度",
+      "occurrences": 1
+    }
+  ],
+  "stats": {
+    "total": 28,
+    "open": 4,
+    "record_required": 18,
+    "explained": 6,
+    "capped": ""
+  }
+}

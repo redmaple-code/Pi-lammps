@@ -1,0 +1,1370 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "fem-dynamics",
+  "version": "0.1.0-draft",
+  "publicationStatus": "draft",
+  "scope": {
+    "domains": [
+      "structural-dynamics"
+    ],
+    "scales": [
+      "continuum"
+    ],
+    "tasks": [
+      "modal",
+      "implicit-transient",
+      "harmonic-response",
+      "explicit-impact"
+    ],
+    "exclusions": [
+      "fluid-structure-coupling",
+      "unvalidated-fracture-model",
+      "acoustic-radiation-coupling"
+    ]
+  },
+  "kernelCompatibility": ">=1.0.0 <2.0.0",
+  "dependencies": [],
+  "resources": [
+    {
+      "id": "problem",
+      "kind": "problemSchema",
+      "path": "problem.schema.json",
+      "availability": "available",
+      "digest": "sha256:0aa4a1e34ee7d407a34bbe60a219fcad4b6d9d4088a89f34fe5796dafa2cce2a"
+    },
+    {
+      "id": "knowledge",
+      "kind": "knowledge",
+      "path": "knowledge.json",
+      "availability": "available",
+      "digest": "sha256:7688825ba4ee4eed561ebac60e79ccd7f909e8dc4b49910d7944d8fd13298c9e"
+    },
+    {
+      "id": "models",
+      "kind": "model",
+      "path": "models.json",
+      "availability": "available",
+      "digest": "sha256:e54005ba51ed22613f0e27a9f5bf861dbc7c5654c6b1402f56a46935bc229341"
+    },
+    {
+      "id": "vocabulary",
+      "kind": "vocabulary",
+      "path": "vocabulary.json",
+      "availability": "available",
+      "digest": "sha256:ed5344658f84bef6cb432978c0348298713e9bbfe918e3e108da8986386412e3"
+    },
+    {
+      "id": "checks",
+      "kind": "check",
+      "path": "checks.json",
+      "availability": "available",
+      "digest": "sha256:7e6946b67be6192a5413508017d09a8094210a611105e2a8b4e3b93db463cf4b"
+    },
+    {
+      "id": "metrics",
+      "kind": "metric",
+      "path": "metrics.json",
+      "availability": "available",
+      "digest": "sha256:7e2193449b2c888a7a06aeda5e1dc82de3498b1b14cc79df394c9a530dbda9b6"
+    },
+    {
+      "id": "failures",
+      "kind": "failure",
+      "path": "failures.json",
+      "availability": "available",
+      "digest": "sha256:bf6a8ddfc7a011e8220938000c51cc306d50867cc7a4c55796da8093685befd6"
+    },
+    {
+      "id": "protocols",
+      "kind": "protocol",
+      "path": "protocols.json",
+      "availability": "available",
+      "digest": "sha256:08f2eba482e3552e9cdaff46fa272c4aef834c892a5767b4faff95e77ddfc7fb"
+    },
+    {
+      "id": "templates",
+      "kind": "template",
+      "path": "templates.json",
+      "availability": "available",
+      "digest": "sha256:eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1"
+    },
+    {
+      "id": "roles",
+      "kind": "role",
+      "path": "roles.json",
+      "availability": "available",
+      "digest": "sha256:a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa"
+    },
+    {
+      "id": "validation",
+      "kind": "validation",
+      "path": "validation.json",
+      "availability": "available",
+      "digest": "sha256:11ef93042a47c6234d7b8fb73983d41dde2514d422abcaf44bf7343e43e0aa43"
+    },
+    {
+      "id": "artifacts",
+      "kind": "artifactSchema",
+      "path": "artifacts.json",
+      "availability": "available",
+      "digest": "sha256:dc6bca0819257b4db57c2107cb7158cafa0b5d64e24e1cc96ddd1cd78f25dd6e"
+    },
+    {
+      "id": "record-schema",
+      "kind": "artifactSchema",
+      "path": "record.schema.json",
+      "availability": "available",
+      "digest": "sha256:fb6fe4574efbb8e2b367910f921d3228d921d310eabaa643cd5bd5fe1a91ffe4"
+    },
+    {
+      "id": "workflow-guide",
+      "kind": "template",
+      "path": "README.md",
+      "availability": "available",
+      "digest": "sha256:023a60cb4d599b419996f644648052dbe2830ea70c3351855af28e676e3580fc"
+    },
+    {
+      "id": "tooling-guide",
+      "kind": "template",
+      "path": "tooling.md",
+      "availability": "available",
+      "digest": "sha256:6563601168a633cd1def80b560cb9b1b5a237e2c2b326efac75fdfb14d019182"
+    },
+    {
+      "id": "task-example",
+      "kind": "template",
+      "path": "examples/task.json",
+      "availability": "available",
+      "digest": "sha256:4b35d4824d51ec2ad91d60cefe447a75651f972d8387f0a42e206a17cf3542c5"
+    },
+    {
+      "id": "explicit-impact-example",
+      "kind": "template",
+      "path": "examples/explicit-impact.task.json",
+      "availability": "available",
+      "digest": "sha256:6d5e165fe777d1fb1adbf42f16d22cc77cf1145131f0c362ca8cbe5a40735046"
+    },
+    {
+      "id": "harmonic-response-example",
+      "kind": "template",
+      "path": "examples/harmonic-response.task.json",
+      "availability": "available",
+      "digest": "sha256:ae205b95f00e3f665e927abae19bb45228f44e4aff2e13214315b04ea1d81a64"
+    },
+    {
+      "id": "modal-example",
+      "kind": "template",
+      "path": "examples/modal.task.json",
+      "availability": "available",
+      "digest": "sha256:c30a24a4ed6abc86803e94263bdd548c1e115d8ab810ea480304513d6c719082"
+    }
+  ],
+  "entrypoints": {
+    "problemSchema": "problem",
+    "knowledge": [
+      "knowledge"
+    ],
+    "models": [
+      "models"
+    ],
+    "vocabulary": "vocabulary",
+    "checks": [
+      "checks"
+    ],
+    "metrics": [
+      "metrics"
+    ],
+    "failures": "failures",
+    "templates": [
+      "templates"
+    ],
+    "roles": "roles",
+    "validation": [
+      "validation"
+    ],
+    "artifactSchemas": [
+      "artifacts"
+    ]
+  },
+  "requiredCapabilities": [
+    "fem.dynamics.analyze",
+    "fem.dynamics.input",
+    "fem.dynamics.plan",
+    "fem.dynamics.qualify",
+    "fem.dynamics.report",
+    "fem.dynamics.verify",
+    "fem.geometry.prepare",
+    "fem.mesh.prepare",
+    "fem.study.prepare",
+    "fem.study.solve",
+    "fem.verification.aggregate"
+  ],
+  "toolProfiles": [
+    {
+      "id": "calculix-candidate",
+      "bindings": [
+        {
+          "capability": "fem.dynamics.analyze",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.input",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.plan",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.qualify",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.report",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.verify",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.explicit.solve",
+          "adapterId": "candidate-calculix-explicit",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.geometry.prepare",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.harmonic.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.implicit.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.mesh.prepare",
+          "adapterId": "candidate-gmsh",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.modal.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.study.prepare",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.study.solve",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.verification.aggregate",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    },
+    {
+      "id": "calculix-lsdyna-candidate",
+      "bindings": [
+        {
+          "capability": "fem.dynamics.analyze",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.input",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.plan",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.qualify",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.report",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.dynamics.verify",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.explicit.solve",
+          "adapterId": "candidate-lsdyna",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.geometry.prepare",
+          "adapterId": "candidate-fem-workflow",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.harmonic.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.implicit.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.mesh.prepare",
+          "adapterId": "candidate-gmsh",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.modal.solve",
+          "adapterId": "candidate-calculix",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.study.prepare",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.study.solve",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "fem.verification.aggregate",
+          "adapterId": "candidate-fem-study",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    }
+  ],
+  "defaultToolProfile": "calculix-candidate",
+  "workflows": [
+    {
+      "id": "modal",
+      "taskType": "modal",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.plan"
+        },
+        {
+          "id": "geometry",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "geometry-bundle"
+          ],
+          "checkRefs": [
+            "checks#geometry-connectivity"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.geometry.prepare"
+        },
+        {
+          "id": "discretize",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "geometry"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "geometry-bundle"
+          ],
+          "produces": [
+            "discrete-model"
+          ],
+          "checkRefs": [
+            "checks#mesh-material-mass"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.mesh.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "discretize"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "discrete-model"
+          ],
+          "produces": [
+            "dynamic-input"
+          ],
+          "checkRefs": [
+            "checks#input-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.input"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#procedure-compatible"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.qualify"
+        },
+        {
+          "id": "solve",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "dynamic-input",
+            "qualification"
+          ],
+          "produces": [
+            "solution"
+          ],
+          "checkRefs": [
+            "checks#execution-complete",
+            "checks#modal-basis"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.modal.solve"
+        },
+        {
+          "id": "verify",
+          "kind": "iteration",
+          "role": "validator",
+          "needs": [
+            "solve"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input",
+            "qualification",
+            "solution"
+          ],
+          "produces": [
+            "verification"
+          ],
+          "checkRefs": [
+            "checks#numerical-verification"
+          ],
+          "reviewRequired": true,
+          "bodyWorkflowRef": "verification-sample",
+          "iterationProtocolRef": "protocols#discretization-study",
+          "maxIterations": 6,
+          "untilCheckRef": "checks#numerical-verification"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "verify"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#metric-definition"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.analyze"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification",
+            "metrics"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.dynamics.report"
+        }
+      ]
+    },
+    {
+      "id": "implicit-transient",
+      "taskType": "implicit-transient",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.plan"
+        },
+        {
+          "id": "geometry",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "geometry-bundle"
+          ],
+          "checkRefs": [
+            "checks#geometry-connectivity"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.geometry.prepare"
+        },
+        {
+          "id": "discretize",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "geometry"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "geometry-bundle"
+          ],
+          "produces": [
+            "discrete-model"
+          ],
+          "checkRefs": [
+            "checks#mesh-material-mass"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.mesh.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "discretize"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "discrete-model"
+          ],
+          "produces": [
+            "dynamic-input"
+          ],
+          "checkRefs": [
+            "checks#input-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.input"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#procedure-compatible"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.qualify"
+        },
+        {
+          "id": "solve",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "dynamic-input",
+            "qualification"
+          ],
+          "produces": [
+            "solution"
+          ],
+          "checkRefs": [
+            "checks#execution-complete"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.implicit.solve"
+        },
+        {
+          "id": "verify",
+          "kind": "iteration",
+          "role": "validator",
+          "needs": [
+            "solve"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input",
+            "qualification",
+            "solution"
+          ],
+          "produces": [
+            "verification"
+          ],
+          "checkRefs": [
+            "checks#numerical-verification"
+          ],
+          "reviewRequired": true,
+          "bodyWorkflowRef": "verification-sample",
+          "iterationProtocolRef": "protocols#discretization-study",
+          "maxIterations": 6,
+          "untilCheckRef": "checks#numerical-verification"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "verify"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#metric-definition"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.analyze"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification",
+            "metrics"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.dynamics.report"
+        }
+      ]
+    },
+    {
+      "id": "harmonic-response",
+      "taskType": "harmonic-response",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.plan"
+        },
+        {
+          "id": "geometry",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "geometry-bundle"
+          ],
+          "checkRefs": [
+            "checks#geometry-connectivity"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.geometry.prepare"
+        },
+        {
+          "id": "discretize",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "geometry"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "geometry-bundle"
+          ],
+          "produces": [
+            "discrete-model"
+          ],
+          "checkRefs": [
+            "checks#mesh-material-mass"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.mesh.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "discretize"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "discrete-model"
+          ],
+          "produces": [
+            "dynamic-input"
+          ],
+          "checkRefs": [
+            "checks#input-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.input"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#procedure-compatible"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.qualify"
+        },
+        {
+          "id": "modes",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "dynamic-input",
+            "qualification"
+          ],
+          "produces": [
+            "modal-basis"
+          ],
+          "checkRefs": [
+            "checks#execution-complete",
+            "checks#modal-basis"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.modal.solve"
+        },
+        {
+          "id": "solve",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "modes"
+          ],
+          "consumes": [
+            "task",
+            "dynamic-input",
+            "qualification",
+            "modal-basis"
+          ],
+          "produces": [
+            "solution"
+          ],
+          "checkRefs": [
+            "checks#execution-complete",
+            "checks#modal-basis"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.harmonic.solve"
+        },
+        {
+          "id": "verify",
+          "kind": "iteration",
+          "role": "validator",
+          "needs": [
+            "solve"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input",
+            "qualification",
+            "solution"
+          ],
+          "produces": [
+            "verification"
+          ],
+          "checkRefs": [
+            "checks#numerical-verification"
+          ],
+          "reviewRequired": true,
+          "bodyWorkflowRef": "verification-sample",
+          "iterationProtocolRef": "protocols#discretization-study",
+          "maxIterations": 6,
+          "untilCheckRef": "checks#numerical-verification"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "verify"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#metric-definition"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.analyze"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification",
+            "metrics"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.dynamics.report"
+        }
+      ]
+    },
+    {
+      "id": "explicit-impact",
+      "taskType": "explicit-impact",
+      "inputs": [
+        "task"
+      ],
+      "outputs": [
+        "deliverables"
+      ],
+      "stages": [
+        {
+          "id": "plan",
+          "kind": "action",
+          "role": "architect",
+          "needs": [],
+          "consumes": [
+            "task"
+          ],
+          "produces": [
+            "plan"
+          ],
+          "checkRefs": [
+            "checks#scope-inputs"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.plan"
+        },
+        {
+          "id": "geometry",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "plan"
+          ],
+          "consumes": [
+            "task",
+            "plan"
+          ],
+          "produces": [
+            "geometry-bundle"
+          ],
+          "checkRefs": [
+            "checks#geometry-connectivity"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.geometry.prepare"
+        },
+        {
+          "id": "discretize",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "geometry"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "geometry-bundle"
+          ],
+          "produces": [
+            "discrete-model"
+          ],
+          "checkRefs": [
+            "checks#mesh-material-mass"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.mesh.prepare"
+        },
+        {
+          "id": "configure",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [
+            "discretize"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "discrete-model"
+          ],
+          "produces": [
+            "dynamic-input"
+          ],
+          "checkRefs": [
+            "checks#input-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.input"
+        },
+        {
+          "id": "qualify",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "configure"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input"
+          ],
+          "produces": [
+            "qualification"
+          ],
+          "checkRefs": [
+            "checks#procedure-compatible"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.qualify"
+        },
+        {
+          "id": "solve",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "qualify"
+          ],
+          "consumes": [
+            "task",
+            "dynamic-input",
+            "qualification"
+          ],
+          "produces": [
+            "solution"
+          ],
+          "checkRefs": [
+            "checks#execution-complete",
+            "checks#explicit-controls"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.explicit.solve"
+        },
+        {
+          "id": "verify",
+          "kind": "iteration",
+          "role": "validator",
+          "needs": [
+            "solve"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input",
+            "qualification",
+            "solution"
+          ],
+          "produces": [
+            "verification"
+          ],
+          "checkRefs": [
+            "checks#numerical-verification",
+            "checks#explicit-controls"
+          ],
+          "reviewRequired": true,
+          "bodyWorkflowRef": "verification-sample",
+          "iterationProtocolRef": "protocols#discretization-study",
+          "maxIterations": 6,
+          "untilCheckRef": "checks#numerical-verification"
+        },
+        {
+          "id": "analyze",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "verify"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#metric-definition"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.dynamics.analyze"
+        },
+        {
+          "id": "report",
+          "kind": "action",
+          "role": "post-processor",
+          "needs": [
+            "analyze"
+          ],
+          "consumes": [
+            "task",
+            "solution",
+            "verification",
+            "metrics"
+          ],
+          "produces": [
+            "deliverables"
+          ],
+          "checkRefs": [
+            "checks#report-traceable"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.dynamics.report"
+        }
+      ]
+    },
+    {
+      "id": "verification-sample",
+      "taskType": "internal-verification",
+      "inputs": [
+        "task",
+        "plan",
+        "dynamic-input",
+        "qualification",
+        "solution"
+      ],
+      "outputs": [
+        "verification"
+      ],
+      "stages": [
+        {
+          "id": "refine",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [],
+          "consumes": [
+            "task",
+            "plan",
+            "dynamic-input",
+            "qualification",
+            "solution"
+          ],
+          "produces": [
+            "study-input"
+          ],
+          "checkRefs": [
+            "checks#input-protocol"
+          ],
+          "reviewRequired": true,
+          "capability": "fem.study.prepare"
+        },
+        {
+          "id": "trial",
+          "kind": "action",
+          "role": "executor",
+          "needs": [
+            "refine"
+          ],
+          "consumes": [
+            "task",
+            "study-input",
+            "qualification"
+          ],
+          "produces": [
+            "study-solution"
+          ],
+          "checkRefs": [
+            "checks#execution-complete"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.study.solve"
+        },
+        {
+          "id": "assess",
+          "kind": "action",
+          "role": "validator",
+          "needs": [
+            "trial"
+          ],
+          "consumes": [
+            "task",
+            "plan",
+            "solution",
+            "study-input",
+            "study-solution"
+          ],
+          "produces": [
+            "verification"
+          ],
+          "checkRefs": [
+            "checks#metric-definition"
+          ],
+          "reviewRequired": false,
+          "capability": "fem.dynamics.verify"
+        }
+      ]
+    }
+  ],
+  "defaultWorkflow": "modal",
+  "policies": {
+    "referencePolicy": "verifiedBasis",
+    "independentReviewRequired": true,
+    "maxConsecutiveRevisions": 3,
+    "maxConsecutiveRepairFailures": 3
+  },
+  "extensions": {
+    "workflow.spec": {
+      "designStatus": "authored",
+      "adapterStatus": "unverified",
+      "scientificRuns": "notRun",
+      "protocolRefs": [
+        "protocols"
+      ],
+      "taskCapabilityPolicy": "就绪按所选流程能力闭包检查；包级集合用于安装盘点。",
+      "externalDataRequirement": "JSON资源已齐全，实际科学数据和工具版本由具体案例取得并锁定。",
+      "thresholdPolicy": "示例数值为proposed，按任务和参考审阅后锁定。",
+      "publicWorkflowIds": [
+        "modal",
+        "implicit-transient",
+        "harmonic-response",
+        "explicit-impact"
+      ],
+      "iterationBudgetNote": "verify最多6轮，仍受task.resources.maxRuns与实际单轮子运行数约束。"
+    }
+  }
+}

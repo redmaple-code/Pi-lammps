@@ -1,0 +1,301 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "discrete-event",
+  "version": "0.1.0-draft",
+  "publicationStatus": "draft",
+  "scope": {
+    "domains": [
+      "queueing"
+    ],
+    "scales": [
+      "system"
+    ],
+    "tasks": [
+      "stationary-queue"
+    ],
+    "exclusions": [
+      "nonstationary-equilibrium-claims",
+      "spatial-continuum-fields"
+    ]
+  },
+  "kernelCompatibility": ">=1.0.0 <2.0.0",
+  "dependencies": [],
+  "resources": [
+    {
+      "id": "problem",
+      "kind": "problemSchema",
+      "path": "problem-schema.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "knowledge",
+      "kind": "knowledge",
+      "path": "knowledge/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "models",
+      "kind": "model",
+      "path": "models/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "vocabulary",
+      "kind": "vocabulary",
+      "path": "vocabulary.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "checks",
+      "kind": "check",
+      "path": "checks/rules.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "metrics",
+      "kind": "metric",
+      "path": "measurements/metrics.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "failures",
+      "kind": "failure",
+      "path": "failures/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "templates",
+      "kind": "template",
+      "path": "templates/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "roles",
+      "kind": "role",
+      "path": "roles.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "validation",
+      "kind": "validation",
+      "path": "validation/cases.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "artifacts",
+      "kind": "artifactSchema",
+      "path": "artifacts/schemas/catalog.yaml",
+      "availability": "missing"
+    },
+    {
+      "id": "replication-protocol",
+      "kind": "protocol",
+      "path": "workflows/protocols/replication.yaml",
+      "availability": "missing"
+    }
+  ],
+  "entrypoints": {
+    "problemSchema": "problem",
+    "knowledge": [
+      "knowledge"
+    ],
+    "models": [
+      "models"
+    ],
+    "vocabulary": "vocabulary",
+    "checks": [
+      "checks"
+    ],
+    "metrics": [
+      "metrics"
+    ],
+    "failures": "failures",
+    "templates": [
+      "templates"
+    ],
+    "roles": "roles",
+    "validation": [
+      "validation"
+    ],
+    "artifactSchemas": [
+      "artifacts"
+    ]
+  },
+  "requiredCapabilities": [
+    "discrete-event.solve",
+    "queue.model.prepare",
+    "statistics.aggregate",
+    "statistics.evaluate"
+  ],
+  "toolProfiles": [
+    {
+      "id": "candidate-local",
+      "bindings": [
+        {
+          "capability": "discrete-event.solve",
+          "adapterId": "candidate-event-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "queue.model.prepare",
+          "adapterId": "candidate-event-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "statistics.aggregate",
+          "adapterId": "candidate-event-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        },
+        {
+          "capability": "statistics.evaluate",
+          "adapterId": "candidate-event-tools",
+          "adapterVersionRange": ">=0.1.0 <1.0.0",
+          "toolVersionRange": "*",
+          "validationStatus": "unverified"
+        }
+      ]
+    }
+  ],
+  "defaultToolProfile": "candidate-local",
+  "workflows": [
+    {
+      "id": "stationary-queue",
+      "taskType": "stationary-queue",
+      "inputs": [
+        "approved-problem"
+      ],
+      "outputs": [
+        "metrics"
+      ],
+      "stages": [
+        {
+          "id": "model",
+          "kind": "action",
+          "role": "model-builder",
+          "needs": [],
+          "consumes": [
+            "approved-problem"
+          ],
+          "produces": [
+            "event-model"
+          ],
+          "checkRefs": [
+            "checks#stability-and-rules"
+          ],
+          "reviewRequired": true,
+          "capability": "queue.model.prepare"
+        },
+        {
+          "id": "replications",
+          "kind": "iteration",
+          "role": "study-coordinator",
+          "needs": [
+            "model"
+          ],
+          "consumes": [
+            "event-model"
+          ],
+          "produces": [
+            "sample-batch"
+          ],
+          "checkRefs": [
+            "checks#replication-protocol"
+          ],
+          "reviewRequired": false,
+          "bodyWorkflowRef": "single-replication",
+          "maxIterations": 30,
+          "untilCheckRef": "checks#statistical-precision",
+          "iterationProtocolRef": "replication-protocol"
+        },
+        {
+          "id": "aggregate",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "replications"
+          ],
+          "consumes": [
+            "approved-problem",
+            "sample-batch"
+          ],
+          "produces": [
+            "metrics"
+          ],
+          "checkRefs": [
+            "checks#theory-comparison"
+          ],
+          "reviewRequired": false,
+          "capability": "statistics.aggregate"
+        }
+      ]
+    },
+    {
+      "id": "single-replication",
+      "taskType": "replication",
+      "inputs": [
+        "event-model"
+      ],
+      "outputs": [
+        "sample-batch"
+      ],
+      "stages": [
+        {
+          "id": "run",
+          "kind": "action",
+          "role": "executor",
+          "needs": [],
+          "consumes": [
+            "event-model"
+          ],
+          "produces": [
+            "events"
+          ],
+          "checkRefs": [
+            "checks#event-invariants"
+          ],
+          "reviewRequired": false,
+          "capability": "discrete-event.solve"
+        },
+        {
+          "id": "estimate",
+          "kind": "action",
+          "role": "analyst",
+          "needs": [
+            "run"
+          ],
+          "consumes": [
+            "events"
+          ],
+          "produces": [
+            "sample-batch"
+          ],
+          "checkRefs": [
+            "checks#warmup-and-units"
+          ],
+          "reviewRequired": false,
+          "capability": "statistics.evaluate"
+        }
+      ]
+    }
+  ],
+  "defaultWorkflow": "stationary-queue",
+  "policies": {
+    "referencePolicy": "verifiedBasis",
+    "independentReviewRequired": true,
+    "maxConsecutiveRevisions": 3,
+    "maxConsecutiveRepairFailures": 3
+  },
+  "extensions": {
+    "spec.example": {
+      "purpose": "开发规范示例，不含真实科学资产，不可发布或生产运行。",
+      "toolBindingNote": "adapterId 和版本范围为候选占位；实际工具版本须验证后锁定。",
+      "policyNote": "次数仅为配置示例，非通用科学阈值。"
+    }
+  }
+}

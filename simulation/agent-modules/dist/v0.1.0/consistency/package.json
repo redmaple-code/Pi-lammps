@@ -1,0 +1,19 @@
+{
+  "name": "@redmaple/agent-consistency",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "files": [
+    "core",
+    "consistency",
+    "README.md"
+  ],
+  "exports": {
+    ".": "./consistency/index.js",
+    "./core": "./core/index.js",
+    "./audit-sqlite": "./core/audit-sqlite.js"
+  }
+}

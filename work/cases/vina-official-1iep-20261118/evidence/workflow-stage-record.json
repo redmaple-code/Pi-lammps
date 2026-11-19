@@ -1,0 +1,132 @@
+{
+  "domainPack": "sources/domain-pack/manifest.json",
+  "executionMode": "case scripts with stage evidence mapping",
+  "platformAdapterCertification": "not performed",
+  "reviewMode": "single-agent evidence audit; independent human review pending",
+  "qualificationException": {
+    "field": "task.qualification.evidenceRequirement",
+    "requested": "independent search initial coordinates",
+    "actual": "official crystallographic initial coordinates",
+    "effect": "scope restricted to known-input method reproduction; predictive qualification not claimed"
+  },
+  "stages": [
+    {
+      "id": "plan",
+      "inputs": [
+        "sources/official-tutorial.rst",
+        "sources/source-lock.json"
+      ],
+      "outputs": [
+        "SIMULATION_SCHEME.md",
+        "evidence/run-plan.json"
+      ],
+      "status": "completed",
+      "decision": "Official example, source pin and numeric acceptance criteria locked before search."
+    },
+    {
+      "id": "receptor",
+      "inputs": [
+        "inputs/official/1iep_receptor.pdbqt"
+      ],
+      "outputs": [
+        "evidence/input-chemical-audit.json"
+      ],
+      "status": "completed",
+      "decision": "Reuse vendor-prepared bytes; preparation algorithm is outside this reproduction scope."
+    },
+    {
+      "id": "ligands",
+      "inputs": [
+        "inputs/official/1iep_ligand.pdbqt",
+        "reference/crystal-ligand.sdf"
+      ],
+      "outputs": [
+        "evidence/input-chemical-audit.json"
+      ],
+      "status": "completed_with_limitation",
+      "decision": "Chemical identity checked; provided starting coordinates are crystallographic, not independent."
+    },
+    {
+      "id": "configure",
+      "inputs": [
+        "task.json",
+        "inputs/official/1iep_receptor.box.txt"
+      ],
+      "outputs": [
+        "ledgers/parameter_ledger.csv",
+        "evidence/run-plan.json"
+      ],
+      "status": "completed",
+      "decision": "Explicit Vina branch, negative int32 seed and fixed chemical state."
+    },
+    {
+      "id": "qualify",
+      "inputs": [
+        "reference/official-top1.pdbqt"
+      ],
+      "outputs": [
+        "runs/fixed-score/run.json",
+        "runs/fixed-score/vina.log"
+      ],
+      "status": "method_comparison_only",
+      "decision": "Fixed-pose rescore supports scorer comparison. Independent-initial-state predictive qualification is not met."
+    },
+    {
+      "id": "dock",
+      "inputs": [
+        "inputs/official/1iep_receptor.pdbqt",
+        "inputs/official/1iep_ligand.pdbqt"
+      ],
+      "outputs": [
+        "runs/e8/run.json",
+        "runs/e16/run.json",
+        "runs/e32/run.json",
+        "runs/e32/poses.pdbqt"
+      ],
+      "status": "completed",
+      "decision": "Three real runs plus fixed-pose control; all failures, if any, remain in receipts."
+    },
+    {
+      "id": "poses",
+      "inputs": [
+        "runs/e32/poses.pdbqt",
+        "reference/official-vina-output.pdbqt"
+      ],
+      "outputs": [
+        "analysis/pose-rmsd-matrix.csv",
+        "analysis/official-output-comparison.csv",
+        "analysis/posebusters-main.csv",
+        "analysis/main-top1-contacts.csv"
+      ],
+      "status": "completed",
+      "decision": "Symmetry-aware fixed-frame RMSD, one-to-one pose matching, proximity and geometry checks."
+    },
+    {
+      "id": "analyze",
+      "inputs": [
+        "analysis/all-poses.csv",
+        "analysis/posebusters-main.csv"
+      ],
+      "outputs": [
+        "analysis/metrics.json",
+        "ledgers/conclusion_ledger.csv"
+      ],
+      "status": "completed",
+      "decision": "Report primary acceptance independently of all-mode recovery; preserve partial results."
+    },
+    {
+      "id": "report",
+      "inputs": [
+        "analysis/metrics.json",
+        "ledgers/conclusion_ledger.csv"
+      ],
+      "outputs": [
+        "README.md",
+        "input-output-manifest.json",
+        "artifact-index.json"
+      ],
+      "status": "completed",
+      "decision": "Readable input/output comparison, figures, execution scripts and hashed artifacts."
+    }
+  ]
+}

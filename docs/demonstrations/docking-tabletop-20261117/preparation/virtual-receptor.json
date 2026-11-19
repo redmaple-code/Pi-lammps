@@ -1,0 +1,16 @@
+{
+  "dataOrigin": "synthetic-tabletop",
+  "receptorId": "DEMO-R01",
+  "referenceBackground": "1IEP",
+  "chainDecision": "演练选择A链，实际结构待核。",
+  "waterIonCofactorDecision": "按位点逐项核对，保留删除理由；演练仅列出所需决定。",
+  "residueChecks": [
+    "口袋缺失",
+    "alternate location",
+    "质子化",
+    "辅因子/金属"
+  ],
+  "actualCoordinates": "unavailable",
+  "demoObservation": "假定位点检查满足",
+  "actualScientificCheck": "notEvaluated"
+}

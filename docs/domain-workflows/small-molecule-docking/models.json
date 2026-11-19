@@ -1,0 +1,44 @@
+{
+  "id": "models",
+  "items": [
+    {
+      "id": "noncovalent-rigid-receptor",
+      "assumptions": [
+        "每构象刚性受体",
+        "配体定义转动自由度",
+        "锁定版本vina评分",
+        "显式枚举化学状态"
+      ],
+      "requiredParameters": [
+        "receptor",
+        "ligandStates",
+        "box",
+        "search"
+      ],
+      "sourceRefs": [
+        "vina-basic",
+        "vina-faq"
+      ],
+      "outOfScopeFeatures": [
+        "covalentReaction",
+        "unsupportedMetalCoordination"
+      ]
+    },
+    {
+      "id": "ensemble-ranking",
+      "assumptions": [
+        "状态/受体单独运行",
+        "事先锁定母体聚合方法"
+      ],
+      "requiredParameters": [
+        "parentAggregation",
+        "stateCounts",
+        "runDenominators"
+      ],
+      "sourceRefs": [
+        "docking-methods"
+      ],
+      "validationRequirement": "按靶标控制，报告跨状态模型偏差。"
+    }
+  ]
+}

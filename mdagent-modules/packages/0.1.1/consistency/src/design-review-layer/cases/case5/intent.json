@@ -1,0 +1,105 @@
+{
+  "schema_version": "3.0",
+  "case_id": "case5",
+  "status": "DESIGNED",
+  "source": {
+    "kind": "external_lammps_case",
+    "path": "WSL:/home/red/lmp (copied)"
+  },
+  "objective": {
+    "simulation_goal": "NiPt 合金单晶 10 K 剪切：位错滑移与应力-应变响应（低温基准）",
+    "target_property": [
+      "stress_strain_curve"
+    ]
+  },
+  "system": {
+    "molecule": "NiPt 合金单晶（fcc）",
+    "target_elements": [
+      "Ni",
+      "Pt"
+    ],
+    "size": {
+      "atoms_target": null
+    }
+  },
+  "constraints": {
+    "temperature_range": [
+      10,
+      10
+    ]
+  },
+  "ensemble_sequence": [
+    {
+      "stage": "minimize"
+    },
+    {
+      "stage": "pre_equil",
+      "ensemble": "npt",
+      "thermostat": "nose-hoover",
+      "T_K": 10
+    },
+    {
+      "stage": "production",
+      "ensemble": "nvt",
+      "thermostat": "nose-hoover",
+      "T_K": 10
+    }
+  ],
+  "key_params": {
+    "timestep_fs": 1.0,
+    "total_steps": 650000,
+    "units": "metal",
+    "pair_style": "meam/c",
+    "forcefield": {
+      "preferred": "Ni-Pt.meam"
+    }
+  },
+  "experiment_design": {
+    "experiment_type": "shear"
+  },
+  "experiment_plan": {
+    "authored_by": "assistant (AI-drafted macro context; needs user confirmation)",
+    "sections": [
+      {
+        "id": "E-01",
+        "title": "实验目的与假设",
+        "text": "研究 NiPt 单晶在低温（10 K）剪切下的位错滑移机制与应力-应变响应，作为合金力学行为的基准算例。"
+      },
+      {
+        "id": "E-02",
+        "title": "对象与材料",
+        "text": "NiPt 合金单晶（fcc），Ni/Pt 两组元；实验为 µm 级单晶微柱/片。"
+      },
+      {
+        "id": "E-03",
+        "title": "装置与几何",
+        "text": "低温微剪切/纳米压痕台，单晶试样按滑移系取向切割。"
+      },
+      {
+        "id": "E-04",
+        "title": "加载与条件",
+        "text": "10 K，剪切加载（模型剪切应变率 ~1×10⁷ s⁻¹），上下夹持层施加相对位移。"
+      },
+      {
+        "id": "E-05",
+        "title": "测量与判据",
+        "text": "剪应力-剪应变曲线、屈服与位错密度演化；以应力平台与位错结构评定。"
+      },
+      {
+        "id": "E-06",
+        "title": "来源与备注",
+        "text": "宏观实验描述由助手依据 in 文件（NiPt 位错滑移）反推补写；10 K 为模型温度，宏观对应低温基准，待用户确认。"
+      }
+    ]
+  },
+  "cross_scale": {
+    "loading": {
+      "macro": "1×10⁷ s⁻¹（低温剪切基准）",
+      "micro": "上下 slab 相对速度 0.0005×(2Ly-2t) Å/ps，推导剪切应变率约 1×10⁷ s⁻¹",
+      "gap": "0 个数量级（同量级）",
+      "verdict": "ok",
+      "rationale": "模型剪切应变率由上下夹持层相对速度推导约 1e7 s⁻¹，与宏观基准同量级；位移控制加载路径与实验剪切一致。仍属模型基准（宏观实验为 AI 补写），需实验记录核对后确认。",
+      "status": "同量级（宏观实验待确认）→ 合理"
+    }
+  }
+}

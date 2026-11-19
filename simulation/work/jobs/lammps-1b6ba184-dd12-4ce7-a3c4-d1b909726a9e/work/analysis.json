@@ -1,0 +1,26 @@
+{
+  "atomCount": 6400,
+  "initialAtomCount": 6400,
+  "sampleCount": 21,
+  "fixedMaxDisplacementAngstrom": 0.0,
+  "finite": true,
+  "contactSamples": 21,
+  "tipTravelAngstrom": 2.0,
+  "meanTangentialForceNn": 6.800719296784456,
+  "meanNormalForceNn": 29.007685608684415,
+  "peakNormalForceNn": 171.23351754010477,
+  "meanTemperatureK": 371.75865184837147,
+  "maxDisplacementAngstrom": 2.925609996223008,
+  "displacedAtomsAboveOneAngstrom": 71,
+  "method": "grinding-force-temperature-displacement/1",
+  "window": {
+    "stepStart": 400.0,
+    "stepEnd": 600.0,
+    "forceAveraging": "second half of grinding pass"
+  },
+  "limitations": [
+    "Farkas-Caro idealized FCC model alloy",
+    "Repulsive spherical tool without explicit abrasive atoms or chemistry",
+    "Small cell and short MD time, single seed, no convergence or experimental grinding validation"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "actualExecution": true,
+  "reference": "inputs/raw/1iep_ligand.sdf",
+  "referenceDigest": "sha256:051b8742c32adc05c07fb486a4e7c9327f84e131cee33ac4e6a568d07553eb38",
+  "receptorChains": [
+    "A"
+  ],
+  "inputReceptorHeteroRecords": 0,
+  "ligandHeavyAtoms": 37,
+  "ligandTotalAtoms": 69,
+  "formalCharge": 1,
+  "canonicalSmiles": "Cc1ccc(NC(=O)c2ccc(CN3CC[NH+](C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+  "initialConformer": "ETKDGv3 from molecular graph, seed20261117, MMFF max2000",
+  "MMFFExitCode": 0,
+  "initialUnalignedReferenceRMSD_A": 58.34738329648291,
+  "referenceHeavyAtomsInsideBox": true,
+  "fixedChemicalState": true,
+  "preparedFiles": [
+    {
+      "path": "inputs\\prepared\\ligand-initial.sdf",
+      "digest": "sha256:07ce9e4b6d93f2546f09e81563b51309d9a955a3024235a805fa6820d4852485"
+    },
+    {
+      "path": "inputs\\prepared\\ligand.pdbqt",
+      "digest": "sha256:07e7a1c998cd6c8577a400e55e00a3b08253081c6449b6a9ecdcddee86a64a9a"
+    },
+    {
+      "path": "inputs\\prepared\\receptor-grouped.pdb",
+      "digest": "sha256:7c672f5a19c35de65f4052b77a097261e28004a6b28e7bde2713bfe2b0136698"
+    },
+    {
+      "path": "inputs\\prepared\\receptor-prepared.pdb",
+      "digest": "sha256:7a2cbbc757b5e95606c69f7b5a6ed21ceafaa3db8b25511763b0354a629db530"
+    },
+    {
+      "path": "inputs\\prepared\\receptor.box.pdb",
+      "digest": "sha256:269f11a8d6535af076903191966a096818d29a25915a421c13cdc140c7a5a32d"
+    },
+    {
+      "path": "inputs\\prepared\\receptor.box.txt",
+      "digest": "sha256:c4e1b4d44172778218b6ad3fedfb4769c5deb100ac4caa290df7d3468c440a50"
+    },
+    {
+      "path": "inputs\\prepared\\receptor.json",
+      "digest": "sha256:7b0ee31d621825ccc8b3842be235d0b82f2c44ee52bf5a7a9bab2e949326945c"
+    },
+    {
+      "path": "inputs\\prepared\\receptor.pdbqt",
+      "digest": "sha256:e33a2134a3f0fdca486a949bc4df26ee34422d2e5f7cb3a6f0cd361b313e4cb9"
+    },
+    {
+      "path": "inputs\\prepared\\reference-heavy.sdf",
+      "digest": "sha256:d64e7b3f14e388fb71367cc9dda0306ea72544ccbb6fc708c2e11855e7a2cc37"
+    }
+  ],
+  "limitations": [
+    "Tutorial already-hydrogenated receptor and one ligand protomer were used.",
+    "Receptor protonation and alternative water/cofactor models were not enumerated."
+  ]
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "title": "mass 行把 Ni/Co/Mo/W/Al/Ti 标成 14/63/79/95/127/131，与元素标签不符",
+    "dimension_guess": "材料参数/元素映射",
+    "locations": {"experiment": ["E-02"], "infile": [17, 18, 19, 20, 21, 22, 25]},
+    "claim_in_text": "L17–L22 依次为 mass 1 14 #Ni、mass 2 63 #Co、mass 3 79 #Mo、mass 4 95 #W、mass 5 127 #Al、mass 6 131 #Ti；L25 的 pair_coeff * * ... Ni Co Mo W Al Ti 又把 type 1–6 当作这六种元素。",
+    "why_it_matters": "这些 mass 值与所标注元素的原子量不对应；LAMMPS 会按这些数值计算热速度、声子频率、NPT 平衡密度和应力涨落。若 mass 行不是笔误，则实际模拟的化学体系与 E-02 的 Ni-Co-Mo-W-Al-Ti 不一致，300 K 下的 E、σy 和曲线都不能代表目标合金。",
+    "physical_question": "14/63/79/95/127/131 分别对应哪些真实元素？是 mass 行写错、data 文件的 type 顺序与注释不一致，还是 pair_coeff 的元素映射整体错位？",
+    "evidence_needed": ["元素周期表/势函数元素参数核对", "Ni_0.lmp 的 Masses 与 Atom Type 统计", "E4 案例（同势函数输入）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "仅 read_data Ni_0.lmp，未给合金成分/原子类型统计，目标六组元成分是否真实存在未证实",
+    "dimension_guess": "材料/成分",
+    "locations": {"experiment": ["E-01", "E-02"], "infile": [12, 17, 18, 19, 20, 21, 22, 24, 25]},
+    "claim_in_text": "E-02 称 Ni 基多组元合金（Ni 余量，含 Co/Mo/W/Al/Ti），以 fcc 基体为主；in.case L12 只有 read_data Ni_0.lmp，L17–L25 只声明了 6 个 type 的 mass/pair_coeff，全文没有 set、create_atoms、随机占位或成分统计命令。",
+    "why_it_matters": "type 声明不等于原子真实存在；若 Ni_0.lmp 是纯 Ni 或只含部分元素，模拟体系就不是目标六组元合金。成分直接决定层错能、相稳定性和屈服强度，后续与 E-02 的比较没有物理基础。",
+    "physical_question": "Ni_0.lmp 中 type 1–6 的原子数和占比各是多少？是随机固溶体、有序相、纯 Ni 还是其他结构？E-02 的目标 nominal composition 是多少？",
+    "evidence_needed": ["Ni_0.lmp 原子类型统计", "E2 文献（目标合金成分）", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "全周期边界 + 均匀 x 变形无法产生颈缩/断裂，E-04 的至断裂/颈缩与 E-05 的延伸率不可观测",
+    "dimension_guess": "边界条件/尺度",
+    "locations": {"experiment": ["E-04", "E-05"], "infile": [4, 91, 92]},
+    "claim_in_text": "L4 boundary p p p；L91 fix 2 all deform 500 x erate ${rate} units box remap x；E-04 要求单轴拉伸...至断裂/颈缩，E-05 要测延伸率。",
+    "why_it_matters": "全周期边界没有自由表面，均匀 x 变形不会产生颈缩、裂纹或断口；只能得到均匀塑性流变。E-05 的延伸率/断裂应变没有对应观测量，cross_scale 所说的损伤形貌也无法比较；总加载应变由 rate×run_step 决定，也未与实验断裂应变对齐。",
+    "physical_question": "在完全周期胞中如何定义颈缩起始、断裂应变和延伸率？若目标只是均匀 bulk 流变，E-04/E-05 的断裂/延伸率目标是否应删除或改写？",
+    "evidence_needed": ["E2 文献（PBC 拉伸的局限）", "E4 案例（含自由表面/缺口模型）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "生产阶段 NVT 且只 deform x，横向盒长固定，实际是单轴应变而非 E-04 的单轴拉伸应力状态",
+    "dimension_guess": "加载/系综",
+    "locations": {"experiment": ["E-04"], "infile": [71, 90, 91]},
+    "claim_in_text": "E-04 写单轴拉伸；L71 预平衡为 fix 1 all npt temp 300 300 1 iso 0 0 1；L90 生产为 fix 1 all nvt temp 300 300 1；L91 只对 x 施加 fix 2 all deform ... x erate ...，y/z 盒长没有压力控制。",
+    "why_it_matters": "NVT 不控制横向压力，x 拉伸时 y/z 盒长固定会阻止 Poisson 收缩，产生非零横向应力；得到的是受约束的单轴应变状态，测到的弹性模量不是单轴拉伸的 Young's modulus，σy 也是三轴应力状态下的屈服值。",
+    "physical_question": "生产阶段靠什么保证 σyy=σzz=0？是否应改用 NPT 并令 p_y=p_z=0（或 couple none），或者证明横向应力相对轴向应力可忽略？",
+    "evidence_needed": ["E2 文献（单轴拉伸 MD 系综设置）", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "应变零点取 NPT 前的 0 K 盒长，fix deform 的参考长度却是 NPT 后的盒长，应变轴有热膨胀偏置",
+    "dimension_guess": "观测定义/初始条件",
+    "locations": {"experiment": ["E-05"], "infile": [41, 42, 43, 45, 71, 72, 73, 80, 91]},
+    "claim_in_text": "L41–L43 在 minimize 后立即取 Lx0/Ly0/Lz0 为当前 lx/ly/lz；L71–L73 随后在 300 K、0 bar 下 NPT 200,000 步；L80 reset_timestep 0；L91 才定义 fix 2 all deform ... x erate ...；L45 的 strainx=(lx-Lx0)/Lx0 仍用 NPT 前的 Lx0。",
+    "why_it_matters": "NPT 会因 300 K 热膨胀和势函数平衡密度改变 lx；fix deform 以其定义时的盒长为参考，而 strainx 以 0 K 最小化盒长为参考，两者相差热膨胀应变。曲线起点不是 0，0.2% offset 屈服应变整体平移，与 E-05 的应变定义不可直接比较。",
+    "physical_question": "应变参考态应取 0 K 最小化胞还是 300 K 平衡胞？两者相差多少？是否应在 NPT 后重新取 Lx0，并对 stress 做同样的基线校正？",
+    "evidence_needed": ["NPT 前后 lx 日志", "E2 文献（热膨胀）", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "应力曲线用总 pxx 且未扣初始/热压力基线，pxx 中的动能项与力学应力混在一起",
+    "dimension_guess": "观测定义/统计",
+    "locations": {"experiment": ["E-05"], "infile": [49, 50, 51, 83]},
+    "claim_in_text": "L49 variable stressx equal -pxx/10000；L83 fix def3 all print 500 ${strainx} ${stressx}；全文没有 baseline subtraction、virial-only 或初始应力扣除的说明。",
+    "why_it_matters": "LAMMPS 的 pxx 是压力张量总量（含动能）；300 K 下动能压力不为零，NPT 只保证平衡时总压约 0，不能保证拉伸过程中动能项不变或为零。若不扣基线，E、σy 的绝对值会有系统偏移，原子应力 dump 与全局应力定义也可能不一致。",
+    "physical_question": "报告的是总压力还是 virial 力学应力？生产起点的 pxx 是多少、如何扣基线？300 K 动能项对 E/σy 的贡献多大？",
+    "evidence_needed": ["生产起点 pxx 与温度日志", "E2 文献（virial stress 定义）", "E4 案例"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "原子应力归一化 atomVolume = c_sumv/c_v[1] 语义可疑：c_v[1] 是 per-atom Voronoi 体积而非原子数",
+    "dimension_guess": "观测定义/后处理",
+    "locations": {"experiment": ["E-05"], "infile": [54, 55, 56, 57, 59, 60, 61]},
+    "claim_in_text": "L54 compute 1 all stress/atom NULL；L55 compute v all voronoi/atom；L56 compute sumv all reduce sum c_v[1]；L57 variable atomVolume equal c_sumv/c_v[1]；L59–L61 Atomicstressx atom c_1[1]/v_atomVolume/10000。",
+    "why_it_matters": "compute voronoi/atom 默认输出 per-atom array，c_v[1] 是每个原子的 Voronoi 体积，不是原子数；用总 Voronoi 体积除以某一个原子的体积不是平均原子体积，量纲上得到的是原子数级别，原子应力会被错误缩放（甚至该 equal-style 变量无法按预期求值）。",
+    "physical_question": "平均原子体积是否应为 c_sumv/natoms？局部原子应力应除以局部 Voronoi 体积还是平均体积？当前 dump 的 Atomicstress 与全局 stressx 是否一致？",
+    "evidence_needed": ["LAMMPS compute voronoi/atom 文档", "E4 案例（后处理脚本核对）"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "delete_atoms overlap 0.4 all all 会删除原子、改变成分并留下空位，删除数量/类型未报告",
+    "dimension_guess": "初始条件/材料",
+    "locations": {"experiment": ["E-02"], "infile": [26]},
+    "claim_in_text": "L26 delete_atoms overlap 0.4 all all；E-02 要求 Ni 余量含 Co/Mo/W/Al/Ti 的 fcc 基体。",
+    "why_it_matters": "若初始 data 中有近邻重叠，该命令按 0.4 Å 删除原子，可能优先删除某些元素、改变实际成分，并产生空位/局部疏松；NPT 只能致密化，不能恢复被删除的化学计量。",
+    "physical_question": "删除了多少原子、各 type 各多少？删除后成分与目标成分偏差多大？空位浓度是否会影响屈服和模量？",
+    "evidence_needed": ["delete_atoms 日志/删除前后原子数", "Ni_0.lmp 结构检查", "E2 文献", "E4 案例"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "只有 minimize + 200 ps 300 K NPT，没有熔炼/淬火/退火等热历史，无法代表 E-01 假设的热处理状态一致",
+    "dimension_guess": "材料/加载历史",
+    "locations": {"experiment": ["E-01", "E-02"], "infile": [32, 33, 70, 71, 72, 73]},
+    "claim_in_text": "E-01 写假设试样成分与热处理状态一致；E-02 写 fcc 基体为主...晶粒尺寸 µm 级；in.case 只有 L32–L33 min_style cg; minimize ... 和 L70–L73 velocity all create 300 ... + fix 1 all npt temp 300 300 1 iso 0 0 1 200,000 步。",
+    "why_it_matters": "实验合金的晶粒、析出相、短程有序和残余应力由热机械处理决定；MD 在 300 K 下 200 ps 无法扩散/析出，初始 Ni_0.lmp 的构型基本被冻结。若初始构型是随机固溶或纯 Ni，模拟的组织与实验不符，屈服强度/硬化行为不可比。",
+    "physical_question": "Ni_0.lmp 的初始微观结构是什么？实验的热处理/晶粒尺寸/析出相是什么？200 ps、300 K 的 NPT 能否达到该状态，还是需要高温退火/淬火？",
+    "evidence_needed": ["E2 文献（合金热处理）", "E4 案例（同合金 MD 制备流程）", "Ni_0.lmp 结构分析"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "Zhou04 16 元素 EAM 对 Ni-Co-Mo-W-Al-Ti 六组元合金的交叉项/相稳定性未验证",
+    "dimension_guess": "材料/势函数",
+    "locations": {"experiment": ["E-02"], "infile": [24, 25]},
+    "claim_in_text": "L24 pair_style eam/alloy；L25 pair_coeff * * CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy Ni Co Mo W Al Ti；E-02 称 fcc 基体为主的 Ni-Co-Mo-W-Al-Ti 多组元合金。",
+    "why_it_matters": "EAM 是中心力多体势，对 Mo/W（bcc 稳定）与 Al/Ti（hcp 稳定）在 fcc Ni 基体中的交叉相互作用、层错能、相稳定性未必有可靠拟合；六组元组合的交叉项可能来自混合规则而非专门拟合。势函数选择直接决定弹性常数、屈服机制和相变。",
+    "physical_question": "该势函数是否针对 Ni-Co-Mo-W-Al-Ti 的 fcc 固溶体验证过晶格常数、弹性常数、层错能、空位形成能和相稳定性？六组元交叉项哪些是拟合的、哪些是混合的？",
+    "evidence_needed": ["E2 文献（Zhou04 势函数验证）", "E4 案例（同势函数使用）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "1e8 s^-1 跨尺度论证只引用 Orowan 关系，未检查所需位错速度是否接近声速及变形机制是否改变",
+    "dimension_guess": "尺度/加载",
+    "locations": {"experiment": ["E-04"], "infile": [6, 9, 88, 91]},
+    "claim_in_text": "cross_scale 写 micro: fix deform x erate 1×10⁻⁴ ps⁻¹ = 1×10⁸ s⁻¹、Orowan 关系 γ̇=ρbv 表明提高应变率等价于提高位错速度/密度，而非改变变形机制；in.case L6 rate 0.0001、L9 real_rate=${rate}*1e12、L91 fix 2 all deform ... erate ${rate}；L88 dump 只输出 id/type/坐标/原子应力/pe/ke，没有 CNA/PTM 等结构识别。",
+    "why_it_matters": "Orowan 关系本身不保证机制不变：在 1e8 s^-1 下，按 γ̇=ρbv 所需的位错速度可能接近横波声速，位错滑移进入声子拖曳/超声速 regime，可能触发孪生、非晶化或剪切带；此时提高速度/密度的等价性不成立。没有结构分析输出，也无法验证 cross_scale 声称的位错结构/损伤形貌机制。",
+    "physical_question": "在本合金中，1e8 s^-1 对应的 ρ、b、v_dislocation 是多少？v 是否接近/超过横波声速？塑性载体是否仍为位错滑移？dump 能否支持位错/孪晶/非晶结构识别？",
+    "evidence_needed": ["E2 文献（高应变率 MD/位错动力学）", "E4 案例（同数量级应变率）"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "m≈0.01–0.02 无文献来源，且被假定在 11 个数量级上恒定",
+    "dimension_guess": "证据/统计",
+    "locations": {"experiment": ["E-04"], "infile": [6, 9]},
+    "claim_in_text": "cross_scale 写 300 K 下 FCC 金属应变率敏感指数 m≈0.01–0.02，屈服应力随应变率对数缓变，可用高应变率结果近似准静态趋势。",
+    "why_it_matters": "m 是材料/温度/应变率区间的函数；多主元合金的 m 可能高于 0.01–0.02，且在 1e8 s^-1 的声子拖曳 regime 不服从简单对数律。没有给出 m 的来源、测量区间和不确定度，无法量化 11 个数量级外推的误差；即使 m 很小，跨 11 个数量级的对数累积也可能带来不可忽略的 σy 偏差。",
+    "physical_question": "该合金在 300 K、1e-3–1e8 s^-1 范围内的 m 是多少？文献值来自哪种 FCC 金属/合金、哪个应变率区间？m 是否可作为常数外推？",
+    "evidence_needed": ["E2 文献（m 的测量/综述）", "E4 案例"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "目标要测弹性模量和屈服强度，但 cross_scale 明确说只能支持趋势/机制、不支持绝对强度外推",
+    "dimension_guess": "证据/目标一致性",
+    "locations": {"experiment": ["E-01", "E-05"], "infile": [49, 50, 51, 83]},
+    "claim_in_text": "objective 写测弹性模量、屈服强度与应力-应变曲线；E-05 写应力-应变曲线、弹性模量 E、屈服强度 σy、延伸率；cross_scale 写该近似只支持趋势与机制对比...不支持绝对强度外推。",
+    "why_it_matters": "如果跨尺度论证本身不保证绝对强度，E/σy 的数值就不能作为实验可比的定量结果；目标与论证自相矛盾，验收时无法判断成功与否。模量虽对率不敏感，但仍受势函数和约束应力状态影响。",
+    "physical_question": "最终交付的是趋势/机制还是绝对 E、σy？若是绝对量，跨尺度误差如何界定、允许多大？",
+    "evidence_needed": ["E2 文献（率敏感性外推误差）", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "E-06 自述实验方案是助手依据 in 文件反推补写、未经实验记录核对，验证基准不独立",
+    "dimension_guess": "证据/循环论证",
+    "locations": {"experiment": ["E-06", "E-01", "E-02", "E-03", "E-04", "E-05"], "infile": [12, 24, 25]},
+    "claim_in_text": "E-06 写本宏观实验描述由助手依据 in 文件（Ni 基合金拉伸）反推补写，未经实验记录核对，使用前需用户确认；E-01–E-05 因此不是独立的实验记录。",
+    "why_it_matters": "用从仿真输入反推的实验去验证同一仿真，等于循环论证；E-03 的 GB/T 228、E-04 的 1e-3 s^-1、E-05 的 0.2% offset 都可能是助手补写的假设而非真实实验条件。没有独立实验数据，任何一致性结论都无依据。",
+    "physical_question": "是否存在真实的实验报告/原始数据（成分、热处理、试样几何、试验机、引伸计、应变率、温度）？E-01–E-05 中哪些是实测、哪些是补写假设？",
+    "evidence_needed": ["E1 实验记录/原始数据", "E2 文献", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "实验试样 mm 级/µm 晶粒与 MD 胞尺度不匹配，atoms_target 为空，晶粒/织构/尺寸效应未定义",
+    "dimension_guess": "尺度/材料",
+    "locations": {"experiment": ["E-02", "E-03"], "infile": [12]},
+    "claim_in_text": "E-02 写实验试样为 mm 级板材/棒材，晶粒尺寸 µm 级；E-03 写标距段按 GB/T 228 配置；intent 的 system.size.atoms_target 为 null；in.case 仅 read_data Ni_0.lmp，没有原子数/晶粒/取向信息。",
+    "why_it_matters": "MD 胞的绝对尺寸未给出，无法证明与 µm 级晶粒对应；若为单晶则没有 µm 晶界，若为纳米晶则晶粒尺寸远小于实验。晶粒尺寸、织构和样品尺寸效应直接影响屈服强度与硬化，不能把 MD 胞的 σy 当作 mm 试样的 σy。没有 CNA/PTM/晶粒分析，也无法确认 fcc 基体为主。",
+    "physical_question": "MD 胞有多少原子、几个晶粒、晶粒尺寸/取向/织构是什么？与 E-02 的 µm 级多晶试样如何对应？",
+    "evidence_needed": ["Ni_0.lmp 原子数/晶粒分析", "E2 文献（尺度效应）", "E4 案例"],
+    "severity_hint": "high"
+  },
+  {
+    "title": "实验用引伸计/标距测局部应变，仿真用盒长算平均应变，颈缩/局部化时两者定义不同",
+    "dimension_guess": "观测定义",
+    "locations": {"experiment": ["E-03", "E-05"], "infile": [45, 46, 47, 83]},
+    "claim_in_text": "E-03 写万能材料试验机 + 引伸计；标距段按 GB/T 228 配置；E-05 写应力-应变曲线...延伸率；in.case L45–L47 用 strainx=(lx-Lx0)/Lx0 等盒长公式。",
+    "why_it_matters": "盒长应变是周期胞的平均工程应变，引伸计测的是标距段局部应变；一旦颈缩/剪切带/局部化，平均应变与局部应变分离。E-05 的延伸率和 0.2% offset 屈服应变都依赖应变定义，直接比较会有系统偏差。",
+    "physical_question": "实验标距长度/引伸计标距是多少？仿真的盒长应变如何映射到该标距？是否需要在仿真中定义局部应变/颈缩判据？",
+    "evidence_needed": ["E2 文献（引伸计/局部应变）", "E4 案例"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "单次 run、单 velocity seed、瞬时应力采样，没有重复实验/误差棒，E、σy 的统计不确定度未知",
+    "dimension_guess": "统计/不确定度",
+    "locations": {"experiment": ["E-05"], "infile": [70, 83, 84, 85, 92]},
+    "claim_in_text": "L70 velocity all create 300 12345 dist gaussian（单一 seed）；L83/L85 fix ... print 500 ... 直接打印瞬时 strainx/stressx；L92 只 run ${run_step} 一次；全文没有重复 run、不同 seed 或时间平均。",
+    "why_it_matters": "300 K MD 的应力涨落和位错雪崩使单条应力-应变曲线噪声很大；E 的斜率、σy 的 0.2% offset 对采样窗口和 seed 敏感。没有重复/误差棒，无法判断模拟与实验差异是否显著。",
+    "physical_question": "E、σy 的 run-to-run 标准差是多少？需要多少个独立 seed/样本才能给出可信区间？是否对 stress 做时间/空间平均？",
+    "evidence_needed": ["E4 案例（重复 MD 统计）", "E2 文献（MD 不确定度）"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "E-05 的 0.2% 塑性应变屈服判据假定单轴应力与明确弹性模量，和 NVT 约束应力/高应变率曲线不匹配",
+    "dimension_guess": "观测定义/屈服判据",
+    "locations": {"experiment": ["E-05"], "infile": [49, 50, 51, 83]},
+    "claim_in_text": "E-05 写以 0.2% 塑性应变定屈服；in.case 的 stressx 来自总 pxx，生产为 NVT + x-only deform，且 cross_scale 的应变率为 1e8 s^-1。",
+    "why_it_matters": "0.2% offset 需要先用单轴弹性模量画偏置线；若应力状态是三轴/受约束，或曲线因高应变率和热噪声没有清晰弹性段，offset 屈服强度会随所选模量和应变零点变化。E-05 没有说明用哪个模量、哪段数据拟合。",
+    "physical_question": "0.2% offset 用的是实验 E 还是模拟 E？弹性段如何拟合？在约束应力状态下 σy 的物理定义是什么？",
+    "evidence_needed": ["E2 文献（offset yield 方法）", "E4 案例"],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "Nose-Hoover 热浴/barostat 的 1 ps 阻尼与 1 fs 时间步未做敏感性/能量守恒检验，塑性耗散可能被恒温器人为抽走",
+    "dimension_guess": "热力学/数值",
+    "locations": {"experiment": ["E-04"], "infile": [33, 71, 72, 90, 92]},
+    "claim_in_text": "L71 fix 1 all npt temp 300 300 1 iso 0 0 1；L90 fix 1 all nvt temp 300 300 1；L72 timestep 0.001；L92 run ${run_step}；没有 Tdamp/Pdamp 敏感性、能量守恒或温漂报告，L33 的 minimize 1.0e-15 1.0e-15 10000 10000 也未报告是否收敛。",
+    "why_it_matters": "1e8 s^-1 拉伸的塑性功会在局部产生热量；NVT 的 Nose-Hoover 以 1 ps 阻尼把热量抽走，可能造成非物理的等温路径和局部温度梯度；1 fs 对 Al/Ti 轻元素和高应变率是否稳定也需能量守恒验证。若温漂/能量漂移大，应力曲线会受污染；最小化未收敛则初始残余应力未知。",
+    "physical_question": "生产过程中温度/能量漂移多大？Tdamp=1 ps 是否足以/过度移除塑性热？1 fs 时间步在该势函数和 1e8 s^-1 下是否满足能量守恒？minimize 是否真正收敛？",
+    "evidence_needed": ["能量/温度日志", "E2 文献（热浴参数）", "E4 案例"],
+    "severity_hint": "low"
+  },
+  {
+    "title": "跨尺度论证只有定性三步，没有给出 11 个数量级外推的定量误差界或验收判据",
+    "dimension_guess": "证据/不确定度",
+    "locations": {"experiment": ["E-01", "E-05"], "infile": [6, 9, 91]},
+    "claim_in_text": "cross_scale 给出 gap 11 个数量级和判存疑，不得据此放行结论，但没有给出 E、σy 在 1e8 vs 1e-3 s^-1 的预测偏差、误差传播或可接受阈值。",
+    "why_it_matters": "没有定量误差界，就无法判断 1e8 s^-1 的结果是否能支持 E-05 的绝对 E/σy；也无法设计验收标准。存疑只是定性标签，不能替代误差分析。",
+    "physical_question": "跨尺度外推对 E 和 σy 的误差上限是多少？用什么实验/文献数据校准？达到什么阈值才可放行？",
+    "evidence_needed": ["E2 文献（率敏感数据）", "E4 案例（同门跨尺度比较）"],
+    "severity_hint": "medium"
+  }
+]

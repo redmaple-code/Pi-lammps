@@ -1,0 +1,211 @@
+[
+  {
+    "title": "恒容周期盒+固定底、无压力/体积监测：摩擦生热下的热压与法向应力状态未定义",
+    "dimension_guess": "设定自洽（系综/控温/加载）",
+    "locations": {
+      "experiment": [
+        "E-04"
+      ],
+      "infile": [
+        5,
+        12,
+        95,
+        126,
+        129,
+        134
+      ]
+    },
+    "claim_in_text": "E-04 只规定 300 K；L5 为 p p p，L12 仅 z 向加 100 Å 真空，L95 的 thermo_style 只输出 step/temp/两层温度/etotal/ke/pe，没有 press 或 vol；L126 的 newton_layer 为 NVE，L129 仅 temp_layer 用 Berendsen，200 ps 摩擦段没有 barostat 或压力输出。",
+    "why_it_matters": "摩擦功不断转化为热，恒容盒和固定底使试样不能自由膨胀；热压会以法向压应力形式积累，接触区的实际静水压可能远高于 1 atm。『300 K』只是恒温器设定，不是完整的热力学状态（T, P）；没有压力监测就无法判断接触是在常压还是 GPa 级压缩下进行，也无法与宏观实验的载荷/环境对照。",
+    "physical_question": "初始和稳态的压力/法向应力是多少？初始状态是否在 300 K、1 atm 下平衡？是否应先做 NPT 平衡再切换 NVT/NVE 加载？恒容对摩擦力和磨损机制有多大偏置？",
+    "evidence_needed": [
+      "E2 文献（TiAlV 热膨胀、摩擦生热与压力效应）",
+      "E4 案例（原始 in.friction 是否含 NPT/压力输出）"
+    ],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "压入→划擦之间无卸载/再平衡，球速从 -z 瞬时切到 +x，摩擦段起始是瞬态",
+    "dimension_guess": "设定自洽（系综/控温/加载）",
+    "locations": {
+      "experiment": [
+        "E-04"
+      ],
+      "infile": [
+        71,
+        80,
+        82,
+        83,
+        84,
+        85,
+        86,
+        117,
+        121,
+        123,
+        134
+      ]
+    },
+    "claim_in_text": "E-04 称先压入再恒速滑动；L71 设球 z 速度 -1 Å/ps，L80 run 35000 后仍在向下压；L82-L86 解除全部 fix 并 reset_timestep 0，L117 才开始记录力，L121 直接把球速改为 +1 Å/ps（z 分量为 0），L123-L134 立即开始 200000 步划擦；没有卸载、保持、重新平衡或过渡段记录。",
+    "why_it_matters": "压入结束时工件有塑性区、残余应力和向下的速度场；瞬时把球从 -z 运动切到 +x 100 m/s，接触力和工件惯性会在划擦起始产生瞬态。F.txt 从第一步划擦就记录，若把前段当作稳态，摩擦系数和切削力会被 running-in 偏置；压入段又没有力-深度记录，无法定义划擦的初始状态。",
+    "physical_question": "设计是『压入后不卸载直接划擦』还是『压入-卸载-重定位-划擦』？过渡瞬态持续多久、应排除多长的起始窗口？过渡点的残余应力/温度/接触力是多少？",
+    "evidence_needed": [
+      "E2 文献（划擦试验的加载序列与 running-in）",
+      "E4 案例（原始 in.friction 的两段衔接）"
+    ],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "全流程 1 fs 时间步未对 mass=12 的声子频率、NVE 能量漂移与 cutoff/箱尺寸做收敛检验",
+    "dimension_guess": "数值与有限尺度",
+    "locations": {
+      "experiment": [
+        "E-02",
+        "E-04"
+      ],
+      "infile": [
+        8,
+        38,
+        45,
+        46,
+        47,
+        48,
+        74,
+        95,
+        126,
+        134
+      ]
+    },
+    "claim_in_text": "L8 设 timestep 0.001 ps；L45-L48 把 type 1-4 质量全设为 12 amu；L38 用 hybrid/overlay meam/c+eam/alloy+morse+lj/cut；L74/L126 的 newton_layer 为 NVE；L95 只打印 etotal/ke/pe，没有能量漂移或温度漂移判据；案例中没有 0.5 fs、cutoff 6/10 Å、箱尺寸或球半径的收敛矩阵。",
+    "why_it_matters": "Ti/Al/V 的真实质量分别约为 47.9/27.0/50.9 amu，统一为 12 后声子频率按 sqrt(m_real/12) 放大 1.5-2.1 倍，1 fs 步长等效于真实质量下的 1.5-2.1 fs；对 MEAM 金属和 100 m/s 接触，这个等效步长未做 0.5 fs/0.25 fs 对比。NVE 牛顿层没有恒温器，若积分误差导致 etotal 漂移，温度会虚假漂移，而 etotal 只被打印、从未分析；cutoff/箱尺寸/球半径也没有收敛性依据，数值不确定度无法界定。",
+    "physical_question": "mass=12 下该势的最高声子频率和稳定步长是多少？200 ps 内 NVE 层每原子 etotal 漂移多少？步长减半、cutoff 改变、箱尺寸/球半径加倍是否改变接触力、温升和缺陷密度？",
+    "evidence_needed": [
+      "E2 文献（MEAM 时间步/质量缩放、cutoff 收敛）",
+      "E4 案例（原始 timestep 与收敛测试）"
+    ],
+    "severity_hint": "high"
+  },
+  {
+    "title": "压入深度与接触面积只有名义球位移，没有瞬时表面/接触半径的测量定义",
+    "dimension_guess": "观测与判据",
+    "locations": {
+      "experiment": [
+        "E-04",
+        "E-05"
+      ],
+      "infile": [
+        34,
+        71,
+        117,
+        121,
+        134
+      ]
+    },
+    "claim_in_text": "E-04 称压入 2.5 Å，E-05 以力平台和形貌损伤评定；L34 只把球整体下移 2.5 Å，L71 以 1 Å/ps 继续下压，L117 起才记录力，L121/L134 进入划擦；全程没有输出工件表面高度、接触半径或接触面积。",
+    "why_it_matters": "可测的只是球的刚体位移，不是压头相对瞬时工件表面的压入深度。弹性凹陷、pile-up/sink-in 和残余应力会使真实深度与名义位移不同；没有接触半径/面积，就无法把力换算成接触应力或硬度，也无法与 E-05 的『力平台』和宏观压入曲线对齐。",
+    "physical_question": "深度的 z 基准是初始表面、瞬时表面还是未变形表面？pile-up/sink-in 和接触半径如何测量？2.5 Å 是目标深度还是位移指令？",
+    "evidence_needed": [
+      "E2 文献（纳米压入深度/接触面积标定，Oliver-Pharr）",
+      "E4 案例（原始压入协议）"
+    ],
+    "severity_hint": "high"
+  },
+  {
+    "title": "力/轨迹采样 0.1-0.5 ps 未与接触振动和位错事件对齐，F.txt 列名/单位不可复现",
+    "dimension_guess": "观测与判据",
+    "locations": {
+      "experiment": [
+        "E-05"
+      ],
+      "infile": [
+        70,
+        94,
+        117,
+        120,
+        121,
+        134
+      ]
+    },
+    "claim_in_text": "E-05 以力平台和形貌损伤为判据；L117 每 100 步（0.1 ps）写一次瞬时 fx/fy/fz 到 F.txt，L120 每 500 步（0.5 ps）dump 一次，L94 thermo 每 100 步；没有 fix ave/time、滑动平均或分块平均。F.txt 无表头/单位，变量 distance=step/1000 实际是 ps（仅因球速 1 Å/ps 才与 Å 数值相等）。",
+    "why_it_matters": "300 K、100 m/s 接触的力在亚 ps 尺度涨落；0.1 ps 点采样可能混叠接触振动，0.5 ps 轨迹可能漏掉位错成核/磨屑脱离事件。『力平台』若由原始瞬时值目测，无法复现；列名 distance 在速度改变时会误导。",
+    "physical_question": "采样间隔相对接触振动周期是多少？用什么滑动/分块平均窗口定义平台？F.txt 的列是时间还是距离、单位是什么？0.5 ps 是否足以解析 E-05 的损伤事件？",
+    "evidence_needed": [
+      "E2 文献（力噪声/分块平均、位错时间尺度）",
+      "E4 案例（后处理协议）"
+    ],
+    "severity_hint": "medium"
+  },
+  {
+    "title": "单条轨迹、无重复/种子/分块平均，力与摩擦系数没有统计不确定度",
+    "dimension_guess": "不确定度与对照协议",
+    "locations": {
+      "experiment": [
+        "E-05"
+      ],
+      "infile": [
+        70,
+        117,
+        120,
+        134
+      ]
+    },
+    "claim_in_text": "E-05 报告三向切削力、摩擦系数和表面损伤；L70/L120 只有一次 dump，L117 只有一条 F.txt，L134 只 run 一次 200000 步；没有多 seed、多初始构型、重复划擦或误差棒。",
+    "why_it_matters": "300 K 的 MD 是随机过程，摩擦力/磨损体积/粗糙度存在 run-to-run 散布；2000 个 0.1 ps 采样点高度相关，不等于 2000 个独立样本。没有重复或分块平均，无法判断不同势函数/速度/深度之间的差异是物理效应还是热噪声，E-05 的判据也没有置信区间。",
+    "physical_question": "需要多少个独立 seed/初始构型？稳态窗口内摩擦力的标准差和 95% 置信区间是多少？分块大小如何选取？",
+    "evidence_needed": [
+      "E2 文献（MD 统计不确定度/重复运行）",
+      "E4 案例（重复协议）"
+    ],
+    "severity_hint": "high"
+  },
+  {
+    "title": "只有单一速度/深度/构型，没有速度-载荷-深度扫描与无磨损对照",
+    "dimension_guess": "不确定度与对照协议",
+    "locations": {
+      "experiment": [
+        "E-04",
+        "E-05"
+      ],
+      "infile": [
+        34,
+        71,
+        121,
+        134
+      ]
+    },
+    "claim_in_text": "E-04/E-05 只给一组条件：2.5 Å 压入、1 Å/ps=100 m/s、300 K；L34/L71/L121/L134 中只有这一个压入深度和一个滑动速度，没有速度/载荷/深度扫描，也没有纯压入、无划擦或不同取向的对照。",
+    "why_it_matters": "摩擦系数和磨损机制随速度、法向载荷、压入深度变化；单点无法验证摩擦定律，也无法分离粘着、犁沟和切削三种机制。没有零磨损/纯压入基线，测到的力不能归因于划擦；没有与文献/实验的定量对照表，E-05 的『力平台』无法校准。",
+    "physical_question": "对照矩阵是什么（速度 1/10/100 m/s、深度 1/2.5/5 Å、载荷、取向）？零磨损基线如何定义？哪个实验数据集用于定量对照、容差多少？",
+    "evidence_needed": [
+      "E2 文献（摩擦速率/载荷依赖性）",
+      "E4 案例（实验矩阵）"
+    ],
+    "severity_hint": "high"
+  },
+  {
+    "title": "案例包缺 restart.equil、三个势文件、LAMMPS 版本与日志，输出坐标还是 wrapped",
+    "dimension_guess": "证据完备性",
+    "locations": {
+      "experiment": [
+        "E-02",
+        "E-06"
+      ],
+      "infile": [
+        10,
+        41,
+        42,
+        67,
+        70,
+        117,
+        120
+      ]
+    },
+    "claim_in_text": "intent.source.path 只写『WSL:/home/red/lmp (copied)』；L10 依赖 restart.equil，L41-L42 依赖 library.meam、VNiTi.meam、TiAl.eam.alloy，L67 只写 initial.data；L70/L120 的 dump 只输出 x y z（wrapped），L117 的 F.txt 无表头/单位；案例中没有 LAMMPS 版本、log.lammps、文件哈希或输入版本记录。",
+    "why_it_matters": "没有 restart.equil 和三个势文件，就无法核对成分、type→element 映射和势参数；没有版本/日志/哈希，无法复现或审计这次 235000 步运行。周期边界下 wrapped 坐标在原子跨箱时跳变，磨屑轨迹、位移和应变无法重建；F.txt 缺表头会被误读。",
+    "physical_question": "restart.equil 与三个势文件在哪里、哈希是多少？LAMMPS 版本和命令行是什么？是否有 unwrapped 坐标/image flags？F.txt 的列定义和单位是什么？",
+    "evidence_needed": [
+      "E4 案例包（restart、势文件、log、哈希）",
+      "E2 文献（势文件引用）"
+    ],
+    "severity_hint": "high"
+  }
+]

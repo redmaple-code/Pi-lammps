@@ -1,0 +1,43 @@
+{
+  "id": "templates",
+  "items": [
+    {
+      "id": "report",
+      "sections": [
+        "目标和范围",
+        "包/工具/输入锁",
+        "方法依据",
+        "准备和检查",
+        "真实运行和分母",
+        "数值/控制验证",
+        "指标与限制",
+        "图像核验",
+        "复现入口"
+      ],
+      "requiredLinks": [
+        "task",
+        "plan",
+        "run",
+        "data",
+        "metricDefinition",
+        "validation"
+      ]
+    },
+    {
+      "id": "run-matrix",
+      "columns": [
+        "caseId",
+        "revisionId",
+        "studyId",
+        "runId",
+        "operationId",
+        "inputDigest",
+        "variant",
+        "status",
+        "logs",
+        "outputs",
+        "limitations"
+      ]
+    }
+  ]
+}

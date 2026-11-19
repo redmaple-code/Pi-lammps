@@ -1,0 +1,78 @@
+{
+  "id": "protocols",
+  "items": [
+    {
+      "id": "discretization-study",
+      "mode": "refinement",
+      "initialBindings": {
+        "task": "task",
+        "plan": "plan",
+        "dynamic-input": "dynamic-input",
+        "qualification": "qualification",
+        "solution": "solution"
+      },
+      "carryBindings": {},
+      "aggregation": {
+        "verification": {
+          "strategy": "registeredReducer",
+          "capability": "fem.verification.aggregate",
+          "versionRequirement": ">=0.1.0 <1.0.0",
+          "inputType": "verification-sample",
+          "outputType": "verification-report",
+          "semantics": "保留每轮原始结果，累计误差/停止判据与缺口。"
+        }
+      },
+      "budgetRef": "task.resources",
+      "stopRule": "精度目标或上限，保留级次/停止原因和未满足项。",
+      "invariants": [
+        "几何/物性/合力/初始能量/评价位置",
+        "分别研究网格和时间步"
+      ],
+      "iterationContext": {
+        "index": "内核提供iterationIndex，用于选择事前锁定的网格/步长/模态/频点变体。",
+        "baseline": "每轮从原dynamic-input派生，保持方案不变量。"
+      },
+      "until": "按当前累计报告检查数值目标，达到maxIterations仅结束研究并记录未满足。",
+      "subRunPolicy": "fem.study.solve按taskType选择当前profile的求解能力；谐响应变体重建匹配模态，所有子作业记录独立runId/operationId。"
+    },
+    {
+      "id": "modal-study",
+      "study": "网格与模态截断",
+      "comparison": [
+        "frequency",
+        "MAC/subspace",
+        "participationMass"
+      ]
+    },
+    {
+      "id": "transient-study",
+      "study": "时间步、输出采样和空间精度分辨",
+      "comparison": [
+        "norm",
+        "peak",
+        "peakTime",
+        "energy"
+      ]
+    },
+    {
+      "id": "harmonic-study",
+      "study": "共振频点、模态截断和阻尼",
+      "comparison": [
+        "complexFRF",
+        "resonance",
+        "phase"
+      ]
+    },
+    {
+      "id": "impact-study",
+      "study": "网格/步长、质量和人工处理",
+      "comparison": [
+        "impulse",
+        "momentum",
+        "energy",
+        "deformation"
+      ],
+      "checkpoint": "同一物理时刻和输入/接触状态绑定。"
+    }
+  ]
+}

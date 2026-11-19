@@ -1,0 +1,256 @@
+
+> @redmaple/simulation@0.1.0 test
+> node --test --test-concurrency=1 tests/*.test.js
+
+TAP version 13
+# (node:52652) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: package exports load in a separate host without the simulation tree
+ok 1 - package exports load in a separate host without the simulation tree
+  ---
+  duration_ms: 1449.5335
+  type: 'test'
+  ...
+# Subtest: portable modules install, deny unauthorized operations and can be unplugged
+ok 2 - portable modules install, deny unauthorized operations and can be unplugged
+  ---
+  duration_ms: 49.9377
+  type: 'test'
+  ...
+# Subtest: consistency validates coverage, unknown results, duplicate IDs and actual LAMMPS adapter
+ok 3 - consistency validates coverage, unknown results, duplicate IDs and actual LAMMPS adapter
+  ---
+  duration_ms: 90.5274
+  type: 'test'
+  ...
+# Subtest: real evidence, knowledge and gate backends keep identity and state authority
+ok 4 - real evidence, knowledge and gate backends keep identity and state authority
+  ---
+  duration_ms: 651.1832
+  type: 'test'
+  ...
+# Subtest: audit detects modification, does not store inputs, and audit failure blocks writes
+ok 5 - audit detects modification, does not store inputs, and audit failure blocks writes
+  ---
+  duration_ms: 41.3984
+  type: 'test'
+  ...
+# Subtest: failure to write final audit yields unknown for a completed side effect
+ok 6 - failure to write final audit yields unknown for a completed side effect
+  ---
+  duration_ms: 4.6466
+  type: 'test'
+  ...
+# (node:62448) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonical identities, strict YAML and three-valued conditions preserve unknown
+ok 7 - canonical identities, strict YAML and three-valued conditions preserve unknown
+  ---
+  duration_ms: 51.4195
+  type: 'test'
+  ...
+# Subtest: pack resolution locks bytes and distinguishes draft validation from production
+ok 8 - pack resolution locks bytes and distinguishes draft validation from production
+  ---
+  duration_ms: 2790.3416
+  type: 'test'
+  ...
+# Subtest: binary publication and immutable closure detect changed content
+ok 9 - binary publication and immutable closure detect changed content
+  ---
+  duration_ms: 152.5975
+  type: 'test'
+  ...
+# Subtest: CAS, command deduplication and operation reconciliation never blindly replay
+ok 10 - CAS, command deduplication and operation reconciliation never blindly replay
+  ---
+  duration_ms: 53.048
+  type: 'test'
+  ...
+# Subtest: independent review, evidence origin and three successive revisions remain enforced
+ok 11 - independent review, evidence origin and three successive revisions remain enforced
+  ---
+  duration_ms: 256.3091
+  type: 'test'
+  ...
+# Subtest: review binds producer, all subject artifacts and the frozen evidence policy
+ok 12 - review binds producer, all subject artifacts and the frozen evidence policy
+  ---
+  duration_ms: 156.9941
+  type: 'test'
+  ...
+# (node:60900) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+ok 13 - persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+  ---
+  duration_ms: 4456.4495
+  type: 'test'
+  ...
+# Subtest: cancellation and timeout wait for actual process termination
+ok 14 - cancellation and timeout wait for actual process termination
+  ---
+  duration_ms: 10760.1814
+  type: 'test'
+  ...
+# Subtest: missing result and altered inputs are refused
+ok 15 - missing result and altered inputs are refused
+  ---
+  duration_ms: 4409.8841
+  type: 'test'
+  ...
+# Subtest: execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+ok 16 - execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+  ---
+  duration_ms: 189.8554
+  type: 'test'
+  ...
+# (node:53840) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: worker survives submitting process exit and a reopened executor reconciles the same operation
+ok 17 - worker survives submitting process exit and a reopened executor reconciles the same operation
+  ---
+  duration_ms: 7008.352
+  type: 'test'
+  ...
+# (node:61576) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: host policy applies to actual native tool execution before a read-only annotation can bypass role scope
+ok 18 - host policy applies to actual native tool execution before a read-only annotation can bypass role scope
+  ---
+  duration_ms: 17432.0924
+  type: 'test'
+  ...
+# (node:9080) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: knowledge preserves adjudication, scopes, origins and source invalidation
+ok 19 - knowledge preserves adjudication, scopes, origins and source invalidation
+  ---
+  duration_ms: 308.3057
+  type: 'test'
+  ...
+# Subtest: failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+ok 20 - failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+  ---
+  duration_ms: 64.392
+  type: 'test'
+  ...
+# Subtest: inventory/import is idempotent and preserves unknown historical provenance
+ok 21 - inventory/import is idempotent and preserves unknown historical provenance
+  ---
+  duration_ms: 121.9925
+  type: 'test'
+  ...
+# (node:44780) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: provider configuration requires the explicit endpoint and credentials
+ok 22 - provider configuration requires the explicit endpoint and credentials
+  ---
+  duration_ms: 116.7323
+  type: 'test'
+  ...
+# Subtest: model selection preserves the host callback and blocks a different provider/model before sending
+ok 23 - model selection preserves the host callback and blocks a different provider/model before sending
+  ---
+  duration_ms: 7.7486
+  type: 'test'
+  ...
+# Subtest: real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+ok 24 - real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+  ---
+  duration_ms: 15171.7269
+  type: 'test'
+  ...
+# (node:60948) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: consistent SQLite backup retains committed events and independent repair counters
+ok 25 - consistent SQLite backup retains committed events and independent repair counters
+  ---
+  duration_ms: 155.7234
+  type: 'test'
+  ...
+# Subtest: case revisions and invalidation preserve earlier terminal evidence
+ok 26 - case revisions and invalidation preserve earlier terminal evidence
+  ---
+  duration_ms: 99.5161
+  type: 'test'
+  ...
+# Subtest: UKB capability limitations stay visible and proposal status cannot publish
+ok 27 - UKB capability limitations stay visible and proposal status cannot publish
+  ---
+  duration_ms: 2.0539
+  type: 'test'
+  ...
+# Subtest: pack publication needs frozen positive/negative evidence and host release registration
+ok 28 - pack publication needs frozen positive/negative evidence and host release registration
+  ---
+  duration_ms: 2425.7422
+  type: 'test'
+  ...
+# (node:59948) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: actual HEA generator supplies explicit mapping, geometry and all diagnostic commands
+ok 29 - actual HEA generator supplies explicit mapping, geometry and all diagnostic commands
+  ---
+  duration_ms: 1664.8682
+  type: 'test'
+  ...
+# Subtest: measurement criteria preserve missing, borderline and independent validation dimensions
+ok 30 - measurement criteria preserve missing, borderline and independent validation dimensions
+  ---
+  duration_ms: 255.8273
+  type: 'test'
+  ...
+# Subtest: bounded studies and coupled checkpoints refuse false convergence and semantic loss
+ok 31 - bounded studies and coupled checkpoints refuse false convergence and semantic loss
+  ---
+  duration_ms: 5.6212
+  type: 'test'
+  ...
+# Subtest: Red Maple public SDK executes a real isolated role session and durable operation receipts
+ok 32 - Red Maple public SDK executes a real isolated role session and durable operation receipts
+  ---
+  duration_ms: 13428.6737
+  type: 'test'
+  ...
+# Subtest: Pi writer publishes an immutable artifact through its host-scoped service tool
+ok 33 - Pi writer publishes an immutable artifact through its host-scoped service tool
+  ---
+  duration_ms: 1643.3443
+  type: 'test'
+  ...
+# Subtest: PDF extraction counts source text and preserves missing-page coverage
+ok 34 - PDF extraction counts source text and preserves missing-page coverage
+  ---
+  duration_ms: 6107.0278
+  type: 'test'
+  ...
+# (node:62076) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: generic runner executes different domain graphs and frozen slots without domain branching
+ok 35 - generic runner executes different domain graphs and frozen slots without domain branching
+  ---
+  duration_ms: 198.4338
+  type: 'test'
+  ...
+# Subtest: unknown branch is blocked and false skipped output is never supplied to its consumer
+ok 36 - unknown branch is blocked and false skipped output is never supplied to its consumer
+  ---
+  duration_ms: 82.6019
+  type: 'test'
+  ...
+# Subtest: a skipped optional stage allows a successor with no missing inputs
+ok 37 - a skipped optional stage allows a successor with no missing inputs
+  ---
+  duration_ms: 126.6218
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 107909.4693

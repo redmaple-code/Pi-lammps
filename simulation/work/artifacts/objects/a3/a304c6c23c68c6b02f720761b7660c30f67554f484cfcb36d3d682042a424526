@@ -1,0 +1,610 @@
+{
+  "scheme": {
+    "goal": "Exercise the full scientific workflow with a real single-asperity grinding pass",
+    "scope": "candidateValidation",
+    "parameters": {
+      "alloy": "FeNiCrCoCu",
+      "composition": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "latticeAngstrom": 3.56,
+      "cells": [
+        20,
+        10,
+        8
+      ],
+      "temperatureK": 300,
+      "seed": 482748,
+      "timeStepPs": 0.001,
+      "equilibrationSteps": 400,
+      "approachSteps": 400,
+      "grindingSteps": 800,
+      "radiusAngstrom": 12,
+      "depthAngstrom": 3,
+      "speedAngstromPerPs": 10,
+      "stiffnessEVPerAngstromCubed": 10,
+      "dumpEvery": 100,
+      "forceEvery": 20
+    },
+    "features": [
+      {
+        "id": "five-components",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fcc-substrate",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fixed-boundary",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "thermal-layer",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "spherical-abrasive",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "lateral-motion",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      }
+    ],
+    "criteria": [
+      {
+        "id": "finite",
+        "field": "finite",
+        "quantity": "finite outputs",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": true
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "atoms",
+        "field": "atomCount",
+        "quantity": "retained atoms",
+        "unit": "1",
+        "acceptanceSpec": {
+          "equals": 6400
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "fixed",
+        "field": "fixedMaxDisplacementAngstrom",
+        "quantity": "fixed layer drift",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "maximum": 0.000001
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "contact",
+        "field": "contactSamples",
+        "quantity": "contact force samples",
+        "unit": "1",
+        "acceptanceSpec": {
+          "minimum": 10
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      },
+      {
+        "id": "travel",
+        "field": "tipTravelAngstrom",
+        "quantity": "grinding distance",
+        "unit": "angstrom",
+        "acceptanceSpec": {
+          "minimum": 7.6
+        },
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "reference": "explicit integration-validation protocol",
+        "selection": "frozen layer or full grinding pass as defined",
+        "sampling": {
+          "everySteps": 20
+        },
+        "requiredOutputs": [
+          "log.lammps",
+          "grinding.csv",
+          "approach.csv",
+          "trajectory.lammpstrj",
+          "initial.lammpstrj",
+          "final.lammpstrj",
+          "final.data",
+          "final.restart"
+        ]
+      }
+    ],
+    "authorizationRef": "authorization-62bac0ef-9f48-4c2b-933c-6e70d4706c9b",
+    "D1": {
+      "material": "equiatomic FCC FeNiCrCoCu model alloy",
+      "elements": [
+        "Fe",
+        "Ni",
+        "Cr",
+        "Co",
+        "Cu"
+      ]
+    },
+    "D2": "Spherical abrasive approaches the free surface and traverses in +x",
+    "D21": [
+      {
+        "id": "five-components",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fcc-substrate",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "fixed-boundary",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "thermal-layer",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "spherical-abrasive",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      },
+      {
+        "id": "lateral-motion",
+        "criticality": "critical",
+        "verificationMethod": "data-and-input-check",
+        "requiredStage": [
+          "wf-01",
+          "wf-03a"
+        ]
+      }
+    ],
+    "D3": {
+      "temperatureK": 300
+    },
+    "D4": {
+      "cells": [
+        20,
+        10,
+        8
+      ],
+      "boundary": "free x/z, periodic y"
+    },
+    "D5": {
+      "timestepPs": 0.001,
+      "thermostat": "boundary Langevin, NVE mobile",
+      "approach": 400,
+      "grinding": 800
+    },
+    "D6": {
+      "potential": "Farkas-Caro 2018 corrected EAM/alloy",
+      "source": "https://www.ctcms.nist.gov/potentials/Download/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl",
+      "doi": "10.1557/jmr.2018.245"
+    },
+    "D7": {
+      "integration": [
+        {
+          "id": "finite",
+          "field": "finite",
+          "quantity": "finite outputs",
+          "unit": "1",
+          "acceptanceSpec": {
+            "equals": true
+          },
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "reference": "explicit integration-validation protocol",
+          "selection": "frozen layer or full grinding pass as defined",
+          "sampling": {
+            "everySteps": 20
+          },
+          "requiredOutputs": [
+            "log.lammps",
+            "grinding.csv",
+            "approach.csv",
+            "trajectory.lammpstrj",
+            "initial.lammpstrj",
+            "final.lammpstrj",
+            "final.data",
+            "final.restart"
+          ]
+        },
+        {
+          "id": "atoms",
+          "field": "atomCount",
+          "quantity": "retained atoms",
+          "unit": "1",
+          "acceptanceSpec": {
+            "equals": 6400
+          },
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "reference": "explicit integration-validation protocol",
+          "selection": "frozen layer or full grinding pass as defined",
+          "sampling": {
+            "everySteps": 20
+          },
+          "requiredOutputs": [
+            "log.lammps",
+            "grinding.csv",
+            "approach.csv",
+            "trajectory.lammpstrj",
+            "initial.lammpstrj",
+            "final.lammpstrj",
+            "final.data",
+            "final.restart"
+          ]
+        },
+        {
+          "id": "fixed",
+          "field": "fixedMaxDisplacementAngstrom",
+          "quantity": "fixed layer drift",
+          "unit": "angstrom",
+          "acceptanceSpec": {
+            "maximum": 0.000001
+          },
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "reference": "explicit integration-validation protocol",
+          "selection": "frozen layer or full grinding pass as defined",
+          "sampling": {
+            "everySteps": 20
+          },
+          "requiredOutputs": [
+            "log.lammps",
+            "grinding.csv",
+            "approach.csv",
+            "trajectory.lammpstrj",
+            "initial.lammpstrj",
+            "final.lammpstrj",
+            "final.data",
+            "final.restart"
+          ]
+        },
+        {
+          "id": "contact",
+          "field": "contactSamples",
+          "quantity": "contact force samples",
+          "unit": "1",
+          "acceptanceSpec": {
+            "minimum": 10
+          },
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "reference": "explicit integration-validation protocol",
+          "selection": "frozen layer or full grinding pass as defined",
+          "sampling": {
+            "everySteps": 20
+          },
+          "requiredOutputs": [
+            "log.lammps",
+            "grinding.csv",
+            "approach.csv",
+            "trajectory.lammpstrj",
+            "initial.lammpstrj",
+            "final.lammpstrj",
+            "final.data",
+            "final.restart"
+          ]
+        },
+        {
+          "id": "travel",
+          "field": "tipTravelAngstrom",
+          "quantity": "grinding distance",
+          "unit": "angstrom",
+          "acceptanceSpec": {
+            "minimum": 7.6
+          },
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "reference": "explicit integration-validation protocol",
+          "selection": "frozen layer or full grinding pass as defined",
+          "sampling": {
+            "everySteps": 20
+          },
+          "requiredOutputs": [
+            "log.lammps",
+            "grinding.csv",
+            "approach.csv",
+            "trajectory.lammpstrj",
+            "initial.lammpstrj",
+            "final.lammpstrj",
+            "final.data",
+            "final.restart"
+          ]
+        }
+      ],
+      "scientific": {
+        "mode": "exploratory",
+        "comparisons": [
+          {
+            "id": "time-step-convergence",
+            "dimension": "numerical",
+            "field": "meanNormalForceNn",
+            "unit": "nN",
+            "methodRef": "grinding-force-temperature-displacement/1",
+            "selection": "second half of lateral pass",
+            "sampling": {
+              "window": "frozen second half"
+            },
+            "reference": "matching time-step study",
+            "missingReason": "User selected one solver case; no matching finer-step result is available"
+          },
+          {
+            "id": "material-model-validation",
+            "dimension": "model",
+            "field": "meanNormalForceNn",
+            "unit": "nN",
+            "methodRef": "grinding-force-temperature-displacement/1",
+            "selection": "second half of lateral pass",
+            "sampling": {
+              "window": "frozen second half"
+            },
+            "reference": "applicable model-validation data",
+            "missingReason": "Applicable quantitative material-model validation data is unavailable"
+          },
+          {
+            "id": "grinding-reference",
+            "dimension": "task",
+            "field": "meanNormalForceNn",
+            "unit": "nN",
+            "methodRef": "grinding-force-temperature-displacement/1",
+            "selection": "second half of lateral pass",
+            "sampling": {
+              "window": "frozen second half"
+            },
+            "reference": "matched experimental or literature grinding result",
+            "missingReason": "A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established"
+          }
+        ],
+        "digest": "sha256:18e791377d06454d96e57160748270ff0750fe1b144c8512c14d25e84b388069"
+      }
+    },
+    "limitations": [
+      "Idealized model-alloy potential",
+      "Rigid repulsive sphere represents the abrasive geometry",
+      "Single short small-cell integration test. Convergence, repeat-seed statistics and experimental grinding comparison are pending."
+    ],
+    "validationProtocol": {
+      "mode": "exploratory",
+      "comparisons": [
+        {
+          "id": "time-step-convergence",
+          "dimension": "numerical",
+          "field": "meanNormalForceNn",
+          "unit": "nN",
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "selection": "second half of lateral pass",
+          "sampling": {
+            "window": "frozen second half"
+          },
+          "reference": "matching time-step study",
+          "missingReason": "User selected one solver case; no matching finer-step result is available"
+        },
+        {
+          "id": "material-model-validation",
+          "dimension": "model",
+          "field": "meanNormalForceNn",
+          "unit": "nN",
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "selection": "second half of lateral pass",
+          "sampling": {
+            "window": "frozen second half"
+          },
+          "reference": "applicable model-validation data",
+          "missingReason": "Applicable quantitative material-model validation data is unavailable"
+        },
+        {
+          "id": "grinding-reference",
+          "dimension": "task",
+          "field": "meanNormalForceNn",
+          "unit": "nN",
+          "methodRef": "grinding-force-temperature-displacement/1",
+          "selection": "second half of lateral pass",
+          "sampling": {
+            "window": "frozen second half"
+          },
+          "reference": "matched experimental or literature grinding result",
+          "missingReason": "A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established"
+        }
+      ],
+      "digest": "sha256:18e791377d06454d96e57160748270ff0750fe1b144c8512c14d25e84b388069"
+    }
+  },
+  "stageId": "wf-r",
+  "researchRefs": [
+    {
+      "artifactId": "artifact-b03034c5-ace6-4e10-93cf-58edaa09ba48",
+      "digest": "sha256:6f0df620c4541fb26bfb9647d2a76345cd43696526580440b0508edeae5d3a4d",
+      "byteLength": 15361,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\6f\\6f0df620c4541fb26bfb9647d2a76345cd43696526580440b0508edeae5d3a4d",
+      "type": "stage-packet",
+      "status": "available",
+      "createdAt": "2026-11-17T18:06:11.171Z",
+      "metadata": {
+        "name": "research-1-stage-packet.json",
+        "type": "stage-packet",
+        "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:1:lammps-case-librarian",
+        "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+        "producerInstanceId": "role-ea0cd654-d8cc-49f8-8b55-f611fa35fe7c"
+      },
+      "dependencies": [],
+      "recordVersion": 1
+    },
+    {
+      "artifactId": "artifact-059ca98e-9e63-489d-a173-2ae6e3a05957",
+      "digest": "sha256:77d4496ce191b6263d1aa08cbe292b1e2505f8991efac217a6ba1d6007719d78",
+      "byteLength": 9676,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\77\\77d4496ce191b6263d1aa08cbe292b1e2505f8991efac217a6ba1d6007719d78",
+      "type": "stage-packet",
+      "status": "available",
+      "createdAt": "2026-11-17T18:07:13.922Z",
+      "metadata": {
+        "name": "research-1-potential-catalogue-assessment.json",
+        "type": "stage-packet",
+        "operationId": "support-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:research:1:lammps-paper-researcher",
+        "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+        "producerInstanceId": "role-09a49a04-ab4b-47d6-835e-0d97231b637a"
+      },
+      "dependencies": [],
+      "recordVersion": 1
+    }
+  ],
+  "predecessors": [
+    {
+      "id": "wf-00",
+      "outputs": [
+        {
+          "artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c",
+          "digest": "sha256:30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+          "byteLength": 14701,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\30\\30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+          "type": "design",
+          "status": "available",
+          "createdAt": "2026-11-17T17:57:37.858Z",
+          "metadata": {
+            "type": "design",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+          },
+          "dependencies": []
+        },
+        {
+          "artifactId": "artifact-6a07d5ea-5a51-4675-87b5-41ff4f25e403",
+          "digest": "sha256:2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+          "byteLength": 4394,
+          "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\2e\\2eb2398ad45e51f5adca687d44fccbf8aabf5f6e4d8bdc3cd42c8b03181d8bd3",
+          "type": "stage-packet",
+          "status": "available",
+          "createdAt": "2026-11-17T17:57:51.893Z",
+          "metadata": {
+            "name": "wf-00.json",
+            "type": "stage-packet",
+            "operationId": "producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-00:1",
+            "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+            "producerInstanceId": "role-d4270adc-77c7-4299-879a-96d6a04d519f"
+          },
+          "dependencies": [],
+          "recordVersion": 1
+        }
+      ]
+    }
+  ],
+  "previousIssues": []
+}

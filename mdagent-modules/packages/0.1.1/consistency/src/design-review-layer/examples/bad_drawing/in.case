@@ -1,0 +1,14 @@
+units metal
+boundary p p s
+lattice bcc 2.866
+region wire block 0 160 0 48.5 0 57.1
+create_atoms 1 box
+pair_style eam/alloy
+pair_coeff * * Fe_C.eam.alloy Fe C
+# --- die (WRONG: indenter command used as die) ---
+fix 1 die indent 57.5 0.0 0.0 0.0 0.0 8.0
+# --- drawing (WRONG: moves all atoms) ---
+fix 2 all move linear 0.1 0.0 0.0 units box
+timestep 0.001
+fix 3 bot langevin 300 300 0.1 91827
+run 60000

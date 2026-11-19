@@ -1,0 +1,86 @@
+[
+  {
+    "id": "figure-draft-6ad70bdd-625b-4a09-aac7-efa1f5fecc07",
+    "name": "cross-section.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-f4f5846e-eccb-4dbe-acfb-4618afb13238",
+        "digest": "sha256:cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af",
+        "byteLength": 175460,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\cd\\cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-18T12:04:07.957Z",
+        "metadata": {
+          "type": "image",
+          "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+          "name": "cross-section.png",
+          "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+          "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+    "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+    "inspection": {
+      "opened": false
+    }
+  },
+  {
+    "id": "figure-draft-9ee2649c-cb76-4a9f-8464-6f2f0d7b9b7c",
+    "name": "force-temperature.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-f02f126e-8fac-408f-8aaf-06b5ab9c5282",
+        "digest": "sha256:549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b",
+        "byteLength": 102587,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\54\\549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-18T12:04:07.981Z",
+        "metadata": {
+          "type": "image",
+          "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+          "name": "force-temperature.png",
+          "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+          "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+    "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+    "inspection": {
+      "opened": false
+    }
+  },
+  {
+    "id": "figure-draft-1bf4c5e5-41b3-4d48-ab0c-cbfad444f0a4",
+    "name": "grinding-atoms-ovito.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-97e342f2-a593-4d1d-a490-3b488b698d70",
+        "digest": "sha256:735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67",
+        "byteLength": 807804,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\73\\735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-18T12:04:08.014Z",
+        "metadata": {
+          "type": "image",
+          "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+          "name": "grinding-atoms-ovito.png",
+          "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+          "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+    "analysisRef": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+    "inspection": {
+      "opened": false
+    }
+  }
+]

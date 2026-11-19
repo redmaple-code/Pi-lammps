@@ -1,0 +1,24 @@
+{
+  "name": "dsh-md-ops-gate",
+  "version": "0.1.0",
+  "description": "Route the MD-sim write-gate MCP tool (mcp__mdsim__sim_exec) through the dsh approval seam so every audited write pops a web confirmation; headless deployments fail closed.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "*"
+  }
+}

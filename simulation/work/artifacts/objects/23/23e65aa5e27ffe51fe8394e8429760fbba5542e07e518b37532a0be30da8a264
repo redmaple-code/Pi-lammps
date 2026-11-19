@@ -1,0 +1,115 @@
+{
+  "sourceDesignRef": {
+    "artifactId": "artifact-05c8e188-f910-4d19-a22d-20bfa247b36c",
+    "digest": "sha256:30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+    "byteLength": 14701,
+    "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\30\\30836180c76b5179e614b6d4da59971157414bfb59a3b8bc372a2d55feb32cbf",
+    "type": "design",
+    "status": "available",
+    "createdAt": "2026-11-17T17:57:37.858Z",
+    "metadata": {
+      "type": "design",
+      "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+    },
+    "dependencies": []
+  },
+  "parameters": {
+    "alloy": "FeNiCrCoCu",
+    "composition": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "latticeAngstrom": 3.56,
+    "cells": [
+      20,
+      10,
+      8
+    ],
+    "temperatureK": 300,
+    "seed": 482748,
+    "timeStepPs": 0.001,
+    "equilibrationSteps": 400,
+    "approachSteps": 400,
+    "grindingSteps": 800,
+    "radiusAngstrom": 12,
+    "depthAngstrom": 3,
+    "speedAngstromPerPs": 10,
+    "stiffnessEVPerAngstromCubed": 10,
+    "dumpEvery": 100,
+    "forceEvery": 20
+  },
+  "material": {
+    "material": "equiatomic FCC FeNiCrCoCu model alloy",
+    "elements": [
+      "Fe",
+      "Ni",
+      "Cr",
+      "Co",
+      "Cu"
+    ]
+  },
+  "geometry": {
+    "cells": [
+      20,
+      10,
+      8
+    ],
+    "boundary": "free x/z, periodic y"
+  },
+  "model": {
+    "potential": "Farkas-Caro 2018 corrected EAM/alloy",
+    "source": "https://www.ctcms.nist.gov/potentials/Download/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl",
+    "doi": "10.1557/jmr.2018.245"
+  },
+  "integrationCriteria": [
+    {
+      "id": "finite",
+      "field": "finite",
+      "unit": "1",
+      "acceptanceSpec": {
+        "equals": true
+      }
+    },
+    {
+      "id": "atoms",
+      "field": "atomCount",
+      "unit": "1",
+      "acceptanceSpec": {
+        "equals": 6400
+      }
+    },
+    {
+      "id": "fixed",
+      "field": "fixedMaxDisplacementAngstrom",
+      "unit": "angstrom",
+      "acceptanceSpec": {
+        "maximum": 0.000001
+      }
+    },
+    {
+      "id": "contact",
+      "field": "contactSamples",
+      "unit": "1",
+      "acceptanceSpec": {
+        "minimum": 10
+      }
+    },
+    {
+      "id": "travel",
+      "field": "tipTravelAngstrom",
+      "unit": "angstrom",
+      "acceptanceSpec": {
+        "minimum": 7.6
+      }
+    }
+  ],
+  "scientificProtocolDigest": "sha256:18e791377d06454d96e57160748270ff0750fe1b144c8512c14d25e84b388069",
+  "limitations": [
+    "Idealized model-alloy potential",
+    "Rigid repulsive sphere represents the abrasive geometry",
+    "Single short small-cell integration test. Convergence, repeat-seed statistics and experimental grinding comparison are pending."
+  ]
+}

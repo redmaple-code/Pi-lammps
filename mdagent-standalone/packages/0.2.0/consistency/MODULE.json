@@ -1,0 +1,13 @@
+{
+  "module": "consistency",
+  "version": "0.2.0",
+  "protocol": "mdagent-stdio/1",
+  "python": "3.11+",
+  "external_install_dependencies": [],
+  "embedded_legacy_components": [
+    "consistency",
+    "shared"
+  ],
+  "modifications": [],
+  "source_version": "0.1.1"
+}

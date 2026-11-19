@@ -1,0 +1,12 @@
+{
+  "operationId": "provider-role-check-ff062a13-ceb8-4080-8422-4c98934bb3f3",
+  "answerLocation": "answers",
+  "conflictingFields": [],
+  "checks": {
+    "speedCorrect": true,
+    "printSemanticsCorrect": true,
+    "strainSemanticsCorrect": true,
+    "massSemanticsCorrect": true,
+    "structuredAnswersConsistent": true
+  }
+}

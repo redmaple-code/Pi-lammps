@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "task-state",
+  "description": "任务级阶段状态机主跟踪文件(唯一任务阶段真相源)。由 stage_state.py 读写器维护,别手改。",
+  "type": "object",
+  "required": ["case_id", "schema_version", "stage_set", "current_stage", "status", "risk_level", "revises_count"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "schema_version": {"const": 1},
+    "stage_set": {"type": "string", "description": "段集合引用(memory/stage_sets.json,数据)"},
+    "current_stage": {"type": "string"},
+    "status": {"enum": ["in_progress", "blocked", "completed", "rolled_back"]},
+    "risk_level": {"enum": ["low", "medium", "high"]},
+    "mode": {"enum": ["guided", "semi", "auto"], "description": "闸口确认档位(只影响闸后动作,不影响校验)"},
+    "scale_gate": {"enum": ["none", "small", "large_pending"], "description": "小规模先行状态(R9)"},
+    "started_at": {"type": "string"},
+    "last_transition": {"type": "object", "properties": {
+      "ts": {"type": "string"}, "from": {"type": ["string", "null"]},
+      "to": {"type": "string"}, "decision_ref": {"type": ["string", "null"]}}},
+    "revises_count": {"type": "object", "description": "每阶段连续 HOLD 计数;PASS 出段清零,回滚进段清零;>=3 熔断(R8)"},
+    "locked_decisions": {"type": "array", "items": {"type": "string"}},
+    "open_issues": {"type": "array"},
+    "history": {"type": "array"},
+    "rollback_of": {"type": ["string", "null"]}
+  }
+}

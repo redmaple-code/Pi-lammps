@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "observe_gate": {
+    "min_interval_minutes": 30,
+    "_note": "observe 全局 should-run 闸(2026-09-07,借鉴 LoopX quota):距上轮小于此间隔即跳过;kit 卡 FAILED 且有 pending 用户闸也跳过(等人工不空转)。kit state 缺失放行、损坏 fail-closed。--force 可人工越过。"
+  },
+  "_note": "演化策略(机器可校验红线)。auto_fix_classes=Tier1 自动层(有界);evidence_classes=Tier1.5 证据层(无需人工批,但安装须沙盒试跑+结构校验,晋升须金丝雀实账达标);human_review_classes=Tier2 人审层;forbidden_paths=一律拒绝。本文件自身在 forbidden_paths 内,修改它只能走人工作业,不能走演化通道。",
+  "roots": {
+    "kit": {
+      "path": "/opt/mdagent/kit",
+      "test_commands": [
+        [
+          "python3.11",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests"
+        ]
+      ]
+    },
+    "dsh_agent": {
+      "path": "/opt/mdagent/app",
+      "test_commands": [
+        [
+          "python3.11",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests"
+        ],
+        [
+          "node",
+          "--test",
+          "tests/test_flow_gate.mjs"
+        ]
+      ]
+    }
+  },
+  "auto_fix_classes": {
+    "monitor_schedule_temp": {
+      "root": "kit",
+      "paths": [
+        "agents/runtime/v3.3/monitor_agent.py"
+      ],
+      "max_changed_lines": 12,
+      "_note": "SCHEDULE/阈值数值微调;改动行数有界,应用后回归必须全绿,否则自动回滚"
+    },
+    "flow_gate_intent_terms": {
+      "root": "dsh_agent",
+      "paths": [
+        "dsh-plugins/dsh-md-flow-gate/cordis.patch.yml"
+      ],
+      "max_changed_lines": 6,
+      "_note": "只许改 config 里的增量意图正则(config.intent 与内置取或,只增布防面;evidence 工具清单不可配置,插件本体 lib/ 是红线)"
+    },
+    "model_research_queries": {
+      "root": "dsh_agent",
+      "paths": [
+        "mcp/model_research.py"
+      ],
+      "max_changed_lines": 10,
+      "_note": "只许微调 SUBQUERY_TEMPLATES/简报常量区;ARBITRATE 终裁逻辑不得经此类改动(人审抽查)"
+    },
+    "strategy_weight_tuning": {
+      "root": "kit",
+      "paths": [
+        ".v3.3_strategy_db.json"
+      ],
+      "max_changed_lines": 12,
+      "_note": "只许写 strategy_adjustments 段(连败压制 penalty);strategies/history 由 kit 结账户自写,演化通道不得碰"
+    }
+  },
+  "evidence_classes": {
+    "new_specialist_script": {
+      "root": "kit",
+      "paths": [
+        ".v3.3_strategy_db.json"
+      ],
+      "max_changed_lines": 40,
+      "evidence": {
+        "sandbox_trial": true,
+        "canary_attempts": 4,
+        "canary_min_wins": 3,
+        "min_posterior": 0.5,
+        "demote_fail_streak": 3,
+        "demote_cooldown_days": 7,
+        "canary_max_age_days": 30,
+        "swarm_research": true,
+        "swarm_cooldown_hours": 24,
+        "swarm_max_per_day": 4,
+        "allowed_templates": [
+          "timestep_floor_damp",
+          "qeq_relax_stronger",
+          "nve_limit_tighten"
+        ]
+      },
+      "_note": "证据层(L2 结构自进化):无需 --approver。install=db 恰增一条 canary 策略(DSL rule 必须==模板产物,沙盒试跑由门重执行,提案自证无效);promote=仅删 canary 行且按盘上新读重算实账;demote=仅删策略键(正向 diff,永不走 --rollback)。swarm_research=耗尽根因起草前跑蜂群联网研究(model_research repair 流水线),产物只在模板空间内做确定性选择(match_terms/param_patterns 人工表),低置信回退首参;cooldown/max_per_day 双闸控费用。执行器/模板/沙盒在 forbidden_paths,通道写不了代码只写数据。本条目只能人工改。"
+    }
+  },
+  "human_review_classes": [
+    "pipeline_steps",
+    "new_specialist_script",
+    "persona_wording",
+    "mcp_tools",
+    "monitor_logic",
+    "model_research_pipeline",
+    "hpc_submit_interface",
+    "evidence_v3_knowledge"
+  ],
+  "forbidden_paths": [
+    "agents/runtime/v3.3/claude_interface.py",
+    "agents/runtime/v3.3/specialist_rules.py",
+    "dsh-plugins/dsh-md-ops-gate/",
+    "dsh-plugins/dsh-md-flow-gate/lib/",
+    "dsh-plugins/dsh-md-flow-gate/package.json",
+    ".dsh/",
+    "tests/",
+    "evolution/POLICY.json",
+    "evolution/apply_proposal.py",
+    "evolution/specialist_templates.py",
+    "evolution/specialist_sandbox.py"
+  ],
+  "rollback": {
+    "backups_dir": "backups",
+    "keep_last": 20
+  }
+}

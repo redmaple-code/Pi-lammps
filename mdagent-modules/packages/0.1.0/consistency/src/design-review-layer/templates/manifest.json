@@ -1,0 +1,41 @@
+{
+  "name": "design-review-page",
+  "version": "1.3",
+  "approved_by": "owner",
+  "approved_at": "2026-10-30",
+  "template_path": "web/static/design-plan.html",
+  "served_by": "web/design_plan_server.py",
+  "sha256": "0130c76cc71388f594b9be9ddef79f59b86058de4912a259f4f87d579254958b",
+  "required_markers": [
+    "TEMPLATE: design-review-page v1.0",
+    "① 方案全文",
+    "② 方案对照",
+    "③ in 文件查验",
+    "id=\"sec-1\"",
+    "id=\"sec-2\"",
+    "id=\"sec-3\"",
+    "id=\"cmpBody\"",
+    "id=\"chkList\"",
+    "id=\"gateMsg\"",
+    "id=\"prov\"",
+    "id=\"caseSel\"",
+    "id=\"expDiagram\"",
+    "跨尺度论证",
+    "id=\"sec-d\"",
+    "id=\"ukbDrawer\"",
+    "id=\"ukbBody\"",
+    "id=\"btnUkb\""
+  ],
+  "rules": [
+    "本模板是方案校核功能的唯一页面形态，后续严格执行，不得分叉。",
+    "任何布局/信息架构变更必须先经所有者批准并升版本（manifest 同步更新）。",
+    "不得在页面或审核层注入任何规则；规则须所有者批准后以数据文件加入。",
+    "发布前必须运行 review_layer/template_check.py 且通过。"
+  ],
+  "changelog": [
+    "v1.0 2026-10-30 冻结（owner）",
+    "v1.1 2026-10-30 按所有者要求补实验示意图（宏观→微观），新增 id=expDiagram 结构标记",
+    "v1.2 2026-10-30 对照表加载项增加宏观/微观值、差距量级与跨尺度论证（所有者要求）",
+    "v1.3 2026-11-02 增加审查点发现卡片与 UKB 检索调试抽屉（所有者要求）"
+  ]
+}

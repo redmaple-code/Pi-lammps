@@ -1,0 +1,9 @@
+{
+  "module": "evidence",
+  "isolated_mode": "-I -S",
+  "returncode": 0,
+  "tests": 25,
+  "skipped": 0,
+  "scope": "test_evidence_v3_service.py",
+  "ok": true
+}

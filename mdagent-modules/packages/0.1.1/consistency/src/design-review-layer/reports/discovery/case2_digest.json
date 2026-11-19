@@ -1,0 +1,198 @@
+{
+  "case": "case2",
+  "provider": "external-ai:case2_points.json",
+  "open_points": [
+    {
+      "id": "RP-005",
+      "title": "`z erate -0.01 remap x` 叠加 z 向大压缩，加载不是恒体积简单剪切",
+      "dimension": "加载路径/变形模式",
+      "locations": {
+        "experiment": [
+          "E-03",
+          "E-04"
+        ],
+        "infile": [
+          87,
+          88,
+          89,
+          102
+        ]
+      },
+      "question": "该加载是纯剪切、压缩-剪切还是其他组合？z 向 0.9 的压缩是否实验设计的一部分？若不是，如何从含压缩的应力中分离 τxz？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-008",
+      "title": "temp/partial 0 1 1 把 x 分量排除在温度和压力之外，剪切方向的热/动压不受控",
+      "dimension": "统计/温控",
+      "locations": {
+        "experiment": [
+          "E-04"
+        ],
+        "infile": [
+          57,
+          58,
+          99,
+          100
+        ]
+      },
+      "question": "300 K 是指哪个温度定义（全 3D、y/z 部分、还是去掉流动后的 peculiar temperature）？x 向剪切生热由什么机制移除？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-013",
+      "title": "初始 hcp 2.95 固定盒子只弛豫原子，未做 box/relax，残余应力未报告",
+      "dimension": "初始条件/残余应力",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          23,
+          24,
+          49,
+          51,
+          62
+        ]
+      },
+      "question": "初始构型的残余压力/应力张量是多少？是否在 300 K、0 bar 下达到平衡？G 与 τy 是否扣除了初始应力？",
+      "severity": "medium"
+    },
+    {
+      "id": "RP-015",
+      "title": "0.2% 偏移屈服判据缺少应力平均、应变分辨率与不确定度定义",
+      "dimension": "统计/屈服判据",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          105
+        ]
+      },
+      "question": "τy 是对哪条平均曲线、用什么窗口和拟合区间得到的？0.2% 偏移在 1e10/s 的高率曲线中是否仍有物理意义？",
+      "severity": "medium"
+    },
+    {
+      "id": "RP-018",
+      "title": "E-06 自述实验方案由 in 文件反推，实验与模拟不独立，存在循环验证",
+      "dimension": "证据/溯源",
+      "locations": {
+        "experiment": [
+          "E-06"
+        ],
+        "infile": [
+          1,
+          36,
+          102
+        ]
+      },
+      "question": "E-01..E-05 中哪些量来自真实实验/文献，哪些是从 in 文件反推的？E-04 的 1e-3 s⁻¹ 和 0.2% 偏移判据的独立来源是什么？",
+      "severity": "high"
+    },
+    {
+      "id": "RP-020",
+      "title": "`strain=srate*step*tstp` 的线性名义应变与 fix deform 的盒长/tilt 演化未核对",
+      "dimension": "应变定义/运动学",
+      "locations": {
+        "experiment": [
+          "E-04",
+          "E-05"
+        ],
+        "infile": [
+          89,
+          94,
+          102
+        ]
+      },
+      "question": "实际剪切应变应如何从 box tilt/lz 或原子位移计算？`strain` 变量与真实 γ 的偏差随时间/应变是多少？",
+      "severity": "medium"
+    },
+    {
+      "id": "RP-022",
+      "title": "最小化与 20 ps 预平衡没有收敛/平台判据，剪切起始态是否达到稳态未验证",
+      "dimension": "数值与有限尺度（弛豫/平衡收敛）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          21,
+          49,
+          67,
+          107
+        ]
+      },
+      "question": "最小化在第几步、以能量还是力判据终止？20 ps 后 PE、T 与压力张量是否已平台、漂移率多少？延长到 50–100 ps 是否改变 G/τy？",
+      "severity": "medium"
+    },
+    {
+      "id": "RP-025",
+      "title": "G 与流动应力由单条瞬时应力曲线直接读取，未做时间平均/分块统计与误差传递",
+      "dimension": "不确定度与对照协议（误差传递）",
+      "locations": {
+        "experiment": [
+          "E-05"
+        ],
+        "infile": [
+          91,
+          92,
+          93,
+          105,
+          106
+        ]
+      },
+      "question": "应力自相关时间与独立样本数是多少？G 和流动应力对平均窗口、拟合区间与分块大小是否稳定，95% 置信区间多宽？",
+      "severity": "high"
+    }
+  ],
+  "common_groups": [
+    {
+      "id": "CI-005",
+      "name": "多组元势函数的交叉项/适用性",
+      "occurrences": 3
+    },
+    {
+      "id": "CI-004",
+      "name": "有限尺寸/单晶模型与宏观多晶试样尺度差",
+      "occurrences": 6
+    },
+    {
+      "id": "CI-009",
+      "name": "应力/应变定义（virial、总压、工程/真应力）",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-011",
+      "name": "夹具/边界与实验加载路径不等效",
+      "occurrences": 2
+    },
+    {
+      "id": "CI-002",
+      "name": "MD 应变率比实验高多个数量级",
+      "occurrences": 3
+    },
+    {
+      "id": "CI-001",
+      "name": "MD 周期边界无法模拟颈缩/断裂/延伸率",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-006",
+      "name": "单次 run/单 seed 无统计不确定度",
+      "occurrences": 1
+    },
+    {
+      "id": "CI-012",
+      "name": "观测量的实验-仿真映射",
+      "occurrences": 1
+    }
+  ],
+  "stats": {
+    "total": 26,
+    "open": 8,
+    "record_required": 6,
+    "explained": 12,
+    "capped": ""
+  }
+}

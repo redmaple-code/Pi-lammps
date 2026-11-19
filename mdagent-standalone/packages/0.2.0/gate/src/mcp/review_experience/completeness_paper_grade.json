@@ -1,0 +1,32 @@
+{
+  "pack": "completeness_paper_grade",
+  "schema_version": 1,
+  "kind": "completeness",
+  "family": "paper_grade",
+  "min_grade": "paper_grade",
+  "_doc": "论文型任务完整性清单(2026-10-04):声称与实验对照(paper_grade)时四段必填。exploratory 任务不生效(min_grade 路由)。",
+  "required_fields": [
+    "material_model.class",
+    "material_model.composition",
+    "material_model.construction",
+    "experiment_reference.kind",
+    "experiment_reference.sources",
+    "experiment_reference.measured",
+    "abstraction.mappings",
+    "abstraction.simplifications",
+    "comparability.targets",
+    "comparability.explanation_role"
+  ],
+  "guidance": [
+    {"aspect": "material_model.class", "why": "材料模型类型决定结构合理性的判据", "proposal": "晶体/固溶体/多晶/非晶/交联网络/复合/流体——与实验材料状态对应"},
+    {"aspect": "material_model.composition", "why": "组分与实验成分的名义对应是保真起点", "proposal": "按实验成分(+来源)给配比;HEA 注明等/近等原子比"},
+    {"aspect": "material_model.construction", "why": "构建方法决定产物的结构质量", "proposal": "工具+协议+验证条目(如 dmin≥2.2Å、晶格常数核对±0.5%)"},
+    {"aspect": "experiment_reference.kind", "why": "实验侧参照系是对照的另一端", "proposal": "own_experiment|literature_experiment|none;paper_grade 不得为 none"},
+    {"aspect": "experiment_reference.sources", "why": "实验出处让每个参照值可追溯", "proposal": "文献条目/DOI/报表,附原文摘录"},
+    {"aspect": "experiment_reference.measured", "why": "实验实测值是容差与锚定的来源", "proposal": "逐量:值+不确定度+方法(如摩擦系数 0.35±0.05,pin-on-disc)"},
+    {"aspect": "abstraction.mappings", "why": "实验→仿真的每一步映射必须可追溯", "proposal": "逐条:实验条件→仿真条件+公式/依据+假设+保真档位+损失项"},
+    {"aspect": "abstraction.simplifications", "why": "简化假设是可比性损失项,必须显式", "proposal": "逐条:简化什么/为什么/预期影响/是否伤可比性"},
+    {"aspect": "comparability.targets", "why": "每个目标性质的对应档位+参照值+容差是结论的对照协议", "proposal": "四档(直接/代理/趋势/不可比)+实验锚点+比较协议+容差+噪声地板"},
+    {"aspect": "comparability.explanation_role", "why": "解释角色声明界定结论范围(反对为了仿真而仿真)", "proposal": "一句话:本仿真在论文中解释什么、不声称什么"}
+  ]
+}

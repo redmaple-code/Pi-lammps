@@ -1,0 +1,461 @@
+{
+  "source": "original-handoff-tool-registry",
+  "module": "knowledge",
+  "tools": [
+    {
+      "name": "ukb_must_read",
+      "description": "Read the core entries every task under this profile must read (full text).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_overview",
+      "description": "Level 1. Without facet: the facets and how many entries each covers. With facet: the top tags of that facet with descriptions, aliases, entry counts (including child tags) and 'children'; pass parent=<tag> to open its children. A parent tag in a scope already includes its children. Optional 'within' restricts counts, e.g. {\"facet\": \"method\", \"within\": {\"topic\": [\"mechanical-loading\"]}}. Never returns entries.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "facet": {
+            "type": "string"
+          },
+          "parent": {
+            "type": "string"
+          },
+          "within": {
+            "type": "object",
+            "description": "{facet: [tag, ...]}; same facet = OR, across facets = AND; parent tags include children; labels and aliases accepted",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "integer"
+                ]
+              }
+            }
+          },
+          "describe": {
+            "type": "boolean",
+            "description": "include tag descriptions and aliases"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "text",
+              "json"
+            ],
+            "description": "text (default, compact lines) or json"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_catalog",
+      "description": "Level 2. Titles of the entries in a scope (ref, type, title, tags); no content. At most about 20 titles: if the scope is larger the reply says so and lists tags (with counts) to narrow by; there is no paging. Only refs listed here can be read with ukb_read; pass them as given (entry_id@rev or entry_id).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "scope": {
+            "type": "object",
+            "description": "{facet: [tag, ...]}; same facet = OR, across facets = AND; parent tags include children; labels and aliases accepted",
+            "additionalProperties": {
+              "type": "array",
+              "items": {
+                "type": [
+                  "string",
+                  "integer"
+                ]
+              }
+            }
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "text",
+              "json"
+            ],
+            "description": "text (default, compact lines) or json"
+          }
+        },
+        "required": [
+          "scope"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_read",
+      "description": "Level 3. Content of entries you picked from a ukb_catalog result in this session (at most 3 per call; use the #handles). Cases and references first show their core fields; depth=full adds reuse and data details. Cases and references return their reviewed summary and file list; use ukb_read_original for originals.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "entry_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "handles like #3 or refs from ukb_catalog"
+          },
+          "view": {
+            "type": "string",
+            "enum": [
+              "compact",
+              "full"
+            ]
+          },
+          "depth": {
+            "type": "string",
+            "enum": [
+              "core",
+              "full"
+            ],
+            "description": "core (default): enough to judge and answer; full: also reuse/setup details of cases and data tables of references"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "text",
+              "json"
+            ],
+            "description": "text (default, compact lines) or json"
+          }
+        },
+        "required": [
+          "entry_refs"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_read_original",
+      "description": "Read an original file of a document entry, whole or by section id, page (p3 / p3-5) or lines (L10-40); long selections are paged with cursor.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "ref": {
+            "type": "string",
+            "description": "#handle or entry ref"
+          },
+          "path": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "page": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "string"
+          },
+          "cursor": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "text",
+              "json"
+            ],
+            "description": "text (default, compact lines) or json"
+          }
+        },
+        "required": [
+          "ref",
+          "path"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_checkout",
+      "description": "Copy reusable files of a case (or chosen paths) into a workspace directory, with a UKB_PROVENANCE json listing source, hashes and the parameters that must be adapted. Never executes files.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "ref": {
+            "type": "string",
+            "description": "#handle or entry ref"
+          },
+          "dest": {
+            "type": "string"
+          },
+          "paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "overwrite": {
+            "type": "boolean"
+          },
+          "task_ref": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ref",
+          "dest"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_guide",
+      "description": "How to contribute: when and what to submit, the workflow, payload examples and the list of types and facets. Pass type_id for that type's field spec; tags come from ukb_overview.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "type_id": {
+            "type": "string"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_prepare",
+      "description": "Before submitting: give the type and tags you intend to use. Validates the tags and returns the titles of entries already in those tags (and open proposals there); read the ones that look similar with ukb_read, then decide new / revise / reinforce / skip.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "profile": {
+            "type": "string",
+            "description": "consumer profile, default 'agent'"
+          },
+          "type_id": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "description": "[{facet, tag, reason?}] or [{facet, new_tag:{slug,label,description,parent?,aliases?}, reason}]",
+            "items": {
+              "type": "object"
+            }
+          }
+        },
+        "required": [
+          "type_id",
+          "tags"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_propose",
+      "description": "Submit knowledge you summarised, wrapped as {\"payload\": {...}}. See ukb_guide.payload_examples for exact shapes of new / revise / reinforce. Becomes visible only after AI prereview and admin approval.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "payload"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_propose_tag",
+      "description": "Propose adding/removing tags on an existing entry (admin approves).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "entry": {
+            "type": "string"
+          },
+          "add": {
+            "type": "array",
+            "description": "[{facet, tag, reason?}] or [{facet, new_tag:{slug,label,description,parent?,aliases?}, reason}]",
+            "items": {
+              "type": "object"
+            }
+          },
+          "drop": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entry",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_propose_status",
+      "description": "Propose a status change (deprecated / revoked / superseded / active) with reason.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "entry": {
+            "type": "string"
+          },
+          "target_status": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "by_entry": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entry",
+          "target_status",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_feedback",
+      "description": "Report how an entry worked out (helpful, neutral, misleading, not_applicable, reused_ok, reused_failed). Negative reports open a recheck for the admin.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "entry": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "task_ref": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "entry",
+          "outcome"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_my_submissions",
+      "description": "Your own submissions with their state and the prereview/admin notes; follow up on changes_requested.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "state": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_prereview_queue",
+      "description": "Proposals from other agents that still need AI prereview.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_prereview_bundle",
+      "description": "AI prereview: fetch one page of the material for a task (pending entry, origin, originals, taxonomy with tag descriptions, and every entry in the same tag scope). Read all pages, then submit. You cannot prereview your own submission.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "page": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "task_id"
+        ],
+        "additionalProperties": false
+      }
+    },
+    {
+      "name": "ukb_prereview_submit",
+      "description": "AI prereview: submit the structured opinion (type, tags, duplicates/conflicts, checklist, summary fidelity, recommendation) with all page tokens. Advisory only.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "task_id": {
+            "type": "string"
+          },
+          "page_tokens": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "opinion": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "task_id",
+          "page_tokens",
+          "opinion"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

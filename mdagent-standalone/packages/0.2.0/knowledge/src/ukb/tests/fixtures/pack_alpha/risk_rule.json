@@ -1,0 +1,4 @@
+[
+  {"rule_id": "rr-keyword", "match_kind": "keyword", "pattern": "dangerzone", "action": "flag", "note": "invented risky term"},
+  {"rule_id": "rr-quarantine", "match_kind": "keyword", "pattern": "forbiddenword", "action": "quarantine", "note": "invented quarantine term"}
+]

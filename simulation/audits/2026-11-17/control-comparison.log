@@ -1,0 +1,48 @@
+{
+  "initialStateMatches": true,
+  "initialStateComparisonFields": [
+    "id",
+    "type",
+    "x",
+    "y",
+    "z"
+  ],
+  "loaded": {
+    "initialStep": 2000,
+    "finalStep": 8000,
+    "atoms": 11520,
+    "displacementMaxAngstrom": 2.6440245933046858,
+    "displacedAtomsAboveOneAngstrom": 90,
+    "temperatureMeanK": 310.7567578286571,
+    "temperatureFinalK": 315.328069800338,
+    "temperatureMinK": 300.531894535802,
+    "temperatureMaxK": 321.767213108372,
+    "cnaCounts": {
+      "1": 9759,
+      "2": 1,
+      "3": 5,
+      "5": 1755
+    }
+  },
+  "noToolControl": {
+    "initialStep": 2000,
+    "finalStep": 8000,
+    "atoms": 11520,
+    "displacementMaxAngstrom": 0.5820188570828276,
+    "displacedAtomsAboveOneAngstrom": 0,
+    "temperatureMeanK": 299.6442968766117,
+    "temperatureFinalK": 303.422989619663,
+    "temperatureMinK": 294.124802292061,
+    "temperatureMaxK": 304.111754577867,
+    "cnaCounts": {
+      "1": 9906,
+      "5": 1614
+    }
+  },
+  "loadedLargeDisplacementIdsAlsoOverThresholdInControl": 0,
+  "interpretationLimits": [
+    "One matched seed, individual trajectories become chaotic after perturbation",
+    "Displacement includes indentation, sliding, thermal vibration and surface relaxation",
+    "No unloading or retraction was performed, permanent deformation and removal are unverified"
+  ]
+}

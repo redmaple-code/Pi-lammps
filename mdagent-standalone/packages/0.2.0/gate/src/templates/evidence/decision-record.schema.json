@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "decision-record",
+  "description": "阶段推进决策工件(证据门)。谁主张推进谁举证;写入后不可变,改判=新工件+review-log 补记。示例值一律中性占位。",
+  "type": "object",
+  "required": ["schema_version", "case_id", "stage", "gate", "decision", "scope", "risk_level", "confidence", "required_next_actor"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "case_id": {"type": "string"},
+    "stage": {"type": "string", "description": "任务阶段标识(段集合数据定义,通用默认 PLAN|BUILD|CONFIG|EXEC|ANALYZE)"},
+    "gate": {"type": "string", "description": "闸口标识,如 G-CONFIG"},
+    "decision": {"enum": ["PASS", "REVISE", "BLOCKED"]},
+    "scope": {"type": "string"},
+    "risk_level": {"enum": ["low", "medium", "high"]},
+    "mandatory_check_results": {"type": "object", "description": "清单内每条 MC 的结果: {id: {triggered, passed, evidence[], issue?, location?}}"},
+    "evidence_refs": {"type": "array", "items": {"type": "object", "properties": {
+      "ref": {"type": "string", "description": "$键 | tool:名[:ts] | atom:id | exp:id | LEDGER:lid[:期望] | paper:doi | corpus:id | 裸路径"},
+      "kind": {"type": "string"}, "verified": {"type": "boolean"}}}},
+    "semantic_surface_touched": {"type": "array", "items": {"type": "string"}, "description": "域包定义的高危操作面(数据)"},
+    "locked_decision_revisions": {"type": "array"},
+    "fatal_issues": {"type": "array"}, "major_issues": {"type": "array"},
+    "required_fixes": {"type": "array"},
+    "acceptance_checks": {"type": "array", "items": {"type": "object", "properties": {
+      "item": {"type": "string"}, "passed": {"type": "boolean"}, "evidence": {"type": "string"}}}},
+    "rollback_target": {"type": ["string", "null"], "description": "ANALYZE 不达标时的回退阶段"},
+    "packet_refs": {"type": "array", "items": {"type": "string"}, "description": "交接包相对路径(R11 核验存在性)"},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "required_next_actor": {"enum": ["coordinator", "user-gate"]},
+    "summary": {"type": "string"},
+    "manual_gate": {"type": "boolean", "description": "校验器不可用时的手动回退标记(confidence 上限 medium)"}
+  }
+}

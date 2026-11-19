@@ -1,0 +1,51 @@
+{
+  "module": "consistency",
+  "assembly": {
+    "modules": [
+      "consistency",
+      "shared"
+    ],
+    "files": 108
+  },
+  "python": "3.11.4",
+  "environment": "temporary isolated data root; Python UTF-8 mode",
+  "suites": [
+    {
+      "name": "consistency-unit",
+      "returncode": 0,
+      "ok": true,
+      "tests": 16,
+      "skipped": 0,
+      "seconds": 0.9,
+      "log": "consistency-consistency-unit.log"
+    },
+    {
+      "name": "template",
+      "returncode": 0,
+      "ok": true,
+      "tests": null,
+      "skipped": 0,
+      "seconds": 0.7,
+      "log": "consistency-template.log"
+    },
+    {
+      "name": "fixture-cli",
+      "returncode": 0,
+      "ok": true,
+      "tests": null,
+      "skipped": 0,
+      "seconds": 1.1,
+      "log": "consistency-fixture-cli.log"
+    },
+    {
+      "name": "summary-guard",
+      "returncode": 0,
+      "ok": true,
+      "tests": null,
+      "skipped": 0,
+      "seconds": 0.9,
+      "log": "consistency-summary-guard.log"
+    }
+  ],
+  "ok": true
+}

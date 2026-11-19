@@ -1,0 +1,137 @@
+{
+  "packetType": "stage-packet",
+  "stageId": "research:3",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "role": "lammps-paper-researcher",
+  "decision": "proceed",
+  "summary": "The registered potential-catalogue entry (sourceId=research-source, domains/lammps/models.json, sha256:9e515d78...) contains exactly one item, 'farkas-caro-2018', an eam/alloy potential for the five elements Fe, Ni, Cr, Co, Cu, file assets/FeNiCrCoCu-heafixed.setfl, source https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/. The catalogue record itself carries NO DOI field, NO explicit model-scope statement (beyond elements and pairStyle), and only one limitation string. A DOI for this potential is available only from the frozen support-context D6 block ('10.1557/jmr.2018.245', with download URL .../2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl); it is therefore reported with a provenance gap: DOI is corroborated by the task context, not by the registered metadata source. Element set and pairStyle agree with the frozen D1/D6 requirements (equiatomic FCC FeNiCrCoCu, eam/alloy), so scope compatibility is established. This source is bibliographic/catalogue metadata only: it provides no full text and no quantitative validation data. Under the approved exploratory scope these gaps are recorded as limitations and do not block progression; convergence, repeat-seed statistics, material-model validation and experimental grinding comparison remain unavailable.",
+  "requestedFields": {
+    "doi": {
+      "value": "10.1557/jmr.2018.245",
+      "inRegisteredMetadata": false,
+      "corroboratingSource": "support-context (frozen task context), D6.doi",
+      "note": "Registered metadata source models.json exposes no doi field for item farkas-caro-2018; DOI is only asserted via the frozen task context."
+    },
+    "elements": {
+      "value": ["Fe", "Ni", "Cr", "Co", "Cu"],
+      "inRegisteredMetadata": true,
+      "agreementWithFrozenD1": true,
+      "note": "Five-element set identical to frozen D1 (equiatomic FCC FeNiCrCoCu)."
+    },
+    "modelScope": {
+      "pairStyle": "eam/alloy",
+      "file": "assets/FeNiCrCoCu-heafixed.setfl",
+      "sourceUrl": "https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/",
+      "alloyClass": "FCC multi-principal-element (high-entropy) model alloy",
+      "statedInRegisteredMetadata": "Only elements, pairStyle, file and source URL are given; no explicit scope narrative (property coverage, temperature/phase, defect or deformation applicability, alloy composition variations) is present in the catalogue record.",
+      "scopeStatementProvenanceGap": true,
+      "compatibilityWithFrozenTask": "Compatible: frozen D6 specifies 'Farkas-Caro 2018 corrected EAM/alloy' for D1 FeNiCrCoCu; catalogue pairStyle and element list match."
+    },
+    "availableLimitations": [
+      {
+        "text": "Idealized FCC model alloy, not quantitatively fitted to all real elemental properties",
+        "origin": "research-source (registered catalogue metadata)",
+        "kind": "documented limitation supplied by the source"
+      },
+      {
+        "text": "Idealized model-alloy potential",
+        "origin": "support-context (frozen task context), limitations[0]",
+        "kind": "documented limitation supplied by the task context"
+      },
+      {
+        "text": "Rigid repulsive sphere represents the abrasive geometry",
+        "origin": "support-context (frozen task context), limitations[1]",
+        "kind": "documented limitation supplied by the task context (model-side, not potential-side)"
+      },
+      {
+        "text": "Single short small-cell integration test; convergence, repeat-seed statistics and experimental grinding comparison are pending",
+        "origin": "support-context (frozen task context), limitations[2]",
+        "kind": "documented limitation supplied by the task context"
+      }
+    ],
+    "missingSourceLimitations": [
+      "Registered metadata source is a single 20-line catalogue record (items[] with one entry): no abstract, no methodology, no tabulated properties and no reference bibliography beyond the CTCMS entry URL.",
+      "No full text, preprint, supplementary material or dataset for the Farkas & Caro 2018 potential is registered in inputRefs (inputRefs is empty); none could be read in this stage.",
+      "The catalogue record contains no DOI field; the DOI reported here derives solely from the frozen support-context D6 block and could not be verified against the registered metadata.",
+      "No model-scope narrative (valid temperature/phase range, defect and deformation applicability, composition transferability) is registered for farkas-caro-2018; scope is inferred only from elements + pairStyle + file name."
+    ],
+    "fullTextGap": {
+      "fullTextAvailable": false,
+      "detail": "Neither the registered catalogue metadata nor the frozen task context supplies full text of 10.1557/jmr.2018.245 or any associated potential-development paper. No methods, fitting procedure, property tables or validation figures can be extracted.",
+      "consequence": "Claim-level verification of potential quality (lattice constants, elastic constants, defect energies, stacking-fault energies, melting behaviour) is impossible from this source alone."
+    },
+    "quantitativeValidationGaps": {
+      "quantitativeDataAvailable": false,
+      "detail": "The catalogue record supplies no numbers at all (no fitted properties, no errors, no benchmark forces or energies). The frozen validation protocol lists three comparisons that are explicitly declared missing:",
+      "unavailableComparisons": [
+        {
+          "id": "time-step-convergence",
+          "dimension": "numerical",
+          "field": "meanNormalForceNn",
+          "missingReason": "User selected one solver case; no matching finer-step result is available"
+        },
+        {
+          "id": "material-model-validation",
+          "dimension": "model",
+          "field": "meanNormalForceNn",
+          "missingReason": "Applicable quantitative material-model validation data is unavailable"
+        },
+        {
+          "id": "grinding-reference",
+          "dimension": "task",
+          "field": "meanNormalForceNn",
+          "missingReason": "A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established"
+        }
+      ],
+      "consequence": "No quantitative agreement, error bar or tolerance can be attached to computed grinding forces (nN) from the current evidence base."
+    }
+  },
+  "limitations": [
+    "Catalogue metadata only: registered source research-source (models.json, sha256:9e515d78...) is a 20-line items[] record with no narrative, abstract or data tables.",
+    "No full text available: no paper, preprint or supplementary material for the Farkas-Caro 2018 potential is registered (inputRefs empty); full-text claims cannot be checked.",
+    "DOI 10.1557/jmr.2018.245 is not present in the registered metadata and is sourced solely from the frozen support-context D6 block; provenance gap recorded.",
+    "No explicit model-scope statement in the catalogue record; scope inferred only from elements [Fe, Ni, Cr, Co, Cu], pairStyle eam/alloy and the file name FeNiCrCoCu-heafixed.setfl.",
+    "No quantitative validation data: no fitted/benchmark property values, no errors, and none of the three frozen comparisons (time-step convergence, material-model validation, grinding reference) is satisfiable.",
+    "Documented source limitation retained verbatim: 'Idealized FCC model alloy, not quantitatively fitted to all real elemental properties'.",
+    "Task-level documented limitations retained: idealized model-alloy potential; rigid repulsive sphere abrasive; single short small-cell test with convergence, repeat-seed statistics and experimental comparison pending.",
+    "Missing experimental evidence is accepted as compatible with the approved exploratory scope; conclusions must remain exploratory, not validation-grade."
+  ],
+  "evidence": [
+    {
+      "sourceId": "research-source",
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\domains\\lammps\\models.json",
+      "digest": "sha256:9e515d78e83da8fb08c4cb7eb3d5d7c31f9d3cc229fb79533bb55d5942d7f600",
+      "linesRead": "1-20 of 20",
+      "readId": "read-60a95575-ea54-4efa-8b69-367fb024ed9c",
+      "extracted": [
+        "id: farkas-caro-2018",
+        "elements: Fe, Ni, Cr, Co, Cu",
+        "pairStyle: eam/alloy",
+        "file: assets/FeNiCrCoCu-heafixed.setfl",
+        "source: https://www.ctcms.nist.gov/potentials/entry/2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/",
+        "limitations: Idealized FCC model alloy, not quantitatively fitted to all real elemental properties",
+        "no doi field present"
+      ]
+    },
+    {
+      "sourceId": "support-context",
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\81\\81ceae8fefe3e50c99aa97bac271bf6dcb30d58e45425d43e3ec8a6680cd5562",
+      "digest": "sha256:81ceae8fefe3e50c99aa97bac271bf6dcb30d58e45425d43e3ec8a6680cd5562",
+      "linesRead": "1-531 of 531",
+      "readId": "read-5e77f8f3-f623-41e1-82c7-0268a663d178",
+      "extracted": [
+        "D1: equiatomic FCC FeNiCrCoCu model alloy; elements Fe, Ni, Cr, Co, Cu",
+        "D6: potential Farkas-Caro 2018 corrected EAM/alloy; doi 10.1557/jmr.2018.245",
+        "D6 source: .../2018--Farkas-D-Caro-A--Fe-Ni-Cr-Co-Cu/2/FeNiCrCoCu-heafixed.setfl",
+        "limitations: idealized model-alloy potential; rigid repulsive sphere abrasive; single short small-cell test with convergence, repeat-seed statistics and experimental comparison pending",
+        "validationProtocol mode: exploratory with three missing comparisons (time-step-convergence, material-model-validation, grinding-reference)"
+      ]
+    }
+  ],
+  "scopeCompatibility": {
+    "exploratoryScopeApproved": true,
+    "missingExperimentalEvidenceAccepted": true,
+    "blockingGaps": [],
+    "rationale": "Element set and pairStyle match the frozen requirement exactly, and the approved exploratory scope explicitly accepts absent convergence, repeat-seed and experimental references; the gaps are documented rather than blocking."
+  }
+}

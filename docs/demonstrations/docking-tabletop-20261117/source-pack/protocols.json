@@ -1,0 +1,33 @@
+{
+  "id": "protocols",
+  "items": [
+    {
+      "id": "search-study",
+      "mode": "replication",
+      "initialBindings": {
+        "protocol": "protocol"
+      },
+      "carryBindings": {},
+      "aggregation": {
+        "poseRuns": "collect"
+      },
+      "seedStrategy": "预定非零种子与受体/状态各自稳定ID。",
+      "budgetRef": "task.resources",
+      "stopRule": "预定矩阵完成或预算/取消终止，覆盖不足保留缺口。",
+      "variations": [
+        "seed",
+        "exhaustiveness",
+        "receptorState",
+        "ligandState"
+      ]
+    },
+    {
+      "id": "qualification",
+      "mode": "validation",
+      "dataPartition": "开发/控制、候选、留出评估集分别登记。",
+      "redocking": "参考姿态与搜索初态分开；记录参考用途和原子映射。",
+      "screening": "标签、诱饵、骨架泄漏、阳性率和失败处理固定。",
+      "result": "scopeDecision约束下游可报告结论。"
+    }
+  ]
+}

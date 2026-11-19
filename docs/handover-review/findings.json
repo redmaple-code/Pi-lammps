@@ -1,0 +1,553 @@
+{
+  "revision": "HR-1",
+  "date": "2026-11-17",
+  "source_zip_sha256": "e7fbae3489c45985cace5cbe9dc03c3ffb4837799828889227f27b57531832ec",
+  "source_package": "../../source-snapshot/mdagent-handover-review-20261117/MDagent-subsystems-handover-20261117",
+  "design_authority": "01-development-design.md",
+  "findings": [
+    {
+      "id": "HR-01",
+      "priority": "P1",
+      "title": "数据根与初始化",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W01",
+        "HR-W06"
+      ],
+      "modules": [
+        "MOD-17",
+        "MOD-01",
+        "MOD-12"
+      ],
+      "existing_tasks": [
+        "DEV-17-1",
+        "DEV-17-2",
+        "DEV-17-3",
+        "DEV-01-1",
+        "DEV-01-2",
+        "DEV-01-3",
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "acceptance": [
+        "HR-ACC-01",
+        "HR-ACC-13"
+      ],
+      "probes": [
+        "PROBE-06"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/evolution/kb/adapter.py",
+          "line": 117
+        },
+        {
+          "path": "src/design-review-layer/review_layer/ukb_store.py",
+          "line": 57
+        },
+        {
+          "path": "README.md",
+          "line": 80
+        }
+      ]
+    },
+    {
+      "id": "HR-02",
+      "priority": "P1",
+      "title": "验证隔离与凭据清理",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W01"
+      ],
+      "modules": [
+        "MOD-17"
+      ],
+      "existing_tasks": [
+        "DEV-17-1",
+        "DEV-17-2",
+        "DEV-17-3"
+      ],
+      "acceptance": [
+        "HR-ACC-02",
+        "HR-ACC-03"
+      ],
+      "probes": [
+        "PROBE-07"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "tools/run_verification.py",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "id": "HR-03",
+      "priority": "P1",
+      "title": "算例前缀串案",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W02"
+      ],
+      "modules": [
+        "MOD-08",
+        "MOD-10"
+      ],
+      "existing_tasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3",
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "acceptance": [
+        "HR-ACC-04"
+      ],
+      "probes": [
+        "PROBE-01"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/mcp/md_proj_mcp.py",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "id": "HR-04",
+      "priority": "P1",
+      "title": "方案原子提交与审计",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W02"
+      ],
+      "modules": [
+        "MOD-08"
+      ],
+      "existing_tasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3"
+      ],
+      "acceptance": [
+        "HR-ACC-05",
+        "HR-ACC-06"
+      ],
+      "probes": [
+        "PROBE-02"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/mcp/md_proj_mcp.py",
+          "line": 171
+        },
+        {
+          "path": "src/mcp/md_proj_mcp.py",
+          "line": 105
+        }
+      ]
+    },
+    {
+      "id": "HR-05",
+      "priority": "P1",
+      "title": "审阅完整覆盖",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W03"
+      ],
+      "modules": [
+        "MOD-04",
+        "MOD-05",
+        "MOD-06"
+      ],
+      "existing_tasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3",
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3",
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "acceptance": [
+        "HR-ACC-07",
+        "HR-ACC-08"
+      ],
+      "probes": [
+        "PROBE-05"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/mcp/design_review.py",
+          "line": 234
+        }
+      ]
+    },
+    {
+      "id": "HR-06",
+      "priority": "P1",
+      "title": "空或未知检查判定",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W04"
+      ],
+      "modules": [
+        "MOD-10",
+        "MOD-04"
+      ],
+      "existing_tasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3",
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "acceptance": [
+        "HR-ACC-09",
+        "HR-ACC-10"
+      ],
+      "probes": [
+        "PROBE-03",
+        "PROBE-04"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/design-review-layer/review_layer/review.py",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "id": "HR-07",
+      "priority": "P1",
+      "title": "可信人工确认",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W05"
+      ],
+      "modules": [
+        "MOD-01",
+        "MOD-04",
+        "MOD-15"
+      ],
+      "existing_tasks": [
+        "DEV-01-1",
+        "DEV-01-2",
+        "DEV-01-3",
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3",
+        "DEV-15-1",
+        "DEV-15-2",
+        "DEV-15-3"
+      ],
+      "acceptance": [
+        "HR-ACC-11",
+        "HR-ACC-12"
+      ],
+      "probes": [
+        "PROBE-08"
+      ],
+      "basis": "behavioral-reproduction-and-source",
+      "sources": [
+        {
+          "path": "src/mcp/md_proj_mcp.py",
+          "line": 638
+        },
+        {
+          "path": "src/mcp/md_proj_mcp.py",
+          "line": 1054
+        }
+      ]
+    },
+    {
+      "id": "HR-08",
+      "priority": "P2",
+      "title": "状态与action契约",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W06"
+      ],
+      "modules": [
+        "MOD-01",
+        "MOD-02",
+        "MOD-08",
+        "MOD-11",
+        "MOD-16",
+        "MOD-19"
+      ],
+      "existing_tasks": [
+        "DEV-01-1",
+        "DEV-01-2",
+        "DEV-01-3",
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3",
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3",
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3",
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3",
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "acceptance": [
+        "HR-ACC-13",
+        "HR-ACC-14",
+        "HR-ACC-15"
+      ],
+      "probes": [],
+      "basis": "source-and-document-review",
+      "sources": [
+        {
+          "path": "src/mcp/md_mcp.py",
+          "line": 883
+        },
+        {
+          "path": "src/evolution/stage_state.py",
+          "line": 34
+        },
+        {
+          "path": "src/evolution/evidence_v3/store.py",
+          "line": 208
+        },
+        {
+          "path": "src/evolution/evidence_v3/service.py",
+          "line": 114
+        },
+        {
+          "path": "src/mcp/evidence_api.py",
+          "line": 92
+        }
+      ]
+    },
+    {
+      "id": "HR-09",
+      "priority": "P2",
+      "title": "知识降级与能力披露",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W07"
+      ],
+      "modules": [
+        "MOD-12",
+        "MOD-06",
+        "MOD-19"
+      ],
+      "existing_tasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3",
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3",
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "acceptance": [
+        "HR-ACC-16"
+      ],
+      "probes": [],
+      "basis": "source-and-document-review",
+      "sources": [
+        {
+          "path": "src/design-review-layer/review_layer/common_issues.py",
+          "line": 14
+        },
+        {
+          "path": "src/design-review-layer/review_layer/discovery.py",
+          "line": 30
+        },
+        {
+          "path": "src/design-review-layer/review_layer/sources.py",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "id": "HR-10",
+      "priority": "P1",
+      "title": "完整备份恢复",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W07"
+      ],
+      "modules": [
+        "MOD-12",
+        "MOD-16"
+      ],
+      "existing_tasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3",
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3"
+      ],
+      "acceptance": [
+        "HR-ACC-17",
+        "HR-ACC-18"
+      ],
+      "probes": [],
+      "basis": "source-and-document-review",
+      "sources": [
+        {
+          "path": "src/ukb/ukb/api.py",
+          "line": 184
+        },
+        {
+          "path": "src/ukb/ukb/core/maintenance.py",
+          "line": 106
+        }
+      ]
+    },
+    {
+      "id": "HR-11",
+      "priority": "P2",
+      "title": "测试口径与编码可移植性",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W01",
+        "HR-W08"
+      ],
+      "modules": [
+        "MOD-17"
+      ],
+      "existing_tasks": [
+        "DEV-17-1",
+        "DEV-17-2",
+        "DEV-17-3"
+      ],
+      "acceptance": [
+        "HR-ACC-03",
+        "HR-ACC-20",
+        "HR-ACC-21"
+      ],
+      "probes": [],
+      "basis": "source-and-document-review",
+      "sources": [
+        {
+          "path": "verification/RESULTS.json",
+          "line": 1
+        },
+        {
+          "path": "tools/run_verification.py",
+          "line": 35
+        },
+        {
+          "path": "src/tests/test_md_mcp_contract.py",
+          "line": 148
+        },
+        {
+          "path": "src/mcp/md_mcp.py",
+          "line": 21
+        }
+      ]
+    },
+    {
+      "id": "HR-12",
+      "priority": "P2",
+      "title": "发布来源依赖与许可",
+      "status": "open",
+      "implementation": "notImplemented",
+      "fix_verification": "notRun",
+      "review": "00-review.md",
+      "work_items": [
+        "HR-W08"
+      ],
+      "modules": [
+        "MOD-16",
+        "MOD-17",
+        "MOD-18"
+      ],
+      "existing_tasks": [
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3",
+        "DEV-17-1",
+        "DEV-17-2",
+        "DEV-17-3",
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "acceptance": [
+        "HR-ACC-19"
+      ],
+      "probes": [],
+      "basis": "source-and-document-review",
+      "sources": [
+        {
+          "path": "PACKAGE-MANIFEST.json",
+          "line": 1
+        },
+        {
+          "path": "PACKAGING-NOTES.md",
+          "line": 1
+        },
+        {
+          "path": "tools/package_manifest.py",
+          "line": 87
+        },
+        {
+          "path": "NOTICE",
+          "line": 1
+        },
+        {
+          "path": "SANITIZATION.md",
+          "line": 1
+        }
+      ]
+    }
+  ]
+}

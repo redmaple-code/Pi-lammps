@@ -1,0 +1,15 @@
+{
+  "module": "knowledge",
+  "version": "0.2.0",
+  "protocol": "mdagent-stdio/1",
+  "python": "3.11+",
+  "external_install_dependencies": [],
+  "embedded_legacy_components": [
+    "knowledge",
+    "shared"
+  ],
+  "modifications": [
+    "automatic third-party PDF extraction disabled; injectable extractor remains supported"
+  ],
+  "source_version": "0.1.1"
+}

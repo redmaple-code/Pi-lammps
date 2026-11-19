@@ -1,0 +1,111 @@
+############################################################################
+################################# Deform method ##########################
+############################################################################
+
+#------------------------------Model settings--------------------------
+clear
+shell               mkdir output ./output/minimize ./output
+/relax ./output/shear ./output/data
+
+#------------------------------Basic settings--------------------------
+units               metal
+dimension           3  
+boundary           p p p        
+atom_style          atomic
+
+variable            Temp equal 300  	# desired temperature
+variable            tstp equal 0.001            # timestep
+variable            tdamp equal 100*${tstp}     # damping parameters # 
+variable            pdamp equal 1000*${tstp}    # for NPT ensemble   #
+variable            dump_every equal 1000       
+variable            equi_step equal 20000
+
+lattice hcp 2.95
+region    box block 0 50 0 50 0 50
+create_box 3 box
+create_atoms 1 box
+set type 1 type/ratio 2 0.0755 123456
+set type 1 type/ratio 3 0.1625 123456
+
+mass                3 51.996 # Cr
+mass                1 47.867 #Ti
+mass                2 26.981 # Al
+#----------------------------------------- Force Field ------------------------------------
+
+pair_style          eam/alloy
+pair_coeff          * *  TiAl.eam.alloy Ti Al Ti
+#pair_coeff          * *  library.meam Al Co Cu Cr Fe Mn Ni Ti CrTiAl.meam Cr Ti Al
+
+#--------------------------------------------- Minimization ---------------------------------------
+thermo              100
+timestep            ${tstp}
+thermo_style        custom step temp etotal pe ke pxy
+
+# compute specific quantities
+compute             pot_energy all pe/atom
+dump                min all custom ${dump_every} ./output/minimize/dump_minimize.*.lammpstrj id type x y z c_pot_energy 
+
+min_style           cg
+minimize            1.0e-6 1.0e-6 10000 10000
+
+write_data          ./output/minimize/mini.data
+
+#------------------------------------------ equilibrium -------------------------------
+undump              min
+reset_timestep      0
+
+compute             new3d all temp
+compute             new2d all temp/partial 0 1 1
+
+dump                min all custom ${dump_every} ./output/relax/dump_minimize.*.lammpstrj id type x y z c_pot_energy 
+velocity            all create ${Temp} 12345 units box
+fix	      1 all nvt temp ${Temp} ${Temp} ${tdamp}
+fix_modify          1 temp new3d
+
+thermo              1000
+thermo_modify       temp new3d
+run                 ${equi_step} 
+undump min
+write_data          ./output/relax/equil.data
+write_restart       ./output/relax/equil.restart
+
+#------------------------------------------- shear in xy plane -------------------------------------
+reset_timestep      0
+unfix               1
+
+change_box all boundary p p p 
+
+variable            tmpx equal lx
+variable            tmpy equal ly
+variable            tmpz equal lz
+variable            L0x equal ${tmpx}
+variable            L0y equal ${tmpy}
+variable            L0z equal ${tmpz}
+
+# In units metal, pressure is in [bars]; sxz is in GPa
+
+variable            srate equal 0.01           
+variable            final_strain equal 0.9
+variable            dyna_step equal ${final_strain}/(${srate}*${tstp})
+
+variable            sxx equal "-pxx/10000"          # calculate shear stress
+variable            syy equal "-pyy/10000"          # calculate shear stress
+variable            szz equal "-pzz/10000"          # calculate shear stress
+variable            strain equal ${srate}*step*${tstp}        # calculate shear strain
+
+# deformation starts!
+#fix				    1 all nve
+#fix                 2 all temp/rescale 1 ${Temp} ${Temp} ${tdamp} 0.5
+fix				2 all npt temp ${Temp} ${Temp} ${tdamp} x 0 0 1 y 0 0 1 couple none
+fix_modify          2 temp new2d
+
+fix                 3 all deform 1 z erate -${srate} remap x
+
+dump                result all custom ${dump_every} ./output/shear/dump.*.lammps id type x y z
+fix                 def1 all print 100 "${strain} ${szz}" file ./output/data/Shear_data.txt screen no
+thermo_style 	    custom step press pe pxx pyy pzz pxy pxz pyz v_strain 
+run                 ${dyna_step}
+write_data          ./output/shear/shear_end.*.data
+write_restart       ./output/shear/shear_end.*.restart
+
+print "-------------------------------- All done! -----------------------------------------"

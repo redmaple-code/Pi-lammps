@@ -1,0 +1,67 @@
+# 3d Lennard-Jones melt
+
+units		metal
+atom_style	atomic
+dimension   3
+boundary    p p p 
+
+lattice		fcc 3.6150
+region		box block 0 10 0 10 0 10
+create_box	1 box
+create_atoms	1 box
+mass		1 63.55
+
+pair_style	eam
+pair_coeff	* * Cu_u3.eam
+
+neighbor	1.0 bin
+neigh_modify	every 20 delay 0 check no
+
+min_style   cg
+minimize    1.0e-8 1.0e-8 10000 10000
+timestep    0.001
+reset_timestep  0
+thermo      5000
+thermo_style    custom lx ly lz step pe ke temp vol press
+velocity    all create 300 123456 mom yes rot yes dist gaussian
+
+variable           tmpx equal "lx"
+variable           tmpy equal "ly"
+variable           tmpz equal "lz"
+​
+variable        Lx0 equal ${tmpx}
+variable        Ly0 equal ${tmpy}
+variable         Lz0 equal ${tmpz}
+​
+variable        strainx equal "(lx - v_Lx0)/v_Lx0"
+variable        strainy equal "(ly - v_Ly0)/v_Ly0"
+variable        strainz equal "(lz - v_Lz0)/v_Lz0"
+​
+variable        stressx equal "-pxx/10000"
+variable        stressy equal "-pyy/10000"
+variable        stressz equal "-pzz/10000"
+
+compute     KE all ke/atom
+variable    KB equal 8.625e-5
+variable    TEMP atom c_KE/1.5/${KB}
+
+velocity        all create 300 123456 dist gaussian
+
+fix             1 all npt temp 300 300 1 aniso 0 0 1
+timestep        0.001
+run             40000
+unfix           1
+
+reset_timestep 0
+dump            1 all custom 1000 tensile.xyz id type x y z
+
+#dump       result2 all custom ${dump_step} dump_${r}.*.lammps id type x  y  z  
+fix         def3 all print 1000 "${strainy} ${stressy}" file stressY-strainY.dat screen no
+variable            times equal step*dt
+fix         def4 all print 1000 "${times} ${stressy}" file stressY-time.dat screen no
+
+#restart         10000 tmp.restart
+#unfix           1
+
+fix             1 all npt temp 300 300 1 y 0 -50000 2
+run             100000

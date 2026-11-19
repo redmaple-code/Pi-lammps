@@ -1,0 +1,2810 @@
+{
+  "id": "75b594bbaf3b57e77358f8cbf6836a4bc15fa9ee1d4edff1522a40125d68592f",
+  "status": "completed",
+  "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9",
+  "imported": [
+    {
+      "sourcePath": ".angsheng/agents/hello-agent.md",
+      "targetPath": "legacy/agents/hello-agent.md",
+      "digest": "sha256:9039e2b07d2b4bb23d79d04000d1d808de1b1f5ca5bcc96bb1a1c8f3491873d7",
+      "observedAt": "2026-11-17T06:28:02.190Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-analyst.md",
+      "targetPath": "legacy/agents/lammps-analyst.md",
+      "digest": "sha256:adfceaee35ac4c1ba2ea83f8dcd317d298aa90b7b19ebf1d7d1b9b67de1e1ce4",
+      "observedAt": "2026-11-17T06:28:02.197Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-case-librarian.md",
+      "targetPath": "legacy/agents/lammps-case-librarian.md",
+      "digest": "sha256:54a51fae7fd05760fa1eb92f07df57175011ff137efa7096621472af0661ac4f",
+      "observedAt": "2026-11-17T06:28:02.204Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-coordinator.md",
+      "targetPath": "legacy/agents/lammps-coordinator.md",
+      "digest": "sha256:7927a6ad0d718fda5872ad6045370ba1eebac5ac5a8a55ecc5c5a68c8c146eb6",
+      "observedAt": "2026-11-17T06:28:02.212Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-data-analyst.md",
+      "targetPath": "legacy/agents/lammps-data-analyst.md",
+      "digest": "sha256:d4e1bd3b8bbde45f7caa9ff4ea814d4d522487c2bf24d1043df01fba9b57d8b9",
+      "observedAt": "2026-11-17T06:28:02.219Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-input-writer.md",
+      "targetPath": "legacy/agents/lammps-input-writer.md",
+      "digest": "sha256:36b9ca1f803d6b9fc54a19720f8eb901b0a06cee0da85081e6d7ef6e1a2b1ce5",
+      "observedAt": "2026-11-17T06:28:02.227Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-kb-coordinator.md",
+      "targetPath": "legacy/agents/lammps-kb-coordinator.md",
+      "digest": "sha256:6375109965363193f84190ffe97db88fa1d130905100f43f5d104fa959b77400",
+      "observedAt": "2026-11-17T06:28:02.234Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-kb-curator.md",
+      "targetPath": "legacy/agents/lammps-kb-curator.md",
+      "digest": "sha256:471dbf919d238ed79d390b253505adc76bf69a59908e4fc44b9f2856e372a7e5",
+      "observedAt": "2026-11-17T06:28:02.240Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-kb-reviewer.md",
+      "targetPath": "legacy/agents/lammps-kb-reviewer.md",
+      "digest": "sha256:1d05d4b13be613d7d145081736b864c55ba157c0418cd3a15c5d8aa87dbb2063",
+      "observedAt": "2026-11-17T06:28:02.248Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-paper-researcher.md",
+      "targetPath": "legacy/agents/lammps-paper-researcher.md",
+      "digest": "sha256:b63fc9e0a0e4cfd02e151ccacc44b96ab49a7ea355b2d1b38bea125c55a7b2ef",
+      "observedAt": "2026-11-17T06:28:02.255Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-post-processor.md",
+      "targetPath": "legacy/agents/lammps-post-processor.md",
+      "digest": "sha256:fee0d9c10a151b7b6ed315676c1711c8635f79d8557085547b1d316e5a177bda",
+      "observedAt": "2026-11-17T06:28:02.263Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-reviewer.md",
+      "targetPath": "legacy/agents/lammps-reviewer.md",
+      "digest": "sha256:50e775d18bd3c01557a2cf5343c65e668087fdb4df9a193b0dd5cf188a34b063",
+      "observedAt": "2026-11-17T06:28:02.269Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-simulation-architect.md",
+      "targetPath": "legacy/agents/lammps-simulation-architect.md",
+      "digest": "sha256:6fe1719e5b2f3c7a29ed5dd9f41971baca10359ca38be344f38a462fe1e54af7",
+      "observedAt": "2026-11-17T06:28:02.276Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/agents/lammps-simulation-reasoner.md",
+      "targetPath": "legacy/agents/lammps-simulation-reasoner.md",
+      "digest": "sha256:e34dd19901f87d2395a546e3cbbfb39dd4b8161615e22d41c62811fff9b224f1",
+      "observedAt": "2026-11-17T06:28:02.283Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-atomsk-modeling/SKILL.md",
+      "targetPath": "legacy/skills/lammps-atomsk-modeling/SKILL.md",
+      "digest": "sha256:a72a82382efb215b62b15f3d947f4770ffc54bdad8cf55b15626b9c8bbf345c9",
+      "observedAt": "2026-11-17T06:28:02.292Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-hpc-submit/SKILL.md",
+      "targetPath": "legacy/skills/lammps-hpc-submit/SKILL.md",
+      "digest": "sha256:d3de76cd5ff60827dc40337e9d76f4bc77bd120e04b034538b75f99b48df8ee7",
+      "observedAt": "2026-11-17T06:28:02.302Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-hpc-submit/references/checklist.md",
+      "targetPath": "legacy/skills/lammps-hpc-submit/references/checklist.md",
+      "digest": "sha256:286a26d79534cddbf9137b3a0d11d7fd092689bc92c4840080672dcb27f543af",
+      "observedAt": "2026-11-17T06:28:02.310Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-paper-reproduction-auditor/SKILL.md",
+      "targetPath": "legacy/skills/lammps-paper-reproduction-auditor/SKILL.md",
+      "digest": "sha256:fe6f227f7570ec64ea979c79a345d9b348d554a4d267333920b7c8b978b74e1b",
+      "observedAt": "2026-11-17T06:28:02.320Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-paper-research/SKILL.md",
+      "targetPath": "legacy/skills/lammps-paper-research/SKILL.md",
+      "digest": "sha256:913f40f352f28964bda3ddfa3a03f2cd29ee26dbebf0473aa0c4295a9318b48a",
+      "observedAt": "2026-11-17T06:28:02.327Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-visualization/SKILL.md",
+      "targetPath": "legacy/skills/lammps-visualization/SKILL.md",
+      "digest": "sha256:f188f967f8131eba09cea0212762d5504a6e4b819cb20ffda6cfb79f7e4f190b",
+      "observedAt": "2026-11-17T06:28:02.335Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/skills/lammps-visualization/references/ovito-checklist.md",
+      "targetPath": "legacy/skills/lammps-visualization/references/ovito-checklist.md",
+      "digest": "sha256:5ff65f1c8f38329dd9aa447657b4b2b9b4b5af2ef171c6ee1cf51b3db93cfd8f",
+      "observedAt": "2026-11-17T06:28:02.342Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/cif_to_lammps.sh",
+      "targetPath": "legacy/templates/atomsk/cif_to_lammps.sh",
+      "digest": "sha256:57d7773372842f7a546cc1948ed7f74fba40a961d9ecd38a0824d0957227511a",
+      "observedAt": "2026-11-17T06:28:02.349Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/create_basic_bcc.sh",
+      "targetPath": "legacy/templates/atomsk/create_basic_bcc.sh",
+      "digest": "sha256:76fd8083cb181977219b8553eab26a066fa1f18f12e79bc3be587bdbc808a239",
+      "observedAt": "2026-11-17T06:28:02.358Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/create_basic_fcc.sh",
+      "targetPath": "legacy/templates/atomsk/create_basic_fcc.sh",
+      "digest": "sha256:ece556ec3548ce998660db7a305073e662b1789f6697484578f474aba9eea009",
+      "observedAt": "2026-11-17T06:28:02.365Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/dislocation_inclusion_basic.sh",
+      "targetPath": "legacy/templates/atomsk/dislocation_inclusion_basic.sh",
+      "digest": "sha256:d46fbd0970a510c0632866caab6ca4c170a2ffa17e766f965ac7954839874851",
+      "observedAt": "2026-11-17T06:28:02.373Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/orientation_alignx_unskew.sh",
+      "targetPath": "legacy/templates/atomsk/orientation_alignx_unskew.sh",
+      "digest": "sha256:f1cf82c7bcca215b8ed300b2dacb75935c73bf74669277102d170ad631c42b2d",
+      "observedAt": "2026-11-17T06:28:02.381Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/point_defects_basic.sh",
+      "targetPath": "legacy/templates/atomsk/point_defects_basic.sh",
+      "digest": "sha256:b434a94dbc2e4206ae40d7f21d18432793beb9cb2e45fc942bcea891dba13732",
+      "observedAt": "2026-11-17T06:28:02.393Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/polycrystal_basic.sh",
+      "targetPath": "legacy/templates/atomsk/polycrystal_basic.sh",
+      "digest": "sha256:495cc610130409dad210600a4776fd1b9373f6d720f283bff00d6dd8ef0dcf88",
+      "observedAt": "2026-11-17T06:28:02.401Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/stacking_fault_basic.sh",
+      "targetPath": "legacy/templates/atomsk/stacking_fault_basic.sh",
+      "digest": "sha256:749250faedfb456af7bcc6e12c8bf515c3906405f21a5d9ad767f0a9da6fe79f",
+      "observedAt": "2026-11-17T06:28:02.413Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/atomsk/twin_boundary_basic.sh",
+      "targetPath": "legacy/templates/atomsk/twin_boundary_basic.sh",
+      "digest": "sha256:0f9c573ffb33671fdf235c882386a100e6407c1ac5c396b72f3ff8a99e9c52f6",
+      "observedAt": "2026-11-17T06:28:02.422Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/decisions.md",
+      "targetPath": "legacy/templates/lammps-project/decisions.md",
+      "digest": "sha256:afb90983cf3035b71d4d50d7d53b7da56af3d406b64dd2e54d9f3a7cf0f234a7",
+      "observedAt": "2026-11-17T06:28:02.436Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/execution.json",
+      "targetPath": "legacy/templates/lammps-project/execution.json",
+      "digest": "sha256:62b613710844147fbb97bc4eb3df832677c30c758a866058649760d591827abe",
+      "observedAt": "2026-11-17T06:28:02.447Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/modeling.json",
+      "targetPath": "legacy/templates/lammps-project/modeling.json",
+      "digest": "sha256:44678a2e7d05f7aedc5af3c3d47e08eb3c57ac14df617150cf0fa9439d753d76",
+      "observedAt": "2026-11-17T06:28:02.454Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/open-issues.md",
+      "targetPath": "legacy/templates/lammps-project/open-issues.md",
+      "digest": "sha256:f6b8a8e7402b57d778473c04ca6133592b2bea4aaa093b29e7663741bac66901",
+      "observedAt": "2026-11-17T06:28:02.464Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/project.json",
+      "targetPath": "legacy/templates/lammps-project/project.json",
+      "digest": "sha256:42b3e12815f5e8e9790f15ecf21ee77f7bc969e4e5f3975fdbdae952cabca7ad",
+      "observedAt": "2026-11-17T06:28:02.474Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/review-log.md",
+      "targetPath": "legacy/templates/lammps-project/review-log.md",
+      "digest": "sha256:dde46faa1f051f5afb9737a830ffb9b503144b86f2df151a28e6864ced0436ca",
+      "observedAt": "2026-11-17T06:28:02.483Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/stage-summary.md",
+      "targetPath": "legacy/templates/lammps-project/stage-summary.md",
+      "digest": "sha256:6da41246a554e6eb970df9b8277cc66281e2efbb454c35b0b169e9423a253274",
+      "observedAt": "2026-11-17T06:28:02.492Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/wf02.packet.json",
+      "targetPath": "legacy/templates/lammps-project/wf02.packet.json",
+      "digest": "sha256:8b3d61eadf1465ec49934918ab8f4c8ccfe2c30c7eeef80c32294a142e15bb27",
+      "observedAt": "2026-11-17T06:28:02.502Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-project/wf03a.packet.json",
+      "targetPath": "legacy/templates/lammps-project/wf03a.packet.json",
+      "digest": "sha256:dd7732b0ccc4863be2852cfeeddcec430f624ef7f991dff58b2e62963e5ed955",
+      "observedAt": "2026-11-17T06:28:02.511Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps-team/README.md",
+      "targetPath": "legacy/templates/lammps-team/README.md",
+      "digest": "sha256:e03f4084d01ce88ff32193b2bbfd1e701e697a153ee1f07e5385635de8a4fe72",
+      "observedAt": "2026-11-17T06:28:02.522Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps/hea-melt-solidify.in",
+      "targetPath": "legacy/templates/lammps/hea-melt-solidify.in",
+      "digest": "sha256:8409726038fcec7631a16b4ff723afa2a36ac72984b31f5181bdb653c3ee7020",
+      "observedAt": "2026-11-17T06:28:02.531Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps/meam-alloy.in",
+      "targetPath": "legacy/templates/lammps/meam-alloy.in",
+      "digest": "sha256:a3c7754b080bdff2d637c2bd5760eebd6a51cf8eba2c4579b925f2ae3ab53bb0",
+      "observedAt": "2026-11-17T06:28:02.541Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps/reaxff-reactive.in",
+      "targetPath": "legacy/templates/lammps/reaxff-reactive.in",
+      "digest": "sha256:00bf8949a72dd0034a7d6f2a18ad8d642ee2b2017826330f28b9cfe747677996",
+      "observedAt": "2026-11-17T06:28:02.552Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps/restart-continue.in",
+      "targetPath": "legacy/templates/lammps/restart-continue.in",
+      "digest": "sha256:5bd7dbb27ffb55d2bb96dd78d04bc0905fc2036c21f6ce0b17b73f34317087bd",
+      "observedAt": "2026-11-17T06:28:02.561Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/lammps/tensile-strain.in",
+      "targetPath": "legacy/templates/lammps/tensile-strain.in",
+      "digest": "sha256:e928880282501d7d7b95d6f4775c79688ca795fded90cb1deb2b7b0f80f1c2ae",
+      "observedAt": "2026-11-17T06:28:02.570Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/cluster_analysis.py",
+      "targetPath": "legacy/templates/ovito/cluster_analysis.py",
+      "digest": "sha256:5266584ba39a054e638eea29ebda0b23230f5a1dfeda305cb251fc7e07156b17",
+      "observedAt": "2026-11-17T06:28:02.576Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/cna_render.py",
+      "targetPath": "legacy/templates/ovito/cna_render.py",
+      "digest": "sha256:1cee679a54dca585109d208916a6cc3ff62caa837bc30bfac00f3f264e2101ad",
+      "observedAt": "2026-11-17T06:28:02.584Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/dislocation_time_series.py",
+      "targetPath": "legacy/templates/ovito/dislocation_time_series.py",
+      "digest": "sha256:ebd1f8165230b5e5141558de07313c128b0807be182a2d69f13e7d8208d87f64",
+      "observedAt": "2026-11-17T06:28:02.591Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/dislocation_tracking.py",
+      "targetPath": "legacy/templates/ovito/dislocation_tracking.py",
+      "digest": "sha256:e4218acf6b0c22a901c84bb0f78ea054e77b38ad880d3cc3becadefb38b63bcb",
+      "observedAt": "2026-11-17T06:28:02.598Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/export_dump_columns.py",
+      "targetPath": "legacy/templates/ovito/export_dump_columns.py",
+      "digest": "sha256:a3e313f24cfda280232ad97df98081d89db46202603768dbb3d7fcaf74cba002",
+      "observedAt": "2026-11-17T06:28:02.606Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/focus_region_render.py",
+      "targetPath": "legacy/templates/ovito/focus_region_render.py",
+      "digest": "sha256:8024766d2a6ee3e4c4998d416a83daa2f7f3c4d1f723fb527d918435e5bda039",
+      "observedAt": "2026-11-17T06:28:02.614Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/pipelines/general_pipeline.py",
+      "targetPath": "legacy/templates/ovito/pipelines/general_pipeline.py",
+      "digest": "sha256:936fbecdc791c24b0454bbaf232bce8735d1694a64a581e8a4c6e72f993e8bad",
+      "observedAt": "2026-11-17T06:28:02.623Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/pipelines/melting_pipeline.py",
+      "targetPath": "legacy/templates/ovito/pipelines/melting_pipeline.py",
+      "digest": "sha256:0e3cf956a8bccad1652222adba7a073d2912137dcc6776622e7697cb7296d2d6",
+      "observedAt": "2026-11-17T06:28:02.630Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/pipelines/metal_tension_pipeline.py",
+      "targetPath": "legacy/templates/ovito/pipelines/metal_tension_pipeline.py",
+      "digest": "sha256:5d5ba425fb5e63cb43e032d086fc58d958859dc4183c52f2d60886132ceae538",
+      "observedAt": "2026-11-17T06:28:02.638Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/pipelines/shear_pipeline.py",
+      "targetPath": "legacy/templates/ovito/pipelines/shear_pipeline.py",
+      "digest": "sha256:98e434f1fd4b479b712eaa8c254df6125d3f9396fd81b2ce410181fb045d7824",
+      "observedAt": "2026-11-17T06:28:02.647Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/rdf_analysis.py",
+      "targetPath": "legacy/templates/ovito/rdf_analysis.py",
+      "digest": "sha256:f4200e6a7360d3df8139b8861013d1815a290ce3172588b97f83ccd0aa407896",
+      "observedAt": "2026-11-17T06:28:02.657Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/render_engine.py",
+      "targetPath": "legacy/templates/ovito/render_engine.py",
+      "digest": "sha256:91c202be78d322bd86c346ab218af6a6deb676a30093959dc368fbeec3837794",
+      "observedAt": "2026-11-17T06:28:02.663Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/render_frame.py",
+      "targetPath": "legacy/templates/ovito/render_frame.py",
+      "digest": "sha256:6cbe86fbd6905a14af7e7a52ad9894722208dbab38c01354c84b6b2bbed17b3f",
+      "observedAt": "2026-11-17T06:28:02.672Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/render_snapshot.py",
+      "targetPath": "legacy/templates/ovito/render_snapshot.py",
+      "digest": "sha256:d73e42af1c0eb724fc4f2db514308a6eb04f4af8b3d23adaaa497006089810ea",
+      "observedAt": "2026-11-17T06:28:02.679Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/renderer_compare.py",
+      "targetPath": "legacy/templates/ovito/renderer_compare.py",
+      "digest": "sha256:bf7fe0a367165f83a9ba9a366430ee32b017c191a9a5dd3fdd73dfaec9e9ebb1",
+      "observedAt": "2026-11-17T06:28:02.686Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/stress_field_map.py",
+      "targetPath": "legacy/templates/ovito/stress_field_map.py",
+      "digest": "sha256:256ee1823f10e1340fb49b9f67a81ff0bf6a0defb077ff05f6c6d894b3cc3e29",
+      "observedAt": "2026-11-17T06:28:02.694Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/temperature_field_map.py",
+      "targetPath": "legacy/templates/ovito/temperature_field_map.py",
+      "digest": "sha256:d206931fb2041e6d3a3a947502b8771517656719187e976d66b68ee0d46886b4",
+      "observedAt": "2026-11-17T06:28:02.700Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/01_import_summary.py",
+      "targetPath": "legacy/templates/ovito/tests/01_import_summary.py",
+      "digest": "sha256:a53c47491be06df3afb6e403a787fa27ddc21d1000f219207b51118fee1390dc",
+      "observedAt": "2026-11-17T06:28:02.708Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/02_render_last_frame.py",
+      "targetPath": "legacy/templates/ovito/tests/02_render_last_frame.py",
+      "digest": "sha256:dc4662b1dd4d9448544bb3e2f4892a57c5af7041a5466068edd0fc89947297c4",
+      "observedAt": "2026-11-17T06:28:02.714Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/03_export_cna_dump.py",
+      "targetPath": "legacy/templates/ovito/tests/03_export_cna_dump.py",
+      "digest": "sha256:62c37502b3be91a9c7e13ec2c7724ba9f302b7f688941e5a80c4dab9f4d6a997",
+      "observedAt": "2026-11-17T06:28:02.722Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/04_rdf_table.py",
+      "targetPath": "legacy/templates/ovito/tests/04_rdf_table.py",
+      "digest": "sha256:7e2e87e3e3d98974a6768312ecf125e627cdd732642e8b96540a2b12a10c3690",
+      "observedAt": "2026-11-17T06:28:02.730Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/05_coordination_histogram.py",
+      "targetPath": "legacy/templates/ovito/tests/05_coordination_histogram.py",
+      "digest": "sha256:dd54b165f2aae8991d46c2663280a422a9310fca0aaca73c0a2a748cceef2ce4",
+      "observedAt": "2026-11-17T06:28:02.738Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/06_cna_structure_counts.py",
+      "targetPath": "legacy/templates/ovito/tests/06_cna_structure_counts.py",
+      "digest": "sha256:5f31bb5ddeca45c4c5a2416f16b5f844e10061a080d2a3b3a7f13ef02b6d092b",
+      "observedAt": "2026-11-17T06:28:02.745Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/07_cluster_sizes.py",
+      "targetPath": "legacy/templates/ovito/tests/07_cluster_sizes.py",
+      "digest": "sha256:71d4c5df44d9c2d7b3b57ba0290af6d617100345025e7350aa95ef194693c44d",
+      "observedAt": "2026-11-17T06:28:02.752Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/08_displacement_summary.py",
+      "targetPath": "legacy/templates/ovito/tests/08_displacement_summary.py",
+      "digest": "sha256:463bc43f40d6d098bda2afab3625327c323f5f6e65c657f52ee39ded74d689c6",
+      "observedAt": "2026-11-17T06:28:02.760Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/09_displacement_export.py",
+      "targetPath": "legacy/templates/ovito/tests/09_displacement_export.py",
+      "digest": "sha256:c815c4c8df83fab0d406eea0d2ffd1f011255bf3400606567c63090570ff24eb",
+      "observedAt": "2026-11-17T06:28:02.769Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/10_voronoi_stats.py",
+      "targetPath": "legacy/templates/ovito/tests/10_voronoi_stats.py",
+      "digest": "sha256:f79d35c627a0c4bdf8300f66eb6cce0439fa0262b7f30ce89a3987f7ef956112",
+      "observedAt": "2026-11-17T06:28:02.779Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/11_slice_render.py",
+      "targetPath": "legacy/templates/ovito/tests/11_slice_render.py",
+      "digest": "sha256:b58c3a27f376802ba0a1f15798b396281b09ab4ef5f2b16f51d638249846421d",
+      "observedAt": "2026-11-17T06:28:02.787Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/12_selection_delete_preview.py",
+      "targetPath": "legacy/templates/ovito/tests/12_selection_delete_preview.py",
+      "digest": "sha256:3b183e38cf0c67f410018cdd5e12330f9fdb6c94a0b61639d4cae87648ff3d22",
+      "observedAt": "2026-11-17T06:28:02.798Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/13_dislocation_scan.py",
+      "targetPath": "legacy/templates/ovito/tests/13_dislocation_scan.py",
+      "digest": "sha256:78d56818de41be0ac47fd939109028596e8189344c5147835bca7491803f8db7",
+      "observedAt": "2026-11-17T06:28:02.805Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/14_renderer_smoke.py",
+      "targetPath": "legacy/templates/ovito/tests/14_renderer_smoke.py",
+      "digest": "sha256:ddff12b2dab102591344b22f44e87a8d44d1a277323a2cc41d70c65dbe7c3f02",
+      "observedAt": "2026-11-17T06:28:02.817Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/15_select_type_count.py",
+      "targetPath": "legacy/templates/ovito/tests/15_select_type_count.py",
+      "digest": "sha256:92ff639e0e75242b21be6ecaf922fdf0f69f10c386291c568c79dd222f74801d",
+      "observedAt": "2026-11-17T06:28:02.825Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/16_colored_focus_render.py",
+      "targetPath": "legacy/templates/ovito/tests/16_colored_focus_render.py",
+      "digest": "sha256:ecce126a82cc1a1bc8c151e30175591c2bc5ca9c15b35da3aad7d3d7aef7bb61",
+      "observedAt": "2026-11-17T06:28:02.836Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/17_framewise_particle_count.py",
+      "targetPath": "legacy/templates/ovito/tests/17_framewise_particle_count.py",
+      "digest": "sha256:b2fb3f9f43793317112784a59448cf2b470435da896e39bd1a1abc0bbd921c5b",
+      "observedAt": "2026-11-17T06:28:02.847Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/18_framewise_cna_evolution.py",
+      "targetPath": "legacy/templates/ovito/tests/18_framewise_cna_evolution.py",
+      "digest": "sha256:d51a3624a60e2b9c66354e2d3478227404f029ff9a7b0af23999707855be9632",
+      "observedAt": "2026-11-17T06:28:02.859Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/19_framewise_rdf_peak.py",
+      "targetPath": "legacy/templates/ovito/tests/19_framewise_rdf_peak.py",
+      "digest": "sha256:94ad640301d2862813145636bae26662f92cdbd2d7780367cef82529b03b1227",
+      "observedAt": "2026-11-17T06:28:02.870Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/20_temperature_mean.py",
+      "targetPath": "legacy/templates/ovito/tests/20_temperature_mean.py",
+      "digest": "sha256:1a0c99e6b3ac3c899073820f639ca5fb9abad5df6ad57439fa64a8ebb561d124",
+      "observedAt": "2026-11-17T06:28:02.878Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/21_stress_mean.py",
+      "targetPath": "legacy/templates/ovito/tests/21_stress_mean.py",
+      "digest": "sha256:ecdd49e49c500ce816e82df42c1349f61a9ebfc9aa63745bbd4c9110422deea6",
+      "observedAt": "2026-11-17T06:28:02.890Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/22_delete_type_export.py",
+      "targetPath": "legacy/templates/ovito/tests/22_delete_type_export.py",
+      "digest": "sha256:e03a6805ecdbf03ae7b670c89e1da4de1767983908c16a139c87e2ae07f58958",
+      "observedAt": "2026-11-17T06:28:02.897Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/23_top_view_render.py",
+      "targetPath": "legacy/templates/ovito/tests/23_top_view_render.py",
+      "digest": "sha256:e6230caeaa7cb5ce7bb823d1b5d9defd554d9522c9e362c6978051c1e6a2a80a",
+      "observedAt": "2026-11-17T06:28:02.907Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/24_attribute_probe.py",
+      "targetPath": "legacy/templates/ovito/tests/24_attribute_probe.py",
+      "digest": "sha256:0e90f6eb22ad5089fec7d4274d505623abcbe5cd6b33e0191a1b9951db2ab615",
+      "observedAt": "2026-11-17T06:28:02.916Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": ".angsheng/templates/ovito/tests/README.md",
+      "targetPath": "legacy/templates/ovito/tests/README.md",
+      "digest": "sha256:4da25e7cdcbea553587351fb55cf1381c1184669a61321c035043465a9e060cb",
+      "observedAt": "2026-11-17T06:28:02.925Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "docs/implementation/agent-self-evolution-baseline.md",
+      "targetPath": "docs/implementation/agent-self-evolution-baseline.md",
+      "digest": "sha256:19510ef4b50ddc582f7c82e2cc7b1e1c61376cffc92400ab4e692ed912da1471",
+      "observedAt": "2026-11-17T06:28:02.933Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/CASE_METADATA.md",
+      "targetPath": "knowledge/cases/CASE_METADATA.md",
+      "digest": "sha256:e9db1fd733c1df2545479b13964d9de4a8dd6603eda2d19c2aa3b9cb59e40344",
+      "observedAt": "2026-11-17T06:28:02.946Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/INDEX.md",
+      "targetPath": "knowledge/cases/INDEX.md",
+      "digest": "sha256:77ab3450214a7e05c7b82fc1508946ebe8080bee8d6b5067c794489d91138816",
+      "observedAt": "2026-11-17T06:28:02.953Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/README.md",
+      "targetPath": "knowledge/cases/README.md",
+      "digest": "sha256:cd89be33a6429468f01a45c95d4e7595bb9c58dfb6aa3bf6c9db3e02225abc3e",
+      "observedAt": "2026-11-17T06:28:02.963Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/case-family-index.md",
+      "targetPath": "knowledge/cases/case-family-index.md",
+      "digest": "sha256:ab4832eee44d75eb82e1370c7f166601b32e4f506d3ea73c68272c27b499768e",
+      "observedAt": "2026-11-17T06:28:02.973Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-1-19805bf0.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-1-19805bf0.md",
+      "digest": "sha256:b3bd17cc8a56f8de4c6722e736d4d461770f893c5787565253f47d91fb8010af",
+      "observedAt": "2026-11-17T06:28:02.983Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-1-43451274.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-1-43451274.md",
+      "digest": "sha256:914510743be1ebabd45b5dd0f79f9d7a78d952f3b403135f5ffa106f254b2091",
+      "observedAt": "2026-11-17T06:28:02.992Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-1-595f1c99.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-1-595f1c99.md",
+      "digest": "sha256:4a601b9df3c62ab7bc6e2b0d8d742cd52cdf8a18eb820c8f198405c2ad366b2e",
+      "observedAt": "2026-11-17T06:28:02.999Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-1-co2-014f1321.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-1-co2-014f1321.md",
+      "digest": "sha256:ff88bd19a36b72ab33a7619c6406d8ca8db0189eafb1952e15481f56992c9ab1",
+      "observedAt": "2026-11-17T06:28:03.007Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-1co2-6878919d.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-1co2-6878919d.md",
+      "digest": "sha256:979f54603d1e5e48ef3bae60b440ea9bb8ca7d1c4300d883526f65afe7665ff8",
+      "observedAt": "2026-11-17T06:28:03.018Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-0afdd806.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-0afdd806.md",
+      "digest": "sha256:aec5ca1a0829b80f0f94e76b763cd5899c2b08e09cfa075d934864e1531801e2",
+      "observedAt": "2026-11-17T06:28:03.028Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-2c34c701.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-2c34c701.md",
+      "digest": "sha256:bc7dd6cf0618d4ba390b013a231a77bdafea8e5de9a6d249d338a55b76d69181",
+      "observedAt": "2026-11-17T06:28:03.038Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-307df31e.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-307df31e.md",
+      "digest": "sha256:62ddffd87a8d0e6e3dab584b301922abc15a13f4295f108b4b830806203f4609",
+      "observedAt": "2026-11-17T06:28:03.046Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-41cedc4a.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-41cedc4a.md",
+      "digest": "sha256:a53d923a4be22072bc504f534fab2e39124283f98885d33bf3dabee005e849aa",
+      "observedAt": "2026-11-17T06:28:03.053Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-5869691a.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-5869691a.md",
+      "digest": "sha256:034284e13962962bdf46303cbddbc786bd408cdc820bac9bc412d10e77f16456",
+      "observedAt": "2026-11-17T06:28:03.064Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-67e55f89.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-67e55f89.md",
+      "digest": "sha256:1103ba14449102668e0ed6229713711a2a7ad40c76c83a34401b5dfa13ba7df5",
+      "observedAt": "2026-11-17T06:28:03.071Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-6db18c15.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-6db18c15.md",
+      "digest": "sha256:3c5f27a5c50b994eb23037adfc4feef8fac61d499b3370b8051317527968a067",
+      "observedAt": "2026-11-17T06:28:03.084Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-6fa1ed7e.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-6fa1ed7e.md",
+      "digest": "sha256:7e2edc980e5d293f429fc08becf3e3db976136f831dea63cf7ccddc824473c5a",
+      "observedAt": "2026-11-17T06:28:03.092Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-8b84e6c4.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-8b84e6c4.md",
+      "digest": "sha256:fa2a593bd6482fa02589b53b8bfe57ed555e15f7884f7a868822345e55a2cf76",
+      "observedAt": "2026-11-17T06:28:03.101Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-8bd755d8.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-8bd755d8.md",
+      "digest": "sha256:f22ad9b578bb010e41e6716dfe68960a8be97e9d3316d7c8b9c252df04cdbf64",
+      "observedAt": "2026-11-17T06:28:03.112Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-98b483fe.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-98b483fe.md",
+      "digest": "sha256:f979e5f5f7c21e24206d5d929f9e89dc827d661c64dbdbdaad852ac4ce3087a2",
+      "observedAt": "2026-11-17T06:28:03.119Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-a6f7746a.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-a6f7746a.md",
+      "digest": "sha256:7df013b8b9f040abce248cb3a9b4c93375e2f2940b18e0ccc0bc44753af9736f",
+      "observedAt": "2026-11-17T06:28:03.127Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-b93e6b46.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-b93e6b46.md",
+      "digest": "sha256:18d795d0bd67246109321029079a76a906c9fbad262c33f65da7469897f43445",
+      "observedAt": "2026-11-17T06:28:03.134Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-bc39e10f.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-bc39e10f.md",
+      "digest": "sha256:ba4655927b2466a648cd04d67b469eaa30795b03582be5975cb9ee7e283958b4",
+      "observedAt": "2026-11-17T06:28:03.142Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-bfa24fa6.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-bfa24fa6.md",
+      "digest": "sha256:b1001ac7bcc17e41f4dd8a9ebe633d3d927954763963089e2f21c94105931045",
+      "observedAt": "2026-11-17T06:28:03.149Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-d0608dcc.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-d0608dcc.md",
+      "digest": "sha256:c305378c183ac452640d19b689a22ed79281503ea9f9895556e2da3e8f25754b",
+      "observedAt": "2026-11-17T06:28:03.158Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-e2a88ddb.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-e2a88ddb.md",
+      "digest": "sha256:a24f3a8bb1438e12c486c0deb94b9da190370f8dba68e7fdd9c46d99510fdebc",
+      "observedAt": "2026-11-17T06:28:03.168Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-e87aab4c.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-e87aab4c.md",
+      "digest": "sha256:2afbf7de8f59c97f0ffb884c240e49cc3cafe9761a08322baab6b468497757bb",
+      "observedAt": "2026-11-17T06:28:03.176Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-entry-fa7c3bc3.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-entry-fa7c3bc3.md",
+      "digest": "sha256:f03fdb6e7ce2ad6cddf6a6ffd1f4dfa5ed3ce9c78c3fb3e065eea3deb6f1bc44",
+      "observedAt": "2026-11-17T06:28:03.185Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-naoh-bf47bb7b.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-naoh-bf47bb7b.md",
+      "digest": "sha256:9a76571a676638582f683743f3908a051bc528f020cf3d587ba1023aab7b41b8",
+      "observedAt": "2026-11-17T06:28:03.192Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-pdf6-c274de8c.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-pdf6-c274de8c.md",
+      "digest": "sha256:91691ecd4e2979c22d1ffaa94930da4cbe74631ad6a199ff3eafbd1cdc8af471",
+      "observedAt": "2026-11-17T06:28:03.201Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/notes/2026-04-14-pdms-01b766ff.md",
+      "targetPath": "knowledge/cases/notes/2026-04-14-pdms-01b766ff.md",
+      "digest": "sha256:c00c9afb76d9fcbba581c35162c577edf8369953ed60e7e199648651b128106b",
+      "observedAt": "2026-11-17T06:28:03.209Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/debug_cell.in",
+      "targetPath": "knowledge/cases/paper-reproduction/debug_cell.in",
+      "digest": "sha256:a2e95a567987f23600ff582b558aa9ecff74d17e327e10ebdd69f5655e70e321",
+      "observedAt": "2026-11-17T06:28:03.218Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/debug_cell2.in",
+      "targetPath": "knowledge/cases/paper-reproduction/debug_cell2.in",
+      "digest": "sha256:08472ce2400d68c05ae9765abb59a1aead81fc790f700192428c4935a82ba172",
+      "observedAt": "2026-11-17T06:28:03.225Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/download_potential.ps1",
+      "targetPath": "knowledge/cases/paper-reproduction/download_potential.ps1",
+      "digest": "sha256:198805e4207a749f2b92ef31f315e715c5abe8eea9966ee0ce645c46d5225bf9",
+      "observedAt": "2026-11-17T06:28:03.233Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/fault_structures/fault_meta.txt",
+      "targetPath": "knowledge/cases/paper-reproduction/fault_structures/fault_meta.txt",
+      "digest": "sha256:6265d2c290368c3762f8a87633a5b5f5d63dec816ce889275b0f2d2e2d6b8dfb",
+      "observedAt": "2026-11-17T06:28:03.241Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/gen_tial_fault_structures.py",
+      "targetPath": "knowledge/cases/paper-reproduction/gen_tial_fault_structures.py",
+      "digest": "sha256:23ccaeb691fd06dcb6b53f96c60e02ba6d4848c1c0fbfd4915e3fb808327863f",
+      "observedAt": "2026-11-17T06:28:03.250Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/github_search.txt",
+      "targetPath": "knowledge/cases/paper-reproduction/github_search.txt",
+      "digest": "sha256:50f2ee553286608e3021fa73b38c4a651d191dcbf7ef999fb7e0ea06dd39e3ce",
+      "observedAt": "2026-11-17T06:28:03.258Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/nist_hea.html",
+      "targetPath": "knowledge/cases/paper-reproduction/nist_hea.html",
+      "digest": "sha256:5fcc2f39371920e6b28c6b94b7c88563f12742031d8e314acf1c59f635f03ae8",
+      "observedAt": "2026-11-17T06:28:03.275Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/nist_index.html",
+      "targetPath": "knowledge/cases/paper-reproduction/nist_index.html",
+      "digest": "sha256:0ef5a8e38b90307bb4cb20703ee134d3e4aed624e0ac54a8d0f4a71f27735d3b",
+      "observedAt": "2026-11-17T06:28:03.287Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/nist_nial.html",
+      "targetPath": "knowledge/cases/paper-reproduction/nist_nial.html",
+      "digest": "sha256:06277a8c8492b0e9a3e127b3f6619f7a1069c712876a5965c175d1d56188c9fc",
+      "observedAt": "2026-11-17T06:28:03.295Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/nist_search.html",
+      "targetPath": "knowledge/cases/paper-reproduction/nist_search.html",
+      "digest": "sha256:9cb822ec2530ea704c4a6ff934c45372a96c539f8e7dc6af47a78c3ce2afbafd",
+      "observedAt": "2026-11-17T06:28:03.301Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/nist_ti.html",
+      "targetPath": "knowledge/cases/paper-reproduction/nist_ti.html",
+      "digest": "sha256:e1d972100ee4d4a2072bcf0f2c76ae400f7f2116f57e1426340514a2e2471295",
+      "observedAt": "2026-11-17T06:28:03.319Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_al_energy.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_al_energy.in",
+      "digest": "sha256:96b89377286fc5b91c10955eae19a018a615e8c24f1e2ffbc13ee9986ce7ca0b",
+      "observedAt": "2026-11-17T06:28:03.326Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_eam_energy_ref.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_eam_energy_ref.in",
+      "digest": "sha256:9188f54ea7e41be26e9439d6440a7b2d45a7bd30720e51cbaaccb542e70d7820",
+      "observedAt": "2026-11-17T06:28:03.334Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_test.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_test.in",
+      "digest": "sha256:08d730ba8b704b60f0e4885866addfdef5a73dd40d18fbd8305d057b1f001841",
+      "observedAt": "2026-11-17T06:28:03.341Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_ti_energy.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_ti_energy.in",
+      "digest": "sha256:682eccf730ee29fd3f11d4367e6b4cd72218d89893469eb6de0bef0c7a999c41",
+      "observedAt": "2026-11-17T06:28:03.350Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_elastic.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_elastic.in",
+      "digest": "sha256:b5c83ea31447483f97c4565adcf3a8dbe3a14529c774e475f40559dbd0be077f",
+      "observedAt": "2026-11-17T06:28:03.359Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_energy.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_energy.in",
+      "digest": "sha256:42cb235f478cbeecf473ea2768bfaaa2a72a461d7872dec782c3527e9bbf766b",
+      "observedAt": "2026-11-17T06:28:03.367Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_fault.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_fault.in",
+      "digest": "sha256:ff4b26a0c8634ca6693eae1c8539f24733821c44aae9715818cd6235dc674a53",
+      "observedAt": "2026-11-17T06:28:03.377Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_fault_eval.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_fault_eval.in",
+      "digest": "sha256:0a848ff269e50368924c313839f4233fb47fe611f91600d9526461a942a9f987",
+      "observedAt": "2026-11-17T06:28:03.386Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_fault_oriented.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_fault_oriented.in",
+      "digest": "sha256:78be4069f71c9e0bb25ada7ab9b971c9dc4d6ff7808591a6a6b95cfab7bcabe4",
+      "observedAt": "2026-11-17T06:28:03.394Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_tial_lattice.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_tial_lattice.in",
+      "digest": "sha256:c7b03ab22913d922b018ed5dcad1e515720130650f920b73259aa5507814f5fd",
+      "observedAt": "2026-11-17T06:28:03.405Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A1_Al_fcc.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A1_Al_fcc.in",
+      "digest": "sha256:338eaf005ad7bde3ddf66341b94e0c3a93024d479c3e994313b4cc2bf58b84c8",
+      "observedAt": "2026-11-17T06:28:03.413Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A2_Ti_hcp.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A2_Ti_hcp.in",
+      "digest": "sha256:b6c38f404b2b8136b42195f4fa41d2b3f760d9dd6baaf08d17c8a28f77db4d29",
+      "observedAt": "2026-11-17T06:28:03.424Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants.in",
+      "digest": "sha256:26cc005617c291967d9ee6850022d35a7ab8763e5ed2443b626fcb8d4b91ed75",
+      "observedAt": "2026-11-17T06:28:03.432Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants_v2.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants_v2.in",
+      "digest": "sha256:05c452d6d744be1b58da048a9b4c07fff14738d952d891521f00d7d4f4a7293c",
+      "observedAt": "2026-11-17T06:28:03.443Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_elastic_constants.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_elastic_constants.in",
+      "digest": "sha256:13b3e5a452dfdd99016055463095db0fee96e45a4e1da2dd60ce4703ec060fb1",
+      "observedAt": "2026-11-17T06:28:03.454Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_lattice.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_lattice.in",
+      "digest": "sha256:1fd91a54dc3ab45d4b0a797aba8306941846d55c66bd1e208fca4b06ecef8ec6",
+      "observedAt": "2026-11-17T06:28:03.462Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C2_pure_energies.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C2_pure_energies.in",
+      "digest": "sha256:c204258a4210bdce16d0a57317c3aaff8a32a8edd05a73674f73965a32a158bc",
+      "observedAt": "2026-11-17T06:28:03.472Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_cohesive_energy.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_cohesive_energy.in",
+      "digest": "sha256:62a21477b873da621ab1169951772b7f84a5cc2f3b721922eb0a3be936f252b9",
+      "observedAt": "2026-11-17T06:28:03.479Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_pure_energies.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_pure_energies.in",
+      "digest": "sha256:c7b58d06de28aa24ffa6b5caf3f141d1cb12d82f044aad1fe5b6d61307c641a0",
+      "observedAt": "2026-11-17T06:28:03.486Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/D_planar_faults.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/D_planar_faults.in",
+      "digest": "sha256:9b715491d522a3ee6d41be6a70404cc41a441f6a36ec51978b119e3c99d897f3",
+      "observedAt": "2026-11-17T06:28:03.495Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/E_formation_energy.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/E_formation_energy.in",
+      "digest": "sha256:b611ed93e69c872486ee2586d012039a3f510ddf245ae6f14315f77d5e95142d",
+      "observedAt": "2026-11-17T06:28:03.503Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam.py",
+      "digest": "sha256:c7b7412ef87d3500c01d9dc87d5173a24c18fc9269da3ff5cbd54ef29f598497",
+      "observedAt": "2026-11-17T06:28:03.511Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam2.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam2.py",
+      "digest": "sha256:128fe74fe9f12837652c784f3ebc9744bc8e8b16f116d585371c0c3d3c1a462f",
+      "observedAt": "2026-11-17T06:28:03.520Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam3.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam3.py",
+      "digest": "sha256:5845c61f0ba8813fcb9abe992b71afda59f1eadcf68dd40a96da33a1ccfc276d",
+      "observedAt": "2026-11-17T06:28:03.528Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam_files.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam_files.py",
+      "digest": "sha256:9ec2c10f4b5c7763da941656441911d63b31dffc205d30b7e0036ba04388aca8",
+      "observedAt": "2026-11-17T06:28:03.536Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_eam_energy.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_eam_energy.py",
+      "digest": "sha256:b48b6bad2c7e9eee8f9379d9c20519bd5833685d204be2a838809f1fcc7958dc",
+      "observedAt": "2026-11-17T06:28:03.545Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_pair_potential.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_pair_potential.py",
+      "digest": "sha256:f3c0e3d8611c278a6f57fdb88b225b749253f5b73084dc38d0dc4a69730c587b",
+      "observedAt": "2026-11-17T06:28:03.554Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/generate_structures.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/generate_structures.py",
+      "digest": "sha256:e1603f5ca2f07e2d90f2a55b8834ca81cc4f1dbbb83b37c058522a3fce92b582",
+      "observedAt": "2026-11-17T06:28:03.564Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_alloy.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_alloy.py",
+      "digest": "sha256:c7ad534cd66fd538abc0dde1170949cc9a4fd07b78dc8172036e093f952f4dae",
+      "observedAt": "2026-11-17T06:28:03.571Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v3.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v3.py",
+      "digest": "sha256:5f189338e94a8f80f7382b207ac18ea52b06aae7ec7d2563961ec4ae8fdcc071",
+      "observedAt": "2026-11-17T06:28:03.583Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v4.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v4.py",
+      "digest": "sha256:40d3856de05b1b4ec0f1eb1dfed74cd88d2a43de5931e247f050d233a4024833",
+      "observedAt": "2026-11-17T06:28:03.591Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_calcs.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_calcs.py",
+      "digest": "sha256:d47cc5f60bfba88c3286e91f8290f7aef3772aa9bcb07a6c7700a7f47438d759",
+      "observedAt": "2026-11-17T06:28:03.599Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_scans.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_scans.py",
+      "digest": "sha256:84c2432fe820c0e9a6124837be56685ab07a54ac2bd4ebb816ec66f6f16dc222",
+      "observedAt": "2026-11-17T06:28:03.609Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_tests.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_tests.py",
+      "digest": "sha256:b19c72ecf0cf9653c8539d3df9a85e3659ae74d00dd4a6508fbd59da6132c8db",
+      "observedAt": "2026-11-17T06:28:03.618Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_comprehensive_tests.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_comprehensive_tests.py",
+      "digest": "sha256:312c39530a8cc5c63c878bc8f8c3844e99f245caa7cc335b3a855558d85e7312",
+      "observedAt": "2026-11-17T06:28:03.626Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_ca.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_ca.in",
+      "digest": "sha256:4ba6da7e6761fefd4be382c35dd37197da00cfc0791c93290e6a38412b703ef3",
+      "observedAt": "2026-11-17T06:28:03.635Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_tial.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_tial.in",
+      "digest": "sha256:a3553c7887585937e95660d0422d135d819cfacee2342117a4897cf4a0c14ed5",
+      "observedAt": "2026-11-17T06:28:03.648Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t1_Al_fcc.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t1_Al_fcc.in",
+      "digest": "sha256:83d6322e927af3a3d6fab12d9aeeec7146a6271524445d635cd0134d444b7b61",
+      "observedAt": "2026-11-17T06:28:03.660Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t2_Ti_hcp.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t2_Ti_hcp.in",
+      "digest": "sha256:c19845b51ef13e22a2a8c7c08e223fc1736bcfd3cdd0bafd7f982f36753e58cc",
+      "observedAt": "2026-11-17T06:28:03.670Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t3_TiAl_lat.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t3_TiAl_lat.in",
+      "digest": "sha256:9c25d28ea661f74627ef9738adfd0ce217d634a9501c647eea13744525aaa84f",
+      "observedAt": "2026-11-17T06:28:03.677Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test1_al_fcc.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test1_al_fcc.in",
+      "digest": "sha256:a3000e6203079285b152f422af17c2e82bd5f8e16081ff70d40168db167912dc",
+      "observedAt": "2026-11-17T06:28:03.688Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test2_ti_hcp.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test2_ti_hcp.in",
+      "digest": "sha256:2af32255e34ad1f81c818ec1fa752239e41825b7bb8682b7def4b5717e152220",
+      "observedAt": "2026-11-17T06:28:03.697Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test3_tial.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test3_tial.in",
+      "digest": "sha256:79c5a5fc519292d74c55679a8089ae6aa3d8a9293ca16ecc2d0d4bb6462185bb",
+      "observedAt": "2026-11-17T06:28:03.706Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test4_ti_relax.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test4_ti_relax.in",
+      "digest": "sha256:2c92eec2939a0bb6020cd33b2707a31cbcc2e58b332645c75fdf52d6503785d8",
+      "observedAt": "2026-11-17T06:28:03.715Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_al_fcc.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_al_fcc.in",
+      "digest": "sha256:935fb482b7d330540d8d468e2a3a9899224db49b0e96ee78e6eebefc9637e909",
+      "observedAt": "2026-11-17T06:28:03.725Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_fixed.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_fixed.in",
+      "digest": "sha256:2536351b7d5f9443e41af9b8dc4c3b291ab213b1aeeae117151a6f8d31de7ea9",
+      "observedAt": "2026-11-17T06:28:03.732Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice.in",
+      "digest": "sha256:43ae9b86a468de4c7b2ca2b9c1b6ae26210505ff55fb3e593c52eca5cdd6b1e4",
+      "observedAt": "2026-11-17T06:28:03.740Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice2.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice2.in",
+      "digest": "sha256:f9e3c067b7afa76393eb7b5136c7ea511a5ef7f3bdb237fff4297761a923de9c",
+      "observedAt": "2026-11-17T06:28:03.747Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice3.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice3.in",
+      "digest": "sha256:5ed041a1151c7c2819a248f17751661b5bf310920c351a15c569186737b944f8",
+      "observedAt": "2026-11-17T06:28:03.755Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice4.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice4.in",
+      "digest": "sha256:280a13bfb0f0ebc889f96b1ebbad140a6988f533cc92db3d29d38e69a9ed4afd",
+      "observedAt": "2026-11-17T06:28:03.764Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair.in",
+      "digest": "sha256:90804f443f19aec34c8b0f2f1073295df9d7d9a12bc21565e3f9338d36792450",
+      "observedAt": "2026-11-17T06:28:03.772Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.in",
+      "digest": "sha256:2f8c08ff2dff57923d48243c70d374409547ba5b299667bb7293d7dc3af5d670",
+      "observedAt": "2026-11-17T06:28:03.780Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.py",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.py",
+      "digest": "sha256:a00085d8fa393ea8647f5cd370abb7833eb44d22f1ed124b0fa2d5a4e2596b65",
+      "observedAt": "2026-11-17T06:28:03.788Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp.in",
+      "digest": "sha256:2386118928ce2746f3b8a93e0e3fdb4086d08436ddf893d76b6cedd828608e20",
+      "observedAt": "2026-11-17T06:28:03.797Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_check.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_check.in",
+      "digest": "sha256:c960de46cbc210a26ea21a110d36cea188f719006a0110fa794f1c3b8717090d",
+      "observedAt": "2026-11-17T06:28:03.803Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_density.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_density.in",
+      "digest": "sha256:f18417aee50e7a99f10aa539e8a2a3b4a6684653cc7dc15e4078b918cc7d171b",
+      "observedAt": "2026-11-17T06:28:03.813Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_check.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_check.in",
+      "digest": "sha256:8c84a856f8e2481645b6e15142ba585d390a3059d1a1413346975a5edb3d0afe",
+      "observedAt": "2026-11-17T06:28:03.820Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_debug.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_debug.in",
+      "digest": "sha256:cbcb1a0eb5a9257e6f1aa4bc2a9b2f53e490b1234af7b115975984e313839c07",
+      "observedAt": "2026-11-17T06:28:03.827Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_energy_decomp.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_energy_decomp.in",
+      "digest": "sha256:9e34d8a04c22ce4f395f64e6c548b7ed3802e62f0f55e0b2f944b0a99379954d",
+      "observedAt": "2026-11-17T06:28:03.834Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_explicit.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_explicit.in",
+      "digest": "sha256:8b504bf1a75f98967a27aa33a8c5a51c1402789191ab1005d9fdc9e6a5182835",
+      "observedAt": "2026-11-17T06:28:03.846Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderingB.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderingB.in",
+      "digest": "sha256:85dc8b5f33fbb546daba3f3d008ac0c26a863c793655780a148058fa6d0bcc87",
+      "observedAt": "2026-11-17T06:28:03.855Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderings.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderings.in",
+      "digest": "sha256:6436715ad43304eed8f18eabbb72c3f89e3bce9df1c05fa3680263fa59d3fc88",
+      "observedAt": "2026-11-17T06:28:03.862Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_raw.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_raw.in",
+      "digest": "sha256:8bd9333a21f924f3f9b25dc2948f618ebf36d33806958d0d890056a101edf761",
+      "observedAt": "2026-11-17T06:28:03.870Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_relaxed.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_relaxed.in",
+      "digest": "sha256:af1edd6651a1cce4c139f3305aaac0720010d510ec7c67f93cf2522e235aa806",
+      "observedAt": "2026-11-17T06:28:03.877Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_simple.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_simple.in",
+      "digest": "sha256:aab640a03195bbc830b2cd0f3ed8695def0edb0d3ed1dc2ae2e79ff5779b4f01",
+      "observedAt": "2026-11-17T06:28:03.887Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_v2.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_v2.in",
+      "digest": "sha256:0128bc8ee736becbcc91368e04fcc2b20fce3db16865c0d4718c6320825d6a17",
+      "observedAt": "2026-11-17T06:28:03.896Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_v3.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_v3.in",
+      "digest": "sha256:eb55d0a20fa5f9246a74f55e73486c3b0de4b6e46191f238adbe03fad2300f3d",
+      "observedAt": "2026-11-17T06:28:03.908Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/verify_l10.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/verify_l10.in",
+      "digest": "sha256:ee21a6324b9a6e1556930fa65e92a6277d874ce7e8e5805a038c88107f9e7d1b",
+      "observedAt": "2026-11-17T06:28:03.918Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper2_ni_ni3al_tensile.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper2_ni_ni3al_tensile.in",
+      "digest": "sha256:26085311b9b7cc17c08334e3be93c0ade0795a4efd321c6e714f45221584240b",
+      "observedAt": "2026-11-17T06:28:03.927Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper2_ni_tensile.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper2_ni_tensile.in",
+      "digest": "sha256:c9aa85cf0c348b81b12ca26071f0a555cfea4befdb3e8445d5a9a698c9a90d1d",
+      "observedAt": "2026-11-17T06:28:03.936Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/paper3_hea_melt_quench.in",
+      "targetPath": "knowledge/cases/paper-reproduction/paper3_hea_melt_quench.in",
+      "digest": "sha256:62f7bbb37a35d3c33934ca3c37a7ea96dcbbccb27bccaf89592ec951d300fe77",
+      "observedAt": "2026-11-17T06:28:03.945Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/results/paper1_results.md",
+      "targetPath": "knowledge/cases/paper-reproduction/results/paper1_results.md",
+      "digest": "sha256:0e14c11861c26bc9aec75de6e29f22c058e8732575044e71405e772e4ef47dcb",
+      "observedAt": "2026-11-17T06:28:03.958Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/results/reproduction-report.md",
+      "targetPath": "knowledge/cases/paper-reproduction/results/reproduction-report.md",
+      "digest": "sha256:eacddd54397bc81e4cc960c0c2497930c8292d0c1e42fb9228df4e51e3b8a6a5",
+      "observedAt": "2026-11-17T06:28:03.968Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/test_loops.in",
+      "targetPath": "knowledge/cases/paper-reproduction/test_loops.in",
+      "digest": "sha256:47b470522b4d6e6fcdc630e2000abda1189fcf085d3bf7596d731edd59123329",
+      "observedAt": "2026-11-17T06:28:03.979Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/test_nist.txt",
+      "targetPath": "knowledge/cases/paper-reproduction/test_nist.txt",
+      "digest": "sha256:3dede9c8734fe535044e577140682518a24453663fd530098d066b19fd1545dd",
+      "observedAt": "2026-11-17T06:28:03.990Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/cases/paper-reproduction/test_tial_oriented.in",
+      "targetPath": "knowledge/cases/paper-reproduction/test_tial_oriented.in",
+      "digest": "sha256:10fc0ad77427f01fa3344c5a8a71872859bec72826479083d725d21cc2fbe1f9",
+      "observedAt": "2026-11-17T06:28:03.998Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/INDEX.md",
+      "targetPath": "knowledge/memory/INDEX.md",
+      "digest": "sha256:31e0d3c1fccf973d7384968f7b550d7a0c8770e00d446b477628466d53dc46f1",
+      "observedAt": "2026-11-17T06:28:04.005Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/README.md",
+      "targetPath": "knowledge/memory/README.md",
+      "digest": "sha256:26ff368b2a64cf2e6b869c756db2a169f984c2349fd359353842efa88a594e63",
+      "observedAt": "2026-11-17T06:28:04.013Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/confirmed-lessons.md",
+      "targetPath": "knowledge/memory/confirmed-lessons.md",
+      "digest": "sha256:823b2ced748c12df0e7e2d36e616947740da5511fe684d4828a47b16503b1138",
+      "observedAt": "2026-11-17T06:28:04.022Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/core-checks.md",
+      "targetPath": "knowledge/memory/core-checks.md",
+      "digest": "sha256:55561301ca4e777da0e762c3a82c615f249c476d8f40c199a75967100ad7845e",
+      "observedAt": "2026-11-17T06:28:04.031Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/historical-lessons.md",
+      "targetPath": "knowledge/memory/historical-lessons.md",
+      "digest": "sha256:404bb3f6958344e80b5db4ef3b74dd33e0455ca0f79f4ab22989c8d20dae59f1",
+      "observedAt": "2026-11-17T06:28:04.040Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/learning-workflow.md",
+      "targetPath": "knowledge/memory/learning-workflow.md",
+      "digest": "sha256:255d05465e8ae8290b34d35295b1791bf9b7201ab7a8efb1fce7e5baef9cad91",
+      "observedAt": "2026-11-17T06:28:04.049Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/metal-research-insights.md",
+      "targetPath": "knowledge/memory/metal-research-insights.md",
+      "digest": "sha256:54782300c77c2361d799df63135defb387b18d1b42fc8609332b52db9cf420f1",
+      "observedAt": "2026-11-17T06:28:04.058Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/pending-lessons.md",
+      "targetPath": "knowledge/memory/pending-lessons.md",
+      "digest": "sha256:e97f417603a4cd8c51123318fb788934a07e243cceeda0600efe693ad86aabdc",
+      "observedAt": "2026-11-17T06:28:04.068Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/session-lessons.md",
+      "targetPath": "knowledge/memory/session-lessons.md",
+      "digest": "sha256:823673e5cc17567dac2a8b08d4f1a83862b92a09f98adfa639a99c4d94615fb0",
+      "observedAt": "2026-11-17T06:28:04.077Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/verification-rules.md",
+      "targetPath": "knowledge/memory/verification-rules.md",
+      "digest": "sha256:0afe97895e754696fedee0cf6ad8870ca7e03ff5d8389380f1b390d1cd398002",
+      "observedAt": "2026-11-17T06:28:04.085Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/memory/wf01-mg-al-model-setup.md",
+      "targetPath": "knowledge/memory/wf01-mg-al-model-setup.md",
+      "digest": "sha256:e4f7353f1715a771cda6e5ad68c1e182c969e02f18021e4320b0d0660b9c1110",
+      "observedAt": "2026-11-17T06:28:04.097Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/NiAl_reactive_multilayer_MD_benchmarks.md",
+      "targetPath": "knowledge/papers/notes/NiAl_reactive_multilayer_MD_benchmarks.md",
+      "digest": "sha256:9e530e8677226a15a4fa929851d1bcadf4220242f6d37067401a2b6ca5763f8f",
+      "observedAt": "2026-11-17T06:28:04.109Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/a-atom-model.md",
+      "targetPath": "knowledge/papers/notes/a-atom-model.md",
+      "digest": "sha256:7339e7bd4751931a7e44bc3667de33c6d1f2719b43604d1af43961a3b0ecc5dc",
+      "observedAt": "2026-11-17T06:28:04.117Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/al-mishin1999-eam-tensile-benchmarks.md",
+      "targetPath": "knowledge/papers/notes/al-mishin1999-eam-tensile-benchmarks.md",
+      "digest": "sha256:9efe355e67c26dbe5519081de78938ccdeb3fcb09ac962fdef84ea0f91ecec1f",
+      "observedAt": "2026-11-17T06:28:04.124Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/coal-model-c183h130o20n2.md",
+      "targetPath": "knowledge/papers/notes/coal-model-c183h130o20n2.md",
+      "digest": "sha256:9b2c91617dc8586d512c80a159dbbf1746be48b87dd1cd5797bd907ff6b698a8",
+      "observedAt": "2026-11-17T06:28:04.132Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/hea-optimization-strategies.md",
+      "targetPath": "knowledge/papers/notes/hea-optimization-strategies.md",
+      "digest": "sha256:c205150ba28dab3f84beccad8fc154169328fdcd85081b536298820b90dc2e5b",
+      "observedAt": "2026-11-17T06:28:04.139Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/lightweight-hea-systems.md",
+      "targetPath": "knowledge/papers/notes/lightweight-hea-systems.md",
+      "digest": "sha256:1eb278fbf8b1d0f5b1e927259494f7d4b355def7e1519339c6f3fc99263e50c2",
+      "observedAt": "2026-11-17T06:28:04.146Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/mgal-oxidation-potential.md",
+      "targetPath": "knowledge/papers/notes/mgal-oxidation-potential.md",
+      "digest": "sha256:f39886e2f90140cc569481f048cc62b772c4a88688b08c2f4cdd51831e7769be",
+      "observedAt": "2026-11-17T06:28:04.161Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/notes/multi-material-potential-survey.md",
+      "targetPath": "knowledge/papers/notes/multi-material-potential-survey.md",
+      "digest": "sha256:eead4544881608ca1ff52fa905efbea83b508623e8deadb0641067add24c6b12",
+      "observedAt": "2026-11-17T06:28:04.169Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/topics/a-atom-model.md",
+      "targetPath": "knowledge/papers/topics/a-atom-model.md",
+      "digest": "sha256:72ee1a71b17a7fe64ec0f051f4d1f28076aa7e3eae2a560beb6b12147852e0a3",
+      "observedAt": "2026-11-17T06:28:04.177Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/papers/topics/al-eam-tensile.md",
+      "targetPath": "knowledge/papers/topics/al-eam-tensile.md",
+      "digest": "sha256:729eeb4363ff3d02ccda859c42ad01dc2d95e4412df8245b6f65bcb885755f7a",
+      "observedAt": "2026-11-17T06:28:04.185Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-2026-04-03-90b07f34.md",
+      "targetPath": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-2026-04-03-90b07f34.md",
+      "digest": "sha256:3ce8200329172bc83ff15e7a380a5dac6fe35db90acbe72f934846e980ba2b2f",
+      "observedAt": "2026-11-17T06:28:04.193Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-wave2-2026-04-03-38417ebe.md",
+      "targetPath": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-wave2-2026-04-03-38417ebe.md",
+      "digest": "sha256:bebdeca12ad2dfdfd5333799079a666a62fb9ed2c2e40c38ea07b57a83b9887f",
+      "observedAt": "2026-11-17T06:28:04.201Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave10-2026-04-05-76dc2d3b.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave10-2026-04-05-76dc2d3b.md",
+      "digest": "sha256:c018546ee83539c5aa2f8efac46144ca8f1e6c363e0ae44f6c47610b4aed369b",
+      "observedAt": "2026-11-17T06:28:04.209Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave11-2026-04-05-f1058865.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave11-2026-04-05-f1058865.md",
+      "digest": "sha256:a7a9db87dd0054ba92a5c3781999fbf2fb5aca5d9adffecefe6df62306932dab",
+      "observedAt": "2026-11-17T06:28:04.219Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave3-2026-04-03-beea57ec.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave3-2026-04-03-beea57ec.md",
+      "digest": "sha256:2a3d9f9bb748239f58f12a6e1d95309315d72ecfd272d62f95dddb7bbc0b08d0",
+      "observedAt": "2026-11-17T06:28:04.227Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave4-2026-04-04-27c6b033.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave4-2026-04-04-27c6b033.md",
+      "digest": "sha256:2a18ac67ab35897c073d2f6ef3fd725212b5b5bdeaecf2c5c0329ef0ed90d6ec",
+      "observedAt": "2026-11-17T06:28:04.236Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave5-2026-04-04-808383fa.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave5-2026-04-04-808383fa.md",
+      "digest": "sha256:70c23f389006c617bb91f56f8cd7a7dc02994ddc20c21d732fa887f77aa9eab3",
+      "observedAt": "2026-11-17T06:28:04.244Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave6-2026-04-04-ca3bfc45.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave6-2026-04-04-ca3bfc45.md",
+      "digest": "sha256:4c1d0e592d8bb842e85094fc5ad16f730cd20d63099d6487ca6805ffea265498",
+      "observedAt": "2026-11-17T06:28:04.251Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave7-2026-04-04-3ef9a957.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave7-2026-04-04-3ef9a957.md",
+      "digest": "sha256:6b36d2bd1213b474239fc71472dc9b5d427ef6a14aca2bd0463e6166308a6c6d",
+      "observedAt": "2026-11-17T06:28:04.260Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave8-2026-04-04-61765eba.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave8-2026-04-04-61765eba.md",
+      "digest": "sha256:7621fd285b1eb116a2ec7895b876cc78fc9d96e5796a25aa4af2c5afd8c25815",
+      "observedAt": "2026-11-17T06:28:04.270Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave9-2026-04-04-e3759efc.md",
+      "targetPath": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave9-2026-04-04-e3759efc.md",
+      "digest": "sha256:86d7a8b0a7d5347362b0fa480b124feea47b3a95a5f4cb5075f5d0873eec2125",
+      "observedAt": "2026-11-17T06:28:04.280Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave12-2026-04-05-becf2c16.md",
+      "targetPath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave12-2026-04-05-becf2c16.md",
+      "digest": "sha256:b6b756b99bd891ad426946f2e05ac136bf65149b38e64cfcc97b0879f29213d1",
+      "observedAt": "2026-11-17T06:28:04.290Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave13-2026-04-05-14d8a483.md",
+      "targetPath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave13-2026-04-05-14d8a483.md",
+      "digest": "sha256:8bcec4e1c8162b4048f784a31ecbb6c29eaf918897017e2de95adbb57712a869",
+      "observedAt": "2026-11-17T06:28:04.298Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave14-2026-04-05-2d9933bb.md",
+      "targetPath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave14-2026-04-05-2d9933bb.md",
+      "digest": "sha256:a5345b78e21ceea919e8fa5c4cfaffb08a892e726a8dde0096602e0fe580b212",
+      "observedAt": "2026-11-17T06:28:04.308Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave15-2026-04-05-ef57101f.md",
+      "targetPath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave15-2026-04-05-ef57101f.md",
+      "digest": "sha256:0f9fa0590b15b8b4fc04d7a49eab666fcbac6808608d5a8745d83d353917dea0",
+      "observedAt": "2026-11-17T06:28:04.317Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave16-2026-04-05-be872632.md",
+      "targetPath": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave16-2026-04-05-be872632.md",
+      "digest": "sha256:fbba18d4b442cef591f3d74c8bc7b307fe51d70ea4ee1f5aa8302cc195b5825d",
+      "observedAt": "2026-11-17T06:28:04.325Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/README.md",
+      "targetPath": "knowledge/reports/README.md",
+      "digest": "sha256:7a9adbfe0a7a1b56f13c448c4589a2d4a6e7acac8eb2fb1b6cfcc2231f6c171b",
+      "observedAt": "2026-11-17T06:28:04.334Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/bun-windows-crash-note.md",
+      "targetPath": "knowledge/reports/bun-windows-crash-note.md",
+      "digest": "sha256:3447013a1ba42629bae41e0a9d2ef25f1c8aeeb1d4f200091725c9a233790ed0",
+      "observedAt": "2026-11-17T06:28:04.344Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/lammps-agent-test-report.md",
+      "targetPath": "knowledge/reports/lammps-agent-test-report.md",
+      "digest": "sha256:0ee2dc7d751cf6257e9a705c379012e432f2768f99699d733ed085bb9c42d99f",
+      "observedAt": "2026-11-17T06:28:04.354Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/lammps-cli-implementation-checklist.md",
+      "targetPath": "knowledge/reports/lammps-cli-implementation-checklist.md",
+      "digest": "sha256:05b594cde47bd0e13a031bdf3986b157e12e8f40193580711923d3548165c188",
+      "observedAt": "2026-11-17T06:28:04.364Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/lammps-cli-test-suite.md",
+      "targetPath": "knowledge/reports/lammps-cli-test-suite.md",
+      "digest": "sha256:fe23c32245805af1e6cc24a105e5767e26696c9e2fcc381b2b2e0a54c7de01e8",
+      "observedAt": "2026-11-17T06:28:04.374Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/lammps-implementation-summary.md",
+      "targetPath": "knowledge/reports/lammps-implementation-summary.md",
+      "digest": "sha256:2695d2f084bc7b255b8fada39edc59e68080c44a64eab145ff6e722954938c0c",
+      "observedAt": "2026-11-17T06:28:04.389Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/reports/legacy-knowledge-readme.md",
+      "targetPath": "knowledge/reports/legacy-knowledge-readme.md",
+      "digest": "sha256:d91ada9381eba4971135d4484ba2c8db017e8ec4eff2377c112c9273a82dba2f",
+      "observedAt": "2026-11-17T06:28:04.399Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/README.md",
+      "targetPath": "knowledge/rules/README.md",
+      "digest": "sha256:756c0efbdc5d35c193794cfec67822858324df4c2cca43a5ca3e81f27ca8bc0e",
+      "observedAt": "2026-11-17T06:28:04.407Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/execution-workflow.md",
+      "targetPath": "knowledge/rules/execution-workflow.md",
+      "digest": "sha256:b001e9cdc6c5551008fadc02beb8a0d237bb7be718198e1fe3d74caf75ee3d58",
+      "observedAt": "2026-11-17T06:28:04.416Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/failure-patterns.md",
+      "targetPath": "knowledge/rules/failure-patterns.md",
+      "digest": "sha256:3306457a31341a6cdb954a827808a5bdf108351cbc9908fa50076670fdeef8b9",
+      "observedAt": "2026-11-17T06:28:04.424Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/learned-rules.md",
+      "targetPath": "knowledge/rules/learned-rules.md",
+      "digest": "sha256:3fffba13a1b1ef148be0e8d858b4912d78d6d268b0106fd914f066dea83b5756",
+      "observedAt": "2026-11-17T06:28:04.441Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/light-stage-handoffs.md",
+      "targetPath": "knowledge/rules/light-stage-handoffs.md",
+      "digest": "sha256:d932b591107073949740e7a1f0540409d13e069720feae173d8833a2bbadd344",
+      "observedAt": "2026-11-17T06:28:04.456Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/log-analysis-playbook.md",
+      "targetPath": "knowledge/rules/log-analysis-playbook.md",
+      "digest": "sha256:7df31047596d21ee9a113cc741744a295b83cfeedf49923d71639144d38eb988",
+      "observedAt": "2026-11-17T06:28:04.473Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/mandatory-checks.md",
+      "targetPath": "knowledge/rules/mandatory-checks.md",
+      "digest": "sha256:65eb3197e3c86f80d6ccede9850ab8b7bf0ec89fb0ca8460b3e35f9fbe7fc2e1",
+      "observedAt": "2026-11-17T06:28:04.482Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/matplotlib-standards.md",
+      "targetPath": "knowledge/rules/matplotlib-standards.md",
+      "digest": "sha256:f8e67d1391b9e2eeed734af8545828cfbe70dc6ea6d47b5e75c106536272f0ac",
+      "observedAt": "2026-11-17T06:28:04.495Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/modeling-workflow.md",
+      "targetPath": "knowledge/rules/modeling-workflow.md",
+      "digest": "sha256:1bb8ffc4c74908e11a5a9b5fc1514ab710ac475d9bbaed362a8c66f47e8d7384",
+      "observedAt": "2026-11-17T06:28:04.506Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/ovito-rendering-standards.md",
+      "targetPath": "knowledge/rules/ovito-rendering-standards.md",
+      "digest": "sha256:f3772b7397ede5ff89f17eda3df76618f94a428ab117eaf335d5d5397a6648d0",
+      "observedAt": "2026-11-17T06:28:04.514Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/post-processing-standards.md",
+      "targetPath": "knowledge/rules/post-processing-standards.md",
+      "digest": "sha256:cb8b6ebd8c06ad6628a49e8689592c85d5ab71361befeae0e2775dd3d9c9dc91",
+      "observedAt": "2026-11-17T06:28:04.524Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/potential-selection.md",
+      "targetPath": "knowledge/rules/potential-selection.md",
+      "digest": "sha256:a913cbf4a9118fb87a40e7333f6fb5be38a573bb09211baf3c8219a7ccfb54dc",
+      "observedAt": "2026-11-17T06:28:04.533Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/project-state-management.md",
+      "targetPath": "knowledge/rules/project-state-management.md",
+      "digest": "sha256:7a05605cb319d8d651869de007a48fc94930770690d4831dda2698e53031b5d2",
+      "observedAt": "2026-11-17T06:28:04.546Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/review-guidelines.md",
+      "targetPath": "knowledge/rules/review-guidelines.md",
+      "digest": "sha256:df64fede3d7f93ce79ce309507e3f37b188e1989ba718e6c8b3b93413d8f7199",
+      "observedAt": "2026-11-17T06:28:04.555Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/simplifications.md",
+      "targetPath": "knowledge/rules/simplifications.md",
+      "digest": "sha256:d62ceda2a632eb0902f1c43e8821fbc4a5ee77d413b24334f6588aa11ec75767",
+      "observedAt": "2026-11-17T06:28:04.563Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/wf00-scheme-design.md",
+      "targetPath": "knowledge/rules/wf00-scheme-design.md",
+      "digest": "sha256:3ab89362f6aa890998f981f42d0457cdf827265bdcc093f5cc06cbf376109b98",
+      "observedAt": "2026-11-17T06:28:04.576Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/workflow-handoffs.md",
+      "targetPath": "knowledge/rules/workflow-handoffs.md",
+      "digest": "sha256:acd21f5cb8c258f194308a91c8efa1d8e960f8feac30f06c919478eb2b541ba9",
+      "observedAt": "2026-11-17T06:28:04.585Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/rules/workflow-stages.md",
+      "targetPath": "knowledge/rules/workflow-stages.md",
+      "digest": "sha256:3ee7667543f311c95d317b639e5e602c01f646306f039e01044d34f9852a3e8a",
+      "observedAt": "2026-11-17T06:28:04.594Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/README.md",
+      "targetPath": "knowledge/templates/README.md",
+      "digest": "sha256:dc95970c475a0fdadc658c8d8a5e1b80c32cad72cce1ac5613893a2ae719599a",
+      "observedAt": "2026-11-17T06:28:04.605Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/answers/README.md",
+      "targetPath": "knowledge/templates/answers/README.md",
+      "digest": "sha256:f1ef7f1a73b80cb02a4de2f954f4efead3f37917feb25cc654f809c64e02b569",
+      "observedAt": "2026-11-17T06:28:04.616Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/answers/eam-alloy-multi-element.md",
+      "targetPath": "knowledge/templates/answers/eam-alloy-multi-element.md",
+      "digest": "sha256:38979bb355fe34f3b510e00bebdb36c86d092e75d9f4450ce6e585912b39ed1a",
+      "observedAt": "2026-11-17T06:28:04.625Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/atomsk-command-templates.md",
+      "targetPath": "knowledge/templates/atomsk-command-templates.md",
+      "digest": "sha256:732a252d2d411f90be7f2ed677898f6911a20037d3a5d3ff76f6fb9b7143b8e5",
+      "observedAt": "2026-11-17T06:28:04.637Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/input-self-check.md",
+      "targetPath": "knowledge/templates/input-self-check.md",
+      "digest": "sha256:17d6fc20c613b8d35834fb6e07fa505269b255f545a50e3022cef0067e063e7e",
+      "observedAt": "2026-11-17T06:28:04.651Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/input-template-families.md",
+      "targetPath": "knowledge/templates/input-template-families.md",
+      "digest": "sha256:4bcdfd8e30699afbaba72c5bbd4b88f7ca6d242eab87b5e2932fd972ce1f4800",
+      "observedAt": "2026-11-17T06:28:04.659Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "knowledge/templates/ovito-python-templates.md",
+      "targetPath": "knowledge/templates/ovito-python-templates.md",
+      "digest": "sha256:8b3c9af70a9a1c8a135b1af21e069e318af767efb6fd92f1ec46153caabf2056",
+      "observedAt": "2026-11-17T06:28:04.668Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-atomsk-render.ts",
+      "targetPath": "scripts/lammps-atomsk-render.ts",
+      "digest": "sha256:40bb68e01d9178ff105395dfbdee1f8abab11c1790354b3fd11c9dcfbf4733ec",
+      "observedAt": "2026-11-17T06:28:04.676Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-auto-repair.ts",
+      "targetPath": "scripts/lammps-auto-repair.ts",
+      "digest": "sha256:dac4dc141167dee7bb4b3ba7e3459a1376d5cbfba57dfeee2d126af8a3eba9bb",
+      "observedAt": "2026-11-17T06:28:04.687Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-cli-test.ts",
+      "targetPath": "scripts/lammps-cli-test.ts",
+      "digest": "sha256:4c766146dcbff9ca8a0fbffb157e61d8b443087e51a1cf37070688aa97611fd4",
+      "observedAt": "2026-11-17T06:28:04.697Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-error-summary.ts",
+      "targetPath": "scripts/lammps-error-summary.ts",
+      "digest": "sha256:d7f72c078bce432f3f8ce886fbb2bf597411db50be46a31d0efb4cba8aff3cbb",
+      "observedAt": "2026-11-17T06:28:04.709Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-execute.ts",
+      "targetPath": "scripts/lammps-execute.ts",
+      "digest": "sha256:82721c0b451514dfe2c367b4eaf8a055534c5c20ed25a62d350fa191e41146b2",
+      "observedAt": "2026-11-17T06:28:04.723Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-kb-deep-learn-bob.ts",
+      "targetPath": "scripts/lammps-kb-deep-learn-bob.ts",
+      "digest": "sha256:f2ae7885d848e02429091bc8b6d7cd75981dc722b0cdf11e516ba238aa7fd9f8",
+      "observedAt": "2026-11-17T06:28:04.731Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-kb-eval.ts",
+      "targetPath": "scripts/lammps-kb-eval.ts",
+      "digest": "sha256:5e5e4396e73dd021b74c3b7f9bc5fcb68eda914a278aaa98194bddfac1db0992",
+      "observedAt": "2026-11-17T06:28:04.744Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-kb-ingest-atomsk-study.ts",
+      "targetPath": "scripts/lammps-kb-ingest-atomsk-study.ts",
+      "digest": "sha256:4138cef9e98cd8b4a9f0dea9ce1e85141c7a5230f74bd3adf23ee8df2328d483",
+      "observedAt": "2026-11-17T06:28:04.752Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-kb-ingest-bob-cases.ts",
+      "targetPath": "scripts/lammps-kb-ingest-bob-cases.ts",
+      "digest": "sha256:b38a07dbc0e48368077d5668dc99d6f8b828979704a230cd0f2bcc2501a0a58c",
+      "observedAt": "2026-11-17T06:28:04.759Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-kb-regression.ts",
+      "targetPath": "scripts/lammps-kb-regression.ts",
+      "digest": "sha256:d6633fa00c99522ff80fd271bca7d65733e48d6b11aa14d192b0d536f278b64e",
+      "observedAt": "2026-11-17T06:28:04.769Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-knowledge-maintenance.ts",
+      "targetPath": "scripts/lammps-knowledge-maintenance.ts",
+      "digest": "sha256:284db05fe37bd3acc021b9ef3a30f9ad5230178a7e39d3bc51e5a24707fbcb68",
+      "observedAt": "2026-11-17T06:28:04.777Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-log-sections.ts",
+      "targetPath": "scripts/lammps-log-sections.ts",
+      "digest": "sha256:e12b6b89566b0a07655c0042cbad527c6c638cbfa68167d9f4930138f3282f49",
+      "observedAt": "2026-11-17T06:28:04.788Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-lookup-workflow-test.ts",
+      "targetPath": "scripts/lammps-lookup-workflow-test.ts",
+      "digest": "sha256:76612a91fc693992f667b0c18108bc5979159cd61771eb0448992de994fd3975",
+      "observedAt": "2026-11-17T06:28:04.796Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-lookup.ts",
+      "targetPath": "scripts/lammps-lookup.ts",
+      "digest": "sha256:24614a1f3b75e6a7fc48c56eb9e4c5a7f32b68ad1ce0f7cf274f44eda62062e7",
+      "observedAt": "2026-11-17T06:28:04.806Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-model-execute.ts",
+      "targetPath": "scripts/lammps-model-execute.ts",
+      "digest": "sha256:6468e1996943ef1a3d983cb9ef29ba40664af54954c8c32128c315be67aae708",
+      "observedAt": "2026-11-17T06:28:04.814Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-model-route.ts",
+      "targetPath": "scripts/lammps-model-route.ts",
+      "digest": "sha256:87fa0430149ae7fcd79b121c6c5c2b65f6e1e5f1f6b26fb5a9e4725f6a6eded7",
+      "observedAt": "2026-11-17T06:28:04.824Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-paper-note-init.ts",
+      "targetPath": "scripts/lammps-paper-note-init.ts",
+      "digest": "sha256:0656908142ad552556e8d83d1fb7260299f7905048f24b0b949cf33c49100510",
+      "observedAt": "2026-11-17T06:28:04.832Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-project-state-init.ts",
+      "targetPath": "scripts/lammps-project-state-init.ts",
+      "digest": "sha256:5863ffaa2cb9077e312042a62aeb048b76d7be2bb721056684aafe5d32785baa",
+      "observedAt": "2026-11-17T06:28:04.842Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-repair-loop.ts",
+      "targetPath": "scripts/lammps-repair-loop.ts",
+      "digest": "sha256:cccf5ab3bd44df970274b624ebc53eb7e89a96ad094872c25c88958c7dabaf07",
+      "observedAt": "2026-11-17T06:28:04.850Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "scripts/lammps-structure-validate.ts",
+      "targetPath": "scripts/lammps-structure-validate.ts",
+      "digest": "sha256:50e9fe57d5fed25254b274b5a400b24fbf35af0098c7f61403245dafbd588480",
+      "observedAt": "2026-11-17T06:28:04.861Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/INSTALL.md",
+      "targetPath": "skills/lammps-agent-workflow/INSTALL.md",
+      "digest": "sha256:f92c18d779b577d3d7d422391a796bee60cf262c69251f3e996ef20a6dcfa560",
+      "observedAt": "2026-11-17T06:28:04.871Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/README.md",
+      "targetPath": "skills/lammps-agent-workflow/README.md",
+      "digest": "sha256:6cc36a39e7f9d4aca3589ed6fd681453ee1604f78ac54621f0de795a1b502b6c",
+      "observedAt": "2026-11-17T06:28:04.880Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/evidence-gate.md",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/evidence-gate.md",
+      "digest": "sha256:fab1b45feaf69eb34ae22e47ff486605d2968a567f4d01bbaf6027c88fee88bc",
+      "observedAt": "2026-11-17T06:28:04.889Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/failure-patterns-min.md",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/failure-patterns-min.md",
+      "digest": "sha256:301830b17eb0cfc6f92009b5096aa2371129a2ce7a5223e7b24b6fd5b05daffd",
+      "observedAt": "2026-11-17T06:28:04.899Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/potential-selection-min.md",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/potential-selection-min.md",
+      "digest": "sha256:9e7d2db5049f7ad09a6e5465c0df642e5c2657b0711d6d06831f5cd71671cde9",
+      "observedAt": "2026-11-17T06:28:04.909Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/review-guidelines.md",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/review-guidelines.md",
+      "digest": "sha256:6bf56ae8bb91a105fe3f25586f5d881bb8cb61e5a6093155e0f4bcc53ffecb20",
+      "observedAt": "2026-11-17T06:28:04.918Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/README.md",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/README.md",
+      "digest": "sha256:07df7f3cd627e6dadef57ef94ce4523849b51f9ed462a04e422b977128eac4ad",
+      "observedAt": "2026-11-17T06:28:04.925Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-fixed-velocity.in",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-fixed-velocity.in",
+      "digest": "sha256:c54e0de64a47ed5bd030280606fa1624fbad3072facb22c28fed920c003c57d8",
+      "observedAt": "2026-11-17T06:28:04.935Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-reaxff-no-qeq.in",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-reaxff-no-qeq.in",
+      "digest": "sha256:a575c4753fc43fa255f27a812b07e5afd53c63d5bca29297694ff9e60e93f7ca",
+      "observedAt": "2026-11-17T06:28:04.945Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/reaxff-safe-minimal.in",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/reaxff-safe-minimal.in",
+      "digest": "sha256:06812a4ced709fd753f7ef8599e20814d89f97c643dc61a3ea03c17e49d7b61e",
+      "observedAt": "2026-11-17T06:28:04.965Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/tensile-safe-minimal.in",
+      "targetPath": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/tensile-safe-minimal.in",
+      "digest": "sha256:caf4a4e06066126c8f0c34440a2e746de0588f178f02bbd5f13b731d4bceb69d",
+      "observedAt": "2026-11-17T06:28:04.973Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/decisions.md",
+      "targetPath": "skills/lammps-agent-workflow/templates/decisions.md",
+      "digest": "sha256:c3acc702579f3770808f01da85e50bc778d76fc98cb219b9d6f2127559fdcb7a",
+      "observedAt": "2026-11-17T06:28:04.984Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/evidence-record.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/evidence-record.json",
+      "digest": "sha256:e8b65c44035bc1e593aded9fb1ca0e1cc214fa61fc169f93109a84b7d744190f",
+      "observedAt": "2026-11-17T06:28:04.998Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/result-block.md",
+      "targetPath": "skills/lammps-agent-workflow/templates/result-block.md",
+      "digest": "sha256:8e7ea2a0f9bf4e59dced24f5ac49b630f0912b8e6b1cead3ef08e382dd3e52fe",
+      "observedAt": "2026-11-17T06:28:05.007Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/review-log.md",
+      "targetPath": "skills/lammps-agent-workflow/templates/review-log.md",
+      "digest": "sha256:a04e4ddfa61afb31046f6200a01deff3a92cbb7e8b812395c47c8e20e551db00",
+      "observedAt": "2026-11-17T06:28:05.016Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/review-result.example.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/review-result.example.json",
+      "digest": "sha256:9320e36fc324a730cec435bbf29ca3cb5ac1b8f81dccb41858a4572855766df5",
+      "observedAt": "2026-11-17T06:28:05.025Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/review-result.high-risk-pass.example.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/review-result.high-risk-pass.example.json",
+      "digest": "sha256:b3b0c50a9dad252b7eb03404550ed0742d4b9ebb8e012bbe242b093e5ad542d4",
+      "observedAt": "2026-11-17T06:28:05.034Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/review-result.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/review-result.json",
+      "digest": "sha256:f48ca1749894e02af9d46b0008461db70c2b01ca04753869a6d07c6b26c561a5",
+      "observedAt": "2026-11-17T06:28:05.043Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/state.md",
+      "targetPath": "skills/lammps-agent-workflow/templates/state.md",
+      "digest": "sha256:d510c5eac9c85cf92af582f643c43b4ee079c9acc562fccc9732cdc4ef13d5a4",
+      "observedAt": "2026-11-17T06:28:05.052Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/wf01.packet.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/wf01.packet.json",
+      "digest": "sha256:9ea0feeeef22fdfeeddc198f7d4a86acf39607ac8b2cebbc1e91c021d08f7f19",
+      "observedAt": "2026-11-17T06:28:05.059Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/wf02.packet.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/wf02.packet.json",
+      "digest": "sha256:a344d12e7d548aac424ae1eeca93a641c5a4fe763fb6c856345b8ca87e40e262",
+      "observedAt": "2026-11-17T06:28:05.066Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/wf03a.packet.json",
+      "targetPath": "skills/lammps-agent-workflow/templates/wf03a.packet.json",
+      "digest": "sha256:fc660026c06e81e1c7f3145d5bcee1615d8cbbda615b36d2265343ac27130655",
+      "observedAt": "2026-11-17T06:28:05.075Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "skills/lammps-agent-workflow/templates/work-log.md",
+      "targetPath": "skills/lammps-agent-workflow/templates/work-log.md",
+      "digest": "sha256:e08bb43761eb7719eb5a7010a4a68e9784f5d7a1baf3b45827b7d5c20e843cd4",
+      "observedAt": "2026-11-17T06:28:05.084Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/commands/evidence-check.ts",
+      "targetPath": "src/commands/evidence-check.ts",
+      "digest": "sha256:d50d046937d5a0da14bbfe6b2d728e198a248f3bc08b4bf2863cc08d70d50d45",
+      "observedAt": "2026-11-17T06:28:05.096Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/commands/evidence-validate.ts",
+      "targetPath": "src/commands/evidence-validate.ts",
+      "digest": "sha256:36bc5a48ea5bfc67c55a81480a125b8933261c4ced8c6f062b038618ebc2fc6e",
+      "observedAt": "2026-11-17T06:28:05.104Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/commands/skill-mine-review.ts",
+      "targetPath": "src/commands/skill-mine-review.ts",
+      "digest": "sha256:6851f21d92dc0c7483fba50db6bc67274aa4e533a9457663ba51c65374214120",
+      "observedAt": "2026-11-17T06:28:05.114Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/commands/skill-mine.ts",
+      "targetPath": "src/commands/skill-mine.ts",
+      "digest": "sha256:166b69caab5ab639dc44b801dabc10df6d935a872ac3111f570b4ac619da1deb",
+      "observedAt": "2026-11-17T06:28:05.124Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/entrypoints/lammps-cli.ts",
+      "targetPath": "src/entrypoints/lammps-cli.ts",
+      "digest": "sha256:b979c5dae40ef5bed82f82c4f76bf7ec472acb40938a988acdf0891031a213c0",
+      "observedAt": "2026-11-17T06:28:05.135Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/plugins/bundled/lammpsKbPipeline.ts",
+      "targetPath": "src/plugins/bundled/lammpsKbPipeline.ts",
+      "digest": "sha256:8017e447d19da1d74b681705a327d6aa08d1a62efc2e4952d3c645ca4af2ef80",
+      "observedAt": "2026-11-17T06:28:05.145Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/plugins/bundled/lammpsKnowledgeSearch.ts",
+      "targetPath": "src/plugins/bundled/lammpsKnowledgeSearch.ts",
+      "digest": "sha256:607568375b4e5c7ecc16cfa96f9018ea0fde669fbc351747a151f2093698b0e6",
+      "observedAt": "2026-11-17T06:28:05.154Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/__tests__/config.test.ts",
+      "targetPath": "src/skills/skillMine/__tests__/config.test.ts",
+      "digest": "sha256:e2bf4e75acddc244869cf2ecc12650e876a81379258b8b5ce322d35c392429e6",
+      "observedAt": "2026-11-17T06:28:05.168Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/__tests__/stagingStore.test.ts",
+      "targetPath": "src/skills/skillMine/__tests__/stagingStore.test.ts",
+      "digest": "sha256:5dfdb8d4a06e3cb5c1db9f1249a28be7c4fd31ad600667c6ca17589516334cf8",
+      "observedAt": "2026-11-17T06:28:05.179Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/config.ts",
+      "targetPath": "src/skills/skillMine/config.ts",
+      "digest": "sha256:1bc909232a75671e0de39d56080fcb5bb6a92d60ae1614cb2a254ee7dceb8fa8",
+      "observedAt": "2026-11-17T06:28:05.188Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/historyStore.ts",
+      "targetPath": "src/skills/skillMine/historyStore.ts",
+      "digest": "sha256:fcb9aca98071d3e37838b6fdf174247eb7ae5c42199ecce45da07182060c9dac",
+      "observedAt": "2026-11-17T06:28:05.197Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/index.ts",
+      "targetPath": "src/skills/skillMine/index.ts",
+      "digest": "sha256:b644faf7cef74dfe21d3607ed68da8c051c40fde3b0071beff052b09fd91b852",
+      "observedAt": "2026-11-17T06:28:05.207Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/patternMiner.ts",
+      "targetPath": "src/skills/skillMine/patternMiner.ts",
+      "digest": "sha256:e8f11d9bd05db6d8a2f7b063e49c3c83cd2897cc9b08423a38f998704520e939",
+      "observedAt": "2026-11-17T06:28:05.214Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/skills/skillMine/stagingStore.ts",
+      "targetPath": "src/skills/skillMine/stagingStore.ts",
+      "digest": "sha256:7885ec59f7aa673f8a05ffb5c99be98c9e627e38f2e2a08b8d67e95833169731",
+      "observedAt": "2026-11-17T06:28:05.226Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKbPipeline/classify.ts",
+      "targetPath": "src/utils/lammpsKbPipeline/classify.ts",
+      "digest": "sha256:fe3f8d237749410d7d76e16f83a4d9f2ebbb2b324a23e0f15c93c45f6ad96b1e",
+      "observedAt": "2026-11-17T06:28:05.237Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKbPipeline/common.ts",
+      "targetPath": "src/utils/lammpsKbPipeline/common.ts",
+      "digest": "sha256:45969a915113ec115f31daebe0188f34f8ba1e6d2a8d6d271c8f314baa329476",
+      "observedAt": "2026-11-17T06:28:05.249Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKbPipeline/mcpServer.ts",
+      "targetPath": "src/utils/lammpsKbPipeline/mcpServer.ts",
+      "digest": "sha256:54cc8281bba0d5047e8201f23b76ee217c844a53e908ff8f05658363f63fcd03",
+      "observedAt": "2026-11-17T06:28:05.257Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKbPipeline/store.ts",
+      "targetPath": "src/utils/lammpsKbPipeline/store.ts",
+      "digest": "sha256:34cb138a3287d703ac0dc1f2681cede506a62d336ecb3bc5ad475b055c9b156c",
+      "observedAt": "2026-11-17T06:28:05.269Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/backupManager.ts",
+      "targetPath": "src/utils/lammpsKnowledge/backupManager.ts",
+      "digest": "sha256:710369b5f66e8a44626162ca4c66be4ec66eb43a2cc467f4a6d93480e3e3f833",
+      "observedAt": "2026-11-17T06:28:05.278Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/common.ts",
+      "targetPath": "src/utils/lammpsKnowledge/common.ts",
+      "digest": "sha256:c7d7911d885f8e550868ad4fb2307986f8fb29511cf98be463694ae5f7f81bac",
+      "observedAt": "2026-11-17T06:28:05.287Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/dualSearch.ts",
+      "targetPath": "src/utils/lammpsKnowledge/dualSearch.ts",
+      "digest": "sha256:d2ecf4db77c8995b75d219eb0fb0e03cd4779875a01a5a301b555c9794fd4517",
+      "observedAt": "2026-11-17T06:28:05.295Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/indexer.ts",
+      "targetPath": "src/utils/lammpsKnowledge/indexer.ts",
+      "digest": "sha256:f1e87c2d67022745e81e9ac3ad129e9810eccc54463146917161535a64af5613",
+      "observedAt": "2026-11-17T06:28:05.305Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/layeredIndexer.ts",
+      "targetPath": "src/utils/lammpsKnowledge/layeredIndexer.ts",
+      "digest": "sha256:e76a77f8f4d39325b3042e280c12004940780fc9977826af4838273a4bfc6539",
+      "observedAt": "2026-11-17T06:28:05.314Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/layeredSearch.ts",
+      "targetPath": "src/utils/lammpsKnowledge/layeredSearch.ts",
+      "digest": "sha256:dc942efa00488bd49d4b02fbd9d4593d6aaa1409e78517c3839eb74c494144fb",
+      "observedAt": "2026-11-17T06:28:05.323Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/mcpServer.ts",
+      "targetPath": "src/utils/lammpsKnowledge/mcpServer.ts",
+      "digest": "sha256:c0ae1e84be8bbde2fdd6b77193edd537cd6479ef94d5d40e8c3f74c4ca965457",
+      "observedAt": "2026-11-17T06:28:05.332Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/remoteCommon.ts",
+      "targetPath": "src/utils/lammpsKnowledge/remoteCommon.ts",
+      "digest": "sha256:ff107d4333fde255108ce6105073b1bb4b65961f1cae85e3fe41649ed6f47304",
+      "observedAt": "2026-11-17T06:28:05.341Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/remoteIndexer.ts",
+      "targetPath": "src/utils/lammpsKnowledge/remoteIndexer.ts",
+      "digest": "sha256:5fef13018b60bd8ea0c63f48985b75173a5ab89b9257b832c91af3458a90872a",
+      "observedAt": "2026-11-17T06:28:05.349Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/search.ts",
+      "targetPath": "src/utils/lammpsKnowledge/search.ts",
+      "digest": "sha256:4176896bb02d8b6c8fd36b7259b0c1f2622e48b0e4cf77085139b53aa10ed4c5",
+      "observedAt": "2026-11-17T06:28:05.358Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/syncService.ts",
+      "targetPath": "src/utils/lammpsKnowledge/syncService.ts",
+      "digest": "sha256:ca976f1a0d7ae0018a8720e014d7efbdde40b30ff6adc0946a0302050f20f7d5",
+      "observedAt": "2026-11-17T06:28:05.367Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/syncTypes.ts",
+      "targetPath": "src/utils/lammpsKnowledge/syncTypes.ts",
+      "digest": "sha256:eb553c9ca73b24034dacac4fbc8e0087b93e2274322edefbf182210330f2c7ab",
+      "observedAt": "2026-11-17T06:28:05.376Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/syncWatcher.ts",
+      "targetPath": "src/utils/lammpsKnowledge/syncWatcher.ts",
+      "digest": "sha256:807780138ad96999c2cfb03b628e5f2a10653ae4103a3696718a11e13f87ad1b",
+      "observedAt": "2026-11-17T06:28:05.384Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    },
+    {
+      "sourcePath": "src/utils/lammpsKnowledge/synthesize.ts",
+      "targetPath": "src/utils/lammpsKnowledge/synthesize.ts",
+      "digest": "sha256:b2c68f2d93e197c49ef8708256eb3735a3760037c6fe0279bbea24293758ec77",
+      "observedAt": "2026-11-17T06:28:05.393Z",
+      "provenanceStatus": "importObserved",
+      "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9"
+    }
+  ],
+  "missing": [],
+  "createdAt": "2026-11-17T06:28:02.181Z",
+  "completedAt": "2026-11-17T06:28:05.395Z"
+}

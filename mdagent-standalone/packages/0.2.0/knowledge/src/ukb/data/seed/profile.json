@@ -1,0 +1,52 @@
+[
+  {
+    "profile_id": "agent",
+    "spec": {
+      "label": "默认 Agent 口径",
+      "visible_statuses": [
+        "active",
+        "trial"
+      ],
+      "include_suggested_tags": false,
+      "read_budget_chars": 12000,
+      "catalog_limit": 20,
+      "read_max_entries": 3,
+      "must_read": {}
+    }
+  },
+  {
+    "profile_id": "agent_wide",
+    "spec": {
+      "label": "宽口径（含已过时）",
+      "visible_statuses": [
+        "active",
+        "trial",
+        "deprecated"
+      ],
+      "include_suggested_tags": true,
+      "read_budget_chars": 12000,
+      "catalog_limit": 30,
+      "read_max_entries": 5,
+      "must_read": {}
+    }
+  },
+  {
+    "profile_id": "reviewer",
+    "spec": {
+      "label": "审核口径（全部状态）",
+      "visible_statuses": [
+        "candidate",
+        "trial",
+        "active",
+        "deprecated",
+        "superseded",
+        "revoked",
+        "rejected",
+        "quarantined"
+      ],
+      "include_suggested_tags": true,
+      "read_budget_chars": 60000,
+      "must_read": {}
+    }
+  }
+]

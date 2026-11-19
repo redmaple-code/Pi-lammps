@@ -1,0 +1,36 @@
+{
+  "type_id": "faq",
+  "label": "问答",
+  "description": "常见问题与回答",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "question": {
+        "kind": "text",
+        "required": true,
+        "max_len": 800
+      },
+      "answer": {
+        "kind": "text",
+        "required": true,
+        "max_len": 3000
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "question",
+      "answer"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

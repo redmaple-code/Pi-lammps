@@ -1,0 +1,17 @@
+{
+  "atoms": "legacy_atom",
+  "kinds": {
+    "physics-anchor": "legacy_anchor",
+    "methodology": "legacy_methodology",
+    "methodology-dimension": "legacy_dimension"
+  },
+  "packs": {
+    "confirmation_surface": "legacy_surface"
+  },
+  "default": "legacy_entry",
+  "severity": {
+    "hard": "hard",
+    "soft": "soft",
+    "info": "info"
+  }
+}

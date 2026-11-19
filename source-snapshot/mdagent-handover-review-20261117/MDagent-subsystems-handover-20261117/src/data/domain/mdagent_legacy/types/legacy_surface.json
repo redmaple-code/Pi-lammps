@@ -1,0 +1,43 @@
+{
+  "type_id": "legacy_surface",
+  "label": "旧库核查面条目",
+  "description": "从 confirmation_surface 包迁移；phase/min_grade/na_allowed 等字段在 raw_json 中原样保留。",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "phase": {
+        "kind": "text",
+        "max_len": 80
+      },
+      "domain": {
+        "kind": "text",
+        "max_len": 200
+      },
+      "raw_json": {
+        "kind": "text",
+        "required": true,
+        "max_len": 20000
+      }
+    },
+    "render": [
+      "statement",
+      "phase",
+      "domain",
+      "raw_json"
+    ],
+    "required_facets": [
+      "topic"
+    ],
+    "review_checklist": [
+      "原始记录完整保存在 raw_json",
+      "legacy_id 与旧库一致",
+      "状态映射正确"
+    ],
+    "require_sources": false
+  }
+}

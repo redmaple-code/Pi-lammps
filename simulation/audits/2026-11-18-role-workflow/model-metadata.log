@@ -1,0 +1,2 @@
+{"id": "deepseek-v4.1-flash", "metadataKeys": ["id", "object", "created", "owned_by", "supported_endpoint_types"], "capacity": {}}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 0

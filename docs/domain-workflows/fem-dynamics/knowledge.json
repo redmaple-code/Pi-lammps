@@ -1,0 +1,108 @@
+{
+  "id": "knowledge",
+  "items": [
+    {
+      "id": "ccx-project",
+      "title": "CalculiX官方项目",
+      "locator": "https://www.dhondt.de/",
+      "version": "页面2.23",
+      "sourceKind": "manual",
+      "readStatus": "sectionRead",
+      "readScope": "版本、文档和测试入口",
+      "supports": [
+        "软件来源"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "ccx-project",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "ccx-direct",
+      "title": "CalculiX直接积分手册镜像",
+      "locator": "https://www.feacluster.com/CalculiX/ccx_2.18/doc/ccx/node171.html",
+      "version": "2.18镜像",
+      "sourceKind": "manual",
+      "readStatus": "sectionRead",
+      "readScope": "直接积分、隐式/显式及数值处理",
+      "supports": [
+        "路线与版本核对"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "ccx-direct",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "ccx-harmonic",
+      "title": "CalculiX谐响应手册镜像",
+      "locator": "https://feacluster.com/CalculiX/ccx_2.18/doc/ccx/node331.html",
+      "version": "2.18镜像",
+      "sourceKind": "manual",
+      "readStatus": "searchExcerpt",
+      "readScope": "检索摘要中的线性模态路线",
+      "supports": [
+        "步骤适用性"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "ccx-harmonic",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "ccx-eigen-storage",
+      "title": "CalculiX模态存储依赖",
+      "locator": "https://feacluster.com/CalculiX/ccx_2.18/doc/ccx/node422.html",
+      "version": "2.18镜像",
+      "sourceKind": "manual",
+      "readStatus": "searchExcerpt",
+      "readScope": "检索摘要中的eig依赖",
+      "supports": [
+        "文件来源"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "ccx-eigen-storage",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    },
+    {
+      "id": "dynamics-methods",
+      "title": "本包动力学方法约定",
+      "locator": "README.md",
+      "version": "0.1.0",
+      "sourceKind": "methodNote",
+      "readStatus": "authored",
+      "readScope": "方程、阻尼、计量和基准",
+      "supports": [
+        "量纲",
+        "收敛/验证"
+      ],
+      "retrievedOn": "2026-11-17",
+      "revisionFrozen": false,
+      "originGroupId": "dynamics-methods",
+      "limitations": "实际案例核对精确工具版本并冻结可用修订或内容。"
+    }
+  ],
+  "retrievalPolicy": {
+    "defaultScope": [
+      "fem-dynamics",
+      "shared-mechanics",
+      "shared-numerics"
+    ],
+    "filters": [
+      "solverVersion",
+      "element",
+      "procedure",
+      "material",
+      "contact",
+      "units"
+    ]
+  },
+  "sourceLimitations": [
+    {
+      "locator": "https://www.dhondt.de/ccx_2.23.htm.tar.bz2",
+      "status": "accessFailed",
+      "detail": "网页读取不支持压缩包，直接读取遇到TLS EOF；当前版本详细手册待核。"
+    }
+  ]
+}

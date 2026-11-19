@@ -1,0 +1,119 @@
+{
+  "type_id": "reference",
+  "label": "参考文献",
+  "description": "已有的文献（通常是 PDF）：摘要层供阅读，原文供核对；知识库不负责获取论文",
+  "spec": {
+    "tier": "document",
+    "fields": {
+      "citation": {
+        "kind": "text",
+        "required": true,
+        "max_len": 800,
+        "description": "作者、题目、出处、年份"
+      },
+      "identifier": {
+        "kind": "text",
+        "required": false,
+        "max_len": 200,
+        "description": "DOI、arXiv 号等"
+      },
+      "summary": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1200,
+        "description": "研究问题、方法、主要结论"
+      },
+      "key_points": {
+        "kind": "list",
+        "item": {
+          "kind": "text",
+          "max_len": 600
+        },
+        "required": true,
+        "description": "要点，每条带 [[path#pN]] 页码定位"
+      },
+      "data_values": {
+        "kind": "list",
+        "item": {
+          "kind": "object",
+          "fields": {
+            "quantity": {
+              "kind": "text",
+              "required": true
+            },
+            "value": {
+              "kind": "text",
+              "required": true
+            },
+            "unit": {
+              "kind": "text"
+            },
+            "conditions": {
+              "kind": "text"
+            },
+            "locator": {
+              "kind": "text",
+              "required": true
+            }
+          }
+        },
+        "required": false
+      },
+      "methods": {
+        "kind": "text",
+        "required": false,
+        "max_len": 1200
+      },
+      "limitations": {
+        "kind": "text",
+        "required": false,
+        "max_len": 800
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "citation",
+      "identifier",
+      "summary",
+      "key_points",
+      "data_values",
+      "methods",
+      "limitations"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类",
+      "引用信息完整",
+      "要点与数值都能在原文对应页找到",
+      "原文文件就是该文献本身"
+    ],
+    "require_sources": false,
+    "document": {
+      "summary_max_chars": 4000,
+      "allowed_roles": [
+        "fulltext",
+        "supplement",
+        "excerpt",
+        "figure"
+      ],
+      "required_roles": [
+        "fulltext"
+      ],
+      "summary_must_cite": true,
+      "allowed_formats": [
+        "pdf",
+        "markdown",
+        "plain_text",
+        "png",
+        "jpeg"
+      ],
+      "max_files": 20
+    }
+  }
+}

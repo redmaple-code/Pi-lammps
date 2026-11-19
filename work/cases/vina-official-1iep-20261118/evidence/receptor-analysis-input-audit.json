@@ -1,0 +1,12 @@
+{
+  "solverReceptor": "inputs/official/1iep_receptor.pdbqt",
+  "geometryCheckReceptor": "reference/receptorH.pdb",
+  "solverHeavyAtoms": 2229,
+  "geometryCheckHeavyAtoms": 2229,
+  "heavyAtomIdentityAndCoordinatesExactMatch": true,
+  "missingFromGeometryInput": [],
+  "extraInGeometryInput": [],
+  "rdkitParsingSucceeded": true,
+  "rdkitHeavyAtomCount": 2229,
+  "note": "Residue/atom identity plus fixed-frame coordinates checked at stored precision; hydrogen preparations can differ."
+}

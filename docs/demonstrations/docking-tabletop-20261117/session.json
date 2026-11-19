@@ -1,0 +1,19 @@
+{
+  "caseId": "demo-abl-screen-20261117",
+  "revisionId": "demo-v001",
+  "createdAt": "2026-11-17T13:13:55.917350+00:00",
+  "mode": "tabletop",
+  "dataOrigin": "synthetic-tabletop",
+  "authoringMethod": "single-assistant-authored-example",
+  "roleExecution": "角色职责和审查结论为演练记录，作者为同一助手。",
+  "scientificToolInvocations": [],
+  "externalJobIds": [],
+  "targetBackground": "ABL/1IEP 仅作方法背景，候选和活性/对接结果均为构造。",
+  "actualExecutionReadiness": "unverified",
+  "actualGaps": [
+    "实际受体/配体/原子坐标尚缺",
+    "目标工具/适配器版本未验证",
+    "独立科学审查和真实实验待开展"
+  ],
+  "completedScope": "完整桌面演练，构造数据统计及文档一致性检查。"
+}

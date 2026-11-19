@@ -1,0 +1,146 @@
+{
+  "type_id": "case",
+  "label": "案例",
+  "description": "一次完整任务或运行；摘要层供阅读，原文文件包供核对与复用",
+  "spec": {
+    "tier": "document",
+    "fields": {
+      "summary": {
+        "kind": "text",
+        "required": true,
+        "max_len": 800,
+        "description": "一段话：做了什么、结果如何"
+      },
+      "goal": {
+        "kind": "text",
+        "required": true,
+        "max_len": 600
+      },
+      "setup": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1200,
+        "description": "对象、方法、关键参数；关键参数用 [[path:Lx-y]] 指向原文"
+      },
+      "outcome": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1000,
+        "description": "结果与关键数值，带原文定位"
+      },
+      "findings": {
+        "kind": "list",
+        "item": "text",
+        "required": false,
+        "description": "结论；已提炼为独立条目的写其 entry_id"
+      },
+      "result_reliability": {
+        "kind": "enum",
+        "values": [
+          "verified",
+          "single_run",
+          "known_bias",
+          "failed",
+          "unknown"
+        ],
+        "required": true
+      },
+      "reuse": {
+        "kind": "object",
+        "required": true,
+        "fields": {
+          "entry_files": {
+            "kind": "list",
+            "item": "text",
+            "required": true,
+            "description": "复用时从哪些文件入手"
+          },
+          "parameters_to_adapt": {
+            "kind": "list",
+            "item": {
+              "kind": "object",
+              "fields": {
+                "name": {
+                  "kind": "text",
+                  "required": true
+                },
+                "location": {
+                  "kind": "text",
+                  "required": true
+                },
+                "meaning": {
+                  "kind": "text",
+                  "required": true
+                },
+                "original": {
+                  "kind": "text"
+                },
+                "note": {
+                  "kind": "text"
+                }
+              }
+            },
+            "required": false
+          },
+          "prerequisites": {
+            "kind": "list",
+            "item": "text",
+            "required": false
+          },
+          "verified_env": {
+            "kind": "text",
+            "required": false
+          },
+          "known_limits": {
+            "kind": "list",
+            "item": "text",
+            "required": false
+          }
+        }
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "summary",
+      "goal",
+      "setup",
+      "outcome",
+      "findings",
+      "result_reliability",
+      "reuse"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类",
+      "摘要与原文一致，关键数值都有原文定位",
+      "复用说明列全了必须修改的参数",
+      "未包含轨迹等大体量原始输出"
+    ],
+    "require_sources": true,
+    "document": {
+      "summary_max_chars": 3000,
+      "allowed_roles": [
+        "input",
+        "script",
+        "config",
+        "structure",
+        "parameter_file",
+        "data",
+        "log",
+        "figure",
+        "report"
+      ],
+      "required_roles": [
+        "input"
+      ],
+      "summary_must_cite": true,
+      "max_files": 200
+    }
+  }
+}

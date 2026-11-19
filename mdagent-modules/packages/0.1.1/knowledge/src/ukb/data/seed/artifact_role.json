@@ -1,0 +1,74 @@
+[
+  {
+    "role_id": "input",
+    "label": "输入/控制文件",
+    "description": "可直接复用的输入、控制、配置文件",
+    "default_reusable": true
+  },
+  {
+    "role_id": "script",
+    "label": "脚本",
+    "description": "运行、前处理、后处理脚本",
+    "default_reusable": true
+  },
+  {
+    "role_id": "config",
+    "label": "配置",
+    "description": "环境或作业配置",
+    "default_reusable": true
+  },
+  {
+    "role_id": "structure",
+    "label": "结构/模型文件",
+    "description": "初始结构、模型定义（文本格式，体量受限）",
+    "default_reusable": true
+  },
+  {
+    "role_id": "parameter_file",
+    "label": "参数文件",
+    "description": "参数集、势函数等（注意许可）",
+    "default_reusable": true
+  },
+  {
+    "role_id": "data",
+    "label": "结果数据（小）",
+    "description": "汇总后的小体量结果表，不含轨迹",
+    "default_reusable": false
+  },
+  {
+    "role_id": "log",
+    "label": "日志摘录",
+    "description": "运行日志或其关键部分",
+    "default_reusable": false
+  },
+  {
+    "role_id": "figure",
+    "label": "图",
+    "description": "结果图、示意图",
+    "default_reusable": false
+  },
+  {
+    "role_id": "report",
+    "label": "报告/说明",
+    "description": "案例报告、说明文档",
+    "default_reusable": false
+  },
+  {
+    "role_id": "fulltext",
+    "label": "全文",
+    "description": "文献、手册、标准的全文（PDF 或文本）",
+    "default_reusable": false
+  },
+  {
+    "role_id": "supplement",
+    "label": "补充材料",
+    "description": "文献补充材料",
+    "default_reusable": false
+  },
+  {
+    "role_id": "excerpt",
+    "label": "摘录",
+    "description": "原文的节选或转写文本",
+    "default_reusable": false
+  }
+]

@@ -1,0 +1,77 @@
+{
+  "atomCount": 6400,
+  "counts": {
+    "Fe": 1280,
+    "Ni": 1280,
+    "Cr": 1280,
+    "Co": 1280,
+    "Cu": 1280
+  },
+  "boxAngstrom": [
+    71.2,
+    35.6,
+    28.48
+  ],
+  "surfaceAngstrom": 27.145,
+  "fixedAtomCount": 800,
+  "mobileAtomCount": 5600,
+  "nearestNeighborAngstrom": 2.517300141024109,
+  "verifiedFeatures": [
+    "five-components",
+    "fcc-substrate",
+    "fixed-boundary",
+    "thermal-layer",
+    "spherical-abrasive",
+    "lateral-motion"
+  ],
+  "parameters": {
+    "alloy": "FeNiCrCoCu",
+    "composition": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "latticeAngstrom": 3.56,
+    "cells": [
+      20,
+      10,
+      8
+    ],
+    "temperatureK": 300,
+    "seed": 482748,
+    "timeStepPs": 0.001,
+    "equilibrationSteps": 200,
+    "approachSteps": 200,
+    "grindingSteps": 200,
+    "radiusAngstrom": 12,
+    "depthAngstrom": 3,
+    "speedAngstromPerPs": 10,
+    "stiffnessEVPerAngstromCubed": 10,
+    "dumpEvery": 50,
+    "forceEvery": 10
+  },
+  "massMapping": [
+    {
+      "element": "Fe",
+      "mass": 55.8
+    },
+    {
+      "element": "Ni",
+      "mass": 58.69
+    },
+    {
+      "element": "Cr",
+      "mass": 52.0
+    },
+    {
+      "element": "Co",
+      "mass": 58.93
+    },
+    {
+      "element": "Cu",
+      "mass": 63.55
+    }
+  ]
+}

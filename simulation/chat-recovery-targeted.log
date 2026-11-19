@@ -1,0 +1,54 @@
+TAP version 13
+# (node:44324) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: full SDK uses native tools, Code Mode, themes, resources and one ledger
+ok 1 - full SDK uses native tools, Code Mode, themes, resources and one ledger
+  ---
+  duration_ms: 261856.1409
+  type: 'test'
+  ...
+# Subtest: money gate rejects incomplete prices before dispatch and applies explicit zero prices
+ok 2 - money gate rejects incomplete prices before dispatch and applies explicit zero prices
+  ---
+  duration_ms: 11123.6518
+  type: 'test'
+  ...
+# Subtest: manual native compaction uses the same model ledger and retains original session history
+ok 3 - manual native compaction uses the same model ledger and retains original session history
+  ---
+  duration_ms: 3431.4397
+  type: 'test'
+  ...
+# Subtest: unknown result reconciliation preserves the canonical native transcript
+ok 4 - unknown result reconciliation preserves the canonical native transcript
+  ---
+  duration_ms: 2127.8961
+  type: 'test'
+  ...
+# Subtest: an interrupted chat response retains unknown accounting and permits the next user turn
+ok 5 - an interrupted chat response retains unknown accounting and permits the next user turn
+  ---
+  duration_ms: 4518.3731
+  type: 'test'
+  ...
+# Subtest: a lost chat transport can be retried while unknown tool effects still require reconciliation
+ok 6 - a lost chat transport can be retried while unknown tool effects still require reconciliation
+  ---
+  duration_ms: 6905.2878
+  type: 'test'
+  ...
+# Subtest: unknown image-generation outcomes and pending calls continue to block new turns
+ok 7 - unknown image-generation outcomes and pending calls continue to block new turns
+  ---
+  duration_ms: 2015.4114
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 342861.085

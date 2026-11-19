@@ -1,0 +1,26 @@
+{
+  "module": "evidence",
+  "assembly": {
+    "modules": [
+      "evidence",
+      "gate",
+      "knowledge",
+      "shared"
+    ],
+    "files": 234
+  },
+  "python": "3.11.4",
+  "environment": "temporary isolated data root; Python UTF-8 mode",
+  "suites": [
+    {
+      "name": "evidence-v3",
+      "returncode": 0,
+      "ok": true,
+      "tests": 218,
+      "skipped": 1,
+      "seconds": 126.0,
+      "log": "evidence-evidence-v3.log"
+    }
+  ],
+  "ok": true
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifactType": "small-molecule-docking.deliverables",
+  "producer": "tabletop-author:post-processor",
+  "sourceRefs": [
+    "source-lock.json",
+    "source-pack/manifest.json",
+    "plan/task.json"
+  ],
+  "semantics": {
+    "units": "RFU、nM、angstrom、kcal/mol或无量纲1，按字段说明",
+    "coordinates": "对接坐标未提供，结构观察为构造",
+    "identityMapping": "DEMO-parent/state/seed/run/pose身份可追踪",
+    "sampleBasis": "20母体、24假定状态、5种子"
+  },
+  "content": {
+    "mode": "tabletop",
+    "dataOrigin": "synthetic-tabletop",
+    "stageId": "report",
+    "capability": "docking.report.render",
+    "inputSlots": [
+      "task",
+      "metrics",
+      "pose-analysis",
+      "qualification"
+    ],
+    "outputSlots": [
+      "deliverables"
+    ],
+    "declaredChecks": [
+      "checks#report-traceable"
+    ],
+    "actualScientificStatus": "notEvaluated",
+    "artifactRef": "README.md",
+    "role": "post-processor",
+    "demoObservation": "报告、表格、流程与构造数据图像交付"
+  }
+}

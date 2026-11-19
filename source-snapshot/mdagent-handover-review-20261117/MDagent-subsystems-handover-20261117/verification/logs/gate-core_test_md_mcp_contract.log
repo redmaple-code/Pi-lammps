@@ -1,0 +1,8 @@
+......F:\BaiduSyncdisk\Codex\MDagent\deliverables\MDagent-subsystems-handover-20261117\src\tests\test_md_mcp_contract.py:128: ResourceWarning: unclosed file <_io.TextIOWrapper name='F:\\BaiduSyncdisk\\Codex\\MDagent\\deliverables\\MDagent-subsystems-handover-20261117\\src\\mcp\\md_config.json.example' mode='r' encoding='utf-8'>
+  example = json.load(open(os.path.join(MCP_DIR, "md_config.json.example"),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......
+----------------------------------------------------------------------
+Ran 12 tests in 0.404s
+
+OK

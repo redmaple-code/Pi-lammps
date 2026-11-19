@@ -1,0 +1,109 @@
+{
+  "schema_version": "3.0",
+  "case_id": "case1",
+  "status": "DESIGNED",
+  "source": {
+    "kind": "external_lammps_case",
+    "path": "WSL:/home/red/lmp (copied)"
+  },
+  "objective": {
+    "simulation_goal": "镍基多组元合金（Ni-Co-Mo-W-Al-Ti）300 K 单轴拉伸：测弹性模量、屈服强度与应力-应变曲线",
+    "target_property": [
+      "stress_strain_curve"
+    ]
+  },
+  "system": {
+    "molecule": "Ni 基多组元合金（fcc 基体，Ni-Co-Mo-W-Al-Ti）",
+    "target_elements": [
+      "Ni",
+      "Co",
+      "Mo",
+      "W",
+      "Al",
+      "Ti"
+    ],
+    "size": {
+      "atoms_target": null
+    }
+  },
+  "constraints": {
+    "temperature_range": [
+      300,
+      300
+    ]
+  },
+  "ensemble_sequence": [
+    {
+      "stage": "minimize"
+    },
+    {
+      "stage": "pre_equil",
+      "ensemble": "npt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    },
+    {
+      "stage": "production",
+      "ensemble": "nvt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    }
+  ],
+  "key_params": {
+    "timestep_fs": 1.0,
+    "total_steps": 5200000,
+    "units": "metal",
+    "pair_style": "eam/alloy",
+    "forcefield": {
+      "preferred": "CuAgAuNiPdPtAlPbFeMoTaWMgCoTiZr_Zhou04.eam.alloy"
+    }
+  },
+  "experiment_design": {
+    "experiment_type": "tension"
+  },
+  "experiment_plan": {
+    "authored_by": "assistant (AI-drafted macro context; needs user confirmation)",
+    "sections": [
+      {
+        "id": "E-01",
+        "title": "实验目的与假设",
+        "text": "测定镍基多组元合金在 300 K 下的单轴拉伸响应（弹性模量、屈服强度、应力-应变曲线），验证成分设计。假设试样成分与热处理状态一致、拉伸轴线无偏心。"
+      },
+      {
+        "id": "E-02",
+        "title": "对象与材料",
+        "text": "Ni 基多组元合金（Ni 余量，含 Co/Mo/W/Al/Ti），以 fcc 基体为主；实验试样为 mm 级板材/棒材，晶粒尺寸 µm 级。"
+      },
+      {
+        "id": "E-03",
+        "title": "装置与几何",
+        "text": "万能材料试验机 + 引伸计；标距段按 GB/T 228 配置，夹持端加强片避免应力集中。"
+      },
+      {
+        "id": "E-04",
+        "title": "加载与条件",
+        "text": "单轴拉伸，应变率 1×10⁻³ s⁻¹，300 K 室温，至断裂/颈缩；无预变形。"
+      },
+      {
+        "id": "E-05",
+        "title": "测量与判据",
+        "text": "应力-应变曲线、弹性模量 E、屈服强度 σy、延伸率；以 0.2% 塑性应变定屈服。"
+      },
+      {
+        "id": "E-06",
+        "title": "来源与备注",
+        "text": "本宏观实验描述由助手依据 in 文件（Ni 基合金拉伸）反推补写，未经实验记录核对，使用前需用户确认。"
+      }
+    ]
+  },
+  "cross_scale": {
+    "loading": {
+      "macro": "1×10⁻³ s⁻¹（准静态拉伸）",
+      "micro": "fix deform x erate 1×10⁻⁴ ps⁻¹ = 1×10⁸ s⁻¹",
+      "gap": "11 个数量级（1e8 / 1e-3 = 1e11）",
+      "verdict": "q",
+      "rationale": "MD 可达时间尺度为 ns–µs；实验 1e-3 s⁻¹ 下达到 10% 应变需 100 s，无法直接模拟，故采用 1e8 s⁻¹（差 11 个数量级）。跨尺度论证分三步：① 塑性变形由位错运动主导，Orowan 关系 γ̇=ρbv 表明提高应变率等价于提高位错速度/密度，而非改变变形机制；② 300 K 下 FCC 金属应变率敏感指数 m≈0.01–0.02，屈服应力随应变率对数缓变，可用高应变率结果近似准静态趋势；③ 该近似只支持趋势与机制对比（屈服、位错结构、损伤形貌），不支持绝对强度外推。当前缺 E2 文献与 E4 同门案例佐证 → 判存疑，不得据此放行结论。",
+      "status": "未论证（需 E2 文献 + E4 案例）→ 存疑"
+    }
+  }
+}

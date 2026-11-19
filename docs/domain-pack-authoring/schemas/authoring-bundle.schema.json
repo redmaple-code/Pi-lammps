@@ -1,0 +1,1898 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "User-guided domain-pack authoring exchange bundle v1",
+  "description": "Logical exchange contract. Storage technology is deliberately unspecified.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "mode": {
+      "enum": [
+        "authoring",
+        "demonstration"
+      ]
+    },
+    "storageSelection": {
+      "const": "deferred"
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetPackId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "scopeState": {
+          "enum": [
+            "proposed",
+            "confirmed"
+          ]
+        },
+        "status": {
+          "enum": [
+            "active",
+            "waitingUser",
+            "paused",
+            "closed"
+          ]
+        },
+        "adoptionPolicy": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "semanticChangesRequireUserDecision": {
+              "const": true
+            },
+            "mechanicalActionsWithinAuthorization": {
+              "const": true
+            },
+            "batchDecisionsAllowed": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "semanticChangesRequireUserDecision",
+            "mechanicalActionsWithinAuthorization",
+            "batchDecisionsAllowed"
+          ]
+        },
+        "lastQuestionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "readiness": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "design": {
+              "enum": [
+                "unassessed",
+                "inProgress",
+                "readyInScope",
+                "hasGaps"
+              ]
+            },
+            "knowledge": {
+              "enum": [
+                "unassessed",
+                "inProgress",
+                "readyInScope",
+                "hasGaps"
+              ]
+            },
+            "integration": {
+              "enum": [
+                "unassessed",
+                "inProgress",
+                "readyInScope",
+                "hasGaps"
+              ]
+            },
+            "validation": {
+              "enum": [
+                "unassessed",
+                "inProgress",
+                "readyInScope",
+                "hasGaps"
+              ]
+            }
+          },
+          "required": [
+            "design",
+            "knowledge",
+            "integration",
+            "validation"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "objective",
+        "targetPackId",
+        "scope",
+        "scopeState",
+        "status",
+        "adoptionPolicy",
+        "lastQuestionRefs",
+        "decisionRefs",
+        "readiness"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "scopeState": {
+                "const": "confirmed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/record"
+      },
+      "minItems": 0
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "fromRef": {
+            "$ref": "#/$defs/ref"
+          },
+          "relation": {
+            "enum": [
+              "supports",
+              "challenges",
+              "derivedFrom",
+              "appliesTo",
+              "requires",
+              "supersedes",
+              "broader",
+              "narrower",
+              "related"
+            ]
+          },
+          "toRef": {
+            "$ref": "#/$defs/ref"
+          },
+          "scope": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "basisRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/ref"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "fromRef",
+          "relation",
+          "toRef",
+          "scope",
+          "basisRefs"
+        ]
+      },
+      "minItems": 0
+    },
+    "externalRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/ref"
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "mode",
+    "storageSelection",
+    "session",
+    "records",
+    "relations",
+    "externalRefs"
+  ],
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "revision"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceType": {
+          "enum": [
+            "caseReport",
+            "standard",
+            "manual",
+            "paper",
+            "userAccount",
+            "log",
+            "dataset",
+            "other"
+          ]
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "originGroupId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "enum": [
+            "originalReport",
+            "laterReport",
+            "userAccount",
+            "analystReconstruction"
+          ]
+        },
+        "identityState": {
+          "enum": [
+            "unfrozen",
+            "frozen"
+          ]
+        },
+        "digest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readCoverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "representation": {
+              "enum": [
+                "fullText",
+                "section",
+                "abstract",
+                "metadata",
+                "transcript"
+              ]
+            },
+            "scope": {
+              "type": "string",
+              "minLength": 1
+            },
+            "limitations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "representation",
+            "scope",
+            "limitations"
+          ]
+        },
+        "usage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "scope": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            },
+            "exportMode": {
+              "enum": [
+                "content",
+                "referenceOnly",
+                "undecided"
+              ]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "scope",
+            "exportMode",
+            "basis"
+          ]
+        },
+        "inlineText": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceMetadata": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "title",
+        "sourceType",
+        "locator",
+        "originGroupId",
+        "provenance",
+        "identityState",
+        "readCoverage",
+        "usage"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "identityState": {
+                "const": "frozen"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "digest"
+            ]
+          }
+        }
+      ]
+    },
+    "fragment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "location": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "page",
+                "paragraph",
+                "line",
+                "cell",
+                "table",
+                "time",
+                "frame",
+                "section"
+              ]
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "kind",
+            "value"
+          ]
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extraction": {
+          "enum": [
+            "originalText",
+            "ocr",
+            "transcription",
+            "manual"
+          ]
+        },
+        "anchorStatus": {
+          "enum": [
+            "matched",
+            "uncertain",
+            "stale"
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "sourceRef",
+        "location",
+        "quote",
+        "extraction",
+        "anchorStatus",
+        "limitations"
+      ]
+    },
+    "tag": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "facetId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "includeExamples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "excludeExamples": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "retired"
+          ]
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "facetId",
+        "displayName",
+        "definition",
+        "aliases",
+        "includeExamples",
+        "excludeExamples",
+        "status",
+        "decisionRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "annotation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "targetRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "anchorRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "assignments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "tagRef": {
+                "$ref": "#/$defs/ref"
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "basisRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "tagRef",
+              "reason",
+              "basisRefs"
+            ]
+          },
+          "minItems": 1
+        },
+        "status": {
+          "enum": [
+            "suggested",
+            "accepted",
+            "rejected",
+            "stale"
+          ]
+        },
+        "assignmentBasis": {
+          "enum": [
+            "aiProposal",
+            "userDecision",
+            "acceptedRule",
+            "manual"
+          ]
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "targetRef",
+        "anchorRefs",
+        "assignments",
+        "status",
+        "assignmentBasis",
+        "decisionRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "knowledge": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "concept",
+            "claim",
+            "method",
+            "practice",
+            "observation",
+            "resource"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1
+        },
+        "provenance": {
+          "enum": [
+            "originalReport",
+            "laterReport",
+            "userAccount",
+            "analystReconstruction"
+          ]
+        },
+        "lifecycle": {
+          "enum": [
+            "candidate",
+            "pendingReview",
+            "confirmed",
+            "quarantined",
+            "deprecated",
+            "retracted"
+          ]
+        },
+        "epistemicStatus": {
+          "enum": [
+            "unassessed",
+            "supportedInScope",
+            "contested",
+            "refutedInScope"
+          ]
+        },
+        "useDecision": {
+          "enum": [
+            "referenceOnly",
+            "projectPractice",
+            "packCandidate",
+            "activeInScope"
+          ]
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "kind",
+        "statement",
+        "conditions",
+        "scope",
+        "exceptions",
+        "sourceRefs",
+        "provenance",
+        "lifecycle",
+        "epistemicStatus",
+        "useDecision",
+        "decisionRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "anyOf": [
+              {
+                "properties": {
+                  "lifecycle": {
+                    "const": "confirmed"
+                  }
+                }
+              },
+              {
+                "properties": {
+                  "useDecision": {
+                    "enum": [
+                      "projectPractice",
+                      "packCandidate",
+                      "activeInScope"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 1
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "problem",
+                  "baseline",
+                  "hypothesis",
+                  "construction",
+                  "mechanism",
+                  "validation",
+                  "finding",
+                  "limitation",
+                  "transfer"
+                ]
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "documented",
+                  "gap",
+                  "proposed"
+                ]
+              },
+              "provenance": {
+                "enum": [
+                  "originalReport",
+                  "laterReport",
+                  "userAccount",
+                  "analystReconstruction"
+                ]
+              },
+              "basisRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "id",
+              "kind",
+              "statement",
+              "status",
+              "provenance",
+              "basisRefs"
+            ]
+          },
+          "minItems": 1
+        },
+        "transferLimits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "title",
+        "context",
+        "sourceRefs",
+        "stages",
+        "transferLimits"
+      ]
+    },
+    "clause": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "fragmentRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "issuer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentNumber": {
+          "type": "string",
+          "minLength": 1
+        },
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "clauseLocator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "normativeForce": {
+          "enum": [
+            "normative",
+            "recommendation",
+            "informative",
+            "unknown"
+          ]
+        },
+        "effectiveStatus": {
+          "enum": [
+            "current",
+            "superseded",
+            "withdrawn",
+            "unknown"
+          ]
+        },
+        "authorityVerification": {
+          "enum": [
+            "verified",
+            "unverified"
+          ]
+        },
+        "projectApplicability": {
+          "enum": [
+            "unassessed",
+            "appliesInScope",
+            "doesNotApply",
+            "contested"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "sourceRef",
+        "fragmentRef",
+        "issuer",
+        "documentNumber",
+        "edition",
+        "clauseLocator",
+        "normativeForce",
+        "effectiveStatus",
+        "authorityVerification",
+        "projectApplicability",
+        "conditions",
+        "exceptions",
+        "decisionRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "projectApplicability": {
+                "enum": [
+                  "appliesInScope"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "subjects": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "ref": {
+                "$ref": "#/$defs/ref"
+              },
+              "contentDigest": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "ref",
+              "contentDigest"
+            ]
+          },
+          "minItems": 1
+        },
+        "canonicalization": {
+          "const": "RFC8785"
+        },
+        "verdict": {
+          "enum": [
+            "adopt",
+            "edit",
+            "defer",
+            "reject"
+          ]
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "intendedUse": {
+          "enum": [
+            "referenceOnly",
+            "projectPractice",
+            "packCandidate",
+            "activeInScope"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basisRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "delegationRef": {
+          "$ref": "#/$defs/ref"
+        }
+      },
+      "required": [
+        "subjects",
+        "canonicalization",
+        "verdict",
+        "scope",
+        "intendedUse",
+        "reason",
+        "basisRefs"
+      ]
+    },
+    "binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "knowledgeRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "packElementRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "transformation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "stale"
+          ]
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "validationRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "knowledgeRef",
+        "packElementRef",
+        "purpose",
+        "transformation",
+        "status",
+        "decisionRefs",
+        "validationRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "affectedDecision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "impact": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "open",
+            "waitingUser",
+            "deferred",
+            "blocked",
+            "resolved"
+          ]
+        },
+        "knownRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "nextAction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recoveryCondition": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "question",
+        "affectedDecision",
+        "impact",
+        "status",
+        "knownRefs",
+        "nextAction",
+        "recoveryCondition"
+      ]
+    },
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "catalogId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "gapRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answerForms": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "narrative",
+              "sourceRef",
+              "choice",
+              "unknown",
+              "defer"
+            ]
+          },
+          "minItems": 1
+        },
+        "status": {
+          "enum": [
+            "queued",
+            "asked",
+            "answered",
+            "deferred"
+          ]
+        },
+        "answerRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "catalogId",
+        "gapRef",
+        "prompt",
+        "purpose",
+        "answerForms",
+        "status",
+        "answerRefs"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "taskRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "knowledgeRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "action": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "effect": {
+          "enum": [
+            "supported",
+            "contradicted",
+            "inconclusive",
+            "notEvaluated"
+          ]
+        },
+        "nextChange": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "taskRef",
+        "knowledgeRef",
+        "action",
+        "evidenceRefs",
+        "effect",
+        "nextChange"
+      ]
+    },
+    "intake": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sourceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "contributor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "receivedVia": {
+          "enum": [
+            "upload",
+            "link",
+            "conversation",
+            "import"
+          ]
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "registered",
+            "processing",
+            "reviewReady",
+            "done",
+            "partial"
+          ]
+        }
+      },
+      "required": [
+        "sourceRefs",
+        "contributor",
+        "receivedVia",
+        "purpose",
+        "status"
+      ]
+    },
+    "activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "framing",
+            "intake",
+            "interview",
+            "annotation",
+            "research",
+            "review",
+            "commit",
+            "assembly",
+            "validation",
+            "feedback"
+          ]
+        },
+        "status": {
+          "enum": [
+            "queued",
+            "inProgress",
+            "waitingInput",
+            "reviewReady",
+            "done",
+            "deferred",
+            "blocked"
+          ]
+        },
+        "inputRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "outputRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "nextAction": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "status",
+        "inputRefs",
+        "outputRefs",
+        "nextAction"
+      ]
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "when": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "fact": {
+              "type": "string",
+              "minLength": 1
+            },
+            "op": {
+              "enum": [
+                "eq",
+                "in",
+                "exists"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "number",
+                "boolean",
+                "array"
+              ],
+              "items": {
+                "type": [
+                  "string",
+                  "number",
+                  "boolean"
+                ]
+              }
+            }
+          },
+          "required": [
+            "fact",
+            "op",
+            "value"
+          ]
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "kind": {
+                "enum": [
+                  "metadataAssign",
+                  "tagAssign"
+                ]
+              },
+              "targetTagRefs": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/ref"
+                },
+                "minItems": 0
+              },
+              "fieldsMap": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "kind",
+              "targetTagRefs",
+              "fieldsMap"
+            ]
+          },
+          "minItems": 1
+        },
+        "scope": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "exceptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "accepted",
+            "retired"
+          ]
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "title",
+        "when",
+        "actions",
+        "scope",
+        "exceptions",
+        "status",
+        "decisionRefs"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "accepted"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "decisionRefs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "commit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "operationId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requestDigest": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "subjectRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "expectedRevisions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "id",
+              "revision"
+            ]
+          },
+          "minItems": 0
+        },
+        "decisionRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "status": {
+          "enum": [
+            "staged",
+            "reconciling",
+            "committed",
+            "aborted"
+          ]
+        },
+        "contentCommitted": {
+          "type": "boolean"
+        },
+        "committedRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "readModelState": {
+          "enum": [
+            "current",
+            "stale",
+            "unavailable"
+          ]
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "operationId",
+        "requestDigest",
+        "subjectRefs",
+        "expectedRevisions",
+        "decisionRefs",
+        "status",
+        "contentCommitted",
+        "committedRefs",
+        "readModelState",
+        "issues"
+      ]
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "actor": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "kind": {
+              "enum": [
+                "user",
+                "ai",
+                "system",
+                "demonstration"
+              ]
+            }
+          },
+          "required": [
+            "id",
+            "kind"
+          ]
+        },
+        "originMode": {
+          "enum": [
+            "userProvided",
+            "aiProposed",
+            "systemDerived",
+            "demonstration"
+          ]
+        },
+        "recordType": {
+          "enum": [
+            "source",
+            "fragment",
+            "tag",
+            "annotation",
+            "knowledge",
+            "case",
+            "clause",
+            "decision",
+            "binding",
+            "gap",
+            "question",
+            "application",
+            "intake",
+            "activity",
+            "rule",
+            "commit"
+          ]
+        },
+        "data": {},
+        "adoptionBaseRef": {
+          "$ref": "#/$defs/ref"
+        },
+        "extensions": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "revision",
+        "createdAt",
+        "actor",
+        "originMode",
+        "recordType",
+        "data"
+      ],
+      "oneOf": [
+        {
+          "properties": {
+            "recordType": {
+              "const": "source"
+            },
+            "data": {
+              "$ref": "#/$defs/source"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "fragment"
+            },
+            "data": {
+              "$ref": "#/$defs/fragment"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "tag"
+            },
+            "data": {
+              "$ref": "#/$defs/tag"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "annotation"
+            },
+            "data": {
+              "$ref": "#/$defs/annotation"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "knowledge"
+            },
+            "data": {
+              "$ref": "#/$defs/knowledge"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "case"
+            },
+            "data": {
+              "$ref": "#/$defs/case"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "clause"
+            },
+            "data": {
+              "$ref": "#/$defs/clause"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "decision"
+            },
+            "data": {
+              "$ref": "#/$defs/decision"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "binding"
+            },
+            "data": {
+              "$ref": "#/$defs/binding"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "gap"
+            },
+            "data": {
+              "$ref": "#/$defs/gap"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "question"
+            },
+            "data": {
+              "$ref": "#/$defs/question"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "application"
+            },
+            "data": {
+              "$ref": "#/$defs/application"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "intake"
+            },
+            "data": {
+              "$ref": "#/$defs/intake"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "activity"
+            },
+            "data": {
+              "$ref": "#/$defs/activity"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "rule"
+            },
+            "data": {
+              "$ref": "#/$defs/rule"
+            }
+          }
+        },
+        {
+          "properties": {
+            "recordType": {
+              "const": "commit"
+            },
+            "data": {
+              "$ref": "#/$defs/commit"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

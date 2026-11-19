@@ -1,0 +1,42 @@
+{
+  "type_id": "template",
+  "label": "模板片段",
+  "description": "可复用的短片段",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "usage": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1000
+      },
+      "content": {
+        "kind": "text",
+        "required": true,
+        "max_len": 6000
+      },
+      "placeholders": {
+        "kind": "list",
+        "item": "text",
+        "required": false
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "usage",
+      "content",
+      "placeholders"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": false
+  }
+}

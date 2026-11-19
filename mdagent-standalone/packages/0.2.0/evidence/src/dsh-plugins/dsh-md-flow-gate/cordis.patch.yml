@@ -1,0 +1,11 @@
+# dsh-md-flow-gate bundle patch: one insert registering the pipeline gate.
+# The row id must match the plugin's exported cordis `name`.
+# logPath 相对值由 MDSIM_DATA_ROOT 环境变量锚定(run-dsh.sh 统一 export),
+# 解析进数据根 events/flowgate.jsonl;无 env 时才退回 cwd(旧病灶,勿去掉 env)。
+# 注意:evidence 工具清单不可配置(2026-08-29 起,防降级攻击);config.intent 仅作
+# status-intent 的增量"或"扩展,只增布防面。
+- insert:
+    - id: dsh-md-flow-gate
+      name: 'dsh-md-flow-gate'
+      config:
+        logPath: 'events/flowgate.jsonl'

@@ -1,0 +1,474 @@
+[
+ {
+  "facet": "domain",
+  "slug": "metal-md",
+  "label": "金属分子动力学",
+  "description": "以金属及合金为对象的经典分子动力学（EAM/MEAM/ADP/机器学习势等）。不含第一性原理、蒙特卡洛。",
+  "aliases": [
+   "金属MD",
+   "metal MD",
+   "分子动力学",
+   "MD"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "potential",
+  "label": "势函数",
+  "description": "势函数的选择、格式、元素映射、适用范围与验证。",
+  "aliases": [
+   "势",
+   "力场",
+   "interatomic potential"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "potential-format",
+  "label": "势文件格式与映射",
+  "parent": "potential",
+  "description": "eam/funcfl、eam/alloy setfl、eam/fs、meam 等文件格式以及 pair_coeff 元素映射写法。",
+  "aliases": [
+   "funcfl",
+   "setfl",
+   "pair_coeff 写法",
+   "元素映射"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "potential-validation",
+  "label": "势函数验证",
+  "parent": "potential",
+  "description": "用晶格常数、弹性常数、层错能、熔点等基准检验势函数是否可用。",
+  "aliases": [
+   "势验证",
+   "benchmark potential"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "model-building",
+  "label": "建模",
+  "description": "构建初始结构：晶胞、取向、超胞尺寸、缺陷、晶界、多晶、合金无序。",
+  "aliases": [
+   "建模",
+   "构型",
+   "structure building"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "polycrystal",
+  "label": "多晶与晶界构建",
+  "parent": "model-building",
+  "description": "Voronoi 多晶、双晶、晶界构建与去重叠原子。",
+  "aliases": [
+   "多晶",
+   "晶界",
+   "grain boundary",
+   "voronoi"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "size-effects",
+  "label": "尺寸与边界效应",
+  "parent": "model-building",
+  "description": "超胞尺寸、周期像相互作用、自由表面对结果的影响。",
+  "aliases": [
+   "尺寸效应",
+   "有限尺寸",
+   "finite size"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "ensemble-control",
+  "label": "系综与控温控压",
+  "description": "恒温器、恒压器的选择与参数（阻尼时间、各向异性控压），平衡判据。",
+  "aliases": [
+   "系综",
+   "恒温",
+   "恒压",
+   "NPT",
+   "NVT",
+   "阻尼"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "equilibration",
+  "label": "平衡与弛豫",
+  "parent": "ensemble-control",
+  "description": "能量最小化、预平衡、平衡判定（漂移、涨落、前后半窗比较）。",
+  "aliases": [
+   "平衡",
+   "弛豫",
+   "minimization"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "integration",
+  "label": "时间积分与稳定性",
+  "description": "时间步长、能量守恒、原子丢失、积分发散。",
+  "aliases": [
+   "时间步",
+   "timestep",
+   "dt",
+   "能量漂移"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "mechanical-loading",
+  "label": "力学加载",
+  "description": "拉伸、压缩、剪切、纳米压痕等加载方式与应力应变提取。",
+  "aliases": [
+   "加载",
+   "拉伸",
+   "压缩",
+   "deform",
+   "tension"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "strain-rate",
+  "label": "应变率效应",
+  "parent": "mechanical-loading",
+  "description": "MD 超高应变率导致的强度偏高、与实验对比的换算与局限。",
+  "aliases": [
+   "应变率",
+   "strain rate"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "stress-calc",
+  "label": "应力计算与符号",
+  "parent": "mechanical-loading",
+  "description": "压力张量、维里应力、单位换算与符号约定（拉为正）。",
+  "aliases": [
+   "应力",
+   "virial",
+   "pxx 符号"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "defects",
+  "label": "缺陷与塑性",
+  "description": "空位、间隙、位错、层错、孪晶、孔洞的形成与识别。",
+  "aliases": [
+   "缺陷",
+   "位错",
+   "层错",
+   "dislocation"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "structure-analysis",
+  "label": "结构识别与后处理",
+  "description": "CNA、PTM、DXA、配位数、RDF 等结构分析方法与工具。",
+  "aliases": [
+   "后处理",
+   "CNA",
+   "DXA",
+   "OVITO",
+   "结构分析"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "thermal",
+  "label": "热学性质",
+  "description": "热膨胀、熔点、比热、热导率。",
+  "aliases": [
+   "热学",
+   "熔点",
+   "热膨胀",
+   "热导"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "diffusion",
+  "label": "扩散与输运",
+  "description": "MSD、扩散系数、偏析与输运。",
+  "aliases": [
+   "扩散",
+   "MSD",
+   "偏析"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "run-failure",
+  "label": "运行故障诊断",
+  "description": "报错、崩溃、异常输出的症状、根因与修复。只收已确认根因的。",
+  "aliases": [
+   "报错",
+   "故障",
+   "崩溃",
+   "ERROR"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "restart",
+  "label": "断点续算",
+  "description": "restart/checkpoint 的写出、读入与连续性验证。",
+  "aliases": [
+   "续算",
+   "重启",
+   "checkpoint"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "performance",
+  "label": "并行与性能",
+  "description": "MPI 分解、邻居列表、负载均衡、GPU 加速。",
+  "aliases": [
+   "性能",
+   "并行",
+   "MPI",
+   "GPU"
+  ]
+ },
+ {
+  "facet": "topic",
+  "slug": "reporting",
+  "label": "结果报告与不确定度",
+  "description": "统计不确定度、误差来源、局限性写法、可复现性。",
+  "aliases": [
+   "不确定度",
+   "误差",
+   "可复现"
+  ]
+ },
+ {
+  "facet": "method",
+  "slug": "classical-md",
+  "label": "经典 MD",
+  "description": "常规时间积分分子动力学。",
+  "aliases": [
+   "经典MD",
+   "molecular dynamics"
+  ]
+ },
+ {
+  "facet": "method",
+  "slug": "energy-minimization",
+  "label": "能量最小化",
+  "description": "共轭梯度/FIRE 等静态弛豫，含盒子弛豫。",
+  "aliases": [
+   "最小化",
+   "minimize",
+   "box/relax"
+  ]
+ },
+ {
+  "facet": "method",
+  "slug": "energy-strain",
+  "label": "能量-应变法",
+  "description": "0 K 下施加小应变、拟合能量二次项得到弹性常数。",
+  "aliases": [
+   "能量应变",
+   "应变能法"
+  ]
+ },
+ {
+  "facet": "method",
+  "slug": "nemd",
+  "label": "非平衡 MD",
+  "description": "施加梯度或外场的非平衡方法（如 Müller-Plathe 热导）。",
+  "aliases": [
+   "NEMD",
+   "非平衡"
+  ]
+ },
+ {
+  "facet": "method",
+  "slug": "two-phase",
+  "label": "两相共存法",
+  "description": "固液界面共存确定熔点。",
+  "aliases": [
+   "共存法",
+   "two-phase coexistence"
+  ]
+ },
+ {
+  "facet": "object",
+  "slug": "fcc-metal",
+  "label": "fcc 金属",
+  "description": "面心立方金属（Cu、Al、Ni、Ag、Au 等）。",
+  "aliases": [
+   "fcc",
+   "面心立方",
+   "Cu",
+   "铜",
+   "Al",
+   "铝",
+   "Ni",
+   "镍"
+  ]
+ },
+ {
+  "facet": "object",
+  "slug": "bcc-metal",
+  "label": "bcc 金属",
+  "description": "体心立方金属（Fe、W、Mo、Ta 等）。",
+  "aliases": [
+   "bcc",
+   "体心立方",
+   "Fe",
+   "铁",
+   "W",
+   "钨"
+  ]
+ },
+ {
+  "facet": "object",
+  "slug": "hcp-metal",
+  "label": "hcp 金属",
+  "description": "密排六方金属（Ti、Mg、Zr 等）。",
+  "aliases": [
+   "hcp",
+   "密排六方",
+   "Ti",
+   "钛",
+   "Mg",
+   "镁"
+  ]
+ },
+ {
+  "facet": "object",
+  "slug": "alloy",
+  "label": "合金",
+  "description": "二元及多元合金、高熵合金。",
+  "aliases": [
+   "合金",
+   "HEA",
+   "高熵合金",
+   "固溶体"
+  ]
+ },
+ {
+  "facet": "object",
+  "slug": "lj-model",
+  "label": "LJ 模型体系",
+  "description": "Lennard-Jones 约化单位模型体系，常用于方法验证。",
+  "aliases": [
+   "LJ",
+   "lennard-jones",
+   "约化单位"
+  ]
+ },
+ {
+  "facet": "tool",
+  "slug": "lammps",
+  "label": "LAMMPS",
+  "description": "LAMMPS 模拟程序。",
+  "aliases": [
+   "lmp"
+  ]
+ },
+ {
+  "facet": "tool",
+  "slug": "ovito",
+  "label": "OVITO",
+  "description": "OVITO 可视化与分析。",
+  "aliases": [
+   "ovito"
+  ]
+ },
+ {
+  "facet": "tool",
+  "slug": "atomsk",
+  "label": "Atomsk",
+  "description": "Atomsk 建模工具。",
+  "aliases": [
+   "atomsk"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "elastic",
+  "label": "弹性性质",
+  "description": "弹性常数、模量、Born 稳定性。",
+  "aliases": [
+   "弹性常数",
+   "C11",
+   "模量",
+   "elastic constants"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "strength",
+  "label": "强度与屈服",
+  "description": "理想强度、屈服应力、峰值应力。",
+  "aliases": [
+   "强度",
+   "屈服",
+   "峰值应力"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "lattice-density",
+  "label": "晶格常数与密度",
+  "description": "平衡晶格常数、密度、热膨胀导致的变化。",
+  "aliases": [
+   "晶格常数",
+   "密度",
+   "lattice constant"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "melting",
+  "label": "熔点",
+  "description": "熔化温度及其计算方法。",
+  "aliases": [
+   "熔点",
+   "melting point"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "thermal-conductivity",
+  "label": "热导率",
+  "description": "晶格热导率（金属电子贡献 MD 不含）。",
+  "aliases": [
+   "热导率",
+   "thermal conductivity"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "diffusivity",
+  "label": "扩散系数",
+  "description": "自扩散、互扩散系数。",
+  "aliases": [
+   "扩散系数",
+   "diffusion coefficient"
+  ]
+ },
+ {
+  "facet": "property",
+  "slug": "defect-energy",
+  "label": "缺陷能",
+  "description": "空位形成能、层错能、表面能、晶界能。",
+  "aliases": [
+   "形成能",
+   "层错能",
+   "表面能",
+   "SFE"
+  ]
+ }
+]

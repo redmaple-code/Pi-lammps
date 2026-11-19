@@ -1,0 +1,102 @@
+{
+  "mode": "tabletop",
+  "capturedAt": "2026-11-17T13:13:55.917350+00:00",
+  "packId": "small-molecule-docking",
+  "packVersion": "0.1.0-draft",
+  "workflowId": "virtual-screening",
+  "files": [
+    {
+      "locator": "source-pack/artifacts.json",
+      "digest": "sha256:99177a9102bc61cbf88e2a92efd7d004b07a3c7f7ad5d4b32f2400bfe5965df3",
+      "byteLength": 11720
+    },
+    {
+      "locator": "source-pack/checks.json",
+      "digest": "sha256:3ce264da762680d7adb78af5578da2e4641d0abab196cfefc84c35b5d9f75beb",
+      "byteLength": 6016
+    },
+    {
+      "locator": "source-pack/examples/task.json",
+      "digest": "sha256:7ba56c62163600015b100f4a7ac2274508da5ab83f5242de254f93bb5cd49afc",
+      "byteLength": 2770
+    },
+    {
+      "locator": "source-pack/examples/virtual-screening.task.json",
+      "digest": "sha256:0cd842b7650570f2d04a0beaa40d71a255a0a5f501ec0ffee466fc5db65ad67c",
+      "byteLength": 2694
+    },
+    {
+      "locator": "source-pack/failures.json",
+      "digest": "sha256:a964608219c6af66414a4d81c71297f90408ff3da615170338c838e6f3aac64a",
+      "byteLength": 2163
+    },
+    {
+      "locator": "source-pack/knowledge.json",
+      "digest": "sha256:2761183713cb27fb005b18234bccf5ccadc6a4388f7f33dc4c5440aa5b786edb",
+      "byteLength": 2880
+    },
+    {
+      "locator": "source-pack/manifest.json",
+      "digest": "sha256:cb4a9ef021a750b1434ccbc1835bab93fb22cad0cc8d044413e92b6b82f4f2d3",
+      "byteLength": 18084
+    },
+    {
+      "locator": "source-pack/metrics.json",
+      "digest": "sha256:0495d5b52c2dfbf56c2e0fb78d68d5185a5567017735f509a22447d5388f1998",
+      "byteLength": 2582
+    },
+    {
+      "locator": "source-pack/models.json",
+      "digest": "sha256:6e068ebcb0538bdda8c826b1ec689bdadc0264a19d04798d8cc6156c27b25f07",
+      "byteLength": 1013
+    },
+    {
+      "locator": "source-pack/problem.schema.json",
+      "digest": "sha256:d8a5c01f9278557f9fbb2d96a3b660dc5bfc07701e18a3adf06a374687f9cff7",
+      "byteLength": 14132
+    },
+    {
+      "locator": "source-pack/protocols.json",
+      "digest": "sha256:d4329291b11a8e2103019d509e70c563195c692bc100223c9a90cf355116975b",
+      "byteLength": 1023
+    },
+    {
+      "locator": "source-pack/README.md",
+      "digest": "sha256:176f7b09dfa31b97f6bc770083cd84d2fa7652271936f8458b892a3664e2161a",
+      "byteLength": 9073
+    },
+    {
+      "locator": "source-pack/record.schema.json",
+      "digest": "sha256:6db15b3be97c41ccd8400053c1ca4935d244f15f5ff8a5e38449c6045180312b",
+      "byteLength": 1363
+    },
+    {
+      "locator": "source-pack/roles.json",
+      "digest": "sha256:a7709deebad0b9b29f2e45df345d4a9bc8a42234b1cfa5f0581929c3bbf097fa",
+      "byteLength": 1428
+    },
+    {
+      "locator": "source-pack/templates.json",
+      "digest": "sha256:eb54dff00003c63436d3e301911b115e245eb597e18883424d95b94ddf3f98e1",
+      "byteLength": 823
+    },
+    {
+      "locator": "source-pack/tooling.md",
+      "digest": "sha256:1cda67ce15e9230548818229b4eff6cc5144a846c96e934635c3a8eb05f55b35",
+      "byteLength": 1964
+    },
+    {
+      "locator": "source-pack/validation.json",
+      "digest": "sha256:986d3fcb07868eb507992c00931fe773927566b830c05bbd98efc2b2fcbecfea",
+      "byteLength": 1964
+    },
+    {
+      "locator": "source-pack/vocabulary.json",
+      "digest": "sha256:a06d1f9f3e7d9ed0a8c78fa6f34266f0108faa14800d2e75c2777cf01e530d0e",
+      "byteLength": 794
+    }
+  ],
+  "softwareBindings": "unresolved",
+  "sourceType": "本地领域包内容快照",
+  "liveWebReadThisTurn": false
+}

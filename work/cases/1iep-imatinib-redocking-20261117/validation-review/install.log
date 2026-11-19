@@ -1,0 +1,17 @@
+Looking in indexes: https://pypi.tuna.tsinghua.edu.cn/simple
+Collecting posebusters==0.6.5
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/f5/76/62fbbfc0c6b1df40b3d424d33a8588f23d22a59b81498c07ca629c99b3fb/posebusters-0.6.5-py3-none-any.whl (567 kB)
+     ------------------------------------- 567.8/567.8 kB 11.9 MB/s eta 0:00:00
+Requirement already satisfied: rdkit>=2024.9 in c:\users\redmaple\appdata\local\redmaple\simulation-envs\docking-v1\lib\site-packages (from posebusters==0.6.5) (2026.9.2)
+Collecting pandas (from posebusters==0.6.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/69/7c/8da507fc9ef7218aba9f6d66be872e3db09d3d4aa4b540ad27885ad89f02/pandas-3.1.1-cp311-cp311-win_amd64.whl (11.0 MB)
+     --------------------------------------- 11.0/11.0 MB 10.6 MB/s eta 0:00:00
+Requirement already satisfied: numpy in c:\users\redmaple\appdata\local\redmaple\simulation-envs\docking-v1\lib\site-packages (from posebusters==0.6.5) (2.4.6)
+Collecting pyyaml (from posebusters==0.6.5)
+  Downloading https://pypi.tuna.tsinghua.edu.cn/packages/da/e3/ea007450a105ae919a72393cb06f122f288ef60bba2dc64b26e2646fa315/pyyaml-6.0.3-cp311-cp311-win_amd64.whl (158 kB)
+     -------------------------------------- 158.8/158.8 kB 9.3 MB/s eta 0:00:00
+Requirement already satisfied: Pillow in c:\users\redmaple\appdata\local\redmaple\simulation-envs\docking-v1\lib\site-packages (from rdkit>=2024.9->posebusters==0.6.5) (13.0.0)
+Requirement already satisfied: python-dateutil>=2.9.0 in c:\users\redmaple\appdata\local\redmaple\simulation-envs\docking-v1\lib\site-packages (from pandas->posebusters==0.6.5) (4.0.0)
+Requirement already satisfied: tzdata in c:\users\redmaple\appdata\local\redmaple\simulation-envs\docking-v1\lib\site-packages (from pandas->posebusters==0.6.5) (2026.6)
+Installing collected packages: pyyaml, pandas, posebusters
+Successfully installed pandas-3.1.1 posebusters-0.6.5 pyyaml-6.0.3

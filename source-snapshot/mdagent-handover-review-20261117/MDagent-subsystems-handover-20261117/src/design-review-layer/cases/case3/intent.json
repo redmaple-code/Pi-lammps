@@ -1,0 +1,104 @@
+{
+  "schema_version": "3.0",
+  "case_id": "case3",
+  "status": "DESIGNED",
+  "source": {
+    "kind": "external_lammps_case",
+    "path": "WSL:/home/red/lmp (copied)"
+  },
+  "objective": {
+    "simulation_goal": "纯 Cu 300 K 单轴拉伸（NPT 控压）：测弹性模量与屈服强度",
+    "target_property": [
+      "stress_strain_curve"
+    ]
+  },
+  "system": {
+    "molecule": "纯 Cu（fcc）",
+    "target_elements": [
+      "Cu"
+    ],
+    "size": {
+      "atoms_target": null
+    }
+  },
+  "constraints": {
+    "temperature_range": [
+      300,
+      300
+    ]
+  },
+  "ensemble_sequence": [
+    {
+      "stage": "minimize"
+    },
+    {
+      "stage": "pre_equil",
+      "ensemble": "npt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    },
+    {
+      "stage": "production",
+      "ensemble": "npt",
+      "thermostat": "nose-hoover",
+      "T_K": 300
+    }
+  ],
+  "key_params": {
+    "timestep_fs": 1.0,
+    "total_steps": 140000,
+    "units": "metal",
+    "pair_style": "eam",
+    "forcefield": {
+      "preferred": "Cu_u3.eam"
+    }
+  },
+  "experiment_design": {
+    "experiment_type": "tension"
+  },
+  "experiment_plan": {
+    "authored_by": "assistant (AI-drafted macro context; needs user confirmation)",
+    "sections": [
+      {
+        "id": "E-01",
+        "title": "实验目的与假设",
+        "text": "测定纯 Cu 在 300 K 下的单轴拉伸响应，获取弹性模量与屈服强度，作为势函数/模型的对照基准。"
+      },
+      {
+        "id": "E-02",
+        "title": "对象与材料",
+        "text": "纯 Cu（99.99%），fcc 单晶或多晶；实验试样为 mm 级丝/片。"
+      },
+      {
+        "id": "E-03",
+        "title": "装置与几何",
+        "text": "微型拉伸台 + 引伸计，标距段按标准试样配置。"
+      },
+      {
+        "id": "E-04",
+        "title": "加载与条件",
+        "text": "300 K，单轴拉伸，应变率 1×10⁻³ s⁻¹；NPT 条件下保持侧向零压。"
+      },
+      {
+        "id": "E-05",
+        "title": "测量与判据",
+        "text": "σ-ε 曲线、E、σy（0.2% 偏移）。"
+      },
+      {
+        "id": "E-06",
+        "title": "来源与备注",
+        "text": "宏观实验描述由助手依据 in 文件（NPTload/in.melt.lmp，实际为 NPT 拉伸协议）反推补写，待用户确认。"
+      }
+    ]
+  },
+  "cross_scale": {
+    "loading": {
+      "macro": "1×10⁻³ s⁻¹（拟，应变率控制）",
+      "micro": "fix npt y 0 -50000 bar（应力控制，2 ps 阻尼）——无显式应变率",
+      "gap": "控制方式不同：应变率控制 vs 应力控制，不能直接比较",
+      "verdict": "q",
+      "rationale": "实验为位移/应变率控制，in 文件为应力控制（NPT y 方向 -50000 bar），两者加载历史不可直接对应。需要补充应力-应变率映射（率相关本构/蠕变参数）或改用 fix deform 速度控制；否则只能比较最终态趋势，不能比较率相关响应。当前未提供映射 → 存疑。",
+      "status": "未论证（需给出应力-应变率映射）→ 存疑"
+    }
+  }
+}

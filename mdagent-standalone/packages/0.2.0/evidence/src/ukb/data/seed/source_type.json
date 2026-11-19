@@ -1,0 +1,47 @@
+[
+  {
+    "source_type_id": "user_confirmation",
+    "label": "用户/所有者确认",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "literature",
+    "label": "文献",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "measurement",
+    "label": "实测数据",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "run_artifact",
+    "label": "运行产物",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "case",
+    "label": "过往案例",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "knowledge_entry",
+    "label": "知识库条目",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "dialogue",
+    "label": "对话/会话记录",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "estimate",
+    "label": "估算/推导",
+    "default_grade": 0
+  },
+  {
+    "source_type_id": "external_doc",
+    "label": "外部文档/手册",
+    "default_grade": 0
+  }
+]

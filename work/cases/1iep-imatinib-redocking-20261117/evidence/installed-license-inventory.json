@@ -1,0 +1,72 @@
+[
+  {
+    "name": "rdkit",
+    "version": "2026.9.2",
+    "licenseExpression": null,
+    "licenseField": "BSD-3-Clause",
+    "licenseFiles": [
+      "licenses/installed/rdkit/LICENSE.md"
+    ]
+  },
+  {
+    "name": "meeko",
+    "version": "0.8.0",
+    "licenseExpression": null,
+    "licenseField": "LGPL-2.1",
+    "licenseFiles": [
+      "licenses/installed/meeko/licenses/LICENSE"
+    ]
+  },
+  {
+    "name": "gemmi",
+    "version": "0.7.5",
+    "licenseExpression": null,
+    "licenseField": "MPL-2.0",
+    "licenseFiles": [
+      "licenses/installed/gemmi/licenses/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "2.4.6",
+    "licenseExpression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "licenseField": "",
+    "licenseFiles": [
+      "licenses/installed/numpy/licenses/LICENSE.txt",
+      "licenses/installed/numpy/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+      "licenses/installed/numpy/licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+      "licenses/installed/numpy/licenses/numpy/_core/src/highway/LICENSE",
+      "licenses/installed/numpy/licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+      "licenses/installed/numpy/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/_core/src/umath/svml/LICENSE",
+      "licenses/installed/numpy/licenses/numpy/fft/pocketfft/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+      "licenses/installed/numpy/licenses/numpy/ma/LICENSE",
+      "licenses/installed/numpy/licenses/numpy/random/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/distributions/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/mt19937/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/pcg64/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/philox/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/sfc64/LICENSE.md",
+      "licenses/installed/numpy/licenses/numpy/random/src/splitmix64/LICENSE.md"
+    ]
+  },
+  {
+    "name": "scipy",
+    "version": "1.17.1",
+    "licenseExpression": null,
+    "licenseField": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.\n All rights reserved.\n\n Redistribution and use in source and binary forms, with or without\n modification, are permitted provided that th",
+    "licenseFiles": [
+      "licenses/installed/scipy/LICENSE.txt"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.11.2",
+    "licenseExpression": null,
+    "licenseField": "License agreement for matplotlib versions 1.3.0 and later\n =========================================================\n\n 1. This LICENSE AGREEMENT is between the Matplotlib Development Team\n (\"MDT\"), an",
+    "licenseFiles": [
+      "licenses/installed/matplotlib/LICENSE"
+    ]
+  }
+]

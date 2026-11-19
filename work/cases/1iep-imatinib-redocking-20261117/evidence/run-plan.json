@@ -1,0 +1,30 @@
+{
+  "mode": "real",
+  "seeds": [
+    104729,
+    130363,
+    155921
+  ],
+  "cpuPerRun": 4,
+  "maxConcurrentRuns": 2,
+  "timeoutPerRunSeconds": 900,
+  "inputs": [
+    {
+      "path": "inputs/prepared/receptor.pdbqt",
+      "digest": "sha256:e33a2134a3f0fdca486a949bc4df26ee34422d2e5f7cb3a6f0cd361b313e4cb9"
+    },
+    {
+      "path": "inputs/prepared/ligand.pdbqt",
+      "digest": "sha256:07e7a1c998cd6c8577a400e55e00a3b08253081c6449b6a9ecdcddee86a64a9a"
+    },
+    {
+      "path": "inputs/prepared/search.cfg",
+      "digest": "sha256:212cb9c081810ed082ae794367e9b3232fd8100286f939bc719b73099b8ef1eb"
+    }
+  ],
+  "vinaDigest": "sha256:e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5",
+  "referenceMetric": "Unaligned symmetry-aware heavy-atom RMSD in fixed receptor coordinates",
+  "RMSDLimit_A": 2.0,
+  "top1SuccessTarget": "at least2/3",
+  "declaredBeforeExecution": "2026-11-17T13:57:29.786753+00:00"
+}

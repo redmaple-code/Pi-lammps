@@ -1,0 +1,51 @@
+{
+  "dataOrigin": "realVinaRuns",
+  "poseCount": 20,
+  "seeds": [
+    {
+      "seed": 104729,
+      "modeCount": 7,
+      "top1Score_kcal_per_mol": -12.807,
+      "top1ReferenceRMSD_A": 0.6195798090606621,
+      "bestOf5ReferenceRMSD_A": 0.6195798090606621,
+      "durationSeconds": 626.3429999999935
+    },
+    {
+      "seed": 130363,
+      "modeCount": 6,
+      "top1Score_kcal_per_mol": -12.817,
+      "top1ReferenceRMSD_A": 0.6097980430737248,
+      "bestOf5ReferenceRMSD_A": 0.6097980430737248,
+      "durationSeconds": 620.265000000014
+    },
+    {
+      "seed": 155921,
+      "modeCount": 7,
+      "top1Score_kcal_per_mol": -12.803,
+      "top1ReferenceRMSD_A": 0.6365766867421845,
+      "bestOf5ReferenceRMSD_A": 0.6365766867421845,
+      "durationSeconds": 571.5
+    }
+  ],
+  "referenceHeavyAtoms": 37,
+  "referenceSmiles": "Cc1ccc(NC(=O)c2ccc(CN3CC[NH+](C)CC3)cc2)cc1Nc1nccc(-c2cccnc2)n1",
+  "metricMethod": "RDKit CalcRMS with symmetry matching and no ligand realignment; fixed receptor frame.",
+  "coordinateFrameCheck": {
+    "commonReceptorHeavyAtoms": 2229,
+    "originalHeavyAtoms": 2229,
+    "preparedHeavyAtoms": 2229,
+    "maxSharedHeavyAtomDisplacement_A": 0.0,
+    "missingPreparedAtomKeys": [],
+    "addedPreparedAtomKeys": []
+  },
+  "top1Recovered": 3,
+  "bestOf5Recovered": 3,
+  "denominator": 3,
+  "predeclaredPointTargetMet": true,
+  "severeOverlapPoseCount": 0,
+  "limitations": [
+    "One tutorial receptor and one ligand charge state.",
+    "Three seeds describe a small method-verification sample.",
+    "RMSD and scores do not provide experimental affinity measurements."
+  ]
+}

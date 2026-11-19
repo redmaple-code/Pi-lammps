@@ -1,0 +1,17 @@
+
+test_action_injection_and_unavailable_operation_rejected (__main__.StandaloneTests.test_action_injection_and_unavailable_operation_rejected) ... ok
+test_actual_consistency_fixture (__main__.StandaloneTests.test_actual_consistency_fixture) ... ok
+test_audit_commit_failure_after_write_is_unknown (__main__.StandaloneTests.test_audit_commit_failure_after_write_is_unknown) ... ok
+test_each_module_starts_without_site_packages (__main__.StandaloneTests.test_each_module_starts_without_site_packages) ... ok
+test_evidence_real_task_and_revision_conflict (__main__.StandaloneTests.test_evidence_real_task_and_revision_conflict) ... ok
+test_gate_measure_uses_all_atoms_without_numpy (__main__.StandaloneTests.test_gate_measure_uses_all_atoms_without_numpy) ... ok
+test_host_client_can_attach_and_detach_modules (__main__.StandaloneTests.test_host_client_can_attach_and_detach_modules) ... ok
+test_knowledge_create_query_and_audit (__main__.StandaloneTests.test_knowledge_create_query_and_audit) ... ok
+test_knowledge_proposal_remains_candidate (__main__.StandaloneTests.test_knowledge_proposal_remains_candidate) ... ok
+test_separate_processes_can_use_explicit_common_knowledge_root (__main__.StandaloneTests.test_separate_processes_can_use_explicit_common_knowledge_root) ... ok
+test_writes_are_disabled_by_default (__main__.StandaloneTests.test_writes_are_disabled_by_default) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 23.972s
+
+OK

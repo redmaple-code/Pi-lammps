@@ -1,0 +1,37 @@
+.....Exception in thread Thread-2 (_readerthread):
+Exception in thread Thread-1 (_readerthread):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1038, in _bootstrap_inner
+    self.run()
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 975, in run
+    self.run()
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 975, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1597, in _readerthread
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1597, in _readerthread
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 28: illegal multibyte sequence
+    buffer.append(fh.read())
+                  ^^^^^^^^^
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xaf in position 376: illegal multibyte sequence
+EC:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\tests\test_md_mcp_contract.py:128: ResourceWarning: unclosed file <_io.TextIOWrapper name='C:\\Users\\redmaple\\AppData\\Local\\Temp\\mdhandoff-review-rsfdibqc\\MDagent-subsystems-handover-20261117\\src\\mcp\\md_config.json.example' mode='r' encoding='utf-8'>
+  example = json.load(open(os.path.join(MCP_DIR, "md_config.json.example"),
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......
+======================================================================
+ERROR: test_business_failure_sets_iserror (test_md_mcp_contract.StdioIsErrorTests.test_business_failure_sets_iserror)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdhandoff-review-rsfdibqc\MDagent-subsystems-handover-20261117\src\tests\test_md_mcp_contract.py", line 151, in test_business_failure_sets_iserror
+    self.assertEqual(proc.returncode, 0, proc.stderr[-400:])
+                                         ~~~~~~~~~~~^^^^^^^
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.835s
+
+FAILED (errors=1)

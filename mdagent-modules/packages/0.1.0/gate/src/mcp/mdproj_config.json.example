@@ -1,0 +1,4 @@
+{
+  "_note": "mdproj 受控写 MCP 配置。project_root 是 agent 规划工作区(PROJECT_ROOT),与 md_config.json(local_base 模拟真相源)物理隔离,绝不混用。真配置复制本模板为 mdproj_config.json 后改路径;环境变量 MDPROJ_ROOT 优先于此文件。缺省回落 <代码根父目录>/mdsim-projects。",
+  "project_root": "/opt/mdagent/mdsim-projects"
+}

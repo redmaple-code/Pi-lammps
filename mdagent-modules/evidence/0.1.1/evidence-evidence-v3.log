@@ -1,0 +1,20 @@
+[APPLY] APPLIED: knowledge check1 generation=1
+[ROLLBACK] 知识包禁止整文件回滚;请通过受控知识撤回/替代提案保留代次与历史
+Evidence v3 UI http://127.0.0.1:1 (execution enabled)
+
+...........F.............................................................s................................................................................................................................................
+======================================================================
+FAIL: test_real_parent_child_grandchild_deadline (test_evidence_v3_bridge.BridgeDeadlineTests.test_real_parent_child_grandchild_deadline) (redirected=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-dghlxjwl\assembly\src\tests\test_evidence_v3_bridge.py", line 117, in test_real_parent_child_grandchild_deadline
+    self.assertEqual(error.code, "bridge-deadline-exceeded")
+AssertionError: 'bridge-termination-unknown' != 'bridge-deadline-exceeded'
+- bridge-termination-unknown
++ bridge-deadline-exceeded
+
+
+----------------------------------------------------------------------
+Ran 218 tests in 127.518s
+
+FAILED (failures=1, skipped=1)

@@ -1,0 +1,17 @@
+{
+  "sourceId": "command-semantics",
+  "sourceDigest": "sha256:a07b9025b21020025ca75b7c3bcaff57c20f956e468b06ebca393e8c9485f0ef",
+  "speedMPerS": 1000,
+  "fixPrintVariablesValid": true,
+  "engineeringStrainValid": false,
+  "eamCanSetMasses": true,
+  "reasons": {
+    "speedMPerS": "units metal: time = ps, length = Angstrom, dt = timestep value = 0.001 ps. Displacement per step = 10*dt = 0.01 A, elapsed 0.001 ps. Rate = 0.01 A/0.001 ps = 10 A/ps. Convert: 1 A/ps = 1e-10 m / 1e-12 s = 100 m/s, so 10 A/ps = 1000 m/s (1 nm/ps).",
+    "fixPrintVariablesValid": "Yes. In fix print, the double-quoted format string is parsed and expanded at every print interval (every N steps), so immediate $() and ${} variable references are re-evaluated each invocation rather than once. Hence ${current_step} and ${current_time} log the current step and current time on each output line; 'file variable-print.csv screen no' syntax is correct.",
+    "engineeringStrainValid": "No, as written. variable saved_length equal $(lx) is evaluated immediately when the variable command executes; in the given order that is before read_data defines the box, so lx is undefined or zero and L0 is not a valid frozen initial length. The formula (lx-v_L0)/v_L0 is correct engineering strain only if v_L0 is captured from lx after read_data (or from a defined fix/thermo accessor) and lx is the current length; with the ordering shown the strain is not valid.",
+    "eamCanSetMasses": "Yes. pair_style eam/alloy (eam/setfl) reads and sets atomic masses from the setfl file for the element types assigned by pair_coeff. Those masses override values previously set by read_data mass lines or the mass command, so the EAM file's masses (which may differ) are the ones used."
+  },
+  "notes": [
+    "Answers are independent per the source instruction."
+  ]
+}

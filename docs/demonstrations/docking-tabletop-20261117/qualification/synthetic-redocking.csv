@@ -1,0 +1,6 @@
+﻿dataOrigin,controlId,seed,syntheticReferenceRMSD_top1_A,syntheticReferenceRMSD_best5_A,comparison
+synthetic-tabletop,DEMO-REDOCK,104729,1.4,1.4,构造的外部参考RMSD摘要，实际坐标/映射待提供
+synthetic-tabletop,DEMO-REDOCK,130363,1.6,1.2,构造的外部参考RMSD摘要，实际坐标/映射待提供
+synthetic-tabletop,DEMO-REDOCK,155921,1.3,1.3,构造的外部参考RMSD摘要，实际坐标/映射待提供
+synthetic-tabletop,DEMO-REDOCK,181081,1.8,1.4,构造的外部参考RMSD摘要，实际坐标/映射待提供
+synthetic-tabletop,DEMO-REDOCK,205759,2.4,1.6,构造的外部参考RMSD摘要，实际坐标/映射待提供

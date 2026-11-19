@@ -1,0 +1,120 @@
+
+.EE..E....E.EE.EE.EEsssssE.......
+======================================================================
+ERROR: test_approved_change_before_permit_consumption_blocks_launch (test_kb_adapter.AdapterCase.test_approved_change_before_permit_consumption_blocks_launch)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 380, in test_approved_change_before_permit_consumption_blocks_launch
+    import test_evidence_v3_service as fixtures
+ModuleNotFoundError: No module named 'test_evidence_v3_service'
+
+======================================================================
+ERROR: test_approved_ukb_change_requires_task_revalidation (test_kb_adapter.AdapterCase.test_approved_ukb_change_requires_task_revalidation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 311, in test_approved_ukb_change_requires_task_revalidation
+    from evolution.evidence_v3.service import TaskService
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+======================================================================
+ERROR: test_finish_allows_approval_and_stale_run_stays_unusable_after_refresh (test_kb_adapter.AdapterCase.test_finish_allows_approval_and_stale_run_stays_unusable_after_refresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 402, in test_finish_allows_approval_and_stale_run_stays_unusable_after_refresh
+    import test_evidence_v3_service as fixtures
+ModuleNotFoundError: No module named 'test_evidence_v3_service'
+
+======================================================================
+ERROR: test_publish_knowledge_goes_through_review (test_kb_adapter.AdapterCase.test_publish_knowledge_goes_through_review)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 193, in test_publish_knowledge_goes_through_review
+    from evolution.evidence_v3 import policy, knowledge
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+======================================================================
+ERROR: test_reinforcement_invalidates_snapshot_without_new_revision (test_kb_adapter.AdapterCase.test_reinforcement_invalidates_snapshot_without_new_revision)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\evolution\kb\adapter.py", line 921, in knowledge_snapshot
+    from ..evidence_v3.contracts import canonical_hash
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 290, in test_reinforcement_invalidates_snapshot_without_new_revision
+    before = self.adapter.knowledge_snapshot(self.tmp)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\evolution\kb\adapter.py", line 923, in knowledge_snapshot
+    from evidence_v3.contracts import canonical_hash
+ModuleNotFoundError: No module named 'evidence_v3'
+
+======================================================================
+ERROR: test_retrieval_records_and_search (test_kb_adapter.AdapterCase.test_retrieval_records_and_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 183, in test_retrieval_records_and_search
+    from evolution.evidence_v3.planning import validate_intent
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+======================================================================
+ERROR: test_start_releases_ukb_reader_before_launcher (test_kb_adapter.AdapterCase.test_start_releases_ukb_reader_before_launcher)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 354, in test_start_releases_ukb_reader_before_launcher
+    import test_evidence_v3_service as fixtures
+ModuleNotFoundError: No module named 'test_evidence_v3_service'
+
+======================================================================
+ERROR: test_ukb_snapshot_never_reads_legacy_files (test_kb_adapter.AdapterCase.test_ukb_snapshot_never_reads_legacy_files)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 453, in test_ukb_snapshot_never_reads_legacy_files
+    from evolution.evidence_v3.knowledge import snapshot
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+======================================================================
+ERROR: test_verified_evidence_projects_to_ukb_candidate_only (test_kb_adapter.AdapterCase.test_verified_evidence_projects_to_ukb_candidate_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 233, in test_verified_evidence_projects_to_ukb_candidate_only
+    from evolution.evidence_v3.service import TaskService
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+======================================================================
+ERROR: test_wal_gate_fails_closed (test_kb_adapter.AdapterCase.test_wal_gate_fails_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\evolution\kb\adapter.py", line 921, in knowledge_snapshot
+    from ..evidence_v3.contracts import canonical_hash
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_adapter.py", line 448, in test_wal_gate_fails_closed
+    self.adapter.knowledge_snapshot(self.tmp)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\evolution\kb\adapter.py", line 923, in knowledge_snapshot
+    from evidence_v3.contracts import canonical_hash
+ModuleNotFoundError: No module named 'evidence_v3'
+
+======================================================================
+ERROR: test_kb_evidence_sources (unittest.loader._FailedTest.test_kb_evidence_sources)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_kb_evidence_sources
+Traceback (most recent call last):
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 407, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\redmaple\AppData\Local\Programs\Python\Python311\Lib\unittest\loader.py", line 350, in _get_module_from_name
+    __import__(name)
+  File "C:\Users\redmaple\AppData\Local\Temp\mdagent-modular-08nlg0rc\assembly\src\tests\test_kb_evidence_sources.py", line 13, in <module>
+    from evolution.evidence_v3.contracts import V3Error, atomic_json, canonical_hash, file_hash, read_json
+ModuleNotFoundError: No module named 'evolution.evidence_v3'
+
+
+----------------------------------------------------------------------
+Ran 33 tests in 41.847s
+
+FAILED (errors=11, skipped=5)

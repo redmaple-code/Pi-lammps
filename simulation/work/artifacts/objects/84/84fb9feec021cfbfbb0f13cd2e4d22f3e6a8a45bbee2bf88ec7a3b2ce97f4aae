@@ -1,0 +1,75 @@
+{
+  "parameters": {
+    "alloy": "FeNiCrCoCu",
+    "composition": [
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "latticeAngstrom": 3.56,
+    "cells": [
+      20,
+      10,
+      8
+    ],
+    "temperatureK": 300,
+    "seed": 482748,
+    "timeStepPs": 0.001,
+    "equilibrationSteps": 400,
+    "approachSteps": 400,
+    "grindingSteps": 800,
+    "radiusAngstrom": 12,
+    "depthAngstrom": 3,
+    "speedAngstromPerPs": 10,
+    "stiffnessEVPerAngstromCubed": 10,
+    "dumpEvery": 100,
+    "forceEvery": 20
+  },
+  "protocol": {
+    "mode": "exploratory",
+    "comparisons": [
+      {
+        "id": "time-step-convergence",
+        "dimension": "numerical",
+        "field": "meanNormalForceNn",
+        "unit": "nN",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "selection": "second half of lateral pass",
+        "sampling": {
+          "window": "frozen second half"
+        },
+        "reference": "matching time-step study",
+        "missingReason": "User selected one solver case; no matching finer-step result is available"
+      },
+      {
+        "id": "material-model-validation",
+        "dimension": "model",
+        "field": "meanNormalForceNn",
+        "unit": "nN",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "selection": "second half of lateral pass",
+        "sampling": {
+          "window": "frozen second half"
+        },
+        "reference": "applicable model-validation data",
+        "missingReason": "Applicable quantitative material-model validation data is unavailable"
+      },
+      {
+        "id": "grinding-reference",
+        "dimension": "task",
+        "field": "meanNormalForceNn",
+        "unit": "nN",
+        "methodRef": "grinding-force-temperature-displacement/1",
+        "selection": "second half of lateral pass",
+        "sampling": {
+          "window": "frozen second half"
+        },
+        "reference": "matched experimental or literature grinding result",
+        "missingReason": "A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established"
+      }
+    ],
+    "digest": "sha256:18e791377d06454d96e57160748270ff0750fe1b144c8512c14d25e84b388069"
+  }
+}

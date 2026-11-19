@@ -1,0 +1,2776 @@
+{
+  "revision": "IMPL-1",
+  "note": "Per-requirement implementation association. Module evidence does not establish full acceptance of every source-row scenario.",
+  "requirements": [
+    {
+      "requirementId": "GSF-001",
+      "moduleId": "MOD-19",
+      "sourceRow": "| GSF-001 / AC-001 分层边界 | 01、08 | 给定三个不同领域包；加载并规划；内核不导入领域模块、不按领域名判断模型/阶段，适配层承担工具差异 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-002",
+      "moduleId": "MOD-19",
+      "sourceRow": "| GSF-002 / AC-002 包切换 | 03 | 给定微观任务与宏观新任务；切换包；表单、知识、阶段、检查、指标一起改变，旧方案锁不变 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-003",
+      "moduleId": "MOD-03",
+      "sourceRow": "| GSF-003 / AC-003 流程图 | 03、04 | 给定循环依赖、缺生产者和合法并行图；解析；前两者明确报错，合法图按依赖推进且不抢写 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-004",
+      "moduleId": "MOD-20",
+      "sourceRow": "| GSF-004 / AC-004 迭代研究 | 04、07 | 给定网格研究/随机重复活动；达到上限但未满足停止判据；保存各轮数据和停止原因，不报收敛或达标 |",
+      "implementationTasks": [
+        "DEV-20-1",
+        "DEV-20-2",
+        "DEV-20-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/studies.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "参数展开、有界迭代、交换与检查点一致性校验已实现",
+      "remaining": "真实多求解器耦合执行、检查点编排和同步恢复尚待开发",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-005",
+      "moduleId": "MOD-05",
+      "sourceRow": "| GSF-005 / AC-005 工件语义 | 02、05 | 给定坐标/单位/节点关联不兼容的数据；跨工具传递；要求显式转换和验证，不能仅按文件后缀接受 |",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-006",
+      "moduleId": "MOD-06",
+      "sourceRow": "| GSF-006 / AC-006 证据 | 02、06 | 给定摘要、同源多 chunk 和相关全文；要求全文或独立来源组；前两者不能充数，实际读取范围可追溯 |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-007",
+      "moduleId": "MOD-04",
+      "sourceRow": "| GSF-007 / AC-007 独立审查 | 02、04 | 给定生产者伪造 PASS 或审后输入改动；提交推进；身份/摘要不符拒绝，保留问题和原回执 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-008",
+      "moduleId": "MOD-11",
+      "sourceRow": "| GSF-008 / AC-008 未知提交 | 02、04、05 | 给定提交成功但回执前崩溃；恢复；按 operationId 对账，不重复作业，无法确认则 unknown |",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-009",
+      "moduleId": "MOD-11",
+      "sourceRow": "| GSF-009 / AC-009 取消 | 04、05 | 给定外部求解运行中、取消请求后网络中断；观察；阻止新操作，记录待确认/unknown，收到停止证据才 cancelled |",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-010",
+      "moduleId": "MOD-03",
+      "sourceRow": "| GSF-010 / AC-010 失效与恢复 | 01、04 | 给定只改样式、改统计窗、改材料三种情况；恢复任务；分别重做对应依赖闭包，旧工件保留 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-011",
+      "moduleId": "MOD-12",
+      "sourceRow": "| GSF-011 / AC-011 知识隔离 | 06 | 给定含微观/宏观同名术语、候选和已确认条目；检索/导入；隔离默认范围、保留真实状态和跨域适用性判断 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-012",
+      "moduleId": "MOD-19",
+      "sourceRow": "| GSF-012 / AC-012 包发布 | 03、06 | 给定结构合法但资源缺失的 draft；请求生产执行/发布；阻止并报告缺口，不能手改状态绕过验证回执 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-013",
+      "moduleId": "MOD-19",
+      "sourceRow": "| GSF-013 / AC-013 工具替换 | 03、05 | 给定接口相同但模型支持或工具版本不同的 profile；切换；不兼容拒绝，兼容者需绑定真实验证记录 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-014",
+      "moduleId": "MOD-09",
+      "sourceRow": "| GSF-014 / AC-014 结果分层 | 07 | 给定退出成功但数值不收敛/模型未验证/指标超限；生成报告；四类事实分别显示，不归并成功 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-015",
+      "moduleId": "MOD-09",
+      "sourceRow": "| GSF-015 / AC-015 输出闭合 | 02、07 | 给定缺验收所需分量或采样不足的输入；就绪检查；拒绝生产就绪，分析旧数据则 cannotCompute 或限定结论 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-016",
+      "moduleId": "MOD-20",
+      "sourceRow": "| GSF-016 / AC-016 耦合 | 04、07 | 给定单位/映射不符或子检查点不一致；交换/恢复；拒绝不一致数据，保留交换序号及同步恢复证据 |",
+      "implementationTasks": [
+        "DEV-20-1",
+        "DEV-20-2",
+        "DEV-20-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/studies.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "参数展开、有界迭代、交换与检查点一致性校验已实现",
+      "remaining": "真实多求解器耦合执行、检查点编排和同步恢复尚待开发",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-017",
+      "moduleId": "MOD-10",
+      "sourceRow": "| GSF-017 / AC-017 真实微观 | 07、09 | 给定已核案例/势/手册及锁定协议；实际求解与反例；有真实轨迹、适用验证，错误映射不能通过 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-018",
+      "moduleId": "MOD-21",
+      "sourceRow": "| GSF-018 / AC-018 真实宏观 | 07、09 | 给定适用解析/实验依据的结构或流体案例；真实求解和离散研究；有场数据、数值验证和指标；欠约束/错误边界被检出 |",
+      "implementationTasks": [
+        "DEV-21-1",
+        "DEV-21-2",
+        "DEV-21-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/science/benchmarks.py",
+        "../../simulation/domains/examples/structural-mechanics.json",
+        "../../simulation/domains/examples/discrete-event.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/work/benchmarks/benchmark-summary.json"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "梁有限元三网格及 M/M/1 十二重复实际参考计算已完成",
+      "remaining": "宏观与事件领域包仍需接入完整案例、门禁及交付主链",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-019",
+      "moduleId": "MOD-21",
+      "sourceRow": "| GSF-019 / AC-019 事件范式 | 07、09 | 给定稳定排队模型和随机协议；多次真实事件运行；无强制网格/势阶段，有统计区间与理论比较，非稳定情形不冒称稳态 |",
+      "implementationTasks": [
+        "DEV-21-1",
+        "DEV-21-2",
+        "DEV-21-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/science/benchmarks.py",
+        "../../simulation/domains/examples/structural-mechanics.json",
+        "../../simulation/domains/examples/discrete-event.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/work/benchmarks/benchmark-summary.json"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "梁有限元三网格及 M/M/1 十二重复实际参考计算已完成",
+      "remaining": "宏观与事件领域包仍需接入完整案例、门禁及交付主链",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-020",
+      "moduleId": "MOD-16",
+      "sourceRow": "| GSF-020 / AC-020 旧功能迁移 | 00、09 | 给定 MIG-001–092 和资产盘点；迁移；每项有实现/归档理由及证据，旧硬要求无静默丢失 |",
+      "implementationTasks": [
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/migration/index.js",
+        "../../simulation/scripts/migrate-legacy.js",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "350 资产复制、幂等导入、13 角色和历史来源标注已实现",
+      "remaining": "恢复索引缺原文件字节身份，所有遗留状态冲突迁移尚待完整测试",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-021",
+      "moduleId": "MOD-18",
+      "sourceRow": "| GSF-021 / AC-021 宿主可替换 | 01、05、08 | 给定稳定与候选运行时适配；契约回放；领域包不改，差异定位到适配器，失败可回退且不改旧锁 |",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/../redmaple-agent/src/session-controls.js",
+        "../../simulation/../redmaple-agent/test/agent.test.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "宿主工具授权钩子与已发送未知请求预算语义已核验",
+      "remaining": "稳定/候选 Pi 跨版本同领域包回放及真实模型服务兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-022",
+      "moduleId": "MOD-15",
+      "sourceRow": "| GSF-022 / AC-022 部分入口 | 04、07 | 给定仅查询/分析/绘图/运行请求；执行相应入口；不强制无关阶段，不扩大已完成声明，缺依赖如实报告 |",
+      "implementationTasks": [
+        "DEV-15-1",
+        "DEV-15-2",
+        "DEV-15-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/apps/cli/main.js",
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/packages/application/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "CLI、原生 TUI 扩展与本地磨削装配已实现",
+      "remaining": "云模型全角色端到端编排与跨领域统一任务入口仍待完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-023",
+      "moduleId": "MOD-13",
+      "sourceRow": "| GSF-023 / AC-023 改进候选 | 06、08 | 给定重复失败或角色遗漏证据；生成并评估候选；活跃包/代理不变，发布需对应授权和回执，质量退化不得因省成本通过 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "GSF-024",
+      "moduleId": "MOD-04",
+      "sourceRow": "| GSF-024 / AC-024 策略与版本 | 00、02、03、04 | 给定越权覆盖、重置计数、重复回执、同 ID 异请求、缺授权自动模式；尝试推进；逐项拒绝或持久等待，已有授权范围内不重复询问 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-001",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-001 | §1.1 | 写输入前至少实读一份相关本地案例 | K4 + librarian；新增已读回执，复用原案例 | 只有搜索摘要/模板/手册时不能获写作前置满足 |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-002",
+      "moduleId": "MOD-05",
+      "sourceRow": "| MIG-002 | §1.1 | 从近例最小修改并说明依据、差异与风险 | writer + K3；基线与 diff | 只改温度/方向时保留未受影响段；diff 能回溯 |",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-003",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-003 | §1.1–1.2 | 必需设计决策先有依据，科学准确性不等于运行成功 | K2/K4/K7 | 缺来源不 PASS；退出 0 但 D7 失败时报告 not_met |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-004",
+      "moduleId": "MOD-19",
+      "sourceRow": "| MIG-004 | §1.3、11.1 | 领域/内核/适配三层；K1–K7 | 独立 kernel、contracts、ports | 最小第二领域替换声明，不改内核材料分支 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-005",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-005 | §2.1 | 13 个领域定义含遗留 analyst 可追溯，hello 示例不混入业务 | roles registry + legacy aliases | 导入所有原 ID；主 analyze/debug 路由 analyst；遗留定义归档 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-006",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-006 | §2.1 | 模型、effort、maxTurns 可配置，权限不由 frontmatter 自动扩大 | RuntimePort；适配 role budget/能力 | 模型无 thinking 档位显式映射；超轮次停止；acceptEdits 不授任意执行 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-007",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-007 | §2.2 | coordinator、writer、reviewer、reasoner、analyst 分责 | 能力策略 + 独立 session/身份 | writer 伪造审查回执被拒；reasoner 不可签 PASS；analyst 判 D7 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-008",
+      "moduleId": "MOD-14",
+      "sourceRow": "| MIG-008 | §2.2、7.4 | PASS/completed/met/generated/confirmed/installed 分立 | K6 + 报告 | 运行成功但验收失败、图仅脚本、知识待审可以同时呈现 |",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-009",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-009 | §2.3 | 长工件短交接；保留适用 RESULT/LOG/NEXT | RoleReceipt envelope + 文件工件 | coordinator 接收短结果和引用；不截断丢失完整技术文件 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-010",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-010 | §2.3、5.5 | 协调者访问限制与人工核验冲突 | 宿主验证摘要 + 审阅界面 | 不靠开放全部 JSON 解决；机器不可用时明确人工核验范围和置信度 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-011",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-011 | §3.1 | 新研究、修改案例两个入口 | K1 intake + 影响分析 | 新研究从 WF-00；修改已有案从最早受影响阶段开始 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-012",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-012 | §3.1 | 仅执行、仅分析、仅绘图 | K1 部分流程 + 完成范围 | 不强跑完整链，也不把仅执行写成完成 D7 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-013",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-013 | §3.1 | 检索/语法/论文、失败诊断、恢复入口 | query/debug/resume 路由 | 单次查命令不造案例；诊断必须明确 run；恢复先核状态 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-014",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-014 | §3.1、3.4 | 论文复现前置审计、缺参追索、替代标注 | paperReproductionAudit skill-to-role | 全文缺失降证据等级；partial-only 不报告完整复现 |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-015",
+      "moduleId": "MOD-04",
+      "sourceRow": "| MIG-015 | §3.1 | 部分入口仍遵守高风险证据/审查 | K2 变更触发 | 一行势映射修改也触发相应门禁 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-016",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-016 | §3.2 | 案例按材料/目标/模型/工况/尺度/边界匹配、记录适用差异 | KnowledgePort + evidence manifest | 文件名相似但材料不适用不能直接采纳；查不到明确阻塞 |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-017",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-017 | §3.3 | core-checks 与 MB 常读，CL 窄读，MCP 故障回退 | 角色 context pack + 原台账 | MCP 不可用按 CL ID 窄读；pending 不自动升级 confirmed |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-018",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-018 | §3.3、9.6 | historical/session、临时文件、通用记忆的可信边界 | 知识元数据/上下文筛选 | tmp 调试稿不优先；用户偏好不作势适用证明 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-019",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-019 | §3.4 | DOI/元数据核验、全文页节与证据等级 | paperResearcher + 提取器 | 只读摘要不能记全文已核；不存在 DOI 不补造 |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-020",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-020 | §4.1 | 完整阶段顺序和四门，无 WF-04/05 额外强制门 | K1/K2 状态机 | 任一必经前置缺失不能执行下阶段 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-021",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-021 | §4.2 | D1–D7 来源、风险、待核、批准后锁定 | Design schema + architect/reviewer | 族势选择和实际参数分阶段；无依据必需值不锁定 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-022",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-022 | §4.2、4.4 | D2.1 至少一 critical，verification_method/required_in_stage | 领域 features + K2 | 位错/析出相缺失时 BLOCKED；注释和关键词不等于真实实体 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-023",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-023 | §4.2、11.3 | D7 文献依据、用户确认及不可迎合结果修改 | Design decision receipt | 未确认不进入真实执行；更改判据产生方案修订和重审 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-024",
+      "moduleId": "MOD-02",
+      "sourceRow": "| MIG-024 | §4.3 | WF-R 必调及四类咨询结果处置 | reasoner task + 风险分支 | significant-risks 有显式决定；design_root_cause 返回 architect |",
+      "implementationTasks": [
+        "DEV-02-1",
+        "DEV-02-2",
+        "DEV-02-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/runtime-redmaple/index.js",
+        "../../simulation/domains/lammps/role-config.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js",
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实际 Pi SDK 隔离会话、持久角色操作、证据读取、工件发布与审查工具已实现",
+      "remaining": "真实提供方、全部角色语义交接及模型档位兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-025",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-025 | §4.4 | 复用结构/CIF/多晶/结构编辑/晶体构建 | modeling route/tool adapter + 源模板 | 选路→渲染→参数核对→执行→结构核验；路线评分不作成功概率 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-026",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-026 | §4.4 | 原子/类型/组成/盒子/重叠/缺陷实体检查与 WF-01 packet | writer + 结构验证器 + reviewer | 格式合法但缺 critical 缺陷仍不通过 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-027",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-027 | §4.5 | 势文件来源、适用范围、版本支持、元素/类型/Masses 映射 | WF-02 + potential manifest | 元素顺序错被阻塞；结构不兼容回 WF-01，前提错回 WF-00 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-028",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-028 | §4.5 | 备选势、风险、fallback 不暗改设计 | potential packet | fallback 改变 D6 时必须方案重开 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-029",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-029 | §4.6 | 写前读已审方案/结构/势，按模板族组织阶段 | writer + context pack | 不用统一温度/步数套所有任务；case/version 不明不落笔 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-030",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-030 | §4.6、5.3 | 命令级修改的案例/手册与额外高风险证据 | K4 + semantic change 检测 | 改 fix/compute/pair 命令无手册依据不 PASS |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-031",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-031 | §4.6 | thermo_outputs/dump_outputs/d7_support 逐项闭合 | OutputSupport schema + verifier | 有 dump 但缺所需列/采样频率时不能通过输入审查 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-032",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-032 | §4.6；源 writer/reviewer | pe/atom、coord/atom；FCC/BCC centro；多相/变形 CNA 与 dump | 诊断要求/MB-009；新建缺失表并核版本 | 删除必须输出应被识别；科学不适用明确裁定而非静默跳过 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-033",
+      "moduleId": "MOD-05",
+      "sourceRow": "| MIG-033 | §4.6 | 自检、来源、假设、风险、审查关注点 | StagePacket | 生产完成不变成独立审查 PASS |",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-034",
+      "moduleId": "MOD-04",
+      "sourceRow": "| MIG-034 | §5.1 | PASS/REVISE/BLOCKED 全语义 | ReviewResult + reducer | 有明确修法 REVISE；缺必需前置/强制违规 BLOCKED |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-035",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-035 | §5.1、6.3 | 连续三次 REVISE 与三次修复失败各计数 | K6 持久计数 | 换会话/问题 ID 不清零；两个计数不会互相替代 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-036",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-036 | §5.2 | MB-001 冻结参考长度与输出引用 | LAMMPS check registry | 动态 lx 引用作为参考长度的反例被阻塞 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-037",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-037 | §5.2 | MB-002 velocity 排除固定组 | 同上 | velocity all 包含固定原子的反例被阻塞 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-038",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-038 | §5.2 | MB-003 NPT/deform 控制方向不竞争 | 同上 | 同方向竞争被阻塞；不竞争有可核证据 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-039",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-039 | §5.2 | MB-004 ReaxFF atom_style/电荷平衡适用 | 同上 + 当前引擎手册 | 不适用点电荷方法不得通过；支持版本变化显式适配 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-040",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-040 | §5.2 | MB-005 任何 fix print 触发，核定义与实际求值 | 同上 | bare v_varname 错误反例；其它写法有当前上下文手册证明 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-041",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-041 | §5.2 | MB-006 任何 pair_coeff 触发并核映射 | 同上 | 不以“已经正确”决定触发；不适用子项单独给依据 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-042",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-042 | §5.2 | MB-007 restart/data 续算来源、时间、box | 同上 + RunManifest | 旧 restart 或含真空盒来源不明被阻塞 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-043",
+      "moduleId": "MOD-10",
+      "sourceRow": "| MIG-043 | §4.4；源 reviewer | MB-008 目标—模型真实一致性 | feature registry + 验证器 | 无 D2.1 返回修订；缺 critical BLOCKED；补齐角色正文义务 |",
+      "implementationTasks": [
+        "DEV-10-1",
+        "DEV-10-2",
+        "DEV-10-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/domains/lammps/checks.js",
+        "../../simulation/domains/lammps/manifest.json",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "LAMMPS 领域声明、MB-001–009 检查和磨削 EAM 模型已实现",
+      "remaining": "正则检查适用范围有限，ReaxFF/续算/多相等完整上下文验证仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-044",
+      "moduleId": "MOD-06",
+      "sourceRow": "| MIG-044 | §5.3 | 来源/位置/摘录/核验、两侧高风险证据、独立性 | K4 EvidenceRef/ReadReceipt | 同源两个 chunk 不算两侧独立证据；模板 verified:true 无效 |",
+      "implementationTasks": [
+        "DEV-06-1",
+        "DEV-06-2",
+        "DEV-06-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/evidence.js",
+        "../../simulation/science/extract_paper.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "实读范围、源摘要、来源组独立性及 PDF 页面覆盖检查已实现",
+      "remaining": "适用性科学裁定、全文 OCR 与 DOI 外部核验尚待集成验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-045",
+      "moduleId": "MOD-04",
+      "sourceRow": "| MIG-045 | §5.4 | true/false/unknown；触发与结果分离 | 声明条件解释器 | include/变量无法解析时 unknown，不漏检 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-046",
+      "moduleId": "MOD-04",
+      "sourceRow": "| MIG-046 | §5.5 | 完整审查落盘、短结果、状态更新不改裁决 | K2/K3/K6 | coordinator 修改审查 JSON 后摘要失配，不推进 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-047",
+      "moduleId": "MOD-04",
+      "sourceRow": "| MIG-047 | §5.5 | stub 不当校验器；机器/人工回退如实记录 | 真实 schema/evidence verifier + 审阅界面 | stub 退出成功不能获门禁；人工核验标范围与置信度 |",
+      "implementationTasks": [
+        "DEV-04-1",
+        "DEV-04-2",
+        "DEV-04-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/gates.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "独立身份、完整对象绑定、必需检查和冻结证据政策已实现",
+      "remaining": "各领域完整科学检查覆盖与实际人工审阅界面仍需完善",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-048",
+      "moduleId": "MOD-11",
+      "sourceRow": "| MIG-048 | §6.1 | 当前 PASS、全部依赖、目录/argv/输出/资源/授权预检 | ExecutorPort + input closure | 已审输入随后改变被拦；include/potential 缺失不提交 |",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-049",
+      "moduleId": "MOD-11",
+      "sourceRow": "| MIG-049 | §6.1 | runId/argv/workdir/log/起止/退出/模式真实记录 | RunManifest | dry-run 与 preflight 不产生 real-completed 事实 |",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-050",
+      "moduleId": "MOD-11",
+      "sourceRow": "| MIG-050 | §6.1 | 本地/MPI/HPC、超时/资源/取消监督 | 持久 job service + 具名 scheduler | MPI 不冒充调度提交；取消收到 job 回执前不称结束 |",
+      "implementationTasks": [
+        "DEV-11-1",
+        "DEV-11-2",
+        "DEV-11-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/execution/index.js",
+        "../../simulation/packages/execution/worker.js",
+        "../../simulation/packages/execution/slurm.js",
+        "../../simulation/packages/execution/modeling.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地独立 supervisor、取消/超时/对账与 Atomsk 路由已实现",
+      "remaining": "MPI/Slurm 真实环境及远程上传采集闭环、CIF/多晶/编辑实测待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-051",
+      "moduleId": "MOD-07",
+      "sourceRow": "| MIG-051 | §6.2 | execute→classify→plan→delegate 分责 | K5 + 源 repair/loop 包装 | repair/loop 输出建议不被宣称已修改/已重跑 |",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/repair.js",
+        "../../simulation/packages/kernel/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "失败信号、修复计划及独立有界计数已实现",
+      "remaining": "真实失败案例的委派修改、重审、新运行与分析自动闭环仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-052",
+      "moduleId": "MOD-07",
+      "sourceRow": "| MIG-052 | §6.2 | 环境、依赖/语法、数值失败、D7失败、设计根因分流 | analyst/reasoner + failures.yaml | lost atoms 不能按关键词直接指定根因；先读前后日志 |",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/repair.js",
+        "../../simulation/packages/kernel/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "失败信号、修复计划及独立有界计数已实现",
+      "remaining": "真实失败案例的委派修改、重审、新运行与分析自动闭环仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-053",
+      "moduleId": "MOD-07",
+      "sourceRow": "| MIG-053 | §6.3 | 原失败→假设→diff→重审→新 run→新分析 | RepairChain + 依赖失效 | 不覆盖原失败证据；不无限调参；环境恢复不重建物理模型 |",
+      "implementationTasks": [
+        "DEV-07-1",
+        "DEV-07-2",
+        "DEV-07-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/repair.js",
+        "../../simulation/packages/kernel/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "失败信号、修复计划及独立有界计数已实现",
+      "remaining": "真实失败案例的委派修改、重审、新运行与分析自动闭环仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-054",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-054 | §7.1 | 初始化/错误/thermo/尾段读取，抽样范围披露 | 日志适配 + Analysis | 未读区间不能报告全程无异常 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-055",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-055 | §7.1 | 名称、方向/分量、单位、符号、基准、公式、窗口、统计、run | MeasurementSpec + K7 | 改加载方向/units 仍算正确量，错误固定系数被发现 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-056",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-056 | §7.1 | 文献对照标材料/工况差异，不代替本次数据 | analyst + evidence | 只有参考值时不能生成本次仿真测量 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-057",
+      "moduleId": "MOD-09",
+      "sourceRow": "| MIG-057 | §7.2 | met/not_met/cannot_compute/borderline 与旧枚举显式映射 | D7Result adapter | 缺数据、边界误差、未达标分别呈现；未知旧值不猜 |",
+      "implementationTasks": [
+        "DEV-09-1",
+        "DEV-09-2",
+        "DEV-09-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/analysis/index.js",
+        "../../simulation/science/grinding.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "量纲化测量定义、缺失/边界判定与科学状态分层已实现",
+      "remaining": "全部旧指标适配、通用方法注册及科学验证研究尚待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-058",
+      "moduleId": "MOD-14",
+      "sourceRow": "| MIG-058 | §7.3 | matplotlib 数值图、OVITO 原子图与适用模板 | presentation adapters | 实际生成可打开图，不只脚本；模板工具版本可复现 |",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-059",
+      "moduleId": "MOD-14",
+      "sourceRow": "| MIG-059 | §7.3 | 粒子/帧/ROI/截面/缺陷/着色/图注核对 | 图像验证记录 | 切片删掉研究对象被发现；CNA 不自动报告真实相分数 |",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-060",
+      "moduleId": "MOD-14",
+      "sourceRow": "| MIG-060 | §7.3 | manifest 四状态、run/analysis/数据/模板绑定、双 OVITO 兼容 | FigureManifest + 版本适配 | script_only/skipped/failed 不伪装 generated |",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-061",
+      "moduleId": "MOD-14",
+      "sourceRow": "| MIG-061 | §7.4、12 | 分项交付与贯穿温度/方向修改案例 | report builder + E2E fixture | 完整展示门禁、真实 run、D7、图与知识/候选各自状态 |",
+      "implementationTasks": [
+        "DEV-14-1",
+        "DEV-14-2",
+        "DEV-14-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/presentation/index.js",
+        "../../simulation/packages/presentation/ovito_adapter.py",
+        "../../simulation/science/ovito_render.py"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/science-runtime.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "Matplotlib/OVITO 实图、实际查看记录及报告已实现",
+      "remaining": "所有遗留图形模板、OVITO 双版本兼容和通用图形失败分支待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-062",
+      "moduleId": "MOD-05",
+      "sourceRow": "| MIG-062 | §8.1 | 原始文件不改、输入/输出分离、版本目录、参数扫描 run | ArtifactStore + legacy layout | 两个竞争方案不互盖；case/version 模糊时不散写 |",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-063",
+      "moduleId": "MOD-08",
+      "sourceRow": "| MIG-063 | §8.2 | standalone/team 状态来源明确，一套案例权威状态 | LegacyStateImporter + SimulationStore | 同时存在两种历史状态时报告冲突，不假同步 |",
+      "implementationTasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/state.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "SQLite CAS、命令去重、意图/回执、历史修订与备份已实现",
+      "remaining": "跨数据库联合事务及跨路径恢复重映射仍需开发",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-064",
+      "moduleId": "MOD-05",
+      "sourceRow": "| MIG-064 | §8.2 | 轻 packet 不等于 PASS；领域版本/摘要/冻结重开 | K3/K6 | 旧案无历史摘要保留 unknown；新摘要标导入观测时间 |",
+      "implementationTasks": [
+        "DEV-05-1",
+        "DEV-05-2",
+        "DEV-05-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/artifacts/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "二进制工件、摘要、输入闭包与独立物化已实现",
+      "remaining": "递归依赖自动发现、全部语义元数据和跨平台路径边界待扩展",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-065",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-065 | §8.3 | 六类修改的下游失效与最早阶段回退 | dependency graph + reducer | 仅图样式不重算；改势必重做相应下游 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-066",
+      "moduleId": "MOD-08",
+      "sourceRow": "| MIG-066 | §8.4 | 显式 run/repair/analysis 恢复、可信节点 | K6 + operation reconciliation | mtime 更新的旧日志不能替换绑定 run；不重复外部提交 |",
+      "implementationTasks": [
+        "DEV-08-1",
+        "DEV-08-2",
+        "DEV-08-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/state.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js",
+        "../../simulation/tests/execution.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "SQLite CAS、命令去重、意图/回执、历史修订与备份已实现",
+      "remaining": "跨数据库联合事务及跨路径恢复重映射仍需开发",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-067",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-067 | §9.1 | 全部知识层、正文/原文/索引分离 | 资产 manifest + KnowledgePort | 索引可重建，知识状态不随搜索排名变化 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-068",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-068 | §9.2 | 别名、FTS、层级/多样性重排、whyRanked/evidenceLines、实读 | 复用 Red Maple 检索 + 领域排序 | 同一案例多 chunk 去同源；pending 命中保持原状态 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-069",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-069 | §9.2、9.5 | synthesizer/检索 regression 不证明科学正确 | 检索/语义评测分开 | 召回命中但依据不适用的反例不能获科学通过 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-070",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-070 | §9.3 | writer/reviewer 经验记录职责 | lesson.submit + 工作收尾 | 记录情形→问题→修正/检查及来源；不只“以后小心” |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-071",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-071 | §9.4 | 13 内容类型、4 状态、quality 独立 | KnowledgeWorkflow + 原类型映射 | 每类导入回读不丢类型；分类分数不变成置信概率 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-072",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-072 | §9.4 | curator/需审项 reviewer/apply/索引更新 | 知识状态机 + 宿主 apply | 历史直接 confirmed 标实际路径；新模型不能伪造已独立审查 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-073",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-073 | §9.5 | 新增/增强/重复、section 合并、来源理由、replace 范围 | MergeProposal + CAS | 并发改目标则冲突；整文件覆盖必须可审阅并有恢复记录 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-074",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-074 | §9.5 | 维护报告、候选晋升与人工队列，非自动晋升 | maintenance task | 分号数量不能当独立证据数；运行维护不改 confirmed |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-075",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-075 | §9.6 | memdir user/feedback/project/reference、提取/整理/陈旧提醒 | Memory adapter | 用户偏好与已核科学经验分域；过时来源有提醒 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-076",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-076 | §9.7 | manifest/对象/快照同步备份，恢复可核对 | backup/sync adapter | 恢复后文件 hash 和知识状态对账；不热同步 SQLite/WAL |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-077",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-077 | §9.7 | 本地/旧检索/UKB 可替换，来源与能力限制 | KnowledgePort capability negotiation | 后端无稳定版本时披露；UKB 发布不改变仿真 PASS/D7 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-078",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-078 | §9.7、13.1 | 不虚构知识生命周期、撤回传播、强身份等未设计能力 | 协议保留点/边界记录 | 接口未支持明确报 unsupported，不以 entryId 充内容版本 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-079",
+      "moduleId": "MOD-12",
+      "sourceRow": "| MIG-079 | §10.1 | 成功案例与可复用错误逐步入库，模板保留 pattern/operations/cases | lesson/template provenance | 单个成功案例不推成全材料规则，短 ID 不冒充内容哈希 |",
+      "implementationTasks": [
+        "DEV-12-1",
+        "DEV-12-2",
+        "DEV-12-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/knowledge/index.js",
+        "../../simulation/packages/knowledge/legacy-index.js",
+        "../../simulation/packages/knowledge/backends.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "本地知识状态、检索、提议/审阅、段落合并和旧索引查询已实现",
+      "remaining": "真实 UKB、合并故障恢复、全内容类型循环及陈旧提醒尚待完整验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-080",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-080 | §10.2 | 授权历史范围、重复线索、结构化技能候选与 staging | skill mining adapter | 不扫描/外发全部历史；候选含触发/步骤/条件/工具/证据/频次/作用域 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-081",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-081 | §10.2 | 接受/编辑/拒绝后安装；覆盖/状态/卸载恢复 | SkillReleaseService | 无批准不安装；用户后续修改不被卸载覆盖 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-082",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-082 | §10.3 | 六层代理改进链及失败/审查/日志证据 | EvidenceBundle + improvement pipeline | 失败经验能提出候选且不伪造 PASS；原活跃定义保持原状 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-083",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-083 | §10.3 | 角色上下文优化优先、职责边界不退化 | context pack candidate + eval | 降 token 但漏 reviewer/科学检查的候选被拒 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-084",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-084 | §10.3 | 同任务原版/候选对照、多质量/成本指标 | 隔离 replay/evaluation harness | 记录审查轮次/运行失败/回退/质量/成本，真实模型收益不由 mock 证明 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-085",
+      "moduleId": "MOD-13",
+      "sourceRow": "| MIG-085 | §10.3 | 受保护 agents/prompts/rules/commands/hooks/开关须人工应用 | ReleasePolicy + diff/receipt/rollback | activationPolicy 不自动启用仿真受保护资产；指针回滚不冒充文件恢复 |",
+      "implementationTasks": [
+        "DEV-13-1",
+        "DEV-13-2",
+        "DEV-13-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/improvement/index.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "有来源候选、授权历史范围、配对评测及显式发布回滚 API 已实现",
+      "remaining": "真实模型收益、六层改进完整链及受保护生产文件发布待贯通",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-086",
+      "moduleId": "MOD-19",
+      "sourceRow": "| MIG-086 | §11.1 | 七声明 domain/decisions/checks/failures/measurement/tooling/vocabulary | versioned DomainPackage | schema/能力/引用验证；禁任意代码钩子改门禁计数 |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-087",
+      "moduleId": "MOD-19",
+      "sourceRow": "| MIG-087 | §11.2 | 可选能力降级、关键证据不降级、原文与锁定设计优先 | capability policy + K2/K4 | 绘图不可用可 script_only；缺科学证据不能 PASS |",
+      "implementationTasks": [
+        "DEV-19-1",
+        "DEV-19-2",
+        "DEV-19-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/pack-resolver/index.js",
+        "../../simulation/packages/pack-resolver/release.js",
+        "../../simulation/scripts/build-packs.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js",
+        "../../simulation/tests/reliability.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "严格解析、资源/能力检查、冻结锁和发布撤回 API 已实现",
+      "remaining": "生产领域包完整验证记录、真实工具版本绑定与发布验收待完成",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-088",
+      "moduleId": "MOD-03",
+      "sourceRow": "| MIG-088 | §11.3 | guided/semi/auto 与授权分离 | ModePolicy + UserDecision | 不重复已确认子步；缺 D7/资源范围时持久等待 |",
+      "implementationTasks": [
+        "DEV-03-1",
+        "DEV-03-2",
+        "DEV-03-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/kernel/index.js",
+        "../../simulation/packages/application/workflow.js",
+        "../../simulation/packages/application/partial.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/workflow.test.js",
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "通用有向流程、条件分支、失效闭包和磨削部分入口已实现",
+      "remaining": "通用修改分类、所有任务类型入口及声明式研究活动调度仍需补齐",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-089",
+      "moduleId": "MOD-01",
+      "sourceRow": "| MIG-089 | §13.1–13.2 | 区分设计/实现/真实运行/科学验证；专项来源缺口可追踪 | 发布检查 + baseline manifest | 无证据不标已迁；缺件不以模板推测填充 |",
+      "implementationTasks": [
+        "DEV-01-1",
+        "DEV-01-2",
+        "DEV-01-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/contracts/index.js",
+        "../../simulation/packages/contracts/records.js",
+        "../../simulation/packages/contracts/validation.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/core.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "公共身份、三值条件、AJV 记录与包 schema 已实现",
+      "remaining": "完整 DTO 字段、所有版本兼容场景仍需逐项核验",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-090",
+      "moduleId": "MOD-18",
+      "sourceRow": "| MIG-090 | 用户要求 | Pi/Red Maple 可独立优化、版本化公开契约与上游补丁 | RuntimePort + compat suite | 同领域包在稳定/候选 runtime 运行；升级失败可回退而不重写业务 |",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/../redmaple-agent/src/session-controls.js",
+        "../../simulation/../redmaple-agent/test/agent.test.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "宿主工具授权钩子与已发送未知请求预算语义已核验",
+      "remaining": "稳定/候选 Pi 跨版本同领域包回放及真实模型服务兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-091",
+      "moduleId": "MOD-18",
+      "sourceRow": "| MIG-091 | 本次源码核验 | unknown、预算耗尽、恢复错误优先级存在测试/实现差异 | 基座 P0 语义复核与确定性测试 | 发送前取消与发送后未知分开；不为通过测试清除未知副作用 |",
+      "implementationTasks": [
+        "DEV-18-1",
+        "DEV-18-2",
+        "DEV-18-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/../redmaple-agent/src/session-controls.js",
+        "../../simulation/../redmaple-agent/test/agent.test.js"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/host-policy.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "宿主工具授权钩子与已发送未知请求预算语义已核验",
+      "remaining": "稳定/候选 Pi 跨版本同领域包回放及真实模型服务兼容待验证",
+      "productAcceptance": null
+    },
+    {
+      "requirementId": "MIG-092",
+      "moduleId": "MOD-16",
+      "sourceRow": "| MIG-092 | 用户完整性要求 | 所有角色/命令/技能/模板/规则/知识资产均可盘点，迁移或归档有理由 | M0 资产清单 + 功能闭包审计 | 必迁资产没有“无归属”；历史噪声/示例也标明归档或不迁原因 |",
+      "implementationTasks": [
+        "DEV-16-1",
+        "DEV-16-2",
+        "DEV-16-3"
+      ],
+      "implementationStatus": "partial",
+      "verificationStatus": "partial",
+      "implementationRefs": [
+        "../../simulation/packages/migration/index.js",
+        "../../simulation/scripts/migrate-legacy.js",
+        "../../simulation/domains/lammps/legacy-assets/IMPORT.json"
+      ],
+      "moduleEvidenceRefs": [
+        "../../simulation/tests/knowledge-improvement.test.js"
+      ],
+      "requirementSpecificAcceptance": "notFullyExecuted",
+      "coverage": "350 资产复制、幂等导入、13 角色和历史来源标注已实现",
+      "remaining": "恢复索引缺原文件字节身份，所有遗留状态冲突迁移尚待完整测试",
+      "productAcceptance": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Template padding will be used.
+[32m gasteiger charges will be read from template file 
+ [0m
+
+Files written:
+        F:\BaiduSyncdisk\Codex\Pi-lammps\work\cases\1iep-imatinib-redocking-20261117\inputs\prepared\receptor.json <-- parameterized receptor
+F:\BaiduSyncdisk\Codex\Pi-lammps\work\cases\1iep-imatinib-redocking-20261117\inputs\prepared\receptor-prepared.pdb <-- processed receptor PDB
+       F:\BaiduSyncdisk\Codex\Pi-lammps\work\cases\1iep-imatinib-redocking-20261117\inputs\prepared\receptor.pdbqt <-- static (i.e., rigid) receptor input file
+     F:\BaiduSyncdisk\Codex\Pi-lammps\work\cases\1iep-imatinib-redocking-20261117\inputs\prepared\receptor.box.txt <-- Vina-style box dimension file
+     F:\BaiduSyncdisk\Codex\Pi-lammps\work\cases\1iep-imatinib-redocking-20261117\inputs\prepared\receptor.box.pdb <-- PDB file to visualize the grid box

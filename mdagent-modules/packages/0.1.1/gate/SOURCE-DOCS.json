@@ -1,0 +1,10 @@
+{
+  "source": "handoff",
+  "files": {
+    "docs/30_门禁系统/交接_双门_HANDOFF_20261018.md": "010a42feb2e5abf6a9da877ddc362f2d3a843c4f5b6fa64426ca7bf45bcc2ed9",
+    "docs/30_门禁系统/审计_双门功能事实核查与漏洞清单_20261018.md": "5761ddbe17260cab4b4a04867589208e1c6bb1aaef18b6e96843946b00f58af4",
+    "docs/30_门禁系统/核查_前置双门功能性核查_20261022.md": "b44c83104fe650188136a3c0dbb89127604f0b07350061a097ebbed65eb001b0",
+    "docs/30_门禁系统/设计_前置双门功能设计定稿_v1.0.md": "dd92e42b63a539302fdc56c5746f06a8661235fc0eb2864cbeffc19a10856ab2",
+    "docs/30_门禁系统/设计规格_仿真方案设计与物理一致性校核.md": "fcd2e8e717f534a9f87ea70780a7b42637077ef7774cf8f583ec54ed1d712db6"
+  }
+}

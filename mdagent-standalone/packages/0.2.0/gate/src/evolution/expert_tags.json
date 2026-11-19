@@ -1,0 +1,199 @@
+{
+  "_doc": "专家标签受控词表(v1.6.0 三轴体系)。新增 method/ops 标签=改本文件+过人工闸,防标签爆炸。topic 轴自由提取(课题天然多样),known_topics 仅提升归并质量。rules 全部小写子串匹配,作用于 kind+fact(refs 仅参与 topic 提取)。",
+  "method": {
+    "repair-rescue": [
+      "monitor-anomaly",
+      "recovery-outcome",
+      "bondchk",
+      "hbondchk",
+      "lost atoms",
+      "sim_stall",
+      "qeq",
+      "热失控",
+      "崩溃",
+      "抢救",
+      "close contacts",
+      "monitor-false-positive",
+      "monitor_critical"
+    ],
+    "dynamics/temp-press": [
+      "nvt",
+      "npt",
+      "nve",
+      "恒温",
+      "控温",
+      "升温",
+      "降温",
+      "thermostat",
+      "timestep",
+      "ramp",
+      "tdamp",
+      "pdamp",
+      "系综",
+      "温度程序"
+    ],
+    "model-opt": [
+      "forcefield",
+      "力场",
+      "参数集",
+      "ffield",
+      "engine-selection",
+      "选型",
+      "reaxff/c",
+      "模型优化"
+    ],
+    "modeling/packmol": [
+      "packmol"
+    ],
+    "modeling/moltemplate": [
+      "moltemplate"
+    ],
+    "modeling/scripting": [
+      "xyz2",
+      "relax.py",
+      "fraglib",
+      "自编",
+      "脚本",
+      "build-pipeline",
+      "build-lesson",
+      "建模"
+    ],
+    "trajectory/dump": [
+      "dump",
+      "轨迹"
+    ],
+    "postproc": [
+      "残炭率",
+      "rdf",
+      "热导",
+      "后处理",
+      "产物分析",
+      "validation",
+      "验证标准",
+      "ovito",
+      "fix reaxff/species",
+      "species"
+    ],
+    "hpc-exec": [
+      "sbatch",
+      "qsub",
+      "超算",
+      "排队",
+      "slurm",
+      "pbs"
+    ],
+    "phys-perception": [
+      "机理",
+      "失效模式",
+      "放热",
+      "炭化",
+      "相行为",
+      "自热",
+      "物理感知",
+      "deepdive"
+    ]
+  },
+  "ops": {
+    "ops/flow-gate": [
+      "flow-gate-violation"
+    ],
+    "ops/friction": [
+      "friction-",
+      "user-correction",
+      "repeat-question"
+    ],
+    "ops/evolution": [
+      "evolution-change",
+      "knowledge-supersession",
+      "protocol-evolution"
+    ],
+    "ops/security": [
+      "wall-",
+      "bypass",
+      "attack",
+      "提权",
+      "越狱"
+    ],
+    "ops/process": [
+      "handoff",
+      "supervision-failure",
+      "adoption-gap",
+      "交接",
+      "监管"
+    ]
+  },
+  "known_topics": {
+    "sys-a-pyrolysis": [
+      "prj",
+      "sys-a",
+      "s2热解",
+      "s2自热"
+    ],
+    "run2000-pyrolysis": [
+      "run2000"
+    ],
+    "fds-calibration": [
+      "fds",
+      "标定"
+    ],
+    "v13-forcefield-cmp": [
+      "v13"
+    ],
+    "hydrogel-gmx": [
+      "水凝胶",
+      "pam",
+      "awh",
+      "gromacs",
+      "gmx"
+    ],
+    "graphene-aerogel": [
+      "石墨烯",
+      "气凝胶"
+    ],
+    "pyro-general": [
+      "pyro",
+      "热解"
+    ]
+  },
+  "case_id_regex": "[A-Za-z][A-Za-z0-9-]*(?:_[A-Za-z0-9-]+){2,}",
+  "topic_stopwords": [
+    "ld_library_path",
+    "agent_deploy_kit",
+    "new_specialist_script",
+    "monitor_schedule_temp",
+    "strategy_weight_tuning",
+    "preflight_agent",
+    "pv_sneak_green",
+    "sim_model_research",
+    "sim_repair_research",
+    "gmx_env",
+    "hydrogel_build_protocol_lessons",
+    "stress_seam",
+    "stress_restartdir",
+    "qt_qpa",
+    "bak_",
+    "audit_backup",
+    "pids_for_entry",
+    "sweep_unmanaged",
+    "goal_handoff",
+    "check_s2_",
+    "gentle_compress",
+    "research_entered_ts",
+    "meta_health_report",
+    "pending_modifications",
+    "sim_pipeline_check"
+  ],
+  "exam_ready_kinds": [
+    "recovery-outcome",
+    "monitor-anomaly",
+    "forcefield-verified",
+    "pipeline-verified",
+    "build-lesson",
+    "env-lesson",
+    "s2-midterm-validation-pass",
+    "validation-criteria-final",
+    "monitor-false-positive-ramp-tail",
+    "reaxff-bondchk-compression-fix",
+    "v13-instability-verdict"
+  ]
+}

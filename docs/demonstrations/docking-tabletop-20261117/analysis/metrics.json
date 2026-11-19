@@ -1,0 +1,50 @@
+{
+  "dataOrigin": "synthetic-tabletop",
+  "computedFrom": "analysis/ranking-with-synthetic-labels.csv",
+  "parents": 20,
+  "positives": 4,
+  "negatives": 16,
+  "positivePrevalence": 0.2,
+  "top5Hits": 3,
+  "precisionAt5": 0.6,
+  "recallAt5": 0.75,
+  "EF25": 2.9999999999999996,
+  "ROC_AUC": 0.828125,
+  "averagePrecision": 0.65,
+  "PRDefinition": "分数阈值分组上的averagePrecision，sum(deltaRecall*precision)。",
+  "ROC_AUC_percentile95": [
+    0.5625,
+    1.0
+  ],
+  "averagePrecision_percentile95": [
+    0.3371577380952381,
+    1.0
+  ],
+  "bootstrap": {
+    "n": 1000,
+    "seed": 20261117,
+    "method": "按母体正负分层，有放回重采样，百分位线性插值"
+  },
+  "runCoverage": {
+    "plannedLogicalRuns": 120,
+    "illustrativeAttempts": 121,
+    "firstAttemptSuccesses": 119,
+    "finalCompletedLogicalRuns": 120,
+    "actualSolverRuns": 0
+  },
+  "hypotheticalCriteriaResults": {
+    "EF25": "met",
+    "top5Hits": "met",
+    "coverage": "met",
+    "ROC_AUC": "borderline"
+  },
+  "scientificInterpretation": "数值仅描述此构造表格，实验/靶标预测能力仍待实际数据验证。",
+  "singleStateSensitivity": {
+    "dataOrigin": "synthetic-tabletop",
+    "method": "仅S1，沿用有效pose规则和最低分聚合",
+    "rankingChanged": false,
+    "EF25": 3.0,
+    "interpretation": "此构造例中排名相同，多状态偏差仍需在真实数据评估。",
+    "source": "analysis/single-state-sensitivity.csv"
+  }
+}

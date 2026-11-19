@@ -1,0 +1,175 @@
+TAP version 13
+# Subtest: 插件导出 name/apply
+ok 1 - 插件导出 name/apply
+  ---
+  duration_ms: 6.132
+  type: 'test'
+  ...
+# Subtest: 状态意图布防:pre-step 注入流程硬约束提醒
+ok 2 - 状态意图布防:pre-step 注入流程硬约束提醒
+  ---
+  duration_ms: 68.8788
+  type: 'test'
+  ...
+# Subtest: 证据工具销防:调过 sim_pipeline_check 后不再注入
+ok 3 - 证据工具销防:调过 sim_pipeline_check 后不再注入
+  ---
+  duration_ms: 53.1716
+  type: 'test'
+  ...
+# Subtest: 非运维问题不布防;tool-result(user 角色)不误判为用户输入
+ok 4 - 非运维问题不布防;tool-result(user 角色)不误判为用户输入
+  ---
+  duration_ms: 14.3612
+  type: 'test'
+  ...
+# Subtest: turn/end 仍布防 → 违规写入日志
+ok 5 - turn/end 仍布防 → 违规写入日志
+  ---
+  duration_ms: 32.9078
+  type: 'test'
+  ...
+# Subtest: logPath 相对值由 MDSIM_DATA_ROOT 锚定(2026-08-29 数据根外置)
+ok 6 - logPath 相对值由 MDSIM_DATA_ROOT 锚定(2026-08-29 数据根外置)
+  ---
+  duration_ms: 17.8945
+  type: 'test'
+  ...
+# Subtest: logPath 绝对路径优先于 MDSIM_DATA_ROOT(向后兼容)
+ok 7 - logPath 绝对路径优先于 MDSIM_DATA_ROOT(向后兼容)
+  ---
+  duration_ms: 83.5725
+  type: 'test'
+  ...
+# Subtest: 模型选型意图布防:注入 sim_model_research 提醒,调研工具销防
+ok 8 - 模型选型意图布防:注入 sim_model_research 提醒,调研工具销防
+  ---
+  duration_ms: 70.8766
+  type: 'test'
+  ...
+# Subtest: 换措辞追问同一问题 → repeat-question 失效信号入日志
+ok 9 - 换措辞追问同一问题 → repeat-question 失效信号入日志
+  ---
+  duration_ms: 38.9779
+  type: 'test'
+  ...
+# Subtest: 无关短消息不触发 repeat-question;否定纠正记 user-correction
+ok 10 - 无关短消息不触发 repeat-question;否定纠正记 user-correction
+  ---
+  duration_ms: 20.2727
+  type: 'test'
+  ...
+# Subtest: 巡检返回 CRITICAL → 布防修复研讨;sim_repair_research 销防
+ok 11 - 巡检返回 CRITICAL → 布防修复研讨;sim_repair_research 销防
+  ---
+  duration_ms: 7.7765
+  type: 'test'
+  ...
+# Subtest: 巡检返回 risk_score≥60 同样布防;健康结果不布防
+ok 12 - 巡检返回 risk_score≥60 同样布防;健康结果不布防
+  ---
+  duration_ms: 4.8285
+  type: 'test'
+  ...
+# Subtest: 修复请求意图布防:sim_pipeline_check 不能销防,sim_repair_research 销防
+ok 13 - 修复请求意图布防:sim_pipeline_check 不能销防,sim_repair_research 销防
+  ---
+  duration_ms: 6.0026
+  type: 'test'
+  ...
+# Subtest: 非修复的闲聊不触发 repair-intent 布防
+ok 14 - 非修复的闲聊不触发 repair-intent 布防
+  ---
+  duration_ms: 3.0328
+  type: 'test'
+  ...
+# Subtest: 选型问句含"模拟"不误布防 status-intent(2026-08-28 真机误报回归)
+ok 15 - 选型问句含"模拟"不误布防 status-intent(2026-08-28 真机误报回归)
+  ---
+  duration_ms: 17.5872
+  type: 'test'
+  ...
+# Subtest: config.tools 不再存在:evidence 清单不可被配置替换(2026-08-29 E4 降级开关封堵)
+ok 16 - config.tools 不再存在:evidence 清单不可被配置替换(2026-08-29 E4 降级开关封堵)
+  ---
+  duration_ms: 10.5269
+  type: 'test'
+  ...
+# Subtest: config.intent 只增不减:与内置取或;非法正则被忽略不崩溃
+ok 17 - config.intent 只增不减:与内置取或;非法正则被忽略不崩溃
+  ---
+  duration_ms: 40.4953
+  type: 'test'
+  ...
+# Subtest: logPath 相对值逃逸(../)回落默认日志,不越界写入
+ok 18 - logPath 相对值逃逸(../)回落默认日志,不越界写入
+  ---
+  duration_ms: 22.571
+  type: 'test'
+  ...
+# Subtest: resolveDataRoot: ~ 展开家目录,与 Python expanduser 同义
+ok 19 - resolveDataRoot: ~ 展开家目录,与 Python expanduser 同义
+  ---
+  duration_ms: 3.1014
+  type: 'test'
+  ...
+# Subtest: resolveDataRoot: 相对值锚定代码根父目录而非 cwd
+ok 20 - resolveDataRoot: 相对值锚定代码根父目录而非 cwd
+  ---
+  duration_ms: 1.5354
+  type: 'test'
+  ...
+# Subtest: resolveDataRoot: 空白 env 视为未设置(与 Python _pick 同义)
+ok 21 - resolveDataRoot: 空白 env 视为未设置(与 Python _pick 同义)
+  ---
+  duration_ms: 1.1694
+  type: 'test'
+  ...
+# Subtest: 豁免:纯问候与纯身份问句不布防(turn/end 不计违规)
+ok 22 - 豁免:纯问候与纯身份问句不布防(turn/end 不计违规)
+  ---
+  duration_ms: 3.5753
+  type: 'test'
+  ...
+# Subtest: 豁免:代码审计简报免 repair-intent;真实模拟修复请求仍布防
+ok 23 - 豁免:代码审计简报免 repair-intent;真实模拟修复请求仍布防
+  ---
+  duration_ms: 2.7978
+  type: 'test'
+  ...
+# Subtest: 豁免:交接文档粘贴免 model-choice;真实选型问句仍布防
+ok 24 - 豁免:交接文档粘贴免 model-choice;真实选型问句仍布防
+  ---
+  duration_ms: 7.6736
+  type: 'test'
+  ...
+# Subtest: 豁免守卫:身份问句混入模拟事务词仍布防;问候后接事务不豁免
+ok 25 - 豁免守卫:身份问句混入模拟事务词仍布防;问候后接事务不豁免
+  ---
+  duration_ms: 2.8437
+  type: 'test'
+  ...
+# Subtest: 分引擎证据:sim_gmx_status 可销防 status-intent(2026-09-12)
+ok 26 - 分引擎证据:sim_gmx_status 可销防 status-intent(2026-09-12)
+  ---
+  duration_ms: 2.6548
+  type: 'test'
+  ...
+# Subtest: 用户要求跳过工具不豁免(硬约束优先级高于用户指令)
+ok 27 - 用户要求跳过工具不豁免(硬约束优先级高于用户指令)
+  ---
+  duration_ms: 15.7267
+  type: 'test'
+  ...
+1..27
+# tests 27
+# suites 0
+# pass 27
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 886.5778
+
+[dsh-md-flow-gate] config.intent 非法正则,已忽略: Invalid regular expression: /(/i: Unterminated group
+[dsh-md-flow-gate] logPath 相对值逃逸基座,已回落默认: ../../escape/pwned.jsonl

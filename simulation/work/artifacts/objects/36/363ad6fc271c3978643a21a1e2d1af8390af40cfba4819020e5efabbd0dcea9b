@@ -1,0 +1,192 @@
+{
+  "stageId": "research:2",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "decision": "proceed",
+  "summary": "Selected baseline = bundled 2D indentation LAMMPS deck in.indent.lmp (read in full, lines 1-68). It is the only registered case source; inputRefs is empty and no prior stage artifact exists. Reusable parts are the geometry/partition skeleton (lattice+region box -> create_box/create_atoms -> region/group fixed+thermal layers -> setforce frozen support -> analytic 'fix indent ... sphere' tip with a step-driven position variable) and the group-scoped temperature bookkeeping (compute on mobile group + thermo_modify temp). Reuse is mechanism-level only: the deck runs in LJ reduced units with one LJ coefficient, two identical-mass marker types, sixCommands of 2D-only constructs, dumps commented out and no force/tip-output path at all, so a 3D five-element grinding workflow must rewrite units, potential, boundary style, tip kinematics and add a new sampled force-output chain. Reported differences are traceable to the deck text and to the frozen task context (D4/D5/D6); the baseline is used strictly as a geometric/mechanical template and is NOT evidence that any material physics, potential, or force magnitude is correct.",
+  "baselineSelection": {
+    "selected": "research-source",
+    "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\domains\\lammps\\references\\in.indent.lmp",
+    "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3",
+    "kind": "bundled 2D single-indenter example deck",
+    "whyRelevant": [
+      "Only support contact in the case is an analytical indenter pressing into a free surface, which is the geometric precursor of a single-abrasive grinding pass",
+      "Contains an explicit fixed-layer / mobile-layer partition plus zero-force support enforcement, matching the frozen-boundary and thermal-layer features",
+      "Contains a step-driven tip-position variable, the mechanism pattern needed for approach-then-traverse",
+      "Small, fully readable in one section (1-68 lines), so every reused mechanism can be quoted"
+    ],
+    "rejectedAlternatives": "None available: sources[] contains only support-context plus this one case deck; no 3D, multi-element, EAM, or grinding deck was registered, and no earlier stage artifact was supplied (inputRefs empty, lockRef null)."
+  },
+  "reusableGeometryMechanisms": [
+    {
+      "mechanism": "Lattice-based periodic cell construction",
+      "baselineText": "lattice hex 0.9 ; region box block 0 20 0 10 -0.25 0.25 ; create_box 2 box ; create_atoms 1 box",
+      "reuse": "Same three-call skeleton (lattice -> region block -> create_box -> create_atoms) carries over to 3D; only the lattice style, scale and block extents change. Note the 2D deck still needs a finite z slab (-0.25 to 0.25) because LAMMPS 2D boxes must have thickness; in 3D the z extent becomes a real physical extent."
+    },
+    {
+      "mechanism": "Region-defined layer partition into groups",
+      "baselineText": "region 1 block INF INF INF 1.25 INF INF ; group lower region 1 ; group mobile subtract all lower",
+      "reuse": "The 'define a slab by one coordinate range, group it, then complement it' pattern generalizes directly to y-slab fixed layers and an intermediate thermal layer in 3D (three regions instead of one, plus mobile = all minus both)."
+    },
+    {
+      "mechanism": "Frozen support by zeroed forces rather than by integrator omission",
+      "baselineText": "fix 1 all nve ; fix 2 lower setforce 0.0 0.0 0.0",
+      "reuse": "Integrator covers all atoms and the frozen group is held by setforce 0; this keeps one integrator and one neighbor list for the whole system and is directly portable to a 3D fixed layer."
+    },
+    {
+      "mechanism": "Analytical rigid-abrasive geometry (no abrasive atoms)",
+      "baselineText": "variable k equal 1000.0/xlat ; fix 4 all indent $k sphere 10 v_y 0 5.0",
+      "reuse": "The abrasive is implicit: a repulsive analytic body of radius 10 (lattice-scaled) with stiffness scaled by lattice spacing (1000/xlat), acting on substrate atoms only. This removes abrasive-substrate pair terms, abrasive atom count and abrasive integration from the model, and is the mechanism the 3D grinding pass should inherit if an explicit abrasive particle is not chosen."
+    },
+    {
+      "mechanism": "Step-driven tip trajectory through an equal-style variable",
+      "baselineText": "variable y equal \"13.0*ylat - step*dt*0.02*ylat\"",
+      "reuse": "Position is a linear function of step*dt, so approach depth, hold and traverse are all encoded as variables rather than as staged fixes. For 3D grinding this becomes a pair of variables (depth offset kept constant in one axis, ramped displacement in the traverse axis) to replace the baseline's single descending axis."
+    },
+    {
+      "mechanism": "Group-scoped temperature definition and phased run",
+      "baselineText": "compute new mobile temp ; velocity mobile create 0.2 482748 temp new ; fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0 ; thermo_modify temp new ; run 30000 ; unfix 4 ; run 30000",
+      "reuse": "Reported temperature is computed on the mobile group only while the thermostat fix is applied broadly; the fix/unfix-then-rerun pattern gives loaded and unloaded (approach vs pass/retract) phases. Both are structurally reusable; the thermostat algorithm and its numeric parameters are not."
+    }
+  ],
+  "forceOutputMechanisms": {
+    "presentInBaseline": [
+      "Aggregate thermo output only: 'thermo 1000' with 'thermo_modify temp new' (global step, temp, energy, pressure-type scalars)",
+      "Analytical tip force exists inside fix indent but is not written anywhere by the deck"
+    ],
+    "absentInBaseline": [
+      "All three dumps are commented out ('#dump 1 all atom 250 dump.indent' and the commented image/movie dumps), so no trajectory or per-atom output is produced as shipped",
+      "No fix ave/time, no compute reduce, no variable-based CSV writer: there is no sampled force, no tip displacement record, no per-sample contact record",
+      "No record of atom count, no fixed-layer drift record, no restart/data write"
+    ],
+    "implicationFor3DGrinding": "The baseline supplies zero of the required per-sample output chain, so the force-output mechanism must be built new rather than reused: an explicit reducer over the abrasive entity (or a force sum over the substrate region in contact) sampled by fix ave/time at the frozen 20-step cadence, together with tip-position variables and the group temperature, written to the grinding/approach CSV outputs named in the task context. Because the baseline abrasive is analytical and has no atom group, a reducer over an abrasive group requires either switching to an explicit spherical abrasive group or summing reaction forces on a substrate contact region; this choice is a design decision left open here."
+  },
+  "differencesFor3DMultiComponentGrinding": [
+    {
+      "dimension": "Dimensionality / boundary",
+      "baseline": "dimension 2 ; boundary p s p ; fix 5 all enforce2d",
+      "target": "3D with free x/z and periodic y (D4)",
+      "consequence": "Boundary line must be rewritten; enforce2d has no 3D counterpart and must be dropped; shrink-wrap on the tip-normal axis is replaced by explicit free surface plus a thick enough fixed layer. Shrink-wrap behaviour under a descending tip also does not transfer."
+    },
+    {
+      "dimension": "Chemistry / atom typing",
+      "baseline": "atom_style atomic with 2 types that are markers, not species: 'set group lower type 2' merely relabels the frozen region",
+      "target": "Equiatomic FeNiCrCoCu over fcc cells 20x10x8 (D1/D4), 6400 retained atoms",
+      "consequence": "Type indices must carry chemistry (five species) while the fixed-layer distinction must move to groups, otherwise the boundary marker collides with species identity. The baseline's 'type = bookkeeping' convention cannot be reused as-is. The 6400 criterion also implies a 3D fcc basis (4 atoms/cell), not the 2D hex lattice used here."
+    },
+    {
+      "dimension": "Interatomic model / units",
+      "baseline": "pair_style lj/cut 2.5 ; pair_coeff * * 1.0 1.0 2.5 ; single LJ coefficient for all pairs; LJ reduced units (mass 1.0, T 0.1, timestep 0.003)",
+      "target": "Farkas-Caro 2018 corrected EAM/alloy five-element potential in metal units, 300 K, 0.001 ps (D3/D5/D6)",
+      "consequence": "No numeric value transfers. pair_coeff needs a five-element species mapping; masses must come from the potential rather than 'mass 1 1.0'/'mass 2 1.0'; timestep, temperature and velocity draws must be re-expressed in metal units."
+    },
+    {
+      "dimension": "Thermostat",
+      "baseline": "fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0 applied to all atoms, reported through a mobile-group compute",
+      "target": "Boundary Langevin with NVE on mobile atoms (D5)",
+      "consequence": "Rescale-on-all-atoms is not the target scheme; a Langevin thermal layer must be introduced and the mobile interior left NVE. The reusable part is only the pattern of scoping the reported temperature to a sub-group."
+    },
+    {
+      "dimension": "Abrasive kinematics / motion mode",
+      "baseline": "Single normal-axis descent: one variable decreasing with step, indenter held over a fixed lateral position; run 30000 then unfix and run 30000 unloaded",
+      "target": "Approach 400 steps then a lateral traverse of at least 7.6 angstrom in +x at 10 angstrom/ps with 3 angstrom depth and radius 12 angstrom",
+      "consequence": "Requires a two-segment trajectory (depth ramp, then constant-depth lateral displacement), a travel-distance record, and a far longer effective path than the baseline's vertical scratch-free indentation; the baseline contains no lateral motion, so the lateral-motion feature has no reusable implementation here."
+    },
+    {
+      "dimension": "Abstraction level of the abrasive",
+      "baseline": "Analytical rigid sphere via fix indent; the tip is not an atom, exerts no reciprocal force bookkeeping and has no group",
+      "target": "Spherical abrasive of radius 12 angstrom, stiffness 10 eV/A^3, with sampled contact force output",
+      "consequence": "Retaining the analytical tip keeps the model cheap but requires an alternative force-extraction route; switching to an explicit abrasive particle group enables compute reduce/fix ave/time force sampling but adds contact pair terms, abrasive temperature control and a second species interaction set. The trade-off is not resolved by this baseline."
+    },
+    {
+      "dimension": "Output cadence",
+      "baseline": "thermo 1000 only; dumps commented out",
+      "target": "sampling every 20 steps, eight named output files, at least 10 contact samples",
+      "consequence": "The entire output layer is new work; the baseline offers no cadence design and no evidence that 20-step sampling yields enough contact samples."
+    }
+  ],
+  "evidence": [
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "section": "lines 1-68 (whole file)",
+      "quoted": "dimension 2 / boundary p s p / atom_style atomic / lattice hex 0.9 / region box block 0 20 0 10 -0.25 0.25 / create_box 2 box / create_atoms 1 box"
+    },
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "quoted": "pair_style lj/cut 2.5 / pair_coeff * * 1.0 1.0 2.5 / mass 1 1.0 / mass 2 1.0"
+    },
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "quoted": "region 1 block INF INF INF 1.25 INF INF / group lower region 1 / group mobile subtract all lower / set group lower type 2"
+    },
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "quoted": "compute new mobile temp / velocity mobile create 0.2 482748 temp new / fix 1 all nve / fix 2 lower setforce 0.0 0.0 0.0 / fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0"
+    },
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "quoted": "timestep 0.003 / variable k equal 1000.0/xlat / variable y equal \"13.0*ylat - step*dt*0.02*ylat\" / fix 4 all indent $k sphere 10 v_y 0 5.0 / fix 5 all enforce2d"
+    },
+    {
+      "sourceId": "research-source",
+      "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+      "quoted": "thermo 1000 / thermo_modify temp new / #dump 1 all atom 250 dump.indent / #dump 2 all image ... / #dump_modify 2 pad 5 / run 30000 / unfix 4 / run 30000"
+    },
+    {
+      "sourceId": "support-context",
+      "readRef": "read-ee9c4945-736a-468a-b705-31d84670e158",
+      "section": "lines 1-531",
+      "quoted": "scheme.parameters: composition [0.2,0.2,0.2,0.2,0.2], latticeAngstrom 3.56, cells [20,10,8], temperatureK 300, radiusAngstrom 12, depthAngstrom 3, speedAngstromPerPs 10, stiffnessEVPerAngstromCubed 10, dumpEvery 100, forceEvery 20; D4 boundary 'free x/z, periodic y'; D5 'boundary Langevin, NVE mobile', approach 400, grinding 800; D6 Farkas-Caro 2018 corrected EAM/alloy; criteria include atomCount 6400, contactSamples >= 10, tipTravelAngstrom >= 7.6, fixedMaxDisplacementAngstrom <= 1e-6"
+    },
+    {
+      "sourceId": "support-context",
+      "readRef": "read-ee9c4945-736a-468a-b705-31d84670e158",
+      "quoted": "validationProtocol comparisons: time-step-convergence (missingReason 'no matching finer-step result is available'), material-model-validation (missingReason 'Applicable quantitative material-model validation data is unavailable'), grinding-reference (missingReason 'reference with matching composition, abrasive model, speed, depth and measurement definition has not been established'); limitations include 'Idealized model-alloy potential', 'Rigid repulsive sphere represents the abrasive geometry'"
+    }
+  ],
+  "missingSources": [
+    "No 3D, multi-element, EAM or grinding LAMMPS deck is registered in sources[]; the only case source is a 2D two-type LJ indentation deck, so every 3D grinding-specific construct is unverified against a bundled example",
+    "LAMMPS documentation for fix indent sphere argument ordering/chaining, compute reduce, fix ave/time and boundary shrink-wrap semantics is not among the registered sources; the interpretation of the seven trailing arguments of 'fix 4 all indent $k sphere 10 v_y 0 5.0' and of the reported tip center is therefore flagged as needing confirmation, not asserted",
+    "No potential file content (FeNiCrCoCu EAM/alloy setfl) was read, so element ordering, mass values and pair_coeff mapping are unresolved",
+    "No efficient reference deck for spherical-abrasive-as-explicit-particle or for contact-force extraction was registered",
+    "No finer-timestep run, repeat-seed ensemble, matched experimental grinding reference or quantitative material-model validation data (per validationProtocol missingReasons)",
+    "No prior stage artifact or inputRef was provided (inputRefs empty, lockRef null), so no upstream design decisions could be cross-checked"
+  ],
+  "limitations": [
+    "Reuse is mechanism-level only; no numerical parameter from in.indent.lmp transfers to the target because it is in LJ reduced units with a single LJ coefficient and a 2D hex lattice",
+    "The baseline contains no lateral motion, so the lateral-motion feature has zero reusable implementation and must be designed from scratch",
+    "The baseline produces no force, displacement, atom-count or trajectory output (all dumps commented out), so the entire required output/CSV chain and its 20-step sampling cadence are unvalidated",
+    "The baseline's 6400-atom-equivalent geometry is not established: it uses a 2D triangular lattice whose atom count is unrelated to the frozen fcc 20x10x8 = 6400 criterion",
+    "The baseline lacks five-component chemistry entirely (two identical-mass marker types), so nothing here constrains species typing, mixing or composition realization",
+    "Interpretation of fix indent sphere keyword arguments was not verified against bundled documentation and is stated only at the level supported by the deck text",
+    "Because the analytical abrasive has no atom group, the choice between an analytical tip and an explicit abrasive particle is left open, and it governs whether contact force can be sampled by a reducer at all",
+    "Free-surface plus shrink-wrap behaviour of a descending tip is known-problematic in general, but no bundled source supports a specific claim about it here"
+  ],
+  "nonClaims": [
+    "This baseline is NOT evidence that material physics is validated; it uses a generic LJ pair style and an idealized rigid sphere and contains no comparison of any kind",
+    "No claim is made that the selected baseline's force magnitudes, temperatures, energies or deformation behaviour resemble FeNiCrCoCu grinding",
+    "No claim is made that reusing these mechanisms will satisfy the finite, atoms, fixed, contact or travel acceptance criteria; those remain to be demonstrated by later stages",
+    "The baseline is not a validation reference and cannot serve as the 'matched experimental or literature grinding result' sought by validationProtocol"
+  ],
+  "provenance": {
+    "reads": [
+      {
+        "sourceId": "support-context",
+        "readRef": "read-ee9c4945-736a-468a-b705-31d84670e158",
+        "digest": "sha256:81ceae8fefe3e50c99aa97bac271bf6dcb30d58e45425d43e3ec8a6680cd5562",
+        "lines": "1-531 of 531"
+      },
+      {
+        "sourceId": "research-source",
+        "readRef": "read-42599390-5ae6-4598-9de3-207bfc8fec32",
+        "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3",
+        "lines": "1-68 of 68"
+      }
+    ],
+    "unreadRegisteredSources": "none (both registered sources were read in full)"
+  }
+}

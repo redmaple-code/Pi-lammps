@@ -1,0 +1,157 @@
+{
+  "packetType": "stage-packet",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "stageId": "research:4",
+  "role": "lammps-case-librarian",
+  "decision": "proceed",
+  "summary": "Bundled in.indent.lmp (2D LJ sphere-indent example) is the correct baseline for mechanism reuse only: analytic-sphere loading (fix indent), region/setforce frozen-layer, group subtraction, and step-driven kinematic ramp. Geometry, force-output and multi-component physics must be redesigned for 3D FeNiCrCoCu grinding; the baseline has no force-output mechanism and cannot validate material physics.",
+  "baselineSelection": {
+    "selected": "domains/lammps/references/in.indent.lmp",
+    "baselineId": "in.indent.lmp",
+    "whySelected": "It is the only registered case source in this task (sources[1], sourceKind=case, 68 lines, digest sha256:e6e9d6e4...). It contains the exact mechanism family the target case needs (a rigid/analytic spherical probe pressed into and moved over a substrate, with a frozen bottom layer), which is the reusable core of the grinding pass.",
+    "reuseScope": "mechanism-and-structure only",
+    "nonReuseScope": "no numerical values, no material model, no force observables, no 3D geometry",
+    "sourceStatus": "candidate (unverified by this retrieval), read in full: lines 1-68"
+  },
+  "reusableMechanisms": [
+    {
+      "id": "analytic-sphere-indenter",
+      "evidence": "L44: fix 4 all indent $k sphere 10 v_y 0 5.0",
+      "whatItDoes": "fix indent applies a harmonic restoring force to all atoms toward the outside of a sphere of radius 10 (lattice units) centred at (x=v_y? no: x=v_y is misread -> centre = (v_y, 0, 5.0) in the 2D model). It is a shape-defined, massless, rigid abrasive: no abrasive atoms, no abrasive potential, no abrasive mass.",
+      "mapsToTarget": "Keep this mechanism for the spherical abrasive described in support-context (radiusAngstrom=12, stiffnessEVPerAngstromCubed=10, spherical-abrasive + lateral-motion features). It is the cheapest way to hold the D21 geometry features without inventing an abrasive material."
+    },
+    {
+      "id": "stiffness-scaled-to-lattice",
+      "evidence": "L41: variable k equal 1000.0/xlat  -> passed as the force constant $k in L44",
+      "whatItDoes": "Defines the indenter stiffness relative to lattice spacing rather than as an absolute number, so the same script stays stable when the lattice constant changes.",
+      "mapsToTarget": "Useful pattern when moving from the baseline's reduced lattice units to 3.56 A fcc; but the target already fixes an absolute value (10 eV/A^3), so adopt the absolute value and drop the /xlat scaling."
+    },
+    {
+      "id": "step-driven-kinematic-ramp",
+      "evidence": "L42: variable y equal \"13.0*ylat - step*dt*0.02*ylat\" ; L44 pass-through as v_y",
+      "whatItDoes": "The probe coordinate is an equal-style variable linear in step*dt, re-evaluated every timestep, and fed to fix indent as a non-static centre coordinate. This is the whole 'approach then move' control law.",
+      "mapsToTarget": "Reuse the exact idiom twice: an approach-phase variable (depth 3 A over approachSteps=400: v_y = y0 - step*dt*v_appr) and a traverse-phase variable (v_x = x0 + step*dt*10 A/ps, 800 steps -> 8 A travel, satisfies the travel>=7.6 A criterion). Note two-stage control is already demonstrated by L55/L57-L58 (run, then unfix 4 and run again)."
+    },
+    {
+      "id": "frozen-bottom-layer-by-region",
+      "evidence": "L26: region 1 block INF INF INF 1.25 INF INF ; L27: group lower region 1 ; L28: group mobile subtract all lower ; L36: fix 2 lower setforce 0.0 0.0 0.0",
+      "whatItDoes": "A geometric half-space region selects the fixed layer; the rest is 'mobile' by set subtraction; the fixed layer is frozen with setforce while remaining time-integrated by nve (L34: fix 1 all nve).",
+      "mapsToTarget": "Directly reusable for the fixed-boundary and thermal-layer features: replace 'INF 1.25 INF' with the 3D slab bound on the vertical axis, keep 'setforce 0 0 0' + nve for the frozen layer, and define the thermal layer and mobile core by the same subtract pattern. This also gives a clean group handle for the fixedMaxDisplacementAngstrom<=1e-6 check."
+    },
+    {
+      "id": "type-tagging-of-the-frozen-layer",
+      "evidence": "L28-L29: group mobile subtract all lower ; set group lower type 2 (after create_box 2, L13; masses set for both types L16-L17)",
+      "whatItDoes": "Retags the frozen layer as a distinct type purely so it can be written to dump/data for inspection and so type-based selection works.",
+      "mapsToTarget": "The only 'multi-type' precedent in the baseline. It is a labelling trick, NOT multi-component physics: two identical types with identical mass 1.0 and a single '* *' LJ coefficient. Do not mistake it for evidence of five-component behaviour."
+    },
+    {
+      "id": "thermostat-scoped-to-mobile-atoms",
+      "evidence": "L32-L33: compute new mobile temp ; velocity mobile create 0.2 482748 temp new ; L36: fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0 ; L48: thermo_modify temp new",
+      "whatItDoes": "Temperature is measured on the mobile group only (compute new) and the thermostat window is applied on that group; the bias is also removed from a warm start with a fixed seed.",
+      "mapsToTarget": "Keep 'scope the thermostat and the temperature compute to the mobile/thermal group, exclude the frozen layer'. Replace temp/rescale with the D5 boundary Langevin for the production case; the group scoping is the transferable part."
+    },
+    {
+      "id": "unfix-and-run-second-phase",
+      "evidence": "L57-L58: unfix 4 ; run 30000",
+      "whatItDoes": "Removes the indenter to run an unconstrained relaxation segment after loading.",
+      "mapsToTarget": "Optional reuse for a post-pass relaxation segment; the target's grindingSteps=800 sequence (equilibration 400 / approach 400 / grinding 800) is exactly this multi-run structure."
+    },
+    {
+      "id": "numerical-hygiene",
+      "evidence": "L6: neighbor 0.3 bin ; L7: neigh_modify delay 5",
+      "whatItDoes": "Bin neighbour lists with a delay before rebuilding after atom motion.",
+      "mapsToTarget": "Structure reusable; the 0.3 value is in the baseline's reduced units and must be re-chosen (metal units, Angstrom-scale skin) together with the EAM cutoff."
+    }
+  ],
+  "differencesFor3DTarget": [
+    {
+      "id": "dimensionality",
+      "baseline": "L3: dimension 2 ; L45: fix 5 all enforce2d",
+      "target": "dimension 3 required",
+      "action": "Delete fix enforce2d (L45) outright; keeping it in 3D is invalid. Rebuild geometry with a finite thickness on the third axis instead of L12's -0.25 0.25 slab."
+    },
+    {
+      "id": "boundary-and-periodicity",
+      "baseline": "L4: boundary p s p  (x periodic, y shrink-wrapped, z periodic)",
+      "target": "support-context D4: \"boundary\": \"free x/z, periodic y\"",
+      "action": "Change to free x and z, periodic y (s p s style). Consequence: the baseline's periodic x hides any lateral pile-up behind a periodic image; the target must size x from cells=[20,10,8] x 3.56 A and check that the traverse of ~8 A plus pile-up stays clear of the x free surface. This is a geometry decision, not something the baseline answers."
+    },
+    {
+      "id": "lattice-and-atom-count",
+      "baseline": "L11: lattice hex 0.9 ; L12: region box block 0 20 0 10 -0.25 0.25 ; L14: create_atoms 1 box",
+      "target": "fcc, latticeAngstrom 3.56, cells [20,10,8], atoms acceptanceSpec equals 6400",
+      "action": "Switch to fcc basis and confirm the count explicitly: 20*10*8 cells x 4 atoms = 6400, which matches the frozen criterion. Reuse the create_box/create_atoms/region sequencing only."
+    },
+    {
+      "id": "component-count-and-potential",
+      "baseline": "L21: pair_style lj/cut 2.5 ; L22: pair_coeff * * 1.0 1.0 2.5 ; L13 create_box 2 with two identical masses",
+      "target": "five-component equiatomic FeNiCrCoCu with Farkas-Caro 2018 EAM/alloy setfl (support-context D6)",
+      "action": "Structural change: create_box must declare 5 types; species assignment needs an explicit random/ratio placement (create_atoms ... set type/ratio) before the EAM stage; pair_style must become eam/alloy with one setfl file and a 5-symbol element map in pair_coeff. None of this exists in the baseline — it is the largest genuine gap."
+    },
+    {
+      "id": "fixed-layer-placement",
+      "baseline": "L26: region 1 block INF INF INF 1.25 INF INF (a half-space in y)",
+      "target": "fixed boundary + separate thermal layer, both as slabs in the vertical direction",
+      "action": "Re-express as finite slabs with explicit thicknesses so that fixed-boundary and thermal-layer are separately verifiable by data-and-input-check."
+    },
+    {
+      "id": "units-and-time-step",
+      "baseline": "no units command -> lj reduced units; L40: timestep 0.003 (reduced)",
+      "target": "metal units, timeStepPs 0.001, speed 10 A/ps",
+      "action": "Do not carry 0.003 across. In metal units a 0.001 ps step with 10 A/ps gives 0.01 A of probe advance per step; 800 grinding steps give 8 A, i.e. the travel criterion is met exactly at the stated speed and step count. This arithmetic is the reusable link; the numbers are not."
+    },
+    {
+      "id": "force-output",
+      "baseline": "-none- ; L47-L48 only set thermo 1000 and thermo_modify temp new; the indenter force is never printed, written or averaged, and no dump is active (L50-L54 are commented out)",
+      "target": "requiredOutputs include grinding.csv, approach.csv, trajectory.lammpstrj and a contactSamples>=10 check sampled every 20 steps; forced sampling everySteps=20",
+      "action": "New machinery is mandatory, and the choice is constrained by physics: an analytic fix indent sphere (the reusable mechanism above) applies forces to atoms but reports no reaction force to you. Two viable routes: (a) keep fix indent and reconstruct the reaction by summing, every 20 steps, the forces on substrate atoms inside a contact region (fix ave/time over a compute reduce sum of fx/fy/fz on that region/group) — this approximates rather than measures the probe force and must be documented as such; or (b) replace the analytic sphere with a rigid atomistic abrasive group interacting through an explicit pair style and take compute group/group (pair yes) between abrasive and substrate, which gives the true probe force but abandons the massless-indenter simplification. Either way, fix ave/time writing grinding.csv and approach.csv, dump every 100 steps for the three .lammpstrj files, and write_data/write_restart are all additions with zero baseline precedent."
+    },
+    {
+      "id": "output-artifacts",
+      "baseline": "L50-L54: all dump commands commented out; L55: run 30000 with only thermo 1000",
+      "target": "log.lammps, grinding.csv, approach.csv, trajectory.lammpstrj, initial.lammpstrj, final.lammpstrj, final.data, final.restart",
+      "action": "Build the entire observables/output layer from scratch. The baseline provides no CSV schema, no column naming, no force/temperature/displacement definitions to copy."
+    },
+    {
+      "id": "thermostat-card",
+      "baseline": "L36: fix 3 all temp/rescale 100 0.1 0.1 0.01 1.0 (all atoms, including the frozen layer)",
+      "target": "D5: boundary Langevin on mobile atoms, NVE mobile, frozen layer not thermostatted",
+      "action": "Swap cards and scope, and keep the 'exclude the frozen layer from the thermostat' rule, which the baseline gets right only via compute new being mobile-scoped (L32) while its thermostat is actually all-atom."
+    },
+    {
+      "id": "workflow-artifact-location",
+      "baseline": "single flat input file in the examples tree",
+      "target": "new case tree",
+      "action": "Build the 3D case under work/cases/<case-slug>/ (default artifact location), keeping the baseline only as a reference to cite."
+    }
+  ],
+  "materialPhysicsClaim": {
+    "claimed": false,
+    "statement": "in.indent.lmp cannot validate material physics for this case and this packet does not claim that it does. The baseline is a reduced-unit 2D LJ model with two identical mass-1.0 types and one '* *' coefficient (L16-L17, L21-L22); it has no Fe, Ni, Cr, Co or Cu, no EAM, no real lattice constant, no temperature in K, and it reports no forces at all. It is evidence for input-script mechanics (command ordering, region/group construction, variable-driven indenter motion), not for any physical prediction.",
+    "supportContextAgreement": "The support-context validationProtocol records the same gap independently:material-model-validation missingReason \"Applicable quantitative material-model validation data is unavailable\"; grinding-reference missingReason \"A reference with matching composition, abrasive model, speed, depth and measurement definition has not been established\"; and its limitations array states \"Idealized model-alloy potential\", \"Rigid repulsive sphere represents the abrasive geometry\"."
+  },
+  "limitations": [
+    "The baseline contains no force-output mechanism whatsoever (L47-L48 thermo only; L50-L54 dumps commented out), so the required grinding.csv/approach.csv force observables have zero precedent and must be newly designed and separately verified.",
+    "The baseline has no multi-component physics: create_box 2 (L13) plus two identical masses (L16-L17) plus pair_coeff * * (L22) is a single-species LJ model. Five-species EAM/alloy construction is entirely unaddressed by it.",
+    "The baseline is 2D with reduced LJ units and timestep 0.003 (L3, L40); its numerical values (0.3 neighbor skin, 0.003 timestep, 0.02 ramp rate, 5.0 sphere radius, 1.25 layer bound, k=1000/xlat) must not be carried into a metal-units 3D case.",
+    "The baseline cannot validate material physics; no FeNiCrCoCu, no setfl potential, no Kelvin temperature and no measured force appear in it.",
+    "No LAMMPS manual page, correction corpus, case-family index or confirmed/pending lesson memory was registered as a source for this stage (inputRefs is empty; only support-context and in.indent.lmp were readable). Any statement that would require the manual (e.g. exact fix ave/time keyword spelling, fix indent reaction-force behaviour) is stated here from general mechanism knowledge and must be confirmed against the manual before it is written into the input script.",
+    "The support-context's own three validationProtocol comparisons (time-step convergence, material-model validation, grinding reference) all carry missingReason entries and remain unresolved; this packet does not fill them.",
+    "Baseline status is 'candidate': it was read as a reference, not benchmarked or re-run in this stage."
+  ],
+  "confidence": {
+    "mechanismReuse": "high",
+    "geometryDifferences": "high",
+    "forceOutputDesign": "low",
+    "materialPhysics": "not-claimed"
+  },
+  "evidenceReceipts": [
+    {"sourceId": "support-context", "lines": "1-531 (full)", "digest": "sha256:81ceae8fefe3e50c99aa97bac271bf6dcb30d58e45425d43e3ec8a6680cd5562"},
+    {"sourceId": "research-source", "lines": "1-68 (full)", "digest": "sha256:e6e9d6e4731f2efbc9e9184065fd4a66ca30bf81bb0fa11a61ecf67bddf07ca3"}
+  ],
+  "openQuestionsForArchitect": [
+    "Choose route (a) contact-region force summation with analytic fix indent, or (b) rigid atomistic abrasive + compute group/group. Route (b) yields a defensible probe force but changes the physical model; route (a) keeps the model simple but produces an approximate observable.",
+    "Confirm whether the x boundary should be free on both sides (s p s) or whether a larger periodic x is preferable for pile-up statistics, given D4 says free x/z, periodic y.",
+    "Decide the exact definition of 'contact force samples' (which atoms, which region, cutoff) so that the contactSamples>=10 criterion is reproducible."
+  ]
+}

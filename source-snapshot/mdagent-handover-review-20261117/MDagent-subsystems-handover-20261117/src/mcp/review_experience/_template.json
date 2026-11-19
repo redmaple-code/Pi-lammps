@@ -1,0 +1,20 @@
+{
+  "pack": "your_pack_name",
+  "schema_version": 1,
+  "entries": [
+    {
+      "id": "exp-mine-001",
+      "kind": "lesson",
+      "statement": "一句话经验:什么条件下什么能做/不能做/要论证着做(可含数值边界)",
+      "conditions": {"engine": "LAMMPS", "family": "", "aspect": "", "surface": ["<可选:域包高危操作面,机器门禁触发用>"]},
+      "severity_hint": "soft",
+      "rationale": "为什么:实测事故/文献/机理",
+      "remediation": ["整改选项1", "整改选项2"],
+      "refs": [],
+      "provenance": {"source": "human", "injected_by": "你的名字", "ts": "2026-10-04T00:00:00"},
+      "status": "active",
+      "exemptible": false,
+      "machine_gate": false
+    }
+  ]
+}

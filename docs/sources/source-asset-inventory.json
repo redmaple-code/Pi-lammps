@@ -1,0 +1,2822 @@
+{
+  "sourceRoot": "F:\\BaiduSyncdisk\\Codex\\MDagent\\autolammps",
+  "sourceCommit": "feaf7f6d740da6772039d3f58a58c889eb11a5c9",
+  "note": "Tracked candidate assets only. Git object IDs are not SHA-256. Inclusion is inventory, not completed migration or validation. Referenced external/untracked assets require separate M0 audit.",
+  "counts": {
+    "entry-and-design": 8,
+    "knowledge-runtime": 18,
+    "knowledge/cases": 118,
+    "knowledge/memory": 11,
+    "knowledge/papers": 10,
+    "knowledge/reports": 23,
+    "knowledge/rules": 18,
+    "knowledge/templates": 7,
+    "roles": 14,
+    "skill-mining": 7,
+    "skills": 30,
+    "templates": 66,
+    "tool-scripts": 20
+  },
+  "items": [
+    {
+      "path": ".angsheng/agents/hello-agent.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "68855b18834e5dd7f89ee2c12978ae81929f6325",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-analyst.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a3e746f2467ae1e08dd03fa3bf738238d68a3867",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-case-librarian.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "05615edb0746d984aeba81b4879c792ac601ff92",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-coordinator.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d7c298420a42172ad1a07e77e73b1d41cd43e31c",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-data-analyst.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7ed1afd3f8057f9694c9016f09b88beea4a06fb9",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-input-writer.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "53d9c5699cfcc804f9fc6dbec1da2d30a13eade5",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-kb-coordinator.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dcbf4ba49f96a0e235a2b02ffbd484680c7280c2",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-kb-curator.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9753c1f0d5765e0f8036055f606297c637ce3468",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-kb-reviewer.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "876070fd986ace09714ffac5f57e555b5a03fa07",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-paper-researcher.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bd787f669011b17d9208587b2ed85d39689527a9",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-post-processor.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4afa31e5f9262bb9808576e24b4260e34f97423e",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-reviewer.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5c109ade41bbe7b9d0bc14a311652ddb76aaf924",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-simulation-architect.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "36658f97cff4ebc60b713fb6850f4b0b8e502690",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/agents/lammps-simulation-reasoner.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "778fefae55e4d24db76edb697bab6b0d40ef1ad1",
+      "category": "roles",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-atomsk-modeling/SKILL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bee7eea81bcb7807bee4ba3bd439984ea45117e1",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-hpc-submit/SKILL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "12928d76672a7dc2544a36d02ca94b8b9007d6ae",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-hpc-submit/references/checklist.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b2371a216597c5b884e8668a8a324ca87a44f1d2",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-paper-reproduction-auditor/SKILL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cc9780c9d74a035aa38bc44928f89e3f98d4603c",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-paper-research/SKILL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9e253991f89951e14438bf943f8e4788db70d547",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-visualization/SKILL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9da2d6199d63c97aa26a7689b1efb140a455e518",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/skills/lammps-visualization/references/ovito-checklist.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "147fb2f412df180e0260ff77479f66fbb6c53d0e",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/cif_to_lammps.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e7beb2e484567ffd3e2e26516b728a17e9d9e8cc",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/create_basic_bcc.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e5a4d4d41d6461e0efdb84d21aee02e96a7abc12",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/create_basic_fcc.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7918a339ea1587401d3d4363b30301e14387c841",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/dislocation_inclusion_basic.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ecbde521a1e55ac8d2665548adbf7bebab0a77d7",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/orientation_alignx_unskew.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "196d69c0e8f3e0b732201b969d9202e3f5500ea0",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/point_defects_basic.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dacbe0bf853e4f5aee1d61b8486d8ed4129a5832",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/polycrystal_basic.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "583b69e3b799eafa0d76ba8091be73f808ea02e9",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/stacking_fault_basic.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cd0552b0ce29aaf3d2cd5ec02a76977df4b1bcf5",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/atomsk/twin_boundary_basic.sh",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5d35c402b2e6237bde5a1403869409131f3346a9",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/decisions.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "04724342552ad5674544e0625fc0870f69e629bd",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/execution.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c50439fd34f2c630f60fdbf09108e1fd2e9c5c10",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/modeling.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "00dea655a4daaa498942b7016428e298bb47e5d4",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/open-issues.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ac46e8ed2bcbd206fcffbc23d8a667c59791b661",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/project.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "790627349175c22c55a32877a75648d11b7a08a6",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/review-log.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a7ed623f52aaa99e1479638f90c153798d072daf",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/stage-summary.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "17125aa3c2ca4680ea469e8d97d6fee0b03d79bd",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/wf02.packet.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b6357cff7e48ba22ded5613621344b5ceda07bcb",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-project/wf03a.packet.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3bc10e3c030a0bae3a3b4825b1f469f8851bd588",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps-team/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f967808ccbcc4db104aea5ae007e8fdf9734370f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps/hea-melt-solidify.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "08d9c0577c597008610edc94f2b9a3306201ff6a",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps/meam-alloy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "84f44a2441e5e212eb558d675cc0c850ccfbe1b6",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps/reaxff-reactive.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "0812a11a98d50d6caaf14ebcda5688ea11e45b0d",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps/restart-continue.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "74f650d48720b6e2bc58ac7e85253c9484555f62",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/lammps/tensile-strain.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "178a7f76d24e4755eaf48b69c8b337d7bffcc9fe",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/cluster_analysis.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "59263b48fa03e0c76077c98c0747ad714ef4dc76",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/cna_render.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b15244a2234f8ae555700d4c8b3aeac1fe0050d0",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/dislocation_time_series.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f247537044d557e973ffcbe2f0ea036eb074e0a2",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/dislocation_tracking.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "0b2d31c60db820f4ecca6d5e7763e65c25bbe62f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/export_dump_columns.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f0a132a01548a69d9113ed61b1d5e0dd5d0b8a80",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/focus_region_render.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "195f7b83ad6e3c085f89d65141f239edd1ffb3c2",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/pipelines/general_pipeline.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "335934c9fcc9c6803e684f9da9776293e6b1f269",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/pipelines/melting_pipeline.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ae49a34489206034665ae89d3d1bee22bccb167e",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/pipelines/metal_tension_pipeline.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3630b2d739a7ad7e997d2f0f67c0151058720c21",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/pipelines/shear_pipeline.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "533fcef2f635d40e1481f094b6a6cd3069f90452",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/rdf_analysis.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a1ddb40c396f30733ce36b6e56dd3c0ce5c88e16",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/render_engine.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d9ba291d59848875fd12845436563edfd006c461",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/render_frame.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5df3a0a17b13cf4cb816e65bc7832d705667e609",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/render_snapshot.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c798e759bc81ef97610a69d4f05703d7473bc26b",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/renderer_compare.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "134da7e639e40c159ac3344cd3cae3a0c2a4a75f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/stress_field_map.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "062d57ae18692502ddacde45223098003801fba9",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/temperature_field_map.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e1ae9af87453369cf85fc071b2b4bc2a86dcb31c",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/01_import_summary.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d8e13f475c1d3dd6a16b80f083e7d5444e2a22a3",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/02_render_last_frame.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b2c587096c421933287901b345fdab8d5d3f3dfd",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/03_export_cna_dump.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b0735d0cd75ca343e75214993e10caa7a66b933f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/04_rdf_table.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2a0bcc8ae9c0cadc701d71ed4a9780741e2ba84e",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/05_coordination_histogram.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "112f156ceb8467fcf693d2175042ffc94a531818",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/06_cna_structure_counts.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b01013341ede763fcaf8e180d67f4d15e3a65627",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/07_cluster_sizes.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "19dfc923d3a4623e0cbe79c62de795eeaed3597f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/08_displacement_summary.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "769b03673584dd20edb3c5f9a77ef34d38c09c00",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/09_displacement_export.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cae039481e2f554f1c206562aaa97b85068ffbef",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/10_voronoi_stats.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1ea9f2694b08f8f786909944901e0f1d291a11aa",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/11_slice_render.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ef20937e486c465553dadf5f13ead358f4a71e3f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/12_selection_delete_preview.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "79187c613065b8aed026fb53fe6d9f1a00e6e34f",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/13_dislocation_scan.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "80eec00b5d386eb805f8ae27e5ac67a0940d7582",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/14_renderer_smoke.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "55d4e740ef29f2e6c4ff1562a021a38402783fee",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/15_select_type_count.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "02fe903fe0ca7b82e30f830aff60e2606c7c5501",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/16_colored_focus_render.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d6d90f5e59a8c7a7308d891402e202c4470fe3e5",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/17_framewise_particle_count.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a2dea3c33f765594ceac56274ffb13620032c5e6",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/18_framewise_cna_evolution.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "95f22c03a79141cc0f4f2f783f7ae13921c8e323",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/19_framewise_rdf_peak.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "78ca86b531475e8221917341d3e9595d65cf4248",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/20_temperature_mean.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2dfde014fb55c71cd6e9ccc28cc79f5eeed8d6eb",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/21_stress_mean.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "df66385ad6913adbb9085cadd7f80870b491a2df",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/22_delete_type_export.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "99bf1c3806c722a7fa6158f3088ab5699e13a59b",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/23_top_view_render.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9bd7f551354af9b1856b4d09442747a44f7c1dad",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/24_attribute_probe.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b32aa28d55eb1f013764b04bcba0b0573fe9e086",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": ".angsheng/templates/ovito/tests/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "977a15fb4f4892d829419fff5103bf2995ef0ed3",
+      "category": "templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "docs/implementation/agent-self-evolution-baseline.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "273b91d7d0528df6d7dcf3594e4a1b4050b51169",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/CASE_METADATA.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ea68747f68e61de98371932edcf4b8708fd70d32",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/INDEX.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "99dafd4e6f376b6ae19abdd54a23b6c9ec6774b0",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4ea40369d47ceac917f4d9ccdafdc913f1672dde",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/case-family-index.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1b7238fe39da361965a658430fca8efdf4fd42bc",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-1-19805bf0.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a4e345f946c834282a103149df4e5403c64b0c6f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-1-43451274.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "58a4b7e0c97dec42638b2dfe4ac7372474f2d0ae",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-1-595f1c99.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "28538c797b5fe86fd2aeab79a72cbba688595673",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-1-co2-014f1321.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8a1a1cd3395ce01734f3e716bf11d422f57ff369",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-1co2-6878919d.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1b2b31bc5a2395ea28c42472253a0d3f1b428134",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-0afdd806.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "903b4daced7c6317f9041299972bce91133bba0e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-2c34c701.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "68fc3f24cb1ee2e1a9cfb3e18935fc981c6c73a1",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-307df31e.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "628e8e800a79beb7ae4755785bd1db3e2ffde303",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-41cedc4a.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "752de75be18fbe5bdaa4aa300bfa437fb772e4b2",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-5869691a.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "539628a444c800cf445d9f0e92847f858d1afc6e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-67e55f89.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4e6076c11cbbc521ac4c92f2c2699c43ccb7bee8",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-6db18c15.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5c3017305bf924ab63006a5903fafb41cca1d98e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-6fa1ed7e.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ac4ac78cc2cdaf7cf4f2d7eae3010c170a62aa94",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-8b84e6c4.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "43446cf198b9824343128928a2e63852f6e86890",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-8bd755d8.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f53f0448237cdaf4527d65917e95033421a5c74e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-98b483fe.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ef2c6acc3c1bc0bd7f9155383576dd31d509b8fd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-a6f7746a.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "043a51dee6286d45977405a605751dfc4dff1d35",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-b93e6b46.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e61acd3b7c1f9d634da6a17296b512b4e1063db7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-bc39e10f.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e584dfe63ea61c385e97b3f2d3ec9f3e55ec998b",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-bfa24fa6.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9191748f0b47e91ae87aabb8062faeb0cf8b78b1",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-d0608dcc.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f5aaa87ec957fb369bbbfcfa0b83e40090cadc31",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-e2a88ddb.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f44838f477f362da6d6b651b6552d1388ca8f756",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-e87aab4c.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a6845244a42d1c13d4bed0d61d322236737f75eb",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-entry-fa7c3bc3.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d77f2face952d99d98d8196ba958584c139a1bb0",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-naoh-bf47bb7b.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5f7a1d4b92f576e25d6b675ebe80589962b7877c",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-pdf6-c274de8c.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6ae3d2973c9f93825cf9194ec4d5df922dbd8a94",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/notes/2026-04-14-pdms-01b766ff.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b7851d5c69bff7b19a02cf6e9ed8fe62af56737b",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/debug_cell.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7f1ca615593ac3069e60aea30965c40479c23601",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/debug_cell2.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "18577317a06bb7ad8bfff4cab14a8f6b12383f74",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/download_potential.ps1",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8fa176ee0052410c1eef4574b3820134d7efb8da",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/fault_structures/fault_meta.txt",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c3ba4b1c62b6961601dab86bfd2126e8c86c69ad",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/gen_tial_fault_structures.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a3940c2f0c4735acee256e87c913f7136692b8a4",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/github_search.txt",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ed04d62c033191142bde08dadb2829e411a0027d",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/nist_hea.html",
+      "gitObjectType": "blob",
+      "gitBlobOid": "21b76a1e89209233e1ad507b322181a3797a6bb8",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/nist_index.html",
+      "gitObjectType": "blob",
+      "gitBlobOid": "875e716937ab34a55cd93726d0c28c54428fe495",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/nist_nial.html",
+      "gitObjectType": "blob",
+      "gitBlobOid": "159252fe1edcce81ad7b62411a3ea780bf525b70",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/nist_search.html",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d88375a3b4a1a37bbcbd403aa208eb38c492fc7d",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/nist_ti.html",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f07e0f0e7b2b395e573a7cb926b98c2990e916f1",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_al_energy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e3fbc039d312c822ed8817391ed5ef4045780512",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_eam_energy_ref.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a3ea81c3ed951c8c75564a1dd94b00cf39810c04",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_test.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1a44eec29d52307213d0143dc732310179640633",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_ti_energy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "63266623a6fbdc441a3eece50b417e747671ee26",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_elastic.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d2d382eede7135c5c0140a394ea259b4141feee7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_energy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bd1324a57ba116114554533c177e3bda4dcea4c9",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_fault.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ac4c5a0d9e62ba5b8096f4ab29a5a324b5b70c57",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_fault_eval.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1e7467b748e1c31e4570d243f0db82bc646b0514",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_fault_oriented.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "64beba6e5c9140b0e327ca5bcce0d45cbc94ce23",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_tial_lattice.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "443167eba3a9c7e2927d23812db3ec35a6cce4bd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A1_Al_fcc.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "78f23464d984cb645a4f042f001e47e9142927fd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A2_Ti_hcp.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8ec4391b8c4eca5ff8e88f37269efb49e696330a",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "70b9742fd5b167876e67e416834c33a78a06e7fd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/A_lattice_constants_v2.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "68e94d38532d4ced4aea41fecde287dffcd320a7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_elastic_constants.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "55cf7c2ca16e7d331839a156b69dd272d70f9d65",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/B_lattice.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "34d777a38507efde11f989e6f6f7259d1794aedc",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C2_pure_energies.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "be1c286c16cc91148a96feded09ac43f7e082bcd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_cohesive_energy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7938623bf8f7181191ac28a21fed5d203db907bf",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/C_pure_energies.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6cd7dcd951373f4d9cc65ecdc50ef978b1ba90ed",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/D_planar_faults.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e12f8826b171c2585032744625e1bda1f550ac33",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/E_formation_energy.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dd4f176f716555647235a8275b16ce87a8bacdc3",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1b831a27cece2871a10c4de47cff139d77728362",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam2.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d007f477c2eede37bb6522d2e25915c433ed65fa",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam3.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ff31bff21695a49f88ed0211e185b60ea930bb14",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/analyze_eam_files.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b5a46ebd290e174f4245b38e06b45e723a451acd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_eam_energy.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "038ed8a38a630a52ec122f1f66a219ac68141141",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/compute_pair_potential.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ea208a285e486037b80a7029e22e3b41695648a7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/generate_structures.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ae058adeaed92f83e82af4ce3f6350f10e6e872d",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_alloy.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "71286cb6bcb107dc9d7344dee9c147c1a523c8b7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v3.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7281f72ea2f515957ef8860818e2f2bb01f1c159",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/rebuild_eam_v4.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c332c1bfc09422d5f28b8ca1a944a34b0aed68fd",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_calcs.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9a366863db1fa0d60771479b5f6416ef241e7ebb",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_scans.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f40e950d5be9b5202ac2f8bbe228f15f10635e10",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_all_tests.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "80d63d7b454cdf04e2e28fc00e6ccf095debc767",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/run_comprehensive_tests.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5054da6ab2554358263980de28a22cd647e8cbcf",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_ca.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "be821e22e5bb578347739d8a3cab74199a0b207b",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/scan_tial.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "54caba4118d75488289325d9134921bf39df7c7d",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t1_Al_fcc.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8b3308ce26a33069345b8c0e8a95d1ba4e61b67f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t2_Ti_hcp.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "baa7f8a926678b17a086cb957112ebdae4e334e0",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/t3_TiAl_lat.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5b827bcd2f5959ebb931a494fe6692a55edb5e8f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test1_al_fcc.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "37aff64eed200441bbde2fa15e79d8391deab204",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test2_ti_hcp.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b0d782f2c626bf4e41935bf832f5e80b021af5dc",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test3_tial.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3ad05213b7f4ac49e01723f1e1468e4729dd89a5",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test4_ti_relax.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2eaf5c628483e327aef978c420e9659978a01487",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_al_fcc.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "86d4bc3a2883a2d2e6dc85e895ecf6a495f89719",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_fixed.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "16859427fc021d56c5847782b16d719e2a7eb697",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "da0ba91f399a07da18734bbfa099e719aeaa869f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice2.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ce7dcfb4185e57e1df5c3d59ed9a2c23bec4f170",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice3.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c6abc75358d4ae9a47433c8337350cab59ad8268",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_lattice4.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c1435216b92de6cae66a183524839281ea6af8ef",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2b5a78ab3b9a99301b3fe45f3e862b7af1be1f74",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ba958ab4d9d50e614de3fc177e76d92a2ca3867a",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_pair_potential.py",
+      "gitObjectType": "blob",
+      "gitBlobOid": "99b1837e880b3f93172b661d7640432e3c22b15c",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "18fff37feff48df5d2aabab6a49d97b95d55d86d",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_check.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "73b22a484872da20aa2cd39abd1356ffedeefe50",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_ti_hcp_density.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a9303e941174873ee4d331c5dbca9c790c11890f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_check.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cb3e613a43eb9da9b8fc9686e88fcf3c25d0fc9c",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_debug.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3747029ebbd8a4332923de5216676369af4c09d7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_energy_decomp.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2c63698422f4cae10d351703750114125461b66e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_explicit.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e96b4ce4ec9ae232132e3f8ac5232c1e69e541fa",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderingB.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7d37f4ec85f8539a6ecc10c2f5e959aeb36627f9",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_orderings.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "569e19ae8cb61678369ff456a04cf218aacb3b70",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_raw.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e1c13a926c9ddae2062dc55151fe8de73d5c535a",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_relaxed.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "64b34ff65b1e0e164225e1be306bd52c25fc065f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_simple.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "038e25a5d5e277a3e718c5fb7496c3d60669e9e9",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_tial_v2.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dd2184009114a72ae024ef97b2d8f50f2a0e8cb7",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/test_v3.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7d9ed2fcc79c931c84d749a2ed6d17c75bed36c6",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper1_zope-mishin-2003/verify_l10.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ba88b2052aed4918cb2bc4726e324de45dc52dee",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper2_ni_ni3al_tensile.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f08843f3e69e52dd7b00f3d206e071a6431c009f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper2_ni_tensile.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "215499795d2f1bc0a0ff90f38c5677cd2d299cbe",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/paper3_hea_melt_quench.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4dc5df9bf73c1c0bd34697ea7ce078eca1863b3f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/results/paper1_results.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f36601c87f9d936836f1598228b3fbb386ccdf7e",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/results/reproduction-report.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4bb78f8c1abb7f14a40ee27e8bd3bab505108fca",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/test_loops.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bd74a19a617e1aae68d0bd03f7993132c7a83d9f",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/test_nist.txt",
+      "gitObjectType": "blob",
+      "gitBlobOid": "066cc1927790ca127fa52f0bd7caa0f4879ce216",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/cases/paper-reproduction/test_tial_oriented.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "aa90e2061f4941412837863e2c18e42a6e480d2a",
+      "category": "knowledge/cases",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/INDEX.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "76c6eec82e983f8cceeedc6a132f347ad03436f4",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4b03714c74130e4fd493f565db4ae5c4e3e86b5e",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/confirmed-lessons.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5cde4ee1ca6702b811ac16f9ded7e6d712656f30",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/core-checks.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "549c77219070b54d3ec3d6626ec9ed9eb965799f",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/historical-lessons.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8866cb95f1a7e21a2e1ccee36722470be386a4b8",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/learning-workflow.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f52e00e22769278048e3c8490573513cd5594422",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/metal-research-insights.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ca2d0029ec4818f61937730d0a1ae95b0cd96e39",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/pending-lessons.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a257a2a31deddf5346c580fdf229068befc380a5",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/session-lessons.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5c456946436bda57a95fd408ca1035c5b4f8cec9",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/verification-rules.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e72404cd981d692314ac57710d7e87d1d1a90cad",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/memory/wf01-mg-al-model-setup.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1656e512a67b433aff35862cac39f1fee8efe41a",
+      "category": "knowledge/memory",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/NiAl_reactive_multilayer_MD_benchmarks.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ee9610620b4d2d959c633a8eeea21e9fb0bb263f",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/a-atom-model.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "872f07620ddef45ab21e9f1dd99553e4f2830081",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/al-mishin1999-eam-tensile-benchmarks.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8ae8e81d77216ea5967c4f4e4b5863e6aec44e26",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/coal-model-c183h130o20n2.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "adbf3722cb63bc967d2ffa80fadcfd859f2b3804",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/hea-optimization-strategies.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "799b2b5361ac99a0cbed04b8af2a14567a470f2e",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/lightweight-hea-systems.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "586d63547e6bc924629511a73b646e24a49ec2a8",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/mgal-oxidation-potential.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8f4175f6d879e2612a3cb57956fd93b9afef4845",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/notes/multi-material-potential-survey.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "41da65ffc0d4314cb143d3cf165d60a194a4b21d",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/topics/a-atom-model.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "eaea2830f6c8bf828834cb9b4e0c2d95214dcbcb",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/papers/topics/al-eam-tensile.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8ae1038d8f81cbf81d23a5fa00489c9a84d80582",
+      "category": "knowledge/papers",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-2026-04-03-90b07f34.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e45340bd1b07fc948dd3bcb5c0904e1e7b9c0b0a",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-03-metal-direction-paper-learning-packet-wave2-2026-04-03-38417ebe.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "69d06751357bf9f53973f0fddf3848f61c4f9fac",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave10-2026-04-05-76dc2d3b.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "55ffb5218663b2450af5550ef776553d47a18fc7",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave11-2026-04-05-f1058865.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6ecfcee50d24fcdaeb5ce73ddd70c577e42d9fc9",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave3-2026-04-03-beea57ec.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5bb8db17b3492e65d0de35b9834c99e0086d98d0",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave4-2026-04-04-27c6b033.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a172778726b16fe16f807c0386614a9899caf5a9",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave5-2026-04-04-808383fa.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e62677260bfcd39f456db6380e6cc034e4e98bf9",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave6-2026-04-04-ca3bfc45.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3789b98ef0411556bd3178a51cc658c25e117da6",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave7-2026-04-04-3ef9a957.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "77f651386aad9554ba237667d4955660165ef036",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave8-2026-04-04-61765eba.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f1798b47a725934b7fc9fb4e695328350e358475",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-04-metal-direction-paper-learning-packet-wave9-2026-04-04-e3759efc.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4ce34ac1a7fe27563ad42ebecdd8a1405b045f98",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave12-2026-04-05-becf2c16.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "73dd6004af302cbdae69100a3e7dfc9edc6b23d8",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave13-2026-04-05-14d8a483.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bfc9ec477746860620a4abb216cfe7d422ca2037",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave14-2026-04-05-2d9933bb.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "fea470beb665178d0cdfd90aa1c3bbd1337ff808",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave15-2026-04-05-ef57101f.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a30f48e68b1b7f0899a5ac25fdab7729cc55f7c5",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/2026-04-05-metal-direction-paper-learning-packet-wave16-2026-04-05-be872632.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a5f14f5e282661f47f00aca49eb30a56f0a34824",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4ee7f10f8097a42407a39fa0193c0def7db98a18",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/bun-windows-crash-note.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "580051f57043e27e51d5d48b2eb985a0b66d242d",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/lammps-agent-test-report.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a9759d5286e708c5038cd8e499be9691a8341ca7",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/lammps-cli-implementation-checklist.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7974f4adbcd8ecf9d8178b6e03b40306e22ed6ea",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/lammps-cli-test-suite.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f5f5e794af59d582cd8de701e0b11ac3a7bd8aa6",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/lammps-implementation-summary.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c16b61e7bf31ce19928f1806057fc87f4c495ba7",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/reports/legacy-knowledge-readme.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c9538a24197573f9e347e3040311626d8b10f86f",
+      "category": "knowledge/reports",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "01f95942c129eb7a297c7b9ab3bda62b1d8542d9",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/execution-workflow.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "969a5930ec2d3515b17041b70b20c56802e86344",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/failure-patterns.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "32463c8ff128d58020d66f2260a203c3af10a0f7",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/learned-rules.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "98b317197674361db1f0c1b25dad88be48b41f23",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/light-stage-handoffs.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8661cf408b865a6351daf4da17f38325f2717229",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/log-analysis-playbook.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "99f6ad1782880504f9976170ebbfb04a962a9e9e",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/mandatory-checks.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ff4b710d10255772ce19de01b1b87fc1eb2acadc",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/matplotlib-standards.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "823f80990fd87d0c14928733929af7965d152595",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/modeling-workflow.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6f43e5ff258670eb9979c52f89ec6954e164e3a8",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/ovito-rendering-standards.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b4ca9ea769ed819dbe53cd67af5c6618916f668d",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/post-processing-standards.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7f7767febc95ce161da5175c46755b19d3295b00",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/potential-selection.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "0330a8c15c9ddb1367714d7d1a0b2b6b3a735d0a",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/project-state-management.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d46450108b02c0106fc65cb56ca74dd1f5a44d31",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/review-guidelines.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a2f755edc9ea02214cfb2fa59b13164991550b8a",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/simplifications.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4823d7bb6aea50a87086d37a636b27bf1c33cb5b",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/wf00-scheme-design.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "558d4946c28e04abe586f395baa1b63b28849466",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/workflow-handoffs.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3ee972e379298efae5678380f46fed9f72a8a937",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/rules/workflow-stages.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d877f2f58b6ad15c7395707c02681cdb75320f91",
+      "category": "knowledge/rules",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b5418b2ff6b2ec6d9a55243c28331a2567a735fc",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/answers/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b0e0eaf4919d79050d78cc313ac779c6aa7ee317",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/answers/eam-alloy-multi-element.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "47377c09571d061cbabbd0237b9bda72f3869e30",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/atomsk-command-templates.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ce425ab42cb8fd01b47a5626869d19252530538d",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/input-self-check.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ed461c58587b77318fe7a2ff9e352b60d52e0604",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/input-template-families.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cb076b279b0689a2ba553c0f8ac2b51d0b0f9355",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "knowledge/templates/ovito-python-templates.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6b0e5bdc9a884e27156dfc81a228eef79f7f94bc",
+      "category": "knowledge/templates",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-atomsk-render.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f2ae472f981b5280d93ade6399f91d29d4c2ed98",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-auto-repair.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e092c7995861090c22943b26e3a46214c6e55f3f",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-cli-test.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "157bc3ff11d4956d7d692748d8c84456bcf1e7a5",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-error-summary.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "77501df687571597dbecc428ab3cf57141f53131",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-execute.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c3330b8f14eb02cabbbc37caa78d5d5aa57a8532",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-kb-deep-learn-bob.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "0bc1b314f19c2bfeeaa4246a4ecf7360ecc350f8",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-kb-eval.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bf91d0a3099da2f07001a72684caa8ccfac884a3",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-kb-ingest-atomsk-study.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "8d49896abacac85bfbf3f61d1f80aa060dc5600c",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-kb-ingest-bob-cases.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ec1428237af7e278ad8edf9a24e84bb4419faf03",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-kb-regression.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "49a5967fe44502daaaa12fb2d13d0ce4bd3845e8",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-knowledge-maintenance.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "fde79ce6e7d1179a7c4bb6f476dd9041a1fd8179",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-log-sections.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4c8e0e14ac94c04f6896f9333b6f7286ed9a245b",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-lookup-workflow-test.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9322b3414dd9e802317d36d75c5f696df8411243",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-lookup.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3ef4ec55087419c85b04c327bc8f24ea75810645",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-model-execute.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "9152add47d717d6c6b32824a0ab89a1f148f2d4c",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-model-route.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f8cdb66e7e02db0cf42e9d1272e8fd6cf219377e",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-paper-note-init.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "3515f00210a8481dd5effedb4f4422f963d25844",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-project-state-init.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c2775c66debc397f59b86a59af097c9a1fa915f2",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-repair-loop.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c88b8ac3faa807290095d3b1f76060896043d50f",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "scripts/lammps-structure-validate.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5041d190bedf46a310e2244c195633600bca2b79",
+      "category": "tool-scripts",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/INSTALL.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "58c91b1768392266eca5336c5205f65457d86de5",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "0d5f76af018476bf61ae7c3c750991c96f419aa9",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/evidence-gate.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "020de6ca9d73c5038686c506543d8ef9c64e9734",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/failure-patterns-min.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "cfc998852438c914bc40f5cc54755a2329169cb0",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/potential-selection-min.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "940c9b591fb084e249c7831e103f84737c5c78b3",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/review-guidelines.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dcb3f1a9664dccb22db89446f9ee31731cc92887",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/README.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "c92f7e1272d6957e163f08f0f16c44cba02add6d",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-fixed-velocity.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "40d0e39b08bd763b9cb8906396ab7b368d1aecc8",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/bad-reaxff-no-qeq.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1851782fa5cbc39b1bb40f0065b2bcbfcf93e8cf",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/reaxff-safe-minimal.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "b5129b1241fcf6a91303e158f75528f1fd1a806a",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/knowledge-capsule/test-cases/tensile-safe-minimal.in",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d4bfaebebf55e9156ce08ace639fa0912e94e77c",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/decisions.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "dd475d07a99b687c6786869a818fcf9b0c2dafe0",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/evidence-record.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "5bf3270b61a34cc55bf2c132386ed61ac30316f3",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/result-block.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "45237708063e156feeced96f9f1a9740f569fa45",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/review-log.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "fba8a6e32b1e0076422a609d41e443a58f8f1e39",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/review-result.example.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "bb3f24e42bfd7a7d98fe431c97fbd5b023b0ed0f",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/review-result.high-risk-pass.example.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f10b9283c0918a2e39fd949d9c6b8d0067ca996a",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/review-result.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7fad53ac683f747394b4732029b6692bea3fe02f",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/state.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "2ec209100cce03e95d07149a6c11efb025f86130",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/wf01.packet.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "65c39e24df6c6dab4258fc6723e67eab9a2bd04b",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/wf02.packet.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4bac60b00df5c6eae6e5eaa655c26772d4935f45",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/wf03a.packet.json",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e51c56a95bf90b91863c596b2be5391744b1833f",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "skills/lammps-agent-workflow/templates/work-log.md",
+      "gitObjectType": "blob",
+      "gitBlobOid": "a79fa785b0358fa4478222a6e972e9c496116d2e",
+      "category": "skills",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/commands/evidence-check.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f562c5e6221f8eb0a50f650f7162f1d223a4645f",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/commands/evidence-validate.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4a0788bc8bb182f56b63c6b502e664a1c40a2348",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/commands/skill-mine-review.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e2469d05370ddaeaa23c5c16b3d0ade6448b4c96",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/commands/skill-mine.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f4e587470ddf25a2e61a9ced283ae52b497eb4e5",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/entrypoints/lammps-cli.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "7bc5137381b0d5c882e02d1ecf47718ca9e73416",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/plugins/bundled/lammpsKbPipeline.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "63f45fd484439bcab65ebcd598702c8cbdb4c120",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/plugins/bundled/lammpsKnowledgeSearch.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "4590675dad1691a17404fbc569f43c8e337e3732",
+      "category": "entry-and-design",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/__tests__/config.test.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "70b676aaf9d1f21792fcd851f4a77cee08a0409a",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/__tests__/stagingStore.test.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "028ceb30ba8a23dc60770e6eba4b3355a2ed803e",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/config.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "91f973ea5222248350145fb75fb0b54210a68004",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/historyStore.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f751d97b2b42e30fe57bf4d76bcda94a725f42ff",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/index.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "81914ac35a64ecea396c6ed87714b0a08915dcaf",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/patternMiner.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "440335cb2c45c4c892e33a4783e37ce3a09e3bbc",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/skills/skillMine/stagingStore.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "95bcbb6f155dcb0e29344d9bc9e17b5616f770d2",
+      "category": "skill-mining",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKbPipeline/classify.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "78dd45af9183ffdf6c6b512fe1ccfd75bfb5bb91",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKbPipeline/common.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "e266397467bf1b3e1294b97b5ec44b050869fd89",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKbPipeline/mcpServer.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "91619bf3c98f50b99787f45f532079fb5fd28223",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKbPipeline/store.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "324eb5e12216840ba250977d10a3504aa334a34c",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/backupManager.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "6640a655469255bbdb01fd0df89a3e675a3a9d69",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/common.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "18d6c889df923a362934116ec360f3560cdb0fe6",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/dualSearch.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "47baa946f0a33037daa0a37a08ea25dd83588f56",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/indexer.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ba2887a7f9b6bc1ffd6f196d51a336fdd3de71f0",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/layeredIndexer.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "378e4d4532cd92ecb6c4f19bece88ac28c414653",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/layeredSearch.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "ef5e30437136476dc3b9a69c4c0f8d2d36615a37",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/mcpServer.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f2bd152a279f40b641166683124a3852f8f201b5",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/remoteCommon.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "26bc4880d2676cf0d1480c532216eb44def562cf",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/remoteIndexer.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "17ec23dfead968e6792dfcf269622bbfe7112f31",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/search.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "69c038fb78bcc330eac135933f12fb3872d61988",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/syncService.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "f49f785ae32c883dcc291449a17cb643c1932091",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/syncTypes.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "d2751a64386107ca47be3716c8776d1a7bbb3295",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/syncWatcher.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "fd206bca11363f6b38e55d14eae8ba6f6898a30c",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    },
+    {
+      "path": "src/utils/lammpsKnowledge/synthesize.ts",
+      "gitObjectType": "blob",
+      "gitBlobOid": "1b881aefd772318ac79558468dfc4588822be2c3",
+      "category": "knowledge-runtime",
+      "reviewStatus": "inventory_only",
+      "migrationDisposition": "review_required"
+    }
+  ]
+}

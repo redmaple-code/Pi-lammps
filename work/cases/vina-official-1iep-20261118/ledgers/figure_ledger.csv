@@ -1,0 +1,3 @@
+﻿id,referenceObject,currentArtifact,alignedData,residualData,status
+F01,Four official output modes and documented best energy,figures/reference-comparison.png,analysis/official-output-comparison.csv,analysis/search-budget-comparison.csv,generated
+F02,Crystallographic and official top1 coordinates,figures/three-way-pose-overlay.png,analysis/pose-rmsd-matrix.csv,analysis/official-output-comparison.csv,generated

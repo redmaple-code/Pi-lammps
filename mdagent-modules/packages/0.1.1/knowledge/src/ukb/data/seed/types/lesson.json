@@ -1,0 +1,49 @@
+{
+  "type_id": "lesson",
+  "label": "经验教训",
+  "description": "情境 → 风险 → 对策",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "situation": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1500
+      },
+      "risk": {
+        "kind": "text",
+        "required": true,
+        "max_len": 1500
+      },
+      "fix": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "check": {
+        "kind": "text",
+        "required": false,
+        "max_len": 1000,
+        "description": "如何确认问题已避免"
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "situation",
+      "risk",
+      "fix",
+      "check"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": true
+  }
+}

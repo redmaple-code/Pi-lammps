@@ -1,0 +1,57 @@
+{
+  "type_id": "legacy_entry",
+  "label": "旧库知识条目",
+  "description": "从 review_experience 的 boundary/lesson/convention/capability/completeness 以及 evidence_v3 知识发布迁移；原始记录在 raw_json 中。",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "statement": {
+        "kind": "text",
+        "required": true,
+        "max_len": 4000
+      },
+      "kind": {
+        "kind": "text",
+        "max_len": 120
+      },
+      "severity": {
+        "kind": "enum",
+        "values": [
+          "hard",
+          "soft",
+          "info"
+        ]
+      },
+      "rationale": {
+        "kind": "text",
+        "max_len": 4000
+      },
+      "remediation": {
+        "kind": "list",
+        "item": "text"
+      },
+      "raw_json": {
+        "kind": "text",
+        "required": true,
+        "max_len": 20000
+      }
+    },
+    "render": [
+      "statement",
+      "kind",
+      "severity",
+      "rationale",
+      "remediation",
+      "raw_json"
+    ],
+    "required_facets": [
+      "topic"
+    ],
+    "review_checklist": [
+      "原始记录完整保存在 raw_json",
+      "legacy_id 与旧库一致",
+      "状态映射正确"
+    ],
+    "require_sources": false
+  }
+}

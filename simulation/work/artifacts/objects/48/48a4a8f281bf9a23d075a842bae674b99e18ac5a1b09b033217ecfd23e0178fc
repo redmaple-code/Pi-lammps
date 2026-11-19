@@ -1,0 +1,132 @@
+[
+  {
+    "id": "figure-draft-371842c1-ad1e-418e-ad8f-d6c4a6e81bc9",
+    "name": "cross-section.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-c09d3bc4-315d-4525-be8b-fe551cf9f231",
+        "digest": "sha256:10acbd20b1946e7a108b1de86e583c32c9b6beb9c531cadc192774371574b19b",
+        "byteLength": 221193,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\10\\10acbd20b1946e7a108b1de86e583c32c9b6beb9c531cadc192774371574b19b",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T06:37:35.948Z",
+        "metadata": {
+          "type": "image",
+          "name": "cross-section.png",
+          "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+          "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+          "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+          "tool": "matplotlib"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+    "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+    "inspection": {
+      "name": "cross-section.png",
+      "opened": true,
+      "checked": [
+        "Before and after panels opened with the same spatial scale",
+        "Initial center-slab atom IDs remain associated with final positions",
+        "Surface depression and local displacement are visible near final abrasive location",
+        "Displacement colorbar includes the observed maximum and bottom layer remains fixed"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-556aca72-197d-4031-9a77-941a35e5450a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T06:42:04.767Z"
+    },
+    "status": "generated"
+  },
+  {
+    "id": "figure-draft-e006e748-90ef-4c97-86ee-0636386d44e6",
+    "name": "force-temperature.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-1275fc52-d281-47d6-bed5-bcdf92170448",
+        "digest": "sha256:1c8189808927887e47857685d6e238ffde15cda7a0bc94fe4b685e12c770c173",
+        "byteLength": 144392,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\1c\\1c8189808927887e47857685d6e238ffde15cda7a0bc94fe4b685e12c770c173",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T06:37:35.966Z",
+        "metadata": {
+          "type": "image",
+          "name": "force-temperature.png",
+          "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+          "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+          "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+          "tool": "matplotlib"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+    "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+    "inspection": {
+      "name": "force-temperature.png",
+      "opened": true,
+      "checked": [
+        "Actual force and temperature curves opened",
+        "Distance axis in nm and force axis in nN match the stored analysis",
+        "Contact reactions are nonzero through the pass",
+        "Mobile temperature remains finite and rises during the pass"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-556aca72-197d-4031-9a77-941a35e5450a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T06:42:04.774Z"
+    },
+    "status": "generated"
+  },
+  {
+    "id": "figure-draft-7cc631e2-b382-4e1f-aca2-ae51ec44a140",
+    "name": "grinding-atoms-ovito.png",
+    "outputRefs": [
+      {
+        "artifactId": "artifact-f2cd77bc-e769-4ad5-b9e1-999bcea66307",
+        "digest": "sha256:4362b7f79510c579c3cb72028e1ee7232151bf2ae737c9f44dd58dff4812ab9c",
+        "byteLength": 930267,
+        "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\43\\4362b7f79510c579c3cb72028e1ee7232151bf2ae737c9f44dd58dff4812ab9c",
+        "type": "image",
+        "status": "available",
+        "createdAt": "2026-11-17T06:37:36.002Z",
+        "metadata": {
+          "type": "image",
+          "name": "grinding-atoms-ovito.png",
+          "caseId": "hea-grinding-8b2245c6-ab13-4ef0-be68-85483edce49d",
+          "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+          "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+          "tool": "OVITO"
+        },
+        "dependencies": []
+      }
+    ],
+    "runRef": "run-71c4b51a-9833-48ec-948d-66af322d9f65",
+    "analysisRef": "artifact-8d68c33e-5ec4-4540-b754-661af2157a1b",
+    "inspection": {
+      "name": "grinding-atoms-ovito.png",
+      "opened": true,
+      "checked": [
+        "Actual OVITO Tachyon image opened",
+        "Central y slab contains the substrate and final contact groove",
+        "Positive x runs left to right with z upward",
+        "Five particle types use distinct colors",
+        "Analytical spherical abrasive has no explicit atoms and is described in render metadata"
+      ],
+      "actor": {
+        "actorId": "image-inspection",
+        "actorInstanceId": "instance-556aca72-197d-4031-9a77-941a35e5450a",
+        "kind": "service"
+      },
+      "inspectedAt": "2026-11-17T06:42:04.788Z"
+    },
+    "status": "generated"
+  }
+]

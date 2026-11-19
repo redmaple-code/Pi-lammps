@@ -1,0 +1,42 @@
+{
+  "type_id": "definition",
+  "label": "术语定义",
+  "description": "术语与定义",
+  "spec": {
+    "tier": "entry",
+    "fields": {
+      "term": {
+        "kind": "text",
+        "required": true,
+        "max_len": 200
+      },
+      "definition": {
+        "kind": "text",
+        "required": true,
+        "max_len": 2000
+      },
+      "aliases": {
+        "kind": "list",
+        "item": "text",
+        "required": false
+      }
+    },
+    "required_facets": [
+      "topic"
+    ],
+    "render": [
+      "term",
+      "definition",
+      "aliases"
+    ],
+    "review_checklist": [
+      "一条只讲一件事",
+      "标题准确概括内容",
+      "适用条件写清，或明确说明普适",
+      "来源可回读",
+      "已读过同范围条目，无未处理的重复或矛盾",
+      "标签按标签说明归类"
+    ],
+    "require_sources": false
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "validatedAt": "2026-11-17T15:40:51.579950+00:00",
+  "checks": [
+    {
+      "check": "originalCaseArtifacts",
+      "verdict": "passed",
+      "count": 94
+    },
+    {
+      "check": "originalCrystalAndSolverInput",
+      "verdict": "passed",
+      "ligandHeavyAtoms": 37,
+      "proteinHeavyAtoms": 2229
+    },
+    {
+      "check": "nativeOutputAndRMSD",
+      "verdict": "passed",
+      "runs": 3
+    },
+    {
+      "check": "thirdPartyPoseChecks",
+      "verdict": "passed",
+      "top1Passes": 3,
+      "allPoseFullPasses": 5,
+      "poseCount": 20,
+      "checksPerPose": 28
+    },
+    {
+      "check": "seedConsistency",
+      "verdict": "passed"
+    },
+    {
+      "check": "newWheelIntegrity",
+      "verdict": "passed",
+      "wheels": 3
+    },
+    {
+      "check": "validationEnvironment",
+      "verdict": "passed",
+      "PoseBusters": "0.6.5",
+      "installedLicense": "MIT"
+    },
+    {
+      "check": "reviewLinks",
+      "verdict": "passed",
+      "count": 11
+    }
+  ],
+  "figures": [
+    {
+      "path": "validation-overview.png",
+      "digest": "sha256:f911bb004838570cb2d362efddae5caad7cb4144f2e27b11856bd9ea0f1de2ad",
+      "inspection": "Opened through view_image; counts, axes, labels and data checked."
+    },
+    {
+      "path": "per-atom-differences.png",
+      "digest": "sha256:1432702b4136e9657887ea99e7ddf049775dc57c28d96c7498c8a87b6531d84f",
+      "inspection": "Opened through view_image; counts, axes, labels and data checked."
+    }
+  ],
+  "artifactManifest": [
+    {
+      "path": "1iep-entry.json",
+      "digest": "sha256:09499268eccba586c0443425240eccc171748fd24bc964c448e792c2ad96e4c2"
+    },
+    {
+      "path": "1iep.cif",
+      "digest": "sha256:0929a6fae4aa67875ed0c8d06b650f0a4ec7bb104011abfc7c8ee402c672ca27"
+    },
+    {
+      "path": "cross-check.log",
+      "digest": "sha256:00ff7287c562e3810632f7c06f0bb1fb4c4a44505a37100c476a248fac5d919a"
+    },
+    {
+      "path": "cross-checks.json",
+      "digest": "sha256:3e9ea7c4eaae429ba2e19dc9b5ceda2f5a5092182a3835af7259d3718dd659a7"
+    },
+    {
+      "path": "install.log",
+      "digest": "sha256:432abf711d30ad2e08305c70c352913bcdaf1851547bfb7c9c4bf2e2a6980a57"
+    },
+    {
+      "path": "licenses/licenses/LICENSE",
+      "digest": "sha256:90bc701d0de82dc12c78cfde9f7d4c5d66e2dbc21604d95b67c5ad4e368a4149"
+    },
+    {
+      "path": "per-atom-differences.png",
+      "digest": "sha256:1432702b4136e9657887ea99e7ddf049775dc57c28d96c7498c8a87b6531d84f"
+    },
+    {
+      "path": "pip-check.txt",
+      "digest": "sha256:672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    {
+      "path": "pip-install-report.json",
+      "digest": "sha256:9a08b9da33feb17bd33366f6298a3c623609ef1092c3e9225a697f2cb19c7ff0"
+    },
+    {
+      "path": "posebusters-all-poses.csv",
+      "digest": "sha256:1db3d588f746bcdb1cbfac69c9fbe7182d2fe3ee92fdd4e135c459b2716d8b76"
+    },
+    {
+      "path": "posebusters-config.json",
+      "digest": "sha256:42b7707fefca3591ed98518ba1bd2883fe503b1cfdbf6f93385bc7cba0e533e8"
+    },
+    {
+      "path": "posebusters-reference.csv",
+      "digest": "sha256:dbd7c1f84879ccaf17601c6a456a8c1e606061f67cc8394aa8b257a62d1121fc"
+    },
+    {
+      "path": "posebusters-run.log",
+      "digest": "sha256:bf97295837db640d71a31561b618382d04d4168aef7693b9611842bac02d6c5a"
+    },
+    {
+      "path": "posebusters-summary.json",
+      "digest": "sha256:76bfe36bcb83a8509978ba2bfadc7db448bd1fc0a8b04fea722eee69f581e9e5"
+    },
+    {
+      "path": "README.md",
+      "digest": "sha256:b6c3ed2c255ac5c122da6067ce0f63b2d6365a963a4c978d6c402c860e95989b"
+    },
+    {
+      "path": "requirements.lock.txt",
+      "digest": "sha256:9ee7674cf6c1d3d64b11d11093673a90aaac42133ac4c1e69d324a6ea2d33b61"
+    },
+    {
+      "path": "top1-seed-104729.sdf",
+      "digest": "sha256:ac2ad8059fad5ffa563e6278208c68e7b6ec941344ce59282d1a6e362a46e2e7"
+    },
+    {
+      "path": "top1-seed-130363.sdf",
+      "digest": "sha256:e9c89b3f89bc5d7d2f668787189cfee3f07c7fce9768456bccb075c1bcddcf2a"
+    },
+    {
+      "path": "top1-seed-155921.sdf",
+      "digest": "sha256:28766ee2748acefac7a1e0d9d4af18406a3b0db7b7e96ab4c8afca527a022e8d"
+    },
+    {
+      "path": "validation-overview.png",
+      "digest": "sha256:f911bb004838570cb2d362efddae5caad7cb4144f2e27b11856bd9ea0f1de2ad"
+    },
+    {
+      "path": "wheel-integrity.json",
+      "digest": "sha256:dcdb9bd7960c55397990ab77ab09f0628cf8dfa7f8e57054dd892922704a241a"
+    }
+  ],
+  "verdict": "passedForRecordedReviewScope",
+  "reviewerType": "Current assistant plus recorded calculations and third-party checks.",
+  "independentHumanReview": "notPerformed",
+  "scientificConclusion": "Three top-ranked poses pass original recovery and supplementary plausibility checks in this single system.",
+  "limitations": [
+    "Single known ligand/receptor and fixed chemical state.",
+    "Absent waters/cofactors yield vacuous passes for their related checks.",
+    "Activity and affinity prediction require corresponding experimental validation."
+  ]
+}

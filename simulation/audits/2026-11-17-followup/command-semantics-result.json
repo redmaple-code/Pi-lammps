@@ -1,0 +1,80 @@
+{
+  "solverExitCode": 0,
+  "stderr": "",
+  "completion": true,
+  "printSamples": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0.001
+    ],
+    [
+      2,
+      0.002
+    ],
+    [
+      3,
+      0.003
+    ],
+    [
+      4,
+      0.004
+    ],
+    [
+      5,
+      0.005
+    ],
+    [
+      6,
+      0.006
+    ],
+    [
+      7,
+      0.007
+    ],
+    [
+      8,
+      0.008
+    ],
+    [
+      9,
+      0.009
+    ],
+    [
+      10,
+      0.01
+    ]
+  ],
+  "finalStrainRecord": [
+    10,
+    7.120712,
+    7.12,
+    0.0001
+  ],
+  "MB001": {
+    "checkId": "MB-001",
+    "applicability": true,
+    "result": "failed",
+    "observations": [
+      "line 16: variable L0 equal ${saved_length}",
+      "line 17: variable strain equal \"(lx-v_L0)/v_L0\"",
+      "line 21: fix stretch all deform 1 x erate 0.01 remap x units box",
+      "line 23: thermo_style custom step lx v_L0 v_strain"
+    ],
+    "action": "blocked"
+  },
+  "MB005": {
+    "checkId": "MB-005",
+    "applicability": true,
+    "result": "failed",
+    "observations": [
+      "line 20: fix sampled all print 1 \"${current_step} ${current_time}\" file variable-print.csv screen no title \"step time_ps\""
+    ],
+    "action": "blocked"
+  },
+  "printVariableEvaluationCorrect": true,
+  "frozenReferenceCorrect": true
+}

@@ -1,0 +1,103 @@
+{
+  "id": "failures",
+  "items": [
+    {
+      "id": "mass-units",
+      "signal": "频率或加速度异常",
+      "candidateCauses": [
+        "密度/质量缺失",
+        "单位错误",
+        "截面映射"
+      ],
+      "diagnosticEvidence": [
+        "质量/惯量",
+        "单位",
+        "映射"
+      ],
+      "returnStage": "discretize",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "rigid-motion",
+      "signal": "奇异或非预期近零模态",
+      "candidateCauses": [
+        "欠约束",
+        "断连",
+        "自由体意图未记录"
+      ],
+      "diagnosticEvidence": [
+        "约束",
+        "连通",
+        "模态"
+      ],
+      "returnStage": "configure",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "nonconvergence",
+      "signal": "隐式增量失败",
+      "candidateCauses": [
+        "初始不平衡",
+        "接触/材料",
+        "步长/载荷"
+      ],
+      "diagnosticEvidence": [
+        "失败前增量",
+        "接触",
+        "残差",
+        "载荷"
+      ],
+      "returnStage": "configure",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "modal-mismatch",
+      "signal": "模态依赖不一致",
+      "candidateCauses": [
+        "旧eig",
+        "边界/预载/材料改变",
+        "截断不足"
+      ],
+      "diagnosticEvidence": [
+        "依赖摘要",
+        "频段",
+        "模态覆盖"
+      ],
+      "returnStage": "modes",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "explicit-instability",
+      "signal": "能量/畸变异常",
+      "candidateCauses": [
+        "稳定步长",
+        "接触/材料",
+        "人工处理"
+      ],
+      "diagnosticEvidence": [
+        "步长",
+        "能量",
+        "接触",
+        "质量"
+      ],
+      "returnStage": "configure",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    },
+    {
+      "id": "aliasing",
+      "signal": "峰值或相位采样敏感",
+      "candidateCauses": [
+        "欠采样",
+        "滤波",
+        "频点过稀"
+      ],
+      "diagnosticEvidence": [
+        "采样",
+        "频谱",
+        "加密对照"
+      ],
+      "returnStage": "configure",
+      "repairPolicy": "保留原证据，新建 attempt/run，按影响重审。"
+    }
+  ]
+}

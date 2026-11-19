@@ -1,0 +1,6 @@
+(node:30988) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"event":"case","caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stateDirectory":"C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\role-workflow-20261118"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-r","status":"running"}
+{"code":"RESULT_UNKNOWN","message":"Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-r:1 unknown: Run has stopped","retryable":false,"sideEffectState":"unknown"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

@@ -1,0 +1,18 @@
+{
+  "module": "evidence",
+  "version": "0.2.0",
+  "protocol": "mdagent-stdio/1",
+  "python": "3.11+",
+  "external_install_dependencies": [],
+  "embedded_legacy_components": [
+    "evidence",
+    "gate",
+    "knowledge",
+    "shared"
+  ],
+  "modifications": [
+    "physics_gate.compute_dmin uses all atoms with stdlib O(n²), no NumPy sampling",
+    "automatic third-party PDF extraction disabled; injectable extractor remains supported"
+  ],
+  "source_version": "0.1.1"
+}

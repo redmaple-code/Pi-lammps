@@ -1,0 +1,154 @@
+{
+  "analysisRef": {
+    "artifactId": "artifact-a39f7539-3899-4d48-ab65-9c8dd5d4bea4",
+    "digest": "sha256:15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+    "byteLength": 138586,
+    "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\15\\15bc508123d4bff9b48432b7fc611cb86c65ee120a0cc13f78d75cf39510ff9a",
+    "type": "analysis",
+    "status": "available",
+    "createdAt": "2026-11-18T11:59:24.949Z",
+    "metadata": {
+      "type": "analysis",
+      "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+    },
+    "dependencies": []
+  },
+  "measured": {
+    "atomCount": 6400,
+    "sampleCount": 41,
+    "finite": true,
+    "contactSamples": 41,
+    "tipTravelAngstrom": 8,
+    "fixedMaxDisplacementAngstrom": 0,
+    "meanTangentialForceNn": 2.717130754702783,
+    "meanNormalForceNn": 43.179102755316784,
+    "peakNormalForceNn": 88.93483957870413,
+    "meanTemperatureK": 330.302263905386,
+    "maxDisplacementAngstrom": 2.658148791922678,
+    "displacedAtomsAboveOneAngstrom": 49
+  },
+  "measurementSemantics": {
+    "executedInputRef": {
+      "artifactId": "artifact-10414726-ffef-4986-8c51-e7e460d0d85f",
+      "digest": "sha256:09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+      "byteLength": 2728,
+      "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\09\\09c3ee87b9772cd068cc33405f3bcd1a6248722bc6a2854f6a5227be1f117cd5",
+      "type": "solver-input",
+      "status": "available",
+      "createdAt": "2026-11-18T07:31:39.286Z",
+      "metadata": {
+        "type": "solver-input",
+        "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869"
+      },
+      "dependencies": []
+    },
+    "commandDefinitions": [
+      "units metal",
+      "group fixed region base",
+      "group mobile subtract all fixed",
+      "group thermostat region bath",
+      "group dynamic subtract mobile thermostat",
+      "fix freeze fixed setforce 0.0 0.0 0.0",
+      "fix integrate mobile nve",
+      "fix equilibrate mobile langevin 300 300 0.1 482761 zero yes",
+      "compute Tmobile mobile temp",
+      "thermo_style custom step atoms c_Tmobile pe ke etotal",
+      "fix bath thermostat langevin 300 300 0.1 482765 zero yes",
+      "compute pe all pe/atom",
+      "compute coord all coord/atom cutoff 3.2",
+      "compute centro all centro/atom fcc",
+      "compute cna all cna/atom 3.2",
+      "variable ztip equal \"40.1450000000+(step-400)*dt*(-10.0000000000)\"",
+      "fix tool mobile indent 10 sphere 17.8000000000 17.8000000000 v_ztip 12 units box",
+      "variable tipx equal 17.8000000000",
+      "variable tipz equal v_ztip",
+      "variable tempmobile equal c_Tmobile",
+      "variable fx equal f_tool[1]",
+      "variable fy equal f_tool[2]",
+      "variable fz equal f_tool[3]",
+      "fix contact all print 20 \"$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)\" file approach.csv screen no title \"step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K\"",
+      "variable ztip delete",
+      "variable xtip equal \"17.8000000000+(step-800)*dt*10\"",
+      "variable tipx delete",
+      "variable tipx equal v_xtip",
+      "variable tipz delete",
+      "variable tipz equal 36.1450000000",
+      "fix tool mobile indent 10 sphere v_xtip 17.8000000000 36.1450000000 12 units box",
+      "fix contact all print 20 \"$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)\" file grinding.csv screen no title \"step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K\""
+    ],
+    "force": {
+      "source": "fix tool global vector: force ON the indenter, already a reaction load",
+      "normal": "mean(f_tool[3]) over forceMeanWindow; signed +z upward reaction",
+      "tangential": "mean(-f_tool[1]) over forceMeanWindow; signed resistance to +x motion, not sqrt(Fx^2+Fy^2)",
+      "peakNormal": "max(f_tool[3]) over fullPassWindow",
+      "conversionNnPerEVPerAngstrom": 1.602176634,
+      "scope": "Idealized rigid repulsive sphere reaction loads; not hardness, contact stress, or experimentally validated grinding force"
+    },
+    "fullPassWindow": {
+      "globalStepStart": 800,
+      "globalStepEnd": 1600,
+      "sampleCount": 41
+    },
+    "forceMeanWindow": {
+      "globalStepStart": 1200,
+      "globalStepEnd": 1600,
+      "passRelativeStepStart": 400,
+      "passRelativeStepEnd": 800,
+      "sampleCount": 21
+    },
+    "temperature": {
+      "source": "compute Tmobile mobile temp",
+      "selection": "all mobile atoms, including bath and dynamic groups",
+      "averaging": "fullPassWindow",
+      "targetK": 300,
+      "firstK": 339.744131013787,
+      "lastK": 325.682513076745,
+      "meanOffsetPercent": 10.100754635128673,
+      "scope": "Driven short trajectory; equilibration or steady state is not demonstrated. Actual thermostat groups/damping are listed in commandDefinitions."
+    },
+    "energy": {
+      "unit": "eV for units metal",
+      "scope": "Default fix indent energy is excluded unless fix_modify tool energy yes is present; no total-energy conservation claim"
+    },
+    "interpretationLimits": [
+      "Nominal depth is measured against the initial surface; contact-atom penetration and pile-up are not inferred from force magnitude alone."
+    ]
+  },
+  "motionAudit": {
+    "timeStepPs": 0.001,
+    "speedAngstromPerPs": 10,
+    "travelAngstrom": 8,
+    "speedMPerS": 1000,
+    "passed": true
+  },
+  "diagnostics": {
+    "errors": [],
+    "warnings": [],
+    "complete": true
+  },
+  "scientificStatus": {
+    "numerical": "insufficient",
+    "model": "insufficient",
+    "task": "cannotCompute"
+  },
+  "limitations": [
+    "Farkas-Caro idealized FCC model alloy",
+    "Repulsive spherical tool without explicit abrasive atoms or chemistry",
+    "Small cell and short MD time, single seed, no convergence or experimental grinding validation"
+  ],
+  "fullLogRef": {
+    "artifactId": "artifact-dc8b53f6-7361-4f83-aa9b-a6f19cb92fc2",
+    "digest": "sha256:0b108ce910837fefe088ae5bc57c60458c6ebbde2a8d206cbdeca85059799704",
+    "byteLength": 12113,
+    "locator": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\0b\\0b108ce910837fefe088ae5bc57c60458c6ebbde2a8d206cbdeca85059799704",
+    "type": "file",
+    "status": "available",
+    "createdAt": "2026-11-18T11:33:46.640Z",
+    "metadata": {
+      "type": "file",
+      "operationId": "lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c",
+      "name": "log.lammps"
+    },
+    "dependencies": []
+  }
+}

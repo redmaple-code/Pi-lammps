@@ -1,0 +1,52 @@
+{
+  "filename": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-b62356ad-ebaf-4ba2-a91a-05f4b265631c\\work\\figures\\grinding-atoms-ovito.png",
+  "frame": 0,
+  "size": [
+    1600,
+    800
+  ],
+  "renderer": "tachyon",
+  "cameraDirection": [
+    0,
+    1,
+    0
+  ],
+  "cameraUp": [
+    0,
+    0,
+    1
+  ],
+  "fovHalfHeight": 22.922854825,
+  "bboxMin": [
+    -0.322361,
+    12.8033,
+    0.445
+  ],
+  "bboxMax": [
+    70.2095,
+    22.5452,
+    27.5729
+  ],
+  "selectedParticles": 1870,
+  "adapter": "ovito-section/1",
+  "tool": "OVITO",
+  "version": "3.13.1",
+  "source": "final.lammpstrj",
+  "timestep": 1600,
+  "originalParticles": 6400,
+  "selection": {
+    "kind": "central-y-slab",
+    "centerAngstrom": 17.8,
+    "halfWidthAngstrom": 5
+  },
+  "coloring": "particle type",
+  "elements": {
+    "1": "Fe",
+    "2": "Ni",
+    "3": "Cr",
+    "4": "Co",
+    "5": "Cu"
+  },
+  "template": "packages/presentation/ovito_adapter.py",
+  "note": "Spherical analytical abrasive is a force field and has no particle representation in this image"
+}

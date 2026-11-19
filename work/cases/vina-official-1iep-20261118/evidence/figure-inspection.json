@@ -1,0 +1,18 @@
+{
+  "inspectedAt": "2026-11-18T08:21:37.288717+00:00",
+  "method": "Assistant directly viewed the generated PNG files with view_image; this is an actual visual inspection, not an automated inference.",
+  "figures": [
+    {
+      "path": "figures/reference-comparison.png",
+      "digest": "sha256:c26a703e911eb1a64680e92246c79297aaca367fe812018fb70fa4626269844e",
+      "visuallyInspected": true,
+      "observation": "Observed three budget values, score reference line, two RMSD series and the one-to-one matrix. The failed 12.63 A pairing is visible in white; labels and title fit."
+    },
+    {
+      "path": "figures/three-way-pose-overlay.png",
+      "digest": "sha256:de085913bdb5824612a6e55e091f9a6b757a7b13eda1e7b6efd3e669d44260d1",
+      "visuallyInspected": true,
+      "observation": "Observed crystal, official and current structures in the unchanged receptor frame. Official/current overlap closely, crystal differs at the flexible end. Equal coordinate scaling and legend are visible."
+    }
+  ]
+}

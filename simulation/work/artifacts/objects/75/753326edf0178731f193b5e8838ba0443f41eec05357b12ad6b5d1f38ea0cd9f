@@ -1,0 +1,6 @@
+{
+  "failedStage": "wf-03a",
+  "code": "ROLE_FAILED",
+  "message": "Role operation producer-revision-ac3f2dc8-de0c-417f-a336-f96503ac565a:wf-03a:1 failed: ",
+  "failureRef": "failure-f8bacf92-1566-416c-bce2-5e4856bbef55"
+}

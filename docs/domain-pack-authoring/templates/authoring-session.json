@@ -1,0 +1,30 @@
+{
+  "schemaVersion": "1.0.0",
+  "mode": "authoring",
+  "storageSelection": "deferred",
+  "session": {
+    "id": "new-authoring-session",
+    "revision": 1,
+    "objective": "待用户说明目标岗位、任务、判断与交付。",
+    "targetPackId": "unassigned",
+    "scope": [],
+    "scopeState": "proposed",
+    "status": "active",
+    "adoptionPolicy": {
+      "semanticChangesRequireUserDecision": true,
+      "mechanicalActionsWithinAuthorization": true,
+      "batchDecisionsAllowed": true
+    },
+    "lastQuestionRefs": [],
+    "decisionRefs": [],
+    "readiness": {
+      "design": "unassessed",
+      "knowledge": "unassessed",
+      "integration": "unassessed",
+      "validation": "unassessed"
+    }
+  },
+  "records": [],
+  "relations": [],
+  "externalRefs": []
+}

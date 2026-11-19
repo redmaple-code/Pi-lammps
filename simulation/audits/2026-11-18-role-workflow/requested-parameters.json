@@ -1,0 +1,28 @@
+{
+  "alloy": "FeNiCrCoCu",
+  "composition": [
+    0.2,
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "latticeAngstrom": 3.56,
+  "cells": [
+    20,
+    10,
+    8
+  ],
+  "temperatureK": 300,
+  "seed": 482748,
+  "timeStepPs": 0.001,
+  "equilibrationSteps": 400,
+  "approachSteps": 400,
+  "grindingSteps": 800,
+  "radiusAngstrom": 12,
+  "depthAngstrom": 3,
+  "speedAngstromPerPs": 10,
+  "stiffnessEVPerAngstromCubed": 10,
+  "dumpEvery": 100,
+  "forceEvery": 20
+}

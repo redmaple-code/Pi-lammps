@@ -1,0 +1,29 @@
+{
+  "mode": "tabletop",
+  "dataOrigin": "synthetic-tabletop",
+  "lockedBeforeRanking": true,
+  "labelReleaseRule": "先冻结analysis/ranking-blinded.csv，再关联实验标签。",
+  "scoreRule": "每状态每种子的有效姿态最低分；母体取全部状态/种子有效姿态中的最低分。",
+  "biasDisclosure": "多状态母体拥有更多搜索机会，必须报告状态数并做单状态敏感性对照。",
+  "poseRule": "构造的严重空间冲突标记为invalid，保留原记录和剔除理由。",
+  "ties": "保留同分，指标ROC按半胜处理，AP在唯一分数阈值上整体处理并列。",
+  "screening": {
+    "cutoffParents": 5,
+    "efDenominator": "20个输入母体，4个演练活性",
+    "primaryPRDefinition": "averagePrecision = sum(deltaRecall * precisionAtThreshold)",
+    "failedParentPolicy": "母体全失败单列；二分类指标报告可评价集合及输入全集敏感性。"
+  },
+  "bootstrap": {
+    "method": "分层母体重采样，固定4阳性/16阴性，重复1000次",
+    "seed": 20261117,
+    "interval": "百分位2.5%/97.5%，只描述此构造数据的重采样波动。"
+  },
+  "illustrativeCriteria": {
+    "redocking": "top1 RMSD<=2Å的种子至少4/5",
+    "EF25": ">=2",
+    "ROC_AUC": ">=0.7且区间跨阈值记borderline",
+    "top5Hits": ">=3",
+    "coverage": "最终逻辑任务120/120可评价"
+  },
+  "actualScientificThresholdStatus": "演练假设"
+}

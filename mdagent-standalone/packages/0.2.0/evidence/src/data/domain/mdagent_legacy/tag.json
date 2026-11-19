@@ -1,0 +1,4 @@
+[
+  {"facet": "topic", "slug": "legacy", "label": "旧库迁移", "description": "从 MDagent 旧知识库（atoms / review_experience）迁移或经其发布链写入的条目。新知识不要用这个标签。", "aliases": ["旧库", "migrated", "legacy"]},
+  {"facet": "topic", "slug": "evidence", "label": "证据知识", "description": "任务证据与可复用核查知识；审核不替代事实验证或执行许可。", "aliases": ["证据", "核查知识"]}
+]

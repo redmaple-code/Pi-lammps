@@ -1,0 +1,41 @@
+{
+  "stageId": "wf-04",
+  "caseId": "hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869",
+  "decision": "proceed",
+  "summary": "Analyzed run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c (exit 0, real execution, 1:55 wall, loop time 61.6614 s for 800 steps, 6400 atoms). Full-log diagnostic scan found the REDMAPLE_GRINDING_COMPLETE marker and no ERROR/WARNING lines; atom count is unchanged at 6400 initial and final, so no atom loss or blow-up occurred. Over the frozen grinding window (steps 800-1600, force averaging in the second half of the pass) with tip travel 8 Angstrom, 41 contact samples were recorded. Measured quantities preserve actual signs and units: meanNormalForceNn = 43.179 nN, peakNormalForceNn = 88.935 nN, meanTangentialForceNn = 2.717 nN, meanTemperatureK = 330.302 K (target 300 K, i.e. +30.3 K / +10.1 percent thermal offset), maxDisplacementAngstrom = 2.658 A, displacedAtomsAboveOneAngstrom = 49 of 6400 (0.77 percent). Tangential/normal ratio is 0.063, i.e. low friction, consistent with a purely repulsive spherical tool. Thermo tail shows stable potential energy (-25839.4 to -25835.5 kcal/mol from step 1500 to 1600) and temperature drift down toward 325.68 K, so the system is not heating monotonically. Hard check HOST-wf-04 passed (full log scanned; motion/time-step/speed reconstructed independently from actual samples). Reported criteria verdicts inspected are 'met': finite outputs, retained atoms, fixed max displacement, contact-sample presence. No quantitative convergence or experimental grinding reference exists in this case, so force magnitudes remain unvalidated against external benchmarks; this is an exploratory result, not a validated prediction.",
+  "limitations": [
+    "No quantitative experimental or literature grinding-force reference is available in this case; the three frozen protocol comparisons (time-step convergence, material-model validation, grinding reference) carry missingReason, so meanNormalForceNn = 43.179 nN and peakNormalForceNn = 88.935 nN are unvalidated in absolute terms.",
+    "Single seed (482748), single short run (800 grinding steps, 0.8 ps at dt = 0.001 ps); no time-step convergence study was executed, so numerical convergence of the force signal is unverified.",
+    "Farkas-Caro idealized FCC model alloy stands in for FeNiCrCoCu; the tool is a repulsive spherical indenter (stiffness 10 eV/A^3) with no explicit abrasive atoms or chemistry, so friction/tangential response (2.717 nN) is not physically representative of real abrasive contact.",
+    "Small cell (20x10x8 cells, 6400 atoms) with periodic lateral boundaries and short pass length (8 Angstrom tip travel) limits statistics: only 41 contact samples and 49 atoms displaced above 1 Angstrom.",
+    "Mean temperature 330.302 K exceeds the 300 K setpoint by 30.3 K (10.1 percent); the thermostat offset should be considered when interpreting thermal softening of the measured forces.",
+    "Direct text reads of log.lammps, grinding.csv and approach.csv were blocked by the text-artifact scope; all figures above come from the trusted stage adapter's parsed analysis (artifact-057c10a3) and the run record (artifact-863fd6a3), not from my own independent re-parsing of the raw files."
+  ],
+  "evidence": {
+    "runRef": "run-c88d07d4-e318-40d1-a0cb-5a71a1c7b12c",
+    "runRecordRef": "artifact-863fd6a3-bd6a-4229-aea7-2c877a747f1c",
+    "analysisRef": "artifact-057c10a3-6e2b-4562-b9b4-352e0362f576",
+    "hardChecks": [
+      {"checkId": "HOST-wf-04", "result": "passed", "observations": ["Full log scanned for ERROR/WARNING, completion marker and finite measurements checked", "Motion/time-step/speed independently reconstructed from actual samples"]}
+    ],
+    "measuredQuantities": {
+      "atomCount": {"value": 6400, "unit": "atoms"},
+      "initialAtomCount": {"value": 6400, "unit": "atoms"},
+      "sampleCount": {"value": 41, "unit": "samples"},
+      "contactSamples": {"value": 41, "unit": "samples"},
+      "tipTravelAngstrom": {"value": 8, "unit": "A"},
+      "meanNormalForceNn": {"value": 43.179102755316784, "unit": "nN"},
+      "peakNormalForceNn": {"value": 88.93483957870413, "unit": "nN"},
+      "meanTangentialForceNn": {"value": 2.717130754702783, "unit": "nN"},
+      "meanTemperatureK": {"value": 330.302263905386, "unit": "K"},
+      "maxDisplacementAngstrom": {"value": 2.658148791922678, "unit": "A"},
+      "displacedAtomsAboveOneAngstrom": {"value": 49, "unit": "atoms"},
+      "loopTimeSeconds": {"value": 61.6614, "unit": "s"},
+      "windowStepStart": {"value": 800, "unit": "step"},
+      "windowStepEnd": {"value": 1600, "unit": "step"}
+    },
+    "method": "grinding-force-temperature-displacement/1"
+  },
+  "analyst": "lammps-data-analyst",
+  "confidence": "medium"
+}

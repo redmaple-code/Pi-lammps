@@ -1,0 +1,22 @@
+{
+  "sourceId": "command-semantics",
+  "digest": "sha256:a07b9025b21020025ca75b7c3bcaff57c20f956e468b06ebca393e8c9485f0ef",
+  "speedMPerS": 10,
+  "fixPrintVariablesValid": true,
+  "engineeringStrainValid": false,
+  "eamCanSetMasses": false,
+  "reasons": {
+    "speedMPerS": "In units metal, dt equals the value set by timestep in picoseconds (0.001 ps). The tip position term (step-4000)*dt*10 therefore advances 0.001*10 = 0.01 Angstrom per step, i.e. 10 Angstrom/ns = 1 nm/ns = 10 m/s. (Equivalently 0.01 A/step / 1e-3 ps.) Careful: if the 10 were read as A/ps it would be 1000 m/s, but the dt is in ps and time is ps, so per-step advance is 0.01 A and speed is 10 m/s; note units metal lengths are Angstrom, so 0.01 A/ps x 1e-10 m/A / 1e-12 s/ps = 1000 m/s per 1 A/ps... see correction below.",
+    "speedMPerS_correction": "Corrected computation: displacement per step = 10 * dt = 10 * 0.001 ps = 0.01 (A/ps * ps) = 0.01 A. Time per step = 0.001 ps = 1e-15 s. Speed = 0.01e-10 m / 1e-15 s = 1e-12/1e-15 = 1000 m/s. The conversion 1 A/ps = 1e-10 m / 1e-12 s = 100 m/s, so 0.01 A/ps = 1 m/s. Hence displacement 0.01 A per 0.001 ps = 10 A/ps = 10 * 100 m/s = 1000 m/s. FINAL: 1000 m/s.",
+    "speedMPerS_final": 1000,
+    "fixPrintVariablesValid": "Valid. In fix print, a double-quoted format string is evaluated every N steps and supports both immediate $() substitution each invocation and ${} variable references (including equal-style variables that are re-evaluated at print time). Thus ${current_step} and ${current_time} reflect the current step/time on each output; time is only meaningful because units metal defines it. The screen no and file keywords are correct syntax.",
+    "engineeringStrainValid": "Not valid as written for correct use of current lx with a frozen L0. (a) Ordering: variable saved_length equal $(lx) is evaluated immediately at definition time, before read_data alloy.data defines the box, so lx may be undefined/zero or refer to a nonexistent box. (b) The expression \"(lx-v_L0)/v_L0\" is not a thermostable run-time recomputation of lx: in an equal-style variable the term lx is re-evaluated only when the variable is evaluated (e.g. via thermodynamic output custom keyword), and v_L0 does freeze the initial length if captured after read_data. So the intent (current lx, frozen L0) requires defining saved_length after read_data (or using a run-time accessor), otherwise engineeringStrainValid is false. Engineering strain vs true strain: (lx-L0)/L0 is engineering strain, which is acceptable if lx is current, so the failure is the ordering/freeze, not the strain formula type.",
+    "eamCanSetMasses": "False. pair_coeff of pair_style eam/alloy (and eam/setfl) reads atomic masses from the setfl file and assigns them, but LAMMPS keeps track: masses set earlier via read_data mass lines (or mass command) are overwritten only if the pair style is allowed to reset them; in standard LAMMPS, eam/alloy sets masses from the file and a prior read_data mass table is overridden silently for the listed elements -- however when a data file has already defined masses, LAMMPS issues no error and the EAM masses replace them. In practice the masses used in the simulation are those in the EAM setfl file, not the earlier read_data values, so 'an EAM setfl load masses that differ from an earlier read_data mass table' does take effect (EAM masses win). NOTE: This is the contested point; verify. In LAMMPS documentation for pair_style eam: 'the pair style sets the masses of the atoms from the file'. If a mass was previously set, LAMMPS will warn/overwrite. Since masses are reset by the pair style, the answer is true, not false."
+  },
+  "questionAnswers": {
+    "speedMPerS": 1000,
+    "fixPrintVariablesValid": true,
+    "engineeringStrainValid": false,
+    "eamCanSetMasses": true
+  }
+}

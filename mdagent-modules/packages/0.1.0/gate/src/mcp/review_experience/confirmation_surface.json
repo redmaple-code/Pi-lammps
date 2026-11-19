@@ -1,0 +1,559 @@
+{
+  "pack": "confirmation_surface",
+  "schema_version": 1,
+  "consumer": "evidence",
+  "_doc": "核查面：先枚举所有需要确认的部分，再逐项取证。phase=design/build/exec/analyze 对应门禁；min_grade 是不同风险下的最低证据等级；na_allowed=false 的项不得以 N/A 跳过。",
+  "entries": [
+    {
+      "id": "sys-composition",
+      "domain": "体系与模型",
+      "phase": "design",
+      "question": "体系的元素/组分与化学计量比是什么？依据是什么？",
+      "why": "组分错误会让整个模拟失去意义",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "sys-structure",
+      "domain": "体系与模型",
+      "phase": "design",
+      "question": "初始结构（晶格/分子构型/表面）是什么？依据是什么？",
+      "why": "初始结构决定平衡态与缺陷密度",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "sys-potential",
+      "domain": "体系与模型",
+      "phase": "design",
+      "question": "使用哪个力场/势函数与参数集？为什么适用于该体系？",
+      "why": "势函数决定所有物理量，选错等于算错",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "sys-charge",
+      "domain": "体系与模型",
+      "phase": "design",
+      "question": "电荷/氧化态如何设定？电荷是否平衡？",
+      "why": "电荷错误会引入非物理的静电力",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "bnd-pbc",
+      "domain": "边界与尺寸",
+      "phase": "design",
+      "question": "边界条件是什么（p p p / 非周期 / 混合）？为什么？",
+      "why": "边界条件决定能否模拟体相/表面/有限体系",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "bnd-box",
+      "domain": "边界与尺寸",
+      "phase": "design",
+      "question": "盒子尺寸/真空层厚度是多少？是否足够？",
+      "why": "盒子过小会引入周期像相互作用",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "estimate"
+      ],
+      "answer_kind": "numeric"
+    },
+    {
+      "id": "bnd-atoms",
+      "domain": "边界与尺寸",
+      "phase": "design",
+      "question": "原子数/体系规模是多少？有限尺寸效应如何控制？",
+      "why": "规模过小统计意义不足，规模过大浪费算力",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "estimate"
+      ],
+      "answer_kind": "numeric"
+    },
+    {
+      "id": "ens-ensemble",
+      "domain": "系综与控温控压",
+      "phase": "design",
+      "question": "使用什么系综（NVE/NVT/NPT）？与实验条件如何对应？",
+      "why": "系综选错会得到不同系综下的物理量",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "user"
+      ],
+      "answer_kind": "text",
+      "na_reason_pattern": "静态|最小化|无系综|minimize"
+    },
+    {
+      "id": "ens-thermostat",
+      "domain": "系综与控温控压",
+      "phase": "design",
+      "question": "控温方法与 damping 参数是什么？为什么？",
+      "why": "控温过强/过弱会扭曲动力学与涨落",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "case"
+      ],
+      "answer_kind": "text",
+      "na_reason_pattern": "静态|最小化|无控温|minimize"
+    },
+    {
+      "id": "ens-barostat",
+      "domain": "系综与控温控压",
+      "phase": "design",
+      "question": "控压方法与耦合方向是什么？与变形/加载是否冲突？",
+      "why": "恒压耦合错误会把变形抵消（如 NPT iso + deform）",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "int-timestep",
+      "domain": "积分",
+      "phase": "design",
+      "question": "时间步长是多少？换算成约化步长 dt* 是否在稳定区？",
+      "why": "步长过大会数值失稳，过小浪费算力",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "anchor",
+        "estimate"
+      ],
+      "answer_kind": "numeric",
+      "na_reason_pattern": "静态|最小化|无时间步长|minimize"
+    },
+    {
+      "id": "int-integrator",
+      "domain": "积分",
+      "phase": "design",
+      "question": "积分器/约束/刚体设置是什么？",
+      "why": "约束与积分器影响守恒量与自由度",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "int-cutoff",
+      "domain": "相互作用",
+      "phase": "design",
+      "question": "截断半径/邻接表/尾部修正如何设置？",
+      "why": "截断过小会丢失长程作用，导致能量与结构偏差",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case"
+      ],
+      "answer_kind": "numeric"
+    },
+    {
+      "id": "int-longrange",
+      "domain": "相互作用",
+      "phase": "design",
+      "question": "长程静电/色散修正如何处理（PPPM/Ewald/无）？",
+      "why": "长程作用处理错误会让带电体系严重失真",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "mech-loading",
+      "domain": "力学/工艺加载",
+      "phase": "design",
+      "question": "加载方式/方向/应变率/载荷是什么？为什么？",
+      "why": "加载方式决定应力状态与变形机制",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "mech-control",
+      "domain": "力学/工艺加载",
+      "phase": "design",
+      "question": "加载过程中控温/控压如何耦合？是否会把变形抵消？",
+      "why": "恒压与变形同向耦合会让样品拉不动/拉不断",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "acc-reference",
+      "domain": "验收与对照",
+      "phase": "design",
+      "question": "对照来源是什么（文献/实验/oracle/解析解）？",
+      "why": "没有对照就无法判断结果对错",
+      "min_grade": {
+        "low": "B",
+        "medium": "B",
+        "high": "B"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "oracle"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "acc-tolerance",
+      "domain": "验收与对照",
+      "phase": "design",
+      "question": "验收容差与单位换算是什么？",
+      "why": "容差过松会放过错误，单位错误会差几个数量级",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "estimate"
+      ],
+      "answer_kind": "numeric"
+    },
+    {
+      "id": "acc-criteria",
+      "domain": "验收与对照",
+      "phase": "design",
+      "question": "验收标准是否逐条可量化？",
+      "why": "不可量化的验收等于没有验收",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "user"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "ini-lattice",
+      "domain": "初始条件",
+      "phase": "build",
+      "question": "初始晶格常数/密度是多少？来源是什么？",
+      "why": "初始值离平衡态太远会引入虚假应力",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "case",
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "ini-velocity",
+      "domain": "初始条件",
+      "phase": "build",
+      "question": "初始速度分布/温度/随机种子是什么？",
+      "why": "初始速度影响早期弛豫与可复现性",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "measured"
+      ],
+      "answer_kind": "text",
+      "na_reason_pattern": "静态|最小化|无初速|minimize"
+    },
+    {
+      "id": "eq-minimize",
+      "domain": "平衡与生产",
+      "phase": "build",
+      "question": "是否先做能量最小化？收敛判据是什么？",
+      "why": "未最小化会残留初始应力",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "eq-prebalance",
+      "domain": "平衡与生产",
+      "phase": "build",
+      "question": "预平衡段（NVT/NPT）多长？是否达到平衡？",
+      "why": "未平衡的统计量没有意义",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": true,
+      "suggested_sources": [
+        "paper",
+        "measured"
+      ],
+      "answer_kind": "text",
+      "na_reason_pattern": "静态|最小化|无预平衡|minimize"
+    },
+    {
+      "id": "eq-production",
+      "domain": "平衡与生产",
+      "phase": "build",
+      "question": "生产段长度/步数是多少？是否足够采样？",
+      "why": "生产段太短会导致统计误差过大",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "estimate"
+      ],
+      "answer_kind": "numeric"
+    },
+    {
+      "id": "rep-seed",
+      "domain": "可复现性",
+      "phase": "build",
+      "question": "随机种子/软件版本/输入文件是否固定并留档？",
+      "why": "不可复现的结果无法复核",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "rep-inputs",
+      "domain": "可复现性",
+      "phase": "exec",
+      "question": "执行时的输入文件/命令/日志是否全部留档？",
+      "why": "无法回溯执行就无法复核证据",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "measured",
+        "ledger"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "fail-lost-atoms",
+      "domain": "失效模式",
+      "phase": "exec",
+      "question": "是否监控原子丢失/能量漂移/异常退出？",
+      "why": "数值失稳早期不发现会污染整段结果",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "fail-temp",
+      "domain": "失效模式",
+      "phase": "exec",
+      "question": "是否监控温度/压力异常（爆炸/漂移）？",
+      "why": "温压失控意味着模拟已失去物理意义",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "obs-observable",
+      "domain": "观测量与统计",
+      "phase": "analyze",
+      "question": "观测量如何定义与输出（RDF/MSD/应力/能量）？",
+      "why": "观测量定义错误会导致结论错误",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "measured"
+      ],
+      "answer_kind": "text"
+    },
+    {
+      "id": "obs-statistics",
+      "domain": "观测量与统计",
+      "phase": "analyze",
+      "question": "采样频率/统计误差/自相关是否评估？",
+      "why": "没有误差棒的结论不可靠",
+      "min_grade": {
+        "low": "C",
+        "medium": "C",
+        "high": "C"
+      },
+      "na_allowed": false,
+      "suggested_sources": [
+        "paper",
+        "measured"
+      ],
+      "answer_kind": "text"
+    }
+  ]
+}

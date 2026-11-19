@@ -1,0 +1,79 @@
+{
+  "mode": "tabletop",
+  "events": [
+    {
+      "sequence": 1,
+      "stageId": "plan",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/01-plan.json"
+    },
+    {
+      "sequence": 2,
+      "stageId": "receptor",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/02-receptor.json"
+    },
+    {
+      "sequence": 3,
+      "stageId": "ligands",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/03-ligands.json"
+    },
+    {
+      "sequence": 4,
+      "stageId": "configure",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/04-configure.json"
+    },
+    {
+      "sequence": 5,
+      "stageId": "qualify",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/05-qualify.json"
+    },
+    {
+      "sequence": 6,
+      "stageId": "dock",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/06-dock.json"
+    },
+    {
+      "sequence": 7,
+      "stageId": "poses",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/07-poses.json"
+    },
+    {
+      "sequence": 8,
+      "stageId": "analyze",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/08-analyze.json"
+    },
+    {
+      "sequence": 9,
+      "stageId": "report",
+      "mode": "tabletop",
+      "illustrativeState": "passed",
+      "actualScientificState": "notEvaluated",
+      "outputRef": "stages/09-report.json"
+    }
+  ],
+  "authority": "独立演练目录中的例示记录",
+  "actualExternalOperations": []
+}

@@ -1,0 +1,15 @@
+(node:50760) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"event":"case","caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stateDirectory":"C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\role-workflow-20261118"}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":true},"bodyBytes":9914}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":true},"bodyBytes":20921}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":true},"bodyBytes":38596}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":true},"bodyBytes":65554}
+{"event":"transportResponse","status":200}
+{"event":"transportRequest","transport":{"kind":"curl","proxyConfigured":true},"bodyBytes":20699}
+{"event":"transportFailure","code":"CURL_TRANSPORT_FAILED","message":"cURL transport exited with code 56"}
+{"code":"REVIEW_REQUIRED","message":"Reviewer unknown: Connection error.","retryable":false,"sideEffectState":"none"}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

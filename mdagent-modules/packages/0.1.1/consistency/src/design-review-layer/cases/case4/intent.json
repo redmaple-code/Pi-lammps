@@ -1,0 +1,104 @@
+{
+  "schema_version": "3.0",
+  "case_id": "case4",
+  "status": "DESIGNED",
+  "source": {
+    "kind": "external_lammps_case",
+    "path": "WSL:/home/red/lmp (copied)"
+  },
+  "objective": {
+    "simulation_goal": "TiAlV 合金磨削/滑动摩擦：金刚石球形磨头压入-划擦，测切削力、摩擦系数与表面损伤",
+    "target_property": [
+      "stress_strain_curve"
+    ]
+  },
+  "system": {
+    "molecule": "TiAlV 合金工件 + 金刚石磨头",
+    "target_elements": [
+      "Ti",
+      "Al",
+      "V",
+      "C"
+    ],
+    "size": {
+      "atoms_target": null
+    }
+  },
+  "constraints": {
+    "temperature_range": [
+      300,
+      300
+    ]
+  },
+  "ensemble_sequence": [
+    {
+      "stage": "production",
+      "ensemble": "nve",
+      "thermostat": "none",
+      "T_K": 300
+    },
+    {
+      "stage": "production",
+      "ensemble": "nvt",
+      "thermostat": "berendsen",
+      "T_K": 300
+    }
+  ],
+  "key_params": {
+    "timestep_fs": 1.0,
+    "total_steps": 235000,
+    "units": "metal",
+    "pair_style": "hybrid/overlay",
+    "forcefield": {
+      "preferred": "meam/c + eam/alloy + morse + lj/cut"
+    }
+  },
+  "experiment_design": {
+    "experiment_type": "friction_indentation"
+  },
+  "experiment_plan": {
+    "authored_by": "assistant (AI-drafted macro context; needs user confirmation)",
+    "sections": [
+      {
+        "id": "E-01",
+        "title": "实验目的与假设",
+        "text": "研究 TiAlV 合金磨削/滑动摩擦过程中的切削力、摩擦系数与表面损伤机制；假设磨头为刚性金刚石、工件无初始裂纹。"
+      },
+      {
+        "id": "E-02",
+        "title": "对象与材料",
+        "text": "TiAlV 合金工件（Ti/Al/V）+ 金刚石球形磨头；实验为 µm 级磨粒/压头，工件表面抛光。"
+      },
+      {
+        "id": "E-03",
+        "title": "装置与几何",
+        "text": "磨削台/摩擦磨损试验机；球形磨头（模型 R=40 Å，宏观对应 µm 级磨粒），工件尺寸 mm 级。"
+      },
+      {
+        "id": "E-04",
+        "title": "加载与条件",
+        "text": "先压入（模型 2.5 Å，宏观 µm 级）再以恒定速度滑动（模型 1 Å/ps = 100 m/s，宏观对应高速磨削），300 K。"
+      },
+      {
+        "id": "E-05",
+        "title": "测量与判据",
+        "text": "三向切削力、摩擦系数、磨屑形貌与表面粗糙度；以力平台与形貌损伤评定。"
+      },
+      {
+        "id": "E-06",
+        "title": "来源与备注",
+        "text": "宏观实验描述由助手依据 in 文件（TiAlV 磨削/in.friction）反推补写，待用户确认。"
+      }
+    ]
+  },
+  "cross_scale": {
+    "loading": {
+      "macro": "磨削速度约 1–10 m/s（宏观）",
+      "micro": "ball velocity 1 Å/ps = 100 m/s",
+      "gap": "10–100×（速度差）",
+      "verdict": "q",
+      "rationale": "磨削接触区宏观应变率可达 1e6–1e8 s⁻¹，MD 采用 100 m/s 与宏观磨削速度差 10–100×。论证需用无量纲数（惯性力/表面力、Peclet 数）与磨屑形成机制说明：① 接触区以塑性剪切/断裂为主，惯性效应在 100 m/s 下仍可由无量纲分析界定；② 磨屑形貌与力趋势可比，绝对切削力/温度需修正；③ 需 E2 文献与 E4 磨削案例佐证。当前缺失 → 存疑。",
+      "status": "未论证（需 E2/E4 + 无量纲分析）→ 存疑"
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "mode": "tabletop",
+  "authoredBy": "single-assistant",
+  "initialConfigureReview": {
+    "stageId": "configure",
+    "checkRef": "source-pack/checks.json#box-protocol",
+    "demoVerdict": "BLOCKED",
+    "finding": "site.unit缺失，unknown不可视为false",
+    "subjectRef": "plan/task.attempt01.json",
+    "resolutionRef": "plan/task.json"
+  },
+  "receipts": [
+    {
+      "stageId": "plan",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-plan-producer",
+      "illustrativeReviewer": "DEMO-plan-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#scope-inputs"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/01-plan.json",
+      "subjectDigest": "sha256:363a047466e0aeea1ff50ddaa346ab39e4c3410a76fb50d56593fb2cd8020aff",
+      "subjectClosure": [
+        {
+          "locator": "plan/task.json",
+          "digest": "sha256:076bfed4108bafb751dd325ba6b25383d012b28e7f8bbfcefde6503a22cfaadf"
+        },
+        {
+          "locator": "plan/analysis-plan.json",
+          "digest": "sha256:f5c306cf85fb25b426dff3e0ea4461c4a72f0f7c192445a8de13502d665ad5e4"
+        },
+        {
+          "locator": "inputs/experiment-plan.json",
+          "digest": "sha256:c7e306a106bf8e40068ca1f3304ee762d590ea4be5462cb3bd19646b3a7f5aae"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    },
+    {
+      "stageId": "receptor",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-receptor-producer",
+      "illustrativeReviewer": "DEMO-receptor-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#receptor-quality"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/02-receptor.json",
+      "subjectDigest": "sha256:3a3e0aae84d8cd3cf38d436a2a51eb60af1481ac7a393d5f7ed1afd06bca7557",
+      "subjectClosure": [
+        {
+          "locator": "preparation/virtual-receptor.json",
+          "digest": "sha256:b10f6a7f57f4ae3cc4b1e14365326e2d4317aecad2e7ec154358c6a04c1d0e9a"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    },
+    {
+      "stageId": "ligands",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-ligands-producer",
+      "illustrativeReviewer": "DEMO-ligands-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#ligand-identity"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/03-ligands.json",
+      "subjectDigest": "sha256:0bad5414b2b55b173c01acb6289244ee887d6f97a57cc8e454c241c31085df46",
+      "subjectClosure": [
+        {
+          "locator": "preparation/virtual-ligand-states.csv",
+          "digest": "sha256:6fe43416e1dea4973787f64a3506b68d47cc5315b0fd2159b7d8e7b5720c760a"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    },
+    {
+      "stageId": "configure",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-configure-producer",
+      "illustrativeReviewer": "DEMO-configure-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#box-protocol"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/04-configure.json",
+      "subjectDigest": "sha256:6a210dd5f21b08254a4a4ec736d54796c4687e1242f1a95a66c8ea8e20478ec1",
+      "subjectClosure": [
+        {
+          "locator": "plan/task.json",
+          "digest": "sha256:076bfed4108bafb751dd325ba6b25383d012b28e7f8bbfcefde6503a22cfaadf"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    },
+    {
+      "stageId": "qualify",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-qualify-producer",
+      "illustrativeReviewer": "DEMO-qualify-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#qualification-scope"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/05-qualify.json",
+      "subjectDigest": "sha256:ac706946d6b34a07eb4c9fece2cc24e32d450fddf56d3ef9af43743955d26857",
+      "subjectClosure": [
+        {
+          "locator": "qualification/scope-decision.json",
+          "digest": "sha256:c9530d7ea813493f7e5a9901421c2f9499afda224cf697d0573e1b3d9de36904"
+        },
+        {
+          "locator": "qualification/synthetic-redocking.csv",
+          "digest": "sha256:f8a35fc3ed93efbf96784147d1182afbce324d6695cc62fcfe15e3a8a8901bcf"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    },
+    {
+      "stageId": "analyze",
+      "mode": "tabletop",
+      "reviewStatus": "illustrative",
+      "illustrativeProducer": "DEMO-analyze-producer",
+      "illustrativeReviewer": "DEMO-analyze-reviewer",
+      "authoredBy": "single-assistant",
+      "independentScientificReviewPerformed": false,
+      "checkRefs": [
+        "checks#ranking-valid"
+      ],
+      "demoVerdict": "PASS",
+      "actualVerdict": "notEvaluated",
+      "subjectRef": "stages/08-analyze.json",
+      "subjectDigest": "sha256:27c8b947e56a3747c17977fb206b4e781fa991cf02b589f1fc993484a419a1f8",
+      "subjectClosure": [
+        {
+          "locator": "analysis/metrics.json",
+          "digest": "sha256:52a2b7c875364a0f8bfff2ef43dfb01cb038cc78725cf76d343ed40a3eb6718a"
+        },
+        {
+          "locator": "analysis/ranking-with-synthetic-labels.csv",
+          "digest": "sha256:df2deaa424157601ffa5b811ee2d2d48e0436fcb1c167df165bd9c2444882ec3"
+        },
+        {
+          "locator": "analysis/single-state-sensitivity.csv",
+          "digest": "sha256:ad531580398c3f1e05e12da0a43625b3f1e872b73fda26998c9a2d80d18a0752"
+        }
+      ],
+      "bindingScope": "演练内容工件及引用，实际科学审查尚待执行。"
+    }
+  ]
+}

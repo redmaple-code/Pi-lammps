@@ -1,0 +1,14 @@
+(node:23232) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "code": "TOOL_FAILED",
+  "message": "Provider check did not complete successfully",
+  "retryable": false,
+  "sideEffectState": "none",
+  "context": {
+    "provider": "aispot-ds",
+    "model": "dsv4.1f",
+    "reason": "503: {\"code\":\"model_not_found\",\"message\":\"No available channel for model dsv4.1f under group deepseek-不知道哪找的 (distributor) (request id: 202611171421568956944868268d9d6GpJHE1Oj)\",\"type\":\"new_api_error\"}"
+  }
+}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 1

@@ -1,0 +1,76 @@
+{
+  "revision": "MD-1",
+  "capturedDate": "2026-11-17",
+  "productCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+  "sources": [
+    {
+      "path": "../迁移方案.md",
+      "sha256": "9cd466406f1ed2f963add0450c40d3a2cc6f7e416bf1bf953a6e53a007939a2c"
+    },
+    {
+      "path": "../功能迁移与验收矩阵.md",
+      "sha256": "3ecccc113275877870e5b255a56b1a86f105b2fbfdf1f3b6252d802dc1a4ed16"
+    },
+    {
+      "path": "../基线核验.md",
+      "sha256": "9f16a5b702d6b3bbfb4a7a26a1256e6c42e8efe532546cbdd722a71e81070147"
+    },
+    {
+      "path": "../跨领域通用仿真工作流与领域包设计.md",
+      "sha256": "1b31f3dcb761ac6e57f1b6846b05f6864df8990eb5ce1cdbe8c3d4b691ae8a82"
+    },
+    {
+      "path": "../sources/baseline.json",
+      "sha256": "defdab727d39bd8c81701ea37defedadee0adafe5122b27de26efd7272f166a3"
+    },
+    {
+      "path": "../development-spec/00-scope-and-decisions.md",
+      "sha256": "19860f1e097e63b39bcbff9f3d22e4dadb478ac31b9ab469fb58d0dcb4f23384"
+    },
+    {
+      "path": "../development-spec/01-architecture.md",
+      "sha256": "074681037fcb03454dc827927c9304952ac0816745bf8873e86b35e777413d5b"
+    },
+    {
+      "path": "../development-spec/02-contracts.md",
+      "sha256": "a04c8afc53f8c5a77721ce44a659c9c86be867f9f333ba68bf4452df4f65028b"
+    },
+    {
+      "path": "../development-spec/03-domain-pack.md",
+      "sha256": "4e696d8a70e3ccf4208ab2c2e97c5f653184c152d9236369ccbebfa2da8cf540"
+    },
+    {
+      "path": "../development-spec/04-workflow.md",
+      "sha256": "9e0da0d6e15c31d1551a1e653bc186729a6055055cc61aad18350938756a4ff0"
+    },
+    {
+      "path": "../development-spec/05-adapters.md",
+      "sha256": "9a8c978af6120a4aec7fc9c685a8af943418d8681a5e9cb00bc33955ad22fe68"
+    },
+    {
+      "path": "../development-spec/06-knowledge.md",
+      "sha256": "c3517522991b213494d843aa7121e8bcbdcd3dd0ea720ca22ff242fe2231b4f7"
+    },
+    {
+      "path": "../development-spec/07-scientific-validation.md",
+      "sha256": "e6e2e79742e1bbba5720af26df7bc8ba0f554ebe8207b980c260716a5dd35af0"
+    },
+    {
+      "path": "../development-spec/08-development.md",
+      "sha256": "45a6ddbfa71239ffb0750ff3f0740628ac3e8c57336620577eb7621105a5e4c6"
+    },
+    {
+      "path": "../development-spec/09-migration.md",
+      "sha256": "20d16093208c3cabb2eb08b9bda7fce40feb81f71f9f385b6b5326d932ec960a"
+    },
+    {
+      "path": "../development-spec/10-acceptance.md",
+      "sha256": "0165790222e41d417f052103df44de2bf990b6b4b822e879ef75803b6acc7546"
+    },
+    {
+      "path": "../development-spec/11-handoff.md",
+      "sha256": "83facb8e9b363848e7fbd0a489620507c830f257c029152a0eb6ae48106f24e3"
+    }
+  ],
+  "note": "Input snapshot only. Original product/requirement documents remain authoritative; this is not a user acceptance receipt."
+}

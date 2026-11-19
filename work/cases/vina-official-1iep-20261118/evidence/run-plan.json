@@ -1,0 +1,53 @@
+{
+  "createdBeforeExecution": "2026-11-18T07:06:30.404151+00:00",
+  "caseId": "vina-official-1iep-20261118",
+  "mode": "realReferenceReproduction",
+  "sourceCommit": "8eb40404f4f45608acb3b01427587ac049f27c1f",
+  "officialInputs": [
+    {
+      "path": "inputs/official/1iep_receptor.pdbqt",
+      "digest": "sha256:f13cf3b36f61d87c3b58983e0b8ecf1c3456a685eb86dfe9ccfb139c7bdc2586"
+    },
+    {
+      "path": "inputs/official/1iep_ligand.pdbqt",
+      "digest": "sha256:15fb35648d8c18c70317842f3a0631b73a19429c710a037ab07310084d579bb8"
+    },
+    {
+      "path": "inputs/official/1iep_receptor.box.txt",
+      "digest": "sha256:3dff08200b5b9c2ca0932c832c9dffc5823b39caec6c92f76be5f7c5ea49d8de"
+    }
+  ],
+  "vinaVersion": "AutoDock Vina v1.2.7",
+  "vinaDigest": "sha256:e0c4b2715e0c1a74f6e92d0f3be0328ac97542eafbc111e6b1efad897a73cce5",
+  "mainRun": "e32",
+  "searchBudgetStudy": [
+    8,
+    16,
+    32
+  ],
+  "seed": -1622165383,
+  "cpuPerRun": 4,
+  "maxConcurrentRuns": 2,
+  "timeoutSeconds": 1800,
+  "solverInputBinding": {
+    "preparedReceptor": "inputs/official/1iep_receptor.pdbqt",
+    "preparedLigand": "inputs/official/1iep_ligand.pdbqt",
+    "box": "inputs/official/1iep_receptor.box.txt"
+  },
+  "expected": {
+    "officialTop1Score_kcal_per_mol": -13.234,
+    "top1AbsoluteScoreTolerance_kcal_per_mol": 0.5,
+    "top1OfficialPoseRMSDLimit_A": 2,
+    "top1CrystalRMSDLimit_A": 2,
+    "officialOutputModes": 4
+  },
+  "referenceVersionLimitations": [
+    "Reference output producer version and hardware were not recorded.",
+    "The documentation uses CPU auto-detection; the current run fixes four threads."
+  ],
+  "reproductionLevel": "method_reproduction",
+  "notApplicable": {
+    "physicalTimeStep": "Stochastic pose search has no physical time integration.",
+    "PDEMeshConvergence": "No PDE mesh is solved; grid spacing is a scoring/search configuration."
+  }
+}

@@ -1,0 +1,50 @@
+# wf-04 independent review — reaction-force interpretation and limitations
+
+Reads (actual receipts):
+- current-stage: read-2715ebc2-f189-47a5-9e87-b94b8d5a216b (154 lines, complete)
+- method-reference (fix-indent-command.txt): read-3a1232d6-d6cb-434d-bf81-be4a5a02ef10 (165 lines)
+- executed-input (in.grinding, 66 lines): read-bdc453db-e1d3-4dc5-9b42-3de87aeca473
+- analysis-implementation (grinding.py, 199 lines): read-b130d345-8d4b-4e65-80cc-3a533fb6a6bb
+
+## Verdict: passed (with thin-evidence observations)
+
+### 1. Reaction-force semantics are documented correctly
+Stage force block: source = "fix tool global vector: force ON the indenter, already a reaction load";
+manual: "This fix computes a global scalar energy and a global 3-vector of forces (on the indenter)".
+The manual also fixes the magnitude law F(r) = -K(r-R)^2, repulsive, F=0 for r>R. Therefore the
+force on the indenter from the atoms is the exact reaction to the repulsive load on mobile atoms:
+- normal = mean(f_tool[3]) is the load pushing the sphere away from the substrate (+z since atoms
+  sit below the center at z=36.145 with R=12), reported as 43.18 nN = 26.95 eV/Ang at K=10 eV/Ang^2;
+- tangential = mean(-f_tool[1]) is the +x resistance, 2.72 nN, and the file is explicit that it is
+  signed, not sqrt(Fx^2+Fy^2) — honest, since f_tool[2] (transverse) is discarded, not hidden.
+
+### 2. Internal consistency verified against the executed input and analysis code
+- commands listed in measurementSemantics.commandDefinitions reproduce in.grinding verbatim
+  ("fix tool mobile indent 10 sphere 17.8 17.8 v_ztip 12 units box", "run 800", "fix contact all print 20 ...").
+- grinding.py: tail = forces[len//2:] on 41 samples -> indices 20..40 -> steps 1200..1600 = declared
+  forceMeanWindow (21 samples); peakNormal = forces[:,2].max() over 800..1600 = declared fullPassWindow
+  (41 samples); meanTemperatureK = data[:,7].mean() over the same pass; conversion 1.602176634 nN per eV/Ang is dimensionally right.
+- fixedMaxDisplacementAngstrom = 0 matches fix freeze setforce 0 on the base group; boundary f p f makes
+  the x axis non-periodic, and only y is unwrapped in the displacement analysis, so no wrap artifact.
+- units box is used, so the sphere x/y/z/R are Angstrom under units metal — geometry mapping is sound.
+
+### 3. Energy/temperature scope statements are correct per the manual
+Manual: "The default setting for this fix is fix_modify energy no" and the per-particle interaction
+energy is K/3 (r-R)^3. The stage therefore correctly excludes indenter energy from pe and makes no
+conservation claim. Temperature is the mean of compute Tmobile over all mobile atoms (bath + dynamic),
+mean 330 K vs target 300 K (+10.1%), and the stage explicitly says steady state is not demonstrated.
+
+### 4. Remaining weaknesses (disclosed, not hidden; quantitative validity stays insufficient)
+- Speed is 10 Ang/ps = 1000 m/s (motionAudit) — orders of magnitude above experiment; no rate-sensitivity
+  claim is attempted, and the stage marks numerical = insufficient.
+- Nominal depth (end_z = surface + R - 3 Ang) is measured against the initial surface; real penetration
+  and pile-up are not extracted — interpretationLimits states this.
+- Single pass, single seed, 0.02 ps output spacing (41 samples over 0.8 ps); peak normal force is
+  sampled, so a true transient maximum may be missed.
+- Minor: grinding.py names the parameter 'stiffnessEVPerAngstromCubed', but per the manual K is
+  force/distance^2 (eV/Ang^2); only a label slip, the executed value 10 is unaffected.
+- Sample-limited: no experimental or higher-fidelity cross-check exists (task = cannotCompute is consistent).
+
+### Residual risk
+Trustworthy as a documented idealized reaction-load definition and as a reproducible qualitative
+trend; NOT trustworthy as a quantitative grinding force, hardness, or contact stress.

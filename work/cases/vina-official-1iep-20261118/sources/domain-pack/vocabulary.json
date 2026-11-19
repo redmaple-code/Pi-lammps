@@ -1,0 +1,47 @@
+{
+  "id": "vocabulary",
+  "items": [
+    {
+      "id": "parent",
+      "term": "母体化合物",
+      "aliases": [
+        "parent"
+      ]
+    },
+    {
+      "id": "protomer",
+      "term": "质子化状态",
+      "aliases": [
+        "protomer"
+      ]
+    },
+    {
+      "id": "tautomer",
+      "term": "互变异构体",
+      "aliases": [
+        "tautomer"
+      ]
+    },
+    {
+      "id": "pose",
+      "term": "候选结合姿态",
+      "aliases": [
+        "pose"
+      ]
+    },
+    {
+      "id": "redocking",
+      "term": "重对接",
+      "aliases": [
+        "redocking"
+      ]
+    },
+    {
+      "id": "reference-rmsd",
+      "term": "外部参考重原子RMSD",
+      "aliases": [
+        "reference-rmsd"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+
+> @redmaple/simulation@0.1.0 test
+> node --test --test-concurrency=1 tests/*.test.js
+
+TAP version 13
+# (node:48124) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: canonical identities, strict YAML and three-valued conditions preserve unknown
+ok 1 - canonical identities, strict YAML and three-valued conditions preserve unknown
+  ---
+  duration_ms: 20.3721
+  type: 'test'
+  ...
+# Subtest: pack resolution locks bytes and distinguishes draft validation from production
+ok 2 - pack resolution locks bytes and distinguishes draft validation from production
+  ---
+  duration_ms: 906.236
+  type: 'test'
+  ...
+# Subtest: binary publication and immutable closure detect changed content
+ok 3 - binary publication and immutable closure detect changed content
+  ---
+  duration_ms: 63.5185
+  type: 'test'
+  ...
+# Subtest: CAS, command deduplication and operation reconciliation never blindly replay
+ok 4 - CAS, command deduplication and operation reconciliation never blindly replay
+  ---
+  duration_ms: 37.2193
+  type: 'test'
+  ...
+# Subtest: independent review, evidence origin and three successive revisions remain enforced
+ok 5 - independent review, evidence origin and three successive revisions remain enforced
+  ---
+  duration_ms: 149.6284
+  type: 'test'
+  ...
+# Subtest: review binds producer, all subject artifacts and the frozen evidence policy
+ok 6 - review binds producer, all subject artifacts and the frozen evidence policy
+  ---
+  duration_ms: 82.8718
+  type: 'test'
+  ...
+# (node:61084) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+ok 7 - persistent supervisor runs real child, collects bytes and duplicate submit reuses receipt
+  ---
+  duration_ms: 1406.9877
+  type: 'test'
+  ...
+# Subtest: cancellation and timeout wait for actual process termination
+ok 8 - cancellation and timeout wait for actual process termination
+  ---
+  duration_ms: 4433.9609
+  type: 'test'
+  ...
+# Subtest: missing result and altered inputs are refused
+ok 9 - missing result and altered inputs are refused
+  ---
+  duration_ms: 1468.1306
+  type: 'test'
+  ...
+# Subtest: execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+ok 10 - execution refuses unreviewed closure bytes, stale digests, excess time and cancelled permits
+  ---
+  duration_ms: 95.3457
+  type: 'test'
+  ...
+# (node:55748) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: worker survives submitting process exit and a reopened executor reconciles the same operation
+ok 11 - worker survives submitting process exit and a reopened executor reconciles the same operation
+  ---
+  duration_ms: 2573.0134
+  type: 'test'
+  ...
+# (node:57172) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: host policy applies to actual native tool execution before a read-only annotation can bypass role scope
+ok 12 - host policy applies to actual native tool execution before a read-only annotation can bypass role scope
+  ---
+  duration_ms: 6526.7982
+  type: 'test'
+  ...
+# (node:49716) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: knowledge preserves adjudication, scopes, origins and source invalidation
+ok 13 - knowledge preserves adjudication, scopes, origins and source invalidation
+  ---
+  duration_ms: 159.0134
+  type: 'test'
+  ...
+# Subtest: failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+ok 14 - failure evidence can yield a candidate, quality regression blocks promotion, releases need exact grant
+  ---
+  duration_ms: 58.8039
+  type: 'test'
+  ...
+# Subtest: inventory/import is idempotent and preserves unknown historical provenance
+ok 15 - inventory/import is idempotent and preserves unknown historical provenance
+  ---
+  duration_ms: 65.3235
+  type: 'test'
+  ...
+# (node:54232) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: consistent SQLite backup retains committed events and independent repair counters
+ok 16 - consistent SQLite backup retains committed events and independent repair counters
+  ---
+  duration_ms: 82.7386
+  type: 'test'
+  ...
+# Subtest: case revisions and invalidation preserve earlier terminal evidence
+ok 17 - case revisions and invalidation preserve earlier terminal evidence
+  ---
+  duration_ms: 72.3223
+  type: 'test'
+  ...
+# Subtest: UKB capability limitations stay visible and proposal status cannot publish
+ok 18 - UKB capability limitations stay visible and proposal status cannot publish
+  ---
+  duration_ms: 1.6236
+  type: 'test'
+  ...
+# Subtest: pack publication needs frozen positive/negative evidence and host release registration
+ok 19 - pack publication needs frozen positive/negative evidence and host release registration
+  ---
+  duration_ms: 1243.5837
+  type: 'test'
+  ...
+# (node:34484) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: actual HEA generator supplies explicit mapping, geometry and all diagnostic commands
+ok 20 - actual HEA generator supplies explicit mapping, geometry and all diagnostic commands
+  ---
+  duration_ms: 1097.1196
+  type: 'test'
+  ...
+# Subtest: measurement criteria preserve missing, borderline and independent validation dimensions
+ok 21 - measurement criteria preserve missing, borderline and independent validation dimensions
+  ---
+  duration_ms: 132.8391
+  type: 'test'
+  ...
+# Subtest: bounded studies and coupled checkpoints refuse false convergence and semantic loss
+ok 22 - bounded studies and coupled checkpoints refuse false convergence and semantic loss
+  ---
+  duration_ms: 4.0053
+  type: 'test'
+  ...

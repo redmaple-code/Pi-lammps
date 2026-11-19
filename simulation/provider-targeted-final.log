@@ -1,0 +1,42 @@
+TAP version 13
+# Subtest: answer assessment accepts an explicit answer envelope without changing its content
+ok 1 - answer assessment accepts an explicit answer envelope without changing its content
+  ---
+  duration_ms: 45.2239
+  type: 'test'
+  ...
+# Subtest: answer assessment preserves contradictory primary fields and reports the conflicts
+ok 2 - answer assessment preserves contradictory primary fields and reports the conflicts
+  ---
+  duration_ms: 3.0664
+  type: 'test'
+  ...
+# (node:55308) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: provider configuration requires the explicit endpoint and credentials
+ok 3 - provider configuration requires the explicit endpoint and credentials
+  ---
+  duration_ms: 347.9282
+  type: 'test'
+  ...
+# Subtest: model selection preserves the host callback and blocks a different provider/model before sending
+ok 4 - model selection preserves the host callback and blocks a different provider/model before sending
+  ---
+  duration_ms: 2.996
+  type: 'test'
+  ...
+# Subtest: real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+ok 5 - real Pi HTTP transport sends the registered dsv4.1f model and provider credential
+  ---
+  duration_ms: 47031.7123
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 58616.9823

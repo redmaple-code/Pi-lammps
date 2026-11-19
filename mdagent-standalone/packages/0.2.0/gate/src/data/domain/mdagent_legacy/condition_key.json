@@ -1,0 +1,27 @@
+[
+ {
+  "key_id": "legacy_id",
+  "label": "旧库条目 ID",
+  "value_type": "text"
+ },
+ {
+  "key_id": "legacy_kind",
+  "label": "旧库 kind",
+  "value_type": "text"
+ },
+ {
+  "key_id": "legacy_pack",
+  "label": "旧库包名",
+  "value_type": "text"
+ },
+ {
+  "key_id": "legacy_family",
+  "label": "旧库 family",
+  "value_type": "text"
+ },
+ {
+  "key_id": "legacy_consumer",
+  "label": "旧库包消费者",
+  "value_type": "text"
+ }
+]

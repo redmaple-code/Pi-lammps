@@ -1,0 +1,5 @@
+{
+  "experience": {"type": "null"},
+  "evidence": {"type": "null"},
+  "_note": "经验/证据源后续接入：experience.type=mdagent_seed + path=mcp/review_experience；evidence.type=mdagent_data + path=<data_root>"
+}

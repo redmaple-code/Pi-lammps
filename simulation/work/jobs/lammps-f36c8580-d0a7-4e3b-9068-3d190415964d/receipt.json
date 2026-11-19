@@ -1,0 +1,21 @@
+{
+  "status": "succeeded",
+  "startedAt": "2026-11-17T06:21:18.248Z",
+  "endedAt": "2026-11-17T06:28:43.576Z",
+  "exitCode": 0,
+  "signal": null,
+  "error": null,
+  "timedOut": false,
+  "argv": [
+    "E:\\LAMMPS 64-bit 2Aug2023-MSMPI\\bin\\lmp.exe",
+    "-in",
+    "in.grinding",
+    "-log",
+    "log.lammps"
+  ],
+  "workdir": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\jobs\\lammps-f36c8580-d0a7-4e3b-9068-3d190415964d\\work",
+  "operationId": "lammps-f36c8580-d0a7-4e3b-9068-3d190415964d",
+  "workerPid": 55796,
+  "workerToken": "worker-5e6678bd-06a3-4834-91d7-4153fcd88352",
+  "observedAt": "2026-11-17T06:28:43.576Z"
+}

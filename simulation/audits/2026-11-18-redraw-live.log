@@ -1,0 +1,5 @@
+(node:37920) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","stageId":"wf-05","status":"running"}
+{"caseId":"hea-grinding-a97fe491-8777-43e8-98cd-7d28a025c869","status":"awaitingImageInspection","figures":[{"name":"cross-section.png","path":"F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\cd\\cd61722df43e0b52a0252dff4bdcf1131201ecadd31b7a755552d2adc0b8f4af"},{"name":"force-temperature.png","path":"F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\54\\549dda77f5c1284d557fa2305d6d1f96bfdec17a1591d537732eadada7365c9b"},{"name":"grinding-atoms-ovito.png","path":"F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts\\objects\\73\\735c0491029d4d808efe3a7b907c07a953773ee711aee18b79d7f4163c703e67"}]}
+[inject] aispot-ds → env AISPOT_DS_API_KEY，子进程退出码 0

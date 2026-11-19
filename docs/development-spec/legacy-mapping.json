@@ -1,0 +1,1521 @@
+{
+  "schemaVersion": "1.0.0",
+  "scope": "Requirement location mapping only; not implementation or acceptance evidence.",
+  "requirements": [
+    {
+      "requirementId": "MIG-001",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "01-architecture.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-001",
+        "AC-006",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "本地实读案例前置保留在 LAMMPS 包；通用框架采用每包证据政策。"
+    },
+    {
+      "requirementId": "MIG-002",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "01-architecture.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-001",
+        "AC-006",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-003",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "01-architecture.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-001",
+        "AC-006",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-004",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "01-architecture.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-001",
+        "AC-006",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "固定阶段改为领域声明的阶段图；内核责任和三层边界保留。"
+    },
+    {
+      "requirementId": "MIG-005",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-006",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-007",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-008",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-009",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-010",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-014",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-011",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-012",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-013",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-014",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-015",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-016",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-017",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-018",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-019",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-022",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-020",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-021",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-022",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-023",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-024",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-025",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-026",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-027",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-028",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-029",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-030",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-031",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-032",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-033",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "03-domain-pack.md",
+        "07-scientific-validation.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-015",
+        "AC-017",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-034",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "PASS/REVISE/BLOCKED 语义保留；新增 unknown/cancelRequested 只细化运行与阶段状态，不替代审查裁决。"
+    },
+    {
+      "requirementId": "MIG-035",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "两套连续计数分别保留；LAMMPS 上限维持 3，其它领域在宿主策略内声明上限，不得借新会话或 run 清零。"
+    },
+    {
+      "requirementId": "MIG-036",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-037",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-038",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-039",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-040",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-041",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-042",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-043",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-044",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-045",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-046",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-047",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "04-workflow.md",
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-007",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-048",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-049",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-050",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-051",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-052",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-053",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "04-workflow.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-009",
+        "AC-010",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-054",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-055",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-056",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-057",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-058",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-059",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-060",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-061",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "07-scientific-validation.md"
+      ],
+      "scenarioIds": [
+        "AC-014",
+        "AC-015",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-062",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "02-contracts.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-010",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-063",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "02-contracts.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-010",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-064",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "02-contracts.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-010",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "旧数据不补造历史摘要；新数据采用锁和内容摘要，字段经显式迁移。"
+    },
+    {
+      "requirementId": "MIG-065",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "02-contracts.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-010",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-066",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "02-contracts.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-010",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-067",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-068",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-069",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-070",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-071",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-072",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-073",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-074",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-075",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-076",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-077",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-078",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md"
+      ],
+      "scenarioIds": [
+        "AC-006",
+        "AC-011",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "旧后端缺少能力继续披露；新规范新增撤回影响要求不代表旧后端已实现。"
+    },
+    {
+      "requirementId": "MIG-079",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-080",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-081",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-082",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-083",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-084",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-085",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "06-knowledge.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-023",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-086",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "03-domain-pack.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-002",
+        "AC-012",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "七声明通过显式字段映射进入规范表示；manifest/资源表/流程图扩充可配置范围。"
+    },
+    {
+      "requirementId": "MIG-087",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "03-domain-pack.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-002",
+        "AC-012",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-088",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "00-scope-and-decisions.md",
+        "03-domain-pack.md",
+        "04-workflow.md"
+      ],
+      "scenarioIds": [
+        "AC-002",
+        "AC-012",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "模式只控制交互，已有授权继续有效；缺必要授权保存停点，不自行扩大范围。"
+    },
+    {
+      "requirementId": "MIG-089",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "09-migration.md",
+        "11-handoff.md"
+      ],
+      "scenarioIds": [
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-090",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "01-architecture.md",
+        "05-adapters.md"
+      ],
+      "scenarioIds": [
+        "AC-021",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-091",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "02-contracts.md",
+        "08-development.md"
+      ],
+      "scenarioIds": [
+        "AC-008",
+        "AC-024",
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    },
+    {
+      "requirementId": "MIG-092",
+      "sourceFile": "../功能迁移与验收矩阵.md",
+      "specRefs": [
+        "09-migration.md"
+      ],
+      "scenarioIds": [
+        "AC-020"
+      ],
+      "mappingStatus": "specificationMapped",
+      "implementationStatus": "notImplemented",
+      "note": "保留原要求正文及专属验收条件；通用场景仅为附加关联，不替代逐项 MIG 验收。"
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+
+
+#基本参数
+units                  metal
+boundary               p p p
+atom_style             atomic
+neighbor               2 bin
+timestep               0.001
+#读取工件模型
+read_restart           restart.equil 
+#扩大模拟区域
+change_box             all z delta 0 100 units box
+#建立金刚球
+region                 ball sphere 60 100 245 40 units box 
+
+lattice                diamond 3.57                                                                               
+create_atoms           4 region ball units box                                                               
+mass                   4 12.01
+#工件原子分层
+region                 boundary     block INF INF INF INF 0 10 units box 
+region                 temp_layer   block INF INF INF INF 10 20 units box 
+region                 newton_layer block INF INF INF INF 20 200 units box 
+region                 piece union 3 boundary temp_layer newton_layer
+#原子分组
+group                  boundary region boundary 
+group                  temp_layer region temp_layer
+group                  newton_layer region newton_layer 
+group                  piece region piece
+group                  ball region ball 
+group                  mobile union temp_layer newton_layer
+#合并区域
+region                 box union 2 piece ball 
+#移动刀具
+displace_atoms         ball move 0 0 -2.5 units box
+#势函数
+#势函数
+# ========== 势函数设置 ==========
+pair_style      hybrid/overlay meam/c eam/alloy morse 6.0 lj/cut 10.0
+
+# MEAM势设置 (Ti/Al/V三元体系)
+pair_coeff      * * meam/c library.meam V  Ni Ti VNiTi.meam Ti V NULL NULL
+pair_coeff      * * eam/alloy TiAl.eam.alloy Ti NULL Al NULL
+pair_coeff      2 3 morse 0.35 1.8 2.8  # D0=0.5eV, alpha=3.0Å⁻¹, r0=2.0Å
+
+mass     1 12
+mass    2 12
+mass   3 12
+mass  4 12
+# LJ势设置 (C与各金属的相互作用)
+
+
+pair_coeff      1 4 lj/cut 0.00329558   4.18133   # Ti-C
+pair_coeff      2 4 lj/cut 0.0017774    3.4796   # V-C
+pair_coeff      3 4 lj/cut 0.0099855    4.1624  # Al-C
+pair_coeff      4 4 lj/cut 0.00455323   3.851     # C-C (必须设置!)
+
+
+#pair_style             hybrid meam/c tersoff lj/cut 10 
+#pair_coeff             * * tersoff SiC.tersoff NULL NULL NULL NULL NULL C
+#pair_coeff             * * meam/c library.meam Co Ni Cr Fe Mn CoNiCrFeMn.meam Ni Fe Cr Co Mn NULL
+#pair_coeff             1 6 lj/cut 0.038429 2.841            #C-Ni       
+#pair_coeff             2 6 lj/cut 0.038687 2.8605           #C-Fe
+#pair_coeff             3 6 lj/cut 0.037758 2.868            #C-Cr
+#pair_coeff             4 6 lj/cut 0.038281 2.842            #C-Co
+#pair_coeff             5 6 lj/cut 0.024571 2.922            #C-Mn
+ 
+write_data   initial.data
+
+#压头下压
+dump                   1 all custom 100 movedown.xyz id type x y z
+velocity               ball set 0 0 -1 units box
+fix                    10 ball nve/noforce
+#牛顿层
+fix                    20 newton_layer nve
+#控温
+fix                    30 temp_layer nvt temp 300 300 0.1
+#边界固定
+velocity               boundary set 0 0 0 
+fix                    40 boundary setforce 0.0 0.0 0.0
+run                    35000
+undump                 1
+unfix                  10
+unfix                  20
+unfix                  30
+unfix                  40
+reset_timestep         0
+
+#温度计算
+compute                KE piece ke/atom
+variable               KB equal 8.625e-5
+variable               TEMP atom c_KE/1.5/${KB} 
+compute                new_temp1  temp_layer   temp/com
+compute                new_temp2 newton_layer  temp/com
+thermo                 100
+thermo_style           custom step temp c_new_temp1 c_new_temp2 etotal ke pe 
+compute                10 newton_layer ave/sphere/atom
+#应力计算
+compute                s all stress/atom NULL
+compute                v all voronoi/atom
+
+variable               sx atom c_s[1]/c_v[1]/10000     
+variable               sy atom c_s[2]/c_v[1]/10000     
+variable               sz atom c_s[3]/c_v[1]/10000 
+variable               sxy atom c_s[4]/c_v[1]/10000
+variable               sxz atom c_s[5]/c_v[1]/10000
+variable               syz atom c_s[6]/c_v[1]/10000
+variable               mean atom (v_sx+v_sy+v_sz)/3
+variable               mises atom sqrt(0.5*((v_sx-v_sy)^2+(v_sy-v_sz)^2+(v_sx-v_sz)^2+6*(v_sxy^2+v_syz^2+v_sxz^2)))
+#计算切削力
+compute                fx0 ball reduce sum fx
+compute                fy0 ball reduce sum fy
+compute                fz0 ball reduce sum fz
+variable               fxx equal c_fx0
+variable               fyy equal c_fy0
+variable               fzz equal c_fz0
+variable               distance equal step/1000
+fix                    def3 all print 100 "${distance} ${fxx} ${fyy} ${fzz}" file F.txt screen no
+
+#摩擦过程
+dump                   1 all custom 500 frc.xyz id type x y z v_TEMP v_mean v_mises c_10[2]
+velocity               ball set 1 0 0 units box
+#刀具
+fix                    10 ball nve/noforce
+
+#牛顿层
+fix                    20 newton_layer nve 
+#控温
+fix                    30 temp_layer nve 
+fix                    31 temp_layer temp/berendsen 300 300 0.1 
+fix_modify             31 temp new_temp1 
+#边界固定
+velocity               boundary set 0 0 0 
+fix                    40 boundary setforce 0.0 0.0 0.0  
+run                    200000  

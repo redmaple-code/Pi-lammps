@@ -1,0 +1,6 @@
+{
+  "failedStage": "wf-r",
+  "code": "SCHEMA_INVALID",
+  "message": "Support role must publish one stage packet",
+  "failureRef": "failure-8c1c7c5b-ce54-4ef7-8f9e-23d9aba83eee"
+}

@@ -1,0 +1,125 @@
+(node:46084) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "output": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\delivery-final",
+  "schemaVersion": "delivery/1",
+  "createdAt": "2026-11-17T07:27:45.198Z",
+  "workspace": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation",
+  "stateDirectory": "C:\\Users\\redmaple\\AppData\\Local\\RedMaple\\simulation\\c670bb6287f2dce0",
+  "baselineCommit": "25dec99af3b5c3a5d06ddf5c788b89cd5c5d36df",
+  "sourceFingerprint": "sha256:ec9a42a04534b4e9e606fa7ee9e1ad074b8db163703d208588e01a1ea6a4411e",
+  "sourceFileCount": 463,
+  "caseCount": 4,
+  "artifactCount": 85,
+  "distinctArtifactObjects": 58,
+  "databaseIntegrity": "ok",
+  "pendingOperations": 0,
+  "exportedFiles": [
+    {
+      "path": "analysis-rerender.log",
+      "digest": "sha256:53be4fda3c6c2cb96a0fef0837c9681fd4e6d0cc3c0e439fcb6ec93b31042708"
+    },
+    {
+      "path": "artifact-manifest.json",
+      "digest": "sha256:3647746499629d9e25794c8029ff79151d25ec772a610423ed8eb35419f7b47a"
+    },
+    {
+      "path": "atomsk-validation.json",
+      "digest": "sha256:f908c53719992fae6a82afd6fee685292a548041a52a4081dadf9056ab45bf60"
+    },
+    {
+      "path": "benchmark-run.log",
+      "digest": "sha256:9fbc6663f9144826cd34e603629e1605604a89a85d09a03662b6c80cafd63f9f"
+    },
+    {
+      "path": "cases.json",
+      "digest": "sha256:de43dfda4507e4a9aef14244f5089578cd6bc337f2522920ecb8898b4f4aeb44"
+    },
+    {
+      "path": "evidence-export-final.log",
+      "digest": "sha256:2c8d2243ac3fc9d50211961d9159339a53af52f3fff2e52860b5c54952357a2c"
+    },
+    {
+      "path": "evidence-export.log",
+      "digest": "sha256:64a2884be172bddafee52e55de1cf5f95371945cc841a40919cf7d9c1daf4ef6"
+    },
+    {
+      "path": "final-audit-inspection.json",
+      "digest": "sha256:eeb989ff8bf8ac35270d111e3d96e858bf3f7eb4f07193d2580f460e78134250"
+    },
+    {
+      "path": "final-audit-smoke.log",
+      "digest": "sha256:d8deac5c1d04abd6f0e9e635e80d2b08d4baa4b39e7d10f89be14add8b859fd5"
+    },
+    {
+      "path": "final-entry-smoke.log",
+      "digest": "sha256:95d6b936845f74543a23708395e2ad19f22f2e115c3dd97b46f6f32a61a585ca"
+    },
+    {
+      "path": "grinding-run.log",
+      "digest": "sha256:2c331c32c5a662c3c135f6c70247769c5cba25b0a0bff9e1bc282ebeb285477c"
+    },
+    {
+      "path": "host-policy-results.log",
+      "digest": "sha256:d877867288e0bb4ae82ec6d5c8df454eb620361af90b6e6aa3ea42ac569183cb"
+    },
+    {
+      "path": "knowledge.sqlite",
+      "digest": "sha256:3aec0bbdf1321e847da712b9985c3e47a0b8c47a63640e6030e99eee3c1c326f"
+    },
+    {
+      "path": "ovito-render.log",
+      "digest": "sha256:09bfd644cfe54cc9ae2e205ee8ea1cb0c71c60f7776a07e40f0c1dac4be45e1d"
+    },
+    {
+      "path": "plan-validation.log",
+      "digest": "sha256:1a5eccc85017b54b2bdf45b5d26fee9c39eba49484ef26db2418efb0b4ce50f5"
+    },
+    {
+      "path": "records.json",
+      "digest": "sha256:94a99022ba8afb1143430c1a9ad6d9e27b80f701b399d86baf1fe3bed7d465bc"
+    },
+    {
+      "path": "redmaple-regression.log",
+      "digest": "sha256:e3c1714d2bb4181df3b9b47f392eef9d027f9c794cd751671054ee5f641dacad"
+    },
+    {
+      "path": "redmaple.patch",
+      "digest": "sha256:c6d261fca0be684025cec7affcc1ddbb8bc22c9e2c2c1529828ef2cbbb901bf6"
+    },
+    {
+      "path": "simulation.sqlite",
+      "digest": "sha256:b7c24a071caed96ab69a386d19a2140536fad8973f69a967bd9433c165e42ca4"
+    },
+    {
+      "path": "simulation.sqlite-shm",
+      "digest": "sha256:fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "simulation.sqlite-wal",
+      "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "source-manifest.json",
+      "digest": "sha256:6fcec28275d51429dcb8b11061209fdb24ce72b4e35cb6d1bfcb36d072659557"
+    },
+    {
+      "path": "static-check.log",
+      "digest": "sha256:714324d28210e14a640b1c385487237fc27a36bd99b1ee56f41936c7117398e7"
+    },
+    {
+      "path": "targeted-test-results.log",
+      "digest": "sha256:b3aa204f093f0432bd55bac59453c8f77e459143530bb28726ca7cb2a0c03588"
+    },
+    {
+      "path": "test-results-first.log",
+      "digest": "sha256:4558da9e97db239dff5796f0a38614d6265cfbd5b629ad305f3ef315cb3ee9b8"
+    },
+    {
+      "path": "test-results.log",
+      "digest": "sha256:b3252af927376e3ae241f33c7ccdb47103ac9c95b97011f20dab073231b52df9"
+    }
+  ],
+  "externalArtifactRoot": "F:\\BaiduSyncdisk\\Codex\\Pi-lammps\\simulation\\work\\artifacts",
+  "restoreScope": "Original workspace path. Preserve work/artifacts, work/cases and work/jobs alongside this database snapshot."
+}

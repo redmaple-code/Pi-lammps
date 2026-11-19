@@ -1,0 +1,65 @@
+# Minimal changes from bundled LAMMPS Examples/indent/in.indent.lmp.
+# Explicit 3D alloy, frozen boundary, local thermostat, approach and lateral pass.
+units metal
+dimension 3
+boundary f p f
+atom_style atomic
+read_data alloy.data
+pair_style eam/alloy
+pair_coeff * * FeNiCrCoCu-heafixed.setfl Fe Ni Cr Co Cu
+neighbor 2.0 bin
+neigh_modify every 1 delay 0 check yes
+region base block INF INF INF INF INF 3.56000000 units box
+group fixed region base
+group mobile subtract all fixed
+region bath block INF INF INF INF 3.56001000 10.68000000 units box
+group thermostat region bath
+group dynamic subtract mobile thermostat
+velocity fixed set 0.0 0.0 0.0
+fix freeze fixed setforce 0.0 0.0 0.0
+min_style cg
+minimize 1.0e-8 1.0e-6 1000 10000
+reset_timestep 0
+velocity mobile create 300 482748 mom yes rot no dist gaussian
+fix integrate mobile nve
+fix equilibrate mobile langevin 300 300 0.1 482761 zero yes
+compute Tmobile mobile temp
+thermo 100
+thermo_style custom step atoms c_Tmobile pe ke etotal
+thermo_modify lost error flush yes
+timestep 0.001
+run 400
+unfix equilibrate
+fix bath thermostat langevin 300 300 0.1 482765 zero yes
+compute pe all pe/atom
+compute coord all coord/atom cutoff 3.2
+compute centro all centro/atom fcc
+compute cna all cna/atom 3.2
+dump trajectory all custom 100 trajectory.lammpstrj id type x y z c_pe c_coord c_centro c_cna
+dump_modify trajectory sort id
+write_dump all custom initial.lammpstrj id type x y z modify sort id
+variable ztip equal "40.1450000000+(step-400)*dt*(-10.0000000000)"
+fix tool mobile indent 10 sphere 17.8000000000 17.8000000000 v_ztip 12 units box
+variable tipx equal 17.8000000000
+variable tipz equal v_ztip
+variable tempmobile equal c_Tmobile
+variable fx equal f_tool[1]
+variable fy equal f_tool[2]
+variable fz equal f_tool[3]
+fix contact all print 20 "$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)" file approach.csv screen no title "step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K"
+run 400
+unfix contact
+unfix tool
+variable ztip delete
+variable xtip equal "17.8000000000+(step-800)*dt*10"
+variable tipx delete
+variable tipx equal v_xtip
+variable tipz delete
+variable tipz equal 36.1450000000
+fix tool mobile indent 10 sphere v_xtip 17.8000000000 36.1450000000 12 units box
+fix contact all print 20 "$(step) $(time) $(v_tipx) $(v_tipz) $(v_fx) $(v_fy) $(v_fz) $(v_tempmobile)" file grinding.csv screen no title "step time_ps tip_x_A tip_z_A fx_eV_A fy_eV_A fz_eV_A temperature_K"
+run 800
+write_dump all custom final.lammpstrj id type x y z c_pe c_coord c_centro c_cna modify sort id
+write_data final.data
+write_restart final.restart
+print "REDMAPLE_GRINDING_COMPLETE"
