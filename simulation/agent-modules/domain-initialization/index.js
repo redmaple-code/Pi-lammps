@@ -20,7 +20,7 @@ export const operationSchemas = {
     sourceType: { enum: ['caseReport', 'standard', 'manual', 'paper', 'userAccount', 'log', 'dataset', 'other'] },
     locator: text, originGroupId: short, sourceMetadata: { type: 'object' } }, ['libraryId', 'title', 'content', 'sourceType']),
   readSource: schema({ ...identity, sourceId: short, startLine: { type: 'integer', minimum: 1 },
-    endLine: { type: 'integer', minimum: 1 } }, ['libraryId', 'sourceId']),
+    endLine: { type: 'integer', minimum: 1 }, page: { type: 'integer', minimum: 0 } }, ['libraryId', 'sourceId']),
   propose: schema({ ...write, kind: { enum: ['concept', 'claim', 'method', 'practice', 'observation', 'resource'] },
     statement: text, conditions: strings, exceptions: strings, sourceIds: { ...strings, minItems: 1 },
     evidenceRanges: { type: 'array', maxItems: 32, items: schema({ sourceId: short,

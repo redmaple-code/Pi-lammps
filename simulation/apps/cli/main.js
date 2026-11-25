@@ -14,13 +14,14 @@ import { analyzeExistingCase, visualizeExistingCase, diagnoseExistingCase, execu
 import { auditPaper } from '../../packages/application/reproduction.js';
 import { runDomainInitializationCli } from '../../agent-modules/domain-initialization/cli.js';
 import { withDomainInitializationPolicy } from '../../agent-modules/domain-initialization/pi-extension.js';
+import { openDomainWeb } from '../domain-web/server.js';
 
 const { positionals, values } = parseArgs({ allowPositionals: true, options: {
   workspace: { type: 'string' }, state: { type: 'string' }, validation: { type: 'boolean' },
   python: { type: 'string' }, lammps: { type: 'string' }, parameters: { type: 'string' },
   observations: { type: 'string' }, config: { type: 'string' }, help: { type: 'boolean' },
   title: { type: 'string' }, objective: { type: 'string' }, input: { type: 'string' }, file: { type: 'string' },
-  'source-type': { type: 'string' }, query: { type: 'string' }
+  'source-type': { type: 'string' }, query: { type: 'string' }, port: { type: 'string' }
 } });
 const [command = 'help', target] = positionals;
 const root = fileURLToPath(new URL('../..', import.meta.url));
@@ -59,6 +60,7 @@ try {
   node apps/cli/main.js domain-init propose LIBRARY_ID --input candidate.json
   node apps/cli/main.js domain-init query LIBRARY_ID --query WORDS
   node apps/cli/main.js domain-init export LIBRARY_ID
+  node apps/cli/main.js domain-web [--port 4176] [--config runtime.example.json]
 
 Environment options --workspace ROOT --state LOCAL_DIRECTORY
 Python and LAMMPS default to executables discovered in PATH.`);
@@ -68,7 +70,22 @@ Python and LAMMPS default to executables discovered in PATH.`);
     if (command === 'domain-init') output(await runDomainInitializationCli(app.domainInitialization, {
       action: target || 'list', libraryId: positionals[2], inputFile: values.input, file: values.file,
       title: values.title, objective: values.objective, sourceType: values['source-type'], query: values.query }));
-    else if (['plan', 'grinding'].includes(command)) {
+    else if (command === 'domain-web') {
+      const port = values.port === undefined ? 4176 : Number(values.port);
+      requireCondition(Number.isInteger(port) && port >= 0 && port <= 65535, 'SCHEMA_INVALID', 'Port must be between 0 and 65535');
+      const { server, origin } = await openDomainWeb({ ...app.domainInitialization, port, configPath: values.config, python: values.python });
+      console.log(`领域库工作台 ${origin}`);
+      await new Promise(resolve => {
+        const stop = () => server.close();
+        process.on('SIGINT', stop);
+        process.on('SIGTERM', stop);
+        server.once('close', () => {
+          process.off('SIGINT', stop);
+          process.off('SIGTERM', stop);
+          resolve();
+        });
+      });
+    } else if (['plan', 'grinding'].includes(command)) {
       requireCondition(values.validation, 'AUTHORIZATION_REQUIRED', 'This draft package supports explicit candidate validation. Supply --validation.');
       const profile = JSON.parse(await readFile(values.config || join(root, 'runtime.example.json'), 'utf8')).simulation || {};
       const plan = await createGrindingPlan(app, { python: values.python || profile.python || findExecutable('python'), lammps: values.lammps || profile.lammps || findExecutable('lmp'),

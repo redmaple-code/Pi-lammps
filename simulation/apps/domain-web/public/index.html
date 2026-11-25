@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>领域库工作台 · Pi-lammps</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#workspace">跳到工作区</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">π</span><div><strong>Pi-lammps</strong><span>领域库工作台</span></div></div>
+      <div class="library-head"><span>领域库</span><button class="create-small" type="button" data-action="create" aria-label="新建领域库">＋</button></div>
+      <nav id="libraries" class="libraries" aria-label="领域库列表"></nav>
+      <div class="sidebar-foot"><span class="signal" aria-hidden="true"></span><span>本机工作区</span></div>
+    </aside>
+    <main id="workspace" tabindex="-1" aria-busy="true">
+      <header class="topbar">
+        <div><span>工作空间</span><span class="breadcrumb-divider" aria-hidden="true">/</span><strong id="breadcrumb">领域库初始化</strong></div>
+        <button type="button" class="button quiet" data-action="refresh"><span aria-hidden="true">↻</span> 刷新</button>
+      </header>
+      <div id="content" class="page"><p class="empty">正在读取领域库…</p></div>
+    </main>
+  </div>
+  <div id="notice" class="notice" role="status" hidden></div>
+  <dialog id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-heading"><h2 id="dialog-title"></h2><button type="button" class="button quiet close" data-action="close" aria-label="关闭">×</button></div>
+    <div id="dialog-body"></div>
+  </dialog>
+</body>
+</html>

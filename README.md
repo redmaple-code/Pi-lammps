@@ -43,6 +43,8 @@ python D:/personal-twin/twin.py inject aispot-ds --env AISPOT_DS_API_KEY -- node
 
 ## 使用领域库初始化
 
+在 `simulation` 目录运行 `npm run domain:web`，浏览器打开 `http://127.0.0.1:4176`。网页与 Pi 终端共用本机领域库，支持导入、访谈、候选审阅、检索与导出。
+
 首次使用请阅读 [领域库初始化使用指南](docs/guides/domain-library-initialization.md)。指南覆盖环境准备、行业案例与规范注入、经验访谈、知识和标签候选、逐项与批次审阅、检索、调研、导出和跨会话续用。
 
 在 Pi 中可以按以下顺序操作，材料登记后让 Pi 读取来源并整理候选，再进入审阅。

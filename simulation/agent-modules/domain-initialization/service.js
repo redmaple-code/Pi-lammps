@@ -260,7 +260,7 @@ export class DomainInitializationService {
       return { sourceId: source.id, fragmentRef: ref(fragment), digest: hash, duplicate: false };
     });
   }
-  async readSource({ libraryId, sourceId, startLine = 1, endLine }) {
+  async readSource({ libraryId, sourceId, startLine = 1, endLine, page }) {
     const document = await this.load(libraryId);
     const source = currentRecords(document, 'source').find(record => record.id === sourceId);
     requireThat(source, 'REFERENCE_MISSING', 'Source is not registered in this library');
@@ -268,10 +268,21 @@ export class DomainInitializationService {
     requireThat(!endLine || endLine >= startLine, 'SCHEMA_INVALID', 'Source line range is reversed');
     const lastLine = Math.min(endLine || startLine + 99, lines.length);
     const selected = lines.slice(startLine - 1, lastLine).join('\n');
-    return { sourceRef: ref(source), title: source.data.title, provenance: source.data.provenance,
-      inlineText: selected.slice(0, 16000), startLine, endLine: lastLine,
-      truncated: selected.length > 16000 || !endLine && lines.length > lastLine,
-      sourceMetadata: source.data.sourceMetadata || null, digest: source.data.digest };
+    const metadata = { sourceRef: ref(source), title: source.data.title, provenance: source.data.provenance,
+      startLine, endLine: lastLine, sourceMetadata: source.data.sourceMetadata || null, digest: source.data.digest };
+    const hasMoreLines = lastLine < lines.length;
+    if (page === undefined) return { ...metadata, inlineText: selected.slice(0, 16000),
+      truncated: selected.length > 16000 || !endLine && hasMoreLines };
+
+    // Split by code point so a page boundary keeps every character intact.
+    const characters = Array.from(selected);
+    const offset = page * 16000;
+    requireThat(startLine <= lastLine && (offset === 0 || offset < characters.length), 'SCHEMA_INVALID', 'Source page is out of range');
+    const inlineText = characters.slice(offset, offset + 16000).join('');
+    const displayStartLine = startLine + characters.slice(0, offset).filter(character => character === '\n').length;
+    const hasMorePages = offset + 16000 < characters.length;
+    return { ...metadata, inlineText, truncated: hasMorePages || !endLine && hasMoreLines,
+      page, displayStartLine, hasMorePages, hasMoreLines };
   }
   async propose(input, actor) {
     requireThat(input.statement.trim() && (input.tags || []).every(tag => tag.trim()), 'SCHEMA_INVALID', 'Candidate and tags must be meaningful');
